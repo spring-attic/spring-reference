@@ -1,0 +1,9 @@
+Sample that uses https://github.com/rwinch/antora-gradle-plugin[antora-gradle-plugin] to run https://antora.org[Antora].
+To build use:
+
+[source,bash]
+----
+$ ./gradlew antora
+----
+
+The result is outputed into `build/site/index.html`
