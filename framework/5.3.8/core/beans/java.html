@@ -1,0 +1,2375 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Java-based Container Configuration :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../core.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">The IoC Container</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="container.html">Container Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bean.html">Bean Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="dependencies.html">Bean Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="scopes.html">Bean Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customizing.html">Customizing the Nature of a Bean</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inheritance.html">Bean Definition Inheritance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="extension.html">Container Extension Points</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="annotation.html">Annotation-based Container Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="scanning.html">Classpath Scanning and Managed Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jsr330.html">Using JSR 330 Standard Annotations</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="java.html">Java-based Container configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="env.html">Environment Abstraction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="loadtimeweaver.html">Registering a LoadTimeWeaver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applicationcontext.html">Additional Capabilities of the ApplicationContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beanfactory.html">The BeanFactory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../validation.html">Validation, Data Binding, and Type Conversion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aop.html">Aspect Oriented Programming with Spring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aop-api.html">Spring AOP APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../null-safety.html">Null-safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../databuffer-codec.html">Data Buffers and Codecs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../spring-jcl.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../security/5.6.0/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../security/5.6.0/overview/prerequisites.html">5.6.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Spring Framework</a></li>
+    <li><a href="../../core.html">Core</a></li>
+    <li><a href="index.html">The IoC Container</a></li>
+    <li><a href="java.html">Java-based Container configuration</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/core/beans/java.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Java-based Container Configuration</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section covers how to use annotations in your Java code to configure the Spring
+container. It includes the following topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#beans-java-basic-concepts">Basic Concepts: <code>@Bean</code> and <code>@Configuration</code></a></p>
+</li>
+<li>
+<p><a href="#beans-java-instantiating-container">Instantiating the Spring Container by Using <code>AnnotationConfigApplicationContext</code></a></p>
+</li>
+<li>
+<p><a href="#beans-java-bean-annotation">Using the <code>@Bean</code> Annotation</a></p>
+</li>
+<li>
+<p><a href="#beans-java-configuration-annotation">Using the <code>@Configuration</code> annotation</a></p>
+</li>
+<li>
+<p><a href="#beans-java-composing-configuration-classes">Composing Java-based Configurations</a></p>
+</li>
+<li>
+<p><a href="#beans-definition-profiles">[beans-definition-profiles]</a></p>
+</li>
+<li>
+<p><a href="#beans-property-source-abstraction">[beans-property-source-abstraction]</a></p>
+</li>
+<li>
+<p><a href="#beans-using-propertysource">[beans-using-propertysource]</a></p>
+</li>
+<li>
+<p><a href="#beans-placeholder-resolution-in-statements">[beans-placeholder-resolution-in-statements]</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-java-basic-concepts"><a class="anchor" href="#beans-java-basic-concepts"></a>Basic Concepts: <code>@Bean</code> and <code>@Configuration</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The central artifacts in Spring&#8217;s new Java-configuration support are
+<code>@Configuration</code>-annotated classes and <code>@Bean</code>-annotated methods.</p>
+</div>
+<div class="paragraph">
+<p>The <code>@Bean</code> annotation is used to indicate that a method instantiates, configures, and
+initializes a new object to be managed by the Spring IoC container. For those familiar
+with Spring&#8217;s <code>&lt;beans/&gt;</code> XML configuration, the <code>@Bean</code> annotation plays the same role as
+the <code>&lt;bean/&gt;</code> element. You can use <code>@Bean</code>-annotated methods with any Spring
+<code>@Component</code>. However, they are most often used with <code>@Configuration</code> beans.</p>
+</div>
+<div class="paragraph">
+<p>Annotating a class with <code>@Configuration</code> indicates that its primary purpose is as a
+source of bean definitions. Furthermore, <code>@Configuration</code> classes let inter-bean
+dependencies be defined by calling other <code>@Bean</code> methods in the same class.
+The simplest possible <code>@Configuration</code> class reads as follows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean
+	public MyService myService() {
+		return new MyServiceImpl();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean
+	fun myService(): MyService {
+		return MyServiceImpl()
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding <code>AppConfig</code> class is equivalent to the following Spring <code>&lt;beans/&gt;</code> XML:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans&gt;
+	&lt;bean id="myService" class="com.acme.services.MyServiceImpl"/&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Full @Configuration vs &#8220;lite&#8221; @Bean mode?</div>
+<div class="paragraph">
+<p>When <code>@Bean</code> methods are declared within classes that are not annotated with
+<code>@Configuration</code>, they are referred to as being processed in a &#8220;lite&#8221; mode. Bean methods
+declared in a <code>@Component</code> or even in a plain old class are considered to be &#8220;lite&#8221;,
+with a different primary purpose of the containing class and a <code>@Bean</code> method
+being a sort of bonus there. For example, service components may expose management views
+to the container through an additional <code>@Bean</code> method on each applicable component class.
+In such scenarios, <code>@Bean</code> methods are a general-purpose factory method mechanism.</p>
+</div>
+<div class="paragraph">
+<p>Unlike full <code>@Configuration</code>, lite <code>@Bean</code> methods cannot declare inter-bean dependencies.
+Instead, they operate on their containing component&#8217;s internal state and, optionally, on
+arguments that they may declare. Such a <code>@Bean</code> method should therefore not invoke other
+<code>@Bean</code> methods. Each such method is literally only a factory method for a particular
+bean reference, without any special runtime semantics. The positive side-effect here is
+that no CGLIB subclassing has to be applied at runtime, so there are no limitations in
+terms of class design (that is, the containing class may be <code>final</code> and so forth).</p>
+</div>
+<div class="paragraph">
+<p>In common scenarios, <code>@Bean</code> methods are to be declared within <code>@Configuration</code> classes,
+ensuring that &#8220;full&#8221; mode is always used and that cross-method references therefore
+get redirected to the container&#8217;s lifecycle management. This prevents the same
+<code>@Bean</code> method from accidentally being invoked through a regular Java call, which helps
+to reduce subtle bugs that can be hard to track down when operating in &#8220;lite&#8221; mode.</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>@Bean</code> and <code>@Configuration</code> annotations are discussed in depth in the following sections.
+First, however, we cover the various ways of creating a spring container using by
+Java-based configuration.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-java-instantiating-container"><a class="anchor" href="#beans-java-instantiating-container"></a>Instantiating the Spring Container by Using <code>AnnotationConfigApplicationContext</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The following sections document Spring&#8217;s <code>AnnotationConfigApplicationContext</code>, introduced in Spring
+3.0. This versatile <code>ApplicationContext</code> implementation is capable of accepting not only
+<code>@Configuration</code> classes as input but also plain <code>@Component</code> classes and classes
+annotated with JSR-330 metadata.</p>
+</div>
+<div class="paragraph">
+<p>When <code>@Configuration</code> classes are provided as input, the <code>@Configuration</code> class itself
+is registered as a bean definition and all declared <code>@Bean</code> methods within the class
+are also registered as bean definitions.</p>
+</div>
+<div class="paragraph">
+<p>When <code>@Component</code> and JSR-330 classes are provided, they are registered as bean
+definitions, and it is assumed that DI metadata such as <code>@Autowired</code> or <code>@Inject</code> are
+used within those classes where necessary.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-java-instantiating-container-constructor"><a class="anchor" href="#beans-java-instantiating-container-constructor"></a>Simple Construction</h3>
+<div class="paragraph">
+<p>In much the same way that Spring XML files are used as input when instantiating a
+<code>ClassPathXmlApplicationContext</code>, you can use <code>@Configuration</code> classes as input when
+instantiating an <code>AnnotationConfigApplicationContext</code>. This allows for completely
+XML-free usage of the Spring container, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void main(String[] args) {
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+	MyService myService = ctx.getBean(MyService.class);
+	myService.doStuff();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.beans.factory.getBean
+
+fun main() {
+	val ctx = AnnotationConfigApplicationContext(AppConfig::class.java)
+	val myService = ctx.getBean&lt;MyService&gt;()
+	myService.doStuff()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As mentioned earlier, <code>AnnotationConfigApplicationContext</code> is not limited to working only
+with <code>@Configuration</code> classes. Any <code>@Component</code> or JSR-330 annotated class may be supplied
+as input to the constructor, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void main(String[] args) {
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(MyServiceImpl.class, Dependency1.class, Dependency2.class);
+	MyService myService = ctx.getBean(MyService.class);
+	myService.doStuff();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.beans.factory.getBean
+
+fun main() {
+	val ctx = AnnotationConfigApplicationContext(MyServiceImpl::class.java, Dependency1::class.java, Dependency2::class.java)
+	val myService = ctx.getBean&lt;MyService&gt;()
+	myService.doStuff()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding example assumes that <code>MyServiceImpl</code>, <code>Dependency1</code>, and <code>Dependency2</code> use Spring
+dependency injection annotations such as <code>@Autowired</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-instantiating-container-register"><a class="anchor" href="#beans-java-instantiating-container-register"></a>Building the Container Programmatically by Using <code>register(Class&lt;?&gt;&#8230;&#8203;)</code></h3>
+<div class="paragraph">
+<p>You can instantiate an <code>AnnotationConfigApplicationContext</code> by using a no-arg constructor
+and then configure it by using the <code>register()</code> method. This approach is particularly useful
+when programmatically building an <code>AnnotationConfigApplicationContext</code>. The following
+example shows how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void main(String[] args) {
+	AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+	ctx.register(AppConfig.class, OtherConfig.class);
+	ctx.register(AdditionalConfig.class);
+	ctx.refresh();
+	MyService myService = ctx.getBean(MyService.class);
+	myService.doStuff();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.beans.factory.getBean
+
+fun main() {
+	val ctx = AnnotationConfigApplicationContext()
+	ctx.register(AppConfig::class.java, OtherConfig::class.java)
+	ctx.register(AdditionalConfig::class.java)
+	ctx.refresh()
+	val myService = ctx.getBean&lt;MyService&gt;()
+	myService.doStuff()
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-instantiating-container-scan"><a class="anchor" href="#beans-java-instantiating-container-scan"></a>Enabling Component Scanning with <code>scan(String&#8230;&#8203;)</code></h3>
+<div class="paragraph">
+<p>To enable component scanning, you can annotate your <code>@Configuration</code> class as follows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@ComponentScan(basePackages = "com.acme") <i class="conum" data-value="1"></i><b>(1)</b>
+public class AppConfig  {
+	...
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This annotation enables component scanning.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+@ComponentScan(basePackages = ["com.acme"]) <i class="conum" data-value="1"></i><b>(1)</b>
+class AppConfig  {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This annotation enables component scanning.</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Experienced Spring users may be familiar with the XML declaration equivalent from
+Spring&#8217;s <code>context:</code> namespace, shown in the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans&gt;
+	&lt;context:component-scan base-package="com.acme"/&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the preceding example, the <code>com.acme</code> package is scanned to look for any
+<code>@Component</code>-annotated classes, and those classes are registered as Spring bean
+definitions within the container. <code>AnnotationConfigApplicationContext</code> exposes the
+<code>scan(String&#8230;&#8203;)</code> method to allow for the same component-scanning functionality, as the
+following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void main(String[] args) {
+	AnnotationConfigApplicationContext ctx = new AnnotationConfigApplicationContext();
+	ctx.scan("com.acme");
+	ctx.refresh();
+	MyService myService = ctx.getBean(MyService.class);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun main() {
+	val ctx = AnnotationConfigApplicationContext()
+	ctx.scan("com.acme")
+	ctx.refresh()
+	val myService = ctx.getBean&lt;MyService&gt;()
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Remember that <code>@Configuration</code> classes are <a href="#beans-meta-annotations">meta-annotated</a>
+with <code>@Component</code>, so they are candidates for component-scanning. In the preceding example,
+assuming that <code>AppConfig</code> is declared within the <code>com.acme</code> package (or any package
+underneath), it is picked up during the call to <code>scan()</code>. Upon <code>refresh()</code>, all its <code>@Bean</code>
+methods are processed and registered as bean definitions within the container.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-instantiating-container-web"><a class="anchor" href="#beans-java-instantiating-container-web"></a>Support for Web Applications with <code>AnnotationConfigWebApplicationContext</code></h3>
+<div class="paragraph">
+<p>A <code>WebApplicationContext</code> variant of <code>AnnotationConfigApplicationContext</code> is available
+with <code>AnnotationConfigWebApplicationContext</code>. You can use this implementation when
+configuring the Spring <code>ContextLoaderListener</code> servlet listener, Spring MVC
+<code>DispatcherServlet</code>, and so forth. The following <code>web.xml</code> snippet configures a typical
+Spring MVC web application (note the use of the <code>contextClass</code> context-param and
+init-param):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;web-app&gt;
+	&lt;!-- Configure ContextLoaderListener to use AnnotationConfigWebApplicationContext
+		instead of the default XmlWebApplicationContext --&gt;
+	&lt;context-param&gt;
+		&lt;param-name&gt;contextClass&lt;/param-name&gt;
+		&lt;param-value&gt;
+			org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+		&lt;/param-value&gt;
+	&lt;/context-param&gt;
+
+	&lt;!-- Configuration locations must consist of one or more comma- or space-delimited
+		fully-qualified @Configuration classes. Fully-qualified packages may also be
+		specified for component-scanning --&gt;
+	&lt;context-param&gt;
+		&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+		&lt;param-value&gt;com.acme.AppConfig&lt;/param-value&gt;
+	&lt;/context-param&gt;
+
+	&lt;!-- Bootstrap the root application context as usual using ContextLoaderListener --&gt;
+	&lt;listener&gt;
+		&lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
+	&lt;/listener&gt;
+
+	&lt;!-- Declare a Spring MVC DispatcherServlet as usual --&gt;
+	&lt;servlet&gt;
+		&lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+		&lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+		&lt;!-- Configure DispatcherServlet to use AnnotationConfigWebApplicationContext
+			instead of the default XmlWebApplicationContext --&gt;
+		&lt;init-param&gt;
+			&lt;param-name&gt;contextClass&lt;/param-name&gt;
+			&lt;param-value&gt;
+				org.springframework.web.context.support.AnnotationConfigWebApplicationContext
+			&lt;/param-value&gt;
+		&lt;/init-param&gt;
+		&lt;!-- Again, config locations must consist of one or more comma- or space-delimited
+			and fully-qualified @Configuration classes --&gt;
+		&lt;init-param&gt;
+			&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+			&lt;param-value&gt;com.acme.web.MvcConfig&lt;/param-value&gt;
+		&lt;/init-param&gt;
+	&lt;/servlet&gt;
+
+	&lt;!-- map all requests for /app/* to the dispatcher servlet --&gt;
+	&lt;servlet-mapping&gt;
+		&lt;servlet-name&gt;dispatcher&lt;/servlet-name&gt;
+		&lt;url-pattern&gt;/app/*&lt;/url-pattern&gt;
+	&lt;/servlet-mapping&gt;
+&lt;/web-app&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-java-bean-annotation"><a class="anchor" href="#beans-java-bean-annotation"></a>Using the <code>@Bean</code> Annotation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>@Bean</code> is a method-level annotation and a direct analog of the XML <code>&lt;bean/&gt;</code> element.
+The annotation supports some of the attributes offered by <code>&lt;bean/&gt;</code>, such as:
+* <a href="#beans-factory-lifecycle-initializingbean">init-method</a>
+* <a href="#beans-factory-lifecycle-disposablebean">destroy-method</a>
+* <a href="#beans-factory-autowire">autowiring</a>
+* <code>name</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can use the <code>@Bean</code> annotation in a <code>@Configuration</code>-annotated or in a
+<code>@Component</code>-annotated class.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-java-declaring-a-bean"><a class="anchor" href="#beans-java-declaring-a-bean"></a>Declaring a Bean</h3>
+<div class="paragraph">
+<p>To declare a bean, you can annotate a method with the <code>@Bean</code> annotation. You use this
+method to register a bean definition within an <code>ApplicationContext</code> of the type
+specified as the method&#8217;s return value. By default, the bean name is the same as
+the method name. The following example shows a <code>@Bean</code> method declaration:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean
+	public TransferServiceImpl transferService() {
+		return new TransferServiceImpl();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean
+	fun transferService() = TransferServiceImpl()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding configuration is exactly equivalent to the following Spring XML:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans&gt;
+	&lt;bean id="transferService" class="com.acme.TransferServiceImpl"/&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Both declarations make a bean named <code>transferService</code> available in the
+<code>ApplicationContext</code>, bound to an object instance of type <code>TransferServiceImpl</code>, as the
+following text image shows:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>transferService -&gt; com.acme.TransferServiceImpl</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also declare your <code>@Bean</code> method with an interface (or base class)
+return type, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean
+	public TransferService transferService() {
+		return new TransferServiceImpl();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean
+	fun transferService(): TransferService {
+		return TransferServiceImpl()
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>However, this limits the visibility for advance type prediction to the specified
+interface type (<code>TransferService</code>). Then, with the full type (<code>TransferServiceImpl</code>)
+known to the container only once, the affected singleton bean has been instantiated.
+Non-lazy singleton beans get instantiated according to their declaration order,
+so you may see different type matching results depending on when another component
+tries to match by a non-declared type (such as <code>@Autowired TransferServiceImpl</code>,
+which resolves only once the <code>transferService</code> bean has been instantiated).</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you consistently refer to your types by a declared service interface, your
+<code>@Bean</code> return types may safely join that design decision. However, for components
+that implement several interfaces or for components potentially referred to by their
+implementation type, it is safer to declare the most specific return type possible
+(at least as specific as required by the injection points that refer to your bean).
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-dependencies"><a class="anchor" href="#beans-java-dependencies"></a>Bean Dependencies</h3>
+<div class="paragraph">
+<p>A <code>@Bean</code>-annotated method can have an arbitrary number of parameters that describe the
+dependencies required to build that bean. For instance, if our <code>TransferService</code>
+requires an <code>AccountRepository</code>, we can materialize that dependency with a method
+parameter, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean
+	public TransferService transferService(AccountRepository accountRepository) {
+		return new TransferServiceImpl(accountRepository);
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean
+	fun transferService(accountRepository: AccountRepository): TransferService {
+		return TransferServiceImpl(accountRepository)
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The resolution mechanism is pretty much identical to constructor-based dependency
+injection. See <a href="#beans-constructor-injection">the relevant section</a> for more details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-lifecycle-callbacks"><a class="anchor" href="#beans-java-lifecycle-callbacks"></a>Receiving Lifecycle Callbacks</h3>
+<div class="paragraph">
+<p>Any classes defined with the <code>@Bean</code> annotation support the regular lifecycle callbacks
+and can use the <code>@PostConstruct</code> and <code>@PreDestroy</code> annotations from JSR-250. See
+<a href="#beans-postconstruct-and-predestroy-annotations">JSR-250 annotations</a> for further
+details.</p>
+</div>
+<div class="paragraph">
+<p>The regular Spring <a href="#beans-factory-nature">lifecycle</a> callbacks are fully supported as
+well. If a bean implements <code>InitializingBean</code>, <code>DisposableBean</code>, or <code>Lifecycle</code>, their
+respective methods are called by the container.</p>
+</div>
+<div class="paragraph">
+<p>The standard set of <code>*Aware</code> interfaces (such as <a href="#beans-beanfactory">BeanFactoryAware</a>,
+<a href="#beans-factory-aware">BeanNameAware</a>,
+<a href="#context-functionality-messagesource">MessageSourceAware</a>,
+<a href="#beans-factory-aware">ApplicationContextAware</a>, and so on) are also fully supported.</p>
+</div>
+<div class="paragraph">
+<p>The <code>@Bean</code> annotation supports specifying arbitrary initialization and destruction
+callback methods, much like Spring XML&#8217;s <code>init-method</code> and <code>destroy-method</code> attributes
+on the <code>bean</code> element, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class BeanOne {
+
+	public void init() {
+		// initialization logic
+	}
+}
+
+public class BeanTwo {
+
+	public void cleanup() {
+		// destruction logic
+	}
+}
+
+@Configuration
+public class AppConfig {
+
+	@Bean(initMethod = "init")
+	public BeanOne beanOne() {
+		return new BeanOne();
+	}
+
+	@Bean(destroyMethod = "cleanup")
+	public BeanTwo beanTwo() {
+		return new BeanTwo();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class BeanOne {
+
+	fun init() {
+		// initialization logic
+	}
+}
+
+class BeanTwo {
+
+	fun cleanup() {
+		// destruction logic
+	}
+}
+
+@Configuration
+class AppConfig {
+
+	@Bean(initMethod = "init")
+	fun beanOne() = BeanOne()
+
+	@Bean(destroyMethod = "cleanup")
+	fun beanTwo() = BeanTwo()
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>By default, beans defined with Java configuration that have a public <code>close</code> or <code>shutdown</code>
+method are automatically enlisted with a destruction callback. If you have a public
+<code>close</code> or <code>shutdown</code> method and you do not wish for it to be called when the container
+shuts down, you can add <code>@Bean(destroyMethod="")</code> to your bean definition to disable the
+default <code>(inferred)</code> mode.</p>
+</div>
+<div class="paragraph">
+<p>You may want to do that by default for a resource that you acquire with JNDI, as its
+lifecycle is managed outside the application. In particular, make sure to always do it
+for a <code>DataSource</code>, as it is known to be problematic on Java EE application servers.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows how to prevent an automatic destruction callback for a
+<code>DataSource</code>:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean(destroyMethod="")
+public DataSource dataSource() throws NamingException {
+	return (DataSource) jndiTemplate.lookup("MyDS");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean(destroyMethod = "")
+fun dataSource(): DataSource {
+	return jndiTemplate.lookup("MyDS") as DataSource
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Also, with <code>@Bean</code> methods, you typically use programmatic JNDI lookups, either by
+using Spring&#8217;s <code>JndiTemplate</code> or <code>JndiLocatorDelegate</code> helpers or straight JNDI
+<code>InitialContext</code> usage but not the <code>JndiObjectFactoryBean</code> variant (which would force
+you to declare the return type as the <code>FactoryBean</code> type instead of the actual target
+type, making it harder to use for cross-reference calls in other <code>@Bean</code> methods that
+intend to refer to the provided resource here).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the case of <code>BeanOne</code> from the example above the preceding note, it would be equally valid to call the <code>init()</code>
+method directly during construction, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean
+	public BeanOne beanOne() {
+		BeanOne beanOne = new BeanOne();
+		beanOne.init();
+		return beanOne;
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean
+	fun beanOne() = BeanOne().apply {
+		init()
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+When you work directly in Java, you can do anything you like with your objects and do
+not always need to rely on the container lifecycle.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-specifying-bean-scope"><a class="anchor" href="#beans-java-specifying-bean-scope"></a>Specifying Bean Scope</h3>
+<div class="paragraph">
+<p>Spring includes the <code>@Scope</code> annotation so that you can specify the scope of a bean.</p>
+</div>
+<div class="sect3">
+<h4 id="beans-java-available-scopes"><a class="anchor" href="#beans-java-available-scopes"></a>Using the <code>@Scope</code> Annotation</h4>
+<div class="paragraph">
+<p>You can specify that your beans defined with the <code>@Bean</code> annotation should have a
+specific scope. You can use any of the standard scopes specified in the
+<a href="#beans-factory-scopes">Bean Scopes</a> section.</p>
+</div>
+<div class="paragraph">
+<p>The default scope is <code>singleton</code>, but you can override this with the <code>@Scope</code> annotation,
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class MyConfiguration {
+
+	@Bean
+	@Scope("prototype")
+	public Encryptor encryptor() {
+		// ...
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class MyConfiguration {
+
+	@Bean
+	@Scope("prototype")
+	fun encryptor(): Encryptor {
+		// ...
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="beans-java-scoped-proxy"><a class="anchor" href="#beans-java-scoped-proxy"></a><code>@Scope</code> and <code>scoped-proxy</code></h4>
+<div class="paragraph">
+<p>Spring offers a convenient way of working with scoped dependencies through
+<a href="#beans-factory-scopes-other-injection">scoped proxies</a>. The easiest way to create
+such a proxy when using the XML configuration is the <code>&lt;aop:scoped-proxy/&gt;</code> element.
+Configuring your beans in Java with a <code>@Scope</code> annotation offers equivalent support
+with the <code>proxyMode</code> attribute. The default is <code>ScopedProxyMode.DEFAULT</code>, which
+typically indicates that no scoped proxy should be created unless a different default
+has been configured at the component-scan instruction level. You can specify
+<code>ScopedProxyMode.TARGET_CLASS</code>, <code>ScopedProxyMode.INTERFACES</code> or <code>ScopedProxyMode.NO</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you port the scoped proxy example from the XML reference documentation (see
+<a href="#beans-factory-scopes-other-injection">scoped proxies</a>) to our <code>@Bean</code> using Java,
+it resembles the following:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// an HTTP Session-scoped bean exposed as a proxy
+@Bean
+@SessionScope
+public UserPreferences userPreferences() {
+	return new UserPreferences();
+}
+
+@Bean
+public Service userService() {
+	UserService service = new SimpleUserService();
+	// a reference to the proxied userPreferences bean
+	service.setUserPreferences(userPreferences());
+	return service;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// an HTTP Session-scoped bean exposed as a proxy
+@Bean
+@SessionScope
+fun userPreferences() = UserPreferences()
+
+@Bean
+fun userService(): Service {
+	return SimpleUserService().apply {
+		// a reference to the proxied userPreferences bean
+		setUserPreferences(userPreferences())
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-customizing-bean-naming"><a class="anchor" href="#beans-java-customizing-bean-naming"></a>Customizing Bean Naming</h3>
+<div class="paragraph">
+<p>By default, configuration classes use a <code>@Bean</code> method&#8217;s name as the name of the
+resulting bean. This functionality can be overridden, however, with the <code>name</code> attribute,
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean(name = "myThing")
+	public Thing thing() {
+		return new Thing();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean("myThing")
+	fun thing() = Thing()
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-bean-aliasing"><a class="anchor" href="#beans-java-bean-aliasing"></a>Bean Aliasing</h3>
+<div class="paragraph">
+<p>As discussed in <a href="#beans-beanname">[beans-beanname]</a>, it is sometimes desirable to give a single bean
+multiple names, otherwise known as bean aliasing. The <code>name</code> attribute of the <code>@Bean</code>
+annotation accepts a String array for this purpose. The following example shows how to set
+a number of aliases for a bean:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean({"dataSource", "subsystemA-dataSource", "subsystemB-dataSource"})
+	public DataSource dataSource() {
+		// instantiate, configure and return DataSource bean...
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean("dataSource", "subsystemA-dataSource", "subsystemB-dataSource")
+	fun dataSource(): DataSource {
+		// instantiate, configure and return DataSource bean...
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-bean-description"><a class="anchor" href="#beans-java-bean-description"></a>Bean Description</h3>
+<div class="paragraph">
+<p>Sometimes, it is helpful to provide a more detailed textual description of a bean. This can
+be particularly useful when beans are exposed (perhaps through JMX) for monitoring purposes.</p>
+</div>
+<div class="paragraph">
+<p>To add a description to a <code>@Bean</code>, you can use the
+{api-spring-framework}/context/annotation/Description.html[<code>@Description</code>]
+annotation, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean
+	@Description("Provides a basic example of a bean")
+	public Thing thing() {
+		return new Thing();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean
+	@Description("Provides a basic example of a bean")
+	fun thing() = Thing()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-java-configuration-annotation"><a class="anchor" href="#beans-java-configuration-annotation"></a>Using the <code>@Configuration</code> annotation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>@Configuration</code> is a class-level annotation indicating that an object is a source of
+bean definitions. <code>@Configuration</code> classes declare beans through <code>@Bean</code> annotated
+methods. Calls to <code>@Bean</code> methods on <code>@Configuration</code> classes can also be used to define
+inter-bean dependencies. See <a href="#beans-java-basic-concepts">Basic Concepts: <code>@Bean</code> and <code>@Configuration</code></a> for a general introduction.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-java-injecting-dependencies"><a class="anchor" href="#beans-java-injecting-dependencies"></a>Injecting Inter-bean Dependencies</h3>
+<div class="paragraph">
+<p>When beans have dependencies on one another, expressing that dependency is as simple
+as having one bean method call another, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean
+	public BeanOne beanOne() {
+		return new BeanOne(beanTwo());
+	}
+
+	@Bean
+	public BeanTwo beanTwo() {
+		return new BeanTwo();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean
+	fun beanOne() = BeanOne(beanTwo())
+
+	@Bean
+	fun beanTwo() = BeanTwo()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the preceding example, <code>beanOne</code> receives a reference to <code>beanTwo</code> through constructor
+injection.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This method of declaring inter-bean dependencies works only when the <code>@Bean</code> method
+is declared within a <code>@Configuration</code> class. You cannot declare inter-bean dependencies
+by using plain <code>@Component</code> classes.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-method-injection"><a class="anchor" href="#beans-java-method-injection"></a>Lookup Method Injection</h3>
+<div class="paragraph">
+<p>As noted earlier, <a href="#beans-factory-method-injection">lookup method injection</a> is an
+advanced feature that you should use rarely. It is useful in cases where a
+singleton-scoped bean has a dependency on a prototype-scoped bean. Using Java for this
+type of configuration provides a natural means for implementing this pattern. The
+following example shows how to use lookup method injection:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public abstract class CommandManager {
+	public Object process(Object commandState) {
+		// grab a new instance of the appropriate Command interface
+		Command command = createCommand();
+		// set the state on the (hopefully brand new) Command instance
+		command.setState(commandState);
+		return command.execute();
+	}
+
+	// okay... but where is the implementation of this method?
+	protected abstract Command createCommand();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">abstract class CommandManager {
+	fun process(commandState: Any): Any {
+		// grab a new instance of the appropriate Command interface
+		val command = createCommand()
+		// set the state on the (hopefully brand new) Command instance
+		command.setState(commandState)
+		return command.execute()
+	}
+
+	// okay... but where is the implementation of this method?
+	protected abstract fun createCommand(): Command
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By using Java configuration, you can create a subclass of <code>CommandManager</code> where
+the abstract <code>createCommand()</code> method is overridden in such a way that it looks up a new
+(prototype) command object. The following example shows how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+@Scope("prototype")
+public AsyncCommand asyncCommand() {
+	AsyncCommand command = new AsyncCommand();
+	// inject dependencies here as required
+	return command;
+}
+
+@Bean
+public CommandManager commandManager() {
+	// return new anonymous implementation of CommandManager with createCommand()
+	// overridden to return a new prototype Command object
+	return new CommandManager() {
+		protected Command createCommand() {
+			return asyncCommand();
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+@Scope("prototype")
+fun asyncCommand(): AsyncCommand {
+	val command = AsyncCommand()
+	// inject dependencies here as required
+	return command
+}
+
+@Bean
+fun commandManager(): CommandManager {
+	// return new anonymous implementation of CommandManager with createCommand()
+	// overridden to return a new prototype Command object
+	return object : CommandManager() {
+		override fun createCommand(): Command {
+			return asyncCommand()
+		}
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-further-information-java-config"><a class="anchor" href="#beans-java-further-information-java-config"></a>Further Information About How Java-based Configuration Works Internally</h3>
+<div class="paragraph">
+<p>Consider the following example, which shows a <code>@Bean</code> annotated method being called twice:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Bean
+	public ClientService clientService1() {
+		ClientServiceImpl clientService = new ClientServiceImpl();
+		clientService.setClientDao(clientDao());
+		return clientService;
+	}
+
+	@Bean
+	public ClientService clientService2() {
+		ClientServiceImpl clientService = new ClientServiceImpl();
+		clientService.setClientDao(clientDao());
+		return clientService;
+	}
+
+	@Bean
+	public ClientDao clientDao() {
+		return new ClientDaoImpl();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Bean
+	fun clientService1(): ClientService {
+		return ClientServiceImpl().apply {
+			clientDao = clientDao()
+		}
+	}
+
+	@Bean
+	fun clientService2(): ClientService {
+		return ClientServiceImpl().apply {
+			clientDao = clientDao()
+		}
+	}
+
+	@Bean
+	fun clientDao(): ClientDao {
+		return ClientDaoImpl()
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>clientDao()</code> has been called once in <code>clientService1()</code> and once in <code>clientService2()</code>.
+Since this method creates a new instance of <code>ClientDaoImpl</code> and returns it, you would
+normally expect to have two instances (one for each service). That definitely would be
+problematic: In Spring, instantiated beans have a <code>singleton</code> scope by default. This is
+where the magic comes in: All <code>@Configuration</code> classes are subclassed at startup-time
+with <code>CGLIB</code>. In the subclass, the child method checks the container first for any
+cached (scoped) beans before it calls the parent method and creates a new instance.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The behavior could be different according to the scope of your bean. We are talking
+about singletons here.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>As of Spring 3.2, it is no longer necessary to add CGLIB to your classpath because CGLIB
+classes have been repackaged under <code>org.springframework.cglib</code> and included directly
+within the spring-core JAR.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>There are a few restrictions due to the fact that CGLIB dynamically adds features at
+startup-time. In particular, configuration classes must not be final. However, as
+of 4.3, any constructors are allowed on configuration classes, including the use of
+<code>@Autowired</code> or a single non-default constructor declaration for default injection.</p>
+</div>
+<div class="paragraph">
+<p>If you prefer to avoid any CGLIB-imposed limitations, consider declaring your <code>@Bean</code>
+methods on non-<code>@Configuration</code> classes (for example, on plain <code>@Component</code> classes instead).
+Cross-method calls between <code>@Bean</code> methods are not then intercepted, so you have
+to exclusively rely on dependency injection at the constructor or method level there.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-java-composing-configuration-classes"><a class="anchor" href="#beans-java-composing-configuration-classes"></a>Composing Java-based Configurations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring&#8217;s Java-based configuration feature lets you compose annotations, which can reduce
+the complexity of your configuration.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-java-using-import"><a class="anchor" href="#beans-java-using-import"></a>Using the <code>@Import</code> Annotation</h3>
+<div class="paragraph">
+<p>Much as the <code>&lt;import/&gt;</code> element is used within Spring XML files to aid in modularizing
+configurations, the <code>@Import</code> annotation allows for loading <code>@Bean</code> definitions from
+another configuration class, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class ConfigA {
+
+	@Bean
+	public A a() {
+		return new A();
+	}
+}
+
+@Configuration
+@Import(ConfigA.class)
+public class ConfigB {
+
+	@Bean
+	public B b() {
+		return new B();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class ConfigA {
+
+	@Bean
+	fun a() = A()
+}
+
+@Configuration
+@Import(ConfigA::class)
+class ConfigB {
+
+	@Bean
+	fun b() = B()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now, rather than needing to specify both <code>ConfigA.class</code> and <code>ConfigB.class</code> when
+instantiating the context, only <code>ConfigB</code> needs to be supplied explicitly, as the
+following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void main(String[] args) {
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(ConfigB.class);
+
+	// now both beans A and B will be available...
+	A a = ctx.getBean(A.class);
+	B b = ctx.getBean(B.class);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.beans.factory.getBean
+
+fun main() {
+	val ctx = AnnotationConfigApplicationContext(ConfigB::class.java)
+
+	// now both beans A and B will be available...
+	val a = ctx.getBean&lt;A&gt;()
+	val b = ctx.getBean&lt;B&gt;()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This approach simplifies container instantiation, as only one class needs to be dealt
+with, rather than requiring you to remember a potentially large number of
+<code>@Configuration</code> classes during construction.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+As of Spring Framework 4.2, <code>@Import</code> also supports references to regular component
+classes, analogous to the <code>AnnotationConfigApplicationContext.register</code> method.
+This is particularly useful if you want to avoid component scanning, by using a few
+configuration classes as entry points to explicitly define all your components.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="beans-java-injecting-imported-beans"><a class="anchor" href="#beans-java-injecting-imported-beans"></a>Injecting Dependencies on Imported <code>@Bean</code> Definitions</h4>
+<div class="paragraph">
+<p>The preceding example works but is simplistic. In most practical scenarios, beans have
+dependencies on one another across configuration classes. When using XML, this is not an
+issue, because no compiler is involved, and you can declare
+<code>ref="someBean"</code> and trust Spring to work it out during container initialization.
+When using <code>@Configuration</code> classes, the Java compiler places constraints on
+the configuration model, in that references to other beans must be valid Java syntax.</p>
+</div>
+<div class="paragraph">
+<p>Fortunately, solving this problem is simple. As <a href="#beans-java-dependencies">we already discussed</a>,
+a <code>@Bean</code> method can have an arbitrary number of parameters that describe the bean
+dependencies. Consider the following more real-world scenario with several <code>@Configuration</code>
+classes, each depending on beans declared in the others:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class ServiceConfig {
+
+	@Bean
+	public TransferService transferService(AccountRepository accountRepository) {
+		return new TransferServiceImpl(accountRepository);
+	}
+}
+
+@Configuration
+public class RepositoryConfig {
+
+	@Bean
+	public AccountRepository accountRepository(DataSource dataSource) {
+		return new JdbcAccountRepository(dataSource);
+	}
+}
+
+@Configuration
+@Import({ServiceConfig.class, RepositoryConfig.class})
+public class SystemTestConfig {
+
+	@Bean
+	public DataSource dataSource() {
+		// return new DataSource
+	}
+}
+
+public static void main(String[] args) {
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(SystemTestConfig.class);
+	// everything wires up across configuration classes...
+	TransferService transferService = ctx.getBean(TransferService.class);
+	transferService.transfer(100.00, "A123", "C456");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.beans.factory.getBean
+
+@Configuration
+class ServiceConfig {
+
+	@Bean
+	fun transferService(accountRepository: AccountRepository): TransferService {
+		return TransferServiceImpl(accountRepository)
+	}
+}
+
+@Configuration
+class RepositoryConfig {
+
+	@Bean
+	fun accountRepository(dataSource: DataSource): AccountRepository {
+		return JdbcAccountRepository(dataSource)
+	}
+}
+
+@Configuration
+@Import(ServiceConfig::class, RepositoryConfig::class)
+class SystemTestConfig {
+
+	@Bean
+	fun dataSource(): DataSource {
+		// return new DataSource
+	}
+}
+
+
+fun main() {
+	val ctx = AnnotationConfigApplicationContext(SystemTestConfig::class.java)
+	// everything wires up across configuration classes...
+	val transferService = ctx.getBean&lt;TransferService&gt;()
+	transferService.transfer(100.00, "A123", "C456")
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There is another way to achieve the same result. Remember that <code>@Configuration</code> classes are
+ultimately only another bean in the container: This means that they can take advantage of
+<code>@Autowired</code> and <code>@Value</code> injection and other features the same as any other bean.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Make sure that the dependencies you inject that way are of the simplest kind only. <code>@Configuration</code>
+classes are processed quite early during the initialization of the context, and forcing a dependency
+to be injected this way may lead to unexpected early initialization. Whenever possible, resort to
+parameter-based injection, as in the preceding example.</p>
+</div>
+<div class="paragraph">
+<p>Also, be particularly careful with <code>BeanPostProcessor</code> and <code>BeanFactoryPostProcessor</code> definitions
+through <code>@Bean</code>. Those should usually be declared as <code>static @Bean</code> methods, not triggering the
+instantiation of their containing configuration class. Otherwise, <code>@Autowired</code> and <code>@Value</code> may not
+work on the configuration class itself, since it is possible to create it as a bean instance earlier than
+{api-spring-framework}/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.html[<code>AutowiredAnnotationBeanPostProcessor</code>].</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following example shows how one bean can be autowired to another bean:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class ServiceConfig {
+
+	@Autowired
+	private AccountRepository accountRepository;
+
+	@Bean
+	public TransferService transferService() {
+		return new TransferServiceImpl(accountRepository);
+	}
+}
+
+@Configuration
+public class RepositoryConfig {
+
+	private final DataSource dataSource;
+
+	public RepositoryConfig(DataSource dataSource) {
+		this.dataSource = dataSource;
+	}
+
+	@Bean
+	public AccountRepository accountRepository() {
+		return new JdbcAccountRepository(dataSource);
+	}
+}
+
+@Configuration
+@Import({ServiceConfig.class, RepositoryConfig.class})
+public class SystemTestConfig {
+
+	@Bean
+	public DataSource dataSource() {
+		// return new DataSource
+	}
+}
+
+public static void main(String[] args) {
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(SystemTestConfig.class);
+	// everything wires up across configuration classes...
+	TransferService transferService = ctx.getBean(TransferService.class);
+	transferService.transfer(100.00, "A123", "C456");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.beans.factory.getBean
+
+@Configuration
+class ServiceConfig {
+
+	@Autowired
+	lateinit var accountRepository: AccountRepository
+
+	@Bean
+	fun transferService(): TransferService {
+		return TransferServiceImpl(accountRepository)
+	}
+}
+
+@Configuration
+class RepositoryConfig(private val dataSource: DataSource) {
+
+	@Bean
+	fun accountRepository(): AccountRepository {
+		return JdbcAccountRepository(dataSource)
+	}
+}
+
+@Configuration
+@Import(ServiceConfig::class, RepositoryConfig::class)
+class SystemTestConfig {
+
+	@Bean
+	fun dataSource(): DataSource {
+		// return new DataSource
+	}
+}
+
+fun main() {
+	val ctx = AnnotationConfigApplicationContext(SystemTestConfig::class.java)
+	// everything wires up across configuration classes...
+	val transferService = ctx.getBean&lt;TransferService&gt;()
+	transferService.transfer(100.00, "A123", "C456")
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Constructor injection in <code>@Configuration</code> classes is only supported as of Spring
+Framework 4.3. Note also that there is no need to specify <code>@Autowired</code> if the target
+bean defines only one constructor.
+</td>
+</tr>
+</table>
+</div>
+<div class="openblock">
+<div class="title"><a id="beans-java-injecting-imported-beans-fq"></a>Fully-qualifying imported beans for ease of navigation</div>
+<div class="content">
+<div class="paragraph">
+<p>In the preceding scenario, using <code>@Autowired</code> works well and provides the desired
+modularity, but determining exactly where the autowired bean definitions are declared is
+still somewhat ambiguous. For example, as a developer looking at <code>ServiceConfig</code>, how do
+you know exactly where the <code>@Autowired AccountRepository</code> bean is declared? It is not
+explicit in the code, and this may be just fine. Remember that the
+<a href="https://spring.io/tools">Spring Tools for Eclipse</a> provides tooling that
+can render graphs showing how everything is wired, which may be all you need. Also,
+your Java IDE can easily find all declarations and uses of the <code>AccountRepository</code> type
+and quickly show you the location of <code>@Bean</code> methods that return that type.</p>
+</div>
+<div class="paragraph">
+<p>In cases where this ambiguity is not acceptable and you wish to have direct navigation
+from within your IDE from one <code>@Configuration</code> class to another, consider autowiring the
+configuration classes themselves. The following example shows how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class ServiceConfig {
+
+	@Autowired
+	private RepositoryConfig repositoryConfig;
+
+	@Bean
+	public TransferService transferService() {
+		// navigate 'through' the config class to the @Bean method!
+		return new TransferServiceImpl(repositoryConfig.accountRepository());
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class ServiceConfig {
+
+	@Autowired
+	private lateinit var repositoryConfig: RepositoryConfig
+
+	@Bean
+	fun transferService(): TransferService {
+		// navigate 'through' the config class to the @Bean method!
+		return TransferServiceImpl(repositoryConfig.accountRepository())
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the preceding situation, where <code>AccountRepository</code> is defined is completely explicit.
+However, <code>ServiceConfig</code> is now tightly coupled to <code>RepositoryConfig</code>. That is the
+tradeoff. This tight coupling can be somewhat mitigated by using interface-based or
+abstract class-based <code>@Configuration</code> classes. Consider the following example:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class ServiceConfig {
+
+	@Autowired
+	private RepositoryConfig repositoryConfig;
+
+	@Bean
+	public TransferService transferService() {
+		return new TransferServiceImpl(repositoryConfig.accountRepository());
+	}
+}
+
+@Configuration
+public interface RepositoryConfig {
+
+	@Bean
+	AccountRepository accountRepository();
+}
+
+@Configuration
+public class DefaultRepositoryConfig implements RepositoryConfig {
+
+	@Bean
+	public AccountRepository accountRepository() {
+		return new JdbcAccountRepository(...);
+	}
+}
+
+@Configuration
+@Import({ServiceConfig.class, DefaultRepositoryConfig.class})  // import the concrete config!
+public class SystemTestConfig {
+
+	@Bean
+	public DataSource dataSource() {
+		// return DataSource
+	}
+
+}
+
+public static void main(String[] args) {
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(SystemTestConfig.class);
+	TransferService transferService = ctx.getBean(TransferService.class);
+	transferService.transfer(100.00, "A123", "C456");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.beans.factory.getBean
+
+@Configuration
+class ServiceConfig {
+
+	@Autowired
+	private lateinit var repositoryConfig: RepositoryConfig
+
+	@Bean
+	fun transferService(): TransferService {
+		return TransferServiceImpl(repositoryConfig.accountRepository())
+	}
+}
+
+@Configuration
+interface RepositoryConfig {
+
+	@Bean
+	fun accountRepository(): AccountRepository
+}
+
+@Configuration
+class DefaultRepositoryConfig : RepositoryConfig {
+
+	@Bean
+	fun accountRepository(): AccountRepository {
+		return JdbcAccountRepository(...)
+	}
+}
+
+@Configuration
+@Import(ServiceConfig::class, DefaultRepositoryConfig::class)  // import the concrete config!
+class SystemTestConfig {
+
+	@Bean
+	fun dataSource(): DataSource {
+		// return DataSource
+	}
+
+}
+
+fun main() {
+	val ctx = AnnotationConfigApplicationContext(SystemTestConfig::class.java)
+	val transferService = ctx.getBean&lt;TransferService&gt;()
+	transferService.transfer(100.00, "A123", "C456")
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now <code>ServiceConfig</code> is loosely coupled with respect to the concrete
+<code>DefaultRepositoryConfig</code>, and built-in IDE tooling is still useful: You can easily
+get a type hierarchy of <code>RepositoryConfig</code> implementations. In this
+way, navigating <code>@Configuration</code> classes and their dependencies becomes no different
+than the usual process of navigating interface-based code.</p>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+If you want to influence the startup creation order of certain beans, consider
+declaring some of them as <code>@Lazy</code> (for creation on first access instead of on startup)
+or as <code>@DependsOn</code> certain other beans (making sure that specific other beans are
+created before the current bean, beyond what the latter&#8217;s direct dependencies imply).
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-conditional"><a class="anchor" href="#beans-java-conditional"></a>Conditionally Include <code>@Configuration</code> Classes or <code>@Bean</code> Methods</h3>
+<div class="paragraph">
+<p>It is often useful to conditionally enable or disable a complete <code>@Configuration</code> class
+or even individual <code>@Bean</code> methods, based on some arbitrary system state. One common
+example of this is to use the <code>@Profile</code> annotation to activate beans only when a specific
+profile has been enabled in the Spring <code>Environment</code> (see <a href="#beans-definition-profiles">[beans-definition-profiles]</a>
+for details).</p>
+</div>
+<div class="paragraph">
+<p>The <code>@Profile</code> annotation is actually implemented by using a much more flexible annotation
+called {api-spring-framework}/context/annotation/Conditional.html[<code>@Conditional</code>].
+The <code>@Conditional</code> annotation indicates specific
+<code>org.springframework.context.annotation.Condition</code> implementations that should be
+consulted before a <code>@Bean</code> is registered.</p>
+</div>
+<div class="paragraph">
+<p>Implementations of the <code>Condition</code> interface provide a <code>matches(&#8230;&#8203;)</code>
+method that returns <code>true</code> or <code>false</code>. For example, the following listing shows the actual
+<code>Condition</code> implementation used for <code>@Profile</code>:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
+public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata) {
+	// Read the @Profile annotation attributes
+	MultiValueMap&lt;String, Object&gt; attrs = metadata.getAllAnnotationAttributes(Profile.class.getName());
+	if (attrs != null) {
+		for (Object value : attrs.get("value")) {
+			if (context.getEnvironment().acceptsProfiles(((String[]) value))) {
+				return true;
+			}
+		}
+		return false;
+	}
+	return true;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">override fun matches(context: ConditionContext, metadata: AnnotatedTypeMetadata): Boolean {
+	// Read the @Profile annotation attributes
+	val attrs = metadata.getAllAnnotationAttributes(Profile::class.java.name)
+	if (attrs != null) {
+		for (value in attrs["value"]!!) {
+			if (context.environment.acceptsProfiles(Profiles .of(*value as Array&lt;String&gt;))) {
+				return true
+			}
+		}
+		return false
+	}
+	return true
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the {api-spring-framework}/context/annotation/Conditional.html[<code>@Conditional</code>]
+javadoc for more detail.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-java-combining"><a class="anchor" href="#beans-java-combining"></a>Combining Java and XML Configuration</h3>
+<div class="paragraph">
+<p>Spring&#8217;s <code>@Configuration</code> class support does not aim to be a 100% complete replacement
+for Spring XML. Some facilities, such as Spring XML namespaces, remain an ideal way to
+configure the container. In cases where XML is convenient or necessary, you have a
+choice: either instantiate the container in an &#8220;XML-centric&#8221; way by using, for example,
+<code>ClassPathXmlApplicationContext</code>, or instantiate it in a &#8220;Java-centric&#8221; way by using
+<code>AnnotationConfigApplicationContext</code> and the <code>@ImportResource</code> annotation to import XML
+as needed.</p>
+</div>
+<div class="sect3">
+<h4 id="beans-java-combining-xml-centric"><a class="anchor" href="#beans-java-combining-xml-centric"></a>XML-centric Use of <code>@Configuration</code> Classes</h4>
+<div class="paragraph">
+<p>It may be preferable to bootstrap the Spring container from XML and include
+<code>@Configuration</code> classes in an ad-hoc fashion. For example, in a large existing codebase
+that uses Spring XML, it is easier to create <code>@Configuration</code> classes on an
+as-needed basis and include them from the existing XML files. Later in this section, we cover the
+options for using <code>@Configuration</code> classes in this kind of &#8220;XML-centric&#8221; situation.</p>
+</div>
+<div class="openblock">
+<div class="title"><a id="beans-java-combining-xml-centric-declare-as-bean"></a>Declaring <code>@Configuration</code> classes as plain Spring <code>&lt;bean/&gt;</code> elements</div>
+<div class="content">
+<div class="paragraph">
+<p>Remember that <code>@Configuration</code> classes are ultimately bean definitions in the
+container. In this series examples, we create a <code>@Configuration</code> class named <code>AppConfig</code> and
+include it within <code>system-test-config.xml</code> as a <code>&lt;bean/&gt;</code> definition. Because
+<code>&lt;context:annotation-config/&gt;</code> is switched on, the container recognizes the
+<code>@Configuration</code> annotation and processes the <code>@Bean</code> methods declared in <code>AppConfig</code>
+properly.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows an ordinary configuration class in Java:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class AppConfig {
+
+	@Autowired
+	private DataSource dataSource;
+
+	@Bean
+	public AccountRepository accountRepository() {
+		return new JdbcAccountRepository(dataSource);
+	}
+
+	@Bean
+	public TransferService transferService() {
+		return new TransferService(accountRepository());
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class AppConfig {
+
+	@Autowired
+	private lateinit var dataSource: DataSource
+
+	@Bean
+	fun accountRepository(): AccountRepository {
+		return JdbcAccountRepository(dataSource)
+	}
+
+	@Bean
+	fun transferService() = TransferService(accountRepository())
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows part of a sample <code>system-test-config.xml</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans&gt;
+	&lt;!-- enable processing of annotations such as @Autowired and @Configuration --&gt;
+	&lt;context:annotation-config/&gt;
+	&lt;context:property-placeholder location="classpath:/com/acme/jdbc.properties"/&gt;
+
+	&lt;bean class="com.acme.AppConfig"/&gt;
+
+	&lt;bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"&gt;
+		&lt;property name="url" value="${jdbc.url}"/&gt;
+		&lt;property name="username" value="${jdbc.username}"/&gt;
+		&lt;property name="password" value="${jdbc.password}"/&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows a possible <code>jdbc.properties</code> file:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jdbc.url=jdbc:hsqldb:hsql://localhost/xdb
+jdbc.username=sa
+jdbc.password=</pre>
+</div>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void main(String[] args) {
+	ApplicationContext ctx = new ClassPathXmlApplicationContext("classpath:/com/acme/system-test-config.xml");
+	TransferService transferService = ctx.getBean(TransferService.class);
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun main() {
+	val ctx = ClassPathXmlApplicationContext("classpath:/com/acme/system-test-config.xml")
+	val transferService = ctx.getBean&lt;TransferService&gt;()
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+In <code>system-test-config.xml</code> file, the <code>AppConfig</code> <code>&lt;bean/&gt;</code> does not declare an <code>id</code>
+element. While it would be acceptable to do so, it is unnecessary, given that no other bean
+ever refers to it, and it is unlikely to be explicitly fetched from the container by name.
+Similarly, the <code>DataSource</code> bean is only ever autowired by type, so an explicit bean <code>id</code>
+is not strictly required.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title"><a id="beans-java-combining-xml-centric-component-scan"></a> Using &lt;context:component-scan/&gt; to pick up <code>@Configuration</code> classes</div>
+<div class="content">
+<div class="paragraph">
+<p>Because <code>@Configuration</code> is meta-annotated with <code>@Component</code>, <code>@Configuration</code>-annotated
+classes are automatically candidates for component scanning. Using the same scenario as
+describe in the previous example, we can redefine <code>system-test-config.xml</code> to take advantage of component-scanning.
+Note that, in this case, we need not explicitly declare
+<code>&lt;context:annotation-config/&gt;</code>, because <code>&lt;context:component-scan/&gt;</code> enables the same
+functionality.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows the modified <code>system-test-config.xml</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans&gt;
+	&lt;!-- picks up and registers AppConfig as a bean definition --&gt;
+	&lt;context:component-scan base-package="com.acme"/&gt;
+	&lt;context:property-placeholder location="classpath:/com/acme/jdbc.properties"/&gt;
+
+	&lt;bean class="org.springframework.jdbc.datasource.DriverManagerDataSource"&gt;
+		&lt;property name="url" value="${jdbc.url}"/&gt;
+		&lt;property name="username" value="${jdbc.username}"/&gt;
+		&lt;property name="password" value="${jdbc.password}"/&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="beans-java-combining-java-centric"><a class="anchor" href="#beans-java-combining-java-centric"></a><code>@Configuration</code> Class-centric Use of XML with <code>@ImportResource</code></h4>
+<div class="paragraph">
+<p>In applications where <code>@Configuration</code> classes are the primary mechanism for configuring
+the container, it is still likely necessary to use at least some XML. In these
+scenarios, you can use <code>@ImportResource</code> and define only as much XML as you need. Doing
+so achieves a &#8220;Java-centric&#8221; approach to configuring the container and keeps XML to a
+bare minimum. The following example (which includes a configuration class, an XML file
+that defines a bean, a properties file, and the <code>main</code> class) shows how to use
+the <code>@ImportResource</code> annotation to achieve &#8220;Java-centric&#8221; configuration that uses XML
+as needed:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@ImportResource("classpath:/com/acme/properties-config.xml")
+public class AppConfig {
+
+	@Value("${jdbc.url}")
+	private String url;
+
+	@Value("${jdbc.username}")
+	private String username;
+
+	@Value("${jdbc.password}")
+	private String password;
+
+	@Bean
+	public DataSource dataSource() {
+		return new DriverManagerDataSource(url, username, password);
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+@ImportResource("classpath:/com/acme/properties-config.xml")
+class AppConfig {
+
+	@Value("\${jdbc.url}")
+	private lateinit var url: String
+
+	@Value("\${jdbc.username}")
+	private lateinit var username: String
+
+	@Value("\${jdbc.password}")
+	private lateinit var password: String
+
+	@Bean
+	fun dataSource(): DataSource {
+		return DriverManagerDataSource(url, username, password)
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">properties-config.xml
+&lt;beans&gt;
+	&lt;context:property-placeholder location="classpath:/com/acme/jdbc.properties"/&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jdbc.properties
+jdbc.url=jdbc:hsqldb:hsql://localhost/xdb
+jdbc.username=sa
+jdbc.password=</pre>
+</div>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static void main(String[] args) {
+	ApplicationContext ctx = new AnnotationConfigApplicationContext(AppConfig.class);
+	TransferService transferService = ctx.getBean(TransferService.class);
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.beans.factory.getBean
+
+fun main() {
+	val ctx = AnnotationConfigApplicationContext(AppConfig::class.java)
+	val transferService = ctx.getBean&lt;TransferService&gt;()
+	// ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

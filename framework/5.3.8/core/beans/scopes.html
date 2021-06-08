@@ -1,0 +1,1075 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Bean Scopes :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../core.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">The IoC Container</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="container.html">Container Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bean.html">Bean Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="dependencies.html">Bean Dependencies</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="scopes.html">Bean Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customizing.html">Customizing the Nature of a Bean</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inheritance.html">Bean Definition Inheritance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="extension.html">Container Extension Points</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="annotation.html">Annotation-based Container Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="scanning.html">Classpath Scanning and Managed Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jsr330.html">Using JSR 330 Standard Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="java.html">Java-based Container configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="env.html">Environment Abstraction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="loadtimeweaver.html">Registering a LoadTimeWeaver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applicationcontext.html">Additional Capabilities of the ApplicationContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beanfactory.html">The BeanFactory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../validation.html">Validation, Data Binding, and Type Conversion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aop.html">Aspect Oriented Programming with Spring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aop-api.html">Spring AOP APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../null-safety.html">Null-safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../databuffer-codec.html">Data Buffers and Codecs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../spring-jcl.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../security/5.6.0/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../security/5.6.0/overview/prerequisites.html">5.6.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Spring Framework</a></li>
+    <li><a href="../../core.html">Core</a></li>
+    <li><a href="index.html">The IoC Container</a></li>
+    <li><a href="scopes.html">Bean Scopes</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/core/beans/scopes.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Bean Scopes</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you create a bean definition, you create a recipe for creating actual instances
+of the class defined by that bean definition. The idea that a bean definition is a
+recipe is important, because it means that, as with a class, you can create many object
+instances from a single recipe.</p>
+</div>
+<div class="paragraph">
+<p>You can control not only the various dependencies and configuration values that are to
+be plugged into an object that is created from a particular bean definition but also control
+the scope of the objects created from a particular bean definition. This approach is
+powerful and flexible, because you can choose the scope of the objects you create
+through configuration instead of having to bake in the scope of an object at the Java
+class level. Beans can be defined to be deployed in one of a number of scopes.
+The Spring Framework supports six scopes, four of which are available only if
+you use a web-aware <code>ApplicationContext</code>. You can also create
+<a href="#beans-factory-scopes-custom">a custom scope.</a></p>
+</div>
+<div class="paragraph">
+<p>The following table describes the supported scopes:</p>
+</div>
+<table id="beans-factory-scopes-tbl" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Bean scopes</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Scope</th>
+<th class="tableblock halign-left valign-top">Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#beans-factory-scopes-singleton">singleton</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Default) Scopes a single bean definition to a single object instance for each Spring IoC
+container.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#beans-factory-scopes-prototype">prototype</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scopes a single bean definition to any number of object instances.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#beans-factory-scopes-request">request</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scopes a single bean definition to the lifecycle of a single HTTP request. That is,
+each HTTP request has its own instance of a bean created off the back of a single bean
+definition. Only valid in the context of a web-aware Spring <code>ApplicationContext</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#beans-factory-scopes-session">session</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scopes a single bean definition to the lifecycle of an HTTP <code>Session</code>. Only valid in
+the context of a web-aware Spring <code>ApplicationContext</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="#beans-factory-scopes-application">application</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scopes a single bean definition to the lifecycle of a <code>ServletContext</code>. Only valid in
+the context of a web-aware Spring <code>ApplicationContext</code>.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="../../web.html#websocket-stomp-websocket-scope" class="page">websocket</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Scopes a single bean definition to the lifecycle of a <code>WebSocket</code>. Only valid in
+the context of a web-aware Spring <code>ApplicationContext</code>.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As of Spring 3.0, a thread scope is available but is not registered by default. For
+more information, see the documentation for
+{api-spring-framework}/context/support/SimpleThreadScope.html[<code>SimpleThreadScope</code>].
+For instructions on how to register this or any other custom scope, see
+<a href="#beans-factory-scopes-custom-using">Using a Custom Scope</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-scopes-singleton"><a class="anchor" href="#beans-factory-scopes-singleton"></a>The Singleton Scope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Only one shared instance of a singleton bean is managed, and all requests for beans
+with an ID or IDs that match that bean definition result in that one specific bean
+instance being returned by the Spring container.</p>
+</div>
+<div class="paragraph">
+<p>To put it another way, when you define a bean definition and it is scoped as a
+singleton, the Spring IoC container creates exactly one instance of the object
+defined by that bean definition. This single instance is stored in a cache of such
+singleton beans, and all subsequent requests and references for that named bean
+return the cached object. The following image shows how the singleton scope works:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/images/singleton.png" alt="singleton">
+</div>
+</div>
+<div class="paragraph">
+<p>Spring&#8217;s concept of a singleton bean differs from the singleton pattern as defined in
+the Gang of Four (GoF) patterns book. The GoF singleton hard-codes the scope of an
+object such that one and only one instance of a particular class is created per
+ClassLoader. The scope of the Spring singleton is best described as being per-container
+and per-bean. This means that, if you define one bean for a particular class in a
+single Spring container, the Spring container creates one and only one instance
+of the class defined by that bean definition. The singleton scope is the default scope
+in Spring. To define a bean as a singleton in XML, you can define a bean as shown in the
+following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="accountService" class="com.something.DefaultAccountService"/&gt;
+
+&lt;!-- the following is equivalent, though redundant (singleton scope is the default) --&gt;
+&lt;bean id="accountService" class="com.something.DefaultAccountService" scope="singleton"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-scopes-prototype"><a class="anchor" href="#beans-factory-scopes-prototype"></a>The Prototype Scope</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The non-singleton prototype scope of bean deployment results in the creation of a new
+bean instance every time a request for that specific bean is made. That is, the bean
+is injected into another bean or you request it through a <code>getBean()</code> method call on the
+container. As a rule, you should use the prototype scope for all stateful beans and the
+singleton scope for stateless beans.</p>
+</div>
+<div class="paragraph">
+<p>The following diagram illustrates the Spring prototype scope:</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/images/prototype.png" alt="prototype">
+</div>
+</div>
+<div class="paragraph">
+<p>(A data access object
+(DAO) is not typically configured as a prototype, because a typical DAO does not hold
+any conversational state. It was easier for us to reuse the core of the
+singleton diagram.)</p>
+</div>
+<div class="paragraph">
+<p>The following example defines a bean as a prototype in XML:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="accountService" class="com.something.DefaultAccountService" scope="prototype"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In contrast to the other scopes, Spring does not manage the complete lifecycle of a
+prototype bean. The container instantiates, configures, and otherwise assembles a
+prototype object and hands it to the client, with no further record of that prototype
+instance. Thus, although initialization lifecycle callback methods are called on all
+objects regardless of scope, in the case of prototypes, configured destruction
+lifecycle callbacks are not called. The client code must clean up prototype-scoped
+objects and release expensive resources that the prototype beans hold. To get
+the Spring container to release resources held by prototype-scoped beans, try using a
+custom <a href="#beans-factory-extension-bpp">bean post-processor</a>, which holds a reference to
+beans that need to be cleaned up.</p>
+</div>
+<div class="paragraph">
+<p>In some respects, the Spring container&#8217;s role in regard to a prototype-scoped bean is a
+replacement for the Java <code>new</code> operator. All lifecycle management past that point must
+be handled by the client. (For details on the lifecycle of a bean in the Spring
+container, see <a href="#beans-factory-lifecycle">[beans-factory-lifecycle]</a>.)</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-scopes-sing-prot-interaction"><a class="anchor" href="#beans-factory-scopes-sing-prot-interaction"></a>Singleton Beans with Prototype-bean Dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When you use singleton-scoped beans with dependencies on prototype beans, be aware that
+dependencies are resolved at instantiation time. Thus, if you dependency-inject a
+prototype-scoped bean into a singleton-scoped bean, a new prototype bean is instantiated
+and then dependency-injected into the singleton bean. The prototype instance is the sole
+instance that is ever supplied to the singleton-scoped bean.</p>
+</div>
+<div class="paragraph">
+<p>However, suppose you want the singleton-scoped bean to acquire a new instance of the
+prototype-scoped bean repeatedly at runtime. You cannot dependency-inject a
+prototype-scoped bean into your singleton bean, because that injection occurs only
+once, when the Spring container instantiates the singleton bean and resolves
+and injects its dependencies. If you need a new instance of a prototype bean at
+runtime more than once, see <a href="#beans-factory-method-injection">[beans-factory-method-injection]</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-scopes-other"><a class="anchor" href="#beans-factory-scopes-other"></a>Request, Session, Application, and WebSocket Scopes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>request</code>, <code>session</code>, <code>application</code>, and <code>websocket</code> scopes are available only
+if you use a web-aware Spring <code>ApplicationContext</code> implementation (such as
+<code>XmlWebApplicationContext</code>). If you use these scopes with regular Spring IoC containers,
+such as the <code>ClassPathXmlApplicationContext</code>, an <code>IllegalStateException</code> that complains
+about an unknown bean scope is thrown.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-scopes-other-web-configuration"><a class="anchor" href="#beans-factory-scopes-other-web-configuration"></a>Initial Web Configuration</h3>
+<div class="paragraph">
+<p>To support the scoping of beans at the <code>request</code>, <code>session</code>, <code>application</code>, and
+<code>websocket</code> levels (web-scoped beans), some minor initial configuration is
+required before you define your beans. (This initial setup is not required
+for the standard scopes: <code>singleton</code> and <code>prototype</code>.)</p>
+</div>
+<div class="paragraph">
+<p>How you accomplish this initial setup depends on your particular Servlet environment.</p>
+</div>
+<div class="paragraph">
+<p>If you access scoped beans within Spring Web MVC, in effect, within a request that is
+processed by the Spring <code>DispatcherServlet</code>, no special setup is necessary.
+<code>DispatcherServlet</code> already exposes all relevant state.</p>
+</div>
+<div class="paragraph">
+<p>If you use a Servlet 2.5 web container, with requests processed outside of Spring&#8217;s
+<code>DispatcherServlet</code> (for example, when using JSF or Struts), you need to register the
+<code>org.springframework.web.context.request.RequestContextListener</code> <code>ServletRequestListener</code>.
+For Servlet 3.0+, this can be done programmatically by using the <code>WebApplicationInitializer</code>
+interface. Alternatively, or for older containers, add the following declaration to
+your web application&#8217;s <code>web.xml</code> file:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;web-app&gt;
+	...
+	&lt;listener&gt;
+		&lt;listener-class&gt;
+			org.springframework.web.context.request.RequestContextListener
+		&lt;/listener-class&gt;
+	&lt;/listener&gt;
+	...
+&lt;/web-app&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, if there are issues with your listener setup, consider using Spring&#8217;s
+<code>RequestContextFilter</code>. The filter mapping depends on the surrounding web
+application configuration, so you have to change it as appropriate. The following listing
+shows the filter part of a web application:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;web-app&gt;
+	...
+	&lt;filter&gt;
+		&lt;filter-name&gt;requestContextFilter&lt;/filter-name&gt;
+		&lt;filter-class&gt;org.springframework.web.filter.RequestContextFilter&lt;/filter-class&gt;
+	&lt;/filter&gt;
+	&lt;filter-mapping&gt;
+		&lt;filter-name&gt;requestContextFilter&lt;/filter-name&gt;
+		&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+	&lt;/filter-mapping&gt;
+	...
+&lt;/web-app&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>DispatcherServlet</code>, <code>RequestContextListener</code>, and <code>RequestContextFilter</code> all do exactly
+the same thing, namely bind the HTTP request object to the <code>Thread</code> that is servicing
+that request. This makes beans that are request- and session-scoped available further
+down the call chain.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-scopes-request"><a class="anchor" href="#beans-factory-scopes-request"></a>Request scope</h3>
+<div class="paragraph">
+<p>Consider the following XML configuration for a bean definition:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="loginAction" class="com.something.LoginAction" scope="request"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Spring container creates a new instance of the <code>LoginAction</code> bean by using the
+<code>loginAction</code> bean definition for each and every HTTP request. That is, the
+<code>loginAction</code> bean is scoped at the HTTP request level. You can change the internal
+state of the instance that is created as much as you want, because other instances
+created from the same <code>loginAction</code> bean definition do not see these changes in state.
+They are particular to an individual request. When the request completes processing, the
+bean that is scoped to the request is discarded.</p>
+</div>
+<div class="paragraph">
+<p>When using annotation-driven components or Java configuration, the <code>@RequestScope</code> annotation
+can be used to assign a component to the <code>request</code> scope. The following example shows how
+to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestScope
+@Component
+public class LoginAction {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestScope
+@Component
+class LoginAction {
+	// ...
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-scopes-session"><a class="anchor" href="#beans-factory-scopes-session"></a>Session Scope</h3>
+<div class="paragraph">
+<p>Consider the following XML configuration for a bean definition:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="userPreferences" class="com.something.UserPreferences" scope="session"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Spring container creates a new instance of the <code>UserPreferences</code> bean by using the
+<code>userPreferences</code> bean definition for the lifetime of a single HTTP <code>Session</code>. In other
+words, the <code>userPreferences</code> bean is effectively scoped at the HTTP <code>Session</code> level. As
+with request-scoped beans, you can change the internal state of the instance that is
+created as much as you want, knowing that other HTTP <code>Session</code> instances that are also
+using instances created from the same <code>userPreferences</code> bean definition do not see these
+changes in state, because they are particular to an individual HTTP <code>Session</code>. When the
+HTTP <code>Session</code> is eventually discarded, the bean that is scoped to that particular HTTP
+<code>Session</code> is also discarded.</p>
+</div>
+<div class="paragraph">
+<p>When using annotation-driven components or Java configuration, you can use the
+<code>@SessionScope</code> annotation to assign a component to the <code>session</code> scope.</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@SessionScope
+@Component
+public class UserPreferences {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@SessionScope
+@Component
+class UserPreferences {
+	// ...
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-scopes-application"><a class="anchor" href="#beans-factory-scopes-application"></a>Application Scope</h3>
+<div class="paragraph">
+<p>Consider the following XML configuration for a bean definition:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="appPreferences" class="com.something.AppPreferences" scope="application"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Spring container creates a new instance of the <code>AppPreferences</code> bean by using the
+<code>appPreferences</code> bean definition once for the entire web application. That is, the
+<code>appPreferences</code> bean is scoped at the <code>ServletContext</code> level and stored as a regular
+<code>ServletContext</code> attribute. This is somewhat similar to a Spring singleton bean but
+differs in two important ways: It is a singleton per <code>ServletContext</code>, not per Spring
+'ApplicationContext' (for which there may be several in any given web application),
+and it is actually exposed and therefore visible as a <code>ServletContext</code> attribute.</p>
+</div>
+<div class="paragraph">
+<p>When using annotation-driven components or Java configuration, you can use the
+<code>@ApplicationScope</code> annotation to assign a component to the <code>application</code> scope. The
+following example shows how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ApplicationScope
+@Component
+public class AppPreferences {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@ApplicationScope
+@Component
+class AppPreferences {
+	// ...
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-scopes-other-injection"><a class="anchor" href="#beans-factory-scopes-other-injection"></a>Scoped Beans as Dependencies</h3>
+<div class="paragraph">
+<p>The Spring IoC container manages not only the instantiation of your objects (beans),
+but also the wiring up of collaborators (or dependencies). If you want to inject (for
+example) an HTTP request-scoped bean into another bean of a longer-lived scope, you may
+choose to inject an AOP proxy in place of the scoped bean. That is, you need to inject
+a proxy object that exposes the same public interface as the scoped object but that can
+also retrieve the real target object from the relevant scope (such as an HTTP request)
+and delegate method calls onto the real object.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+===
+You may also use <code>&lt;aop:scoped-proxy/&gt;</code> between beans that are scoped as <code>singleton</code>,
+with the reference then going through an intermediate proxy that is serializable
+and therefore able to re-obtain the target singleton bean on deserialization.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>When declaring <code>&lt;aop:scoped-proxy/&gt;</code> against a bean of scope <code>prototype</code>, every method
+call on the shared proxy leads to the creation of a new target instance to which the
+call is then being forwarded.</p>
+</div>
+<div class="paragraph">
+<p>Also, scoped proxies are not the only way to access beans from shorter scopes in a
+lifecycle-safe fashion. You may also declare your injection point (that is, the
+constructor or setter argument or autowired field) as <code>ObjectFactory&lt;MyTargetBean&gt;</code>,
+allowing for a <code>getObject()</code> call to retrieve the current instance on demand every
+time it is needed&#8201;&#8212;&#8201;without holding on to the instance or storing it separately.</p>
+</div>
+<div class="paragraph">
+<p>As an extended variant, you may declare <code>ObjectProvider&lt;MyTargetBean&gt;</code>, which delivers
+several additional access variants, including <code>getIfAvailable</code> and <code>getIfUnique</code>.</p>
+</div>
+<div class="paragraph">
+<p>The JSR-330 variant of this is called <code>Provider</code> and is used with a <code>Provider&lt;MyTargetBean&gt;</code>
+declaration and a corresponding <code>get()</code> call for every retrieval attempt.
+See <a href="#beans-standard-annotations">here</a> for more details on JSR-330 overall.
+===</p>
+</div>
+<div class="paragraph">
+<p>The configuration in the following example is only one line, but it is important to
+understand the &#8220;why&#8221; as well as the &#8220;how&#8221; behind it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop
+		https://www.springframework.org/schema/aop/spring-aop.xsd"&gt;
+
+	&lt;!-- an HTTP Session-scoped bean exposed as a proxy --&gt;
+	&lt;bean id="userPreferences" class="com.something.UserPreferences" scope="session"&gt;
+		&lt;!-- instructs the container to proxy the surrounding bean --&gt;
+		&lt;aop:scoped-proxy/&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+	&lt;/bean&gt;
+
+	&lt;!-- a singleton-scoped bean injected with a proxy to the above bean --&gt;
+	&lt;bean id="userService" class="com.something.SimpleUserService"&gt;
+		&lt;!-- a reference to the proxied userPreferences bean --&gt;
+		&lt;property name="userPreferences" ref="userPreferences"/&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The line that defines the proxy.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To create such a proxy, you insert a child <code>&lt;aop:scoped-proxy/&gt;</code> element into a scoped
+bean definition (see <a href="#beans-factory-scopes-other-injection-proxies">Choosing the Type of Proxy to Create</a> and
+<a href="../../core.html#xsd-schemas" class="page">XML Schema-based configuration</a>).
+Why do definitions of beans scoped at the <code>request</code>, <code>session</code> and custom-scope
+levels require the <code>&lt;aop:scoped-proxy/&gt;</code> element?
+Consider the following singleton bean definition and contrast it with
+what you need to define for the aforementioned scopes (note that the following
+<code>userPreferences</code> bean definition as it stands is incomplete):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="userPreferences" class="com.something.UserPreferences" scope="session"/&gt;
+
+&lt;bean id="userManager" class="com.something.UserManager"&gt;
+	&lt;property name="userPreferences" ref="userPreferences"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the preceding example, the singleton bean (<code>userManager</code>) is injected with a reference
+to the HTTP <code>Session</code>-scoped bean (<code>userPreferences</code>). The salient point here is that the
+<code>userManager</code> bean is a singleton: it is instantiated exactly once per
+container, and its dependencies (in this case only one, the <code>userPreferences</code> bean) are
+also injected only once. This means that the <code>userManager</code> bean operates only on the
+exact same <code>userPreferences</code> object (that is, the one with which it was originally injected.</p>
+</div>
+<div class="paragraph">
+<p>This is not the behavior you want when injecting a shorter-lived scoped bean into a
+longer-lived scoped bean (for example, injecting an HTTP <code>Session</code>-scoped collaborating
+bean as a dependency into singleton bean). Rather, you need a single <code>userManager</code>
+object, and, for the lifetime of an HTTP <code>Session</code>, you need a <code>userPreferences</code> object
+that is specific to the HTTP <code>Session</code>. Thus, the container creates an object that
+exposes the exact same public interface as the <code>UserPreferences</code> class (ideally an
+object that is a <code>UserPreferences</code> instance), which can fetch the real
+<code>UserPreferences</code> object from the scoping mechanism (HTTP request, <code>Session</code>, and so
+forth). The container injects this proxy object into the <code>userManager</code> bean, which is
+unaware that this <code>UserPreferences</code> reference is a proxy. In this example, when a
+<code>UserManager</code> instance invokes a method on the dependency-injected <code>UserPreferences</code>
+object, it is actually invoking a method on the proxy. The proxy then fetches the real
+<code>UserPreferences</code> object from (in this case) the HTTP <code>Session</code> and delegates the
+method invocation onto the retrieved real <code>UserPreferences</code> object.</p>
+</div>
+<div class="paragraph">
+<p>Thus, you need the following (correct and complete) configuration when injecting
+<code>request-</code> and <code>session-scoped</code> beans into collaborating objects, as the following example
+shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="userPreferences" class="com.something.UserPreferences" scope="session"&gt;
+	&lt;aop:scoped-proxy/&gt;
+&lt;/bean&gt;
+
+&lt;bean id="userManager" class="com.something.UserManager"&gt;
+	&lt;property name="userPreferences" ref="userPreferences"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="beans-factory-scopes-other-injection-proxies"><a class="anchor" href="#beans-factory-scopes-other-injection-proxies"></a>Choosing the Type of Proxy to Create</h4>
+<div class="paragraph">
+<p>By default, when the Spring container creates a proxy for a bean that is marked up with
+the <code>&lt;aop:scoped-proxy/&gt;</code> element, a CGLIB-based class proxy is created.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+===
+CGLIB proxies intercept only public method calls! Do not call non-public methods
+on such a proxy. They are not delegated to the actual scoped target object.
+===
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can configure the Spring container to create standard JDK
+interface-based proxies for such scoped beans, by specifying <code>false</code> for the value of
+the <code>proxy-target-class</code> attribute of the <code>&lt;aop:scoped-proxy/&gt;</code> element. Using JDK
+interface-based proxies means that you do not need additional libraries in your
+application classpath to affect such proxying. However, it also means that the class of
+the scoped bean must implement at least one interface and that all collaborators
+into which the scoped bean is injected must reference the bean through one of its
+interfaces. The following example shows a proxy based on an interface:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- DefaultUserPreferences implements the UserPreferences interface --&gt;
+&lt;bean id="userPreferences" class="com.stuff.DefaultUserPreferences" scope="session"&gt;
+	&lt;aop:scoped-proxy proxy-target-class="false"/&gt;
+&lt;/bean&gt;
+
+&lt;bean id="userManager" class="com.stuff.UserManager"&gt;
+	&lt;property name="userPreferences" ref="userPreferences"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For more detailed information about choosing class-based or interface-based proxying,
+see <a href="#aop-proxying">[aop-proxying]</a>.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-scopes-custom"><a class="anchor" href="#beans-factory-scopes-custom"></a>Custom Scopes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The bean scoping mechanism is extensible. You can define your own
+scopes or even redefine existing scopes, although the latter is considered bad practice
+and you cannot override the built-in <code>singleton</code> and <code>prototype</code> scopes.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-scopes-custom-creating"><a class="anchor" href="#beans-factory-scopes-custom-creating"></a>Creating a Custom Scope</h3>
+<div class="paragraph">
+<p>To integrate your custom scopes into the Spring container, you need to implement the
+<code>org.springframework.beans.factory.config.Scope</code> interface, which is described in this
+section. For an idea of how to implement your own scopes, see the <code>Scope</code>
+implementations that are supplied with the Spring Framework itself and the
+{api-spring-framework}/beans/factory/config/Scope.html[<code>Scope</code>] javadoc,
+which explains the methods you need to implement in more detail.</p>
+</div>
+<div class="paragraph">
+<p>The <code>Scope</code> interface has four methods to get objects from the scope, remove them from
+the scope, and let them be destroyed.</p>
+</div>
+<div class="paragraph">
+<p>The session scope implementation, for example, returns the session-scoped bean (if it
+does not exist, the method returns a new instance of the bean, after having bound it to
+the session for future reference). The following method returns the object from the
+underlying scope:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Object get(String name, ObjectFactory&lt;?&gt; objectFactory)</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun get(name: String, objectFactory: ObjectFactory&lt;*&gt;): Any</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The session scope implementation, for example, removes the session-scoped bean from the
+underlying session. The object should be returned, but you can return <code>null</code> if the
+object with the specified name is not found. The following method removes the object from
+the underlying scope:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Object remove(String name)</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun remove(name: String): Any</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following method registers a callback that the scope should invoke when it is
+destroyed or when the specified object in the scope is destroyed:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void registerDestructionCallback(String name, Runnable destructionCallback)</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun registerDestructionCallback(name: String, destructionCallback: Runnable)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the {api-spring-framework}/beans/factory/config/Scope.html#registerDestructionCallback[javadoc]
+or a Spring scope implementation for more information on destruction callbacks.</p>
+</div>
+<div class="paragraph">
+<p>The following method obtains the conversation identifier for the underlying scope:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String getConversationId()</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun getConversationId(): String</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This identifier is different for each scope. For a session scoped implementation, this
+identifier can be the session identifier.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-scopes-custom-using"><a class="anchor" href="#beans-factory-scopes-custom-using"></a>Using a Custom Scope</h3>
+<div class="paragraph">
+<p>After you write and test one or more custom <code>Scope</code> implementations, you need to make
+the Spring container aware of your new scopes. The following method is the central
+method to register a new <code>Scope</code> with the Spring container:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void registerScope(String scopeName, Scope scope);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun registerScope(scopeName: String, scope: Scope)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This method is declared on the <code>ConfigurableBeanFactory</code> interface, which is available
+through the <code>BeanFactory</code> property on most of the concrete <code>ApplicationContext</code>
+implementations that ship with Spring.</p>
+</div>
+<div class="paragraph">
+<p>The first argument to the <code>registerScope(..)</code> method is the unique name associated with
+a scope. Examples of such names in the Spring container itself are <code>singleton</code> and
+<code>prototype</code>. The second argument to the <code>registerScope(..)</code> method is an actual instance
+of the custom <code>Scope</code> implementation that you wish to register and use.</p>
+</div>
+<div class="paragraph">
+<p>Suppose that you write your custom <code>Scope</code> implementation, and then register it as shown
+in the next example.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The next example uses <code>SimpleThreadScope</code>, which is included with Spring but is not
+registered by default. The instructions would be the same for your own custom <code>Scope</code>
+implementations.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Scope threadScope = new SimpleThreadScope();
+beanFactory.registerScope("thread", threadScope);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val threadScope = SimpleThreadScope()
+beanFactory.registerScope("thread", threadScope)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then create bean definitions that adhere to the scoping rules of your custom
+<code>Scope</code>, as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="..." class="..." scope="thread"&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With a custom <code>Scope</code> implementation, you are not limited to programmatic registration
+of the scope. You can also do the <code>Scope</code> registration declaratively, by using the
+<code>CustomScopeConfigurer</code> class, as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/aop
+		https://www.springframework.org/schema/aop/spring-aop.xsd"&gt;
+
+	&lt;bean class="org.springframework.beans.factory.config.CustomScopeConfigurer"&gt;
+		&lt;property name="scopes"&gt;
+			&lt;map&gt;
+				&lt;entry key="thread"&gt;
+					&lt;bean class="org.springframework.context.support.SimpleThreadScope"/&gt;
+				&lt;/entry&gt;
+			&lt;/map&gt;
+		&lt;/property&gt;
+	&lt;/bean&gt;
+
+	&lt;bean id="thing2" class="x.y.Thing2" scope="thread"&gt;
+		&lt;property name="name" value="Rick"/&gt;
+		&lt;aop:scoped-proxy/&gt;
+	&lt;/bean&gt;
+
+	&lt;bean id="thing1" class="x.y.Thing1"&gt;
+		&lt;property name="thing2" ref="thing2"/&gt;
+	&lt;/bean&gt;
+
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When you place <code>&lt;aop:scoped-proxy/&gt;</code> within a <code>&lt;bean&gt;</code> declaration for a
+<code>FactoryBean</code> implementation, it is the factory bean itself that is scoped, not the object
+returned from <code>getObject()</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
