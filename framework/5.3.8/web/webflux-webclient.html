@@ -1,0 +1,1461 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>WebClient :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core.html">Core</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/5.6.0/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/5.6.0/overview/prerequisites.html">5.6.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Framework</a></li>
+    <li><a href="webflux-webclient.html">WebClient</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/web/webflux-webclient.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">WebClient</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring WebFlux includes a client to perform HTTP requests with. <code>WebClient</code> has a
+functional, fluent API based on Reactor, see <a href="../web-reactive.html#webflux-reactive-libraries" class="page">web-reactive.adoc#webflux-reactive-libraries</a>,
+which enables declarative composition of asynchronous logic without the need to deal with
+threads or concurrency. It is fully non-blocking, it supports streaming, and relies on
+the same <a href="../web-reactive.html#webflux-codecs" class="page">codecs</a> that are also used to encode and
+decode request and response content on the server side.</p>
+</div>
+<div class="paragraph">
+<p><code>WebClient</code> needs an HTTP client library to perform requests with. There is built-in
+support for the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/reactor/reactor-netty">Reactor Netty</a></p>
+</li>
+<li>
+<p><a href="https://github.com/jetty-project/jetty-reactive-httpclient">Jetty Reactive HttpClient</a></p>
+</li>
+<li>
+<p><a href="https://hc.apache.org/index.html">Apache HttpComponents</a></p>
+</li>
+<li>
+<p>Others can be plugged via <code>ClientHttpConnector</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-client-builder"><a class="anchor" href="#webflux-client-builder"></a>Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The simplest way to create a <code>WebClient</code> is through one of the static factory methods:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>WebClient.create()</code></p>
+</li>
+<li>
+<p><code>WebClient.create(String baseUrl)</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You can also use <code>WebClient.builder()</code> with further options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>uriBuilderFactory</code>: Customized <code>UriBuilderFactory</code> to use as a base URL.</p>
+</li>
+<li>
+<p><code>defaultUriVariables</code>: default values to use when expanding URI templates.</p>
+</li>
+<li>
+<p><code>defaultHeader</code>: Headers for every request.</p>
+</li>
+<li>
+<p><code>defaultCookie</code>: Cookies for every request.</p>
+</li>
+<li>
+<p><code>defaultRequest</code>: <code>Consumer</code> to customize every request.</p>
+</li>
+<li>
+<p><code>filter</code>: Client filter for every request.</p>
+</li>
+<li>
+<p><code>exchangeStrategies</code>: HTTP message reader/writer customizations.</p>
+</li>
+<li>
+<p><code>clientConnector</code>: HTTP client library settings.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WebClient client = WebClient.builder()
+		.codecs(configurer -&gt; ... )
+		.build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val webClient = WebClient.builder()
+		.codecs { configurer -&gt; ... }
+		.build()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once built, a <code>WebClient</code> is immutable. However, you can clone it and build a
+modified copy as follows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WebClient client1 = WebClient.builder()
+		.filter(filterA).filter(filterB).build();
+
+WebClient client2 = client1.mutate()
+		.filter(filterC).filter(filterD).build();
+
+// client1 has filterA, filterB
+
+// client2 has filterA, filterB, filterC, filterD</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val client1 = WebClient.builder()
+		.filter(filterA).filter(filterB).build()
+
+val client2 = client1.mutate()
+		.filter(filterC).filter(filterD).build()
+
+// client1 has filterA, filterB
+
+// client2 has filterA, filterB, filterC, filterD</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-client-builder-maxinmemorysize"><a class="anchor" href="#webflux-client-builder-maxinmemorysize"></a>MaxInMemorySize</h3>
+<div class="paragraph">
+<p>Codecs have <a href="../web-reactive.html#webflux-codecs-limits" class="page">limits</a> for buffering data in
+memory to avoid application memory issues. By the default those are set to 256KB.
+If that&#8217;s not enough you&#8217;ll get the following error:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>org.springframework.core.io.buffer.DataBufferLimitException: Exceeded limit on max bytes to buffer</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To change the limit for default codecs, use the following:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WebClient webClient = WebClient.builder()
+		.codecs(configurer -&gt; configurer.defaultCodecs().maxInMemorySize(2 * 1024 * 1024))
+		.build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val webClient = WebClient.builder()
+		.codecs { configurer -&gt; configurer.defaultCodecs().maxInMemorySize(2 * 1024 * 1024) }
+		.build()</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-client-builder-reactor"><a class="anchor" href="#webflux-client-builder-reactor"></a>Reactor Netty</h3>
+<div class="paragraph">
+<p>To customize Reactor Netty settings, provide a pre-configured <code>HttpClient</code>:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">HttpClient httpClient = HttpClient.create().secure(sslSpec -&gt; ...);
+
+WebClient webClient = WebClient.builder()
+		.clientConnector(new ReactorClientHttpConnector(httpClient))
+		.build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val httpClient = HttpClient.create().secure { ... }
+
+val webClient = WebClient.builder()
+	.clientConnector(ReactorClientHttpConnector(httpClient))
+	.build()</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-client-builder-reactor-resources"><a class="anchor" href="#webflux-client-builder-reactor-resources"></a>Resources</h4>
+<div class="paragraph">
+<p>By default, <code>HttpClient</code> participates in the global Reactor Netty resources held in
+<code>reactor.netty.http.HttpResources</code>, including event loop threads and a connection pool.
+This is the recommended mode, since fixed, shared resources are preferred for event loop
+concurrency. In this mode global resources remain active until the process exits.</p>
+</div>
+<div class="paragraph">
+<p>If the server is timed with the process, there is typically no need for an explicit
+shutdown. However, if the server can start or stop in-process (for example, a Spring MVC
+application deployed as a WAR), you can declare a Spring-managed bean of type
+<code>ReactorResourceFactory</code> with <code>globalResources=true</code> (the default) to ensure that the Reactor
+Netty global resources are shut down when the Spring <code>ApplicationContext</code> is closed,
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactorResourceFactory reactorResourceFactory() {
+	return new ReactorResourceFactory();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun reactorResourceFactory() = ReactorResourceFactory()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also choose not to participate in the global Reactor Netty resources. However,
+in this mode, the burden is on you to ensure that all Reactor Netty client and server
+instances use shared resources, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactorResourceFactory resourceFactory() {
+	ReactorResourceFactory factory = new ReactorResourceFactory();
+	factory.setUseGlobalResources(false); <i class="conum" data-value="1"></i><b>(1)</b>
+	return factory;
+}
+
+@Bean
+public WebClient webClient() {
+
+	Function&lt;HttpClient, HttpClient&gt; mapper = client -&gt; {
+		// Further customizations...
+	};
+
+	ClientHttpConnector connector =
+			new ReactorClientHttpConnector(resourceFactory(), mapper); <i class="conum" data-value="2"></i><b>(2)</b>
+
+	return WebClient.builder().clientConnector(connector).build(); <i class="conum" data-value="3"></i><b>(3)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Create resources independent of global ones.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Use the <code>ReactorClientHttpConnector</code> constructor with resource factory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Plug the connector into the <code>WebClient.Builder</code>.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun resourceFactory() = ReactorResourceFactory().apply {
+	isUseGlobalResources = false <i class="conum" data-value="1"></i><b>(1)</b>
+}
+
+@Bean
+fun webClient(): WebClient {
+
+	val mapper: (HttpClient) -&gt; HttpClient = {
+		// Further customizations...
+	}
+
+	val connector = ReactorClientHttpConnector(resourceFactory(), mapper) <i class="conum" data-value="2"></i><b>(2)</b>
+
+	return WebClient.builder().clientConnector(connector).build() <i class="conum" data-value="3"></i><b>(3)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Create resources independent of global ones.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Use the <code>ReactorClientHttpConnector</code> constructor with resource factory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Plug the connector into the <code>WebClient.Builder</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-client-builder-reactor-timeout"><a class="anchor" href="#webflux-client-builder-reactor-timeout"></a>Timeouts</h4>
+<div class="paragraph">
+<p>To configure a connection timeout:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import io.netty.channel.ChannelOption;
+
+HttpClient httpClient = HttpClient.create()
+		.option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 10000);
+
+WebClient webClient = WebClient.builder()
+		.clientConnector(new ReactorClientHttpConnector(httpClient))
+		.build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import io.netty.channel.ChannelOption
+
+val httpClient = HttpClient.create()
+		.option(ChannelOption.CONNECT_TIMEOUT_MILLIS, 10000);
+
+val webClient = WebClient.builder()
+		.clientConnector(new ReactorClientHttpConnector(httpClient))
+		.build();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To configure a read or write timeout:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import io.netty.handler.timeout.ReadTimeoutHandler;
+import io.netty.handler.timeout.WriteTimeoutHandler;
+
+HttpClient httpClient = HttpClient.create()
+		.doOnConnected(conn -&gt; conn
+				.addHandlerLast(new ReadTimeoutHandler(10))
+				.addHandlerLast(new WriteTimeoutHandler(10)));
+
+// Create WebClient...</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import io.netty.handler.timeout.ReadTimeoutHandler
+import io.netty.handler.timeout.WriteTimeoutHandler
+
+val httpClient = HttpClient.create()
+		.doOnConnected { conn -&gt; conn
+				.addHandlerLast(new ReadTimeoutHandler(10))
+				.addHandlerLast(new WriteTimeoutHandler(10))
+		}
+
+// Create WebClient...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To configure a response timeout for all requests:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">HttpClient httpClient = HttpClient.create()
+		.responseTimeout(Duration.ofSeconds(2));
+
+// Create WebClient...</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val httpClient = HttpClient.create()
+		.responseTimeout(Duration.ofSeconds(2));
+
+// Create WebClient...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To configure a response timeout for a specific request:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WebClient.create().get()
+		.uri("https://example.org/path")
+		.httpRequest(httpRequest -&gt; {
+			HttpClientRequest reactorRequest = httpRequest.getNativeRequest();
+			reactorRequest.responseTimeout(Duration.ofSeconds(2));
+		})
+		.retrieve()
+		.bodyToMono(String.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">WebClient.create().get()
+		.uri("https://example.org/path")
+		.httpRequest { httpRequest: ClientHttpRequest -&gt;
+			val reactorRequest = httpRequest.getNativeRequest&lt;HttpClientRequest&gt;()
+			reactorRequest.responseTimeout(Duration.ofSeconds(2))
+		}
+		.retrieve()
+		.bodyToMono(String::class.java)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-client-builder-jetty"><a class="anchor" href="#webflux-client-builder-jetty"></a>Jetty</h3>
+<div class="paragraph">
+<p>The following example shows how to customize Jetty <code>HttpClient</code> settings:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">HttpClient httpClient = new HttpClient();
+httpClient.setCookieStore(...);
+
+WebClient webClient = WebClient.builder()
+		.clientConnector(new JettyClientHttpConnector(httpClient))
+		.build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val httpClient = HttpClient()
+httpClient.cookieStore = ...
+
+val webClient = WebClient.builder()
+		.clientConnector(new JettyClientHttpConnector(httpClient))
+		.build();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, <code>HttpClient</code> creates its own resources (<code>Executor</code>, <code>ByteBufferPool</code>, <code>Scheduler</code>),
+which remain active until the process exits or <code>stop()</code> is called.</p>
+</div>
+<div class="paragraph">
+<p>You can share resources between multiple instances of the Jetty client (and server) and
+ensure that the resources are shut down when the Spring <code>ApplicationContext</code> is closed by
+declaring a Spring-managed bean of type <code>JettyResourceFactory</code>, as the following example
+shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public JettyResourceFactory resourceFactory() {
+	return new JettyResourceFactory();
+}
+
+@Bean
+public WebClient webClient() {
+
+	HttpClient httpClient = new HttpClient();
+	// Further customizations...
+
+	ClientHttpConnector connector =
+			new JettyClientHttpConnector(httpClient, resourceFactory()); <i class="conum" data-value="1"></i><b>(1)</b>
+
+	return WebClient.builder().clientConnector(connector).build(); <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use the <code>JettyClientHttpConnector</code> constructor with resource factory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Plug the connector into the <code>WebClient.Builder</code>.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun resourceFactory() = JettyResourceFactory()
+
+@Bean
+fun webClient(): WebClient {
+
+	val httpClient = HttpClient()
+	// Further customizations...
+
+	val connector = JettyClientHttpConnector(httpClient, resourceFactory()) <i class="conum" data-value="1"></i><b>(1)</b>
+
+	return WebClient.builder().clientConnector(connector).build() <i class="conum" data-value="2"></i><b>(2)</b>
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Use the <code>JettyClientHttpConnector</code> constructor with resource factory.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Plug the connector into the <code>WebClient.Builder</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-client-builder-http-components"><a class="anchor" href="#webflux-client-builder-http-components"></a>HttpComponents</h3>
+<div class="paragraph">
+<p>The following example shows how to customize Apache HttpComponents <code>HttpClient</code> settings:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">HttpAsyncClientBuilder clientBuilder = HttpAsyncClients.custom();
+clientBuilder.setDefaultRequestConfig(...);
+CloseableHttpAsyncClient client = clientBuilder.build();
+ClientHttpConnector connector = new HttpComponentsClientHttpConnector(client);
+
+WebClient webClient = WebClient.builder().clientConnector(connector).build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val client = HttpAsyncClients.custom().apply {
+	setDefaultRequestConfig(...)
+}.build()
+val connector = HttpComponentsClientHttpConnector(client)
+val webClient = WebClient.builder().clientConnector(connector).build()</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-client-retrieve"><a class="anchor" href="#webflux-client-retrieve"></a><code>retrieve()</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>retrieve()</code> method can be used to declare how to extract the response. For example:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WebClient client = WebClient.create("https://example.org");
+
+Mono&lt;ResponseEntity&lt;Person&gt;&gt; result = client.get()
+		.uri("/persons/{id}", id).accept(MediaType.APPLICATION_JSON)
+		.retrieve()
+		.toEntity(Person.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val client = WebClient.create("https://example.org")
+
+val result = client.get()
+		.uri("/persons/{id}", id).accept(MediaType.APPLICATION_JSON)
+		.retrieve()
+		.toEntity&lt;Person&gt;().awaitSingle()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or to get only the body:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WebClient client = WebClient.create("https://example.org");
+
+Mono&lt;Person&gt; result = client.get()
+		.uri("/persons/{id}", id).accept(MediaType.APPLICATION_JSON)
+		.retrieve()
+		.bodyToMono(Person.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val client = WebClient.create("https://example.org")
+
+val result = client.get()
+		.uri("/persons/{id}", id).accept(MediaType.APPLICATION_JSON)
+		.retrieve()
+		.awaitBody&lt;Person&gt;()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To get a stream of decoded objects:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Flux&lt;Quote&gt; result = client.get()
+		.uri("/quotes").accept(MediaType.TEXT_EVENT_STREAM)
+		.retrieve()
+		.bodyToFlux(Quote.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val result = client.get()
+		.uri("/quotes").accept(MediaType.TEXT_EVENT_STREAM)
+		.retrieve()
+		.bodyToFlow&lt;Quote&gt;()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, 4xx or 5xx responses result in an <code>WebClientResponseException</code>, including
+sub-classes for specific HTTP status codes. To customize the handling of error
+responses, use <code>onStatus</code> handlers as follows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;Person&gt; result = client.get()
+		.uri("/persons/{id}", id).accept(MediaType.APPLICATION_JSON)
+		.retrieve()
+		.onStatus(HttpStatus::is4xxClientError, response -&gt; ...)
+		.onStatus(HttpStatus::is5xxServerError, response -&gt; ...)
+		.bodyToMono(Person.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val result = client.get()
+		.uri("/persons/{id}", id).accept(MediaType.APPLICATION_JSON)
+		.retrieve()
+		.onStatus(HttpStatus::is4xxClientError) { ... }
+		.onStatus(HttpStatus::is5xxServerError) { ... }
+		.awaitBody&lt;Person&gt;()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-client-exchange"><a class="anchor" href="#webflux-client-exchange"></a>Exchange</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>exchangeToMono()</code> and <code>exchangeToFlux()</code> methods (or <code>awaitExchange { }</code> and <code>exchangeToFlow { }</code> in Kotlin)
+are useful for more advanced cases that require more control, such as to decode the response differently
+depending on the response status:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;Object&gt; entityMono = client.get()
+		.uri("/persons/1")
+		.accept(MediaType.APPLICATION_JSON)
+		.exchangeToMono(response -&gt; {
+			if (response.statusCode().equals(HttpStatus.OK)) {
+				return response.bodyToMono(Person.class);
+			}
+			else if (response.statusCode().is4xxClientError()) {
+				// Suppress error status code
+				return response.bodyToMono(ErrorContainer.class);
+			}
+			else {
+				// Turn to error
+				return response.createException().flatMap(Mono::error);
+			}
+		});</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val entity = client.get()
+  .uri("/persons/1")
+  .accept(MediaType.APPLICATION_JSON)
+  .awaitExchange {
+		if (response.statusCode() == HttpStatus.OK) {
+			 return response.awaitBody&lt;Person&gt;()
+		}
+		else if (response.statusCode().is4xxClientError) {
+			 return response.awaitBody&lt;ErrorContainer&gt;()
+		}
+		else {
+			 throw response.createExceptionAndAwait()
+		}
+  }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When using the above, after the returned <code>Mono</code> or <code>Flux</code> completes, the response body
+is checked and if not consumed it is released to prevent memory and connection leaks.
+Therefore the response cannot be decoded further downstream. It is up to the provided
+function to declare how to decode the response if needed.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-client-body"><a class="anchor" href="#webflux-client-body"></a>Request Body</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The request body can be encoded from any asynchronous type handled by <code>ReactiveAdapterRegistry</code>,
+like <code>Mono</code> or Kotlin Coroutines <code>Deferred</code> as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;Person&gt; personMono = ... ;
+
+Mono&lt;Void&gt; result = client.post()
+		.uri("/persons/{id}", id)
+		.contentType(MediaType.APPLICATION_JSON)
+		.body(personMono, Person.class)
+		.retrieve()
+		.bodyToMono(Void.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val personDeferred: Deferred&lt;Person&gt; = ...
+
+client.post()
+		.uri("/persons/{id}", id)
+		.contentType(MediaType.APPLICATION_JSON)
+		.body&lt;Person&gt;(personDeferred)
+		.retrieve()
+		.awaitBody&lt;Unit&gt;()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also have a stream of objects be encoded, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Flux&lt;Person&gt; personFlux = ... ;
+
+Mono&lt;Void&gt; result = client.post()
+		.uri("/persons/{id}", id)
+		.contentType(MediaType.APPLICATION_STREAM_JSON)
+		.body(personFlux, Person.class)
+		.retrieve()
+		.bodyToMono(Void.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val people: Flow&lt;Person&gt; = ...
+
+client.post()
+		.uri("/persons/{id}", id)
+		.contentType(MediaType.APPLICATION_JSON)
+		.body(people)
+		.retrieve()
+		.awaitBody&lt;Unit&gt;()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, if you have the actual value, you can use the <code>bodyValue</code> shortcut method,
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Person person = ... ;
+
+Mono&lt;Void&gt; result = client.post()
+		.uri("/persons/{id}", id)
+		.contentType(MediaType.APPLICATION_JSON)
+		.bodyValue(person)
+		.retrieve()
+		.bodyToMono(Void.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val person: Person = ...
+
+client.post()
+		.uri("/persons/{id}", id)
+		.contentType(MediaType.APPLICATION_JSON)
+		.bodyValue(person)
+		.retrieve()
+		.awaitBody&lt;Unit&gt;()</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-client-body-form"><a class="anchor" href="#webflux-client-body-form"></a>Form Data</h3>
+<div class="paragraph">
+<p>To send form data, you can provide a <code>MultiValueMap&lt;String, String&gt;</code> as the body. Note that the
+content is automatically set to <code>application/x-www-form-urlencoded</code> by the
+<code>FormHttpMessageWriter</code>. The following example shows how to use <code>MultiValueMap&lt;String, String&gt;</code>:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MultiValueMap&lt;String, String&gt; formData = ... ;
+
+Mono&lt;Void&gt; result = client.post()
+		.uri("/path", id)
+		.bodyValue(formData)
+		.retrieve()
+		.bodyToMono(Void.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val formData: MultiValueMap&lt;String, String&gt; = ...
+
+client.post()
+		.uri("/path", id)
+		.bodyValue(formData)
+		.retrieve()
+		.awaitBody&lt;Unit&gt;()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also supply form data in-line by using <code>BodyInserters</code>, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.web.reactive.function.BodyInserters.*;
+
+Mono&lt;Void&gt; result = client.post()
+		.uri("/path", id)
+		.body(fromFormData("k1", "v1").with("k2", "v2"))
+		.retrieve()
+		.bodyToMono(Void.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.web.reactive.function.BodyInserters.*
+
+client.post()
+		.uri("/path", id)
+		.body(fromFormData("k1", "v1").with("k2", "v2"))
+		.retrieve()
+		.awaitBody&lt;Unit&gt;()</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-client-body-multipart"><a class="anchor" href="#webflux-client-body-multipart"></a>Multipart Data</h3>
+<div class="paragraph">
+<p>To send multipart data, you need to provide a <code>MultiValueMap&lt;String, ?&gt;</code> whose values are
+either <code>Object</code> instances that represent part content or <code>HttpEntity</code> instances that represent the content and
+headers for a part. <code>MultipartBodyBuilder</code> provides a convenient API to prepare a
+multipart request. The following example shows how to create a <code>MultiValueMap&lt;String, ?&gt;</code>:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MultipartBodyBuilder builder = new MultipartBodyBuilder();
+builder.part("fieldPart", "fieldValue");
+builder.part("filePart1", new FileSystemResource("...logo.png"));
+builder.part("jsonPart", new Person("Jason"));
+builder.part("myPart", part); // Part from a server request
+
+MultiValueMap&lt;String, HttpEntity&lt;?&gt;&gt; parts = builder.build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val builder = MultipartBodyBuilder().apply {
+	part("fieldPart", "fieldValue")
+	part("filePart1", new FileSystemResource("...logo.png"))
+	part("jsonPart", new Person("Jason"))
+	part("myPart", part) // Part from a server request
+}
+
+val parts = builder.build()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In most cases, you do not have to specify the <code>Content-Type</code> for each part. The content
+type is determined automatically based on the <code>HttpMessageWriter</code> chosen to serialize it
+or, in the case of a <code>Resource</code>, based on the file extension. If necessary, you can
+explicitly provide the <code>MediaType</code> to use for each part through one of the overloaded
+builder <code>part</code> methods.</p>
+</div>
+<div class="paragraph">
+<p>Once a <code>MultiValueMap</code> is prepared, the easiest way to pass it to the <code>WebClient</code> is
+through the <code>body</code> method, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MultipartBodyBuilder builder = ...;
+
+Mono&lt;Void&gt; result = client.post()
+		.uri("/path", id)
+		.body(builder.build())
+		.retrieve()
+		.bodyToMono(Void.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val builder: MultipartBodyBuilder = ...
+
+client.post()
+		.uri("/path", id)
+		.body(builder.build())
+		.retrieve()
+		.awaitBody&lt;Unit&gt;()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the <code>MultiValueMap</code> contains at least one non-<code>String</code> value, which could also
+represent regular form data (that is, <code>application/x-www-form-urlencoded</code>), you need not
+set the <code>Content-Type</code> to <code>multipart/form-data</code>. This is always the case when using
+<code>MultipartBodyBuilder</code>, which ensures an <code>HttpEntity</code> wrapper.</p>
+</div>
+<div class="paragraph">
+<p>As an alternative to <code>MultipartBodyBuilder</code>, you can also provide multipart content,
+inline-style, through the built-in <code>BodyInserters</code>, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.web.reactive.function.BodyInserters.*;
+
+Mono&lt;Void&gt; result = client.post()
+		.uri("/path", id)
+		.body(fromMultipartData("fieldPart", "value").with("filePart", resource))
+		.retrieve()
+		.bodyToMono(Void.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.web.reactive.function.BodyInserters.*
+
+client.post()
+		.uri("/path", id)
+		.body(fromMultipartData("fieldPart", "value").with("filePart", resource))
+		.retrieve()
+		.awaitBody&lt;Unit&gt;()</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-client-filter"><a class="anchor" href="#webflux-client-filter"></a>Filters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can register a client filter (<code>ExchangeFilterFunction</code>) through the <code>WebClient.Builder</code>
+in order to intercept and modify requests, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WebClient client = WebClient.builder()
+		.filter((request, next) -&gt; {
+
+			ClientRequest filtered = ClientRequest.from(request)
+					.header("foo", "bar")
+					.build();
+
+			return next.exchange(filtered);
+		})
+		.build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val client = WebClient.builder()
+		.filter { request, next -&gt;
+
+			val filtered = ClientRequest.from(request)
+					.header("foo", "bar")
+					.build()
+
+			next.exchange(filtered)
+		}
+		.build()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This can be used for cross-cutting concerns, such as authentication. The following example uses
+a filter for basic authentication through a static factory method:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.web.reactive.function.client.ExchangeFilterFunctions.basicAuthentication;
+
+WebClient client = WebClient.builder()
+		.filter(basicAuthentication("user", "password"))
+		.build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.web.reactive.function.client.ExchangeFilterFunctions.basicAuthentication
+
+val client = WebClient.builder()
+		.filter(basicAuthentication("user", "password"))
+		.build()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Filters can be added or removed by mutating an existing <code>WebClient</code> instance, resulting
+in a new <code>WebClient</code> instance that does not affect the original one. For example:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.web.reactive.function.client.ExchangeFilterFunctions.basicAuthentication;
+
+WebClient client = webClient.mutate()
+		.filters(filterList -&gt; {
+			filterList.add(0, basicAuthentication("user", "password"));
+		})
+		.build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val client = webClient.mutate()
+		.filters { it.add(0, basicAuthentication("user", "password")) }
+		.build()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>WebClient</code> is a thin facade around the chain of filters followed by an
+<code>ExchangeFunction</code>. It provides a workflow to make requests, to encode to and from higher
+level objects, and it helps to ensure that response content is always consumed.
+When filters handle the response in some way, extra care must be taken to always consume
+its content or to otherwise propagate it downstream to the <code>WebClient</code> which will ensure
+the same. Below is a filter that handles the <code>UNAUTHORIZED</code> status code but ensures that
+any response content, whether expected or not, is released:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public ExchangeFilterFunction renewTokenFilter() {
+	return (request, next) -&gt; next.exchange(request).flatMap(response -&gt; {
+		if (response.statusCode().value() == HttpStatus.UNAUTHORIZED.value()) {
+			return response.releaseBody()
+					.then(renewToken())
+					.flatMap(token -&gt; {
+						ClientRequest newRequest = ClientRequest.from(request).build();
+						return next.exchange(newRequest);
+					});
+		} else {
+			return Mono.just(response);
+		}
+	});
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun renewTokenFilter(): ExchangeFilterFunction? {
+	return ExchangeFilterFunction { request: ClientRequest?, next: ExchangeFunction -&gt;
+		next.exchange(request!!).flatMap { response: ClientResponse -&gt;
+			if (response.statusCode().value() == HttpStatus.UNAUTHORIZED.value()) {
+				return@flatMap response.releaseBody()
+						.then(renewToken())
+						.flatMap { token: String? -&gt;
+							val newRequest = ClientRequest.from(request).build()
+							next.exchange(newRequest)
+						}
+			} else {
+				return@flatMap Mono.just(response)
+			}
+		}
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-client-attributes"><a class="anchor" href="#webflux-client-attributes"></a>Attributes</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can add attributes to a request. This is convenient if you want to pass information
+through the filter chain and influence the behavior of filters for a given request.
+For example:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WebClient client = WebClient.builder()
+		.filter((request, next) -&gt; {
+			Optional&lt;Object&gt; usr = request.attribute("myAttribute");
+			// ...
+		})
+		.build();
+
+client.get().uri("https://example.org/")
+		.attribute("myAttribute", "...")
+		.retrieve()
+		.bodyToMono(Void.class);
+
+	}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val client = WebClient.builder()
+		.filter { request, _ -&gt;
+			val usr = request.attributes()["myAttribute"];
+			// ...
+		}
+		.build()
+
+	client.get().uri("https://example.org/")
+			.attribute("myAttribute", "...")
+			.retrieve()
+			.awaitBody&lt;Unit&gt;()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that you can configure a <code>defaultRequest</code> callback globally at the
+<code>WebClient.Builder</code> level which lets you insert attributes into all requests,
+which could be used for example in a Spring MVC application to populate
+request attributes based on <code>ThreadLocal</code> data.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-client-context"><a class="anchor" href="#webflux-client-context"></a>Context</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="#webflux-client-attributes">Attributes</a> provide a convenient way to pass information to the filter
+chain but they only influence the current request. If you want to pass information that
+propagates to additional requests that are nested, e.g. via <code>flatMap</code>, or executed after,
+e.g. via <code>concatMap</code>, then you&#8217;ll need to use the Reactor <code>Context</code>.</p>
+</div>
+<div class="paragraph">
+<p>The Reactor <code>Context</code> needs to be populated at the end of a reactive chain in order to
+apply to all operations. For example:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">WebClient client = WebClient.builder()
+		.filter((request, next) -&gt;
+				Mono.deferContextual(contextView -&gt; {
+					String value = contextView.get("foo");
+					// ...
+				}))
+		.build();
+
+client.get().uri("https://example.org/")
+		.retrieve()
+		.bodyToMono(String.class)
+		.flatMap(body -&gt; {
+				// perform nested request (context propagates automatically)...
+		})
+		.contextWrite(context -&gt; context.put("foo", ...));</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-client-synchronous"><a class="anchor" href="#webflux-client-synchronous"></a>Synchronous Use</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>WebClient</code> can be used in synchronous style by blocking at the end for the result:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Person person = client.get().uri("/person/{id}", i).retrieve()
+	.bodyToMono(Person.class)
+	.block();
+
+List&lt;Person&gt; persons = client.get().uri("/persons").retrieve()
+	.bodyToFlux(Person.class)
+	.collectList()
+	.block();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val person = runBlocking {
+	client.get().uri("/person/{id}", i).retrieve()
+			.awaitBody&lt;Person&gt;()
+}
+
+val persons = runBlocking {
+	client.get().uri("/persons").retrieve()
+			.bodyToFlow&lt;Person&gt;()
+			.toList()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>However if multiple calls need to be made, it&#8217;s more efficient to avoid blocking on each
+response individually, and instead wait for the combined result:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Mono&lt;Person&gt; personMono = client.get().uri("/person/{id}", personId)
+		.retrieve().bodyToMono(Person.class);
+
+Mono&lt;List&lt;Hobby&gt;&gt; hobbiesMono = client.get().uri("/person/{id}/hobbies", personId)
+		.retrieve().bodyToFlux(Hobby.class).collectList();
+
+Map&lt;String, Object&gt; data = Mono.zip(personMono, hobbiesMono, (person, hobbies) -&gt; {
+			Map&lt;String, String&gt; map = new LinkedHashMap&lt;&gt;();
+			map.put("person", person);
+			map.put("hobbies", hobbies);
+			return map;
+		})
+		.block();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val data = runBlocking {
+		val personDeferred = async {
+			client.get().uri("/person/{id}", personId)
+					.retrieve().awaitBody&lt;Person&gt;()
+		}
+
+		val hobbiesDeferred = async {
+			client.get().uri("/person/{id}/hobbies", personId)
+					.retrieve().bodyToFlow&lt;Hobby&gt;().toList()
+		}
+
+		mapOf("person" to personDeferred.await(), "hobbies" to hobbiesDeferred.await())
+	}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The above is merely one example. There are lots of other patterns and operators for putting
+together a reactive pipeline that makes many remote calls, potentially some nested,
+inter-dependent, without ever blocking until the end.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>With <code>Flux</code> or <code>Mono</code>, you should never have to block in a Spring MVC or Spring WebFlux controller.
+Simply return the resulting reactive type from the controller method. The same principle apply to
+Kotlin Coroutines and Spring WebFlux, just use suspending function or return <code>Flow</code> in your
+controller method .</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-client-testing"><a class="anchor" href="#webflux-client-testing"></a>Testing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>To test code that uses the <code>WebClient</code>, you can use a mock web server, such as the
+<a href="https://github.com/square/okhttp#mockwebserver">OkHttp MockWebServer</a>. To see an example
+of its use, check out
+{spring-framework-main-code}/spring-webflux/src/test/java/org/springframework/web/reactive/function/client/WebClientIntegrationTests.java[<code>WebClientIntegrationTests</code>]
+in the Spring Framework test suite or the
+<a href="https://github.com/square/okhttp/tree/master/samples/static-server"><code>static-server</code></a>
+sample in the OkHttp repository.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

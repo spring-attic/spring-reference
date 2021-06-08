@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Form Login :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../../framework/5.3.8/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../../framework/5.3.8/index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../overview/prerequisites.html">5.6.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../../framework/5.3.8/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../overview/prerequisites.html">Spring Security</a></li>
+    <li><a href="form.html">Form Login</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/authentication/unpwd/form.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Form Login</h1>
+<div class="paragraph">
+<p>Spring Security provides support for username and password being provided through an html form.
+This section provides details on how form based authentication works within Spring Security.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s take a look at how form based log in works within Spring Security.
+First, we see how the user is redirected to the log in form.</p>
+</div>
+<div class="paragraph">
+<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/{icondir}/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/{icondir}/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/{icondir}/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em> and sends a redirect to the log in page with the configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a>.
+In most cases the <code>AuthenticationEntryPoint</code> is an instance of {security-api-url}org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html[<code>LoginUrlAuthenticationEntryPoint</code>].</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/{icondir}/number_4.png" alt="number 4"></span> The browser will then request the log in page that it was redirected to.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/{icondir}/number_5.png" alt="number 5"></span> Something within the application, must <a href="#servlet-authentication-form-custom">render the log in page</a>.</p>
+</div>
+<div id="servlet-authentication-usernamepasswordauthenticationfilter" class="paragraph">
+<p>When the username and password are submitted, the <code>UsernamePasswordAuthenticationFilter</code> authenticates the username and password.
+The <code>UsernamePasswordAuthenticationFilter</code> extends <a href="#servlet-authentication-abstractprocessingfilter">[servlet-authentication-abstractprocessingfilter]</a>, so this diagram should look pretty similar.</p>
+</div>
+<div class="paragraph">
+<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/{icondir}/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>UsernamePasswordAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/{icondir}/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
+The details of what <code>AuthenticationManager</code> look like depend on how the <a href="#servlet-authentication-unpwd-storage">user information is stored</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/{icondir}/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a> is cleared out.</p>
+</li>
+<li>
+<p><code>RememberMeServices.loginFail</code> is invoked.
+If remember me is not configured, this is a no-op.</p>
+</li>
+<li>
+<p><code>AuthenticationFailureHandler</code> is invoked.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/{icondir}/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>SessionAuthenticationStrategy</code> is notified of a new log in.</p>
+</li>
+<li>
+<p>The <a href="#servlet-authentication-authentication">[servlet-authentication-authentication]</a> is set on the <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a>.</p>
+</li>
+<li>
+<p><code>RememberMeServices.loginSuccess</code> is invoked.
+If remember me is not configured, this is a no-op.</p>
+</li>
+<li>
+<p><code>ApplicationEventPublisher</code> publishes an <code>InteractiveAuthenticationSuccessEvent</code>.</p>
+</li>
+<li>
+<p>The <code>AuthenticationSuccessHandler</code> is invoked. Typically this is a <code>SimpleUrlAuthenticationSuccessHandler</code> which will redirect to a request saved by <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> when we redirect to the log in page.</p>
+</li>
+</ul>
+</div>
+<div id="servlet-authentication-form-min" class="paragraph">
+<p>Spring Security form log in is enabled by default.
+However, as soon as any servlet based configuration is provided, form based log in must be explicitly provided.
+A minimal, explicit Java configuration can be found below:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Form Log In</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) {
+	http
+		// ...
+		.formLogin(withDefaults());
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+	&lt;!-- ... --&gt;
+	&lt;form-login /&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
+	http {
+		// ...
+		formLogin { }
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In this configuration Spring Security will render a default log in page.
+Most production applications will require a custom log in form.</p>
+</div>
+<div id="servlet-authentication-form-custom" class="paragraph">
+<p>The configuration below demonstrates how to provide a custom log in form.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Custom Log In Form Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) throws Exception {
+	http
+		// ...
+		.formLogin(form -&gt; form
+			.loginPage("/login")
+			.permitAll()
+		);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+	&lt;!-- ... --&gt;
+	&lt;intercept-url pattern="/login" access="permitAll" /&gt;
+	&lt;form-login login-page="/login" /&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
+	http {
+		// ...
+		formLogin {
+			loginPage = "/login"
+			permitAll()
+		}
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="servlet-authentication-form-custom-html" class="paragraph">
+<p>When the login page is specified in the Spring Security configuration, you are responsible for rendering the page.
+Below is a <a href="https://www.thymeleaf.org/">Thymeleaf</a> template that produces an HTML login form that complies with a login page of <code>/login</code>.:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. Log In Form</div>
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/resources/templates/login.html</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Please Log In&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Please Log In&lt;/h1&gt;
+		&lt;div th:if="${param.error}"&gt;
+			Invalid username and password.&lt;/div&gt;
+		&lt;div th:if="${param.logout}"&gt;
+			You have been logged out.&lt;/div&gt;
+		&lt;form th:action="@{/login}" method="post"&gt;
+			&lt;div&gt;
+			&lt;input type="text" name="username" placeholder="Username"/&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+			&lt;input type="password" name="password" placeholder="Password"/&gt;
+			&lt;/div&gt;
+			&lt;input type="submit" value="Log in" /&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>There are a few key points about the default HTML form:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The form should perform a <code>post</code> to <code>/login</code></p>
+</li>
+<li>
+<p>The form will need to include a <a href="#servlet-csrf">CSRF Token</a> which is <a href="#servlet-csrf-include-form-auto">automatically included</a> by Thymeleaf.</p>
+</li>
+<li>
+<p>The form should specify the username in a parameter named <code>username</code></p>
+</li>
+<li>
+<p>The form should specify the password in a parameter named <code>password</code></p>
+</li>
+<li>
+<p>If the HTTP parameter error is found, it indicates the user failed to provide a valid username / password</p>
+</li>
+<li>
+<p>If the HTTP parameter logout is found, it indicates the user has logged out successfully</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Many users will not need much more than to customize the log in page.
+However, if needed everything above can be customized with additional configuration.</p>
+</div>
+<div id="servlet-authentication-form-custom-controller" class="paragraph">
+<p>If you are using Spring MVC, you will need a controller that maps <code>GET /login</code> to the login template we created.
+A minimal sample <code>LoginController</code> can be see below:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. LoginController</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Controller
+class LoginController {
+	@GetMapping("/login")
+	String login() {
+		return "login";
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Controller
+class LoginController {
+    @GetMapping("/login")
+    fun login(): String {
+        return "login"
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../../_/js/site.js"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Servlet Security: The Big Picture :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="2">
+    <a class="nav-link" href="index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3.8/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3.8/index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../overview/prerequisites.html">5.6.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3.8/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../overview/prerequisites.html">Spring Security</a></li>
+    <li>Servlet Applications</li>
+    <li><a href="index.html">Servet Security: The Big Picture</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/architecture/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Servlet Security: The Big Picture</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section discusses Spring Security&#8217;s high level architecture within Servlet based applications.
+We build on this high level understanding within <a href="#servlet-authentication">[servlet-authentication]</a>, <a href="#servlet-authorization">[servlet-authorization]</a>, <a href="#servlet-exploits">[servlet-exploits]</a> sections of the reference.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-filters-review"><a class="anchor" href="#servlet-filters-review"></a>A Review of <code>Filter</code>s</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security&#8217;s Servlet support is based on Servlet <code>Filter</code>s, so it is helpful to look at the role of <code>Filter</code>s generally first.
+The picture below shows the typical layering of the handlers for a single HTTP request.</p>
+</div>
+<div id="servlet-filterchain-figure" class="imageblock">
+<div class="content">
+<img src="../../_images/servlet/architecture/filterchain.png" alt="filterchain">
+</div>
+<div class="title">Figure 1. FilterChain</div>
+</div>
+<div class="paragraph">
+<p>The client sends a request to the application, and the container creates a <code>FilterChain</code> which contains the <code>Filter</code>s and <code>Servlet</code> that should process the <code>HttpServletRequest</code> based on the path of the request URI.
+In a Spring MVC application the <code>Servlet</code> is an instance of <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc-servlet"><code>DispatcherServlet</code></a>.
+At most one <code>Servlet</code> can handle a single <code>HttpServletRequest</code> and <code>HttpServletResponse</code>.
+However, more than one <code>Filter</code> can be used to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Prevent downstream <code>Filter</code>s or the <code>Servlet</code> from being invoked.
+In this instance the <code>Filter</code> will typically write the <code>HttpServletResponse</code>.</p>
+</li>
+<li>
+<p>Modify the <code>HttpServletRequest</code> or <code>HttpServletResponse</code> used by the downstream <code>Filter</code>s and <code>Servlet</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The power of the <code>Filter</code> comes from the <code>FilterChain</code> that is passed into it.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. <code>FilterChain</code> Usage Example</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
+	// do something before the rest of the application
+    chain.doFilter(request, response); // invoke the rest of the application
+    // do something after the rest of the application
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun doFilter(request: ServletRequest, response: ServletResponse, chain: FilterChain) {
+    // do something before the rest of the application
+    chain.doFilter(request, response) // invoke the rest of the application
+    // do something after the rest of the application
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Since a <code>Filter</code> only impacts downstream <code>Filter</code>s and the <code>Servlet</code>, the order each <code>Filter</code> is invoked is extremely important.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-delegatingfilterproxy"><a class="anchor" href="#servlet-delegatingfilterproxy"></a>DelegatingFilterProxy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring provides a <code>Filter</code> implementation named {security-api-url}org/springframework/web/filter/DelegatingFilterProxy.html/[<code>DelegatingFilterProxy</code>] that allows bridging between the Servlet container&#8217;s lifecycle and Spring&#8217;s <code>ApplicationContext</code>.
+The Servlet container allows registering <code>Filter</code>s using its own standards, but it is not aware of Spring defined Beans.
+<code>DelegatingFilterProxy</code> can be registered via standard Servlet container mechanisms, but delegate all the work to a Spring Bean that implements <code>Filter</code>.</p>
+</div>
+<div class="paragraph">
+<p>Here is a picture of how <code>DelegatingFilterProxy</code> fits into the <a href="#servlet-filters-review"><code>Filter</code>s and the <code>FilterChain</code></a>.</p>
+</div>
+<div id="servlet-delegatingfilterproxy-figure" class="imageblock">
+<div class="content">
+<img src="../../_images/servlet/architecture/delegatingfilterproxy.png" alt="delegatingfilterproxy">
+</div>
+<div class="title">Figure 2. DelegatingFilterProxy</div>
+</div>
+<div class="paragraph">
+<p><code>DelegatingFilterProxy</code> looks up <em>Bean Filter<sub>0</sub></em> from the <code>ApplicationContext</code> and then invokes <em>Bean Filter<sub>0</sub></em>.
+The pseudo code of <code>DelegatingFilterProxy</code> can be seen below.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. <code>DelegatingFilterProxy</code> Pseudo Code</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
+	// Lazily get Filter that was registered as a Spring Bean
+	// For the example in <a href="#servlet-delegatingfilterproxy-figure">DelegatingFilterProxy</a> <code>delegate</code> is an instance of <em>Bean Filter<sub>0</sub></em>
+	Filter delegate = getFilterBean(someBeanName);
+	// delegate work to the Spring Bean
+	delegate.doFilter(request, response);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun doFilter(request: ServletRequest, response: ServletResponse, chain: FilterChain) {
+	// Lazily get Filter that was registered as a Spring Bean
+	// For the example in <a href="#servlet-delegatingfilterproxy-figure">DelegatingFilterProxy</a> <code>delegate</code> is an instance of <em>Bean Filter<sub>0</sub></em>
+	val delegate: Filter = getFilterBean(someBeanName)
+	// delegate work to the Spring Bean
+	delegate.doFilter(request, response)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Another benefit of <code>DelegatingFilterProxy</code> is that it allows delaying looking <code>Filter</code> bean instances.
+This is important because the container needs to register the <code>Filter</code> instances before the container can startup.
+However, Spring typically uses a <code>ContextLoaderListener</code> to load the Spring Beans which will not be done until after the <code>Filter</code> instances need to be registered.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-filterchainproxy"><a class="anchor" href="#servlet-filterchainproxy"></a>FilterChainProxy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security&#8217;s Servlet support is contained within <code>FilterChainProxy</code>.
+<code>FilterChainProxy</code> is a special <code>Filter</code> provided by Spring Security that allows delegating to many <code>Filter</code> instances through <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a>.
+Since <code>FilterChainProxy</code> is a Bean, it is typically wrapped in a <a href="#servlet-delegatingfilterproxy">DelegatingFilterProxy</a>.</p>
+</div>
+<div id="servlet-filterchainproxy-figure" class="imageblock">
+<div class="content">
+<img src="../../_images/servlet/architecture/filterchainproxy.png" alt="filterchainproxy">
+</div>
+<div class="title">Figure 3. FilterChainProxy</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-securityfilterchain"><a class="anchor" href="#servlet-securityfilterchain"></a>SecurityFilterChain</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{security-api-url}org/springframework/security/web/SecurityFilterChain.html[<code>SecurityFilterChain</code>] is used by <a href="#servlet-filterchainproxy">FilterChainProxy</a> to determine which Spring Security <code>Filter</code>s should be invoked for this request.</p>
+</div>
+<div id="servlet-securityfilterchain-figure" class="imageblock">
+<div class="content">
+<img src="../../_images/servlet/architecture/securityfilterchain.png" alt="securityfilterchain">
+</div>
+<div class="title">Figure 4. SecurityFilterChain</div>
+</div>
+<div class="paragraph">
+<p>The <a href="#servlet-security-filters">Security Filters</a> in <code>SecurityFilterChain</code> are typically Beans, but they are registered with <code>FilterChainProxy</code> instead of <a href="#servlet-delegatingfilterproxy">DelegatingFilterProxy</a>.
+<code>FilterChainProxy</code> provides a number of advantages to registering directly with the Servlet container or <a href="#servlet-delegatingfilterproxy">DelegatingFilterProxy</a>.
+First, it provides a starting point for all of Spring Security&#8217;s Servlet support.
+For that reason, if you are attempting to troubleshoot Spring Security&#8217;s Servlet support, adding a debug point in <code>FilterChainProxy</code> is a great place to start.</p>
+</div>
+<div class="paragraph">
+<p>Second, since <code>FilterChainProxy</code> is central to Spring Security usage it can perform tasks that are not viewed as optional.
+For example, it clears out the <code>SecurityContext</code> to avoid memory leaks.
+It also applies Spring Security&#8217;s <a href="#servlet-httpfirewall"><code>HttpFirewall</code></a> to protect applications against certain types of attacks.</p>
+</div>
+<div class="paragraph">
+<p>In addition, it provides more flexibility in determining when a <code>SecurityFilterChain</code> should be invoked.
+In a Servlet container, <code>Filter</code>s are invoked based upon the URL alone.
+However, <code>FilterChainProxy</code> can determine invocation based upon anything in the <code>HttpServletRequest</code> by leveraging the <code>RequestMatcher</code> interface.</p>
+</div>
+<div class="paragraph">
+<p>In fact, <code>FilterChainProxy</code> can be used to determine which <code>SecurityFilterChain</code> should be used.
+This allows providing a totally separate configuration for different <em>slices</em> of your application.</p>
+</div>
+<div id="servlet-multi-securityfilterchain-figure" class="imageblock">
+<div class="content">
+<img src="../../_images/servlet/architecture/multi-securityfilterchain.png" alt="multi securityfilterchain">
+</div>
+<div class="title">Figure 5. Multiple SecurityFilterChain</div>
+</div>
+<div class="paragraph">
+<p>In the <a href="#servlet-multi-securityfilterchain-figure">Multiple SecurityFilterChain</a> Figure <code>FilterChainProxy</code> decides which <code>SecurityFilterChain</code> should be used.
+Only the first <code>SecurityFilterChain</code> that matches will be invoked.
+If a URL of <code>/api/messages/</code> is requested, it will first match on <code>SecurityFilterChain<sub>0</sub></code>'s pattern of <code>/api/**</code>, so only <code>SecurityFilterChain<sub>0</sub></code> will be invoked even though it also matches on <code>SecurityFilterChain<sub>n</sub></code>.
+If a URL of <code>/messages/</code> is requested, it will not match on <code>SecurityFilterChain<sub>0</sub></code>'s pattern of <code>/api/**</code>, so <code>FilterChainProxy</code> will continue trying each <code>SecurityFilterChain</code>.
+Assuming that no other, <code>SecurityFilterChain</code> instances match <code>SecurityFilterChain<sub>n</sub></code> will be invoked.</p>
+</div>
+<div class="paragraph">
+<p>Notice that <code>SecurityFilterChain<sub>0</sub></code> has only three security <code>Filter</code>s instances configured.
+However, <code>SecurityFilterChain<sub>n</sub></code> has four security <code>Filter</code>s configured.
+It is important to note that each <code>SecurityFilterChain</code> can be unique and configured in isolation.
+In fact, a <code>SecurityFilterChain</code> might have zero security <code>Filter</code>s if the application wants Spring Security to ignore certain requests.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-security-filters"><a class="anchor" href="#servlet-security-filters"></a>Security Filters</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Security Filters are inserted into the <a href="#servlet-filterchainproxy">FilterChainProxy</a> with the <a href="#servlet-securityfilterchain">SecurityFilterChain</a> API.
+The <a href="#servlet-filters-review">order of <code>Filter</code></a>s matters.
+It is typically not necessary to know the ordering of Spring Security&#8217;s <code>Filter</code>s.
+However, there are times that it is beneficial to know the ordering</p>
+</div>
+<div class="paragraph">
+<p>Below is a comprehensive list of Spring Security Filter ordering:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>ChannelProcessingFilter</p>
+</li>
+<li>
+<p>WebAsyncManagerIntegrationFilter</p>
+</li>
+<li>
+<p>SecurityContextPersistenceFilter</p>
+</li>
+<li>
+<p>HeaderWriterFilter</p>
+</li>
+<li>
+<p>CorsFilter</p>
+</li>
+<li>
+<p>CsrfFilter</p>
+</li>
+<li>
+<p>LogoutFilter</p>
+</li>
+<li>
+<p>OAuth2AuthorizationRequestRedirectFilter</p>
+</li>
+<li>
+<p>Saml2WebSsoAuthenticationRequestFilter</p>
+</li>
+<li>
+<p>X509AuthenticationFilter</p>
+</li>
+<li>
+<p>AbstractPreAuthenticatedProcessingFilter</p>
+</li>
+<li>
+<p>CasAuthenticationFilter</p>
+</li>
+<li>
+<p>OAuth2LoginAuthenticationFilter</p>
+</li>
+<li>
+<p>Saml2WebSsoAuthenticationFilter</p>
+</li>
+<li>
+<p><a href="#servlet-authentication-usernamepasswordauthenticationfilter"><code>UsernamePasswordAuthenticationFilter</code></a></p>
+</li>
+<li>
+<p>OpenIDAuthenticationFilter</p>
+</li>
+<li>
+<p>DefaultLoginPageGeneratingFilter</p>
+</li>
+<li>
+<p>DefaultLogoutPageGeneratingFilter</p>
+</li>
+<li>
+<p>ConcurrentSessionFilter</p>
+</li>
+<li>
+<p><a href="#servlet-authentication-digest"><code>DigestAuthenticationFilter</code></a></p>
+</li>
+<li>
+<p>BearerTokenAuthenticationFilter</p>
+</li>
+<li>
+<p><a href="#servlet-authentication-basic"><code>BasicAuthenticationFilter</code></a></p>
+</li>
+<li>
+<p>RequestCacheAwareFilter</p>
+</li>
+<li>
+<p>SecurityContextHolderAwareRequestFilter</p>
+</li>
+<li>
+<p>JaasApiIntegrationFilter</p>
+</li>
+<li>
+<p>RememberMeAuthenticationFilter</p>
+</li>
+<li>
+<p>AnonymousAuthenticationFilter</p>
+</li>
+<li>
+<p>OAuth2AuthorizationCodeGrantFilter</p>
+</li>
+<li>
+<p>SessionManagementFilter</p>
+</li>
+<li>
+<p><a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a></p>
+</li>
+<li>
+<p><a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a></p>
+</li>
+<li>
+<p>SwitchUserFilter</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-exceptiontranslationfilter"><a class="anchor" href="#servlet-exceptiontranslationfilter"></a>Handling Security Exceptions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The {security-api-url}org/springframework/security/web/access/ExceptionTranslationFilter.html[<code>ExceptionTranslationFilter</code>] allows translation of {security-api-url}org/springframework/security/access/AccessDeniedException.html[<code>AccessDeniedException</code>] and {security-api-url}/org/springframework/security/core/AuthenticationException.html[<code>AuthenticationException</code>] into HTTP responses.</p>
+</div>
+<div class="paragraph">
+<p><code>ExceptionTranslationFilter</code> is inserted into the <a href="#servlet-filterchainproxy">FilterChainProxy</a> as one of the <a href="#servlet-security-filters">Security Filters</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/servlet/architecture/exceptiontranslationfilter.png" alt="exceptiontranslationfilter">
+</div>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> First, the <code>ExceptionTranslationFilter</code> invokes <code>FilterChain.doFilter(request, response)</code> to invoke the rest of the application.</p>
+</li>
+<li>
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> If the user is not authenticated or it is an <code>AuthenticationException</code>, then <em>Start Authentication</em>.</p>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a> is cleared out</p>
+</li>
+<li>
+<p>The <code>HttpServletRequest</code> is saved in the {security-api-url}org/springframework/security/web/savedrequest/RequestCache.html[<code>RequestCache</code>].
+When the user successfully authenticates, the <code>RequestCache</code> is used to replay the original request.</p>
+</li>
+<li>
+<p>The <code>AuthenticationEntryPoint</code> is used to request credentials from the client.
+For example, it might redirect to a log in page or send a <code>WWW-Authenticate</code> header.</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> Otherwise if it is an <code>AccessDeniedException</code>, then <em>Access Denied</em>.
+The <code>AccessDeniedHandler</code> is invoked to handle access denied.</p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If the application does not throw an <code>AccessDeniedException</code> or an <code>AuthenticationException</code>, then <code>ExceptionTranslationFilter</code> does not do anything.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The pseudocode for <code>ExceptionTranslationFilter</code> looks something like this:</p>
+</div>
+<div class="listingblock">
+<div class="title">ExceptionTranslationFilter pseudocode</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">try {
+	filterChain.doFilter(request, response); <i class="conum" data-value="1"></i><b>(1)</b>
+} catch (AccessDeniedException | AuthenticationException ex) {
+	if (!authenticated || ex instanceof AuthenticationException) {
+		startAuthentication(); <i class="conum" data-value="2"></i><b>(2)</b>
+	} else {
+		accessDenied(); <i class="conum" data-value="3"></i><b>(3)</b>
+	}
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>You will recall from <a href="#servlet-filters-review">A Review of <code>Filter</code>s</a> that invoking <code>FilterChain.doFilter(request, response)</code> is the equivalent of invoking the rest of the application.
+This means that if another part of the application, (i.e. <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> or method security) throws an <code>AuthenticationException</code> or <code>AccessDeniedException</code> it will be caught and handled here.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>If the user is not authenticated or it is an <code>AuthenticationException</code>, then <em>Start Authentication</em>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Otherwise, <em>Access Denied</em></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

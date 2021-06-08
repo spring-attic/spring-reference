@@ -1,0 +1,623 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3.8/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3.8/index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../overview/prerequisites.html">5.6.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3.8/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/integrations/mvc.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="mvc"><a class="anchor" href="#mvc"></a>Spring MVC Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security provides a number of optional integrations with Spring MVC.
+This section covers the integration in further detail.</p>
+</div>
+<div class="sect2">
+<h3 id="mvc-enablewebmvcsecurity"><a class="anchor" href="#mvc-enablewebmvcsecurity"></a>@EnableWebMvcSecurity</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As of Spring Security 4.0, <code>@EnableWebMvcSecurity</code> is deprecated.
+The replacement is <code>@EnableWebSecurity</code> which will determine adding the Spring MVC features based upon the classpath.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To enable Spring Security integration with Spring MVC add the <code>@EnableWebSecurity</code> annotation to your configuration.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Spring Security provides the configuration using Spring MVC&#8217;s <a href="https://docs.spring.io/spring/docs/5.0.0.RELEASE/spring-framework-reference/web.html#mvc-config-customize">WebMvcConfigurer</a>.
+This means that if you are using more advanced options, like integrating with <code>WebMvcConfigurationSupport</code> directly, then you will need to manually provide the Spring Security configuration.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mvc-requestmatcher"><a class="anchor" href="#mvc-requestmatcher"></a>MvcRequestMatcher</h3>
+<div class="paragraph">
+<p>Spring Security provides deep integration with how Spring MVC matches on URLs with <code>MvcRequestMatcher</code>.
+This is helpful to ensure your Security rules match the logic used to handle your requests.</p>
+</div>
+<div class="paragraph">
+<p>In order to use <code>MvcRequestMatcher</code> you must place the Spring Security Configuration in the same <code>ApplicationContext</code> as your <code>DispatcherServlet</code>.
+This is necessary because Spring Security&#8217;s <code>MvcRequestMatcher</code> expects a <code>HandlerMappingIntrospector</code> bean with the name of <code>mvcHandlerMappingIntrospector</code> to be registered by your Spring MVC configuration that is used to perform the matching.</p>
+</div>
+<div class="paragraph">
+<p>For a <code>web.xml</code> this means that you should place your configuration in the <code>DispatcherServlet.xml</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;listener&gt;
+  &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
+&lt;/listener&gt;
+
+&lt;!-- All Spring Configuration (both MVC and Security) are in /WEB-INF/spring/ --&gt;
+&lt;context-param&gt;
+  &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+  &lt;param-value&gt;/WEB-INF/spring/*.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+
+&lt;servlet&gt;
+  &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+  &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+  &lt;!-- Load from the ContextLoaderListener --&gt;
+  &lt;init-param&gt;
+    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+    &lt;param-value&gt;&lt;/param-value&gt;
+  &lt;/init-param&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+  &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+  &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below <code>WebSecurityConfiguration</code> in placed in the <code>DispatcherServlet</code>s <code>ApplicationContext</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SecurityInitializer extends
+    AbstractAnnotationConfigDispatcherServletInitializer {
+
+  @Override
+  protected Class&lt;?&gt;[] getRootConfigClasses() {
+    return null;
+  }
+
+  @Override
+  protected Class&lt;?&gt;[] getServletConfigClasses() {
+    return new Class[] { RootConfiguration.class,
+        WebMvcConfiguration.class };
+  }
+
+  @Override
+  protected String[] getServletMappings() {
+    return new String[] { "/" };
+  }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is always recommended to provide authorization rules by matching on the <code>HttpServletRequest</code> and method security.</p>
+</div>
+<div class="paragraph">
+<p>Providing authorization rules by matching on <code>HttpServletRequest</code> is good because it happens very early in the code path and helps reduce the <a href="https://en.wikipedia.org/wiki/Attack_surface">attack surface</a>.
+Method security ensures that if someone has bypassed the web authorization rules, that your application is still secured.
+This is what is known as <a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">Defence in Depth</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Consider a controller that is mapped as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/admin")
+public String admin() {</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we wanted to restrict access to this controller method to admin users, a developer can provide authorization rules by matching on the <code>HttpServletRequest</code> with the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected configure(HttpSecurity http) throws Exception {
+	http
+		.authorizeRequests(authorize -&gt; authorize
+			.antMatchers("/admin").hasRole("ADMIN")
+		);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or in XML</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+	&lt;intercept-url pattern="/admin" access="hasRole('ADMIN')"/&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With either configuration, the URL <code>/admin</code> will require the authenticated user to be an admin user.
+However, depending on our Spring MVC configuration, the URL <code>/admin.html</code> will also map to our <code>admin()</code> method.
+Additionally, depending on our Spring MVC configuration, the URL <code>/admin/</code> will also map to our <code>admin()</code> method.</p>
+</div>
+<div class="paragraph">
+<p>The problem is that our security rule is only protecting <code>/admin</code>.
+We could add additional rules for all the permutations of Spring MVC, but this would be quite verbose and tedious.</p>
+</div>
+<div class="paragraph">
+<p>Instead, we can leverage Spring Security&#8217;s <code>MvcRequestMatcher</code>.
+The following configuration will protect the same URLs that Spring MVC will match on by using Spring MVC to match on the URL.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected configure(HttpSecurity http) throws Exception {
+	http
+		.authorizeRequests(authorize -&gt; authorize
+			.mvcMatchers("/admin").hasRole("ADMIN")
+		);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or in XML</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http request-matcher="mvc"&gt;
+	&lt;intercept-url pattern="/admin" access="hasRole('ADMIN')"/&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mvc-authentication-principal"><a class="anchor" href="#mvc-authentication-principal"></a>@AuthenticationPrincipal</h3>
+<div class="paragraph">
+<p>Spring Security provides <code>AuthenticationPrincipalArgumentResolver</code> which can automatically resolve the current <code>Authentication.getPrincipal()</code> for Spring MVC arguments.
+By using <code>@EnableWebSecurity</code> you will automatically have this added to your Spring MVC configuration.
+If you use XML based configuration, you must add this yourself.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;mvc:annotation-driven&gt;
+		&lt;mvc:argument-resolvers&gt;
+				&lt;bean class="org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver" /&gt;
+		&lt;/mvc:argument-resolvers&gt;
+&lt;/mvc:annotation-driven&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once <code>AuthenticationPrincipalArgumentResolver</code> is properly configured, you can be entirely decoupled from Spring Security in your Spring MVC layer.</p>
+</div>
+<div class="paragraph">
+<p>Consider a situation where a custom <code>UserDetailsService</code> that returns an <code>Object</code> that implements <code>UserDetails</code> and your own <code>CustomUser</code> <code>Object</code>. The <code>CustomUser</code> of the currently authenticated user could be accessed using the following code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/messages/inbox")
+public ModelAndView findMessagesForUser() {
+	Authentication authentication =
+	SecurityContextHolder.getContext().getAuthentication();
+	CustomUser custom = (CustomUser) authentication == null ? null : authentication.getPrincipal();
+
+	// .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As of Spring Security 3.2 we can resolve the argument more directly by adding an annotation. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
+
+// ...
+
+@RequestMapping("/messages/inbox")
+public ModelAndView findMessagesForUser(@AuthenticationPrincipal CustomUser customUser) {
+
+	// .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sometimes it may be necessary to transform the principal in some way.
+For example, if <code>CustomUser</code> needed to be final it could not be extended.
+In this situation the <code>UserDetailsService</code> might returns an <code>Object</code> that implements <code>UserDetails</code> and provides a method named <code>getCustomUser</code> to access <code>CustomUser</code>.
+For example, it might look like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class CustomUserUserDetails extends User {
+		// ...
+		public CustomUser getCustomUser() {
+				return customUser;
+		}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We could then access the <code>CustomUser</code> using a <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html">SpEL expression</a> that uses <code>Authentication.getPrincipal()</code> as the root object:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
+
+// ...
+
+@RequestMapping("/messages/inbox")
+public ModelAndView findMessagesForUser(@AuthenticationPrincipal(expression = "customUser") CustomUser customUser) {
+
+	// .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can also refer to Beans in our SpEL expressions.
+For example, the following could be used if we were using JPA to manage our Users and we wanted to modify and save a property on the current user.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
+
+// ...
+
+@PutMapping("/users/self")
+public ModelAndView updateName(@AuthenticationPrincipal(expression = "@jpaEntityManager.merge(#this)") CustomUser attachedCustomUser,
+		@RequestParam String firstName) {
+
+	// change the firstName on an attached instance which will be persisted to the database
+	attachedCustomUser.setFirstName(firstName);
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can further remove our dependency on Spring Security by making <code>@AuthenticationPrincipal</code> a meta annotation on our own annotation.
+Below we demonstrate how we could do this on an annotation named <code>@CurrentUser</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is important to realize that in order to remove the dependency on Spring Security, it is the consuming application that would create <code>@CurrentUser</code>.
+This step is not strictly required, but assists in isolating your dependency to Spring Security to a more central location.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Target({ElementType.PARAMETER, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@AuthenticationPrincipal
+public @interface CurrentUser {}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now that <code>@CurrentUser</code> has been specified, we can use it to signal to resolve our <code>CustomUser</code> of the currently authenticated user.
+We have also isolated our dependency on Spring Security to a single file.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/messages/inbox")
+public ModelAndView findMessagesForUser(@CurrentUser CustomUser customUser) {
+
+	// .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mvc-async"><a class="anchor" href="#mvc-async"></a>Spring MVC Async Integration</h3>
+<div class="paragraph">
+<p>Spring Web MVC 3.2+ has excellent support for <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-ann-async">Asynchronous Request Processing</a>.
+With no additional configuration, Spring Security will automatically setup the <code>SecurityContext</code> to the <code>Thread</code> that invokes a <code>Callable</code> returned by your controllers.
+For example, the following method will automatically have its <code>Callable</code> invoked with the <code>SecurityContext</code> that was available when the <code>Callable</code> was created:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping(method=RequestMethod.POST)
+public Callable&lt;String&gt; processUpload(final MultipartFile file) {
+
+return new Callable&lt;String&gt;() {
+	public Object call() throws Exception {
+	// ...
+	return "someView";
+	}
+};
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Associating SecurityContext to Callable&#8217;s</div>
+<div class="paragraph">
+<p>More technically speaking, Spring Security integrates with <code>WebAsyncManager</code>.
+The <code>SecurityContext</code> that is used to process the <code>Callable</code> is the <code>SecurityContext</code> that exists on the <code>SecurityContextHolder</code> at the time <code>startCallableProcessing</code> is invoked.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>There is no automatic integration with a <code>DeferredResult</code> that is returned by controllers.
+This is because <code>DeferredResult</code> is processed by the users and thus there is no way of automatically integrating with it.
+However, you can still use <a href="#concurrency">Concurrency Support</a> to provide transparent integration with Spring Security.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mvc-csrf"><a class="anchor" href="#mvc-csrf"></a>Spring MVC and CSRF Integration</h3>
+<div class="sect3">
+<h4 id="_automatic_token_inclusion"><a class="anchor" href="#_automatic_token_inclusion"></a>Automatic Token Inclusion</h4>
+<div class="paragraph">
+<p>Spring Security will automatically <a href="#servlet-csrf-include">include the CSRF Token</a> within forms that use the <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html#view-jsp-formtaglib-formtag">Spring MVC form tag</a>.
+For example, the following JSP:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:form="http://www.springframework.org/tags/form" version="2.0"&gt;
+	&lt;jsp:directive.page language="java" contentType="text/html" /&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
+	&lt;!-- ... --&gt;
+
+	&lt;c:url var="logoutUrl" value="/logout"/&gt;
+	&lt;form:form action="${logoutUrl}"
+		method="post"&gt;
+	&lt;input type="submit"
+		value="Log out" /&gt;
+	&lt;input type="hidden"
+		name="${_csrf.parameterName}"
+		value="${_csrf.token}"/&gt;
+	&lt;/form:form&gt;
+
+	&lt;!-- ... --&gt;
+&lt;/html&gt;
+&lt;/jsp:root&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Will output HTML that is similar to the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- ... --&gt;
+
+&lt;form action="/context/logout" method="post"&gt;
+&lt;input type="submit" value="Log out"/&gt;
+&lt;input type="hidden" name="_csrf" value="f81d4fae-7dec-11d0-a765-00a0c91e6bf6"/&gt;
+&lt;/form&gt;
+
+&lt;!-- ... --&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mvc-csrf-resolver"><a class="anchor" href="#mvc-csrf-resolver"></a>Resolving the CsrfToken</h4>
+<div class="paragraph">
+<p>Spring Security provides <code>CsrfTokenArgumentResolver</code> which can automatically resolve the current <code>CsrfToken</code> for Spring MVC arguments.
+By using <a href="#jc-hello-wsca">@EnableWebSecurity</a> you will automatically have this added to your Spring MVC configuration.
+If you use XML based configuration, you must add this yourself.</p>
+</div>
+<div class="paragraph">
+<p>Once <code>CsrfTokenArgumentResolver</code> is properly configured, you can expose the <code>CsrfToken</code> to your static HTML based application.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestController
+public class CsrfController {
+
+	@RequestMapping("/csrf")
+	public CsrfToken csrf(CsrfToken token) {
+		return token;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is important to keep the <code>CsrfToken</code> a secret from other domains.
+This means if you are using <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Cross Origin Sharing (CORS)</a>, you should <strong>NOT</strong> expose the <code>CsrfToken</code> to any external domains.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

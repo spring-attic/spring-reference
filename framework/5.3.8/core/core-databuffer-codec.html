@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Data Buffers and Codecs :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core.html">Core</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/5.6.0/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/5.6.0/overview/prerequisites.html">5.6.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Framework</a></li>
+    <li><a href="core-databuffer-codec.html">Data Buffers and Codecs</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/core/core-databuffer-codec.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Data Buffers and Codecs</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Java NIO provides <code>ByteBuffer</code> but many libraries build their own byte buffer API on top,
+especially for network operations where reusing buffers and/or using direct buffers is
+beneficial for performance. For example Netty has the <code>ByteBuf</code> hierarchy, Undertow uses
+XNIO, Jetty uses pooled byte buffers with a callback to be released, and so on.
+The <code>spring-core</code> module provides a set of abstractions to work with various byte buffer
+APIs as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#databuffers-factory"><code>DataBufferFactory</code></a> abstracts the creation of a data buffer.</p>
+</li>
+<li>
+<p><a href="#databuffers-buffer"><code>DataBuffer</code></a> represents a byte buffer, which may be
+<a href="#databuffers-buffer-pooled">pooled</a>.</p>
+</li>
+<li>
+<p><a href="#databuffers-utils"><code>DataBufferUtils</code></a> offers utility methods for data buffers.</p>
+</li>
+<li>
+<p><a href="#codecs">Codecs</a> decode or encode streams data buffer streams into higher level objects.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="databuffers-factory"><a class="anchor" href="#databuffers-factory"></a><code>DataBufferFactory</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>DataBufferFactory</code> is used to create data buffers in one of two ways:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Allocate a new data buffer, optionally specifying capacity upfront, if known, which is
+more efficient even though implementations of <code>DataBuffer</code> can grow and shrink on demand.</p>
+</li>
+<li>
+<p>Wrap an existing <code>byte[]</code> or <code>java.nio.ByteBuffer</code>, which decorates the given data with
+a <code>DataBuffer</code> implementation and that does not involve allocation.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note that WebFlux applications do not create a <code>DataBufferFactory</code> directly but instead
+access it through the <code>ServerHttpResponse</code> or the <code>ClientHttpRequest</code> on the client side.
+The type of factory depends on the underlying client or server, e.g.
+<code>NettyDataBufferFactory</code> for Reactor Netty, <code>DefaultDataBufferFactory</code> for others.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="databuffers-buffer"><a class="anchor" href="#databuffers-buffer"></a><code>DataBuffer</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>DataBuffer</code> interface offers similar operations as <code>java.nio.ByteBuffer</code> but also
+brings a few additional benefits some of which are inspired by the Netty <code>ByteBuf</code>.
+Below is a partial list of benefits:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Read and write with independent positions, i.e. not requiring a call to <code>flip()</code> to
+alternate between read and write.</p>
+</li>
+<li>
+<p>Capacity expanded on demand as with <code>java.lang.StringBuilder</code>.</p>
+</li>
+<li>
+<p>Pooled buffers and reference counting via <a href="#databuffers-buffer-pooled"><code>PooledDataBuffer</code></a>.</p>
+</li>
+<li>
+<p>View a buffer as <code>java.nio.ByteBuffer</code>, <code>InputStream</code>, or <code>OutputStream</code>.</p>
+</li>
+<li>
+<p>Determine the index, or the last index, for a given byte.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="databuffers-buffer-pooled"><a class="anchor" href="#databuffers-buffer-pooled"></a><code>PooledDataBuffer</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As explained in the Javadoc for
+<a href="https://docs.oracle.com/javase/8/docs/api/java/nio/ByteBuffer.html">ByteBuffer</a>,
+byte buffers can be direct or non-direct. Direct buffers may reside outside the Java heap
+which eliminates the need for copying for native I/O operations. That makes direct buffers
+particularly useful for receiving and sending data over a socket, but they&#8217;re also more
+expensive to create and release, which leads to the idea of pooling buffers.</p>
+</div>
+<div class="paragraph">
+<p><code>PooledDataBuffer</code> is an extension of <code>DataBuffer</code> that helps with reference counting which
+is essential for byte buffer pooling. How does it work? When a <code>PooledDataBuffer</code> is
+allocated the reference count is at 1. Calls to <code>retain()</code> increment the count, while
+calls to <code>release()</code> decrement it. As long as the count is above 0, the buffer is
+guaranteed not to be released. When the count is decreased to 0, the pooled buffer can be
+released, which in practice could mean the reserved memory for the buffer is returned to
+the memory pool.</p>
+</div>
+<div class="paragraph">
+<p>Note that instead of operating on <code>PooledDataBuffer</code> directly, in most cases it&#8217;s better
+to use the convenience methods in <code>DataBufferUtils</code> that apply release or retain to a
+<code>DataBuffer</code> only if it is an instance of <code>PooledDataBuffer</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="databuffers-utils"><a class="anchor" href="#databuffers-utils"></a><code>DataBufferUtils</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>DataBufferUtils</code> offers a number of utility methods to operate on data buffers:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Join a stream of data buffers into a single buffer possibly with zero copy, e.g. via
+composite buffers, if that&#8217;s supported by the underlying byte buffer API.</p>
+</li>
+<li>
+<p>Turn <code>InputStream</code> or NIO <code>Channel</code> into <code>Flux&lt;DataBuffer&gt;</code>, and vice versa a
+<code>Publisher&lt;DataBuffer&gt;</code> into <code>OutputStream</code> or NIO <code>Channel</code>.</p>
+</li>
+<li>
+<p>Methods to release or retain a <code>DataBuffer</code> if the buffer is an instance of
+<code>PooledDataBuffer</code>.</p>
+</li>
+<li>
+<p>Skip or take from a stream of bytes until a specific byte count.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="codecs"><a class="anchor" href="#codecs"></a>Codecs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>org.springframework.core.codec</code> package provides the following strategy interfaces:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Encoder</code> to encode <code>Publisher&lt;T&gt;</code> into a stream of data buffers.</p>
+</li>
+<li>
+<p><code>Decoder</code> to decode <code>Publisher&lt;DataBuffer&gt;</code> into a stream of higher level objects.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>spring-core</code> module provides <code>byte[]</code>, <code>ByteBuffer</code>, <code>DataBuffer</code>, <code>Resource</code>, and
+<code>String</code> encoder and decoder implementations. The <code>spring-web</code> module adds Jackson JSON,
+Jackson Smile, JAXB2, Protocol Buffers and other encoders and decoders. See
+<a href="../web-reactive.html#webflux-codecs" class="page">Codecs</a> in the WebFlux section.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="databuffers-using"><a class="anchor" href="#databuffers-using"></a>Using <code>DataBuffer</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When working with data buffers, special care must be taken to ensure buffers are released
+since they may be <a href="#databuffers-buffer-pooled">pooled</a>. We&#8217;ll use codecs to illustrate
+how that works but the concepts apply more generally. Let&#8217;s see what codecs must do
+internally to manage data buffers.</p>
+</div>
+<div class="paragraph">
+<p>A <code>Decoder</code> is the last to read input data buffers, before creating higher level
+objects, and therefore it must release them as follows:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>If a <code>Decoder</code> simply reads each input buffer and is ready to
+release it immediately, it can do so via <code>DataBufferUtils.release(dataBuffer)</code>.</p>
+</li>
+<li>
+<p>If a <code>Decoder</code> is using <code>Flux</code> or <code>Mono</code> operators such as <code>flatMap</code>, <code>reduce</code>, and
+others that prefetch and cache data items internally, or is using operators such as
+<code>filter</code>, <code>skip</code>, and others that leave out items, then
+<code>doOnDiscard(PooledDataBuffer.class, DataBufferUtils::release)</code> must be added to the
+composition chain to ensure such buffers are released prior to being discarded, possibly
+also as a result an error or cancellation signal.</p>
+</li>
+<li>
+<p>If a <code>Decoder</code> holds on to one or more data buffers in any other way, it must
+ensure they are released when fully read, or in case an error or cancellation signals that
+take place before the cached data buffers have been read and released.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>Note that <code>DataBufferUtils#join</code> offers a safe and efficient way to aggregate a data
+buffer stream into a single data buffer. Likewise <code>skipUntilByteCount</code> and
+<code>takeUntilByteCount</code> are additional safe methods for decoders to use.</p>
+</div>
+<div class="paragraph">
+<p>An <code>Encoder</code> allocates data buffers that others must read (and release). So an <code>Encoder</code>
+doesn&#8217;t have much to do. However an <code>Encoder</code> must take care to release a data buffer if
+a serialization error occurs while populating the buffer with data. For example:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">DataBuffer buffer = factory.allocateBuffer();
+boolean release = true;
+try {
+	// serialize and populate buffer..
+	release = false;
+}
+finally {
+	if (release) {
+		DataBufferUtils.release(buffer);
+	}
+}
+return buffer;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val buffer = factory.allocateBuffer()
+var release = true
+try {
+	// serialize and populate buffer..
+	release = false
+} finally {
+	if (release) {
+		DataBufferUtils.release(buffer)
+	}
+}
+return buffer</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The consumer of an <code>Encoder</code> is responsible for releasing the data buffers it receives.
+In a WebFlux application, the output of the <code>Encoder</code> is used to write to the HTTP server
+response, or to the client HTTP request, in which case releasing the data buffers is the
+responsibility of the code writing to the server response, or to the client request.</p>
+</div>
+<div class="paragraph">
+<p>Note that when running on Netty, there are debugging options for
+<a href="https://github.com/netty/netty/wiki/Reference-counted-objects#troubleshooting-buffer-leaks">troubleshooting buffer leaks</a>.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

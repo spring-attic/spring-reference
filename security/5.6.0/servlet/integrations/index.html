@@ -1,0 +1,2111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Integrations :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6.0">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6.0</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3.8/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3.8/index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../overview/prerequisites.html">5.6.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3.8/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../overview/prerequisites.html">Spring Security</a></li>
+    <li><a href="index.html">Integrations</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/integrations/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Integrations</h1>
+<div class="sect1">
+<h2 id="servletapi"><a class="anchor" href="#servletapi"></a>Servlet API integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how Spring Security is integrated with the Servlet API.</p>
+</div>
+<div class="sect2">
+<h3 id="servletapi-25"><a class="anchor" href="#servletapi-25"></a>Servlet 2.5+ Integration</h3>
+<div class="sect3">
+<h4 id="servletapi-remote-user"><a class="anchor" href="#servletapi-remote-user"></a>HttpServletRequest.getRemoteUser()</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getRemoteUser()">HttpServletRequest.getRemoteUser()</a> will return the result of <code>SecurityContextHolder.getContext().getAuthentication().getName()</code> which is typically the current username.
+This can be useful if you want to display the current username in your application.
+Additionally, checking if this is null can be used to indicate if a user has authenticated or is anonymous.
+Knowing if the user is authenticated or not can be useful for determining if certain UI elements should be shown or not (i.e. a log out link should only be displayed if the user is authenticated).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servletapi-user-principal"><a class="anchor" href="#servletapi-user-principal"></a>HttpServletRequest.getUserPrincipal()</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getUserPrincipal()">HttpServletRequest.getUserPrincipal()</a> will return the result of <code>SecurityContextHolder.getContext().getAuthentication()</code>.
+This means it is an <code>Authentication</code> which is typically an instance of <code>UsernamePasswordAuthenticationToken</code> when using username and password based authentication.
+This can be useful if you need additional information about your user.
+For example, you might have created a custom <code>UserDetailsService</code> that returns a custom <code>UserDetails</code> containing a first and last name for your user.
+You could obtain this information with the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Authentication auth = httpServletRequest.getUserPrincipal();
+// assume integrated custom UserDetails called MyCustomUserDetails
+// by default, typically instance of UserDetails
+MyCustomUserDetails userDetails = (MyCustomUserDetails) auth.getPrincipal();
+String firstName = userDetails.getFirstName();
+String lastName = userDetails.getLastName();</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It should be noted that it is typically bad practice to perform so much logic throughout your application.
+Instead, one should centralize it to reduce any coupling of Spring Security and the Servlet API&#8217;s.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servletapi-user-in-role"><a class="anchor" href="#servletapi-user-in-role"></a>HttpServletRequest.isUserInRole(String)</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#isUserInRole(java.lang.String)">HttpServletRequest.isUserInRole(String)</a> will determine if <code>SecurityContextHolder.getContext().getAuthentication().getAuthorities()</code> contains a <code>GrantedAuthority</code> with the role passed into <code>isUserInRole(String)</code>.
+Typically users should not pass in the "ROLE_" prefix into this method since it is added automatically.
+For example, if you want to determine if the current user has the authority "ROLE_ADMIN", you could use the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">boolean isAdmin = httpServletRequest.isUserInRole("ADMIN");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This might be useful to determine if certain UI components should be displayed.
+For example, you might display admin links only if the current user is an admin.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servletapi-3"><a class="anchor" href="#servletapi-3"></a>Servlet 3+ Integration</h3>
+<div class="paragraph">
+<p>The following section describes the Servlet 3 methods that Spring Security integrates with.</p>
+</div>
+<div class="sect3">
+<h4 id="servletapi-authenticate"><a class="anchor" href="#servletapi-authenticate"></a>HttpServletRequest.authenticate(HttpServletRequest,HttpServletResponse)</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#authenticate%28javax.servlet.http.HttpServletResponse%29">HttpServletRequest.authenticate(HttpServletRequest,HttpServletResponse)</a> method can be used to ensure that a user is authenticated.
+If they are not authenticated, the configured AuthenticationEntryPoint will be used to request the user to authenticate (i.e. redirect to the login page).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servletapi-login"><a class="anchor" href="#servletapi-login"></a>HttpServletRequest.login(String,String)</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#login%28java.lang.String,%20java.lang.String%29">HttpServletRequest.login(String,String)</a> method can be used to authenticate the user with the current <code>AuthenticationManager</code>.
+For example, the following would attempt to authenticate with the username "user" and password "password":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">try {
+httpServletRequest.login("user","password");
+} catch(ServletException ex) {
+// fail to authenticate
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is not necessary to catch the ServletException if you want Spring Security to process the failed authentication attempt.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servletapi-logout"><a class="anchor" href="#servletapi-logout"></a>HttpServletRequest.logout()</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#logout%28%29">HttpServletRequest.logout()</a> method can be used to log the current user out.</p>
+</div>
+<div class="paragraph">
+<p>Typically this means that the SecurityContextHolder will be cleared out, the HttpSession will be invalidated, any "Remember Me" authentication will be cleaned up, etc.
+However, the configured LogoutHandler implementations will vary depending on your Spring Security configuration.
+It is important to note that after HttpServletRequest.logout() has been invoked, you are still in charge of writing a response out.
+Typically this would involve a redirect to the welcome page.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servletapi-start-runnable"><a class="anchor" href="#servletapi-start-runnable"></a>AsyncContext.start(Runnable)</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.oracle.com/javaee/6/api/javax/servlet/AsyncContext.html#start%28java.lang.Runnable%29">AsyncContext.start(Runnable)</a> method that ensures your credentials will be propagated to the new Thread.
+Using Spring Security&#8217;s concurrency support, Spring Security overrides the AsyncContext.start(Runnable) to ensure that the current SecurityContext is used when processing the Runnable.
+For example, the following would output the current user&#8217;s Authentication:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final AsyncContext async = httpServletRequest.startAsync();
+async.start(new Runnable() {
+	public void run() {
+		Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+		try {
+			final HttpServletResponse asyncResponse = (HttpServletResponse) async.getResponse();
+			asyncResponse.setStatus(HttpServletResponse.SC_OK);
+			asyncResponse.getWriter().write(String.valueOf(authentication));
+			async.complete();
+		} catch(Exception ex) {
+			throw new RuntimeException(ex);
+		}
+	}
+});</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servletapi-async"><a class="anchor" href="#servletapi-async"></a>Async Servlet Support</h4>
+<div class="paragraph">
+<p>If you are using Java Based configuration, you are ready to go.
+If you are using XML configuration, there are a few updates that are necessary.
+The first step is to ensure you have updated your web.xml to use at least the 3.0 schema as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;web-app xmlns="http://java.sun.com/xml/ns/javaee"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:schemaLocation="http://java.sun.com/xml/ns/javaee https://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+version="3.0"&gt;
+
+&lt;/web-app&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Next you need to ensure that your springSecurityFilterChain is setup for processing asynchronous requests.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter&gt;
+&lt;filter-name&gt;springSecurityFilterChain&lt;/filter-name&gt;
+&lt;filter-class&gt;
+	org.springframework.web.filter.DelegatingFilterProxy
+&lt;/filter-class&gt;
+&lt;async-supported&gt;true&lt;/async-supported&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+&lt;filter-name&gt;springSecurityFilterChain&lt;/filter-name&gt;
+&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+&lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;
+&lt;dispatcher&gt;ASYNC&lt;/dispatcher&gt;
+&lt;/filter-mapping&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>That&#8217;s it!
+Now Spring Security will ensure that your SecurityContext is propagated on asynchronous requests too.</p>
+</div>
+<div class="paragraph">
+<p>So how does it work? If you are not really interested, feel free to skip the remainder of this section, otherwise read on.
+Most of this is built into the Servlet specification, but there is a little bit of tweaking that Spring Security does to ensure things work with asynchronous requests properly.
+Prior to Spring Security 3.2, the SecurityContext from the SecurityContextHolder was automatically saved as soon as the HttpServletResponse was committed.
+This can cause issues in an Async environment.
+For example, consider the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">httpServletRequest.startAsync();
+new Thread("AsyncThread") {
+	@Override
+	public void run() {
+		try {
+			// Do work
+			TimeUnit.SECONDS.sleep(1);
+
+			// Write to and commit the httpServletResponse
+			httpServletResponse.getOutputStream().flush();
+		} catch (Exception ex) {
+			ex.printStackTrace();
+		}
+	}
+}.start();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The issue is that this Thread is not known to Spring Security, so the SecurityContext is not propagated to it.
+This means when we commit the HttpServletResponse there is no SecurityContext.
+When Spring Security automatically saved the SecurityContext on committing the HttpServletResponse it would lose our logged in user.</p>
+</div>
+<div class="paragraph">
+<p>Since version 3.2, Spring Security is smart enough to no longer automatically save the SecurityContext on committing the HttpServletResponse as soon as HttpServletRequest.startAsync() is invoked.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servletapi-31"><a class="anchor" href="#servletapi-31"></a>Servlet 3.1+ Integration</h3>
+<div class="paragraph">
+<p>The following section describes the Servlet 3.1 methods that Spring Security integrates with.</p>
+</div>
+<div class="sect3">
+<h4 id="servletapi-change-session-id"><a class="anchor" href="#servletapi-change-session-id"></a>HttpServletRequest#changeSessionId()</h4>
+<div class="paragraph">
+<p>The <a href="https://docs.oracle.com/javaee/7/api/javax/servlet/http/HttpServletRequest.html#changeSessionId()">HttpServletRequest.changeSessionId()</a> is the default method for protecting against <a href="#ns-session-fixation">Session Fixation</a> attacks in Servlet 3.1 and higher.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="data"><a class="anchor" href="#data"></a>Spring Data Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security provides Spring Data integration that allows referring to the current user within your queries.
+It is not only useful but necessary to include the user in the queries to support paged results since filtering the results afterwards would not scale.</p>
+</div>
+<div class="sect2">
+<h3 id="data-configuration"><a class="anchor" href="#data-configuration"></a>Spring Data &amp; Spring Security Configuration</h3>
+<div class="paragraph">
+<p>To use this support, add <code>org.springframework.security:spring-security-data</code> dependency and provide a bean of type <code>SecurityEvaluationContextExtension</code>.
+In Java Configuration, this would look like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public SecurityEvaluationContextExtension securityEvaluationContextExtension() {
+	return new SecurityEvaluationContextExtension();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In XML Configuration, this would look like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean class="org.springframework.security.data.repository.query.SecurityEvaluationContextExtension"/&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="data-query"><a class="anchor" href="#data-query"></a>Security Expressions within @Query</h3>
+<div class="paragraph">
+<p>Now Spring Security can be used within your queries.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Repository
+public interface MessageRepository extends PagingAndSortingRepository&lt;Message,Long&gt; {
+	@Query("select m from Message m where m.to.id = ?#{ principal?.id }")
+	Page&lt;Message&gt; findInbox(Pageable pageable);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This checks to see if the <code>Authentication.getPrincipal().getId()</code> is equal to the recipient of the <code>Message</code>.
+Note that this example assumes you have customized the principal to be an Object that has an id property.
+By exposing the <code>SecurityEvaluationContextExtension</code> bean, all of the <a href="#common-expressions">Common Security Expressions</a> are available within the Query.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="concurrency"><a class="anchor" href="#concurrency"></a>Concurrency Support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In most environments, Security is stored on a per <code>Thread</code> basis.
+This means that when work is done on a new <code>Thread</code>, the <code>SecurityContext</code> is lost.
+Spring Security provides some infrastructure to help make this much easier for users.
+Spring Security provides low level abstractions for working with Spring Security in multi-threaded environments.
+In fact, this is what Spring Security builds on to integration with <a href="#servletapi-start-runnable">AsyncContext.start(Runnable)</a> and <a href="#mvc-async">Spring MVC Async Integration</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_delegatingsecuritycontextrunnable"><a class="anchor" href="#_delegatingsecuritycontextrunnable"></a>DelegatingSecurityContextRunnable</h3>
+<div class="paragraph">
+<p>One of the most fundamental building blocks within Spring Security&#8217;s concurrency support is the <code>DelegatingSecurityContextRunnable</code>.
+It wraps a delegate <code>Runnable</code> in order to initialize the <code>SecurityContextHolder</code> with a specified <code>SecurityContext</code> for the delegate.
+It then invokes the delegate Runnable ensuring to clear the <code>SecurityContextHolder</code> afterwards.
+The <code>DelegatingSecurityContextRunnable</code> looks something like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void run() {
+try {
+	SecurityContextHolder.setContext(securityContext);
+	delegate.run();
+} finally {
+	SecurityContextHolder.clearContext();
+}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>While very simple, it makes it seamless to transfer the SecurityContext from one Thread to another.
+This is important since, in most cases, the SecurityContextHolder acts on a per Thread basis.
+For example, you might have used Spring Security&#8217;s <a href="#nsa-global-method-security">[nsa-global-method-security]</a> support to secure one of your services.
+You can now easily transfer the <code>SecurityContext</code> of the current <code>Thread</code> to the <code>Thread</code> that invokes the secured service.
+An example of how you might do this can be found below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Runnable originalRunnable = new Runnable() {
+public void run() {
+	// invoke secured service
+}
+};
+
+SecurityContext context = SecurityContextHolder.getContext();
+DelegatingSecurityContextRunnable wrappedRunnable =
+	new DelegatingSecurityContextRunnable(originalRunnable, context);
+
+new Thread(wrappedRunnable).start();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The code above performs the following steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Creates a <code>Runnable</code> that will be invoking our secured service.
+Notice that it is not aware of Spring Security</p>
+</li>
+<li>
+<p>Obtains the <code>SecurityContext</code> that we wish to use from the <code>SecurityContextHolder</code> and initializes the <code>DelegatingSecurityContextRunnable</code></p>
+</li>
+<li>
+<p>Use the <code>DelegatingSecurityContextRunnable</code> to create a Thread</p>
+</li>
+<li>
+<p>Start the Thread we created</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Since it is quite common to create a <code>DelegatingSecurityContextRunnable</code> with the <code>SecurityContext</code> from the <code>SecurityContextHolder</code> there is a shortcut constructor for it.
+The following code is the same as the code above:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Runnable originalRunnable = new Runnable() {
+public void run() {
+	// invoke secured service
+}
+};
+
+DelegatingSecurityContextRunnable wrappedRunnable =
+	new DelegatingSecurityContextRunnable(originalRunnable);
+
+new Thread(wrappedRunnable).start();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The code we have is simple to use, but it still requires knowledge that we are using Spring Security.
+In the next section we will take a look at how we can utilize <code>DelegatingSecurityContextExecutor</code> to hide the fact that we are using Spring Security.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_delegatingsecuritycontextexecutor"><a class="anchor" href="#_delegatingsecuritycontextexecutor"></a>DelegatingSecurityContextExecutor</h3>
+<div class="paragraph">
+<p>In the previous section we found that it was easy to use the <code>DelegatingSecurityContextRunnable</code>, but it was not ideal since we had to be aware of Spring Security in order to use it.
+Let&#8217;s take a look at how <code>DelegatingSecurityContextExecutor</code> can shield our code from any knowledge that we are using Spring Security.</p>
+</div>
+<div class="paragraph">
+<p>The design of <code>DelegatingSecurityContextExecutor</code> is very similar to that of <code>DelegatingSecurityContextRunnable</code> except it accepts a delegate <code>Executor</code> instead of a delegate <code>Runnable</code>.
+You can see an example of how it might be used below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SecurityContext context = SecurityContextHolder.createEmptyContext();
+Authentication authentication =
+	new UsernamePasswordAuthenticationToken("user","doesnotmatter", AuthorityUtils.createAuthorityList("ROLE_USER"));
+context.setAuthentication(authentication);
+
+SimpleAsyncTaskExecutor delegateExecutor =
+	new SimpleAsyncTaskExecutor();
+DelegatingSecurityContextExecutor executor =
+	new DelegatingSecurityContextExecutor(delegateExecutor, context);
+
+Runnable originalRunnable = new Runnable() {
+public void run() {
+	// invoke secured service
+}
+};
+
+executor.execute(originalRunnable);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The code performs the following steps:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Creates the <code>SecurityContext</code> to be used for our <code>DelegatingSecurityContextExecutor</code>.
+Note that in this example we simply create the <code>SecurityContext</code> by hand.
+However, it does not matter where or how we get the <code>SecurityContext</code> (i.e. we could obtain it from the <code>SecurityContextHolder</code> if we wanted).</p>
+</li>
+<li>
+<p>Creates a delegateExecutor that is in charge of executing submitted <code>Runnable</code>s</p>
+</li>
+<li>
+<p>Finally we create a <code>DelegatingSecurityContextExecutor</code> which is in charge of wrapping any Runnable that is passed into the execute method with a <code>DelegatingSecurityContextRunnable</code>.
+It then passes the wrapped Runnable to the delegateExecutor.
+In this instance, the same <code>SecurityContext</code> will be used for every Runnable submitted to our <code>DelegatingSecurityContextExecutor</code>.
+This is nice if we are running background tasks that need to be run by a user with elevated privileges.</p>
+</li>
+<li>
+<p>At this point you may be asking yourself "How does this shield my code of any knowledge of Spring Security?" Instead of creating the <code>SecurityContext</code> and the <code>DelegatingSecurityContextExecutor</code> in our own code, we can inject an already initialized instance of <code>DelegatingSecurityContextExecutor</code>.</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+private Executor executor; // becomes an instance of our DelegatingSecurityContextExecutor
+
+public void submitRunnable() {
+Runnable originalRunnable = new Runnable() {
+	public void run() {
+	// invoke secured service
+	}
+};
+executor.execute(originalRunnable);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now our code is unaware that the <code>SecurityContext</code> is being propagated to the <code>Thread</code>, then the <code>originalRunnable</code> is run, and then the <code>SecurityContextHolder</code> is cleared out.
+In this example, the same user is being used to run each thread.
+What if we wanted to use the user from <code>SecurityContextHolder</code> at the time we invoked <code>executor.execute(Runnable)</code> (i.e. the currently logged in user) to process <code>originalRunnable</code>?
+This can be done by removing the <code>SecurityContext</code> argument from our <code>DelegatingSecurityContextExecutor</code> constructor.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SimpleAsyncTaskExecutor delegateExecutor = new SimpleAsyncTaskExecutor();
+DelegatingSecurityContextExecutor executor =
+	new DelegatingSecurityContextExecutor(delegateExecutor);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now anytime <code>executor.execute(Runnable)</code> is executed the <code>SecurityContext</code> is first obtained by the <code>SecurityContextHolder</code> and then that <code>SecurityContext</code> is used to create our <code>DelegatingSecurityContextRunnable</code>.
+This means that we are running our <code>Runnable</code> with the same user that was used to invoke the <code>executor.execute(Runnable)</code> code.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_spring_security_concurrency_classes"><a class="anchor" href="#_spring_security_concurrency_classes"></a>Spring Security Concurrency Classes</h3>
+<div class="paragraph">
+<p>Refer to the Javadoc for additional integrations with both the Java concurrent APIs and the Spring Task abstractions.
+They are quite self-explanatory once you understand the previous code.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>DelegatingSecurityContextCallable</code></p>
+</li>
+<li>
+<p><code>DelegatingSecurityContextExecutor</code></p>
+</li>
+<li>
+<p><code>DelegatingSecurityContextExecutorService</code></p>
+</li>
+<li>
+<p><code>DelegatingSecurityContextRunnable</code></p>
+</li>
+<li>
+<p><code>DelegatingSecurityContextScheduledExecutorService</code></p>
+</li>
+<li>
+<p><code>DelegatingSecurityContextSchedulingTaskExecutor</code></p>
+</li>
+<li>
+<p><code>DelegatingSecurityContextAsyncTaskExecutor</code></p>
+</li>
+<li>
+<p><code>DelegatingSecurityContextTaskExecutor</code></p>
+</li>
+<li>
+<p><code>DelegatingSecurityContextTaskScheduler</code></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="jackson"><a class="anchor" href="#jackson"></a>Jackson Support</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security provides Jackson support for persisting Spring Security related classes.
+This can improve the performance of serializing Spring Security related classes when working with distributed sessions (i.e. session replication, Spring Session, etc).</p>
+</div>
+<div class="paragraph">
+<p>To use it, register the <code>SecurityJackson2Modules.getModules(ClassLoader)</code> with <code>ObjectMapper</code> (<a href="https://github.com/FasterXML/jackson-databind">jackson-databind</a>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ObjectMapper mapper = new ObjectMapper();
+ClassLoader loader = getClass().getClassLoader();
+List&lt;Module&gt; modules = SecurityJackson2Modules.getModules(loader);
+mapper.registerModules(modules);
+
+// ... use ObjectMapper as normally ...
+SecurityContext context = new SecurityContextImpl();
+// ...
+String json = mapper.writeValueAsString(context);</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The following Spring Security modules provide Jackson support:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>spring-security-core (<code>CoreJackson2Module</code>)</p>
+</li>
+<li>
+<p>spring-security-web (<code>WebJackson2Module</code>, <code>WebServletJackson2Module</code>, <code>WebServerJackson2Module</code>)</p>
+</li>
+<li>
+<p><a href="#oauth2client">spring-security-oauth2-client</a> (<code>OAuth2ClientJackson2Module</code>)</p>
+</li>
+<li>
+<p>spring-security-cas (<code>CasJackson2Module</code>)</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="localization"><a class="anchor" href="#localization"></a>Localization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security supports localization of exception messages that end users are likely to see.
+If your application is designed for English-speaking users, you don&#8217;t need to do anything as by default all Security messages are in English.
+If you need to support other locales, everything you need to know is contained in this section.</p>
+</div>
+<div class="paragraph">
+<p>All exception messages can be localized, including messages related to authentication failures and access being denied (authorization failures).
+Exceptions and logging messages that are focused on developers or system deplopers (including incorrect attributes, interface contract violations, using incorrect constructors, startup time validation, debug-level logging) are not localized and instead are hard-coded in English within Spring Security&#8217;s code.</p>
+</div>
+<div class="paragraph">
+<p>Shipping in the <code>spring-security-core-xx.jar</code> you will find an <code>org.springframework.security</code> package that in turn contains a <code>messages.properties</code> file, as well as localized versions for some common languages.
+This should be referred to by your <code>ApplicationContext</code>, as Spring Security classes implement Spring&#8217;s <code>MessageSourceAware</code> interface and expect the message resolver to be dependency injected at application context startup time.
+Usually all you need to do is register a bean inside your application context to refer to the messages.
+An example is shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="messageSource"
+	class="org.springframework.context.support.ReloadableResourceBundleMessageSource"&gt;
+&lt;property name="basename" value="classpath:org/springframework/security/messages"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>messages.properties</code> is named in accordance with standard resource bundles and represents the default language supported by Spring Security messages.
+This default file is in English.</p>
+</div>
+<div class="paragraph">
+<p>If you wish to customize the <code>messages.properties</code> file, or support other languages, you should copy the file, rename it accordingly, and register it inside the above bean definition.
+There are not a large number of message keys inside this file, so localization should not be considered a major initiative.
+If you do perform localization of this file, please consider sharing your work with the community by logging a JIRA task and attaching your appropriately-named localized version of <code>messages.properties</code>.</p>
+</div>
+<div class="paragraph">
+<p>Spring Security relies on Spring&#8217;s localization support in order to actually lookup the appropriate message.
+In order for this to work, you have to make sure that the locale from the incoming request is stored in Spring&#8217;s <code>org.springframework.context.i18n.LocaleContextHolder</code>.
+Spring MVC&#8217;s <code>DispatcherServlet</code> does this for your application automatically, but since Spring Security&#8217;s filters are invoked before this, the <code>LocaleContextHolder</code> needs to be set up to contain the correct <code>Locale</code> before the filters are called.
+You can either do this in a filter yourself (which must come before the Spring Security filters in <code>web.xml</code>) or you can use Spring&#8217;s <code>RequestContextFilter</code>.
+Please refer to the Spring Framework documentation for further details on using localization with Spring.</p>
+</div>
+<div class="paragraph">
+<p>The "contacts" sample application is set up to use localized messages.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mvc"><a class="anchor" href="#mvc"></a>Spring MVC Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security provides a number of optional integrations with Spring MVC.
+This section covers the integration in further detail.</p>
+</div>
+<div class="sect2">
+<h3 id="mvc-enablewebmvcsecurity"><a class="anchor" href="#mvc-enablewebmvcsecurity"></a>@EnableWebMvcSecurity</h3>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As of Spring Security 4.0, <code>@EnableWebMvcSecurity</code> is deprecated.
+The replacement is <code>@EnableWebSecurity</code> which will determine adding the Spring MVC features based upon the classpath.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To enable Spring Security integration with Spring MVC add the <code>@EnableWebSecurity</code> annotation to your configuration.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Spring Security provides the configuration using Spring MVC&#8217;s <a href="https://docs.spring.io/spring/docs/5.0.0.RELEASE/spring-framework-reference/web.html#mvc-config-customize">WebMvcConfigurer</a>.
+This means that if you are using more advanced options, like integrating with <code>WebMvcConfigurationSupport</code> directly, then you will need to manually provide the Spring Security configuration.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mvc-requestmatcher"><a class="anchor" href="#mvc-requestmatcher"></a>MvcRequestMatcher</h3>
+<div class="paragraph">
+<p>Spring Security provides deep integration with how Spring MVC matches on URLs with <code>MvcRequestMatcher</code>.
+This is helpful to ensure your Security rules match the logic used to handle your requests.</p>
+</div>
+<div class="paragraph">
+<p>In order to use <code>MvcRequestMatcher</code> you must place the Spring Security Configuration in the same <code>ApplicationContext</code> as your <code>DispatcherServlet</code>.
+This is necessary because Spring Security&#8217;s <code>MvcRequestMatcher</code> expects a <code>HandlerMappingIntrospector</code> bean with the name of <code>mvcHandlerMappingIntrospector</code> to be registered by your Spring MVC configuration that is used to perform the matching.</p>
+</div>
+<div class="paragraph">
+<p>For a <code>web.xml</code> this means that you should place your configuration in the <code>DispatcherServlet.xml</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;listener&gt;
+  &lt;listener-class&gt;org.springframework.web.context.ContextLoaderListener&lt;/listener-class&gt;
+&lt;/listener&gt;
+
+&lt;!-- All Spring Configuration (both MVC and Security) are in /WEB-INF/spring/ --&gt;
+&lt;context-param&gt;
+  &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+  &lt;param-value&gt;/WEB-INF/spring/*.xml&lt;/param-value&gt;
+&lt;/context-param&gt;
+
+&lt;servlet&gt;
+  &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+  &lt;servlet-class&gt;org.springframework.web.servlet.DispatcherServlet&lt;/servlet-class&gt;
+  &lt;!-- Load from the ContextLoaderListener --&gt;
+  &lt;init-param&gt;
+    &lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+    &lt;param-value&gt;&lt;/param-value&gt;
+  &lt;/init-param&gt;
+&lt;/servlet&gt;
+
+&lt;servlet-mapping&gt;
+  &lt;servlet-name&gt;spring&lt;/servlet-name&gt;
+  &lt;url-pattern&gt;/&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Below <code>WebSecurityConfiguration</code> in placed in the <code>DispatcherServlet</code>s <code>ApplicationContext</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SecurityInitializer extends
+    AbstractAnnotationConfigDispatcherServletInitializer {
+
+  @Override
+  protected Class&lt;?&gt;[] getRootConfigClasses() {
+    return null;
+  }
+
+  @Override
+  protected Class&lt;?&gt;[] getServletConfigClasses() {
+    return new Class[] { RootConfiguration.class,
+        WebMvcConfiguration.class };
+  }
+
+  @Override
+  protected String[] getServletMappings() {
+    return new String[] { "/" };
+  }
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>It is always recommended to provide authorization rules by matching on the <code>HttpServletRequest</code> and method security.</p>
+</div>
+<div class="paragraph">
+<p>Providing authorization rules by matching on <code>HttpServletRequest</code> is good because it happens very early in the code path and helps reduce the <a href="https://en.wikipedia.org/wiki/Attack_surface">attack surface</a>.
+Method security ensures that if someone has bypassed the web authorization rules, that your application is still secured.
+This is what is known as <a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">Defence in Depth</a></p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Consider a controller that is mapped as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/admin")
+public String admin() {</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we wanted to restrict access to this controller method to admin users, a developer can provide authorization rules by matching on the <code>HttpServletRequest</code> with the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected configure(HttpSecurity http) throws Exception {
+	http
+		.authorizeRequests(authorize -&gt; authorize
+			.antMatchers("/admin").hasRole("ADMIN")
+		);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or in XML</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+	&lt;intercept-url pattern="/admin" access="hasRole('ADMIN')"/&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With either configuration, the URL <code>/admin</code> will require the authenticated user to be an admin user.
+However, depending on our Spring MVC configuration, the URL <code>/admin.html</code> will also map to our <code>admin()</code> method.
+Additionally, depending on our Spring MVC configuration, the URL <code>/admin/</code> will also map to our <code>admin()</code> method.</p>
+</div>
+<div class="paragraph">
+<p>The problem is that our security rule is only protecting <code>/admin</code>.
+We could add additional rules for all the permutations of Spring MVC, but this would be quite verbose and tedious.</p>
+</div>
+<div class="paragraph">
+<p>Instead, we can leverage Spring Security&#8217;s <code>MvcRequestMatcher</code>.
+The following configuration will protect the same URLs that Spring MVC will match on by using Spring MVC to match on the URL.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected configure(HttpSecurity http) throws Exception {
+	http
+		.authorizeRequests(authorize -&gt; authorize
+			.mvcMatchers("/admin").hasRole("ADMIN")
+		);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or in XML</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http request-matcher="mvc"&gt;
+	&lt;intercept-url pattern="/admin" access="hasRole('ADMIN')"/&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mvc-authentication-principal"><a class="anchor" href="#mvc-authentication-principal"></a>@AuthenticationPrincipal</h3>
+<div class="paragraph">
+<p>Spring Security provides <code>AuthenticationPrincipalArgumentResolver</code> which can automatically resolve the current <code>Authentication.getPrincipal()</code> for Spring MVC arguments.
+By using <code>@EnableWebSecurity</code> you will automatically have this added to your Spring MVC configuration.
+If you use XML based configuration, you must add this yourself.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;mvc:annotation-driven&gt;
+		&lt;mvc:argument-resolvers&gt;
+				&lt;bean class="org.springframework.security.web.method.annotation.AuthenticationPrincipalArgumentResolver" /&gt;
+		&lt;/mvc:argument-resolvers&gt;
+&lt;/mvc:annotation-driven&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Once <code>AuthenticationPrincipalArgumentResolver</code> is properly configured, you can be entirely decoupled from Spring Security in your Spring MVC layer.</p>
+</div>
+<div class="paragraph">
+<p>Consider a situation where a custom <code>UserDetailsService</code> that returns an <code>Object</code> that implements <code>UserDetails</code> and your own <code>CustomUser</code> <code>Object</code>. The <code>CustomUser</code> of the currently authenticated user could be accessed using the following code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/messages/inbox")
+public ModelAndView findMessagesForUser() {
+	Authentication authentication =
+	SecurityContextHolder.getContext().getAuthentication();
+	CustomUser custom = (CustomUser) authentication == null ? null : authentication.getPrincipal();
+
+	// .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As of Spring Security 3.2 we can resolve the argument more directly by adding an annotation. For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
+
+// ...
+
+@RequestMapping("/messages/inbox")
+public ModelAndView findMessagesForUser(@AuthenticationPrincipal CustomUser customUser) {
+
+	// .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Sometimes it may be necessary to transform the principal in some way.
+For example, if <code>CustomUser</code> needed to be final it could not be extended.
+In this situation the <code>UserDetailsService</code> might returns an <code>Object</code> that implements <code>UserDetails</code> and provides a method named <code>getCustomUser</code> to access <code>CustomUser</code>.
+For example, it might look like:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class CustomUserUserDetails extends User {
+		// ...
+		public CustomUser getCustomUser() {
+				return customUser;
+		}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We could then access the <code>CustomUser</code> using a <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html">SpEL expression</a> that uses <code>Authentication.getPrincipal()</code> as the root object:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
+
+// ...
+
+@RequestMapping("/messages/inbox")
+public ModelAndView findMessagesForUser(@AuthenticationPrincipal(expression = "customUser") CustomUser customUser) {
+
+	// .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can also refer to Beans in our SpEL expressions.
+For example, the following could be used if we were using JPA to manage our Users and we wanted to modify and save a property on the current user.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
+
+// ...
+
+@PutMapping("/users/self")
+public ModelAndView updateName(@AuthenticationPrincipal(expression = "@jpaEntityManager.merge(#this)") CustomUser attachedCustomUser,
+		@RequestParam String firstName) {
+
+	// change the firstName on an attached instance which will be persisted to the database
+	attachedCustomUser.setFirstName(firstName);
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can further remove our dependency on Spring Security by making <code>@AuthenticationPrincipal</code> a meta annotation on our own annotation.
+Below we demonstrate how we could do this on an annotation named <code>@CurrentUser</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is important to realize that in order to remove the dependency on Spring Security, it is the consuming application that would create <code>@CurrentUser</code>.
+This step is not strictly required, but assists in isolating your dependency to Spring Security to a more central location.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Target({ElementType.PARAMETER, ElementType.TYPE})
+@Retention(RetentionPolicy.RUNTIME)
+@Documented
+@AuthenticationPrincipal
+public @interface CurrentUser {}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now that <code>@CurrentUser</code> has been specified, we can use it to signal to resolve our <code>CustomUser</code> of the currently authenticated user.
+We have also isolated our dependency on Spring Security to a single file.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/messages/inbox")
+public ModelAndView findMessagesForUser(@CurrentUser CustomUser customUser) {
+
+	// .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mvc-async"><a class="anchor" href="#mvc-async"></a>Spring MVC Async Integration</h3>
+<div class="paragraph">
+<p>Spring Web MVC 3.2+ has excellent support for <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-ann-async">Asynchronous Request Processing</a>.
+With no additional configuration, Spring Security will automatically setup the <code>SecurityContext</code> to the <code>Thread</code> that invokes a <code>Callable</code> returned by your controllers.
+For example, the following method will automatically have its <code>Callable</code> invoked with the <code>SecurityContext</code> that was available when the <code>Callable</code> was created:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping(method=RequestMethod.POST)
+public Callable&lt;String&gt; processUpload(final MultipartFile file) {
+
+return new Callable&lt;String&gt;() {
+	public Object call() throws Exception {
+	// ...
+	return "someView";
+	}
+};
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Associating SecurityContext to Callable&#8217;s</div>
+<div class="paragraph">
+<p>More technically speaking, Spring Security integrates with <code>WebAsyncManager</code>.
+The <code>SecurityContext</code> that is used to process the <code>Callable</code> is the <code>SecurityContext</code> that exists on the <code>SecurityContextHolder</code> at the time <code>startCallableProcessing</code> is invoked.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>There is no automatic integration with a <code>DeferredResult</code> that is returned by controllers.
+This is because <code>DeferredResult</code> is processed by the users and thus there is no way of automatically integrating with it.
+However, you can still use <a href="#concurrency">Concurrency Support</a> to provide transparent integration with Spring Security.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mvc-csrf"><a class="anchor" href="#mvc-csrf"></a>Spring MVC and CSRF Integration</h3>
+<div class="sect3">
+<h4 id="_automatic_token_inclusion"><a class="anchor" href="#_automatic_token_inclusion"></a>Automatic Token Inclusion</h4>
+<div class="paragraph">
+<p>Spring Security will automatically <a href="#servlet-csrf-include">include the CSRF Token</a> within forms that use the <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html#view-jsp-formtaglib-formtag">Spring MVC form tag</a>.
+For example, the following JSP:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
+	xmlns:c="http://java.sun.com/jsp/jstl/core"
+	xmlns:form="http://www.springframework.org/tags/form" version="2.0"&gt;
+	&lt;jsp:directive.page language="java" contentType="text/html" /&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"&gt;
+	&lt;!-- ... --&gt;
+
+	&lt;c:url var="logoutUrl" value="/logout"/&gt;
+	&lt;form:form action="${logoutUrl}"
+		method="post"&gt;
+	&lt;input type="submit"
+		value="Log out" /&gt;
+	&lt;input type="hidden"
+		name="${_csrf.parameterName}"
+		value="${_csrf.token}"/&gt;
+	&lt;/form:form&gt;
+
+	&lt;!-- ... --&gt;
+&lt;/html&gt;
+&lt;/jsp:root&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Will output HTML that is similar to the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- ... --&gt;
+
+&lt;form action="/context/logout" method="post"&gt;
+&lt;input type="submit" value="Log out"/&gt;
+&lt;input type="hidden" name="_csrf" value="f81d4fae-7dec-11d0-a765-00a0c91e6bf6"/&gt;
+&lt;/form&gt;
+
+&lt;!-- ... --&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="mvc-csrf-resolver"><a class="anchor" href="#mvc-csrf-resolver"></a>Resolving the CsrfToken</h4>
+<div class="paragraph">
+<p>Spring Security provides <code>CsrfTokenArgumentResolver</code> which can automatically resolve the current <code>CsrfToken</code> for Spring MVC arguments.
+By using <a href="#jc-hello-wsca">@EnableWebSecurity</a> you will automatically have this added to your Spring MVC configuration.
+If you use XML based configuration, you must add this yourself.</p>
+</div>
+<div class="paragraph">
+<p>Once <code>CsrfTokenArgumentResolver</code> is properly configured, you can expose the <code>CsrfToken</code> to your static HTML based application.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestController
+public class CsrfController {
+
+	@RequestMapping("/csrf")
+	public CsrfToken csrf(CsrfToken token) {
+		return token;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is important to keep the <code>CsrfToken</code> a secret from other domains.
+This means if you are using <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Cross Origin Sharing (CORS)</a>, you should <strong>NOT</strong> expose the <code>CsrfToken</code> to any external domains.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="websocket"><a class="anchor" href="#websocket"></a>WebSocket Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security 4 added support for securing <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html">Spring&#8217;s WebSocket support</a>.
+This section describes how to use Spring Security&#8217;s WebSocket support.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Direct JSR-356 Support</div>
+<div class="paragraph">
+<p>Spring Security does not provide direct JSR-356 support because doing so would provide little value.
+This is because the format is unknown, so there is <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-intro-sub-protocol">little Spring can do to secure an unknown format</a>.
+Additionally, JSR-356 does not provide a way to intercept messages, so security would be rather invasive.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="websocket-configuration"><a class="anchor" href="#websocket-configuration"></a>WebSocket Configuration</h3>
+<div class="paragraph">
+<p>Spring Security 4.0 has introduced authorization support for WebSockets through the Spring Messaging abstraction.
+To configure authorization using Java Configuration, simply extend the <code>AbstractSecurityWebSocketMessageBrokerConfigurer</code> and configure the <code>MessageSecurityMetadataSourceRegistry</code>.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class WebSocketSecurityConfig
+      extends AbstractSecurityWebSocketMessageBrokerConfigurer { <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="2"></i><b>(2)</b>
+
+    protected void configureInbound(MessageSecurityMetadataSourceRegistry messages) {
+        messages
+                .simpDestMatchers("/user/**").authenticated() <i class="conum" data-value="3"></i><b>(3)</b>
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will ensure that:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Any inbound CONNECT message requires a valid CSRF token to enforce <a href="#websocket-sameorigin">Same Origin Policy</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The SecurityContextHolder is populated with the user within the simpUser header attribute for any inbound request.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Our messages require the proper authorization. Specifically, any inbound message that starts with "/user/" will require ROLE_USER. Additional details on authorization can be found in <a href="#websocket-authorization">WebSocket Authorization</a></td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Spring Security also provides <a href="#nsa-websocket-security">XML Namespace</a> support for securing WebSockets.
+A comparable XML based configuration looks like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;websocket-message-broker&gt; <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="2"></i><b>(2)</b>
+    <i class="conum" data-value="3"></i><b>(3)</b>
+    &lt;intercept-message pattern="/user/**" access="hasRole('USER')" /&gt;
+&lt;/websocket-message-broker&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will ensure that:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Any inbound CONNECT message requires a valid CSRF token to enforce <a href="#websocket-sameorigin">Same Origin Policy</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>The SecurityContextHolder is populated with the user within the simpUser header attribute for any inbound request.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Our messages require the proper authorization. Specifically, any inbound message that starts with "/user/" will require ROLE_USER. Additional details on authorization can be found in <a href="#websocket-authorization">WebSocket Authorization</a></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="websocket-authentication"><a class="anchor" href="#websocket-authentication"></a>WebSocket Authentication</h3>
+<div class="paragraph">
+<p>WebSockets reuse the same authentication information that is found in the HTTP request when the WebSocket connection was made.
+This means that the <code>Principal</code> on the <code>HttpServletRequest</code> will be handed off to WebSockets.
+If you are using Spring Security, the <code>Principal</code> on the <code>HttpServletRequest</code> is overridden automatically.</p>
+</div>
+<div class="paragraph">
+<p>More concretely, to ensure a user has authenticated to your WebSocket application, all that is necessary is to ensure that you setup Spring Security to authenticate your HTTP based web application.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="websocket-authorization"><a class="anchor" href="#websocket-authorization"></a>WebSocket Authorization</h3>
+<div class="paragraph">
+<p>Spring Security 4.0 has introduced authorization support for WebSockets through the Spring Messaging abstraction.
+To configure authorization using Java Configuration, simply extend the <code>AbstractSecurityWebSocketMessageBrokerConfigurer</code> and configure the <code>MessageSecurityMetadataSourceRegistry</code>.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBrokerConfigurer {
+
+    @Override
+    protected void configureInbound(MessageSecurityMetadataSourceRegistry messages) {
+        messages
+                .nullDestMatcher().authenticated() <i class="conum" data-value="1"></i><b>(1)</b>
+                .simpSubscribeDestMatchers("/user/queue/errors").permitAll() <i class="conum" data-value="2"></i><b>(2)</b>
+                .simpDestMatchers("/app/**").hasRole("USER") <i class="conum" data-value="3"></i><b>(3)</b>
+                .simpSubscribeDestMatchers("/user/**", "/topic/friends/*").hasRole("USER") <i class="conum" data-value="4"></i><b>(4)</b>
+                .simpTypeMatchers(MESSAGE, SUBSCRIBE).denyAll() <i class="conum" data-value="5"></i><b>(5)</b>
+                .anyMessage().denyAll(); <i class="conum" data-value="6"></i><b>(6)</b>
+
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will ensure that:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Any message without a destination (i.e. anything other than Message type of MESSAGE or SUBSCRIBE) will require the user to be authenticated</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Anyone can subscribe to /user/queue/errors</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Any message that has a destination starting with "/app/" will be require the user to have the role ROLE_USER</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Any message that starts with "/user/" or "/topic/friends/" that is of type SUBSCRIBE will require ROLE_USER</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Any other message of type MESSAGE or SUBSCRIBE is rejected. Due to 6 we do not need this step, but it illustrates how one can match on specific message types.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Any other Message is rejected. This is a good idea to ensure that you do not miss any messages.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Spring Security also provides <a href="#nsa-websocket-security">XML Namespace</a> support for securing WebSockets.
+A comparable XML based configuration looks like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;websocket-message-broker&gt;
+    <i class="conum" data-value="1"></i><b>(1)</b>
+    &lt;intercept-message type="CONNECT" access="permitAll" /&gt;
+    &lt;intercept-message type="UNSUBSCRIBE" access="permitAll" /&gt;
+    &lt;intercept-message type="DISCONNECT" access="permitAll" /&gt;
+
+    &lt;intercept-message pattern="/user/queue/errors" type="SUBSCRIBE" access="permitAll" /&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+    &lt;intercept-message pattern="/app/**" access="hasRole('USER')" /&gt;      <i class="conum" data-value="3"></i><b>(3)</b>
+
+    <i class="conum" data-value="4"></i><b>(4)</b>
+    &lt;intercept-message pattern="/user/**" access="hasRole('USER')" /&gt;
+    &lt;intercept-message pattern="/topic/friends/*" access="hasRole('USER')" /&gt;
+
+    <i class="conum" data-value="5"></i><b>(5)</b>
+    &lt;intercept-message type="MESSAGE" access="denyAll" /&gt;
+    &lt;intercept-message type="SUBSCRIBE" access="denyAll" /&gt;
+
+    &lt;intercept-message pattern="/**" access="denyAll" /&gt; <i class="conum" data-value="6"></i><b>(6)</b>
+&lt;/websocket-message-broker&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will ensure that:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Any message of type CONNECT, UNSUBSCRIBE, or DISCONNECT will require the user to be authenticated</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Anyone can subscribe to /user/queue/errors</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Any message that has a destination starting with "/app/" will be require the user to have the role ROLE_USER</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Any message that starts with "/user/" or "/topic/friends/" that is of type SUBSCRIBE will require ROLE_USER</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Any other message of type MESSAGE or SUBSCRIBE is rejected. Due to 6 we do not need this step, but it illustrates how one can match on specific message types.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>Any other message with a destination is rejected. This is a good idea to ensure that you do not miss any messages.</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="websocket-authorization-notes"><a class="anchor" href="#websocket-authorization-notes"></a>WebSocket Authorization Notes</h4>
+<div class="paragraph">
+<p>In order to properly secure your application it is important to understand Spring&#8217;s WebSocket support.</p>
+</div>
+<div class="sect4">
+<h5 id="websocket-authorization-notes-messagetypes"><a class="anchor" href="#websocket-authorization-notes-messagetypes"></a>WebSocket Authorization on Message Types</h5>
+<div class="paragraph">
+<p>It is important to understand the distinction between SUBSCRIBE and MESSAGE types of messages and how it works within Spring.</p>
+</div>
+<div class="paragraph">
+<p>Consider a chat application.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The system can send notifications MESSAGE to all users through a destination of "/topic/system/notifications"</p>
+</li>
+<li>
+<p>Clients can receive notifications by SUBSCRIBE to the "/topic/system/notifications".</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>While we want clients to be able to SUBSCRIBE to "/topic/system/notifications", we do not want to enable them to send a MESSAGE to that destination.
+If we allowed sending a MESSAGE to "/topic/system/notifications", then clients could send a message directly to that endpoint and impersonate the system.</p>
+</div>
+<div class="paragraph">
+<p>In general, it is common for applications to deny any MESSAGE sent to a destination that starts with the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-stomp">broker prefix</a> (i.e. "/topic/" or "/queue/").</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="websocket-authorization-notes-destinations"><a class="anchor" href="#websocket-authorization-notes-destinations"></a>WebSocket Authorization on Destinations</h5>
+<div class="paragraph">
+<p>It is also is important to understand how destinations are transformed.</p>
+</div>
+<div class="paragraph">
+<p>Consider a chat application.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Users can send messages to a specific user by sending a message to the destination of "/app/chat".</p>
+</li>
+<li>
+<p>The application sees the message, ensures that the "from" attribute is specified as the current user (we cannot trust the client).</p>
+</li>
+<li>
+<p>The application then sends the message to the recipient using <code>SimpMessageSendingOperations.convertAndSendToUser("toUser", "/queue/messages", message)</code>.</p>
+</li>
+<li>
+<p>The message gets turned into the destination of "/queue/user/messages-&lt;sessionid&gt;"</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>With the application above, we want to allow our client to listen to "/user/queue" which is transformed into "/queue/user/messages-&lt;sessionid&gt;".
+However, we do not want the client to be able to listen to "/queue/*" because that would allow the client to see messages for every user.</p>
+</div>
+<div class="paragraph">
+<p>In general, it is common for applications to deny any SUBSCRIBE sent to a message that starts with the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-stomp">broker prefix</a> (i.e. "/topic/" or "/queue/").
+Of course we may provide exceptions to account for things like</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="websocket-authorization-notes-outbound"><a class="anchor" href="#websocket-authorization-notes-outbound"></a>Outbound Messages</h4>
+<div class="paragraph">
+<p>Spring contains a section titled <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-stomp-message-flow">Flow of Messages</a> that describes how messages flow through the system.
+It is important to note that Spring Security only secures the <code>clientInboundChannel</code>.
+Spring Security does not attempt to secure the <code>clientOutboundChannel</code>.</p>
+</div>
+<div class="paragraph">
+<p>The most important reason for this is performance.
+For every message that goes in, there are typically many more that go out.
+Instead of securing the outbound messages, we encourage securing the subscription to the endpoints.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="websocket-sameorigin"><a class="anchor" href="#websocket-sameorigin"></a>Enforcing Same Origin Policy</h3>
+<div class="paragraph">
+<p>It is important to emphasize that the browser does not enforce the <a href="https://en.wikipedia.org/wiki/Same-origin_policy">Same Origin Policy</a> for WebSocket connections.
+This is an extremely important consideration.</p>
+</div>
+<div class="sect3">
+<h4 id="websocket-sameorigin-why"><a class="anchor" href="#websocket-sameorigin-why"></a>Why Same Origin?</h4>
+<div class="paragraph">
+<p>Consider the following scenario.
+A user visits bank.com and authenticates to their account.
+The same user opens another tab in their browser and visits evil.com.
+The Same Origin Policy ensures that evil.com cannot read or write data to bank.com.</p>
+</div>
+<div class="paragraph">
+<p>With WebSockets the Same Origin Policy does not apply.
+In fact, unless bank.com explicitly forbids it, evil.com can read and write data on behalf of the user.
+This means that anything the user can do over the webSocket (i.e. transfer money), evil.com can do on that users behalf.</p>
+</div>
+<div class="paragraph">
+<p>Since SockJS tries to emulate WebSockets it also bypasses the Same Origin Policy.
+This means developers need to explicitly protect their applications from external domains when using SockJS.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="websocket-sameorigin-spring"><a class="anchor" href="#websocket-sameorigin-spring"></a>Spring WebSocket Allowed Origin</h4>
+<div class="paragraph">
+<p>Fortunately, since Spring 4.1.5 Spring&#8217;s WebSocket and SockJS support restricts access to the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-server-allowed-origins">current domain</a>.
+Spring Security adds an additional layer of protection to provide <a href="https://en.wikipedia.org/wiki/Defense_in_depth_%2528computing%2529">defence in depth</a>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="websocket-sameorigin-csrf"><a class="anchor" href="#websocket-sameorigin-csrf"></a>Adding CSRF to Stomp Headers</h4>
+<div class="paragraph">
+<p>By default Spring Security requires the <a href="#csrf">CSRF token</a> in any CONNECT message type.
+This ensures that only a site that has access to the CSRF token can connect.
+Since only the <strong>Same Origin</strong> can access the CSRF token, external domains are not allowed to make a connection.</p>
+</div>
+<div class="paragraph">
+<p>Typically we need to include the CSRF token in an HTTP header or an HTTP parameter.
+However, SockJS does not allow for these options.
+Instead, we must include the token in the Stomp headers</p>
+</div>
+<div class="paragraph">
+<p>Applications can <a href="#servlet-csrf-include">obtain a CSRF token</a> by accessing the request attribute named _csrf.
+For example, the following will allow accessing the <code>CsrfToken</code> in a JSP:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">var headerName = "${_csrf.headerName}";
+var token = "${_csrf.token}";</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are using static HTML, you can expose the <code>CsrfToken</code> on a REST endpoint.
+For example, the following would expose the <code>CsrfToken</code> on the URL /csrf</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestController
+public class CsrfController {
+
+    @RequestMapping("/csrf")
+    public CsrfToken csrf(CsrfToken token) {
+        return token;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The JavaScript can make a REST call to the endpoint and use the response to populate the headerName and the token.</p>
+</div>
+<div class="paragraph">
+<p>We can now include the token in our Stomp client.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">...
+var headers = {};
+headers[headerName] = token;
+stompClient.connect(headers, function(frame) {
+  ...
+
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="websocket-sameorigin-disable"><a class="anchor" href="#websocket-sameorigin-disable"></a>Disable CSRF within WebSockets</h4>
+<div class="paragraph">
+<p>If you want to allow other domains to access your site, you can disable Spring Security&#8217;s protection.
+For example, in Java Configuration you can use the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBrokerConfigurer {
+
+    ...
+
+    @Override
+    protected boolean sameOriginDisabled() {
+        return true;
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="websocket-sockjs"><a class="anchor" href="#websocket-sockjs"></a>Working with SockJS</h3>
+<div class="paragraph">
+<p><a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-fallback">SockJS</a> provides fallback transports to support older browsers.
+When using the fallback options we need to relax a few security constraints to allow SockJS to work with Spring Security.</p>
+</div>
+<div class="sect3">
+<h4 id="websocket-sockjs-sameorigin"><a class="anchor" href="#websocket-sockjs-sameorigin"></a>SockJS &amp; frame-options</h4>
+<div class="paragraph">
+<p>SockJS may use an <a href="https://github.com/sockjs/sockjs-client/tree/v0.3.4">transport that leverages an iframe</a>.
+By default Spring Security will <a href="#headers-frame-options">deny</a> the site from being framed to prevent Clickjacking attacks.
+To allow SockJS frame based transports to work, we need to configure Spring Security to allow the same origin to frame the content.</p>
+</div>
+<div class="paragraph">
+<p>You can customize X-Frame-Options with the <a href="#nsa-frame-options">frame-options</a> element.
+For example, the following will instruct Spring Security to use "X-Frame-Options: SAMEORIGIN" which allows iframes within the same domain:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+    &lt;!-- ... --&gt;
+
+    &lt;headers&gt;
+        &lt;frame-options
+          policy="SAMEORIGIN" /&gt;
+    &lt;/headers&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Similarly, you can customize frame options to use the same origin within Java Configuration using the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class WebSecurityConfig extends
+   WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            // ...
+            .headers(headers -&gt; headers
+                .frameOptions(frameOptions -&gt; frameOptions
+                     .sameOrigin()
+                )
+        );
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="websocket-sockjs-csrf"><a class="anchor" href="#websocket-sockjs-csrf"></a>SockJS &amp; Relaxing CSRF</h4>
+<div class="paragraph">
+<p>SockJS uses a POST on the CONNECT messages for any HTTP based transport.
+Typically we need to include the CSRF token in an HTTP header or an HTTP parameter.
+However, SockJS does not allow for these options.
+Instead, we must include the token in the Stomp headers as described in <a href="#websocket-sameorigin-csrf">Adding CSRF to Stomp Headers</a>.</p>
+</div>
+<div class="paragraph">
+<p>It also means we need to relax our CSRF protection with the web layer.
+Specifically, we want to disable CSRF protection for our connect URLs.
+We do NOT want to disable CSRF protection for every URL.
+Otherwise our site will be vulnerable to CSRF attacks.</p>
+</div>
+<div class="paragraph">
+<p>We can easily achieve this by providing a CSRF RequestMatcher.
+Our Java Configuration makes this extremely easy.
+For example, if our stomp endpoint is "/chat" we can disable CSRF protection for only URLs that start with "/chat/" using the following configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableWebSecurity
+public class WebSecurityConfig
+    extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        http
+            .csrf(csrf -&gt; csrf
+                // ignore our stomp endpoints since they are protected using Stomp headers
+                .ignoringAntMatchers("/chat/**")
+            )
+            .headers(headers -&gt; headers
+                // allow same origin to frame our site to support iframe SockJS
+                .frameOptions(frameOptions -&gt; frameOptions
+                    .sameOrigin()
+                )
+            )
+            .authorizeRequests(authorize -&gt; authorize
+                ...
+            )
+            ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we are using XML based configuration, we can use the <a href="#nsa-csrf-request-matcher-ref">csrf@request-matcher-ref</a>.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http ...&gt;
+    &lt;csrf request-matcher-ref="csrfMatcher"/&gt;
+
+    &lt;headers&gt;
+        &lt;frame-options policy="SAMEORIGIN"/&gt;
+    &lt;/headers&gt;
+
+    ...
+&lt;/http&gt;
+
+&lt;b:bean id="csrfMatcher"
+    class="AndRequestMatcher"&gt;
+    &lt;b:constructor-arg value="#{T(org.springframework.security.web.csrf.CsrfFilter).DEFAULT_CSRF_MATCHER}"/&gt;
+    &lt;b:constructor-arg&gt;
+        &lt;b:bean class="org.springframework.security.web.util.matcher.NegatedRequestMatcher"&gt;
+          &lt;b:bean class="org.springframework.security.web.util.matcher.AntPathRequestMatcher"&gt;
+            &lt;b:constructor-arg value="/chat/**"/&gt;
+          &lt;/b:bean&gt;
+        &lt;/b:bean&gt;
+    &lt;/b:constructor-arg&gt;
+&lt;/b:bean&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="cors"><a class="anchor" href="#cors"></a>CORS</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Framework provides <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/web.html#mvc-cors">first class support for CORS</a>.
+CORS must be processed before Spring Security because the pre-flight request will not contain any cookies (i.e. the <code>JSESSIONID</code>).
+If the request does not contain any cookies and Spring Security is first, the request will determine the user is not authenticated (since there are no cookies in the request) and reject it.</p>
+</div>
+<div class="paragraph">
+<p>The easiest way to ensure that CORS is handled first is to use the <code>CorsFilter</code>.
+Users can integrate the <code>CorsFilter</code> with Spring Security by providing a <code>CorsConfigurationSource</code> using the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http
+			// by default uses a Bean by the name of corsConfigurationSource
+			.cors(withDefaults())
+			...
+	}
+
+	@Bean
+	CorsConfigurationSource corsConfigurationSource() {
+		CorsConfiguration configuration = new CorsConfiguration();
+		configuration.setAllowedOrigins(Arrays.asList("https://example.com"));
+		configuration.setAllowedMethods(Arrays.asList("GET","POST"));
+		UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+		source.registerCorsConfiguration("/**", configuration);
+		return source;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or in XML</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+	&lt;cors configuration-source-ref="corsSource"/&gt;
+	...
+&lt;/http&gt;
+&lt;b:bean id="corsSource" class="org.springframework.web.cors.UrlBasedCorsConfigurationSource"&gt;
+	...
+&lt;/b:bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are using Spring MVC&#8217;s CORS support, you can omit specifying the <code>CorsConfigurationSource</code> and Spring Security will leverage the CORS configuration provided to Spring MVC.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		http
+			// if Spring MVC is on classpath and no CorsConfigurationSource is provided,
+			// Spring Security will use CORS configuration provided to Spring MVC
+			.cors(withDefaults())
+			...
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>or in XML</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+	&lt;!-- Default to Spring MVC's CORS configuration --&gt;
+	&lt;cors /&gt;
+	...
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="taglibs"><a class="anchor" href="#taglibs"></a>JSP Tag Libraries</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security has its own taglib which provides basic support for accessing security information and applying security constraints in JSPs.</p>
+</div>
+<div class="sect2">
+<h3 id="_declaring_the_taglib"><a class="anchor" href="#_declaring_the_taglib"></a>Declaring the Taglib</h3>
+<div class="paragraph">
+<p>To use any of the tags, you must have the security taglib declared in your JSP:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;%@ taglib prefix="sec" uri="http://www.springframework.org/security/tags" %&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="taglibs-authorize"><a class="anchor" href="#taglibs-authorize"></a>The authorize Tag</h3>
+<div class="paragraph">
+<p>This tag is used to determine whether its contents should be evaluated or not.
+In Spring Security 3.0, it can be used in two ways <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
+The first approach uses a <a href="#el-access-web">web-security expression</a>, specified in the <code>access</code> attribute of the tag.
+The expression evaluation will be delegated to the <code>SecurityExpressionHandler&lt;FilterInvocation&gt;</code> defined in the application context (you should have web expressions enabled in your <code>&lt;http&gt;</code> namespace configuration to make sure this service is available).
+So, for example, you might have</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:authorize access="hasRole('supervisor')"&gt;
+
+This content will only be visible to users who have the "supervisor" authority in their list of &lt;tt&gt;GrantedAuthority&lt;/tt&gt;s.
+
+&lt;/sec:authorize&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When used in conjunction with Spring Security&#8217;s PermissionEvaluator, the tag can also be used to check permissions.
+For example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:authorize access="hasPermission(#domain,'read') or hasPermission(#domain,'write')"&gt;
+
+This content will only be visible to users who have read or write permission to the Object found as a request attribute named "domain".
+
+&lt;/sec:authorize&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A common requirement is to only show a particular link, if the user is actually allowed to click it.
+How can we determine in advance whether something will be allowed? This tag can also operate in an alternative mode which allows you to define a particular URL as an attribute.
+If the user is allowed to invoke that URL, then the tag body will be evaluated, otherwise it will be skipped.
+So you might have something like</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:authorize url="/admin"&gt;
+
+This content will only be visible to users who are authorized to send requests to the "/admin" URL.
+
+&lt;/sec:authorize&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To use this tag there must also be an instance of <code>WebInvocationPrivilegeEvaluator</code> in your application context.
+If you are using the namespace, one will automatically be registered.
+This is an instance of <code>DefaultWebInvocationPrivilegeEvaluator</code>, which creates a dummy web request for the supplied URL and invokes the security interceptor to see whether the request would succeed or fail.
+This allows you to delegate to the access-control setup you defined using <code>intercept-url</code> declarations within the <code>&lt;http&gt;</code> namespace configuration and saves having to duplicate the information (such as the required roles) within your JSPs.
+This approach can also be combined with a <code>method</code> attribute, supplying the HTTP method, for a more specific match.</p>
+</div>
+<div class="paragraph">
+<p>The Boolean result of evaluating the tag (whether it grants or denies access) can be stored in a page context scope variable by setting the <code>var</code> attribute to the variable name, avoiding the need for duplicating and re-evaluating the condition at other points in the page.</p>
+</div>
+<div class="sect3">
+<h4 id="_disabling_tag_authorization_for_testing"><a class="anchor" href="#_disabling_tag_authorization_for_testing"></a>Disabling Tag Authorization for Testing</h4>
+<div class="paragraph">
+<p>Hiding a link in a page for unauthorized users doesn&#8217;t prevent them from accessing the URL.
+They could just type it into their browser directly, for example.
+As part of your testing process, you may want to reveal the hidden areas in order to check that links really are secured at the back end.
+If you set the system property <code>spring.security.disableUISecurity</code> to <code>true</code>, the <code>authorize</code> tag will still run but will not hide its contents.
+By default it will also surround the content with <code>&lt;span class="securityHiddenUI"&gt;&#8230;&#8203;&lt;/span&gt;</code> tags.
+This allows you to display "hidden" content with a particular CSS style such as a different background colour.
+Try running the "tutorial" sample application with this property enabled, for example.</p>
+</div>
+<div class="paragraph">
+<p>You can also set the properties <code>spring.security.securedUIPrefix</code> and <code>spring.security.securedUISuffix</code> if you want to change surrounding text from the default <code>span</code> tags (or use empty strings to remove it completely).</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_authentication_tag"><a class="anchor" href="#_the_authentication_tag"></a>The authentication Tag</h3>
+<div class="paragraph">
+<p>This tag allows access to the current <code>Authentication</code> object stored in the security context.
+It renders a property of the object directly in the JSP.
+So, for example, if the <code>principal</code> property of the <code>Authentication</code> is an instance of Spring Security&#8217;s <code>UserDetails</code> object, then using <code>&lt;sec:authentication property="principal.username" /&gt;</code> will render the name of the current user.</p>
+</div>
+<div class="paragraph">
+<p>Of course, it isn&#8217;t necessary to use JSP tags for this kind of thing and some people prefer to keep as little logic as possible in the view.
+You can access the <code>Authentication</code> object in your MVC controller (by calling <code>SecurityContextHolder.getContext().getAuthentication()</code>) and add the data directly to your model for rendering by the view.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_the_accesscontrollist_tag"><a class="anchor" href="#_the_accesscontrollist_tag"></a>The accesscontrollist Tag</h3>
+<div class="paragraph">
+<p>This tag is only valid when used with Spring Security&#8217;s ACL module.
+It checks a comma-separated list of required permissions for a specified domain object.
+If the current user has all of those permissions, then the tag body will be evaluated.
+If they don&#8217;t, it will be skipped.
+An example might be</p>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+In general this tag should be considered deprecated.
+Instead use the <a href="#taglibs-authorize">The authorize Tag</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:accesscontrollist hasPermission="1,2" domainObject="${someObject}"&gt;
+
+This will be shown if the user has all of the permissions represented by the values "1" or "2" on the given object.
+
+&lt;/sec:accesscontrollist&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The permissions are passed to the <code>PermissionFactory</code> defined in the application context, converting them to ACL <code>Permission</code> instances, so they may be any format which is supported by the factory - they don&#8217;t have to be integers, they could be strings like <code>READ</code> or <code>WRITE</code>.
+If no <code>PermissionFactory</code> is found, an instance of <code>DefaultPermissionFactory</code> will be used.
+The <code>AclService</code> from the application context will be used to load the <code>Acl</code> instance for the supplied object.
+The <code>Acl</code> will be invoked with the required permissions to check if all of them are granted.</p>
+</div>
+<div class="paragraph">
+<p>This tag also supports the <code>var</code> attribute, in the same way as the <code>authorize</code> tag.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="taglibs-csrfinput"><a class="anchor" href="#taglibs-csrfinput"></a>The csrfInput Tag</h3>
+<div class="paragraph">
+<p>If CSRF protection is enabled, this tag inserts a hidden form field with the correct name and value for the CSRF protection token.
+If CSRF protection is not enabled, this tag outputs nothing.</p>
+</div>
+<div class="paragraph">
+<p>Normally Spring Security automatically inserts a CSRF form field for any <code>&lt;form:form&gt;</code> tags you use, but if for some reason you cannot use <code>&lt;form:form&gt;</code>, <code>csrfInput</code> is a handy replacement.</p>
+</div>
+<div class="paragraph">
+<p>You should place this tag within an HTML <code>&lt;form&gt;&lt;/form&gt;</code> block, where you would normally place other input fields.
+Do NOT place this tag within a Spring <code>&lt;form:form&gt;&lt;/form:form&gt;</code> block.
+Spring Security handles Spring forms automatically.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">	&lt;form method="post" action="/do/something"&gt;
+		&lt;sec:csrfInput /&gt;
+		Name:&lt;br /&gt;
+		&lt;input type="text" name="name" /&gt;
+		...
+	&lt;/form&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="taglibs-csrfmeta"><a class="anchor" href="#taglibs-csrfmeta"></a>The csrfMetaTags Tag</h3>
+<div class="paragraph">
+<p>If CSRF protection is enabled, this tag inserts meta tags containing the CSRF protection token form field and header names and CSRF protection token value.
+These meta tags are useful for employing CSRF protection within JavaScript in your applications.</p>
+</div>
+<div class="paragraph">
+<p>You should place <code>csrfMetaTags</code> within an HTML <code>&lt;head&gt;&lt;/head&gt;</code> block, where you would normally place other meta tags.
+Once you use this tag, you can access the form field name, header name, and token value easily using JavaScript.
+JQuery is used in this example to make the task easier.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+	&lt;head&gt;
+		&lt;title&gt;CSRF Protected JavaScript Page&lt;/title&gt;
+		&lt;meta name="description" content="This is the description for this page" /&gt;
+		&lt;sec:csrfMetaTags /&gt;
+		&lt;script type="text/javascript" language="javascript"&gt;
+
+			var csrfParameter = $("meta[name='_csrf_parameter']").attr("content");
+			var csrfHeader = $("meta[name='_csrf_header']").attr("content");
+			var csrfToken = $("meta[name='_csrf']").attr("content");
+
+			// using XMLHttpRequest directly to send an x-www-form-urlencoded request
+			var ajax = new XMLHttpRequest();
+			ajax.open("POST", "https://www.example.org/do/something", true);
+			ajax.setRequestHeader("Content-Type", "application/x-www-form-urlencoded data");
+			ajax.send(csrfParameter + "=" + csrfToken + "&amp;name=John&amp;...");
+
+			// using XMLHttpRequest directly to send a non-x-www-form-urlencoded request
+			var ajax = new XMLHttpRequest();
+			ajax.open("POST", "https://www.example.org/do/something", true);
+			ajax.setRequestHeader(csrfHeader, csrfToken);
+			ajax.send("...");
+
+			// using JQuery to send an x-www-form-urlencoded request
+			var data = {};
+			data[csrfParameter] = csrfToken;
+			data["name"] = "John";
+			...
+			$.ajax({
+				url: "https://www.example.org/do/something",
+				type: "POST",
+				data: data,
+				...
+			});
+
+			// using JQuery to send a non-x-www-form-urlencoded request
+			var headers = {};
+			headers[csrfHeader] = csrfToken;
+			$.ajax({
+				url: "https://www.example.org/do/something",
+				type: "POST",
+				headers: headers,
+				...
+			});
+
+		&lt;script&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		...
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If CSRF protection is not enabled, <code>csrfMetaTags</code> outputs nothing.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. The legacy options from Spring Security 2.0 are also supported, but discouraged.
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

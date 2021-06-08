@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Introduction to WebSocket :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3.8">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../core.html">Core</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3.8</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/5.6.0/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/5.6.0/overview/prerequisites.html">5.6.0</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Framework</a></li>
+    <li><a href="websocket-intro.html">Introduction to WebSocket</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/web/websocket-intro.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Introduction to WebSocket</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The WebSocket protocol, <a href="https://tools.ietf.org/html/rfc6455">RFC 6455</a>, provides a standardized
+way to establish a full-duplex, two-way communication channel between client and server
+over a single TCP connection. It is a different TCP protocol from HTTP but is designed to
+work over HTTP, using ports 80 and 443 and allowing re-use of existing firewall rules.</p>
+</div>
+<div class="paragraph">
+<p>A WebSocket interaction begins with an HTTP request that uses the HTTP <code>Upgrade</code> header
+to upgrade or, in this case, to switch to the WebSocket protocol. The following example
+shows such an interaction:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">GET /spring-websocket-portfolio/portfolio HTTP/1.1
+Host: localhost:8080
+Upgrade: websocket <i class="conum" data-value="1"></i><b>(1)</b>
+Connection: Upgrade <i class="conum" data-value="2"></i><b>(2)</b>
+Sec-WebSocket-Key: Uc9l9TMkWGbHFD2qnFHltg==
+Sec-WebSocket-Protocol: v10.stomp, v11.stomp
+Sec-WebSocket-Version: 13
+Origin: http://localhost:8080</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>Upgrade</code> header.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Using the <code>Upgrade</code> connection.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Instead of the usual 200 status code, a server with WebSocket support returns output
+similar to the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">HTTP/1.1 101 Switching Protocols <i class="conum" data-value="1"></i><b>(1)</b>
+Upgrade: websocket
+Connection: Upgrade
+Sec-WebSocket-Accept: 1qVdfYHU9hPOl4JYYNXF623Gzn0=
+Sec-WebSocket-Protocol: v10.stomp</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Protocol switch</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>After a successful handshake, the TCP socket underlying the HTTP upgrade request remains
+open for both the client and the server to continue to send and receive messages.</p>
+</div>
+<div class="paragraph">
+<p>A complete introduction of how WebSockets work is beyond the scope of this document.
+See RFC 6455, the WebSocket chapter of HTML5, or any of the many introductions and
+tutorials on the Web.</p>
+</div>
+<div class="paragraph">
+<p>Note that, if a WebSocket server is running behind a web server (e.g. nginx), you
+likely need to configure it to pass WebSocket upgrade requests on to the WebSocket
+server. Likewise, if the application runs in a cloud environment, check the
+instructions of the cloud provider related to WebSocket support.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="websocket-intro-architecture"><a class="anchor" href="#websocket-intro-architecture"></a>HTTP Versus WebSocket</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Even though WebSocket is designed to be HTTP-compatible and starts with an HTTP request,
+it is important to understand that the two protocols lead to very different
+architectures and application programming models.</p>
+</div>
+<div class="paragraph">
+<p>In HTTP and REST, an application is modeled as many URLs. To interact with the application,
+clients access those URLs, request-response style. Servers route requests to the
+appropriate handler based on the HTTP URL, method, and headers.</p>
+</div>
+<div class="paragraph">
+<p>By contrast, in WebSockets, there is usually only one URL for the initial connect.
+Subsequently, all application messages flow on that same TCP connection. This points to
+an entirely different asynchronous, event-driven, messaging architecture.</p>
+</div>
+<div class="paragraph">
+<p>WebSocket is also a low-level transport protocol, which, unlike HTTP, does not prescribe
+any semantics to the content of messages. That means that there is no way to route or process
+a message unless the client and the server agree on message semantics.</p>
+</div>
+<div class="paragraph">
+<p>WebSocket clients and servers can negotiate the use of a higher-level, messaging protocol
+(for example, STOMP), through the <code>Sec-WebSocket-Protocol</code> header on the HTTP handshake request.
+In the absence of that, they need to come up with their own conventions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="websocket-intro-when-to-use"><a class="anchor" href="#websocket-intro-when-to-use"></a>When to Use WebSockets</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>WebSockets can make a web page be dynamic and interactive. However, in many cases,
+a combination of Ajax and HTTP streaming or long polling can provide a simple and
+effective solution.</p>
+</div>
+<div class="paragraph">
+<p>For example, news, mail, and social feeds need to update dynamically, but it may be
+perfectly okay to do so every few minutes. Collaboration, games, and financial apps, on
+the other hand, need to be much closer to real-time.</p>
+</div>
+<div class="paragraph">
+<p>Latency alone is not a deciding factor. If the volume of messages is relatively low (for example,
+monitoring network failures) HTTP streaming or polling can provide an effective solution.
+It is the combination of low latency, high frequency, and high volume that make the best
+case for the use of WebSocket.</p>
+</div>
+<div class="paragraph">
+<p>Keep in mind also that over the Internet, restrictive proxies that are outside of your control
+may preclude WebSocket interactions, either because they are not configured to pass on the
+<code>Upgrade</code> header or because they close long-lived connections that appear idle. This
+means that the use of WebSocket for internal applications within the firewall is a more
+straightforward decision than it is for public facing applications.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
