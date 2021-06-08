@@ -7,9 +7,9 @@ content:
       branches: antora-2.x
       start_path: src/docs/antora
     - url: https://github.com/rwinch/spring-security
-      branches: antora-2.x
+      branches: .*antora-2.x
       start_path: docs
 ui:
   bundle:
-    url: https://github.com/rwinch/antora-ui-spring/releases/download/latest/ui-bundle.zip
+    url: ../../rwinch/antora-ui-spring/build/ui-bundle.zip
     snapshot: true
