@@ -3,11 +3,11 @@ site:
   start_page: framework::overview.adoc
 content:
   sources:
-    - url: ~/code/spring-projects/spring-framework
-      branches: HEAD
+    - url: https://github.com/rwinch/spring-framework
+      branches: antora-2.x
       start_path: src/docs/antora
-    - url: ~/code/spring-projects/spring-security
-      branches: HEAD
+    - url: https://github.com/rwinch/spring-security
+      branches: antora-2.x
       start_path: docs
 ui:
   bundle:
