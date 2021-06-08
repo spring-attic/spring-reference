@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SecurityContextHolder :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../../framework/5.3.8/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../../framework/5.3.8/index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../../overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../../framework/5.3.8/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../overview/prerequisites.html">Spring Security</a></li>
+    <li><a href="security-context-holder.html">SecurityContextHolder</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/authentication/architecture/security-context-holder.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">SecurityContextHolder</h1>
+<div class="paragraph">
+<p>At the heart of Spring Security&#8217;s authentication model is the <code>SecurityContextHolder</code>.
+It contains the <a href="#servlet-authentication-securitycontext">[servlet-authentication-securitycontext]</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/architecture/securitycontextholder.png" alt="securitycontextholder">
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>SecurityContextHolder</code> is where Spring Security stores the details of who is <a href="#authentication">authenticated</a>.
+Spring Security does not care how the <code>SecurityContextHolder</code> is populated.
+If it contains a value, then it is used as the currently authenticated user.</p>
+</div>
+<div class="paragraph">
+<p>The simplest way to indicate a user is authenticated is to set the <code>SecurityContextHolder</code> directly.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Setting <code>SecurityContextHolder</code></div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SecurityContext context = SecurityContextHolder.createEmptyContext(); <i class="conum" data-value="1"></i><b>(1)</b>
+Authentication authentication =
+    new TestingAuthenticationToken("username", "password", "ROLE_USER"); <i class="conum" data-value="2"></i><b>(2)</b>
+context.setAuthentication(authentication);
+
+SecurityContextHolder.setContext(context); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val context: SecurityContext = SecurityContextHolder.createEmptyContext() <i class="conum" data-value="1"></i><b>(1)</b>
+val authentication: Authentication = TestingAuthenticationToken("username", "password", "ROLE_USER") <i class="conum" data-value="2"></i><b>(2)</b>
+context.authentication = authentication
+
+SecurityContextHolder.setContext(context) <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We start by creating an empty <code>SecurityContext</code>.
+It is important to create a new <code>SecurityContext</code> instance instead of using <code>SecurityContextHolder.getContext().setAuthentication(authentication)</code> to avoid race conditions across multiple threads.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Next we create a new <a href="#servlet-authentication-authentication"><code>Authentication</code></a> object.
+Spring Security does not care what type of <code>Authentication</code> implementation is set on the <code>SecurityContext</code>.
+Here we use <code>TestingAuthenticationToken</code> because it is very simple.
+A more common production scenario is <code>UsernamePasswordAuthenticationToken(userDetails, password, authorities)</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Finally, we set the <code>SecurityContext</code> on the <code>SecurityContextHolder</code>.
+Spring Security will use this information for <a href="#servlet-authorization">authorization</a>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you wish to obtain information about the authenticated principal, you can do so by accessing the <code>SecurityContextHolder</code>.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Access Currently Authenticated User</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SecurityContext context = SecurityContextHolder.getContext();
+Authentication authentication = context.getAuthentication();
+String username = authentication.getName();
+Object principal = authentication.getPrincipal();
+Collection&lt;? extends GrantedAuthority&gt; authorities = authentication.getAuthorities();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val context = SecurityContextHolder.getContext()
+val authentication = context.authentication
+val username = authentication.name
+val principal = authentication.principal
+val authorities = authentication.authorities</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>By default the <code>SecurityContextHolder</code> uses a <code>ThreadLocal</code> to store these details, which means that the <code>SecurityContext</code> is always available to methods in the same thread, even if the <code>SecurityContext</code> is not explicitly passed around as an argument to those methods.
+Using a <code>ThreadLocal</code> in this way is quite safe if care is taken to clear the thread after the present principal&#8217;s request is processed.
+Spring Security&#8217;s <a href="#servlet-filterchainproxy">FilterChainProxy</a> ensures that the <code>SecurityContext</code> is always cleared.</p>
+</div>
+<div class="paragraph">
+<p>Some applications aren&#8217;t entirely suitable for using a <code>ThreadLocal</code>, because of the specific way they work with threads.
+For example, a Swing client might want all threads in a Java Virtual Machine to use the same security context.
+<code>SecurityContextHolder</code> can be configured with a strategy on startup to specify how you would like the context to be stored.
+For a standalone application you would use the <code>SecurityContextHolder.MODE_GLOBAL</code> strategy.
+Other applications might want to have threads spawned by the secure thread also assume the same security identity.
+This is achieved by using <code>SecurityContextHolder.MODE_INHERITABLETHREADLOCAL</code>.
+You can change the mode from the default <code>SecurityContextHolder.MODE_THREADLOCAL</code> in two ways.
+The first is to set a system property, the second is to call a static method on <code>SecurityContextHolder</code>.
+Most applications won&#8217;t need to change from the default, but if you do, take a look at the JavaDoc for <code>SecurityContextHolder</code> to learn more.</p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../../_/js/site.js"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

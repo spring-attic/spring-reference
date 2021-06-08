@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>DelegatingFilterProxy :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3.8/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3.8/index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3.8/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../overview/prerequisites.html">Spring Security</a></li>
+    <li><a href="delegating-filter-proxy.html">DelegatingFilterProxy</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/architecture/delegating-filter-proxy.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">DelegatingFilterProxy</h1>
+<div class="paragraph">
+<p>Spring provides a <code>Filter</code> implementation named {security-api-url}org/springframework/web/filter/DelegatingFilterProxy.html/[<code>DelegatingFilterProxy</code>] that allows bridging between the Servlet container&#8217;s lifecycle and Spring&#8217;s <code>ApplicationContext</code>.
+The Servlet container allows registering <code>Filter</code>s using its own standards, but it is not aware of Spring defined Beans.
+<code>DelegatingFilterProxy</code> can be registered via standard Servlet container mechanisms, but delegate all the work to a Spring Bean that implements <code>Filter</code>.</p>
+</div>
+<div class="paragraph">
+<p>Here is a picture of how <code>DelegatingFilterProxy</code> fits into the <a href="#servlet-filters-review"><code>Filter</code>s and the <code>FilterChain</code></a>.</p>
+</div>
+<div class="paragraph">
+<p><code>DelegatingFilterProxy</code> looks up <em>Bean Filter<sub>0</sub></em> from the <code>ApplicationContext</code> and then invokes <em>Bean Filter<sub>0</sub></em>.
+The pseudo code of <code>DelegatingFilterProxy</code> can be seen below.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. <code>DelegatingFilterProxy</code> Pseudo Code</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) {
+	// Lazily get Filter that was registered as a Spring Bean
+	// For the example in <a href="#servlet-delegatingfilterproxy-figure">[servlet-delegatingfilterproxy-figure]</a> <code>delegate</code> is an instance of <em>Bean Filter<sub>0</sub></em>
+	Filter delegate = getFilterBean(someBeanName);
+	// delegate work to the Spring Bean
+	delegate.doFilter(request, response);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun doFilter(request: ServletRequest, response: ServletResponse, chain: FilterChain) {
+	// Lazily get Filter that was registered as a Spring Bean
+	// For the example in <a href="#servlet-delegatingfilterproxy-figure">[servlet-delegatingfilterproxy-figure]</a> <code>delegate</code> is an instance of <em>Bean Filter<sub>0</sub></em>
+	val delegate: Filter = getFilterBean(someBeanName)
+	// delegate work to the Spring Bean
+	delegate.doFilter(request, response)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Another benefit of <code>DelegatingFilterProxy</code> is that it allows delaying looking <code>Filter</code> bean instances.
+This is important because the container needs to register the <code>Filter</code> instances before the container can startup.
+However, Spring typically uses a <code>ContextLoaderListener</code> to load the Spring Beans which will not be done until after the <code>Filter</code> instances need to be registered.</p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

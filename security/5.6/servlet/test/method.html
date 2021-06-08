@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3.8/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3.8/index.html">5.3.8</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3.8/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/test/method.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="test-method"><a class="anchor" href="#test-method"></a>Testing Method Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section demonstrates how to use Spring Security&#8217;s Test support to test method based security.
+We first introduce a <code>MessageService</code> that requires the user to be authenticated in order to access it.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class HelloMessageService implements MessageService {
+
+	@PreAuthorize("authenticated")
+	public String getMessage() {
+		Authentication authentication = SecurityContextHolder.getContext()
+			.getAuthentication();
+		return "Hello " + authentication;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The result of <code>getMessage</code> is a String saying "Hello" to the current Spring Security <code>Authentication</code>.
+An example of the output is displayed below.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Hello org.springframework.security.authentication.UsernamePasswordAuthenticationToken@ca25360: Principal: org.springframework.security.core.userdetails.User@36ebcb: Username: user; Password: [PROTECTED]; Enabled: true; AccountNonExpired: true; credentialsNonExpired: true; AccountNonLocked: true; Granted Authorities: ROLE_USER; Credentials: [PROTECTED]; Authenticated: true; Details: null; Granted Authorities: ROLE_USER</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="test-method-setup"><a class="anchor" href="#test-method-setup"></a>Security Test Setup</h3>
+<div class="paragraph">
+<p>Before we can use Spring Security Test support, we must perform some setup. An example can be seen below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RunWith(SpringJUnit4ClassRunner.class) <i class="conum" data-value="1"></i><b>(1)</b>
+@ContextConfiguration <i class="conum" data-value="2"></i><b>(2)</b>
+public class WithMockUserTests {</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is a basic example of how to setup Spring Security Test. The highlights are:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>@RunWith</code> instructs the spring-test module that it should create an <code>ApplicationContext</code>. This is no different than using the existing Spring Test support. For additional information, refer to the <a href="https://docs.spring.io/spring-framework/docs/4.0.x/spring-framework-reference/htmlsingle/#integration-testing-annotations-standard">Spring Reference</a></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>@ContextConfiguration</code> instructs the spring-test the configuration to use to create the <code>ApplicationContext</code>. Since no configuration is specified, the default configuration locations will be tried. This is no different than using the existing Spring Test support. For additional information, refer to the <a href="https://docs.spring.io/spring-framework/docs/4.0.x/spring-framework-reference/htmlsingle/#testcontext-ctx-management">Spring Reference</a></td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Spring Security hooks into Spring Test support using the <code>WithSecurityContextTestExecutionListener</code> which will ensure our tests are ran with the correct user.
+It does this by populating the <code>SecurityContextHolder</code> prior to running our tests.
+If you are using reactive method security, you will also need <code>ReactorContextTestExecutionListener</code> which populates <code>ReactiveSecurityContextHolder</code>.
+After the test is done, it will clear out the <code>SecurityContextHolder</code>.
+If you only need Spring Security related support, you can replace <code>@ContextConfiguration</code> with <code>@SecurityTestExecutionListeners</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Remember we added the <code>@PreAuthorize</code> annotation to our <code>HelloMessageService</code> and so it requires an authenticated user to invoke it.
+If we ran the following test, we would expect the following test will pass:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test(expected = AuthenticationCredentialsNotFoundException.class)
+public void getMessageUnauthenticated() {
+	messageService.getMessage();
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="test-method-withmockuser"><a class="anchor" href="#test-method-withmockuser"></a>@WithMockUser</h3>
+<div class="paragraph">
+<p>The question is "How could we most easily run the test as a specific user?"
+The answer is to use <code>@WithMockUser</code>.
+The following test will be run as a user with the username "user", the password "password", and the roles "ROLE_USER".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+@WithMockUser
+public void getMessageWithMockUser() {
+String message = messageService.getMessage();
+...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Specifically the following is true:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The user with the username "user" does not have to exist since we are mocking the user</p>
+</li>
+<li>
+<p>The <code>Authentication</code> that is populated in the <code>SecurityContext</code> is of type <code>UsernamePasswordAuthenticationToken</code></p>
+</li>
+<li>
+<p>The principal on the <code>Authentication</code> is Spring Security&#8217;s <code>User</code> object</p>
+</li>
+<li>
+<p>The <code>User</code> will have the username of "user", the password "password", and a single <code>GrantedAuthority</code> named "ROLE_USER" is used.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Our example is nice because we are able to leverage a lot of defaults.
+What if we wanted to run the test with a different username?
+The following test would run with the username "customUser". Again, the user does not need to actually exist.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+@WithMockUser("customUsername")
+public void getMessageWithMockUserCustomUsername() {
+	String message = messageService.getMessage();
+...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can also easily customize the roles.
+For example, this test will be invoked with the username "admin" and the roles "ROLE_USER" and "ROLE_ADMIN".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+@WithMockUser(username="admin",roles={"USER","ADMIN"})
+public void getMessageWithMockUserCustomUser() {
+	String message = messageService.getMessage();
+	...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we do not want the value to automatically be prefixed with ROLE_ we can leverage the authorities attribute.
+For example, this test will be invoked with the username "admin" and the authorities "USER" and "ADMIN".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+@WithMockUser(username = "admin", authorities = { "ADMIN", "USER" })
+public void getMessageWithMockUserCustomAuthorities() {
+	String message = messageService.getMessage();
+	...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Of course it can be a bit tedious placing the annotation on every test method.
+Instead, we can place the annotation at the class level and every test will use the specified user.
+For example, the following would run every test with a user with the username "admin", the password "password", and the roles "ROLE_USER" and "ROLE_ADMIN".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration
+@WithMockUser(username="admin",roles={"USER","ADMIN"})
+public class WithMockUserTests {</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are using JUnit 5&#8217;s <code>@Nested</code> test support, you can also place the annotation on the enclosing class to apply to all nested classes.
+For example, the following would run every test with a user with the username "admin", the password "password", and the roles "ROLE_USER" and "ROLE_ADMIN" for both test methods.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@ExtendWith(SpringExtension.class)
+@ContextConfiguration
+@WithMockUser(username="admin",roles={"USER","ADMIN"})
+public class WithMockUserTests {
+
+	@Nested
+	public class TestSuite1 {
+		// ... all test methods use admin user
+	}
+
+	@Nested
+	public class TestSuite2 {
+		// ... all test methods use admin user
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default the <code>SecurityContext</code> is set during the <code>TestExecutionListener.beforeTestMethod</code> event.
+This is the equivalent of happening before JUnit&#8217;s <code>@Before</code>.
+You can change this to happen during the <code>TestExecutionListener.beforeTestExecution</code> event which is after JUnit&#8217;s <code>@Before</code> but before the test method is invoked.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WithMockUser(setupBefore = TestExecutionEvent.TEST_EXECUTION)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="test-method-withanonymoususer"><a class="anchor" href="#test-method-withanonymoususer"></a>@WithAnonymousUser</h3>
+<div class="paragraph">
+<p>Using <code>@WithAnonymousUser</code> allows running as an anonymous user.
+This is especially convenient when you wish to run most of your tests with a specific user, but want to run a few tests as an anonymous user.
+For example, the following will run withMockUser1 and withMockUser2 using <a href="#test-method-withmockuser">@WithMockUser</a> and anonymous as an anonymous user.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RunWith(SpringJUnit4ClassRunner.class)
+@WithMockUser
+public class WithUserClassLevelAuthenticationTests {
+
+	@Test
+	public void withMockUser1() {
+	}
+
+	@Test
+	public void withMockUser2() {
+	}
+
+	@Test
+	@WithAnonymousUser
+	public void anonymous() throws Exception {
+		// override default to run as anonymous user
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default the <code>SecurityContext</code> is set during the <code>TestExecutionListener.beforeTestMethod</code> event.
+This is the equivalent of happening before JUnit&#8217;s <code>@Before</code>.
+You can change this to happen during the <code>TestExecutionListener.beforeTestExecution</code> event which is after JUnit&#8217;s <code>@Before</code> but before the test method is invoked.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WithAnonymousUser(setupBefore = TestExecutionEvent.TEST_EXECUTION)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="test-method-withuserdetails"><a class="anchor" href="#test-method-withuserdetails"></a>@WithUserDetails</h3>
+<div class="paragraph">
+<p>While <code>@WithMockUser</code> is a very convenient way to get started, it may not work in all instances.
+For example, it is common for applications to expect that the <code>Authentication</code> principal be of a specific type.
+This is done so that the application can refer to the principal as the custom type and reduce coupling on Spring Security.</p>
+</div>
+<div class="paragraph">
+<p>The custom principal is often times returned by a custom <code>UserDetailsService</code> that returns an object that implements both <code>UserDetails</code> and the custom type.
+For situations like this, it is useful to create the test user using the custom <code>UserDetailsService</code>.
+That is exactly what <code>@WithUserDetails</code> does.</p>
+</div>
+<div class="paragraph">
+<p>Assuming we have a <code>UserDetailsService</code> exposed as a bean, the following test will be invoked with an <code>Authentication</code> of type <code>UsernamePasswordAuthenticationToken</code> and a principal that is returned from the <code>UserDetailsService</code> with the username of "user".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+@WithUserDetails
+public void getMessageWithUserDetails() {
+	String message = messageService.getMessage();
+	...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can also customize the username used to lookup the user from our <code>UserDetailsService</code>.
+For example, this test would be run with a principal that is returned from the <code>UserDetailsService</code> with the username of "customUsername".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+@WithUserDetails("customUsername")
+public void getMessageWithUserDetailsCustomUsername() {
+	String message = messageService.getMessage();
+	...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can also provide an explicit bean name to look up the <code>UserDetailsService</code>.
+For example, this test would look up the username of "customUsername" using the <code>UserDetailsService</code> with the bean name "myUserDetailsService".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+@WithUserDetails(value="customUsername", userDetailsServiceBeanName="myUserDetailsService")
+public void getMessageWithUserDetailsServiceBeanName() {
+	String message = messageService.getMessage();
+	...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Like <code>@WithMockUser</code> we can also place our annotation at the class level so that every test uses the same user.
+However unlike <code>@WithMockUser</code>, <code>@WithUserDetails</code> requires the user to exist.</p>
+</div>
+<div class="paragraph">
+<p>By default the <code>SecurityContext</code> is set during the <code>TestExecutionListener.beforeTestMethod</code> event.
+This is the equivalent of happening before JUnit&#8217;s <code>@Before</code>.
+You can change this to happen during the <code>TestExecutionListener.beforeTestExecution</code> event which is after JUnit&#8217;s <code>@Before</code> but before the test method is invoked.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WithUserDetails(setupBefore = TestExecutionEvent.TEST_EXECUTION)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="test-method-withsecuritycontext"><a class="anchor" href="#test-method-withsecuritycontext"></a>@WithSecurityContext</h3>
+<div class="paragraph">
+<p>We have seen that <code>@WithMockUser</code> is an excellent choice if we are not using a custom <code>Authentication</code> principal.
+Next we discovered that <code>@WithUserDetails</code> would allow us to use a custom <code>UserDetailsService</code> to create our <code>Authentication</code> principal but required the user to exist.
+We will now see an option that allows the most flexibility.</p>
+</div>
+<div class="paragraph">
+<p>We can create our own annotation that uses the <code>@WithSecurityContext</code> to create any <code>SecurityContext</code> we want.
+For example, we might create an annotation named <code>@WithMockCustomUser</code> as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Retention(RetentionPolicy.RUNTIME)
+@WithSecurityContext(factory = WithMockCustomUserSecurityContextFactory.class)
+public @interface WithMockCustomUser {
+
+	String username() default "rob";
+
+	String name() default "Rob Winch";
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can see that <code>@WithMockCustomUser</code> is annotated with the <code>@WithSecurityContext</code> annotation.
+This is what signals to Spring Security Test support that we intend to create a <code>SecurityContext</code> for the test.
+The <code>@WithSecurityContext</code> annotation requires we specify a <code>SecurityContextFactory</code> that will create a new <code>SecurityContext</code> given our <code>@WithMockCustomUser</code> annotation.
+You can find our <code>WithMockCustomUserSecurityContextFactory</code> implementation below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class WithMockCustomUserSecurityContextFactory
+	implements WithSecurityContextFactory&lt;WithMockCustomUser&gt; {
+	@Override
+	public SecurityContext createSecurityContext(WithMockCustomUser customUser) {
+		SecurityContext context = SecurityContextHolder.createEmptyContext();
+
+		CustomUserDetails principal =
+			new CustomUserDetails(customUser.name(), customUser.username());
+		Authentication auth =
+			new UsernamePasswordAuthenticationToken(principal, "password", principal.getAuthorities());
+		context.setAuthentication(auth);
+		return context;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can now annotate a test class or a test method with our new annotation and Spring Security&#8217;s <code>WithSecurityContextTestExecutionListener</code> will ensure that our <code>SecurityContext</code> is populated appropriately.</p>
+</div>
+<div class="paragraph">
+<p>When creating your own <code>WithSecurityContextFactory</code> implementations, it is nice to know that they can be annotated with standard Spring annotations.
+For example, the <code>WithUserDetailsSecurityContextFactory</code> uses the <code>@Autowired</code> annotation to acquire the <code>UserDetailsService</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final class WithUserDetailsSecurityContextFactory
+	implements WithSecurityContextFactory&lt;WithUserDetails&gt; {
+
+	private UserDetailsService userDetailsService;
+
+	@Autowired
+	public WithUserDetailsSecurityContextFactory(UserDetailsService userDetailsService) {
+		this.userDetailsService = userDetailsService;
+	}
+
+	public SecurityContext createSecurityContext(WithUserDetails withUser) {
+		String username = withUser.value();
+		Assert.hasLength(username, "value() must be non-empty String");
+		UserDetails principal = userDetailsService.loadUserByUsername(username);
+		Authentication authentication = new UsernamePasswordAuthenticationToken(principal, principal.getPassword(), principal.getAuthorities());
+		SecurityContext context = SecurityContextHolder.createEmptyContext();
+		context.setAuthentication(authentication);
+		return context;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default the <code>SecurityContext</code> is set during the <code>TestExecutionListener.beforeTestMethod</code> event.
+This is the equivalent of happening before JUnit&#8217;s <code>@Before</code>.
+You can change this to happen during the <code>TestExecutionListener.beforeTestExecution</code> event which is after JUnit&#8217;s <code>@Before</code> but before the test method is invoked.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WithSecurityContext(setupBefore = TestExecutionEvent.TEST_EXECUTION)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="test-method-meta-annotations"><a class="anchor" href="#test-method-meta-annotations"></a>Test Meta Annotations</h3>
+<div class="paragraph">
+<p>If you reuse the same user within your tests often, it is not ideal to have to repeatedly specify the attributes.
+For example, if there are many tests related to an administrative user with the username "admin" and the roles <code>ROLE_USER</code> and <code>ROLE_ADMIN</code> you would have to write:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WithMockUser(username="admin",roles={"USER","ADMIN"})</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Rather than repeating this everywhere, we can use a meta annotation.
+For example, we could create a meta annotation named <code>WithMockAdmin</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Retention(RetentionPolicy.RUNTIME)
+@WithMockUser(value="rob",roles="ADMIN")
+public @interface WithMockAdmin { }</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now we can use <code>@WithMockAdmin</code> in the same way as the more verbose <code>@WithMockUser</code>.</p>
+</div>
+<div class="paragraph">
+<p>Meta annotations work with any of the testing annotations described above.
+For example, this means we could create a meta annotation for <code>@WithUserDetails("admin")</code> as well.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
