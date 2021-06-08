@@ -1,0 +1,1906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Username/Password Authentication :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../../6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../6/overview/prerequisites.html">6</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../../overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../../framework/5.3/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../../overview/prerequisites.html">Spring Security</a></li>
+    <li><a href="index.html">Username/Password Authentication</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.6</button>
+  <div class="version-menu">
+    <a class="version" href="../../../../6/servlet/authentication/unpwd/index.html">6</a>
+    <a class="version is-current" href="index.html">5.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/authentication/unpwd/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Username/Password Authentication</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of the most common ways to authenticate a user is by validating a username and password.
+As such, Spring Security provides comprehensive support for authenticating with a username and password.</p>
+</div>
+<div id="servlet-authentication-unpwd-input" class="paragraph">
+<p><strong>Reading the Username &amp; Password</strong></p>
+</div>
+<div class="paragraph">
+<p>Spring Security provides the following built in mechanisms for reading a username and password from the <code>HttpServletRequest</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#servlet-authentication-form">Form Login</a></p>
+</li>
+<li>
+<p><a href="#servlet-authentication-basic">Basic Authentication</a></p>
+</li>
+<li>
+<p><a href="#servlet-authentication-digest">Digest Authentication</a></p>
+</li>
+</ul>
+</div>
+<div id="servlet-authentication-unpwd-storage" class="paragraph">
+<p><strong>Storage Mechanisms</strong></p>
+</div>
+<div class="paragraph">
+<p>Each of the supported mechanisms for reading a username and password can leverage any of the supported storage mechanisms:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Simple Storage with <a href="#servlet-authentication-inmemory">In-Memory Authentication</a></p>
+</li>
+<li>
+<p>Relational Databases with <a href="#servlet-authentication-jdbc">JDBC Authentication</a></p>
+</li>
+<li>
+<p>Custom data stores with <a href="#servlet-authentication-userdetailsservice">UserDetailsService</a></p>
+</li>
+<li>
+<p>LDAP storage with <a href="#servlet-authentication-ldap">LDAP Authentication</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-form"><a class="anchor" href="#servlet-authentication-form"></a>Form Login</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security provides support for username and password being provided through an html form.
+This section provides details on how form based authentication works within Spring Security.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s take a look at how form based log in works within Spring Security.
+First, we see how the user is redirected to the log in form.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/unpwd/loginurlauthenticationentrypoint.png" alt="loginurlauthenticationentrypoint">
+</div>
+<div class="title">Figure 1. Redirecting to the Log In Page</div>
+</div>
+<div class="paragraph">
+<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em> and sends a redirect to the log in page with the configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a>.
+In most cases the <code>AuthenticationEntryPoint</code> is an instance of {security-api-url}org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html[<code>LoginUrlAuthenticationEntryPoint</code>].</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> The browser will then request the log in page that it was redirected to.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_5.png" alt="number 5"></span> Something within the application, must <a href="#servlet-authentication-form-custom">render the log in page</a>.</p>
+</div>
+<div id="servlet-authentication-usernamepasswordauthenticationfilter" class="paragraph">
+<p>When the username and password are submitted, the <code>UsernamePasswordAuthenticationFilter</code> authenticates the username and password.
+The <code>UsernamePasswordAuthenticationFilter</code> extends <a href="#servlet-authentication-abstractprocessingfilter">[servlet-authentication-abstractprocessingfilter]</a>, so this diagram should look pretty similar.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/unpwd/usernamepasswordauthenticationfilter.png" alt="usernamepasswordauthenticationfilter">
+</div>
+<div class="title">Figure 2. Authenticating Username and Password</div>
+</div>
+<div class="paragraph">
+<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>UsernamePasswordAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
+The details of what <code>AuthenticationManager</code> look like depend on how the <a href="#servlet-authentication-unpwd-storage">user information is stored</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a> is cleared out.</p>
+</li>
+<li>
+<p><code>RememberMeServices.loginFail</code> is invoked.
+If remember me is not configured, this is a no-op.</p>
+</li>
+<li>
+<p><code>AuthenticationFailureHandler</code> is invoked.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>SessionAuthenticationStrategy</code> is notified of a new log in.</p>
+</li>
+<li>
+<p>The <a href="#servlet-authentication-authentication">[servlet-authentication-authentication]</a> is set on the <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a>.</p>
+</li>
+<li>
+<p><code>RememberMeServices.loginSuccess</code> is invoked.
+If remember me is not configured, this is a no-op.</p>
+</li>
+<li>
+<p><code>ApplicationEventPublisher</code> publishes an <code>InteractiveAuthenticationSuccessEvent</code>.</p>
+</li>
+<li>
+<p>The <code>AuthenticationSuccessHandler</code> is invoked. Typically this is a <code>SimpleUrlAuthenticationSuccessHandler</code> which will redirect to a request saved by <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> when we redirect to the log in page.</p>
+</li>
+</ul>
+</div>
+<div id="servlet-authentication-form-min" class="paragraph">
+<p>Spring Security form log in is enabled by default.
+However, as soon as any servlet based configuration is provided, form based log in must be explicitly provided.
+A minimal, explicit Java configuration can be found below:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Form Log In</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) {
+	http
+		// ...
+		.formLogin(withDefaults());
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+	&lt;!-- ... --&gt;
+	&lt;form-login /&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
+	http {
+		// ...
+		formLogin { }
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In this configuration Spring Security will render a default log in page.
+Most production applications will require a custom log in form.</p>
+</div>
+<div id="servlet-authentication-form-custom" class="paragraph">
+<p>The configuration below demonstrates how to provide a custom log in form.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Custom Log In Form Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) throws Exception {
+	http
+		// ...
+		.formLogin(form -&gt; form
+			.loginPage("/login")
+			.permitAll()
+		);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+	&lt;!-- ... --&gt;
+	&lt;intercept-url pattern="/login" access="permitAll" /&gt;
+	&lt;form-login login-page="/login" /&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
+	http {
+		// ...
+		formLogin {
+			loginPage = "/login"
+			permitAll()
+		}
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="servlet-authentication-form-custom-html" class="paragraph">
+<p>When the login page is specified in the Spring Security configuration, you are responsible for rendering the page.
+Below is a <a href="https://www.thymeleaf.org/">Thymeleaf</a> template that produces an HTML login form that complies with a login page of <code>/login</code>.:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. Log In Form</div>
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/resources/templates/login.html</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!DOCTYPE html&gt;
+&lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"&gt;
+	&lt;head&gt;
+		&lt;title&gt;Please Log In&lt;/title&gt;
+	&lt;/head&gt;
+	&lt;body&gt;
+		&lt;h1&gt;Please Log In&lt;/h1&gt;
+		&lt;div th:if="${param.error}"&gt;
+			Invalid username and password.&lt;/div&gt;
+		&lt;div th:if="${param.logout}"&gt;
+			You have been logged out.&lt;/div&gt;
+		&lt;form th:action="@{/login}" method="post"&gt;
+			&lt;div&gt;
+			&lt;input type="text" name="username" placeholder="Username"/&gt;
+			&lt;/div&gt;
+			&lt;div&gt;
+			&lt;input type="password" name="password" placeholder="Password"/&gt;
+			&lt;/div&gt;
+			&lt;input type="submit" value="Log in" /&gt;
+		&lt;/form&gt;
+	&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>There are a few key points about the default HTML form:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The form should perform a <code>post</code> to <code>/login</code></p>
+</li>
+<li>
+<p>The form will need to include a <a href="#servlet-csrf">CSRF Token</a> which is <a href="#servlet-csrf-include-form-auto">automatically included</a> by Thymeleaf.</p>
+</li>
+<li>
+<p>The form should specify the username in a parameter named <code>username</code></p>
+</li>
+<li>
+<p>The form should specify the password in a parameter named <code>password</code></p>
+</li>
+<li>
+<p>If the HTTP parameter error is found, it indicates the user failed to provide a valid username / password</p>
+</li>
+<li>
+<p>If the HTTP parameter logout is found, it indicates the user has logged out successfully</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Many users will not need much more than to customize the log in page.
+However, if needed everything above can be customized with additional configuration.</p>
+</div>
+<div id="servlet-authentication-form-custom-controller" class="paragraph">
+<p>If you are using Spring MVC, you will need a controller that maps <code>GET /login</code> to the login template we created.
+A minimal sample <code>LoginController</code> can be see below:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. LoginController</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Controller
+class LoginController {
+	@GetMapping("/login")
+	String login() {
+		return "login";
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Controller
+class LoginController {
+    @GetMapping("/login")
+    fun login(): String {
+        return "login"
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-basic"><a class="anchor" href="#servlet-authentication-basic"></a>Basic Authentication</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section provides details on how Spring Security provides support for <a href="https://tools.ietf.org/html/rfc7617">Basic HTTP Authentication</a> for servlet based applications.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s take a look at how HTTP Basic Authentication works within Spring Security.
+First, we see the <a href="https://tools.ietf.org/html/rfc7235#section-4.1">WWW-Authenticate</a> header is sent back to an unauthenticated client.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/unpwd/basicauthenticationentrypoint.png" alt="basicauthenticationentrypoint">
+</div>
+<div class="title">Figure 3. Sending WWW-Authenticate Header</div>
+</div>
+<div class="paragraph">
+<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
+The configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is an instance of {security-api-url}org/springframework/security/web/authentication/www/BasicAuthenticationEntryPoint.html[<code>BasicAuthenticationEntryPoint</code>] which sends a WWW-Authenticate header.
+The <code>RequestCache</code> is typically a <code>NullRequestCache</code> that does not save the request since the client is capable of replaying the requests it originally requested.</p>
+</div>
+<div class="paragraph">
+<p>When a client receives the WWW-Authenticate header it knows it should retry with a username and password.
+Below is the flow for the username and password being processed.</p>
+</div>
+<div id="servlet-authentication-basicauthenticationfilter" class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/unpwd/basicauthenticationfilter.png" alt="basicauthenticationfilter">
+</div>
+<div class="title">Figure 4. Authenticating Username and Password</div>
+</div>
+<div class="paragraph">
+<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>BasicAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
+The details of what <code>AuthenticationManager</code> look like depend on how the <a href="#servlet-authentication-unpwd-storage">user information is stored</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a> is cleared out.</p>
+</li>
+<li>
+<p><code>RememberMeServices.loginFail</code> is invoked.
+If remember me is not configured, this is a no-op.</p>
+</li>
+<li>
+<p><code>AuthenticationEntryPoint</code> is invoked to trigger the WWW-Authenticate to be sent again.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#servlet-authentication-authentication">[servlet-authentication-authentication]</a> is set on the <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a>.</p>
+</li>
+<li>
+<p><code>RememberMeServices.loginSuccess</code> is invoked.
+If remember me is not configured, this is a no-op.</p>
+</li>
+<li>
+<p>The <code>BasicAuthenticationFilter</code> invokes <code>FilterChain.doFilter(request,response)</code> to continue with the rest of the application logic.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Spring Security&#8217;s HTTP Basic Authentication support in is enabled by default.
+However, as soon as any servlet based configuration is provided, HTTP Basic must be explicitly provided.</p>
+</div>
+<div class="paragraph">
+<p>A minimal, explicit configuration can be found below:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 5. Explicit HTTP Basic Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) {
+	http
+		// ...
+		.httpBasic(withDefaults());
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+	&lt;!-- ... --&gt;
+	&lt;http-basic /&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
+	http {
+		// ...
+		httpBasic { }
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-digest"><a class="anchor" href="#servlet-authentication-digest"></a>Digest Authentication</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section provides details on how Spring Security provides support for <a href="https://tools.ietf.org/html/rfc2617">Digest Authentication</a> which is provided <code>DigestAuthenticationFilter</code>.</p>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You should not use Digest Authentication in modern applications because it is not considered secure.
+The most obvious problem is that you must store your passwords in plaintext, encrypted, or an MD5 format.
+All of these storage formats are considered insecure.
+Instead, you should store credentials using a one way adaptive password hash (i.e. bCrypt, PBKDF2, SCrypt, etc) which is not supported by Digest Authentication.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Digest Authentication attempts to solve many of the weaknesses of <a href="#servlet-authentication-basic">Basic authentication</a>, specifically by ensuring credentials are never sent in clear text across the wire.
+Many <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Digest#Browser_compatibility">browsers support Digest Authentication</a>.</p>
+</div>
+<div class="paragraph">
+<p>The standard governing HTTP Digest Authentication is defined by <a href="https://tools.ietf.org/html/rfc2617">RFC 2617</a>, which updates an earlier version of the Digest Authentication standard prescribed by <a href="https://tools.ietf.org/html/rfc2069">RFC 2069</a>.
+Most user agents implement RFC 2617.
+Spring Security&#8217;s Digest Authentication support is compatible with the &#8220;auth&#8221; quality of protection (<code>qop</code>) prescribed by RFC 2617, which also provides backward compatibility with RFC 2069.
+Digest Authentication was seen as a more attractive option if you need to use unencrypted HTTP (i.e. no TLS/HTTPS) and wish to maximise security of the authentication process.
+However, everyone should use <a href="#http">HTTPS</a>.</p>
+</div>
+<div class="paragraph">
+<p>Central to Digest Authentication is a "nonce".
+This is a value the server generates.
+Spring Security&#8217;s nonce adopts the following format:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 6. Digest Syntax</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-txt hljs" data-lang="txt">base64(expirationTime + ":" + md5Hex(expirationTime + ":" + key))
+expirationTime:   The date and time when the nonce expires, expressed in milliseconds
+key:              A private key to prevent modification of the nonce token</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You will need to ensure you <a href="#authentication-password-storage-configuration">configure</a> insecure plain text <a href="#authentication-password-storage">Password Storage</a> using NoOpPasswordEncoder`.
+The following provides an example of configuring Digest Authentication with Java Configuration:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 7. Digest Authentication</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+UserDetailsService userDetailsService;
+
+DigestAuthenticationEntryPoint entryPoint() {
+	DigestAuthenticationEntryPoint result = new DigestAuthenticationEntryPoint();
+	result.setRealmName("My App Relam");
+	result.setKey("3028472b-da34-4501-bfd8-a355c42bdf92");
+}
+
+DigestAuthenticationFilter digestAuthenticationFilter() {
+	DigestAuthenticationFilter result = new DigestAuthenticationFilter();
+	result.setUserDetailsService(userDetailsService);
+	result.setAuthenticationEntryPoint(entryPoint());
+}
+
+protected void configure(HttpSecurity http) throws Exception {
+	http
+		// ...
+		.exceptionHandling(e -&gt; e.authenticationEntryPoint(authenticationEntryPoint()))
+		.addFilterBefore(digestFilter());
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;b:bean id="digestFilter"
+        class="org.springframework.security.web.authentication.www.DigestAuthenticationFilter"
+    p:userDetailsService-ref="jdbcDaoImpl"
+    p:authenticationEntryPoint-ref="digestEntryPoint"
+/&gt;
+
+&lt;b:bean id="digestEntryPoint"
+        class="org.springframework.security.web.authentication.www.DigestAuthenticationEntryPoint"
+    p:realmName="My App Realm"
+	p:key="3028472b-da34-4501-bfd8-a355c42bdf92"
+/&gt;
+
+&lt;http&gt;
+	&lt;!-- ... --&gt;
+	&lt;custom-filter ref="userFilter" position="DIGEST_AUTH_FILTER"/&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-inmemory"><a class="anchor" href="#servlet-authentication-inmemory"></a>In-Memory Authentication</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security&#8217;s <code>InMemoryUserDetailsManager</code> implements <a href="#servlet-authentication-userdetailsservice">UserDetailsService</a> to provide support for username/password based authentication that is retrieved in memory.
+<code>InMemoryUserDetailsManager</code> provides management of <code>UserDetails</code> by implementing the <code>UserDetailsManager</code> interface.
+<code>UserDetails</code> based authentication is used by Spring Security when it is configured to <a href="#servlet-authentication-unpwd-input">accept a username/password</a> for authentication.</p>
+</div>
+<div class="paragraph">
+<p>In this sample we use <a href="#authentication-password-storage-boot-cli">Spring Boot CLI</a> to encode the password of <code>password</code> and get the encoded password of <code>{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW</code>.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 8. InMemoryUserDetailsManager Java Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public UserDetailsService users() {
+	UserDetails user = User.builder()
+		.username("user")
+		.password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+		.roles("USER")
+		.build();
+	UserDetails admin = User.builder()
+		.username("admin")
+		.password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+		.roles("USER", "ADMIN")
+		.build();
+	return new InMemoryUserDetailsManager(user, admin);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;user-service&gt;
+	&lt;user name="user"
+		password="{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW"
+		authorities="ROLE_USER" /&gt;
+	&lt;user name="admin"
+		password="{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW"
+		authorities="ROLE_USER,ROLE_ADMIN" /&gt;
+&lt;/user-service&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun users(): UserDetailsService {
+    val user = User.builder()
+        .username("user")
+        .password("{bcrypt}$2a$10\$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+        .roles("USER")
+        .build()
+    val admin = User.builder()
+        .username("admin")
+        .password("{bcrypt}$2a$10\$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+        .roles("USER", "ADMIN")
+        .build()
+    return InMemoryUserDetailsManager(user, admin)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The samples above store the passwords in a secure format, but leave a lot to be desired in terms of getting started experience.</p>
+</div>
+<div class="paragraph">
+<p>In the sample below we leverage <a href="#authentication-password-storage-dep-getting-started">User.withDefaultPasswordEncoder</a> to ensure that the password stored in memory is protected.
+However, it does not protect against obtaining the password by decompiling the source code.
+For this reason, <code>User.withDefaultPasswordEncoder</code> should only be used for "getting started" and is not intended for production.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 9. InMemoryUserDetailsManager with User.withDefaultPasswordEncoder</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public UserDetailsService users() {
+	// The builder will ensure the passwords are encoded before saving in memory
+	UserBuilder users = User.withDefaultPasswordEncoder();
+	UserDetails user = users
+		.username("user")
+		.password("password")
+		.roles("USER")
+		.build();
+	UserDetails admin = users
+		.username("admin")
+		.password("password")
+		.roles("USER", "ADMIN")
+		.build();
+	return new InMemoryUserDetailsManager(user, admin);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun users(): UserDetailsService {
+    // The builder will ensure the passwords are encoded before saving in memory
+    val users = User.withDefaultPasswordEncoder()
+    val user = users
+        .username("user")
+        .password("password")
+        .roles("USER")
+        .build()
+    val admin = users
+        .username("admin")
+        .password("password")
+        .roles("USER", "ADMIN")
+        .build()
+    return InMemoryUserDetailsManager(user, admin)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>There is no simple way to use <code>User.withDefaultPasswordEncoder</code> with XML based configuration.
+For demos or just getting started, you can choose to prefix the password with <code>{noop}</code> to indicate <a href="#authentication-password-storage-dpe-format">no encoding should be used</a>.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 10. &lt;user-service&gt; <code>{noop}</code> XML Configuration</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;user-service&gt;
+	&lt;user name="user"
+		password="{noop}password"
+		authorities="ROLE_USER" /&gt;
+	&lt;user name="admin"
+		password="{noop}password"
+		authorities="ROLE_USER,ROLE_ADMIN" /&gt;
+&lt;/user-service&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-jdbc"><a class="anchor" href="#servlet-authentication-jdbc"></a>JDBC Authentication</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security&#8217;s <code>JdbcDaoImpl</code> implements <a href="#servlet-authentication-userdetailsservice">UserDetailsService</a> to provide support for username/password based authentication that is retrieved using JDBC.
+<code>JdbcUserDetailsManager</code> extends <code>JdbcDaoImpl</code> to provide management of <code>UserDetails</code> through the <code>UserDetailsManager</code> interface.
+<code>UserDetails</code> based authentication is used by Spring Security when it is configured to <a href="#servlet-authentication-unpwd-input">accept a username/password</a> for authentication.</p>
+</div>
+<div class="paragraph">
+<p>In the following sections we will discuss:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#servlet-authentication-jdbc-schema">Default Schema</a> used by Spring Security JDBC Authentication</p>
+</li>
+<li>
+<p><a href="#servlet-authentication-jdbc-datasource">Setting up a DataSource</a></p>
+</li>
+<li>
+<p><a href="#servlet-authentication-jdbc-bean">JdbcUserDetailsManager Bean</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-jdbc-schema"><a class="anchor" href="#servlet-authentication-jdbc-schema"></a>Default Schema</h3>
+<div class="paragraph">
+<p>Spring Security provides default queries for JDBC based authentication.
+This section provides the corresponding default schemas used with the default queries.
+You will need to adjust the schema to match any customizations to the queries and the database dialect you are using.</p>
+</div>
+<div class="sect3">
+<h4 id="servlet-authentication-jdbc-schema-user"><a class="anchor" href="#servlet-authentication-jdbc-schema-user"></a>User Schema</h4>
+<div class="paragraph">
+<p><code>JdbcDaoImpl</code> requires tables to load the password, account status (enabled or disabled) and a list of authorities (roles) for the user.
+The default schema required can be found below.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The default schema is also exposed as a classpath resource named <code>org/springframework/security/core/userdetails/jdbc/users.ddl</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="exampleblock">
+<div class="title">Example 11. Default User Schema</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">create table users(
+	username varchar_ignorecase(50) not null primary key,
+	password varchar_ignorecase(500) not null,
+	enabled boolean not null
+);
+
+create table authorities (
+	username varchar_ignorecase(50) not null,
+	authority varchar_ignorecase(50) not null,
+	constraint fk_authorities_users foreign key(username) references users(username)
+);
+create unique index ix_auth_username on authorities (username,authority);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Oracle is a popular database choice, but requires a slightly different schema.
+You can find the default Oracle Schema for users below.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 12. Default User Schema for Oracle Databases</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE USERS (
+    USERNAME NVARCHAR2(128) PRIMARY KEY,
+    PASSWORD NVARCHAR2(128) NOT NULL,
+    ENABLED CHAR(1) CHECK (ENABLED IN ('Y','N') ) NOT NULL
+);
+
+
+CREATE TABLE AUTHORITIES (
+    USERNAME NVARCHAR2(128) NOT NULL,
+    AUTHORITY NVARCHAR2(128) NOT NULL
+);
+ALTER TABLE AUTHORITIES ADD CONSTRAINT AUTHORITIES_UNIQUE UNIQUE (USERNAME, AUTHORITY);
+ALTER TABLE AUTHORITIES ADD CONSTRAINT AUTHORITIES_FK1 FOREIGN KEY (USERNAME) REFERENCES USERS (USERNAME) ENABLE;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-authentication-jdbc-schema-group"><a class="anchor" href="#servlet-authentication-jdbc-schema-group"></a>Group Schema</h4>
+<div class="paragraph">
+<p>If your application is leveraging groups, you will need to provide the groups schema.
+The default schema for groups can be found below.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 13. Default Group Schema</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">create table groups (
+	id bigint generated by default as identity(start with 0) primary key,
+	group_name varchar_ignorecase(50) not null
+);
+
+create table group_authorities (
+	group_id bigint not null,
+	authority varchar(50) not null,
+	constraint fk_group_authorities_group foreign key(group_id) references groups(id)
+);
+
+create table group_members (
+	id bigint generated by default as identity(start with 0) primary key,
+	username varchar(50) not null,
+	group_id bigint not null,
+	constraint fk_group_members_group foreign key(group_id) references groups(id)
+);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-jdbc-datasource"><a class="anchor" href="#servlet-authentication-jdbc-datasource"></a>Setting up a DataSource</h3>
+<div class="paragraph">
+<p>Before we configure <code>JdbcUserDetailsManager</code>, we must create a <code>DataSource</code>.
+In our example, we will setup an <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/data-access.html#jdbc-embedded-database-support">embedded DataSource</a> that is initialized with the <a href="#servlet-authentication-jdbc-schema">default user schema</a>.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 14. Embedded Data Source</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+DataSource dataSource() {
+	return new EmbeddedDatabaseBuilder()
+		.setType(H2)
+		.addScript("classpath:org/springframework/security/core/userdetails/jdbc/users.ddl")
+		.build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;jdbc:embedded-database&gt;
+	&lt;jdbc:script location="classpath:org/springframework/security/core/userdetails/jdbc/users.ddl"/&gt;
+&lt;/jdbc:embedded-database&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun dataSource(): DataSource {
+    return EmbeddedDatabaseBuilder()
+        .setType(H2)
+        .addScript("classpath:org/springframework/security/core/userdetails/jdbc/users.ddl")
+        .build()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In a production environment, you will want to ensure you setup a connection to an external database.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-jdbc-bean"><a class="anchor" href="#servlet-authentication-jdbc-bean"></a>JdbcUserDetailsManager Bean</h3>
+<div class="paragraph">
+<p>In this sample we use <a href="#authentication-password-storage-boot-cli">Spring Boot CLI</a> to encode the password of <code>password</code> and get the encoded password of <code>{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW</code>.
+See the <a href="#authentication-password-storage">PasswordEncoder</a> section for more details about how to store passwords.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 15. JdbcUserDetailsManager</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+UserDetailsManager users(DataSource dataSource) {
+	UserDetails user = User.builder()
+		.username("user")
+		.password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+		.roles("USER")
+		.build();
+	UserDetails admin = User.builder()
+		.username("admin")
+		.password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+		.roles("USER", "ADMIN")
+		.build();
+	JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
+	users.createUser(user);
+	users.createUser(admin);
+	return users;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;jdbc-user-service&gt;
+	&lt;user name="user"
+		password="{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW"
+		authorities="ROLE_USER" /&gt;
+	&lt;user name="admin"
+		password="{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW"
+		authorities="ROLE_USER,ROLE_ADMIN" /&gt;
+&lt;/jdbc-user-service&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun users(dataSource: DataSource): UserDetailsManager {
+    val user = User.builder()
+            .username("user")
+            .password("{bcrypt}$2a$10\$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+            .roles("USER")
+            .build();
+    val admin = User.builder()
+            .username("admin")
+            .password("{bcrypt}$2a$10\$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+            .roles("USER", "ADMIN")
+            .build();
+    val users = JdbcUserDetailsManager(dataSource)
+    users.createUser(user)
+    users.createUser(admin)
+    return users
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-userdetails"><a class="anchor" href="#servlet-authentication-userdetails"></a>UserDetails</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{security-api-url}org/springframework/security/core/userdetails/UserDetails.html[<code>UserDetails</code>] is returned by the <a href="#servlet-authentication-userdetailsservice"><code>UserDetailsService</code></a>.
+The <a href="#servlet-authentication-daoauthenticationprovider"><code>DaoAuthenticationProvider</code></a> validates the <code>UserDetails</code> and then returns an <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that has a principal that is the <code>UserDetails</code> returned by the configured <code>UserDetailsService</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-userdetailsservice"><a class="anchor" href="#servlet-authentication-userdetailsservice"></a>UserDetailsService</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{security-api-url}org/springframework/security/core/userdetails/UserDetailsService.html[<code>UserDetailsService</code>] is used by <a href="#servlet-authentication-daoauthenticationprovider"><code>DaoAuthenticationProvider</code></a> for retrieving a username, password, and other attributes for authenticating with a username and password.
+Spring Security provides <a href="#servlet-authentication-inmemory">in-memory</a> and <a href="#servlet-authentication-jdbc">JDBC</a> implementations of <code>UserDetailsService</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can define custom authentication by exposing a custom <code>UserDetailsService</code> as a bean.
+For example, the following will customize authentication assuming that <code>CustomUserDetailsService</code> implements <code>UserDetailsService</code>:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This is only used if the <code>AuthenticationManagerBuilder</code> has not been populated and no <code>AuthenticationProviderBean</code> is defined.
+</td>
+</tr>
+</table>
+</div>
+<div class="exampleblock">
+<div class="title">Example 16. Custom UserDetailsService Bean</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+CustomUserDetailsService customUserDetailsService() {
+	return new CustomUserDetailsService();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">&lt;b:bean class="example.CustomUserDetailsService"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun customUserDetailsService() = CustomUserDetailsService()</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-password-storage"><a class="anchor" href="#servlet-authentication-password-storage"></a>PasswordEncoder</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security&#8217;s servlet support storing passwords securely by integrating with <a href="#authentication-password-storage"><code>PasswordEncoder</code></a>.
+Customizing the <code>PasswordEncoder</code> implementation used by Spring Security can be done by <a href="#authentication-password-storage-configuration">exposing a <code>PasswordEncoder</code> Bean</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-daoauthenticationprovider"><a class="anchor" href="#servlet-authentication-daoauthenticationprovider"></a>DaoAuthenticationProvider</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{security-api-url}org/springframework/security/authentication/dao/DaoAuthenticationProvider.html[<code>DaoAuthenticationProvider</code>] is an <a href="#servlet-authentication-authenticationprovider"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#servlet-authentication-userdetailsservice"><code>UserDetailsService</code></a> and <a href="#servlet-authentication-password-storage"><code>PasswordEncoder</code></a> to authenticate a username and password.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s take a look at how <code>DaoAuthenticationProvider</code> works within Spring Security.
+The figure explains details of how the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> in figures from <a href="#servlet-authentication-unpwd-input">Reading the Username &amp; Password</a> works.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/unpwd/daoauthenticationprovider.png" alt="daoauthenticationprovider">
+</div>
+<div class="title">Figure 5. <code>DaoAuthenticationProvider</code> Usage</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#servlet-authentication-unpwd-input">Reading the Username &amp; Password</a> passes a <code>UsernamePasswordAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="#servlet-authentication-authenticationprovider">[servlet-authentication-authenticationprovider]</a> of type <code>DaoAuthenticationProvider</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> <code>DaoAuthenticationProvider</code> looks up the <code>UserDetails</code> from the <code>UserDetailsService</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> <code>DaoAuthenticationProvider</code> then uses the <a href="#servlet-authentication-password-storage"><code>PasswordEncoder</code></a> to validate the password on the <code>UserDetails</code> returned in the previous step.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is of type <code>UsernamePasswordAuthenticationToken</code> and has a principal that is the <code>UserDetails</code> returned by the configured <code>UserDetailsService</code>.
+Ultimately, the returned <code>UsernamePasswordAuthenticationToken</code> will be set on the <a href="#servlet-authentication-securitycontextholder"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-ldap"><a class="anchor" href="#servlet-authentication-ldap"></a>LDAP Authentication</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>LDAP is often used by organizations as a central repository for user information and as an authentication service.
+It can also be used to store the role information for application users.</p>
+</div>
+<div class="paragraph">
+<p>Spring Security&#8217;s LDAP based authentication is used by Spring Security when it is configured to <a href="#servlet-authentication-unpwd-input">accept a username/password</a> for authentication.
+However, despite leveraging a username/password for authentication it does not integrate using <code>UserDetailsService</code> because in <a href="#servlet-authentication-ldap-bind">bind authentication</a> the LDAP server does not return the password so the application cannot perform validation of the password.</p>
+</div>
+<div class="paragraph">
+<p>There are many different scenarios for how an LDAP server may be configured so Spring Security&#8217;s LDAP provider is fully configurable.
+It uses separate strategy interfaces for authentication and role retrieval and provides default implementations which can be configured to handle a wide range of situations.</p>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-ldap-prerequisites"><a class="anchor" href="#servlet-authentication-ldap-prerequisites"></a>Prerequisites</h3>
+<div class="paragraph">
+<p>You should be familiar with LDAP before trying to use it with Spring Security.
+The following link provides a good introduction to the concepts involved and a guide to setting up a directory using the free LDAP server OpenLDAP: <a href="https://www.zytrax.com/books/ldap/" class="bare">https://www.zytrax.com/books/ldap/</a>.
+Some familiarity with the JNDI APIs used to access LDAP from Java may also be useful.
+We don&#8217;t use any third-party LDAP libraries (Mozilla, JLDAP etc.) in the LDAP provider, but extensive use is made of Spring LDAP, so some familiarity with that project may be useful if you plan on adding your own customizations.</p>
+</div>
+<div class="paragraph">
+<p>When using LDAP authentication, it is important to ensure that you configure LDAP connection pooling properly.
+If you are unfamiliar with how to do this, you can refer to the <a href="https://docs.oracle.com/javase/jndi/tutorial/ldap/connect/config.html">Java LDAP documentation</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-ldap-embedded"><a class="anchor" href="#servlet-authentication-ldap-embedded"></a>Setting up an Embedded LDAP Server</h3>
+<div class="paragraph">
+<p>The first thing you will need to do is to ensure that you have an LDAP Server to point your configuration to.
+For simplicity, it often best to start with an embedded LDAP Server.
+Spring Security supports using either:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#servlet-authentication-ldap-unboundid">Embedded UnboundID Server</a></p>
+</li>
+<li>
+<p><a href="#servlet-authentication-ldap-apacheds">Embedded ApacheDS Server</a></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the samples below, we expose the following as <code>users.ldif</code> as a classpath resource to initialize the embedded LDAP server with the users <code>user</code> and <code>admin</code> both of which have a password of <code>password</code>.</p>
+</div>
+<div class="listingblock">
+<div class="title">users.ldif</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-ldif hljs" data-lang="ldif">dn: ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: groups
+
+dn: ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: organizationalUnit
+ou: people
+
+dn: uid=admin,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Rod Johnson
+sn: Johnson
+uid: admin
+userPassword: password
+
+dn: uid=user,ou=people,dc=springframework,dc=org
+objectclass: top
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+cn: Dianne Emu
+sn: Emu
+uid: user
+userPassword: password
+
+dn: cn=user,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfNames
+cn: user
+uniqueMember: uid=admin,ou=people,dc=springframework,dc=org
+uniqueMember: uid=user,ou=people,dc=springframework,dc=org
+
+dn: cn=admin,ou=groups,dc=springframework,dc=org
+objectclass: top
+objectclass: groupOfNames
+cn: admin
+uniqueMember: uid=admin,ou=people,dc=springframework,dc=org</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-authentication-ldap-unboundid"><a class="anchor" href="#servlet-authentication-ldap-unboundid"></a>Embedded UnboundID Server</h4>
+<div class="paragraph">
+<p>If you wish to use <a href="https://ldap.com/unboundid-ldap-sdk-for-java/">UnboundID</a>, then specify the following dependencies:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 17. UnboundID Dependencies</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Maven</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;com.unboundid&lt;/groupId&gt;
+	&lt;artifactId&gt;unboundid-ldapsdk&lt;/artifactId&gt;
+	&lt;version&gt;{unboundid-ldapsdk-version}&lt;/version&gt;
+	&lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Gradle</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">depenendencies {
+	runtimeOnly "com.unboundid:unboundid-ldapsdk:{unboundid-ldapsdk-version}"
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then configure the Embedded LDAP Server</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 18. Embedded LDAP Server Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+UnboundIdContainer ldapContainer() {
+	return new UnboundIdContainer("dc=springframework,dc=org",
+				"classpath:users.ldif");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;b:bean class="org.springframework.security.ldap.server.UnboundIdContainer"
+	c:defaultPartitionSuffix="dc=springframework,dc=org"
+	c:ldif="classpath:users.ldif"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun ldapContainer(): UnboundIdContainer {
+    return UnboundIdContainer("dc=springframework,dc=org","classpath:users.ldif")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-authentication-ldap-apacheds"><a class="anchor" href="#servlet-authentication-ldap-apacheds"></a>Embedded ApacheDS Server</h4>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Spring Security uses ApacheDS 1.x which is no longer maintained.
+Unfortunately, ApacheDS 2.x has only released milestone versions with no stable release.
+Once a stable release of ApacheDS 2.x is available, we will consider updating.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you wish to use <a href="https://directory.apache.org/apacheds/">Apache DS</a>, then specify the following dependencies:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 19. ApacheDS Dependencies</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Maven</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
+	&lt;groupId&gt;org.apache.directory.server&lt;/groupId&gt;
+	&lt;artifactId&gt;apacheds-core&lt;/artifactId&gt;
+	&lt;version&gt;{apacheds-core-version}&lt;/version&gt;
+	&lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;
+&lt;dependency&gt;
+	&lt;groupId&gt;org.apache.directory.server&lt;/groupId&gt;
+	&lt;artifactId&gt;apacheds-server-jndi&lt;/artifactId&gt;
+	&lt;version&gt;{apacheds-core-version}&lt;/version&gt;
+	&lt;scope&gt;runtime&lt;/scope&gt;
+&lt;/dependency&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Gradle</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">depenendencies {
+	runtimeOnly "org.apache.directory.server:apacheds-core:{apacheds-core-version}"
+	runtimeOnly "org.apache.directory.server:apacheds-server-jndi:{apacheds-core-version}"
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then configure the Embedded LDAP Server</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 20. Embedded LDAP Server Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ApacheDSContainer ldapContainer() {
+	return new ApacheDSContainer("dc=springframework,dc=org",
+				"classpath:users.ldif");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;b:bean class="org.springframework.security.ldap.server.ApacheDSContainer"
+	c:defaultPartitionSuffix="dc=springframework,dc=org"
+	c:ldif="classpath:users.ldif"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun ldapContainer(): ApacheDSContainer {
+    return ApacheDSContainer("dc=springframework,dc=org", "classpath:users.ldif")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-ldap-contextsource"><a class="anchor" href="#servlet-authentication-ldap-contextsource"></a>LDAP ContextSource</h3>
+<div class="paragraph">
+<p>Once you have an LDAP Server to point your configuration to, you need configure Spring Security to point to an LDAP server that should be used to authenticate users.
+This is done by creating an LDAP <code>ContextSource</code>, which is the equivalent of a JDBC <code>DataSource</code>.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 21. LDAP Context Source</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ContextSource contextSource(UnboundIdContainer container) {
+	return new DefaultSpringSecurityContextSource("ldap://localhost:53389/dc=springframework,dc=org");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ldap-server
+	url="ldap://localhost:53389/dc=springframework,dc=org" /&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun contextSource(container: UnboundIdContainer): ContextSource {
+    return DefaultSpringSecurityContextSource("ldap://localhost:53389/dc=springframework,dc=org")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-ldap-authentication"><a class="anchor" href="#servlet-authentication-ldap-authentication"></a>Authentication</h3>
+<div class="paragraph">
+<p>Spring Security&#8217;s LDAP support does not use the <a href="#servlet-authentication-userdetailsservice">UserDetailsService</a> because LDAP bind authentication does not allow clients to read the password or even a hashed version of the password.
+This means there is no way a password to be read and then authenticated by Spring Security.</p>
+</div>
+<div class="paragraph">
+<p>For this reason, LDAP support is implemented using the <code>LdapAuthenticator</code> interface.
+The <code>LdapAuthenticator</code> is also responsible for retrieving any required user attributes.
+This is because the permissions on the attributes may depend on the type of authentication being used.
+For example, if binding as the user, it may be necessary to read them with the user&#8217;s own permissions.</p>
+</div>
+<div class="paragraph">
+<p>There are two <code>LdapAuthenticator</code> implementations supplied with Spring Security:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#servlet-authentication-ldap-bind">Using Bind Authentication</a></p>
+</li>
+<li>
+<p><a href="#servlet-authentication-ldap-pwd">Using Password Authentication</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-ldap-bind"><a class="anchor" href="#servlet-authentication-ldap-bind"></a>Using Bind Authentication</h3>
+<div class="paragraph">
+<p><a href="https://ldap.com/the-ldap-bind-operation/">Bind Authentication</a> is the most common mechanism for authenticating users with LDAP.
+In bind authentication the users credentials (i.e. username/password) are submitted to the LDAP server which authenticates them.
+The advantage to using bind authentication is that the user&#8217;s secrets (i.e. password) do not need to be exposed to clients which helps to protect them from leaking.</p>
+</div>
+<div class="paragraph">
+<p>An example of bind authentication configuration can be found below.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 22. Bind Authentication</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+BindAuthenticator authenticator(BaseLdapPathContextSource contextSource) {
+	BindAuthenticator authenticator = new BindAuthenticator(contextSource);
+	authenticator.setUserDnPatterns(new String[] { "uid={0},ou=people" });
+	return authenticator;
+}
+
+@Bean
+LdapAuthenticationProvider authenticationProvider(LdapAuthenticator authenticator) {
+	return new LdapAuthenticationProvider(authenticator);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ldap-authentication-provider
+	user-dn-pattern="uid={0},ou=people"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun authenticator(contextSource: BaseLdapPathContextSource): BindAuthenticator {
+    val authenticator = BindAuthenticator(contextSource)
+    authenticator.setUserDnPatterns(arrayOf("uid={0},ou=people"))
+    return authenticator
+}
+
+@Bean
+fun authenticationProvider(authenticator: LdapAuthenticator): LdapAuthenticationProvider {
+    return LdapAuthenticationProvider(authenticator)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>This simple example would obtain the DN for the user by substituting the user login name in the supplied pattern and attempting to bind as that user with the login password.
+This is OK if all your users are stored under a single node in the directory.
+If instead you wished to configure an LDAP search filter to locate the user, you could use the following:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 23. Bind Authentication with Search Filter</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+BindAuthenticator authenticator(BaseLdapPathContextSource contextSource) {
+	String searchBase = "ou=people";
+	String filter = "(uid={0})";
+	FilterBasedLdapUserSearch search =
+		new FilterBasedLdapUserSearch(searchBase, filter, contextSource);
+	BindAuthenticator authenticator = new BindAuthenticator(contextSource);
+	authenticator.setUserSearch(search);
+	return authenticator;
+}
+
+@Bean
+LdapAuthenticationProvider authenticationProvider(LdapAuthenticator authenticator) {
+	return new LdapAuthenticationProvider(authenticator);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ldap-authentication-provider
+		user-search-filter="(uid={0})"
+	user-search-base="ou=people"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun authenticator(contextSource: BaseLdapPathContextSource): BindAuthenticator {
+    val searchBase = "ou=people"
+    val filter = "(uid={0})"
+    val search = FilterBasedLdapUserSearch(searchBase, filter, contextSource)
+    val authenticator = BindAuthenticator(contextSource)
+    authenticator.setUserSearch(search)
+    return authenticator
+}
+
+@Bean
+fun authenticationProvider(authenticator: LdapAuthenticator): LdapAuthenticationProvider {
+    return LdapAuthenticationProvider(authenticator)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If used with the <code>ContextSource</code> <a href="#servlet-authentication-ldap-contextsource">definition above</a>, this would perform a search under the DN <code>ou=people,dc=springframework,dc=org</code> using <code>(uid={0})</code> as a filter.
+Again the user login name is substituted for the parameter in the filter name, so it will search for an entry with the <code>uid</code> attribute equal to the user name.
+If a user search base isn&#8217;t supplied, the search will be performed from the root.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-ldap-pwd"><a class="anchor" href="#servlet-authentication-ldap-pwd"></a>Using Password Authentication</h3>
+<div class="paragraph">
+<p>Password comparison is when the password supplied by the user is compared with the one stored in the repository.
+This can either be done by retrieving the value of the password attribute and checking it locally or by performing an LDAP "compare" operation, where the supplied password is passed to the server for comparison and the real password value is never retrieved.
+An LDAP compare cannot be done when the password is properly hashed with a random salt.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 24. Minimal Password Compare Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+PasswordComparisonAuthenticator authenticator(BaseLdapPathContextSource contextSource) {
+	return new PasswordComparisonAuthenticator(contextSource);
+}
+
+@Bean
+LdapAuthenticationProvider authenticationProvider(LdapAuthenticator authenticator) {
+	return new LdapAuthenticationProvider(authenticator);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ldap-authentication-provider
+		user-dn-pattern="uid={0},ou=people"&gt;
+	&lt;password-compare /&gt;
+&lt;/ldap-authentication-provider&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun authenticator(contextSource: BaseLdapPathContextSource): PasswordComparisonAuthenticator {
+    return PasswordComparisonAuthenticator(contextSource)
+}
+
+@Bean
+fun authenticationProvider(authenticator: LdapAuthenticator): LdapAuthenticationProvider {
+    return LdapAuthenticationProvider(authenticator)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>A more advanced configuration with some customizations can be found below.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 25. Password Compare Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+PasswordComparisonAuthenticator authenticator(BaseLdapPathContextSource contextSource) {
+	PasswordComparisonAuthenticator authenticator =
+		new PasswordComparisonAuthenticator(contextSource);
+	authenticator.setPasswordAttributeName("pwd"); <i class="conum" data-value="1"></i><b>(1)</b>
+	authenticator.setPasswordEncoder(new BCryptPasswordEncoder()); <i class="conum" data-value="2"></i><b>(2)</b>
+	return authenticator;
+}
+
+@Bean
+LdapAuthenticationProvider authenticationProvider(LdapAuthenticator authenticator) {
+	return new LdapAuthenticationProvider(authenticator);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ldap-authentication-provider
+		user-dn-pattern="uid={0},ou=people"&gt;
+	&lt;password-compare password-attribute="pwd"&gt; <i class="conum" data-value="1"></i><b>(1)</b>
+		&lt;password-encoder ref="passwordEncoder" /&gt; <i class="conum" data-value="2"></i><b>(2)</b>
+	&lt;/password-compare&gt;
+&lt;/ldap-authentication-provider&gt;
+&lt;b:bean id="passwordEncoder"
+	class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" /&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun authenticator(contextSource: BaseLdapPathContextSource): PasswordComparisonAuthenticator {
+    val authenticator = PasswordComparisonAuthenticator(contextSource)
+    authenticator.setPasswordAttributeName("pwd") <i class="conum" data-value="1"></i><b>(1)</b>
+    authenticator.setPasswordEncoder(BCryptPasswordEncoder()) <i class="conum" data-value="2"></i><b>(2)</b>
+    return authenticator
+}
+
+@Bean
+fun authenticationProvider(authenticator: LdapAuthenticator): LdapAuthenticationProvider {
+    return LdapAuthenticationProvider(authenticator)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Specify the password attribute as <code>pwd</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Use <code>BCryptPasswordEncoder</code></td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_ldapauthoritiespopulator"><a class="anchor" href="#_ldapauthoritiespopulator"></a>LdapAuthoritiesPopulator</h3>
+<div class="paragraph">
+<p>Spring Security&#8217;s <code>LdapAuthoritiesPopulator</code> is used to determine what authorites are returned for the user.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 26. LdapAuthoritiesPopulator Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+LdapAuthoritiesPopulator authorities(BaseLdapPathContextSource contextSource) {
+	String groupSearchBase = "";
+	DefaultLdapAuthoritiesPopulator authorities =
+		new DefaultLdapAuthoritiesPopulator(contextSource, groupSearchBase);
+	authorities.setGroupSearchFilter("member={0}");
+	return authorities;
+}
+
+@Bean
+LdapAuthenticationProvider authenticationProvider(LdapAuthenticator authenticator, LdapAuthoritiesPopulator authorities) {
+	return new LdapAuthenticationProvider(authenticator, authorities);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ldap-authentication-provider
+	user-dn-pattern="uid={0},ou=people"
+	group-search-filter="member={0}"/&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun authorities(contextSource: BaseLdapPathContextSource): LdapAuthoritiesPopulator {
+    val groupSearchBase = ""
+    val authorities = DefaultLdapAuthoritiesPopulator(contextSource, groupSearchBase)
+    authorities.setGroupSearchFilter("member={0}")
+    return authorities
+}
+
+@Bean
+fun authenticationProvider(authenticator: LdapAuthenticator, authorities: LdapAuthoritiesPopulator): LdapAuthenticationProvider {
+    return LdapAuthenticationProvider(authenticator, authorities)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_active_directory"><a class="anchor" href="#_active_directory"></a>Active Directory</h3>
+<div class="paragraph">
+<p>Active Directory supports its own non-standard authentication options, and the normal usage pattern doesn&#8217;t fit too cleanly with the standard <code>LdapAuthenticationProvider</code>.
+Typically authentication is performed using the domain username (in the form <code>user@domain</code>), rather than using an LDAP distinguished name.
+To make this easier, Spring Security has an authentication provider which is customized for a typical Active Directory setup.</p>
+</div>
+<div class="paragraph">
+<p>Configuring <code>ActiveDirectoryLdapAuthenticationProvider</code> is quite straightforward.
+You just need to supply the domain name and an LDAP URL supplying the address of the server <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
+An example configuration can be seen below:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 27. Example Active Directory Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ActiveDirectoryLdapAuthenticationProvider authenticationProvider() {
+	return new ActiveDirectoryLdapAuthenticationProvider("example.com", "ldap://company.example.com/");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="authenticationProvider"
+        class="org.springframework.security.ldap.authentication.ad.ActiveDirectoryLdapAuthenticationProvider"&gt;
+	&lt;constructor-arg value="example.com" /&gt;
+	&lt;constructor-arg value="ldap://company.example.com/" /&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun authenticationProvider(): ActiveDirectoryLdapAuthenticationProvider {
+    return ActiveDirectoryLdapAuthenticationProvider("example.com", "ldap://company.example.com/")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. It is also possible to obtain the server&#8217;s IP address using a DNS lookup. This is not currently supported, but hopefully will be in a future version.
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../../_/js/site.js"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../../../_/js/tabs.js"></script>  </body>
+</html>

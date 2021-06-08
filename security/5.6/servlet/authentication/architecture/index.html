@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../../6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../6/overview/prerequisites.html">6</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../../overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../../framework/5.3/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.6</button>
+  <div class="version-menu">
+    <a class="version" href="../../../../6/servlet/authentication/architecture/index.html">6</a>
+    <a class="version is-current" href="index.html">5.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/authentication/architecture/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="servlet-authentication-securitycontextholder"><a class="anchor" href="#servlet-authentication-securitycontextholder"></a>SecurityContextHolder</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>At the heart of Spring Security&#8217;s authentication model is the <code>SecurityContextHolder</code>.
+It contains the <a href="#servlet-authentication-securitycontext">SecurityContext</a>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/architecture/securitycontextholder.png" alt="securitycontextholder">
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>SecurityContextHolder</code> is where Spring Security stores the details of who is <a href="#authentication">authenticated</a>.
+Spring Security does not care how the <code>SecurityContextHolder</code> is populated.
+If it contains a value, then it is used as the currently authenticated user.</p>
+</div>
+<div class="paragraph">
+<p>The simplest way to indicate a user is authenticated is to set the <code>SecurityContextHolder</code> directly.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Setting <code>SecurityContextHolder</code></div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SecurityContext context = SecurityContextHolder.createEmptyContext(); <i class="conum" data-value="1"></i><b>(1)</b>
+Authentication authentication =
+    new TestingAuthenticationToken("username", "password", "ROLE_USER"); <i class="conum" data-value="2"></i><b>(2)</b>
+context.setAuthentication(authentication);
+
+SecurityContextHolder.setContext(context); <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val context: SecurityContext = SecurityContextHolder.createEmptyContext() <i class="conum" data-value="1"></i><b>(1)</b>
+val authentication: Authentication = TestingAuthenticationToken("username", "password", "ROLE_USER") <i class="conum" data-value="2"></i><b>(2)</b>
+context.authentication = authentication
+
+SecurityContextHolder.setContext(context) <i class="conum" data-value="3"></i><b>(3)</b></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We start by creating an empty <code>SecurityContext</code>.
+It is important to create a new <code>SecurityContext</code> instance instead of using <code>SecurityContextHolder.getContext().setAuthentication(authentication)</code> to avoid race conditions across multiple threads.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Next we create a new <a href="#servlet-authentication-authentication"><code>Authentication</code></a> object.
+Spring Security does not care what type of <code>Authentication</code> implementation is set on the <code>SecurityContext</code>.
+Here we use <code>TestingAuthenticationToken</code> because it is very simple.
+A more common production scenario is <code>UsernamePasswordAuthenticationToken(userDetails, password, authorities)</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Finally, we set the <code>SecurityContext</code> on the <code>SecurityContextHolder</code>.
+Spring Security will use this information for <a href="#servlet-authorization">authorization</a>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you wish to obtain information about the authenticated principal, you can do so by accessing the <code>SecurityContextHolder</code>.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Access Currently Authenticated User</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SecurityContext context = SecurityContextHolder.getContext();
+Authentication authentication = context.getAuthentication();
+String username = authentication.getName();
+Object principal = authentication.getPrincipal();
+Collection&lt;? extends GrantedAuthority&gt; authorities = authentication.getAuthorities();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val context = SecurityContextHolder.getContext()
+val authentication = context.authentication
+val username = authentication.name
+val principal = authentication.principal
+val authorities = authentication.authorities</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>By default the <code>SecurityContextHolder</code> uses a <code>ThreadLocal</code> to store these details, which means that the <code>SecurityContext</code> is always available to methods in the same thread, even if the <code>SecurityContext</code> is not explicitly passed around as an argument to those methods.
+Using a <code>ThreadLocal</code> in this way is quite safe if care is taken to clear the thread after the present principal&#8217;s request is processed.
+Spring Security&#8217;s <a href="#servlet-filterchainproxy">FilterChainProxy</a> ensures that the <code>SecurityContext</code> is always cleared.</p>
+</div>
+<div class="paragraph">
+<p>Some applications aren&#8217;t entirely suitable for using a <code>ThreadLocal</code>, because of the specific way they work with threads.
+For example, a Swing client might want all threads in a Java Virtual Machine to use the same security context.
+<code>SecurityContextHolder</code> can be configured with a strategy on startup to specify how you would like the context to be stored.
+For a standalone application you would use the <code>SecurityContextHolder.MODE_GLOBAL</code> strategy.
+Other applications might want to have threads spawned by the secure thread also assume the same security identity.
+This is achieved by using <code>SecurityContextHolder.MODE_INHERITABLETHREADLOCAL</code>.
+You can change the mode from the default <code>SecurityContextHolder.MODE_THREADLOCAL</code> in two ways.
+The first is to set a system property, the second is to call a static method on <code>SecurityContextHolder</code>.
+Most applications won&#8217;t need to change from the default, but if you do, take a look at the JavaDoc for <code>SecurityContextHolder</code> to learn more.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-securitycontext"><a class="anchor" href="#servlet-authentication-securitycontext"></a>SecurityContext</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The {security-api-url}org/springframework/security/core/context/SecurityContext.html[<code>SecurityContext</code>] is obtained from the <a href="#servlet-authentication-securitycontextholder">SecurityContextHolder</a>.
+The <code>SecurityContext</code> contains an <a href="#servlet-authentication-authentication">Authentication</a> object.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-authentication"><a class="anchor" href="#servlet-authentication-authentication"></a>Authentication</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The {security-api-url}org/springframework/security/core/Authentication.html[<code>Authentication</code>] serves two main purposes within Spring Security:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>An input to <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> to provide the credentials a user has provided to authenticate.
+When used in this scenario, <code>isAuthenticated()</code> returns <code>false</code>.</p>
+</li>
+<li>
+<p>Represents the currently authenticated user.
+The current <code>Authentication</code> can be obtained from the <a href="#servlet-authentication-securitycontext">SecurityContext</a>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>Authentication</code> contains:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>principal</code> - identifies the user.
+When authenticating with a username/password this is often an instance of <a href="#servlet-authentication-userdetails"><code>UserDetails</code></a>.</p>
+</li>
+<li>
+<p><code>credentials</code> - Often a password.
+In many cases this will be cleared after the user is authenticated to ensure it is not leaked.</p>
+</li>
+<li>
+<p><code>authorities</code> - the <a href="#servlet-authentication-granted-authority"><code>GrantedAuthority</code>s</a> are high level permissions the user is granted.
+A few examples are roles or scopes.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-granted-authority"><a class="anchor" href="#servlet-authentication-granted-authority"></a>GrantedAuthority</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{security-api-url}org/springframework/security/core/GrantedAuthority.html[<code>GrantedAuthority</code>s] are high level permissions the user is granted. A few examples are roles or scopes.</p>
+</div>
+<div class="paragraph">
+<p><code>GrantedAuthority</code>s can be obtained from the <a href="#servlet-authentication-authentication"><code>Authentication.getAuthorities()</code></a> method.
+This method provides a <code>Collection</code> of <code>GrantedAuthority</code> objects.
+A <code>GrantedAuthority</code> is, not surprisingly, an authority that is granted to the principal.
+Such authorities are usually "roles", such as <code>ROLE_ADMINISTRATOR</code> or <code>ROLE_HR_SUPERVISOR</code>.
+These roles are later on configured for web authorization, method authorization and domain object authorization.
+Other parts of Spring Security are capable of interpreting these authorities, and expect them to be present.
+When using username/password based authentication <code>GrantedAuthority</code>s are usually loaded by the <a href="#servlet-authentication-userdetailsservice"><code>UserDetailsService</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>Usually the <code>GrantedAuthority</code> objects are application-wide permissions.
+They are not specific to a given domain object.
+Thus, you wouldn&#8217;t likely have a <code>GrantedAuthority</code> to represent a permission to <code>Employee</code> object number 54, because if there are thousands of such authorities you would quickly run out of memory (or, at the very least, cause the application to take a long time to authenticate a user).
+Of course, Spring Security is expressly designed to handle this common requirement, but you&#8217;d instead use the project&#8217;s domain object security capabilities for this purpose.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-authenticationmanager"><a class="anchor" href="#servlet-authentication-authenticationmanager"></a>AuthenticationManager</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{security-api-url}org/springframework/security/authentication/AuthenticationManager.html[<code>AuthenticationManager</code>] is the API that defines how Spring Security&#8217;s Filters perform  <a href="#authentication">authentication</a>.
+The <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is then set on the <a href="#servlet-authentication-securitycontextholder">SecurityContextHolder</a> by the controller (i.e. <a href="#servlet-security-filters">Spring Security&#8217;s <code>Filters</code>s</a>) that invoked the <code>AuthenticationManager</code>.
+If you are not integrating with <em>Spring Security&#8217;s <code>Filters</code>s</em> you can set the <code>SecurityContextHolder</code> directly and are not required to use an <code>AuthenticationManager</code>.</p>
+</div>
+<div class="paragraph">
+<p>While the implementation of <code>AuthenticationManager</code> could be anything, the most common implementation is <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-providermanager"><a class="anchor" href="#servlet-authentication-providermanager"></a>ProviderManager</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{security-api-url}org/springframework/security/authentication/ProviderManager.html[<code>ProviderManager</code>] is the most commonly used implementation of <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a>.
+<code>ProviderManager</code> delegates to a <code>List</code> of <a href="#servlet-authentication-authenticationprovider"><code>AuthenticationProvider</code>s</a>.
+Each <code>AuthenticationProvider</code> has an opportunity to indicate that authentication should be successful, fail, or indicate it cannot make a decision and allow a downstream <code>AuthenticationProvider</code> to decide.
+If none of the configured <code>AuthenticationProvider</code>s can authenticate, then authentication will fail with a <code>ProviderNotFoundException</code> which is a special <code>AuthenticationException</code> that indicates the <code>ProviderManager</code> was not configured to support the type of <code>Authentication</code> that was passed into it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/architecture/providermanager.png" alt="providermanager">
+</div>
+</div>
+<div class="paragraph">
+<p>In practice each <code>AuthenticationProvider</code> knows how to perform a specific type of authentication.
+ For example, one <code>AuthenticationProvider</code> might be able to validate a username/password, while another might be able to authenticate a SAML assertion.
+This allows each <code>AuthenticationProvider</code> to do a very specific type of authentication, while supporting multiple types of authentication and only exposing a single <code>AuthenticationManager</code> bean.</p>
+</div>
+<div class="paragraph">
+<p><code>ProviderManager</code> also allows configuring an optional parent <code>AuthenticationManager</code> which is consulted in the event that no <code>AuthenticationProvider</code> can perform authentication.
+The parent can be any type of <code>AuthenticationManager</code>, but it is often an instance of <code>ProviderManager</code>.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/architecture/providermanager-parent.png" alt="providermanager parent">
+</div>
+</div>
+<div class="paragraph">
+<p>In fact, multiple <code>ProviderManager</code> instances might share the same parent <code>AuthenticationManager</code>.
+This is somewhat common in scenarios where there are multiple <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> instances that have some authentication in common (the shared parent <code>AuthenticationManager</code>), but also different authentication mechanisms (the different <code>ProviderManager</code> instances).</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/architecture/providermanagers-parent.png" alt="providermanagers parent">
+</div>
+</div>
+<div id="servlet-authentication-providermanager-erasing-credentials" class="paragraph">
+<p>By default <code>ProviderManager</code> will attempt to clear any sensitive credentials information from the <code>Authentication</code> object which is returned by a successful authentication request.
+This prevents information like passwords being retained longer than necessary in the <code>HttpSession</code>.</p>
+</div>
+<div class="paragraph">
+<p>This may cause issues when you are using a cache of user objects, for example, to improve performance in a stateless application.
+If the <code>Authentication</code> contains a reference to an object in the cache (such as a <code>UserDetails</code> instance) and this has its credentials removed, then it will no longer be possible to authenticate against the cached value.
+You need to take this into account if you are using a cache.
+An obvious solution is to make a copy of the object first, either in the cache implementation or in the <code>AuthenticationProvider</code> which creates the returned <code>Authentication</code> object.
+Alternatively, you can disable the <code>eraseCredentialsAfterAuthentication</code> property on <code>ProviderManager</code>.
+See the {security-api-url}org/springframework/security/authentication/ProviderManager.html[Javadoc] for more information.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-authenticationprovider"><a class="anchor" href="#servlet-authentication-authenticationprovider"></a>AuthenticationProvider</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Multiple {security-api-url}org/springframework/security/authentication/AuthenticationProvider.html[<code>AuthenticationProvider</code>s] can be injected into <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.
+Each <code>AuthenticationProvider</code> performs a specific type of authentication.
+For example, <a href="#servlet-authentication-daoauthenticationprovider"><code>DaoAuthenticationProvider</code></a> supports username/password based authentication while <code>JwtAuthenticationProvider</code> supports authenticating a JWT token.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-authenticationentrypoint"><a class="anchor" href="#servlet-authentication-authenticationentrypoint"></a>Request Credentials with <code>AuthenticationEntryPoint</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{security-api-url}org/springframework/security/web/AuthenticationEntryPoint.html[<code>AuthenticationEntryPoint</code>] is used to send an HTTP response that requests credentials from a client.</p>
+</div>
+<div class="paragraph">
+<p>Sometimes a client will proactively include credentials such as a username/password to request a resource.
+In these cases, Spring Security does not need to provide an HTTP response that requests credentials from the client since they are already included.</p>
+</div>
+<div class="paragraph">
+<p>In other cases, a client will make an unauthenticated request to a resource that they are not authorized to access.
+In this case, an implementation of <code>AuthenticationEntryPoint</code> is used to request credentials from the client.
+The <code>AuthenticationEntryPoint</code> implementation might perform a <a href="#servlet-authentication-form">redirect to a log in page</a>, respond with an <a href="#servlet-authentication-basic">WWW-Authenticate</a> header, etc.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-abstractprocessingfilter"><a class="anchor" href="#servlet-authentication-abstractprocessingfilter"></a>AbstractAuthenticationProcessingFilter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>{security-api-url}org/springframework/security/web/authentication/AbstractAuthenticationProcessingFilter.html[<code>AbstractAuthenticationProcessingFilter</code>] is used as a base <code>Filter</code> for authenticating a user&#8217;s credentials.
+Before the credentials can be authenticated, Spring Security typically requests the credentials using <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>Next, the <code>AbstractAuthenticationProcessingFilter</code> can authenticate any authentication requests that are submitted to it.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../../_images/images/servlet/authentication/architecture/abstractauthenticationprocessingfilter.png" alt="abstractauthenticationprocessingfilter">
+</div>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> When the user submits their credentials, the <code>AbstractAuthenticationProcessingFilter</code> creates an <a href="#servlet-authentication-authentication"><code>Authentication</code></a> from the <code>HttpServletRequest</code> to be authenticated.
+The type of <code>Authentication</code> created depends on the subclass of <code>AbstractAuthenticationProcessingFilter</code>.
+For example, <a href="#servlet-authentication-usernamepasswordauthenticationfilter"><code>UsernamePasswordAuthenticationFilter</code></a> creates a <code>UsernamePasswordAuthenticationToken</code> from a <em>username</em> and <em>password</em> that are submitted in the <code>HttpServletRequest</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Next, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> is passed into the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> to be authenticated.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#servlet-authentication-securitycontextholder">SecurityContextHolder</a> is cleared out.</p>
+</li>
+<li>
+<p><code>RememberMeServices.loginFail</code> is invoked.
+If remember me is not configured, this is a no-op.</p>
+</li>
+<li>
+<p><code>AuthenticationFailureHandler</code> is invoked.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>SessionAuthenticationStrategy</code> is notified of a new log in.</p>
+</li>
+<li>
+<p>The <a href="#servlet-authentication-authentication">Authentication</a> is set on the <a href="#servlet-authentication-securitycontextholder">SecurityContextHolder</a>.
+Later the <code>SecurityContextPersistenceFilter</code> saves the <code>SecurityContext</code> to the <code>HttpSession</code>.</p>
+</li>
+<li>
+<p><code>RememberMeServices.loginSuccess</code> is invoked.
+If remember me is not configured, this is a no-op.</p>
+</li>
+<li>
+<p><code>ApplicationEventPublisher</code> publishes an <code>InteractiveAuthenticationSuccessEvent</code>.</p>
+</li>
+<li>
+<p><code>AuthenticationSuccessHandler</code> is invoked.</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../../_/js/site.js"></script>
+<script async src="../../../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../../../_/js/tabs.js"></script>  </body>
+</html>

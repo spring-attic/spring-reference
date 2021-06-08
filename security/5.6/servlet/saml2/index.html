@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>SAML2 :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../6/overview/prerequisites.html">6</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../overview/prerequisites.html">Spring Security</a></li>
+    <li><a href="index.html">SAML2</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.6</button>
+  <div class="version-menu">
+    <a class="version" href="../../../6/servlet/saml2/index.html">6</a>
+    <a class="version is-current" href="index.html">5.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/saml2/index.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">SAML2</h1>
+<div class="sect1">
+<h2 id="servlet-saml2login"><a class="anchor" href="#servlet-saml2login"></a>SAML 2.0 Login</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The SAML 2.0 Login feature provides an application with the capability to act as a SAML 2.0 Relying Party, having users <a href="https://wiki.shibboleth.net/confluence/display/CONCEPT/FlowsAndConfig">log in</a> to the application by using their existing account at a SAML 2.0 Asserting Party (Okta, ADFS, etc).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+SAML 2.0 Login is implemented by using the <strong>Web Browser SSO Profile</strong>, as specified in
+<a href="https://www.oasis-open.org/committees/download.php/35389/sstc-saml-profiles-errata-2.0-wd-06-diff.pdf#page=15">SAML 2 Profiles</a>.
+</td>
+</tr>
+</table>
+</div>
+<div id="servlet-saml2login-spring-security-history" class="paragraph">
+<p>Since 2009, support for relying parties has existed as an <a href="https://github.com/spring-projects/spring-security-saml/tree/1e013b07a7772defd6a26fcfae187c9bf661ee8f#spring-saml">extension project</a>.
+In 2019, the process began to port that into <a href="https://github.com/spring-projects/spring-security">Spring Security</a> proper.
+This process is similar to the one started in 2017 for <a href="#oauth2">Spring Security&#8217;s OAuth 2.0 support</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A working sample for {gh-samples-url}/boot/saml2login[SAML 2.0 Login] is available in the {gh-samples-url}[Spring Security repository].</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s take a look at how SAML 2.0 Relying Party Authentication works within Spring Security.
+First, we see that, like <a href="#oauth2login">OAuth 2.0 Login</a>, Spring Security takes the user to a third-party for performing authentication.
+It does this through a series of redirects.</p>
+</div>
+<div class="imageblock">
+<div class="content">
+<img src="../../_images/images/servlet/saml2/saml2webssoauthenticationrequestfilter.png" alt="saml2webssoauthenticationrequestfilter">
+</div>
+<div class="title">Figure 1. Redirecting to Asserting Party Authentication</div>
+</div>
+<div class="paragraph">
+<p>The figure above builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> and <a href="#servlet-authentication-abstractprocessingfilter"><code>AbstractAuthenticationProcessingFilter</code></a> diagrams:</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_3.png" alt="number 3"></span> Since the user lacks authorization, the <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
+The configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is an instance of {security-api-url}org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html[<code>LoginUrlAuthenticationEntryPoint</code>] which redirects to <a href="#servlet-saml2login-sp-initiated-factory">the <code>&lt;saml2:AuthnRequest&gt;</code> generating endpoint</a>, <code>Saml2WebSsoAuthenticationRequestFilter</code>.
+Or, if you&#8217;ve <a href="#servlet-saml2login-relyingpartyregistrationrepository">configured more than one asserting party</a>, it will first redirect to a picker page.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_4.png" alt="number 4"></span> Next, the <code>Saml2WebSsoAuthenticationRequestFilter</code> creates, signs, serializes, and encodes a <code>&lt;saml2:AuthnRequest&gt;</code> using its configured <a href="#servlet-saml2login-sp-initiated-factory"><code>Saml2AuthenticationRequestFactory</code></a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_5.png" alt="number 5"></span> Then, the browser takes this <code>&lt;saml2:AuthnRequest&gt;</code> and presents it to the asserting party.
+The asserting party attempts to authentication the user.
+If successful, it will return a <code>&lt;saml2:Response&gt;</code> back to the browser.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_6.png" alt="number 6"></span> The browser then POSTs the <code>&lt;saml2:Response&gt;</code> to the assertion consumer service endpoint.</p>
+</div>
+<div id="servlet-saml2login-authentication-saml2webssoauthenticationfilter" class="imageblock">
+<div class="content">
+<img src="../../_images/images/servlet/saml2/saml2webssoauthenticationfilter.png" alt="saml2webssoauthenticationfilter">
+</div>
+<div class="title">Figure 2. Authenticating a <code>&lt;saml2:Response&gt;</code></div>
+</div>
+<div class="paragraph">
+<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_1.png" alt="number 1"></span> When the browser submits a <code>&lt;saml2:Response&gt;</code> to the application, it <a href="#servlet-saml2login-authenticate-responses">delegates to <code>Saml2WebSsoAuthenticationFilter</code></a>.
+This filter calls its configured <code>AuthenticationConverter</code> to create a <code>Saml2AuthenticationToken</code> by extracting the response from the <code>HttpServletRequest</code>.
+This converter additionally resolves the <a href="#servlet-saml2login-relyingpartyregistration"><code>RelyingPartyRegistration</code></a> and supplies it to <code>Saml2AuthenticationToken</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_2.png" alt="number 2"></span> Next, the filter passes the token to its configured <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a>.
+By default, it will use the <a href="#servlet-saml2login-architecture"><code>OpenSamlAuthenticationProvider</code></a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#servlet-authentication-securitycontextholder"><code>SecurityContextHolder</code></a> is cleared out.</p>
+</li>
+<li>
+<p>The <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is invoked to restart the authentication process.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="#servlet-authentication-authentication"><code>Authentication</code></a> is set on the <a href="#servlet-authentication-securitycontextholder"><code>SecurityContextHolder</code></a>.</p>
+</li>
+<li>
+<p>The <code>Saml2WebSsoAuthenticationFilter</code> invokes <code>FilterChain#doFilter(request,response)</code> to continue with the rest of the application logic.</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-minimaldependencies"><a class="anchor" href="#servlet-saml2login-minimaldependencies"></a>Minimal Dependencies</h3>
+<div class="paragraph">
+<p>SAML 2.0 service provider support resides in <code>spring-security-saml2-service-provider</code>.
+It builds off of the OpenSAML library.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-minimalconfiguration"><a class="anchor" href="#servlet-saml2login-minimalconfiguration"></a>Minimal Configuration</h3>
+<div class="paragraph">
+<p>When using <a href="https://spring.io/projects/spring-boot">Spring Boot</a>, configuring an application as a service provider consists of two basic steps.
+First, include the needed dependencies and second, indicate the necessary asserting party metadata.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Also, this presupposes that you&#8217;ve already <a href="#servlet-saml2login-metadata">registered the relying party with your asserting party</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_specifying_identity_provider_metadata"><a class="anchor" href="#_specifying_identity_provider_metadata"></a>Specifying Identity Provider Metadata</h4>
+<div class="paragraph">
+<p>In a Spring Boot application, to specify an identity provider&#8217;s metadata, simply do:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">spring:
+  security:
+    saml2:
+      relyingparty:
+        registration:
+          adfs:
+            identityprovider:
+              entity-id: https://idp.example.com/issuer
+              verification.credentials:
+                - certificate-location: "classpath:idp.crt"
+              singlesignon.url: https://idp.example.com/issuer/sso
+              singlesignon.sign-request: false</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>where</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code><a href="https://idp.example.com/issuer" class="bare">https://idp.example.com/issuer</a></code> is the value contained in the <code>Issuer</code> attribute of the SAML responses that the identity provider will issue</p>
+</li>
+<li>
+<p><code>classpath:idp.crt</code> is the location on the classpath for the identity provider&#8217;s certificate for verifying SAML responses, and</p>
+</li>
+<li>
+<p><code><a href="https://idp.example.com/issuer/sso" class="bare">https://idp.example.com/issuer/sso</a></code> is the endpoint where the identity provider is expecting <code>AuthnRequest</code> s.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>And that&#8217;s it!</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Identity Provider and Asserting Party are synonymous, as are Service Provider and Relying Party.
+These are frequently abbreviated as AP and RP, respectively.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_runtime_expectations"><a class="anchor" href="#_runtime_expectations"></a>Runtime Expectations</h4>
+<div class="paragraph">
+<p>As configured above, the application processes any <code>POST /login/saml2/sso/{registrationId}</code> request containing a <code>SAMLResponse</code> parameter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">POST /login/saml2/sso/adfs HTTP/1.1
+
+SAMLResponse=PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There are two ways to see induce your asserting party to generate a <code>SAMLResponse</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First, you can navigate to your asserting party.
+It likely has some kind of link or button for each registered relying party that you can click to send the <code>SAMLResponse</code>.</p>
+</li>
+<li>
+<p>Second, you can navigate to a protected page in your app, for example, <code><a href="http://localhost:8080" class="bare">http://localhost:8080</a></code>.
+Your app then redirects to the configured asserting party which then sends the <code>SAMLResponse</code>.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>From here, consider jumping to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#servlet-saml2login-architecture">How SAML 2.0 Login Integrates with OpenSAML</a></p>
+</li>
+<li>
+<p><a href="#servlet-saml2login-authenticatedprincipal">How to Use the <code>Saml2AuthenticatedPrincipal</code></a></p>
+</li>
+<li>
+<p><a href="#servlet-saml2login-sansboot">How to Override or Replace Spring Boot&#8217;s Auto Configuration</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-architecture"><a class="anchor" href="#servlet-saml2login-architecture"></a>How SAML 2.0 Login Integrates with OpenSAML</h3>
+<div class="paragraph">
+<p>Spring Security&#8217;s SAML 2.0 support has a couple of design goals:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>First, rely on a library for SAML 2.0 operations and domain objects.
+To achieve this, Spring Security uses OpenSAML.</p>
+</li>
+<li>
+<p>Second, ensure this library is not required when using Spring Security&#8217;s SAML support.
+To achieve this, any interfaces or classes where Spring Security uses OpenSAML in the contract remain encapsulated.
+This makes it possible for you to switch out OpenSAML for some other library or even an unsupported version of OpenSAML.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As a natural outcome of the above two goals, Spring Security&#8217;s SAML API is quite small relative to other modules.
+Instead, classes like <code>OpenSamlAuthenticationRequestFactory</code> and <code>OpenSamlAuthenticationProvider</code> expose <code>Converter</code> s that customize various steps in the authentication process.</p>
+</div>
+<div class="paragraph">
+<p>For example, once your application receives a <code>SAMLResponse</code> and delegates to <code>Saml2WebSsoAuthenticationFilter</code>, the filter will delegate to <code>OpenSamlAuthenticationProvider</code>.</p>
+</div>
+<div class="paragraph">
+<div class="title">Authenticating an OpenSAML <code>Response</code></div>
+<p><span class="image"><img src="../../_images/images/servlet/saml2/opensamlauthenticationprovider.png" alt="opensamlauthenticationprovider"></span></p>
+</div>
+<div class="paragraph">
+<p>This figure builds off of the <a href="#servlet-saml2login-authentication-saml2webssoauthenticationfilter"><code>Saml2WebSsoAuthenticationFilter</code> diagram</a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_1.png" alt="number 1"></span> The <code>Saml2WebSsoAuthenticationFilter</code> formulates the <code>Saml2AuthenticationToken</code> and invokes the <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_2.png" alt="number 2"></span> The <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a> invokes the <code>OpenSamlAuthenticationProvider</code>.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_3.png" alt="number 3"></span> The authentication provider deserializes the response into an OpenSAML <code>Response</code> and checks its signature.
+If the signature is invalid, authentication fails.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_4.png" alt="number 4"></span> Then, the provider <a href="#servlet-saml2login-opensamlauthenticationprovider-decryption">decrypts any <code>EncryptedAssertion</code> elements</a>.
+If any decryptions fail, authentication fails.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_5.png" alt="number 5"></span> Next, the provider validates the response&#8217;s <code>Issuer</code> and <code>Destination</code> values.
+If they don&#8217;t match what&#8217;s in the <code>RelyingPartyRegistration</code>, authentication fails.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_6.png" alt="number 6"></span> After that, the provider verifies the signature of each <code>Assertion</code>.
+If any signature is invalid, authentication fails.
+Also, if neither the response nor the assertions have signatures, authentication fails.
+Either the response or all the assertions must have signatures.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_7.png" alt="number 7"></span> Then, the provider <a href="#servlet-saml2login-opensamlauthenticationprovider-decryption">decrypts any <code>EncryptedID</code> or <code>EncryptedAttribute</code> elements</a>.
+If any decryptions fail, authentication fails.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_8.png" alt="number 8"></span> Next, the provider validates each assertion&#8217;s <code>ExpiresAt</code> and <code>NotBefore</code> timestamps, the <code>&lt;Subject&gt;</code> and any <code>&lt;AudienceRestriction&gt;</code> conditions.
+If any validations fail, authentication fails.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_9.png" alt="number 9"></span> Following that, the provider takes the first assertion&#8217;s <code>AttributeStatement</code> and maps it to a <code>Map&lt;String, List&lt;Object&gt;&gt;</code>.
+It also grants the <code>ROLE_USER</code> granted authority.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="../../_images/images/icons/number_10.png" alt="number 10"></span> And finally, it takes the <code>NameID</code> from the first assertion, the <code>Map</code> of attributes, and the <code>GrantedAuthority</code> and constructs a <code>Saml2AuthenticatedPrincipal</code>.
+Then, it places that principal and the authorities into a <code>Saml2Authentication</code>.</p>
+</div>
+<div class="paragraph">
+<p>The resulting <code>Authentication#getPrincipal</code> is a Spring Security <code>Saml2AuthenticatedPrincipal</code> object, and <code>Authentication#getName</code> maps to the first assertion&#8217;s <code>NameID</code> element.</p>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-opensaml-customization"><a class="anchor" href="#servlet-saml2login-opensaml-customization"></a>Customizing OpenSAML Configuration</h4>
+<div class="paragraph">
+<p>Any class that uses both Spring Security and OpenSAML should statically initialize <code>OpenSamlInitializationService</code> at the beginning of the class, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">static {
+	OpenSamlInitializationService.initialize();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This replaces OpenSAML&#8217;s <code>InitializationService#initialize</code>.</p>
+</div>
+<div class="paragraph">
+<p>Occasionally, it can be valuable to customize how OpenSAML builds, marshalls, and unmarshalls SAML objects.
+In these circumstances, you may instead want to call <code>OpenSamlInitializationService#requireInitialize(Consumer)</code> that gives you access to OpenSAML&#8217;s <code>XMLObjectProviderFactory</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, when sending an unsigned AuthNRequest, you may want to force reauthentication.
+In that case, you can register your own <code>AuthnRequestMarshaller</code>, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">static {
+	OpenSamlInitializationService.requireInitialize(factory -&gt; {
+		AuthnRequestMarshaller marshaller = new AuthnRequestMarshaller() {
+			@Override
+            public Element marshall(XMLObject object, Element element) throws MarshallingException {
+				configureAuthnRequest((AuthnRequest) object);
+				return super.marshall(object, element);
+            }
+
+            public Element marshall(XMLObject object, Document document) throws MarshallingException {
+				configureAuthnRequest((AuthnRequest) object);
+				return super.marshall(object, document);
+            }
+
+            private void configureAuthnRequest(AuthnRequest authnRequest) {
+				authnRequest.setForceAuthN(true);
+            }
+		}
+
+	    factory.getMarshallerFactory().registerMarshaller(AuthnRequest.DEFAULT_ELEMENT_NAME, marshaller);
+	});
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>requireInitialize</code> method may only be called once per application instance.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-sansboot"><a class="anchor" href="#servlet-saml2login-sansboot"></a>Overriding or Replacing Boot Auto Configuration</h3>
+<div class="paragraph">
+<p>There are two <code>@Bean</code> s that Spring Boot generates for a relying party.</p>
+</div>
+<div class="paragraph">
+<p>The first is a <code>WebSecurityConfigurerAdapter</code> that configures the app as a relying party.
+When including <code>spring-security-saml2-service-provider</code>, the <code>WebSecurityConfigurerAdapter</code> looks like:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Default JWT Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) {
+    http
+        .authorizeRequests(authorize -&gt; authorize
+            .anyRequest().authenticated()
+        )
+        .saml2Login(withDefaults());
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
+    http {
+        authorizeRequests {
+            authorize(anyRequest, authenticated)
+        }
+        saml2Login { }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If the application doesn&#8217;t expose a <code>WebSecurityConfigurerAdapter</code> bean, then Spring Boot will expose the above default one.</p>
+</div>
+<div class="paragraph">
+<p>You can replace this by exposing the bean within the application:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Custom SAML 2.0 Login Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class MyCustomSecurityConfiguration extends WebSecurityConfigurerAdapter {
+    protected void configure(HttpSecurity http) {
+        http
+            .authorizeRequests(authorize -&gt; authorize
+                .mvcMatchers("/messages/**").hasAuthority("ROLE_USER")
+                .anyRequest().authenticated()
+            )
+            .saml2Login(withDefaults());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableWebSecurity
+class MyCustomSecurityConfiguration : WebSecurityConfigurerAdapter() {
+    override fun configure(http: HttpSecurity) {
+        http {
+            authorizeRequests {
+                authorize("/messages/**", hasAuthority("ROLE_USER"))
+                authorize(anyRequest, authenticated)
+            }
+            saml2Login {
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The above requires the role of <code>USER</code> for any URL that starts with <code>/messages/</code>.</p>
+</div>
+<div id="servlet-saml2login-relyingpartyregistrationrepository" class="paragraph">
+<p>The second <code>@Bean</code> Spring Boot creates is a {security-api-url}org/springframework/security/saml2/provider/service/registration/RelyingPartyRegistrationRepository.html[<code>RelyingPartyRegistrationRepository</code>], which represents the asserting party and relying party metadata.
+This includes things like the location of the SSO endpoint the relying party should use when requesting authentication from the asserting party.</p>
+</div>
+<div class="paragraph">
+<p>You can override the default by publishing your own <code>RelyingPartyRegistrationRepository</code> bean.
+For example, you can look up the asserting party&#8217;s configuration by hitting its metadata endpoint like so:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. Relying Party Registration Repository</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Value("${metadata.location}")
+String assertingPartyMetadataLocation;
+
+@Bean
+public RelyingPartyRegistrationRepository relyingPartyRegistrations() {
+	RelyingPartyRegistration registration = RelyingPartyRegistrations
+            .fromMetadataLocation(assertingPartyMetadataLocation)
+            .registrationId("example")
+            .build();
+    return new InMemoryRelyingPartyRegistrationRepository(registration);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Or you can provide each detail manually, as you can see below:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. Relying Party Registration Repository Manual Configuration</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Value("${verification.key}")
+File verificationKey;
+
+@Bean
+public RelyingPartyRegistrationRepository relyingPartyRegistrations() throws Exception {
+    X509Certificate certificate = X509Support.decodeCertificate(this.verificationKey);
+    Saml2X509Credential credential = Saml2X509Credential.verification(certificate);
+    RelyingPartyRegistration registration = RelyingPartyRegistration
+            .withRegistrationId("example")
+            .assertingPartyDetails(party -&gt; party
+                .entityId("https://idp.example.com/issuer")
+                .singleSignOnServiceLocation("https://idp.example.com/SSO.saml2")
+                .wantAuthnRequestsSigned(false)
+                .verificationX509Credentials(c -&gt; c.add(credential))
+            )
+            .build();
+    return new InMemoryRelyingPartyRegistrationRepository(registration);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Note that <code>X509Support</code> is an OpenSAML class, used here in the snippet for brevity
+</td>
+</tr>
+</table>
+</div>
+<div id="servlet-saml2login-relyingpartyregistrationrepository-dsl" class="paragraph">
+<p>Alternatively, you can directly wire up the repository using the DSL, which will also override the auto-configured <code>WebSecurityConfigurerAdapter</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 5. Custom Relying Party Registration DSL</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class MyCustomSecurityConfiguration extends WebSecurityConfigurerAdapter {
+    protected void configure(HttpSecurity http) {
+        http
+            .authorizeRequests(authorize -&gt; authorize
+                .mvcMatchers("/messages/**").hasAuthority("ROLE_USER")
+                .anyRequest().authenticated()
+            )
+            .saml2Login(saml2 -&gt; saml2
+                .relyingPartyRegistrationRepository(relyingPartyRegistrations())
+            );
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableWebSecurity
+class MyCustomSecurityConfiguration : WebSecurityConfigurerAdapter() {
+    override fun configure(http: HttpSecurity) {
+        http {
+            authorizeRequests {
+                authorize("/messages/**", hasAuthority("ROLE_USER"))
+                authorize(anyRequest, authenticated)
+            }
+            saml2Login {
+                relyingPartyRegistrationRepository = relyingPartyRegistrations()
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+A relying party can be multi-tenant by registering more than one relying party in the <code>RelyingPartyRegistrationRepository</code>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-relyingpartyregistration"><a class="anchor" href="#servlet-saml2login-relyingpartyregistration"></a>RelyingPartyRegistration</h3>
+<div class="paragraph">
+<p>A {security-api-url}org/springframework/security/saml2/provider/service/registration/RelyingPartyRegistration.html[<code>RelyingPartyRegistration</code>]
+instance represents a link between an relying party and assering party&#8217;s metadata.</p>
+</div>
+<div class="paragraph">
+<p>In a <code>RelyingPartyRegistration</code>, you can provide relying party metadata like its <code>Issuer</code> value, where it expects SAML Responses to be sent to, and any credentials that it owns for the purposes of signing or decrypting payloads.</p>
+</div>
+<div class="paragraph">
+<p>Also, you can provide asserting party metadata like its <code>Issuer</code> value, where it expects AuthnRequests to be sent to, and any public credentials that it owns for the purposes of the relying party verifying or encrypting payloads.</p>
+</div>
+<div class="paragraph">
+<p>The following <code>RelyingPartyRegistration</code> is the minimum required for most setups:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RelyingPartyRegistration relyingPartyRegistration = RelyingPartyRegistrations
+        .fromMetadataLocation("https://ap.example.org/metadata")
+        .registrationId("my-id")
+        .build();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Though a more sophisticated setup is also possible, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RelyingPartyRegistration relyingPartyRegistration = RelyingPartyRegistration.withRegistrationId("my-id")
+        .entityId("{baseUrl}/{registrationId}")
+        .decryptionX509Credentials(c -&gt; c.add(relyingPartyDecryptingCredential()))
+        .assertionConsumerServiceLocation("/my-login-endpoint/{registrationId}")
+        .assertingParty(party -&gt; party
+                .entityId("https://ap.example.org")
+                .verificationX509Credentials(c -&gt; c.add(assertingPartyVerifyingCredential()))
+                .singleSignOnServiceLocation("https://ap.example.org/SSO.saml2")
+        );</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The top-level metadata methods are details about the relying party.
+The methods inside <code>assertingPartyDetails</code> are details about the asserting party.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The location where a relying party is expecting SAML Responses is the Assertion Consumer Service Location.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The default for the relying party&#8217;s <code>entityId</code> is <code>{baseUrl}/saml2/service-provider-metadata/{registrationId}</code>.
+This is this value needed when configuring the asserting party to know about your relying party.</p>
+</div>
+<div class="paragraph">
+<p>The default for the <code>assertionConsumerServiceLocation</code> is <code>/login/saml2/sso/{registrationId}</code>.
+It&#8217;s mapped by default to <a href="#servlet-saml2login-authentication-saml2webssoauthenticationfilter"><code>Saml2WebSsoAuthenticationFilter</code></a> in the filter chain.</p>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-rpr-uripatterns"><a class="anchor" href="#servlet-saml2login-rpr-uripatterns"></a>URI Patterns</h4>
+<div class="paragraph">
+<p>You probably noticed in the above examples the <code>{baseUrl}</code> and <code>{registrationId}</code> placeholders.</p>
+</div>
+<div class="paragraph">
+<p>These are useful for generating URIs. As such, the relying party&#8217;s <code>entityId</code> and <code>assertionConsumerServiceLocation</code> support the following placeholders:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>baseUrl</code> - the scheme, host, and port of a deployed application</p>
+</li>
+<li>
+<p><code>registrationId</code> - the registration id for this relying party</p>
+</li>
+<li>
+<p><code>baseScheme</code> - the scheme of a deployed application</p>
+</li>
+<li>
+<p><code>baseHost</code> - the host of a deployed application</p>
+</li>
+<li>
+<p><code>basePort</code> - the port of a deployed application</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For example, the <code>assertionConsumerServiceLocation</code> defined above was:</p>
+</div>
+<div class="paragraph">
+<p><code>/my-login-endpoint/{registrationId}</code></p>
+</div>
+<div class="paragraph">
+<p>which in a deployed application would translate to</p>
+</div>
+<div class="paragraph">
+<p><code>/my-login-endpoint/adfs</code></p>
+</div>
+<div class="paragraph">
+<p>The <code>entityId</code> above was defined as:</p>
+</div>
+<div class="paragraph">
+<p><code>{baseUrl}/{registrationId}</code></p>
+</div>
+<div class="paragraph">
+<p>which in a deployed application would translate to</p>
+</div>
+<div class="paragraph">
+<p><code>https://rp.example.com/adfs</code></p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-rpr-credentials"><a class="anchor" href="#servlet-saml2login-rpr-credentials"></a>Credentials</h4>
+<div class="paragraph">
+<p>You also likely noticed the credential that was used.</p>
+</div>
+<div class="paragraph">
+<p>Oftentimes, a relying party will use the same key to sign payloads as well as decrypt them.
+Or it will use the same key to verify payloads as well as encrypt them.</p>
+</div>
+<div class="paragraph">
+<p>Because of this, Spring Security ships with <code>Saml2X509Credential</code>, a SAML-specific credential that simplifies configuring the same key for different use cases.</p>
+</div>
+<div class="paragraph">
+<p>At a minimum, it&#8217;s necessary to have a certificate from the asserting party so that the asserting party&#8217;s signed responses can be verified.</p>
+</div>
+<div class="paragraph">
+<p>To construct a <code>Saml2X509Credential</code> that you&#8217;ll use to verify assertions from the asserting party, you can load the file and use
+the <code>CertificateFactory</code> like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Resource resource = new ClassPathResource("ap.crt");
+try (InputStream is = resource.getInputStream()) {
+	X509Certificate certificate = (X509Certificate)
+            CertificateFactory.getInstance("X.509").generateCertificate(is);
+	return Saml2X509Credential.verification(certificate);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say that the asserting party is going to also encrypt the assertion.
+In that case, the relying party will need a private key to be able to decrypt the encrypted value.</p>
+</div>
+<div class="paragraph">
+<p>In that case, you&#8217;ll need an <code>RSAPrivateKey</code> as well as its corresponding <code>X509Certificate</code>.
+You can load the first using Spring Security&#8217;s <code>RsaKeyConverters</code> utility class and the second as you did before:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">X509Certificate certificate = relyingPartyDecryptionCertificate();
+Resource resource = new ClassPathResource("rp.crt");
+try (InputStream is = resource.getInputStream()) {
+	RSAPrivateKey rsa = RsaKeyConverters.pkcs8().convert(is);
+	return Saml2X509Credential.decryption(rsa, certificate);
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+When you specify the locations of these files as the appropriate Spring Boot properties, then Spring Boot will perform these conversions for you.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-rpr-relyingpartyregistrationresolver"><a class="anchor" href="#servlet-saml2login-rpr-relyingpartyregistrationresolver"></a>Resolving the Relying Party from the Request</h4>
+<div class="paragraph">
+<p>As seen so far, Spring Security resolves the <code>RelyingPartyRegistration</code> by looking for the registration id in the URI path.</p>
+</div>
+<div class="paragraph">
+<p>There are a number of reasons you may want to customize. Among them:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>You may know that you will never be a multi-tenant application and so want to have a simpler URL scheme</p>
+</li>
+<li>
+<p>You may identify tenants in a way other than by the URI path</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>To customize the way that a <code>RelyingPartyRegistration</code> is resolved, you can configure a custom <code>Converter&lt;HttpServletRequest, RelyingPartyRegistration&gt;</code>.
+The default looks up the registration id from the URI&#8217;s last path element and looks it up in your <code>RelyingPartyRegistrationRepository</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can provide a simpler resolver that, for example, always returns the same relying party:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SingleRelyingPartyRegistrationResolver
+        implements Converter&lt;HttpServletRequest, RelyingPartyRegistration&gt; {
+
+	@Override
+    public RelyingPartyRegistration convert(HttpServletRequest request) {
+		return this.relyingParty;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, you can provide this resolver to the appropriate filters that <a href="#servlet-saml2login-sp-initiated-factory">produce <code>&lt;saml2:AuthnRequest&gt;</code> s</a>, <a href="#servlet-saml2login-authenticate-responses">authenticate <code>&lt;saml2:Response&gt;</code> s</a>, and <a href="#servlet-saml2login-metadata">produce <code>&lt;saml2:SPSSODescriptor&gt;</code> metadata</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Remember that if you have any placeholders in your <code>RelyingPartyRegistration</code>, your resolver implementation should resolve them.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-rpr-duplicated"><a class="anchor" href="#servlet-saml2login-rpr-duplicated"></a>Duplicated Relying Party Configurations</h4>
+<div class="paragraph">
+<p>When an application uses multiple asserting parties, some configuration is duplicated between <code>RelyingPartyRegistration</code> instances:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The relying party&#8217;s <code>entityId</code></p>
+</li>
+<li>
+<p>Its <code>assertionConsumerServiceLocation</code>, and</p>
+</li>
+<li>
+<p>Its credentials, for example its signing or decryption credentials</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>What&#8217;s nice about this setup is credentials may be more easily rotated for some identity providers vs others.</p>
+</div>
+<div class="paragraph">
+<p>The duplication can be alleviated in a few different ways.</p>
+</div>
+<div class="paragraph">
+<p>First, in YAML this can be alleviated with references, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">spring:
+  security:
+    saml2:
+      relyingparty:
+        okta:
+          signing.credentials: &amp;relying-party-credentials
+            - private-key-location: classpath:rp.key
+            - certificate-location: classpath:rp.crt
+          identityprovider:
+            entity-id: ...
+        azure:
+          signing.credentials: *relying-party-credentials
+          identityprovider:
+            entity-id: ...</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Second, in a database, it&#8217;s not necessary to replicate <code>RelyingPartyRegistration</code> 's model.</p>
+</div>
+<div class="paragraph">
+<p>Third, in Java, you can create a custom configuration method, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private RelyingPartyRegistration.Builder
+        addRelyingPartyDetails(RelyingPartyRegistration.Builder builder) {
+
+	Saml2X509Credential signingCredential = ...
+	builder.signingX509Credentials(c -&gt; c.addAll(signingCredential));
+	// ... other relying party configurations
+}
+
+@Bean
+public RelyingPartyRegistrationRepository relyingPartyRegistrations() {
+    RelyingPartyRegistration okta = addRelyingPartyDetails(
+            RelyingPartyRegistration
+                .fromMetadataLocation(oktaMetadataUrl)
+                .registrationId("okta")).build();
+
+    RelyingPartyRegistration azure = addRelyingPartyDetails(
+            RelyingPartyRegistration
+                .fromMetadataLocation(oktaMetadataUrl)
+                .registrationId("azure")).build();
+
+    return new InMemoryRelyingPartyRegistrationRepository(okta, azure);
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-sp-initiated-factory"><a class="anchor" href="#servlet-saml2login-sp-initiated-factory"></a>Producing <code>&lt;saml2:AuthnRequest&gt;</code> s</h3>
+<div class="paragraph">
+<p>As stated earlier, Spring Security&#8217;s SAML 2.0 support produces a <code>&lt;saml2:AuthnRequest&gt;</code> to commence authentication with the asserting party.</p>
+</div>
+<div class="paragraph">
+<p>Spring Security achieves this in part by registering the <code>Saml2WebSsoAuthenticationRequestFilter</code> in the filter chain.
+This filter by default responds to endpoint <code>/saml2/authenticate/{registrationId}</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you were deployed to <code><a href="https://rp.example.com" class="bare">https://rp.example.com</a></code> and you gave your registration an ID of <code>okta</code>, you could navigate to:</p>
+</div>
+<div class="paragraph">
+<p><code><a href="https://rp.example.org/saml2/authenticate/ping" class="bare">https://rp.example.org/saml2/authenticate/ping</a></code></p>
+</div>
+<div class="paragraph">
+<p>and the result would be a redirect that included a <code>SAMLRequest</code> parameter containing the signed, deflated, and encoded <code>&lt;saml2:AuthnRequest&gt;</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-sp-initiated-factory-signing"><a class="anchor" href="#servlet-saml2login-sp-initiated-factory-signing"></a>Changing How the <code>&lt;saml2:AuthnRequest&gt;</code> Gets Sent</h4>
+<div class="paragraph">
+<p>By default, Spring Security signs each <code>&lt;saml2:AuthnRequest&gt;</code> and send it as a GET to the asserting party.</p>
+</div>
+<div class="paragraph">
+<p>Many asserting parties don&#8217;t require a signed <code>&lt;saml2:AuthnRequest&gt;</code>.
+This can be configured automatically via <code>RelyingPartyRegistrations</code>, or you can supply it manually, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 6. Not Requiring Signed AuthnRequests</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Boot</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">spring:
+  security:
+    saml2:
+      relyingparty:
+        okta:
+          identityprovider:
+            entity-id: ...
+            singlesignon.sign-request: false</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RelyingPartyRegistration relyingPartyRegistration = RelyingPartyRegistration.withRegistrationId("okta")
+        // ...
+        .assertingPartyDetails(party -&gt; party
+            // ...
+            .wantAuthnRequestsSigned(false)
+        );</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Otherwise, you will need to specify a private key to <code>RelyingPartyRegistration#signingX509Credentials</code> so that Spring Security can sign the <code>&lt;saml2:AuthnRequest&gt;</code> before sending.</p>
+</div>
+<div id="servlet-saml2login-sp-initiated-factory-algorithm" class="paragraph">
+<p>By default, Spring Security will sign the <code>&lt;saml2:AuthnRequest&gt;</code> using <code>rsa-sha256</code>, though some asserting parties will require a different algorithm, as indicated in their metadata.</p>
+</div>
+<div class="paragraph">
+<p>You can configure the algorithm based on the asserting party&#8217;s <a href="#servlet-saml2login-relyingpartyregistrationrepository">metadata using <code>RelyingPartyRegistrations</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>Or, you can provide it manually:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String metadataLocation = "classpath:asserting-party-metadata.xml";
+RelyingPartyRegistration relyingPartyRegistration = RelyingPartyRegistrations.fromMetadataLocation(metadataLocation)
+        // ...
+        .assertingPartyDetails((party) -&gt; party
+            // ...
+            .signingAlgorithms((sign) -&gt; sign.add(SignatureConstants.ALGO_ID_SIGNATURE_RSA_SHA512))
+        );</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The snippet above uses the OpenSAML <code>SignatureConstants</code> class to supply the algorithm name.
+But, that&#8217;s just for convenience.
+Since the datatype is <code>String</code>, you can supply the name of the algorithm directly.
+</td>
+</tr>
+</table>
+</div>
+<div id="servlet-saml2login-sp-initiated-factory-binding" class="paragraph">
+<p>Some asserting parties require that the <code>&lt;saml2:AuthnRequest&gt;</code> be POSTed.
+This can be configured automatically via <code>RelyingPartyRegistrations</code>, or you can supply it manually, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RelyingPartyRegistration relyingPartyRegistration = RelyingPartyRegistration.withRegistrationId("okta")
+        // ...
+        .assertingPartyDetails(party -&gt; party
+            // ...
+            .singleSignOnServiceBinding(Saml2MessageType.POST)
+        );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-sp-initiated-factory-custom-authnrequest"><a class="anchor" href="#servlet-saml2login-sp-initiated-factory-custom-authnrequest"></a>Customizing OpenSAML&#8217;s <code>AuthnRequest</code> Instance</h4>
+<div class="paragraph">
+<p>There are a number of reasons that you may want to adjust an <code>AuthnRequest</code>.
+For example, you may want <code>ForceAuthN</code> to be set to <code>true</code>, which Spring Security sets to <code>false</code> by default.</p>
+</div>
+<div class="paragraph">
+<p>If you don&#8217;t need information from the <code>HttpServletRequest</code> to make your decision, then the easiest way is to <a href="#servlet-saml2login-opensaml-customization">register a custom <code>AuthnRequestMarshaller</code> with OpenSAML</a>.
+This will give you access to post-process the <code>AuthnRequest</code> instance before it&#8217;s serialized.</p>
+</div>
+<div class="paragraph">
+<p>But, if you do need something from the request, then you can use create a custom <code>Saml2AuthenticationRequestContext</code> implementation and then a <code>Converter&lt;Saml2AuthenticationRequestContext, AuthnRequest&gt;</code> to build an <code>AuthnRequest</code> yourself, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
+public class AuthnRequestConverter implements
+        Converter&lt;MySaml2AuthenticationRequestContext, AuthnRequest&gt; {
+
+	private final AuthnRequestBuilder authnRequestBuilder;
+	private final IssuerBuilder issuerBuilder;
+
+	// ... constructor
+
+	public AuthnRequest convert(Saml2AuthenticationRequestContext context) {
+		MySaml2AuthenticationRequestContext myContext = (MySaml2AuthenticationRequestContext) context;
+		Issuer issuer = issuerBuilder.buildObject();
+		issuer.setValue(myContext.getIssuer());
+
+		AuthnRequest authnRequest = authnRequestBuilder.buildObject();
+		authnRequest.setIssuer(iss);
+        authnRequest.setDestination(myContext.getDestination());
+		authnRequest.setAssertionConsumerServiceURL(myContext.getAssertionConsumerServiceUrl());
+
+		// ... additional settings
+
+		authRequest.setForceAuthn(myContext.getForceAuthn());
+		return authnRequest;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, you can construct your own <code>Saml2AuthenticationRequestContextResolver</code> and <code>Saml2AuthenticationRequestFactory</code> and publish them as <code>@Bean</code> s:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+Saml2AuthenticationRequestContextResolver authenticationRequestContextResolver() {
+	Saml2AuthenticationRequestContextResolver resolver =
+            new DefaultSaml2AuthenticationRequestContextResolver();
+	return request -&gt; {
+        Saml2AuthenticationRequestContext context = resolver.resolve(request);
+        return new MySaml2AuthenticationRequestContext(context, request.getParameter("force") != null);
+	};
+}
+
+@Bean
+Saml2AuthenticationRequestFactory authenticationRequestFactory(
+		AuthnRequestConverter authnRequestConverter) {
+
+	OpenSamlAuthenticationRequestFactory authenticationRequestFactory =
+            new OpenSamlAuthenticationRequestFactory();
+	authenticationRequestFactory.setAuthenticationRequestContextConverter(authnRequestConverter);
+	return authenticationRequestFactory;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-authenticate-responses"><a class="anchor" href="#servlet-saml2login-authenticate-responses"></a>Authenticating <code>&lt;saml2:Response&gt;</code> s</h3>
+<div class="paragraph">
+<p>To verify SAML 2.0 Responses, Spring Security uses <a href="#servlet-saml2login-architecture"><code>OpenSamlAuthenticationProvider</code></a> by default.</p>
+</div>
+<div class="paragraph">
+<p>You can configure this in a number of ways including:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Setting a clock skew to timestamp validation</p>
+</li>
+<li>
+<p>Mapping the response to a list of <code>GrantedAuthority</code> instances</p>
+</li>
+<li>
+<p>Customizing the strategy for validating assertions</p>
+</li>
+<li>
+<p>Customizing the strategy for decrypting response and assertion elements</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To configure these, you&#8217;ll use the <code>saml2Login#authenticationManager</code> method in the DSL.</p>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-opensamlauthenticationprovider-clockskew"><a class="anchor" href="#servlet-saml2login-opensamlauthenticationprovider-clockskew"></a>Setting a Clock Skew</h4>
+<div class="paragraph">
+<p>It&#8217;s not uncommon for the asserting and relying parties to have system clocks that aren&#8217;t perfectly synchronized.
+For that reason, you can configure <code>OpenSamlAuthenticationProvider</code> 's default assertion validator with some tolerance:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        OpenSamlAuthenticationProvider authenticationProvider = new OpenSamlAuthenticationProvider();
+        authenticationProvider.setAssertionValidator(OpenSamlAuthenticationProvider
+                .createDefaultAssertionValidator(assertionToken -&gt; {
+        			Map&lt;String, Object&gt; params = new HashMap&lt;&gt;();
+        			params.put(CLOCK_SKEW, Duration.ofMinutes(10).toMillis());
+        			// ... other validation parameters
+        			return new ValidationContext(params);
+        		})
+        );
+
+        http
+            .authorizeRequests(authz -&gt; authz
+                .anyRequest().authenticated()
+            )
+            .saml2Login(saml2 -&gt; saml2
+                .authenticationManager(new ProviderManager(authenticationProvider))
+            );
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-opensamlauthenticationprovider-userdetailsservice"><a class="anchor" href="#servlet-saml2login-opensamlauthenticationprovider-userdetailsservice"></a>Coordinating with a <code>UserDetailsService</code></h4>
+<div class="paragraph">
+<p>Or, perhaps you would like to include user details from a legacy <code>UserDetailsService</code>.
+In that case, the response authentication converter can come in handy, as can be seen below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+    @Autowired
+    UserDetailsService userDetailsService;
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        OpenSamlAuthenticationProvider authenticationProvider = new OpenSamlAuthenticationProvider();
+        authenticationProvider.setResponseAuthenticationConverter(responseToken -&gt; {
+        	Saml2Authentication authentication = OpenSamlAuthenticationProvider
+                    .createDefaultResponseAuthenticationConverter() <i class="conum" data-value="1"></i><b>(1)</b>
+                    .convert(responseToken);
+        	Assertion assertion = responseToken.getResponse().getAssertions().get(0);
+            String username = assertion.getSubject().getNameID().getValue();
+            UserDetails userDetails = this.userDetailsService.loadUserByUsername(username); <i class="conum" data-value="2"></i><b>(2)</b>
+            return MySaml2Authentication(userDetails, authentication); <i class="conum" data-value="3"></i><b>(3)</b>
+        });
+
+        http
+            .authorizeRequests(authz -&gt; authz
+                .anyRequest().authenticated()
+            )
+            .saml2Login(saml2 -&gt; saml2
+                .authenticationManager(new ProviderManager(authenticationProvider))
+            );
+    }
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>First, call the default converter, which extracts attributes and authorities from the response</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Second, call the <a href="#servlet-authentication-userdetailsservice"><code>UserDetailsService</code></a> using the relevant information</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Third, return a custom authentication that includes the user details</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It&#8217;s not required to call <code>OpenSamlAuthenticationProvider</code> 's default authentication converter.
+It returns a <code>Saml2AuthenticatedPrincipal</code> containing the attributes it extracted from <code>AttributeStatement</code> s as well as the single <code>ROLE_USER</code> authority.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-opensamlauthenticationprovider-additionalvalidation"><a class="anchor" href="#servlet-saml2login-opensamlauthenticationprovider-additionalvalidation"></a>Performing Additional Validation</h4>
+<div class="paragraph">
+<p><code>OpenSamlAuthenticationProvider</code> performs minimal validation on SAML 2.0 Assertions.
+After verifying the signature, it will:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Validate <code>&lt;AudienceRestriction&gt;</code> and <code>&lt;DelegationRestriction&gt;</code> conditions</p>
+</li>
+<li>
+<p>Validate <code>&lt;SubjectConfirmation&gt;</code> s, expect for any IP address information</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>To perform additional validation, you can configure your own assertion validator that delegates to <code>OpenSamlAuthenticationProvider</code> 's default and then performs its own.</p>
+</div>
+<div id="servlet-saml2login-opensamlauthenticationprovider-onetimeuse" class="paragraph">
+<p>For example, you can use OpenSAML&#8217;s <code>OneTimeUseConditionValidator</code> to also validate a <code>&lt;OneTimeUse&gt;</code> condition, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">OpenSamlAuthenticationProvider provider = new OpenSamlAuthenticationProvider();
+OneTimeUseConditionValidator validator = ...;
+provider.setAssertionValidator(assertionToken -&gt; {
+    Saml2ResponseValidatorResult result = OpenSamlAuthenticationProvider
+            .createDefaultAssertionValidator()
+            .convert(assertionToken);
+    Assertion assertion = assertionToken.getAssertion();
+    OneTimeUse oneTimeUse = assertion.getConditions().getOneTimeUse();
+    ValidationContext context = new ValidationContext();
+    try {
+    	if (validator.validate(oneTimeUse, assertion, context) == ValidationResult.VALID) {
+    		return result;
+    	}
+    } catch (Exception e) {
+    	return result.concat(new Saml2Error(INVALID_ASSERTION, e.getMessage()));
+    }
+    return result.contact(new Saml2Error(INVALID_ASSERTION, context.getValidationFailureMessage()));
+});</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+While recommended, it&#8217;s not necessary to call <code>OpenSamlAuthenticationProvider</code> 's default assertion validator.
+A circumstance where you would skip it would be if you don&#8217;t need it to check the <code>&lt;AudienceRestriction&gt;</code> or the <code>&lt;SubjectConfirmation&gt;</code> since you are doing those yourself.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-opensamlauthenticationprovider-decryption"><a class="anchor" href="#servlet-saml2login-opensamlauthenticationprovider-decryption"></a>Customizing Decryption</h4>
+<div class="paragraph">
+<p>Spring Security decrypts <code>&lt;saml2:EncryptedAssertion&gt;</code>, <code>&lt;saml2:EncryptedAttribute&gt;</code>, and <code>&lt;saml2:EncryptedID&gt;</code> elements automatically by using the decryption <a href="#servlet-saml2login-rpr-credentials"><code>Saml2X509Credential</code> instances</a> registered in the <a href="#servlet-saml2login-relyingpartyregistration"><code>RelyingPartyRegistration</code></a>.</p>
+</div>
+<div class="paragraph">
+<p><code>OpenSamlAuthenticationProvider</code> exposes <a href="#servlet-saml2login-architecture">two decryption strategies</a>.
+The response decrypter is for decrypting encrypted elements of the <code>&lt;saml2:Response&gt;</code>, like <code>&lt;saml2:EncryptedAssertion&gt;</code>.
+The assertion decrypter is for decrypting encrypted elements of the <code>&lt;saml2:Assertion&gt;</code>, like <code>&lt;saml2:EncryptedAttribute&gt;</code> and <code>&lt;saml2:EncryptedID&gt;</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can replace <code>OpenSamlAuthenticationProvider&#8217;s default decryption strategy with your own.
+For example, if you have a separate service that decrypts the assertions in a `&lt;saml2:Response&gt;</code>, you can use it instead like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">MyDecryptionService decryptionService = ...;
+OpenSamlAuthenticationProvider provider = new OpenSamlAuthenticationProvider();
+provider.setResponseElementsDecrypter((responseToken) -&gt; decryptionService.decrypt(responseToken.getResponse()));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you are also decrypting individual elements in a <code>&lt;saml2:Assertion&gt;</code>, you can customize the assertion decrypter, too:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">provider.setAssertionElementsDecrypter((assertionToken) -&gt; decryptionService.decrypt(assertionToken.getAssertion()));</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+There are two separate decrypters since assertions can be signed separately from responses.
+Trying to decrypt a signed assertion&#8217;s elements before signature verification may invalidate the signature.
+If your asserting party signs the response only, then it&#8217;s safe to decrypt all elements using only the response decrypter.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="servlet-saml2login-authenticationmanager-custom"><a class="anchor" href="#servlet-saml2login-authenticationmanager-custom"></a>Using a Custom Authentication Manager</h4>
+<div id="servlet-saml2login-opensamlauthenticationprovider-authenticationmanager" class="paragraph">
+<p>Of course, the <code>authenticationManager</code> DSL method can be also used to perform a completely custom SAML 2.0 authentication.
+This authentication manager should expect a <code>Saml2AuthenticationToken</code> object containing the SAML 2.0 Response XML data.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
+public class SecurityConfig extends WebSecurityConfigurerAdapter {
+
+    @Override
+    protected void configure(HttpSecurity http) throws Exception {
+        AuthenticationManager authenticationManager = new MySaml2AuthenticationManager(...);
+        http
+            .authorizeRequests(authorize -&gt; authorize
+                .anyRequest().authenticated()
+            )
+            .saml2Login(saml2 -&gt; saml2
+                .authenticationManager(authenticationManager)
+            )
+        ;
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-authenticatedprincipal"><a class="anchor" href="#servlet-saml2login-authenticatedprincipal"></a>Using <code>Saml2AuthenticatedPrincipal</code></h3>
+<div class="paragraph">
+<p>With the relying party correctly configured for a given asserting party, it&#8217;s ready to accept assertions.
+Once the relying party validates an assertion, the result is a <code>Saml2Authentication</code> with a <code>Saml2AuthenticatedPrincipal</code>.</p>
+</div>
+<div class="paragraph">
+<p>This means that you can access the principal in your controller like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Controller
+public class MainController {
+	@GetMapping("/")
+	public String index(@AuthenticationPrincipal Saml2AuthenticatedPrincipal principal, Model model) {
+		String email = principal.getFirstAttribute("email");
+		model.setAttribute("email", email);
+		return "index";
+	}
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Because the SAML 2.0 specification allows for each attribute to have multiple values, you can either call <code>getAttribute</code> to get the list of attributes or <code>getFirstAttribute</code> to get the first in the list.
+<code>getFirstAttribute</code> is quite handy when you know that there is only one value.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-metadata"><a class="anchor" href="#servlet-saml2login-metadata"></a>Producing <code>&lt;saml2:SPSSODescriptor&gt;</code> Metadata</h3>
+<div class="paragraph">
+<p>You can publish a metadata endpoint by adding the <code>Saml2MetadataFilter</code> to the filter chain, as you&#8217;ll see below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Converter&lt;HttpServletRequest, RelyingPartyRegistration&gt; relyingPartyRegistrationResolver =
+        new DefaultRelyingPartyRegistrationResolver(this.relyingPartyRegistrationRepository);
+Saml2MetadataFilter filter = new Saml2MetadataFilter(
+		relyingPartyRegistrationResolver,
+        new OpenSamlMetadataResolver());
+
+http
+    // ...
+    .saml2Login(withDefaults())
+    .addFilterBefore(new Saml2MetadataFilter(r), Saml2WebSsoAuthenticationFilter.class);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can use this metadata endpoint to register your relying party with your asserting party.
+This is often as simple as finding the correct form field to supply the metadata endpoint.</p>
+</div>
+<div class="paragraph">
+<p>By default, the metadata endpoint is <code>/saml2/service-provider-metadata/{registrationId}</code>.
+You can change this by calling the <code>setRequestMatcher</code> method on the filter:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">filter.setRequestMatcher(new AntPathRequestMatcher("/saml2/metadata/{registrationId}", "GET"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>ensuring that the <code>registrationId</code> hint is at the end of the path.</p>
+</div>
+<div class="paragraph">
+<p>Or, if you have registered a custom relying party registration resolver in the constructor, then you can specify a path without a <code>registrationId</code> hint, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">filter.setRequestMatcher(new AntPathRequestMatcher("/saml2/metadata", "GET"));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-saml2login-logout"><a class="anchor" href="#servlet-saml2login-logout"></a>Performing Single Logout</h3>
+<div class="paragraph">
+<p>Spring Security does not yet support single logout.</p>
+</div>
+<div class="paragraph">
+<p>Generally speaking, though, you can achieve this by creating and registering a custom <code>LogoutSuccessHandler</code> and <code>RequestMatcher</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">http
+    // ...
+    .logout(logout -&gt; logout
+        .logoutSuccessHandler(myCustomSuccessHandler())
+        .logoutRequestMatcher(myRequestMatcher())
+    )</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The success handler will send logout requests to the asserting party.</p>
+</div>
+<div class="paragraph">
+<p>The request matcher will detect logout requests from the asserting party.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../../_/js/tabs.js"></script>  </body>
+</html>

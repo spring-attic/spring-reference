@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../6/overview/prerequisites.html">6</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.6</button>
+  <div class="version-menu">
+    <a class="version" href="../../../6/servlet/authentication/session-management.html">6</a>
+    <a class="version is-current" href="session-management.html">5.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/authentication/session-management.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="session-mgmt"><a class="anchor" href="#session-mgmt"></a>Session Management</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>HTTP session related functionality is handled by a combination of the <code>SessionManagementFilter</code> and the <code>SessionAuthenticationStrategy</code> interface, which the filter delegates to.
+Typical usage includes session-fixation protection attack prevention, detection of session timeouts and restrictions on how many sessions an authenticated user may have open concurrently.</p>
+</div>
+<div class="sect2">
+<h3 id="_detecting_timeouts"><a class="anchor" href="#_detecting_timeouts"></a>Detecting Timeouts</h3>
+<div class="paragraph">
+<p>You can configure Spring Security to detect the submission of an invalid session ID and redirect the user to an appropriate URL.
+This is achieved through the <code>session-management</code> element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+...
+&lt;session-management invalid-session-url="/invalidSession.htm" /&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that if you use this mechanism to detect session timeouts, it may falsely report an error if the user logs out and then logs back in without closing the browser.
+This is because the session cookie is not cleared when you invalidate the session and will be resubmitted even if the user has logged out.
+You may be able to explicitly delete the JSESSIONID cookie on logging out, for example by using the following syntax in the logout handler:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+&lt;logout delete-cookies="JSESSIONID" /&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Unfortunately this can&#8217;t be guaranteed to work with every servlet container, so you will need to test it in your environment</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you are running your application behind a proxy, you may also be able to remove the session cookie by configuring the proxy server.
+For example, using Apache HTTPD&#8217;s mod_headers, the following directive would delete the <code>JSESSIONID</code> cookie by expiring it in the response to a logout request (assuming the application is deployed under the path <code>/tutorial</code>):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;LocationMatch "/tutorial/logout"&gt;
+Header always set Set-Cookie "JSESSIONID=;Path=/tutorial;Expires=Thu, 01 Jan 1970 00:00:00 GMT"
+&lt;/LocationMatch&gt;</code></pre>
+</div>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ns-concurrent-sessions"><a class="anchor" href="#ns-concurrent-sessions"></a>Concurrent Session Control</h3>
+<div class="paragraph">
+<p>If you wish to place constraints on a single user&#8217;s ability to log in to your application, Spring Security supports this out of the box with the following simple additions.
+First you need to add the following listener to your <code>web.xml</code> file to keep Spring Security updated about session lifecycle events:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;listener&gt;
+&lt;listener-class&gt;
+	org.springframework.security.web.session.HttpSessionEventPublisher
+&lt;/listener-class&gt;
+&lt;/listener&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then add the following lines to your application context:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+...
+&lt;session-management&gt;
+	&lt;concurrency-control max-sessions="1" /&gt;
+&lt;/session-management&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will prevent a user from logging in multiple times - a second login will cause the first to be invalidated.
+Often you would prefer to prevent a second login, in which case you can use</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+...
+&lt;session-management&gt;
+	&lt;concurrency-control max-sessions="1" error-if-maximum-exceeded="true" /&gt;
+&lt;/session-management&gt;
+&lt;/http&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The second login will then be rejected.
+By "rejected", we mean that the user will be sent to the <code>authentication-failure-url</code> if form-based login is being used.
+If the second authentication takes place through another non-interactive mechanism, such as "remember-me", an "unauthorized" (401) error will be sent to the client.
+If instead you want to use an error page, you can add the attribute <code>session-authentication-error-url</code> to the <code>session-management</code> element.</p>
+</div>
+<div class="paragraph">
+<p>If you are using a customized authentication filter for form-based login, then you have to configure concurrent session control support explicitly.
+More details can be found in the <a href="#session-mgmt">Session Management chapter</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ns-session-fixation"><a class="anchor" href="#ns-session-fixation"></a>Session Fixation Attack Protection</h3>
+<div class="paragraph">
+<p><a href="https://en.wikipedia.org/wiki/Session_fixation">Session fixation</a> attacks are a potential risk where it is possible for a malicious attacker to create a session by accessing a site, then persuade another user to log in with the same session (by sending them a link containing the session identifier as a parameter, for example).
+Spring Security protects against this automatically by creating a new session or otherwise changing the session ID when a user logs in.
+If you don&#8217;t require this protection, or it conflicts with some other requirement, you can control the behavior using the <code>session-fixation-protection</code> attribute on <code>&lt;session-management&gt;</code>, which has four options</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>none</code> - Don&#8217;t do anything.
+The original session will be retained.</p>
+</li>
+<li>
+<p><code>newSession</code> - Create a new "clean" session, without copying the existing session data (Spring Security-related attributes will still be copied).</p>
+</li>
+<li>
+<p><code>migrateSession</code> - Create a new session and copy all existing session attributes to the new session.
+This is the default in Servlet 3.0 or older containers.</p>
+</li>
+<li>
+<p><code>changeSessionId</code> - Do not create a new session.
+Instead, use the session fixation protection provided by the Servlet container (<code>HttpServletRequest#changeSessionId()</code>).
+This option is only available in Servlet 3.1 (Java EE 7) and newer containers.
+Specifying it in older containers will result in an exception.
+This is the default in Servlet 3.1 and newer containers.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When session fixation protection occurs, it results in a <code>SessionFixationProtectionEvent</code> being published in the application context.
+If you use <code>changeSessionId</code>, this protection will <em>also</em> result in any  <code>javax.servlet.http.HttpSessionIdListener</code> s being notified, so use caution if your code listens for both events.
+See the <a href="#session-mgmt">Session Management</a> chapter for additional information.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sessionmanagementfilter"><a class="anchor" href="#_sessionmanagementfilter"></a>SessionManagementFilter</h3>
+<div class="paragraph">
+<p>The <code>SessionManagementFilter</code> checks the contents of the <code>SecurityContextRepository</code> against the current contents of the <code>SecurityContextHolder</code> to determine whether a user has been authenticated during the current request, typically by a non-interactive authentication mechanism, such as pre-authentication or remember-me  <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
+If the repository contains a security context, the filter does nothing.
+If it doesn&#8217;t, and the thread-local <code>SecurityContext</code> contains a (non-anonymous) <code>Authentication</code> object, the filter assumes they have been authenticated by a previous filter in the stack.
+It will then invoke the configured <code>SessionAuthenticationStrategy</code>.</p>
+</div>
+<div class="paragraph">
+<p>If the user is not currently authenticated, the filter will check whether an invalid session ID has been requested (because of a timeout, for example) and will invoke the configured <code>InvalidSessionStrategy</code>, if one is set.
+The most common behaviour is just to redirect to a fixed URL and this is encapsulated in the standard implementation <code>SimpleRedirectInvalidSessionStrategy</code>.
+The latter is also used when configuring an invalid session URL through the namespace,<a href="#session-mgmt">as described earlier</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_sessionauthenticationstrategy"><a class="anchor" href="#_sessionauthenticationstrategy"></a>SessionAuthenticationStrategy</h3>
+<div class="paragraph">
+<p><code>SessionAuthenticationStrategy</code> is used by both <code>SessionManagementFilter</code> and <code>AbstractAuthenticationProcessingFilter</code>, so if you are using a customized form-login class, for example, you will need to inject it into both of these.
+In this case, a typical configuration, combining the namespace and custom beans might look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+&lt;custom-filter position="FORM_LOGIN_FILTER" ref="myAuthFilter" /&gt;
+&lt;session-management session-authentication-strategy-ref="sas"/&gt;
+&lt;/http&gt;
+
+&lt;beans:bean id="myAuthFilter" class=
+"org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter"&gt;
+	&lt;beans:property name="sessionAuthenticationStrategy" ref="sas" /&gt;
+	...
+&lt;/beans:bean&gt;
+
+&lt;beans:bean id="sas" class=
+"org.springframework.security.web.authentication.session.SessionFixationProtectionStrategy" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the use of the default, <code>SessionFixationProtectionStrategy</code> may cause issues if you are storing beans in the session which implement <code>HttpSessionBindingListener</code>, including Spring session-scoped beans.
+See the Javadoc for this class for more information.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="concurrent-sessions"><a class="anchor" href="#concurrent-sessions"></a>Concurrency Control</h3>
+<div class="paragraph">
+<p>Spring Security is able to prevent a principal from concurrently authenticating to the same application more than a specified number of times.
+Many ISVs take advantage of this to enforce licensing, whilst network administrators like this feature because it helps prevent people from sharing login names.
+You can, for example, stop user "Batman" from logging onto the web application from two different sessions.
+You can either expire their previous login or you can report an error when they try to log in again, preventing the second login.
+Note that if you are using the second approach, a user who has not explicitly logged out (but who has just closed their browser, for example) will not be able to log in again until their original session expires.</p>
+</div>
+<div class="paragraph">
+<p>Concurrency control is supported by the namespace, so please check the earlier namespace chapter for the simplest configuration.
+Sometimes you need to customize things though.</p>
+</div>
+<div class="paragraph">
+<p>The implementation uses a specialized version of <code>SessionAuthenticationStrategy</code>, called <code>ConcurrentSessionControlAuthenticationStrategy</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Previously the concurrent authentication check was made by the <code>ProviderManager</code>, which could be injected with a <code>ConcurrentSessionController</code>.
+The latter would check if the user was attempting to exceed the number of permitted sessions.
+However, this approach required that an HTTP session be created in advance, which is undesirable.
+In Spring Security 3, the user is first authenticated by the <code>AuthenticationManager</code> and once they are successfully authenticated, a session is created and the check is made whether they are allowed to have another session open.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To use concurrent session support, you&#8217;ll need to add the following to <code>web.xml</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;listener&gt;
+	&lt;listener-class&gt;
+	org.springframework.security.web.session.HttpSessionEventPublisher
+	&lt;/listener-class&gt;
+&lt;/listener&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In addition, you will need to add the <code>ConcurrentSessionFilter</code> to your <code>FilterChainProxy</code>.
+The <code>ConcurrentSessionFilter</code> requires two constructor arguments, <code>sessionRegistry</code>, which generally points to an instance of <code>SessionRegistryImpl</code>, and <code>sessionInformationExpiredStrategy</code>, which defines the strategy to apply when a session has expired.
+A configuration using the namespace to create the <code>FilterChainProxy</code> and other default beans might look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
+&lt;custom-filter position="CONCURRENT_SESSION_FILTER" ref="concurrencyFilter" /&gt;
+&lt;custom-filter position="FORM_LOGIN_FILTER" ref="myAuthFilter" /&gt;
+
+&lt;session-management session-authentication-strategy-ref="sas"/&gt;
+&lt;/http&gt;
+
+&lt;beans:bean id="redirectSessionInformationExpiredStrategy"
+class="org.springframework.security.web.session.SimpleRedirectSessionInformationExpiredStrategy"&gt;
+&lt;beans:constructor-arg name="invalidSessionUrl" value="/session-expired.htm" /&gt;
+&lt;/beans:bean&gt;
+
+&lt;beans:bean id="concurrencyFilter"
+class="org.springframework.security.web.session.ConcurrentSessionFilter"&gt;
+&lt;beans:constructor-arg name="sessionRegistry" ref="sessionRegistry" /&gt;
+&lt;beans:constructor-arg name="sessionInformationExpiredStrategy" ref="redirectSessionInformationExpiredStrategy" /&gt;
+&lt;/beans:bean&gt;
+
+&lt;beans:bean id="myAuthFilter" class=
+"org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter"&gt;
+&lt;beans:property name="sessionAuthenticationStrategy" ref="sas" /&gt;
+&lt;beans:property name="authenticationManager" ref="authenticationManager" /&gt;
+&lt;/beans:bean&gt;
+
+&lt;beans:bean id="sas" class="org.springframework.security.web.authentication.session.CompositeSessionAuthenticationStrategy"&gt;
+&lt;beans:constructor-arg&gt;
+	&lt;beans:list&gt;
+	&lt;beans:bean class="org.springframework.security.web.authentication.session.ConcurrentSessionControlAuthenticationStrategy"&gt;
+		&lt;beans:constructor-arg ref="sessionRegistry"/&gt;
+		&lt;beans:property name="maximumSessions" value="1" /&gt;
+		&lt;beans:property name="exceptionIfMaximumExceeded" value="true" /&gt;
+	&lt;/beans:bean&gt;
+	&lt;beans:bean class="org.springframework.security.web.authentication.session.SessionFixationProtectionStrategy"&gt;
+	&lt;/beans:bean&gt;
+	&lt;beans:bean class="org.springframework.security.web.authentication.session.RegisterSessionAuthenticationStrategy"&gt;
+		&lt;beans:constructor-arg ref="sessionRegistry"/&gt;
+	&lt;/beans:bean&gt;
+	&lt;/beans:list&gt;
+&lt;/beans:constructor-arg&gt;
+&lt;/beans:bean&gt;
+
+&lt;beans:bean id="sessionRegistry"
+	class="org.springframework.security.core.session.SessionRegistryImpl" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Adding the listener to <code>web.xml</code> causes an <code>ApplicationEvent</code> to be published to the Spring <code>ApplicationContext</code> every time a <code>HttpSession</code> commences or ends.
+This is critical, as it allows the <code>SessionRegistryImpl</code> to be notified when a session ends.
+Without it, a user will never be able to log back in again once they have exceeded their session allowance, even if they log out of another session or it times out.</p>
+</div>
+<div class="sect3">
+<h4 id="list-authenticated-principals"><a class="anchor" href="#list-authenticated-principals"></a>Querying the SessionRegistry for currently authenticated users and their sessions</h4>
+<div class="paragraph">
+<p>Setting up concurrency-control, either through the namespace or using plain beans has the useful side effect of providing you with a reference to the <code>SessionRegistry</code> which you can use directly within your application, so even if you don&#8217;t want to restrict the number of sessions a user may have, it may be worth setting up the infrastructure anyway.
+You can set the <code>maximumSession</code> property to -1 to allow unlimited sessions.
+If you&#8217;re using the namespace, you can set an alias for the internally-created <code>SessionRegistry</code> using the <code>session-registry-alias</code> attribute, providing a reference which you can inject into your own beans.</p>
+</div>
+<div class="paragraph">
+<p>The <code>getAllPrincipals()</code> method supplies you with a list of the currently authenticated users.
+You can list a user&#8217;s sessions by calling the <code>getAllSessions(Object principal, boolean includeExpiredSessions)</code> method, which returns a list of <code>SessionInformation</code> objects.
+You can also expire a user&#8217;s session by calling <code>expireNow()</code> on a <code>SessionInformation</code> instance.
+When the user returns to the application, they will be prevented from proceeding.
+You may find these methods useful in an administration application, for example.
+Have a look at the Javadoc for more information.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. Authentication by mechanisms which perform a redirect after authenticating (such as form-login) will not be detected by <code>SessionManagementFilter</code>, as the filter will not be invoked during the authenticating request. Session-management functionality has to be handled separately in these cases.
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../../_/js/tabs.js"></script>  </body>
+</html>

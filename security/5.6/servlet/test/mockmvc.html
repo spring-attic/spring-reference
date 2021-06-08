@@ -1,0 +1,1369 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../6/overview/prerequisites.html">6</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.6</button>
+  <div class="version-menu">
+    <a class="version" href="../../../6/servlet/test/mockmvc.html">6</a>
+    <a class="version is-current" href="mockmvc.html">5.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/test/mockmvc.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="test-mockmvc"><a class="anchor" href="#test-mockmvc"></a>Spring MVC Test Integration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security provides comprehensive integration with <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/testing.html#spring-mvc-test-framework">Spring MVC Test</a></p>
+</div>
+<div class="sect2">
+<h3 id="test-mockmvc-setup"><a class="anchor" href="#test-mockmvc-setup"></a>Setting Up MockMvc and Spring Security</h3>
+<div class="paragraph">
+<p>In order to use Spring Security with Spring MVC Test it is necessary to add the Spring Security <code>FilterChainProxy</code> as a <code>Filter</code>.
+It is also necessary to add Spring Security&#8217;s <code>TestSecurityContextHolderPostProcessor</code> to support <a href="#_running_as_a_user_in_spring_mvc_test_with_annotations">Running as a User in Spring MVC Test with Annotations</a>.
+This can be done using Spring Security&#8217;s <code>SecurityMockMvcConfigurers.springSecurity()</code>.
+For example:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Spring Security&#8217;s testing support requires spring-test-4.1.3.RELEASE or greater.
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.*;
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = SecurityConfig.class)
+@WebAppConfiguration
+public class CsrfShowcaseTests {
+
+	@Autowired
+	private WebApplicationContext context;
+
+	private MockMvc mvc;
+
+	@Before
+	public void setup() {
+		mvc = MockMvcBuilders
+				.webAppContextSetup(context)
+				.apply(springSecurity()) <i class="conum" data-value="1"></i><b>(1)</b>
+				.build();
+	}
+
+...</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>SecurityMockMvcConfigurers.springSecurity()</code> will perform all of the initial setup we need to integrate Spring Security with Spring MVC Test</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="test-mockmvc-smmrpp"><a class="anchor" href="#test-mockmvc-smmrpp"></a>SecurityMockMvcRequestPostProcessors</h3>
+<div class="paragraph">
+<p>Spring MVC Test provides a convenient interface called a <code>RequestPostProcessor</code> that can be used to modify a request.
+Spring Security provides a number of <code>RequestPostProcessor</code> implementations that make testing easier.
+In order to use Spring Security&#8217;s <code>RequestPostProcessor</code> implementations ensure the following static import is used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="test-mockmvc-csrf"><a class="anchor" href="#test-mockmvc-csrf"></a>Testing with CSRF Protection</h4>
+<div class="paragraph">
+<p>When testing any non-safe HTTP methods and using Spring Security&#8217;s CSRF protection, you must be sure to include a valid CSRF Token in the request.
+To specify a valid CSRF token as a request parameter using the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(post("/").with(csrf()))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you like you can include CSRF token in the header instead:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(post("/").with(csrf().asHeader()))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also test providing an invalid CSRF token using the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(post("/").with(csrf().useInvalidToken()))</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="test-mockmvc-securitycontextholder"><a class="anchor" href="#test-mockmvc-securitycontextholder"></a>Running a Test as a User in Spring MVC Test</h4>
+<div class="paragraph">
+<p>It is often desirable to run tests as a specific user.
+There are two simple ways of populating the user:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#test-mockmvc-securitycontextholder-rpp">Running as a User in Spring MVC Test with RequestPostProcessor</a></p>
+</li>
+<li>
+<p><a href="#_running_as_a_user_in_spring_mvc_test_with_annotations">Running as a User in Spring MVC Test with Annotations</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="test-mockmvc-securitycontextholder-rpp"><a class="anchor" href="#test-mockmvc-securitycontextholder-rpp"></a>Running as a User in Spring MVC Test with RequestPostProcessor</h4>
+<div class="paragraph">
+<p>There are a number of options available to associate a user to the current <code>HttpServletRequest</code>.
+For example, the following will run as a user (which does not need to exist) with the username "user", the password "password", and the role "ROLE_USER":</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The support works by associating the user to the <code>HttpServletRequest</code>.
+To associate the request to the <code>SecurityContextHolder</code> you need to ensure that the <code>SecurityContextPersistenceFilter</code> is associated with the <code>MockMvc</code> instance.
+A few ways to do this are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Invoking <a href="#test-mockmvc-setup">apply(springSecurity())</a></p>
+</li>
+<li>
+<p>Adding Spring Security&#8217;s <code>FilterChainProxy</code> to <code>MockMvc</code></p>
+</li>
+<li>
+<p>Manually adding <code>SecurityContextPersistenceFilter</code> to the <code>MockMvc</code> instance may make sense when using <code>MockMvcBuilders.standaloneSetup</code></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(get("/").with(user("user")))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can easily make customizations.
+For example, the following will run as a user (which does not need to exist) with the username "admin", the password "pass", and the roles "ROLE_USER" and "ROLE_ADMIN".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(get("/admin").with(user("admin").password("pass").roles("USER","ADMIN")))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you have a custom <code>UserDetails</code> that you would like to use, you can easily specify that as well.
+For example, the following will use the specified <code>UserDetails</code> (which does not need to exist) to run with a <code>UsernamePasswordAuthenticationToken</code> that has a principal of the specified <code>UserDetails</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(get("/").with(user(userDetails)))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can run as anonymous user using the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(get("/").with(anonymous()))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This is especially useful if you are running with a default user and wish to process a few requests as an anonymous user.</p>
+</div>
+<div class="paragraph">
+<p>If you want a custom <code>Authentication</code> (which does not need to exist) you can do so using the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(get("/").with(authentication(authentication)))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can even customize the <code>SecurityContext</code> using the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(get("/").with(securityContext(securityContext)))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can also ensure to run as a specific user for every request by using <code>MockMvcBuilders</code>'s default request.
+For example, the following will run as a user (which does not need to exist) with the username "admin", the password "password", and the role "ROLE_ADMIN":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc = MockMvcBuilders
+		.webAppContextSetup(context)
+		.defaultRequest(get("/").with(user("user").roles("ADMIN")))
+		.apply(springSecurity())
+		.build();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If you find you are using the same user in many of your tests, it is recommended to move the user to a method.
+For example, you can specify the following in your own class named <code>CustomSecurityMockMvcRequestPostProcessors</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static RequestPostProcessor rob() {
+	return user("rob").roles("ADMIN");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can perform a static import on <code>SecurityMockMvcRequestPostProcessors</code> and use that within your tests:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static sample.CustomSecurityMockMvcRequestPostProcessors.*;
+
+...
+
+mvc
+	.perform(get("/").with(rob()))</code></pre>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_running_as_a_user_in_spring_mvc_test_with_annotations"><a class="anchor" href="#_running_as_a_user_in_spring_mvc_test_with_annotations"></a>Running as a User in Spring MVC Test with Annotations</h5>
+<div class="paragraph">
+<p>As an alternative to using a <code>RequestPostProcessor</code> to create your user, you can use annotations described in <a href="#Testing Method Security">[Testing Method Security]</a>.
+For example, the following will run the test with the user with username "user", password "password", and role "ROLE_USER":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+@WithMockUser
+public void requestProtectedUrlWithUser() throws Exception {
+mvc
+		.perform(get("/"))
+		...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, the following will run the test with the user with username "user", password "password", and role "ROLE_ADMIN":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
+@WithMockUser(roles="ADMIN")
+public void requestProtectedUrlWithUser() throws Exception {
+mvc
+		.perform(get("/"))
+		...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_testing_http_basic_authentication"><a class="anchor" href="#_testing_http_basic_authentication"></a>Testing HTTP Basic Authentication</h4>
+<div class="paragraph">
+<p>While it has always been possible to authenticate with HTTP Basic, it was a bit tedious to remember the header name, format, and encode the values.
+Now this can be done using Spring Security&#8217;s <code>httpBasic</code> <code>RequestPostProcessor</code>.
+For example, the snippet below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(get("/").with(httpBasic("user","password")))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>will attempt to use HTTP Basic to authenticate a user with the username "user" and the password "password" by ensuring the following header is populated on the HTTP Request:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-text hljs" data-lang="text">Authorization: Basic dXNlcjpwYXNzd29yZA==</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="testing-oauth2"><a class="anchor" href="#testing-oauth2"></a>Testing OAuth 2.0</h4>
+<div class="paragraph">
+<p>When it comes to OAuth 2.0, the same principles covered earlier still apply: Ultimately, it depends on what your method under test is expecting to be in the <code>SecurityContextHolder</code>.</p>
+</div>
+<div class="paragraph">
+<p>For example, for a controller that looks like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
+public String foo(Principal user) {
+    return user.getName();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>There&#8217;s nothing OAuth2-specific about it, so you will likely be able to simply <a href="#test-method-withmockuser">use <code>@WithMockUser</code></a> and be fine.</p>
+</div>
+<div class="paragraph">
+<p>But, in cases where your controllers are bound to some aspect of Spring Security&#8217;s OAuth 2.0 support, like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
+public String foo(@AuthenticationPrincipal OidcUser user) {
+    return user.getIdToken().getSubject();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>then Spring Security&#8217;s test support can come in handy.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="testing-oidc-login"><a class="anchor" href="#testing-oidc-login"></a>Testing OIDC Login</h4>
+<div class="paragraph">
+<p>Testing the method above with Spring MVC Test would require simulating some kind of grant flow with an authorization server.
+Certainly this would be a daunting task, which is why Spring Security ships with support for removing this boilerplate.</p>
+</div>
+<div class="paragraph">
+<p>For example, we can tell Spring Security to include a default <code>OidcUser</code> using the <code>SecurityMockMvcRequestPostProcessors#oidcLogin</code> method, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint").with(oidcLogin()));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What this will do is configure the associated <code>MockHttpServletRequest</code> with an <code>OidcUser</code> that includes a simple <code>OidcIdToken</code>, <code>OidcUserInfo</code>, and <code>Collection</code> of granted authorities.</p>
+</div>
+<div class="paragraph">
+<p>Specifically, it will include an <code>OidcIdToken</code> with a <code>sub</code> claim set to <code>user</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(user.getIdToken().getClaim("sub")).isEqualTo("user");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>an <code>OidcUserInfo</code> with no claims set:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(user.getUserInfo().getClaims()).isEmpty();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and a <code>Collection</code> of authorities with just one authority, <code>SCOPE_read</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(user.getAuthorities()).hasSize(1);
+assertThat(user.getAuthorities()).containsExactly(new SimpleGrantedAuthority("SCOPE_read"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Spring Security does the necessary work to make sure that the <code>OidcUser</code> instance is available for <a href="#mvc-authentication-principal">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
+</div>
+<div class="paragraph">
+<p>Further, it also links that <code>OidcUser</code> to a simple instance of <code>OAuth2AuthorizedClient</code> that it deposits into an mock <code>OAuth2AuthorizedClientRepository</code>.
+This can be handy if your tests <a href="#testing-oauth2-client">use the <code>@RegisteredOAuth2AuthorizedClient</code> annotation</a>..</p>
+</div>
+<div class="sect4">
+<h5 id="testing-oidc-login-authorities"><a class="anchor" href="#testing-oidc-login-authorities"></a>Configuring Authorities</h5>
+<div class="paragraph">
+<p>In many circumstances, your method is protected by filter or method security and needs your <code>Authentication</code> to have certain granted authorities to allow the request.</p>
+</div>
+<div class="paragraph">
+<p>In this case, you can supply what granted authorities you need using the <code>authorities()</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(oidcLogin()
+            .authorities(new SimpleGrantedAuthority("SCOPE_message:read"))
+        )
+    );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="testing-oidc-login-claims"><a class="anchor" href="#testing-oidc-login-claims"></a>Configuring Claims</h5>
+<div class="paragraph">
+<p>And while granted authorities are quite common across all of Spring Security, we also have claims in the case of OAuth 2.0.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say, for example, that you&#8217;ve got a <code>user_id</code> claim that indicates the user&#8217;s id in your system.
+You might access it like so in a controller:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
+public String foo(@AuthenticationPrincipal OidcUser oidcUser) {
+    String userId = oidcUser.getIdToken().getClaim("user_id");
+    // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In that case, you&#8217;d want to specify that claim with the <code>idToken()</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(oidcLogin()
+                .idToken(token -&gt; token.claim("user_id", "1234"))
+        )
+    );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>since <code>OidcUser</code> collects its claims from <code>OidcIdToken</code>.</p>
+</div>
+</div>
+<div class="sect4">
+<h5 id="testing-oidc-login-user"><a class="anchor" href="#testing-oidc-login-user"></a>Additional Configurations</h5>
+<div class="paragraph">
+<p>There are additional methods, too, for further configuring the authentication; it simply depends on what data your controller expects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>userInfo(OidcUserInfo.Builder)</code> - For configuring the <code>OidcUserInfo</code> instance</p>
+</li>
+<li>
+<p><code>clientRegistration(ClientRegistration)</code> - For configuring the associated <code>OAuth2AuthorizedClient</code> with a given <code>ClientRegistration</code></p>
+</li>
+<li>
+<p><code>oidcUser(OidcUser)</code> - For configuring the complete <code>OidcUser</code> instance</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>That last one is handy if you:
+1. Have your own implementation of <code>OidcUser</code>, or
+2. Need to change the name attribute</p>
+</div>
+<div class="paragraph">
+<p>For example, let&#8217;s say that your authorization server sends the principal name in the <code>user_name</code> claim instead of the <code>sub</code> claim.
+In that case, you can configure an <code>OidcUser</code> by hand:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">OidcUser oidcUser = new DefaultOidcUser(
+        AuthorityUtils.createAuthorityList("SCOPE_message:read"),
+        Collections.singletonMap("user_name", "foo_user"),
+        "user_name");
+
+mvc
+    .perform(get("/endpoint")
+        .with(oidcLogin().oidcUser(oidcUser))
+    );</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="testing-oauth2-login"><a class="anchor" href="#testing-oauth2-login"></a>Testing OAuth 2.0 Login</h4>
+<div class="paragraph">
+<p>As with <a href="#testing-oidc-login">testing OIDC login</a>, testing OAuth 2.0 Login presents a similar challenge of mocking a grant flow.
+And because of that, Spring Security also has test support for non-OIDC use cases.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say that we&#8217;ve got a controller that gets the logged-in user as an <code>OAuth2User</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
+public String foo(@AuthenticationPrincipal OAuth2User oauth2User) {
+    return oauth2User.getAttribute("sub");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In that case, we can tell Spring Security to include a default <code>OAuth2User</code> using the <code>SecurityMockMvcRequestPostProcessors#oauth2User</code> method, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint").with(oauth2Login()));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What this will do is configure the associated <code>MockHttpServletRequest</code> with an <code>OAuth2User</code> that includes a simple <code>Map</code> of attributes and <code>Collection</code> of granted authorities.</p>
+</div>
+<div class="paragraph">
+<p>Specifically, it will include a <code>Map</code> with a key/value pair of <code>sub</code>/<code>user</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat((String) user.getAttribute("sub")).isEqualTo("user");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and a <code>Collection</code> of authorities with just one authority, <code>SCOPE_read</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(user.getAuthorities()).hasSize(1);
+assertThat(user.getAuthorities()).containsExactly(new SimpleGrantedAuthority("SCOPE_read"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Spring Security does the necessary work to make sure that the <code>OAuth2User</code> instance is available for <a href="#mvc-authentication-principal">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
+</div>
+<div class="paragraph">
+<p>Further, it also links that <code>OAuth2User</code> to a simple instance of <code>OAuth2AuthorizedClient</code> that it deposits in a mock <code>OAuth2AuthorizedClientRepository</code>.
+This can be handy if your tests <a href="#testing-oauth2-client">use the <code>@RegisteredOAuth2AuthorizedClient</code> annotation</a>.</p>
+</div>
+<div class="sect4">
+<h5 id="testing-oauth2-login-authorities"><a class="anchor" href="#testing-oauth2-login-authorities"></a>Configuring Authorities</h5>
+<div class="paragraph">
+<p>In many circumstances, your method is protected by filter or method security and needs your <code>Authentication</code> to have certain granted authorities to allow the request.</p>
+</div>
+<div class="paragraph">
+<p>In this case, you can supply what granted authorities you need using the <code>authorities()</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(oauth2Login()
+            .authorities(new SimpleGrantedAuthority("SCOPE_message:read"))
+        )
+    );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="testing-oauth2-login-claims"><a class="anchor" href="#testing-oauth2-login-claims"></a>Configuring Claims</h5>
+<div class="paragraph">
+<p>And while granted authorities are quite common across all of Spring Security, we also have claims in the case of OAuth 2.0.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say, for example, that you&#8217;ve got a <code>user_id</code> attribute that indicates the user&#8217;s id in your system.
+You might access it like so in a controller:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
+public String foo(@AuthenticationPrincipal OAuth2User oauth2User) {
+    String userId = oauth2User.getAttribute("user_id");
+    // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In that case, you&#8217;d want to specify that attribute with the <code>attributes()</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(oauth2Login()
+                .attributes(attrs -&gt; attrs.put("user_id", "1234"))
+        )
+    );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="testing-oauth2-login-user"><a class="anchor" href="#testing-oauth2-login-user"></a>Additional Configurations</h5>
+<div class="paragraph">
+<p>There are additional methods, too, for further configuring the authentication; it simply depends on what data your controller expects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>clientRegistration(ClientRegistration)</code> - For configuring the associated <code>OAuth2AuthorizedClient</code> with a given <code>ClientRegistration</code></p>
+</li>
+<li>
+<p><code>oauth2User(OAuth2User)</code> - For configuring the complete <code>OAuth2User</code> instance</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>That last one is handy if you:
+1. Have your own implementation of <code>OAuth2User</code>, or
+2. Need to change the name attribute</p>
+</div>
+<div class="paragraph">
+<p>For example, let&#8217;s say that your authorization server sends the principal name in the <code>user_name</code> claim instead of the <code>sub</code> claim.
+In that case, you can configure an <code>OAuth2User</code> by hand:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">OAuth2User oauth2User = new DefaultOAuth2User(
+        AuthorityUtils.createAuthorityList("SCOPE_message:read"),
+        Collections.singletonMap("user_name", "foo_user"),
+        "user_name");
+
+mvc
+    .perform(get("/endpoint")
+        .with(oauth2Login().oauth2User(oauth2User))
+    );</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="testing-oauth2-client"><a class="anchor" href="#testing-oauth2-client"></a>Testing OAuth 2.0 Clients</h4>
+<div class="paragraph">
+<p>Independent of how your user authenticates, you may have other tokens and client registrations that are in play for the request you are testing.
+For example, your controller may be relying on the client credentials grant to get a token that isn&#8217;t associated with the user at all:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">@GetMapping("/endpoint")
+public String foo(@RegisteredOAuth2AuthorizedClient("my-app") OAuth2AuthorizedClient authorizedClient) {
+    return this.webClient.get()
+        .attributes(oauth2AuthorizedClient(authorizedClient))
+        .retrieve()
+        .bodyToMono(String.class)
+        .block();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Simulating this handshake with the authorization server could be cumbersome.
+Instead, you can use <code>SecurityMockMvcRequestPostProcessor#oauth2Client</code> to add a <code>OAuth2AuthorizedClient</code> into a mock <code>OAuth2AuthorizedClientRepository</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint").with(oauth2Client("my-app")));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What this will do is create an <code>OAuth2AuthorizedClient</code> that has a simple <code>ClientRegistration</code>, <code>OAuth2AccessToken</code>, and resource owner name.</p>
+</div>
+<div class="paragraph">
+<p>Specifically, it will include a <code>ClientRegistration</code> with a client id of "test-client" and client secret of "test-secret":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(authorizedClient.getClientRegistration().getClientId()).isEqualTo("test-client");
+assertThat(authorizedClient.getClientRegistration().getClientSecret()).isEqualTo("test-secret");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>a resource owner name of "user":</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(authorizedClient.getPrincipalName()).isEqualTo("user");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and an <code>OAuth2AccessToken</code> with just one scope, <code>read</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(authorizedClient.getAccessToken().getScopes()).hasSize(1);
+assertThat(authorizedClient.getAccessToken().getScopes()).containsExactly("read");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The client can then be retrieved as normal using <code>@RegisteredOAuth2AuthorizedClient</code> in a controller method.</p>
+</div>
+<div class="sect4">
+<h5 id="testing-oauth2-client-scopes"><a class="anchor" href="#testing-oauth2-client-scopes"></a>Configuring Scopes</h5>
+<div class="paragraph">
+<p>In many circumstances, the OAuth 2.0 access token comes with a set of scopes.
+If your controller inspects these, say like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">@GetMapping("/endpoint")
+public String foo(@RegisteredOAuth2AuthorizedClient("my-app") OAuth2AuthorizedClient authorizedClient) {
+    Set&lt;String&gt; scopes = authorizedClient.getAccessToken().getScopes();
+    if (scopes.contains("message:read")) {
+        return this.webClient.get()
+            .attributes(oauth2AuthorizedClient(authorizedClient))
+            .retrieve()
+            .bodyToMono(String.class)
+            .block();
+    }
+    // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>then you can configure the scope using the <code>accessToken()</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(oauth2Client("my-app")
+            .accessToken(new OAuth2AccessToken(BEARER, "token", null, null, Collections.singleton("message:read"))))
+        )
+    );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="testing-oauth2-client-registration"><a class="anchor" href="#testing-oauth2-client-registration"></a>Additional Configurations</h5>
+<div class="paragraph">
+<p>There are additional methods, too, for further configuring the authentication; it simply depends on what data your controller expects:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>principalName(String)</code> - For configuring the resource owner name</p>
+</li>
+<li>
+<p><code>clientRegistration(Consumer&lt;ClientRegistration.Builder&gt;)</code> - For configuring the associated <code>ClientRegistration</code></p>
+</li>
+<li>
+<p><code>clientRegistration(ClientRegistration)</code> - For configuring the complete <code>ClientRegistration</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>That last one is handy if you want to use a real <code>ClientRegistration</code></p>
+</div>
+<div class="paragraph">
+<p>For example, let&#8217;s say that you are wanting to use one of your app&#8217;s <code>ClientRegistration</code> definitions, as specified in your <code>application.yml</code>.</p>
+</div>
+<div class="paragraph">
+<p>In that case, your test can autowire the <code>ClientRegistrationRepository</code> and look up the one your test needs:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
+ClientRegistrationRepository clientRegistrationRepository;
+
+// ...
+
+mvc
+    .perform(get("/endpoint")
+        .with(oauth2Client()
+            .clientRegistration(this.clientRegistrationRepository.findByRegistrationId("facebook"))));</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="testing-jwt"><a class="anchor" href="#testing-jwt"></a>Testing JWT Authentication</h4>
+<div class="paragraph">
+<p>In order to make an authorized request on a resource server, you need a bearer token.</p>
+</div>
+<div class="paragraph">
+<p>If your resource server is configured for JWTs, then this would mean that the bearer token needs to be signed and then encoded according to the JWT specification.
+All of this can be quite daunting, especially when this isn&#8217;t the focus of your test.</p>
+</div>
+<div class="paragraph">
+<p>Fortunately, there are a number of simple ways that you can overcome this difficulty and allow your tests to focus on authorization and not on representing bearer tokens.
+We&#8217;ll look at two of them now:</p>
+</div>
+<div class="sect4">
+<h5 id="_jwt_requestpostprocessor"><a class="anchor" href="#_jwt_requestpostprocessor"></a><code>jwt() RequestPostProcessor</code></h5>
+<div class="paragraph">
+<p>The first way is via a <code>RequestPostProcessor</code>.
+The simplest of these would look something like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint").with(jwt()));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What this will do is create a mock <code>Jwt</code>, passing it correctly through any authentication APIs so that it&#8217;s available for your authorization mechanisms to verify.</p>
+</div>
+<div class="paragraph">
+<p>By default, the <code>JWT</code> that it creates has the following characteristics:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+  "headers" : { "alg" : "none" },
+  "claims" : {
+    "sub" : "user",
+    "scope" : "read"
+  }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And the resulting <code>Jwt</code>, were it tested, would pass in the following way:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(jwt.getTokenValue()).isEqualTo("token");
+assertThat(jwt.getHeaders().get("alg")).isEqualTo("none");
+assertThat(jwt.getSubject()).isEqualTo("sub");
+GrantedAuthority authority = jwt.getAuthorities().iterator().next();
+assertThat(authority.getAuthority()).isEqualTo("read");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These values can, of course be configured.</p>
+</div>
+<div class="paragraph">
+<p>Any headers or claims can be configured with their corresponding methods:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(jwt().jwt(jwt -&gt; jwt.header("kid", "one").claim("iss", "https://idp.example.org"))));</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(jwt().jwt(jwt -&gt; jwt.claims(claims -&gt; claims.remove("scope")))));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>scope</code> and <code>scp</code> claims are processed the same way here as they are in a normal bearer token request.
+However, this can be overridden simply by providing the list of <code>GrantedAuthority</code> instances that you need for your test:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(jwt().authorities(new SimpleGrantedAuthority("SCOPE_messages"))));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, if you have a custom <code>Jwt</code> to <code>Collection&lt;GrantedAuthority&gt;</code> converter, you can also use that to derive the authorities:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(jwt().authorities(new MyConverter())));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also specify a complete <code>Jwt</code>, for which <code>{security-api-url}org/springframework/security/oauth2/jwt/Jwt.Builder.html[Jwt.Builder]</code> comes quite handy:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Jwt jwt = Jwt.withTokenValue("token")
+    .header("alg", "none")
+    .claim("sub", "user")
+    .claim("scope", "read");
+
+mvc
+    .perform(get("/endpoint")
+        .with(jwt().jwt(jwt)));</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="_authentication_requestpostprocessor"><a class="anchor" href="#_authentication_requestpostprocessor"></a><code>authentication()</code> <code>RequestPostProcessor</code></h5>
+<div class="paragraph">
+<p>The second way is by using the <code>authentication()</code> <code>RequestPostProcessor</code>.
+Essentially, you can instantiate your own <code>JwtAuthenticationToken</code> and provide it in your test, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Jwt jwt = Jwt.withTokenValue("token")
+    .header("alg", "none")
+    .claim("sub", "user")
+    .build();
+Collection&lt;GrantedAuthority&gt; authorities = AuthorityUtils.createAuthorityList("SCOPE_read");
+JwtAuthenticationToken token = new JwtAuthenticationToken(jwt, authorities);
+
+mvc
+    .perform(get("/endpoint")
+        .with(authentication(token)));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that as an alternative to these, you can also mock the <code>JwtDecoder</code> bean itself with a <code>@MockBean</code> annotation.</p>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="testing-opaque-token"><a class="anchor" href="#testing-opaque-token"></a>Testing Opaque Token Authentication</h4>
+<div class="paragraph">
+<p>Similar to <a href="#testing-jwt">JWTs</a>, opaque tokens require an authorization server in order to verify their validity, which can make testing more difficult.
+To help with that, Spring Security has test support for opaque tokens.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say that we&#8217;ve got a controller that retrieves the authentication as a <code>BearerTokenAuthentication</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
+public String foo(BearerTokenAuthentication authentication) {
+    return (String) authentication.getTokenAttributes("sub");
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In that case, we can tell Spring Security to include a default <code>BearerTokenAuthentication</code> using the <code>SecurityMockMvcRequestPostProcessors#opaqueToken</code> method, like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint").with(opaqueToken()));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>What this will do is configure the associated <code>MockHttpServletRequest</code> with a <code>BearerTokenAuthentication</code> that includes a simple <code>OAuth2AuthenticatedPrincipal</code>, <code>Map</code> of attributes, and <code>Collection</code> of granted authorities.</p>
+</div>
+<div class="paragraph">
+<p>Specifically, it will include a <code>Map</code> with a key/value pair of <code>sub</code>/<code>user</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat((String) token.getTokenAttributes().get("sub")).isEqualTo("user");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and a <code>Collection</code> of authorities with just one authority, <code>SCOPE_read</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(token.getAuthorities()).hasSize(1);
+assertThat(token.getAuthorities()).containsExactly(new SimpleGrantedAuthority("SCOPE_read"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Spring Security does the necessary work to make sure that the <code>BearerTokenAuthentication</code> instance is available for your controller methods.</p>
+</div>
+<div class="sect4">
+<h5 id="testing-opaque-token-authorities"><a class="anchor" href="#testing-opaque-token-authorities"></a>Configuring Authorities</h5>
+<div class="paragraph">
+<p>In many circumstances, your method is protected by filter or method security and needs your <code>Authentication</code> to have certain granted authorities to allow the request.</p>
+</div>
+<div class="paragraph">
+<p>In this case, you can supply what granted authorities you need using the <code>authorities()</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(opaqueToken()
+            .authorities(new SimpleGrantedAuthority("SCOPE_message:read"))
+        )
+    );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="testing-opaque-token-attributes"><a class="anchor" href="#testing-opaque-token-attributes"></a>Configuring Claims</h5>
+<div class="paragraph">
+<p>And while granted authorities are quite common across all of Spring Security, we also have attributes in the case of OAuth 2.0.</p>
+</div>
+<div class="paragraph">
+<p>Let&#8217;s say, for example, that you&#8217;ve got a <code>user_id</code> attribute that indicates the user&#8217;s id in your system.
+You might access it like so in a controller:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
+public String foo(BearerTokenAuthentication authentication) {
+    String userId = (String) authentication.getTokenAttributes().get("user_id");
+    // ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In that case, you&#8217;d want to specify that attribute with the <code>attributes()</code> method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+    .perform(get("/endpoint")
+        .with(opaqueToken()
+                .attributes(attrs -&gt; attrs.put("user_id", "1234"))
+        )
+    );</code></pre>
+</div>
+</div>
+</div>
+<div class="sect4">
+<h5 id="testing-opaque-token-principal"><a class="anchor" href="#testing-opaque-token-principal"></a>Additional Configurations</h5>
+<div class="paragraph">
+<p>There are additional methods, too, for further configuring the authentication; it simply depends on what data your controller expects.</p>
+</div>
+<div class="paragraph">
+<p>One such is <code>principal(OAuth2AuthenticatedPrincipal)</code>, which you can use to configure the complete <code>OAuth2AuthenticatedPrincipal</code> instance that underlies the <code>BearerTokenAuthentication</code></p>
+</div>
+<div class="paragraph">
+<p>It&#8217;s handy if you:
+1. Have your own implementation of <code>OAuth2AuthenticatedPrincipal</code>, or
+2. Want to specify a different principal name</p>
+</div>
+<div class="paragraph">
+<p>For example, let&#8217;s say that your authorization server sends the principal name in the <code>user_name</code> attribute instead of the <code>sub</code> attribute.
+In that case, you can configure an <code>OAuth2AuthenticatedPrincipal</code> by hand:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map&lt;String, Object&gt; attributes = Collections.singletonMap("user_name", "foo_user");
+OAuth2AuthenticatedPrincipal principal = new DefaultOAuth2AuthenticatedPrincipal(
+        (String) attributes.get("user_name"),
+        attributes,
+        AuthorityUtils.createAuthorityList("SCOPE_message:read"));
+
+mvc
+    .perform(get("/endpoint")
+        .with(opaqueToken().principal(principal))
+    );</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that as an alternative to using <code>opaqueToken()</code> test support, you can also mock the <code>OpaqueTokenIntrospector</code> bean itself with a <code>@MockBean</code> annotation.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_securitymockmvcrequestbuilders"><a class="anchor" href="#_securitymockmvcrequestbuilders"></a>SecurityMockMvcRequestBuilders</h3>
+<div class="paragraph">
+<p>Spring MVC Test also provides a <code>RequestBuilder</code> interface that can be used to create the <code>MockHttpServletRequest</code> used in your test.
+Spring Security provides a few <code>RequestBuilder</code> implementations that can be used to make testing easier.
+In order to use Spring Security&#8217;s <code>RequestBuilder</code> implementations ensure the following static import is used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.*;</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_testing_form_based_authentication"><a class="anchor" href="#_testing_form_based_authentication"></a>Testing Form Based Authentication</h4>
+<div class="paragraph">
+<p>You can easily create a request to test a form based authentication using Spring Security&#8217;s testing support.
+For example, the following will submit a POST to "/login" with the username "user", the password "password", and a valid CSRF token:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(formLogin())</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>It is easy to customize the request.
+For example, the following will submit a POST to "/auth" with the username "admin", the password "pass", and a valid CSRF token:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(formLogin("/auth").user("admin").password("pass"))</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can also customize the parameters names that the username and password are included on.
+For example, this is the above request modified to include the username on the HTTP parameter "u" and the password on the HTTP parameter "p".</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(formLogin("/auth").user("u","admin").password("p","pass"))</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="test-logout"><a class="anchor" href="#test-logout"></a>Testing Logout</h4>
+<div class="paragraph">
+<p>While fairly trivial using standard Spring MVC Test, you can use Spring Security&#8217;s testing support to make testing log out easier.
+For example, the following will submit a POST to "/logout" with a valid CSRF token:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(logout())</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also customize the URL to post to.
+For example, the snippet below will submit a POST to "/signout" with a valid CSRF token:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(logout("/signout"))</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_securitymockmvcresultmatchers"><a class="anchor" href="#_securitymockmvcresultmatchers"></a>SecurityMockMvcResultMatchers</h3>
+<div class="paragraph">
+<p>At times it is desirable to make various security related assertions about a request.
+To accommodate this need, Spring Security Test support implements Spring MVC Test&#8217;s <code>ResultMatcher</code> interface.
+In order to use Spring Security&#8217;s <code>ResultMatcher</code> implementations ensure the following static import is used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.security.test.web.servlet.response.SecurityMockMvcResultMatchers.*;</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_unauthenticated_assertion"><a class="anchor" href="#_unauthenticated_assertion"></a>Unauthenticated Assertion</h4>
+<div class="paragraph">
+<p>At times it may be valuable to assert that there is no authenticated user associated with the result of a <code>MockMvc</code> invocation.
+For example, you might want to test submitting an invalid username and password and verify that no user is authenticated.
+You can easily do this with Spring Security&#8217;s testing support using something like the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(formLogin().password("invalid"))
+	.andExpect(unauthenticated());</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_authenticated_assertion"><a class="anchor" href="#_authenticated_assertion"></a>Authenticated Assertion</h4>
+<div class="paragraph">
+<p>It is often times that we must assert that an authenticated user exists.
+For example, we may want to verify that we authenticated successfully.
+We could verify that a form based login was successful with the following snippet of code:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(formLogin())
+	.andExpect(authenticated());</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If we wanted to assert the roles of the user, we could refine our previous code as shown below:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(formLogin().user("admin"))
+	.andExpect(authenticated().withRoles("USER","ADMIN"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Alternatively, we could verify the username:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(formLogin().user("admin"))
+	.andExpect(authenticated().withUsername("admin"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can also combine the assertions:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(formLogin().user("admin").roles("USER","ADMIN"))
+	.andExpect(authenticated().withUsername("admin"));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>We can also make arbitrary assertions on the authentication</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(formLogin())
+	.andExpect(authenticated().withAuthentication(auth -&gt;
+		assertThat(auth).isInstanceOf(UsernamePasswordAuthenticationToken.class)));</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../../_/js/tabs.js"></script>  </body>
+</html>

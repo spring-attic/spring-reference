@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Untitled :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../overview/prerequisites.html">6</a>
+        </li>
+        <li class="version">
+          <a href="../../../5.6/overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">6</button>
+  <div class="version-menu">
+    <a class="version is-current" href="method-security.html">6</a>
+    <a class="version" href="../../../5.6/servlet/authorization/method-security.html">5.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/6.0.x-antora-2.x/docs/modules/ROOT/pages/servlet/authorization/method-security.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<div class="sect1">
+<h2 id="jc-method"><a class="anchor" href="#jc-method"></a>Method Security</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>From version 2.0 onwards Spring Security has improved support substantially for adding security to your service layer methods.
+It provides support for JSR-250 annotation security as well as the framework&#8217;s original <code>@Secured</code> annotation.
+From 3.0 you can also make use of new <a href="#el-access">expression-based annotations</a>.
+You can apply security to a single bean, using the <code>intercept-methods</code> element to decorate the bean declaration, or you can secure multiple beans across the entire service layer using the AspectJ style pointcuts.</p>
+</div>
+<div class="sect2">
+<h3 id="_enablemethodsecurity"><a class="anchor" href="#_enablemethodsecurity"></a>EnableMethodSecurity</h3>
+<div class="paragraph">
+<p>In Spring Security 5.6, we can enable annotation-based security using the <code>@EnableMethodSecurity</code> annotation on any <code>@Configuration</code> instance.</p>
+</div>
+<div class="paragraph">
+<p>This improves upon <code>@EnableGlobalMethodSecurity</code> in a number of ways. <code>@EnableMethodSecurity</code>:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Uses the simplified <code>AuthorizationManager</code> API instead of metadata sources, config attributes, decision managers, and voters.
+This simplifies reuse and customization.</p>
+</li>
+<li>
+<p>Favors direct bean-based configuration, instead of requiring extending <code>GlobalMethodSecurityConfiguration</code> to customize beans</p>
+</li>
+<li>
+<p>Is built using native Spring AOP, removing abstractions and allowing you to use Spring AOP building blocks to customize</p>
+</li>
+<li>
+<p>Checks for conflicting annotations to ensure an unambiguous security configuration</p>
+</li>
+<li>
+<p>Complies with JSR-250</p>
+</li>
+<li>
+<p>Enables <code>@PreAuthorize</code>, <code>@PostAuthorize</code>, <code>@PreFilter</code>, and <code>@PostFilter</code> by default</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>For earlier versions, please read about similar support with <a href="#jc-enable-global-method-security">@EnableGlobalMethodSecurity</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For example, the following would enable Spring Security&#8217;s <code>@PreAuthorize</code> annotation:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Method Security Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableMethodSecurity
+public class MethodSecurityConfig {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableMethodSecurity
+class MethodSecurityConfig {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:method-security/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Adding an annotation to a method (on a class or interface) would then limit the access to that method accordingly.
+Spring Security&#8217;s native annotation support defines a set of attributes for the method.
+These will be passed to the <code>DefaultAuthorizationMethodInterceptorChain</code> for it to make the actual decision:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Method Security Annotation Usage</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface BankService {
+	@PreAuthorize("hasRole('USER')")
+	Account readAccount(Long id);
+
+	@PreAuthorize("hasRole('USER')")
+	List&lt;Account&gt; findAccounts();
+
+	@PreAuthorize("hasRole('TELLER')")
+	Account post(Account account, Double amount);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">interface BankService {
+	@PreAuthorize("hasRole('USER')")
+	fun readAccount(id : Long) : Account
+
+	@PreAuthorize("hasRole('USER')")
+	fun findAccounts() : List&lt;Account&gt;
+
+	@PreAuthorize("hasRole('TELLER')")
+	fun post(account : Account, amount : Double) : Account
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can enable support for Spring Security&#8217;s <code>@Secured</code> annotation using:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. @Secured Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableMethodSecurity(securedEnabled = true)
+public class MethodSecurityConfig {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableMethodSecurity(securedEnabled = true)
+class MethodSecurityConfig {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:method-security secured-enabled="true"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>or JSR-250 using:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. JSR-250 Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableMethodSecurity(jsr250Enabled = true)
+public class MethodSecurityConfig {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableMethodSecurity(jsr250Enabled = true)
+class MethodSecurityConfig {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:method-security jsr250-enabled="true"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_customizing_authorization"><a class="anchor" href="#_customizing_authorization"></a>Customizing Authorization</h4>
+<div class="paragraph">
+<p>Spring Security&#8217;s <code>@PreAuthorize</code>, <code>@PostAuthorize</code>, <code>@PreFilter</code>, and <code>@PostFilter</code> ship with rich expression-based support.</p>
+</div>
+<div id="jc-method-security-custom-expression-handler" class="paragraph">
+<p>If you need to customize the way that expressions are handled, you can expose a custom <code>MethodSecurityExpressionHandler</code>, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 5. Custom MethodSecurityExpressionHandler</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+static MethodSecurityExpressionHandler methodSecurityExpressionHandler() {
+	DefaultMethodSecurityExpressionHandler handler = new DefaultMethodSecurityExpressionHandler();
+	handler.setTrustResolver(myCustomTrustResolver);
+	return handler;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">companion object {
+	@Bean
+	fun methodSecurityExpressionHandler() : MethodSecurityExpressionHandler {
+		val handler = DefaultMethodSecurityExpressionHandler();
+		handler.setTrustResolver(myCustomTrustResolver);
+		return handler;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:method-security&gt;
+	&lt;sec:expression-handler ref="myExpressionHandler"/&gt;
+&lt;/sec:method-security&gt;
+
+&lt;bean id="myExpressionHandler"
+		class="org.springframework.security.messaging.access.expression.DefaultMessageSecurityExpressionHandler"&gt;
+	&lt;property name="trustResolver" ref="myCustomTrustResolver"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>We expose <code>MethodSecurityExpressionHandler</code> using a <code>static</code> method to ensure that Spring publishes it before it initializes Spring Security&#8217;s method security <code>@Configuration</code> classes</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Also, for role-based authorization, Spring Security adds a default <code>ROLE_</code> prefix, which is uses when evaluating expressions like <code>hasRole</code>.</p>
+</div>
+<div id="jc-method-security-custom-granted-authority-defaults" class="paragraph">
+<p>You can configure the authorization rules to use a different prefix by exposing a <code>GrantedAuthorityDefaults</code> bean, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 6. Custom MethodSecurityExpressionHandler</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+static GrantedAuthorityDefaults grantedAuthorityDefaults() {
+	return new GrantedAuthorityDefaults("MYPREFIX_");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">companion object {
+	@Bean
+	fun grantedAuthorityDefaults() : GrantedAuthorityDefaults {
+		return GrantedAuthorityDefaults("MYPREFIX_");
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:method-security/&gt;
+
+&lt;bean id="grantedAuthorityDefaults" class="org.springframework.security.config.core.GrantedAuthorityDefaults"&gt;
+	&lt;constructor-arg value="MYPREFIX_"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>We expose <code>GrantedAuthorityDefaults</code> using a <code>static</code> method to ensure that Spring publishes it before it initializes Spring Security&#8217;s method security <code>@Configuration</code> classes</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="jc-method-security-custom-authorization-manager"><a class="anchor" href="#jc-method-security-custom-authorization-manager"></a>Custom Authorization Managers</h4>
+<div class="paragraph">
+<p>Method authorization is a combination of before- and after-method authorization.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Before-method authorization is performed before the method is invoked.
+If that authorization denies access, the method is not invoked, and an <code>AccessDeniedException</code> is thrown
+After-method authorization is performed after the method is invoked, but before the method returns to the caller.
+If that authorization denies access, the value is not returned, and an <code>AccessDeniedException</code> is thrown</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To recreate what adding <code>@EnableMethodSecurity</code> does by default, you would publish the following configuration:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 7. Full Pre-post Method Security Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableMethodSecurity(prePostEnabled = false)
+class MethodSecurityConfig {
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	Advisor preFilterAuthorizationMethodInterceptor() {
+		return new PreFilterAuthorizationMethodInterceptor();
+	}
+
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	Advisor preAuthorizeAuthorizationMethodInterceptor() {
+		return AuthorizationManagerBeforeMethodInterceptor.preAuthorize();
+	}
+
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	Advisor postAuthorizeAuthorizationMethodInterceptor() {
+		return AuthorizationManagerAfterMethodInterceptor.postAuthorize();
+	}
+
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	Advisor postFilterAuthorizationMethodInterceptor() {
+		return new PostFilterAuthorizationMethodInterceptor();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableMethodSecurity(prePostEnabled = false)
+class MethodSecurityConfig {
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	fun preFilterAuthorizationMethodInterceptor() : Advisor {
+		return PreFilterAuthorizationMethodInterceptor();
+	}
+
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	fun preAuthorizeAuthorizationMethodInterceptor() : Advisor {
+		return AuthorizationManagerBeforeMethodInterceptor.preAuthorize();
+	}
+
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	fun postAuthorizeAuthorizationMethodInterceptor() : Advisor {
+		return AuthorizationManagerAfterMethodInterceptor.postAuthorize();
+	}
+
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	fun postFilterAuthorizationMethodInterceptor() : Advisor {
+		return PostFilterAuthorizationMethodInterceptor();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:method-security pre-post-enabled="false"/&gt;
+
+&lt;aop:config/&gt;
+
+&lt;bean id="preFilterAuthorizationMethodInterceptor"
+		class="org.springframework.security.authorization.method.PreFilterAuthorizationMethodInterceptor"/&gt;
+&lt;bean id="preAuthorizeAuthorizationMethodInterceptor"
+		class="org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor"
+		factory-method="preAuthorize"/&gt;
+&lt;bean id="postAuthorizeAuthorizationMethodInterceptor"
+		class="org.springframework.security.authorization.method.AuthorizationManagerAfterMethodInterceptor"
+		factory-method="postAuthorize"/&gt;
+&lt;bean id="postFilterAuthorizationMethodInterceptor"
+		class="org.springframework.security.authorization.method.PostFilterAuthorizationMethodInterceptor"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that Spring Security&#8217;s method security is built using Spring AOP.
+So, interceptors are invoked based on the order specified.
+This can be customized by calling <code>setOrder</code> on the interceptor instances like so:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 8. Publish Custom Advisor</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+Advisor postFilterAuthorizationMethodInterceptor() {
+	PostFilterAuthorizationMethodInterceptor interceptor = new PostFilterAuthorizationMethodInterceptor();
+	interceptor.setOrder(AuthorizationInterceptorOrders.POST_AUTHORIZE.getOrder() - 1);
+	return interceptor;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+fun postFilterAuthorizationMethodInterceptor() : Advisor {
+	val interceptor = PostFilterAuthorizationMethodInterceptor();
+	interceptor.setOrder(AuthorizationInterceptorOrders.POST_AUTHORIZE.getOrder() - 1);
+	return interceptor;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="postFilterAuthorizationMethodInterceptor"
+		class="org.springframework.security.authorization.method.PostFilterAuthorizationMethodInterceptor"&gt;
+	&lt;property name="order"
+			value="#{T(org.springframework.security.authorization.method.AuthorizationInterceptorsOrder).POST_AUTHORIZE.getOrder() -1}"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You may want to only support <code>@PreAuthorize</code> in your application, in which case you can do the following:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 9. Only @PreAuthorize Configuration</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableMethodSecurity(prePostEnabled = false)
+class MethodSecurityConfig {
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	Advisor preAuthorize() {
+		return AuthorizationManagerBeforeMethodInterceptor.preAuthorize();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableMethodSecurity(prePostEnabled = false)
+class MethodSecurityConfig {
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	fun preAuthorize() : Advisor {
+		return AuthorizationManagerBeforeMethodInterceptor.preAuthorize()
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:method-security pre-post-enabled="false"/&gt;
+
+&lt;aop:config/&gt;
+
+&lt;bean id="preAuthorizeAuthorizationMethodInterceptor"
+	class="org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor"
+	factory-method="preAuthorize"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, you may have a custom before-method <code>AuthorizationManager</code> that you want to add to the list.</p>
+</div>
+<div class="paragraph">
+<p>In this case, you will need to tell Spring Security both the <code>AuthorizationManager</code> and to which methods and classes your authorization manager applies.</p>
+</div>
+<div class="paragraph">
+<p>Thus, you can configure Spring Security to invoke your <code>AuthorizationManager</code> in between <code>@PreAuthorize</code> and <code>@PostAuthorize</code> like so:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 10. Custom Before Advisor</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableMethodSecurity
+class MethodSecurityConfig {
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	public Advisor customAuthorize() {
+		JdkRegexpMethodPointcut pattern = new JdkRegexpMethodPointcut();
+		pattern.setPattern("org.mycompany.myapp.service.*");
+		AuthorizationManager&lt;MethodInvocation&gt; rule = AuthorityAuthorizationManager.isAuthenticated();
+		AuthorizationManagerBeforeMethodInterceptor interceptor = new AuthorizationManagerBeforeMethodInterceptor(pattern, rule);
+		interceptor.setOrder(AuthorizationInterceptorsOrder.PRE_AUTHORIZE_ADVISOR_ORDER.getOrder() + 1);
+		return interceptor;
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableMethodSecurity
+class MethodSecurityConfig {
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	fun customAuthorize() : Advisor {
+		val pattern = JdkRegexpMethodPointcut();
+		pattern.setPattern("org.mycompany.myapp.service.*");
+		val rule = AuthorityAuthorizationManager.isAuthenticated();
+		val interceptor = AuthorizationManagerBeforeMethodInterceptor(pattern, rule);
+		interceptor.setOrder(AuthorizationInterceptorsOrder.PRE_AUTHORIZE_ADVISOR_ORDER.getOrder() + 1);
+		return interceptor;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:method-security/&gt;
+
+&lt;aop:config/&gt;
+
+&lt;bean id="customAuthorize"
+		class="org.springframework.security.authorization.method.AuthorizationManagerBeforeMethodInterceptor"&gt;
+	&lt;constructor-arg&gt;
+		&lt;bean class="org.springframework.aop.support.JdkRegexpMethodPointcut"&gt;
+			&lt;property name="pattern" value="org.mycompany.myapp.service.*"/&gt;
+		&lt;/bean&gt;
+	&lt;/constructor-arg&gt;
+	&lt;constructor-arg&gt;
+		&lt;bean class="org.springframework.security.authorization.AuthorityAuthorizationManager"
+				factory-method="isAuthenticated"/&gt;
+	&lt;/constructor-arg&gt;
+	&lt;property name="order"
+			value="#{T(org.springframework.security.authorization.method.AuthorizationInterceptorsOrder).PRE_AUTHORIZE_ADVISOR_ORDER.getOrder() + 1}"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can place your interceptor in between Spring Security method interceptors using the order constants specified in <code>AuthorizationInterceptorsOrder</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The same can be done for after-method authorization.
+After-method authorization is generally concerned with analysing the return value to verify access.</p>
+</div>
+<div class="paragraph">
+<p>For example, you might have a method that confirms that the account requested actually belongs to the logged-in user like so:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 11. @PostAuthorize example</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface BankService {
+
+	@PreAuthorize("hasRole('USER')")
+	@PostAuthorize("returnObject.owner == authentication.name")
+	Account readAccount(Long id);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">interface BankService {
+
+	@PreAuthorize("hasRole('USER')")
+	@PostAuthorize("returnObject.owner == authentication.name")
+	fun readAccount(id : Long) : Account
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can supply your own <code>AuthorizationMethodInterceptor</code> to customize how access to the return value is evaluated.</p>
+</div>
+<div class="paragraph">
+<p>For example, if you have your own custom annotation, you can configure it like so:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 12. Custom After Advisor</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableMethodSecurity
+class MethodSecurityConfig {
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	public Advisor customAuthorize(AuthorizationManager&lt;MethodInvocationResult&gt; rules) {
+		AnnotationMethodMatcher pattern = new AnnotationMethodMatcher(MySecurityAnnotation.class);
+		AuthorizationManagerAfterMethodInterceptor interceptor = new AuthorizationManagerAfterMethodInterceptor(pattern, rules);
+		interceptor.setOrder(AuthorizationInterceptorsOrder.POST_AUTHORIZE_ADVISOR_ORDER.getOrder() + 1);
+		return interceptor;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableMethodSecurity
+class MethodSecurityConfig {
+	@Bean
+	@Role(BeanDefinition.ROLE_INFRASTRUCTURE)
+	fun customAuthorize(rules : AuthorizationManager&lt;MethodInvocationResult&gt;) : Advisor {
+		val pattern = AnnotationMethodMatcher(MySecurityAnnotation::class.java);
+		val interceptor = AuthorizationManagerAfterMethodInterceptor(pattern, rules);
+		interceptor.setOrder(AuthorizationInterceptorsOrder.POST_AUTHORIZE_ADVISOR_ORDER.getOrder() + 1);
+		return interceptor;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;sec:method-security/&gt;
+
+&lt;aop:config/&gt;
+
+&lt;bean id="customAuthorize"
+		class="org.springframework.security.authorization.method.AuthorizationManagerAfterMethodInterceptor"&gt;
+	&lt;constructor-arg&gt;
+		&lt;bean class="org.springframework.aop.support.annotation.AnnotationMethodMatcher"&gt;
+			&lt;constructor-arg value="#{T(org.mycompany.MySecurityAnnotation)}"/&gt;
+		&lt;/bean&gt;
+	&lt;/constructor-arg&gt;
+	&lt;constructor-arg&gt;
+		&lt;bean class="org.springframework.security.authorization.AuthorityAuthorizationManager"
+				factory-method="isAuthenticated"/&gt;
+	&lt;/constructor-arg&gt;
+	&lt;property name="order"
+		value="#{T(org.springframework.security.authorization.method.AuthorizationInterceptorsOrder).PRE_AUTHORIZE_ADVISOR_ORDER.getOrder() + 1}"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>and it will be invoked after the <code>@PostAuthorize</code> interceptor.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="jc-enable-global-method-security"><a class="anchor" href="#jc-enable-global-method-security"></a>EnableGlobalMethodSecurity</h3>
+<div class="paragraph">
+<p>We can enable annotation-based security using the <code>@EnableGlobalMethodSecurity</code> annotation on any <code>@Configuration</code> instance.
+For example, the following would enable Spring Security&#8217;s <code>@Secured</code> annotation.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableGlobalMethodSecurity(securedEnabled = true)
+public class MethodSecurityConfig {
+// ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Adding an annotation to a method (on a class or interface) would then limit the access to that method accordingly.
+Spring Security&#8217;s native annotation support defines a set of attributes for the method.
+These will be passed to the AccessDecisionManager for it to make the actual decision:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface BankService {
+
+@Secured("IS_AUTHENTICATED_ANONYMOUSLY")
+public Account readAccount(Long id);
+
+@Secured("IS_AUTHENTICATED_ANONYMOUSLY")
+public Account[] findAccounts();
+
+@Secured("ROLE_TELLER")
+public Account post(Account account, double amount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Support for JSR-250 annotations can be enabled using</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableGlobalMethodSecurity(jsr250Enabled = true)
+public class MethodSecurityConfig {
+// ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These are standards-based and allow simple role-based constraints to be applied but do not have the power Spring Security&#8217;s native annotations.
+To use the new expression-based syntax, you would use</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class MethodSecurityConfig {
+// ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and the equivalent Java code would be</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface BankService {
+
+@PreAuthorize("isAnonymous()")
+public Account readAccount(Long id);
+
+@PreAuthorize("isAnonymous()")
+public Account[] findAccounts();
+
+@PreAuthorize("hasAuthority('ROLE_TELLER')")
+public Account post(Account account, double amount);
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_globalmethodsecurityconfiguration"><a class="anchor" href="#_globalmethodsecurityconfiguration"></a>GlobalMethodSecurityConfiguration</h3>
+<div class="paragraph">
+<p>Sometimes you may need to perform operations that are more complicated than are possible with the <code>@EnableGlobalMethodSecurity</code> annotation allow.
+For these instances, you can extend the <code>GlobalMethodSecurityConfiguration</code> ensuring that the <code>@EnableGlobalMethodSecurity</code> annotation is present on your subclass.
+For example, if you wanted to provide a custom <code>MethodSecurityExpressionHandler</code>, you could use the following configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableGlobalMethodSecurity(prePostEnabled = true)
+public class MethodSecurityConfig extends GlobalMethodSecurityConfiguration {
+	@Override
+	protected MethodSecurityExpressionHandler createExpressionHandler() {
+		// ... create and return custom MethodSecurityExpressionHandler ...
+		return expressionHandler;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For additional information about methods that can be overridden, refer to the <code>GlobalMethodSecurityConfiguration</code> Javadoc.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ns-global-method"><a class="anchor" href="#ns-global-method"></a>The &lt;global-method-security&gt; Element</h3>
+<div class="paragraph">
+<p>This element is used to enable annotation-based security in your application (by setting the appropriate attributes on the element), and also to group together security pointcut declarations which will be applied across your entire application context.
+You should only declare one <code>&lt;global-method-security&gt;</code> element.
+The following declaration would enable support for Spring Security&#8217;s <code>@Secured</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;global-method-security secured-annotations="enabled" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Adding an annotation to a method (on an class or interface) would then limit the access to that method accordingly.
+Spring Security&#8217;s native annotation support defines a set of attributes for the method.
+These will be passed to the <code>AccessDecisionManager</code> for it to make the actual decision:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface BankService {
+
+@Secured("IS_AUTHENTICATED_ANONYMOUSLY")
+public Account readAccount(Long id);
+
+@Secured("IS_AUTHENTICATED_ANONYMOUSLY")
+public Account[] findAccounts();
+
+@Secured("ROLE_TELLER")
+public Account post(Account account, double amount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Support for JSR-250 annotations can be enabled using</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;global-method-security jsr250-annotations="enabled" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>These are standards-based and allow simple role-based constraints to be applied but do not have the power Spring Security&#8217;s native annotations.
+To use the new expression-based syntax, you would use</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;global-method-security pre-post-annotations="enabled" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>and the equivalent Java code would be</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public interface BankService {
+
+@PreAuthorize("isAnonymous()")
+public Account readAccount(Long id);
+
+@PreAuthorize("isAnonymous()")
+public Account[] findAccounts();
+
+@PreAuthorize("hasAuthority('ROLE_TELLER')")
+public Account post(Account account, double amount);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Expression-based annotations are a good choice if you need to define simple rules that go beyond checking the role names against the user&#8217;s list of authorities.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The annotated methods will only be secured for instances which are defined as Spring beans (in the same application context in which method-security is enabled).
+If you want to secure instances which are not created by Spring (using the <code>new</code> operator, for example) then you need to use AspectJ.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can enable more than one type of annotation in the same application, but only one type should be used for any interface or class as the behaviour will not be well-defined otherwise.
+If two annotations are found which apply to a particular method, then only one of them will be applied.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="ns-protect-pointcut"><a class="anchor" href="#ns-protect-pointcut"></a>Adding Security Pointcuts using protect-pointcut</h3>
+<div class="paragraph">
+<p>The use of <code>protect-pointcut</code> is particularly powerful, as it allows you to apply security to many beans with only a simple declaration.
+Consider the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;global-method-security&gt;
+&lt;protect-pointcut expression="execution(* com.mycompany.*Service.*(..))"
+	access="ROLE_USER"/&gt;
+&lt;/global-method-security&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will protect all methods on beans declared in the application context whose classes are in the <code>com.mycompany</code> package and whose class names end in "Service".
+Only users with the <code>ROLE_USER</code> role will be able to invoke these methods.
+As with URL matching, the most specific matches must come first in the list of pointcuts, as the first matching expression will be used.
+Security annotations take precedence over pointcuts.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../../_/js/tabs.js"></script>  </body>
+</html>

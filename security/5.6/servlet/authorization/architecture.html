@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Authorization Architecture :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/features.html">Features</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../6/overview/prerequisites.html">6</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../../framework/5.3/overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../overview/prerequisites.html">Spring Security</a></li>
+    <li><a href="architecture.html">Authorization Architecture</a></li>
+  </ul>
+</nav>
+<div class="page-versions">
+  <button class="version-menu-toggle" title="Show other versions of page">5.6</button>
+  <div class="version-menu">
+    <a class="version" href="../../../6/servlet/authorization/architecture.html">6</a>
+    <a class="version is-current" href="architecture.html">5.6</a>
+  </div>
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora-2.x/docs/modules/ROOT/pages/servlet/authorization/architecture.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Authorization Architecture</h1>
+<div class="sect1">
+<h2 id="authz-authorities"><a class="anchor" href="#authz-authorities"></a>Authorities</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="#servlet-authentication-authentication"><code>Authentication</code></a>, discusses how all <code>Authentication</code> implementations store a list of <code>GrantedAuthority</code> objects.
+These represent the authorities that have been granted to the principal.
+the <code>GrantedAuthority</code> objects are inserted into the <code>Authentication</code> object by the <code>AuthenticationManager</code> and are later read by <code>AccessDecisionManager</code> s when making authorization decisions.</p>
+</div>
+<div class="paragraph">
+<p><code>GrantedAuthority</code> is an interface with only one method:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String getAuthority();</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This method allows
+<code>AccessDecisionManager</code> s to obtain a precise <code>String</code> representation of the <code>GrantedAuthority</code>.
+By returning a representation as a <code>String</code>, a <code>GrantedAuthority</code> can be easily "read" by most <code>AccessDecisionManager</code> s.
+If a <code>GrantedAuthority</code> cannot be precisely represented as a <code>String</code>, the <code>GrantedAuthority</code> is considered "complex" and <code>getAuthority()</code> must return <code>null</code>.</p>
+</div>
+<div class="paragraph">
+<p>An example of a "complex" <code>GrantedAuthority</code> would be an implementation that stores a list of operations and authority thresholds that apply to different customer account numbers.
+Representing this complex <code>GrantedAuthority</code> as a <code>String</code> would be quite difficult, and as a result the <code>getAuthority()</code> method should return <code>null</code>.
+This will indicate to any <code>AccessDecisionManager</code> that it will need to specifically support the <code>GrantedAuthority</code> implementation in order to understand its contents.</p>
+</div>
+<div class="paragraph">
+<p>Spring Security includes one concrete <code>GrantedAuthority</code> implementation, <code>SimpleGrantedAuthority</code>.
+This allows any user-specified <code>String</code> to be converted into a <code>GrantedAuthority</code>.
+All <code>AuthenticationProvider</code> s included with the security architecture use <code>SimpleGrantedAuthority</code> to populate the <code>Authentication</code> object.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="authz-pre-invocation"><a class="anchor" href="#authz-pre-invocation"></a>Pre-Invocation Handling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security provides interceptors which control access to secure objects such as method invocations or web requests.
+A pre-invocation decision on whether the invocation is allowed to proceed is made by the <code>AccessDecisionManager</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="authz-access-decision-manager"><a class="anchor" href="#authz-access-decision-manager"></a>The AccessDecisionManager</h3>
+<div class="paragraph">
+<p>The <code>AccessDecisionManager</code> is called by the <code>AbstractSecurityInterceptor</code> and is responsible for making final access control decisions.
+The <code>AccessDecisionManager</code> interface contains three methods:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">void decide(Authentication authentication, Object secureObject,
+	Collection&lt;ConfigAttribute&gt; attrs) throws AccessDeniedException;
+
+boolean supports(ConfigAttribute attribute);
+
+boolean supports(Class clazz);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>AccessDecisionManager</code>'s <code>decide</code> method is passed all the relevant information it needs in order to make an authorization decision.
+In particular, passing the secure <code>Object</code> enables those arguments contained in the actual secure object invocation to be inspected.
+For example, let&#8217;s assume the secure object was a <code>MethodInvocation</code>.
+It would be easy to query the <code>MethodInvocation</code> for any <code>Customer</code> argument, and then implement some sort of security logic in the <code>AccessDecisionManager</code> to ensure the principal is permitted to operate on that customer.
+Implementations are expected to throw an <code>AccessDeniedException</code> if access is denied.</p>
+</div>
+<div class="paragraph">
+<p>The <code>supports(ConfigAttribute)</code> method is called by the <code>AbstractSecurityInterceptor</code> at startup time to determine if the <code>AccessDecisionManager</code> can process the passed <code>ConfigAttribute</code>.
+The <code>supports(Class)</code> method is called by a security interceptor implementation to ensure the configured <code>AccessDecisionManager</code> supports the type of secure object that the security interceptor will present.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="authz-voting-based"><a class="anchor" href="#authz-voting-based"></a>Voting-Based AccessDecisionManager Implementations</h3>
+<div class="paragraph">
+<p>Whilst users can implement their own <code>AccessDecisionManager</code> to control all aspects of authorization, Spring Security includes several <code>AccessDecisionManager</code> implementations that are based on voting.
+<a href="#authz-access-voting">Voting Decision Manager</a> illustrates the relevant classes.</p>
+</div>
+<div id="authz-access-voting" class="imageblock">
+<div class="content">
+<img src="../../_images/images/access-decision-voting.png" alt="access decision voting">
+</div>
+<div class="title">Figure 1. Voting Decision Manager</div>
+</div>
+<div class="paragraph">
+<p>Using this approach, a series of <code>AccessDecisionVoter</code> implementations are polled on an authorization decision.
+The <code>AccessDecisionManager</code> then decides whether or not to throw an <code>AccessDeniedException</code> based on its assessment of the votes.</p>
+</div>
+<div class="paragraph">
+<p>The <code>AccessDecisionVoter</code> interface has three methods:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int vote(Authentication authentication, Object object, Collection&lt;ConfigAttribute&gt; attrs);
+
+boolean supports(ConfigAttribute attribute);
+
+boolean supports(Class clazz);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Concrete implementations return an <code>int</code>, with possible values               being reflected in the <code>AccessDecisionVoter</code> static fields <code>ACCESS_ABSTAIN</code>, <code>ACCESS_DENIED</code> and <code>ACCESS_GRANTED</code>.
+A voting implementation will return <code>ACCESS_ABSTAIN</code> if it has no opinion on an authorization decision.
+If it does have an opinion, it must return either <code>ACCESS_DENIED</code> or <code>ACCESS_GRANTED</code>.</p>
+</div>
+<div class="paragraph">
+<p>There are three concrete <code>AccessDecisionManager</code> s provided with Spring Security that tally the votes.
+The <code>ConsensusBased</code> implementation will grant or deny access based on the consensus of non-abstain votes.
+Properties are provided to control behavior in the event of an equality of votes or if all votes are abstain.
+The <code>AffirmativeBased</code> implementation will grant access if one or more <code>ACCESS_GRANTED</code> votes were received (i.e. a deny vote will be ignored, provided there was at least one grant vote).
+Like the <code>ConsensusBased</code> implementation, there is a parameter that controls the behavior if all voters abstain.
+The <code>UnanimousBased</code> provider expects unanimous <code>ACCESS_GRANTED</code> votes in order to grant access, ignoring abstains.
+It will deny access if there is any <code>ACCESS_DENIED</code> vote.
+Like the other implementations, there is a parameter that controls the behaviour if all voters abstain.</p>
+</div>
+<div class="paragraph">
+<p>It is possible to implement a custom <code>AccessDecisionManager</code> that tallies votes differently.
+For example, votes from a particular <code>AccessDecisionVoter</code> might receive additional weighting, whilst a deny vote from a particular voter may have a veto effect.</p>
+</div>
+<div class="sect3">
+<h4 id="authz-role-voter"><a class="anchor" href="#authz-role-voter"></a>RoleVoter</h4>
+<div class="paragraph">
+<p>The most commonly used <code>AccessDecisionVoter</code> provided with Spring Security is the simple <code>RoleVoter</code>, which treats configuration attributes as simple role names and votes to grant access if the user has been assigned that role.</p>
+</div>
+<div class="paragraph">
+<p>It will vote if any <code>ConfigAttribute</code> begins with the prefix <code>ROLE_</code>.
+It will vote to grant access if there is a <code>GrantedAuthority</code> which returns a <code>String</code> representation (via the <code>getAuthority()</code> method) exactly equal to one or more <code>ConfigAttributes</code> starting with the prefix <code>ROLE_</code>.
+If there is no exact match of any <code>ConfigAttribute</code> starting with <code>ROLE_</code>, the <code>RoleVoter</code> will vote to deny access.
+If no <code>ConfigAttribute</code> begins with <code>ROLE_</code>, the voter will abstain.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="authz-authenticated-voter"><a class="anchor" href="#authz-authenticated-voter"></a>AuthenticatedVoter</h4>
+<div class="paragraph">
+<p>Another voter which we&#8217;ve implicitly seen is the <code>AuthenticatedVoter</code>, which can be used to differentiate between anonymous, fully-authenticated and remember-me authenticated users.
+Many sites allow certain limited access under remember-me authentication, but require a user to confirm their identity by logging in for full access.</p>
+</div>
+<div class="paragraph">
+<p>When we&#8217;ve used the attribute <code>IS_AUTHENTICATED_ANONYMOUSLY</code> to grant anonymous access, this attribute was being processed by the <code>AuthenticatedVoter</code>.
+See the Javadoc for this class for more information.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="authz-custom-voter"><a class="anchor" href="#authz-custom-voter"></a>Custom Voters</h4>
+<div class="paragraph">
+<p>Obviously, you can also implement a custom <code>AccessDecisionVoter</code> and you can put just about any access-control logic you want in it.
+It might be specific to your application (business-logic related) or it might implement some security administration logic.
+For example, you&#8217;ll find a <a href="https://spring.io/blog/2009/01/03/spring-security-customization-part-2-adjusting-secured-session-in-real-time">blog article</a> on the Spring web site which describes how to use a voter to deny access in real-time to users whose accounts have been suspended.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="authz-after-invocation-handling"><a class="anchor" href="#authz-after-invocation-handling"></a>After Invocation Handling</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Whilst the <code>AccessDecisionManager</code> is called by the <code>AbstractSecurityInterceptor</code> before proceeding with the secure object invocation, some applications need a way of modifying the object actually returned by the secure object invocation.
+Whilst you could easily implement your own AOP concern to achieve this, Spring Security provides a convenient hook that has several concrete implementations that integrate with its ACL capabilities.</p>
+</div>
+<div class="paragraph">
+<p><a href="#authz-after-invocation">After Invocation Implementation</a> illustrates Spring Security&#8217;s <code>AfterInvocationManager</code> and its concrete implementations.</p>
+</div>
+<div id="authz-after-invocation" class="imageblock">
+<div class="content">
+<img src="../../_images/images/after-invocation.png" alt="after invocation">
+</div>
+<div class="title">Figure 2. After Invocation Implementation</div>
+</div>
+<div class="paragraph">
+<p>Like many other parts of Spring Security, <code>AfterInvocationManager</code> has a single concrete implementation, <code>AfterInvocationProviderManager</code>, which polls a list of <code>AfterInvocationProvider</code> s.
+Each <code>AfterInvocationProvider</code> is allowed to modify the return object or throw an <code>AccessDeniedException</code>.
+Indeed multiple providers can modify the object, as the result of the previous provider is passed to the next in the list.</p>
+</div>
+<div class="paragraph">
+<p>Please be aware that if you&#8217;re using <code>AfterInvocationManager</code>, you will still need configuration attributes that allow the <code>MethodSecurityInterceptor</code>'s <code>AccessDecisionManager</code> to allow an operation.
+If you&#8217;re using the typical Spring Security included <code>AccessDecisionManager</code> implementations, having no configuration attributes defined for a particular secure method invocation will cause each <code>AccessDecisionVoter</code> to abstain from voting.
+In turn, if the <code>AccessDecisionManager</code> property           &#8220;allowIfAllAbstainDecisions&#8221; is <code>false</code>, an <code>AccessDeniedException</code> will be thrown.
+You may avoid this potential issue by either (i) setting &#8220;allowIfAllAbstainDecisions&#8221; to <code>true</code> (although this is generally not recommended) or (ii) simply ensure that there is at least one configuration attribute that an <code>AccessDecisionVoter</code> will vote to grant access for.
+This latter (recommended) approach is usually achieved through a <code>ROLE_USER</code> or <code>ROLE_AUTHENTICATED</code> configuration attribute.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="authz-hierarchical-roles"><a class="anchor" href="#authz-hierarchical-roles"></a>Hierarchical Roles</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>It is a common requirement that a particular role in an application should automatically "include" other roles.
+For example, in an application which has the concept of an "admin" and a "user" role, you may want an admin to be able to do everything a normal user can.
+To achieve this, you can either make sure that all admin users are also assigned the "user" role.
+Alternatively, you can modify every access constraint which requires the "user" role to also include the "admin" role.
+This can get quite complicated if you have a lot of different roles in your application.</p>
+</div>
+<div class="paragraph">
+<p>The use of a role-hierarchy allows you to configure which roles (or authorities) should include others.
+An extended version of Spring Security&#8217;s <a href="#authz-role-voter">RoleVoter</a>, <code>RoleHierarchyVoter</code>, is configured with a <code>RoleHierarchy</code>, from which it obtains all the "reachable authorities" which the user is assigned.
+A typical configuration might look like this:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="roleVoter" class="org.springframework.security.access.vote.RoleHierarchyVoter"&gt;
+	&lt;constructor-arg ref="roleHierarchy" /&gt;
+&lt;/bean&gt;
+&lt;bean id="roleHierarchy"
+		class="org.springframework.security.access.hierarchicalroles.RoleHierarchyImpl"&gt;
+	&lt;property name="hierarchy"&gt;
+		&lt;value&gt;
+			ROLE_ADMIN &gt; ROLE_STAFF
+			ROLE_STAFF &gt; ROLE_USER
+			ROLE_USER &gt; ROLE_GUEST
+		&lt;/value&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Here we have four roles in a hierarchy <code>ROLE_ADMIN &#8658; ROLE_STAFF &#8658; ROLE_USER &#8658; ROLE_GUEST</code>.
+A user who is authenticated with <code>ROLE_ADMIN</code>, will behave as if they have all four roles when security constraints are evaluated against an <code>AccessDecisionManager</code> configured with the above <code>RoleHierarchyVoter</code>.
+The <code>&gt;</code> symbol can be thought of as meaning "includes".</p>
+</div>
+<div class="paragraph">
+<p>Role hierarchies offer a convenient means of simplifying the access-control configuration data for your application and/or reducing the number of authorities which you need to assign to a user.
+For more complex requirements you may wish to define a logical mapping between the specific access-rights your application requires and the roles that are assigned to users, translating between the two when loading the user information.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../../_/js/tabs.js"></script>  </body>
+</html>
