@@ -1,0 +1,15 @@
+site:
+  title: Spring
+  start_page: framework::overview.adoc
+content:
+  sources:
+    - url: ../../spring-projects/spring-framework
+      branches: antora-2.x
+      start_path: src/docs/antora
+    - url: ../../spring-projects/spring-security
+      branches: antora-2.x
+      start_path: docs
+ui:
+  bundle:
+    url: https://github.com/rwinch/antora-ui-spring/releases/download/latest/ui-bundle.zip
+    snapshot: true
