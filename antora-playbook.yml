@@ -7,7 +7,7 @@ content:
       branches: antora-2.x
       start_path: src/docs/antora
     - url: https://github.com/rwinch/spring-security
-      branches: .*antora-2.x
+      branches: [antora-2.x,6.0.x-antora-2.x]
       start_path: docs
 ui:
   bundle:
