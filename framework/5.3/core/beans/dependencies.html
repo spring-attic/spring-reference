@@ -1,0 +1,2295 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Dependencies :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../core.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">The IoC Container</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="container.html">Container Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bean.html">Bean Overview</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="dependencies.html">Bean Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="scopes.html">Bean Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customizing.html">Customizing the Nature of a Bean</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inheritance.html">Bean Definition Inheritance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="extension.html">Container Extension Points</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="annotation.html">Annotation-based Container Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="scanning.html">Classpath Scanning and Managed Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jsr330.html">Using JSR 330 Standard Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="java.html">Java-based Container configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="env.html">Environment Abstraction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="loadtimeweaver.html">Registering a LoadTimeWeaver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applicationcontext.html">Additional Capabilities of the ApplicationContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beanfactory.html">The BeanFactory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../validation.html">Validation, Data Binding, and Type Conversion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aop.html">Aspect Oriented Programming with Spring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aop-api.html">Spring AOP APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../null-safety.html">Null-safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../databuffer-codec.html">Data Buffers and Codecs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../spring-jcl.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../security/5.6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../security/5.6/overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Spring Framework</a></li>
+    <li><a href="../../core.html">Core</a></li>
+    <li><a href="index.html">The IoC Container</a></li>
+    <li><a href="dependencies.html">Bean Dependencies</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/core/beans/dependencies.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Dependencies</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>A typical enterprise application does not consist of a single object (or bean in the
+Spring parlance). Even the simplest application has a few objects that work together to
+present what the end-user sees as a coherent application. This next section explains how
+you go from defining a number of bean definitions that stand alone to a fully realized
+application where objects collaborate to achieve a goal.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-collaborators"><a class="anchor" href="#beans-factory-collaborators"></a>Dependency Injection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Dependency injection (DI) is a process whereby objects define their dependencies
+(that is, the other objects with which they work) only through constructor arguments,
+arguments to a factory method, or properties that are set on the object instance after
+it is constructed or returned from a factory method. The container then injects those
+dependencies when it creates the bean. This process is fundamentally the inverse (hence
+the name, Inversion of Control) of the bean itself controlling the instantiation
+or location of its dependencies on its own by using direct construction of classes or
+the Service Locator pattern.</p>
+</div>
+<div class="paragraph">
+<p>Code is cleaner with the DI principle, and decoupling is more effective when objects are
+provided with their dependencies. The object does not look up its dependencies and does
+not know the location or class of the dependencies. As a result, your classes become easier
+to test, particularly when the dependencies are on interfaces or abstract base classes,
+which allow for stub or mock implementations to be used in unit tests.</p>
+</div>
+<div class="paragraph">
+<p>DI exists in two major variants: <a href="#beans-constructor-injection">Constructor-based
+dependency injection</a> and <a href="#beans-setter-injection">Setter-based dependency injection</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-constructor-injection"><a class="anchor" href="#beans-constructor-injection"></a>Constructor-based Dependency Injection</h3>
+<div class="paragraph">
+<p>Constructor-based DI is accomplished by the container invoking a constructor with a
+number of arguments, each representing a dependency. Calling a <code>static</code> factory method
+with specific arguments to construct the bean is nearly equivalent, and this discussion
+treats arguments to a constructor and to a <code>static</code> factory method similarly. The
+following example shows a class that can only be dependency-injected with constructor
+injection:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SimpleMovieLister {
+
+	// the SimpleMovieLister has a dependency on a MovieFinder
+	private final MovieFinder movieFinder;
+
+	// a constructor so that the Spring container can inject a MovieFinder
+	public SimpleMovieLister(MovieFinder movieFinder) {
+		this.movieFinder = movieFinder;
+	}
+
+	// business logic that actually uses the injected MovieFinder is omitted...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// a constructor so that the Spring container can inject a MovieFinder
+class SimpleMovieLister(private val movieFinder: MovieFinder) {
+	// business logic that actually uses the injected MovieFinder is omitted...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice that there is nothing special about this class. It is a POJO that
+has no dependencies on container specific interfaces, base classes, or annotations.</p>
+</div>
+<div class="sect3">
+<h4 id="beans-factory-ctor-arguments-resolution"><a class="anchor" href="#beans-factory-ctor-arguments-resolution"></a>Constructor Argument Resolution</h4>
+<div class="paragraph">
+<p>Constructor argument resolution matching occurs by using the argument&#8217;s type. If no
+potential ambiguity exists in the constructor arguments of a bean definition, the
+order in which the constructor arguments are defined in a bean definition is the order
+in which those arguments are supplied to the appropriate constructor when the bean is
+being instantiated. Consider the following class:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package x.y;
+
+public class ThingOne {
+
+	public ThingOne(ThingTwo thingTwo, ThingThree thingThree) {
+		// ...
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">package x.y
+
+class ThingOne(thingTwo: ThingTwo, thingThree: ThingThree)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Assuming that the <code>ThingTwo</code> and <code>ThingThree</code> classes are not related by inheritance, no
+potential ambiguity exists. Thus, the following configuration works fine, and you do not
+need to specify the constructor argument indexes or types explicitly in the
+<code>&lt;constructor-arg/&gt;</code> element.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans&gt;
+	&lt;bean id="beanOne" class="x.y.ThingOne"&gt;
+		&lt;constructor-arg ref="beanTwo"/&gt;
+		&lt;constructor-arg ref="beanThree"/&gt;
+	&lt;/bean&gt;
+
+	&lt;bean id="beanTwo" class="x.y.ThingTwo"/&gt;
+
+	&lt;bean id="beanThree" class="x.y.ThingThree"/&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When another bean is referenced, the type is known, and matching can occur (as was the
+case with the preceding example). When a simple type is used, such as
+<code>&lt;value&gt;true&lt;/value&gt;</code>, Spring cannot determine the type of the value, and so cannot match
+by type without help. Consider the following class:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package examples;
+
+public class ExampleBean {
+
+	// Number of years to calculate the Ultimate Answer
+	private final int years;
+
+	// The Answer to Life, the Universe, and Everything
+	private final String ultimateAnswer;
+
+	public ExampleBean(int years, String ultimateAnswer) {
+		this.years = years;
+		this.ultimateAnswer = ultimateAnswer;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">package examples
+
+class ExampleBean(
+	private val years: Int, // Number of years to calculate the Ultimate Answer
+	private val ultimateAnswer: String// The Answer to Life, the Universe, and Everything
+)</code></pre>
+</div>
+</div>
+<div class="openblock">
+<div class="title"><a id="beans-factory-ctor-arguments-type"></a>Constructor argument type matching</div>
+<div class="content">
+<div class="paragraph">
+<p>In the preceding scenario, the container can use type matching with simple types if
+you explicitly specify the type of the constructor argument by using the <code>type</code> attribute,
+as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="exampleBean" class="examples.ExampleBean"&gt;
+	&lt;constructor-arg type="int" value="7500000"/&gt;
+	&lt;constructor-arg type="java.lang.String" value="42"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title"><a id="beans-factory-ctor-arguments-index"></a>Constructor argument index</div>
+<div class="content">
+<div class="paragraph">
+<p>You can use the <code>index</code> attribute to specify explicitly the index of constructor arguments,
+as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="exampleBean" class="examples.ExampleBean"&gt;
+	&lt;constructor-arg index="0" value="7500000"/&gt;
+	&lt;constructor-arg index="1" value="42"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In addition to resolving the ambiguity of multiple simple values, specifying an index
+resolves ambiguity where a constructor has two arguments of the same type.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The index is 0-based.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="openblock">
+<div class="title"><a id="beans-factory-ctor-arguments-name"></a>Constructor argument name</div>
+<div class="content">
+<div class="paragraph">
+<p>You can also use the constructor parameter name for value disambiguation, as the following
+example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="exampleBean" class="examples.ExampleBean"&gt;
+	&lt;constructor-arg name="years" value="7500000"/&gt;
+	&lt;constructor-arg name="ultimateAnswer" value="42"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Keep in mind that, to make this work out of the box, your code must be compiled with the
+debug flag enabled so that Spring can look up the parameter name from the constructor.
+If you cannot or do not want to compile your code with the debug flag, you can use the
+<a href="https://download.oracle.com/javase/8/docs/api/java/beans/ConstructorProperties.html">@ConstructorProperties</a>
+JDK annotation to explicitly name your constructor arguments. The sample class would
+then have to look as follows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package examples;
+
+public class ExampleBean {
+
+	// Fields omitted
+
+	@ConstructorProperties({"years", "ultimateAnswer"})
+	public ExampleBean(int years, String ultimateAnswer) {
+		this.years = years;
+		this.ultimateAnswer = ultimateAnswer;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">package examples
+
+class ExampleBean
+@ConstructorProperties("years", "ultimateAnswer")
+constructor(val years: Int, val ultimateAnswer: String)</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-setter-injection"><a class="anchor" href="#beans-setter-injection"></a>Setter-based Dependency Injection</h3>
+<div class="paragraph">
+<p>Setter-based DI is accomplished by the container calling setter methods on your
+beans after invoking a no-argument constructor or a no-argument <code>static</code> factory method to
+instantiate your bean.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows a class that can only be dependency-injected by using pure
+setter injection. This class is conventional Java. It is a POJO that has no dependencies
+on container specific interfaces, base classes, or annotations.</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SimpleMovieLister {
+
+	// the SimpleMovieLister has a dependency on the MovieFinder
+	private MovieFinder movieFinder;
+
+	// a setter method so that the Spring container can inject a MovieFinder
+	public void setMovieFinder(MovieFinder movieFinder) {
+		this.movieFinder = movieFinder;
+	}
+
+	// business logic that actually uses the injected MovieFinder is omitted...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class SimpleMovieLister {
+
+	// a late-initialized property so that the Spring container can inject a MovieFinder
+	lateinit var movieFinder: MovieFinder
+
+	// business logic that actually uses the injected MovieFinder is omitted...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>ApplicationContext</code> supports constructor-based and setter-based DI for the beans it
+manages. It also supports setter-based DI after some dependencies have already been
+injected through the constructor approach. You configure the dependencies in the form of
+a <code>BeanDefinition</code>, which you use in conjunction with <code>PropertyEditor</code> instances to
+convert properties from one format to another. However, most Spring users do not work
+with these classes directly (that is, programmatically) but rather with XML <code>bean</code>
+definitions, annotated components (that is, classes annotated with <code>@Component</code>,
+<code>@Controller</code>, and so forth), or <code>@Bean</code> methods in Java-based <code>@Configuration</code> classes.
+These sources are then converted internally into instances of <code>BeanDefinition</code> and used to
+load an entire Spring IoC container instance.</p>
+</div>
+<div id="beans-constructor-vs-setter-injection" class="sidebarblock">
+<div class="content">
+<div class="title">Constructor-based or setter-based DI?</div>
+<div class="paragraph">
+<p>Since you can mix constructor-based and setter-based DI, it is a good rule of thumb to
+use constructors for mandatory dependencies and setter methods or configuration methods
+for optional dependencies. Note that use of the <a href="#beans-required-annotation">@Required</a>
+annotation on a setter method can be used to make the property be a required dependency;
+however, constructor injection with programmatic validation of arguments is preferable.</p>
+</div>
+<div class="paragraph">
+<p>The Spring team generally advocates constructor injection, as it lets you implement
+application components as immutable objects and ensures that required dependencies
+are not <code>null</code>. Furthermore, constructor-injected components are always returned to the client
+(calling) code in a fully initialized state. As a side note, a large number of constructor
+arguments is a bad code smell, implying that the class likely has too many
+responsibilities and should be refactored to better address proper separation of concerns.</p>
+</div>
+<div class="paragraph">
+<p>Setter injection should primarily only be used for optional dependencies that can be
+assigned reasonable default values within the class. Otherwise, not-null checks must be
+performed everywhere the code uses the dependency. One benefit of setter injection is that
+setter methods make objects of that class amenable to reconfiguration or re-injection
+later. Management through <a href="../../integration.html#jmx" class="page">JMX MBeans</a> is therefore a compelling
+use case for setter injection.</p>
+</div>
+<div class="paragraph">
+<p>Use the DI style that makes the most sense for a particular class. Sometimes, when dealing
+with third-party classes for which you do not have the source, the choice is made for you.
+For example, if a third-party class does not expose any setter methods, then constructor
+injection may be the only available form of DI.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-dependency-resolution"><a class="anchor" href="#beans-dependency-resolution"></a>Dependency Resolution Process</h3>
+<div class="paragraph">
+<p>The container performs bean dependency resolution as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <code>ApplicationContext</code> is created and initialized with configuration metadata that
+describes all the beans. Configuration metadata can be specified by XML, Java code, or
+annotations.</p>
+</li>
+<li>
+<p>For each bean, its dependencies are expressed in the form of properties, constructor
+arguments, or arguments to the static-factory method (if you use that instead of a
+normal constructor). These dependencies are provided to the bean, when the bean is
+actually created.</p>
+</li>
+<li>
+<p>Each property or constructor argument is an actual definition of the value to set, or
+a reference to another bean in the container.</p>
+</li>
+<li>
+<p>Each property or constructor argument that is a value is converted from its specified
+format to the actual type of that property or constructor argument. By default, Spring
+can convert a value supplied in string format to all built-in types, such as <code>int</code>,
+<code>long</code>, <code>String</code>, <code>boolean</code>, and so forth.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The Spring container validates the configuration of each bean as the container is created.
+However, the bean properties themselves are not set until the bean is actually created.
+Beans that are singleton-scoped and set to be pre-instantiated (the default) are created
+when the container is created. Scopes are defined in <a href="#beans-factory-scopes">[beans-factory-scopes]</a>. Otherwise,
+the bean is created only when it is requested. Creation of a bean potentially causes a
+graph of beans to be created, as the bean&#8217;s dependencies and its dependencies'
+dependencies (and so on) are created and assigned. Note that resolution mismatches among
+those dependencies may show up late&#8201;&#8212;&#8201;that is, on first creation of the affected bean.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="title">Circular dependencies</div>
+<div class="paragraph">
+<p>If you use predominantly constructor injection, it is possible to create an unresolvable
+circular dependency scenario.</p>
+</div>
+<div class="paragraph">
+<p>For example: Class A requires an instance of class B through constructor injection, and
+class B requires an instance of class A through constructor injection. If you configure
+beans for classes A and B to be injected into each other, the Spring IoC container
+detects this circular reference at runtime, and throws a
+<code>BeanCurrentlyInCreationException</code>.</p>
+</div>
+<div class="paragraph">
+<p>One possible solution is to edit the source code of some classes to be configured by
+setters rather than constructors. Alternatively, avoid constructor injection and use
+setter injection only. In other words, although it is not recommended, you can configure
+circular dependencies with setter injection.</p>
+</div>
+<div class="paragraph">
+<p>Unlike the typical case (with no circular dependencies), a circular dependency
+between bean A and bean B forces one of the beans to be injected into the other prior to
+being fully initialized itself (a classic chicken-and-egg scenario).</p>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can generally trust Spring to do the right thing. It detects configuration problems,
+such as references to non-existent beans and circular dependencies, at container
+load-time. Spring sets properties and resolves dependencies as late as possible, when
+the bean is actually created. This means that a Spring container that has loaded
+correctly can later generate an exception when you request an object if there is a
+problem creating that object or one of its dependencies&#8201;&#8212;&#8201;for example, the bean throws an
+exception as a result of a missing or invalid property. This potentially delayed
+visibility of some configuration issues is why <code>ApplicationContext</code> implementations by
+default pre-instantiate singleton beans. At the cost of some upfront time and memory to
+create these beans before they are actually needed, you discover configuration issues
+when the <code>ApplicationContext</code> is created, not later. You can still override this default
+behavior so that singleton beans initialize lazily, rather than being eagerly
+pre-instantiated.</p>
+</div>
+<div class="paragraph">
+<p>If no circular dependencies exist, when one or more collaborating beans are being
+injected into a dependent bean, each collaborating bean is totally configured prior
+to being injected into the dependent bean. This means that, if bean A has a dependency on
+bean B, the Spring IoC container completely configures bean B prior to invoking the
+setter method on bean A. In other words, the bean is instantiated (if it is not a
+pre-instantiated singleton), its dependencies are set, and the relevant lifecycle
+methods (such as a <a href="#beans-factory-lifecycle-initializingbean">configured init method</a>
+or the <a href="#beans-factory-lifecycle-initializingbean">InitializingBean callback method</a>)
+are invoked.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-some-examples"><a class="anchor" href="#beans-some-examples"></a>Examples of Dependency Injection</h3>
+<div class="paragraph">
+<p>The following example uses XML-based configuration metadata for setter-based DI. A small
+part of a Spring XML configuration file specifies some bean definitions as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="exampleBean" class="examples.ExampleBean"&gt;
+	&lt;!-- setter injection using the nested ref element --&gt;
+	&lt;property name="beanOne"&gt;
+		&lt;ref bean="anotherExampleBean"/&gt;
+	&lt;/property&gt;
+
+	&lt;!-- setter injection using the neater ref attribute --&gt;
+	&lt;property name="beanTwo" ref="yetAnotherBean"/&gt;
+	&lt;property name="integerProperty" value="1"/&gt;
+&lt;/bean&gt;
+
+&lt;bean id="anotherExampleBean" class="examples.AnotherBean"/&gt;
+&lt;bean id="yetAnotherBean" class="examples.YetAnotherBean"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows the corresponding <code>ExampleBean</code> class:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class ExampleBean {
+
+	private AnotherBean beanOne;
+
+	private YetAnotherBean beanTwo;
+
+	private int i;
+
+	public void setBeanOne(AnotherBean beanOne) {
+		this.beanOne = beanOne;
+	}
+
+	public void setBeanTwo(YetAnotherBean beanTwo) {
+		this.beanTwo = beanTwo;
+	}
+
+	public void setIntegerProperty(int i) {
+		this.i = i;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class ExampleBean {
+	lateinit var beanOne: AnotherBean
+	lateinit var beanTwo: YetAnotherBean
+	var i: Int = 0
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the preceding example, setters are declared to match against the properties specified
+in the XML file. The following example uses constructor-based DI:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="exampleBean" class="examples.ExampleBean"&gt;
+	&lt;!-- constructor injection using the nested ref element --&gt;
+	&lt;constructor-arg&gt;
+		&lt;ref bean="anotherExampleBean"/&gt;
+	&lt;/constructor-arg&gt;
+
+	&lt;!-- constructor injection using the neater ref attribute --&gt;
+	&lt;constructor-arg ref="yetAnotherBean"/&gt;
+
+	&lt;constructor-arg type="int" value="1"/&gt;
+&lt;/bean&gt;
+
+&lt;bean id="anotherExampleBean" class="examples.AnotherBean"/&gt;
+&lt;bean id="yetAnotherBean" class="examples.YetAnotherBean"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows the corresponding <code>ExampleBean</code> class:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class ExampleBean {
+
+	private AnotherBean beanOne;
+
+	private YetAnotherBean beanTwo;
+
+	private int i;
+
+	public ExampleBean(
+		AnotherBean anotherBean, YetAnotherBean yetAnotherBean, int i) {
+		this.beanOne = anotherBean;
+		this.beanTwo = yetAnotherBean;
+		this.i = i;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class ExampleBean(
+		private val beanOne: AnotherBean,
+		private val beanTwo: YetAnotherBean,
+		private val i: Int)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The constructor arguments specified in the bean definition are used as arguments to
+the constructor of the <code>ExampleBean</code>.</p>
+</div>
+<div class="paragraph">
+<p>Now consider a variant of this example, where, instead of using a constructor, Spring is
+told to call a <code>static</code> factory method to return an instance of the object:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="exampleBean" class="examples.ExampleBean" factory-method="createInstance"&gt;
+	&lt;constructor-arg ref="anotherExampleBean"/&gt;
+	&lt;constructor-arg ref="yetAnotherBean"/&gt;
+	&lt;constructor-arg value="1"/&gt;
+&lt;/bean&gt;
+
+&lt;bean id="anotherExampleBean" class="examples.AnotherBean"/&gt;
+&lt;bean id="yetAnotherBean" class="examples.YetAnotherBean"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows the corresponding <code>ExampleBean</code> class:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class ExampleBean {
+
+	// a private constructor
+	private ExampleBean(...) {
+		...
+	}
+
+	// a static factory method; the arguments to this method can be
+	// considered the dependencies of the bean that is returned,
+	// regardless of how those arguments are actually used.
+	public static ExampleBean createInstance (
+		AnotherBean anotherBean, YetAnotherBean yetAnotherBean, int i) {
+
+		ExampleBean eb = new ExampleBean (...);
+		// some other operations...
+		return eb;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class ExampleBean private constructor() {
+	companion object {
+		// a static factory method; the arguments to this method can be
+		// considered the dependencies of the bean that is returned,
+		// regardless of how those arguments are actually used.
+		fun createInstance(anotherBean: AnotherBean, yetAnotherBean: YetAnotherBean, i: Int): ExampleBean {
+			val eb = ExampleBean (...)
+			// some other operations...
+			return eb
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Arguments to the <code>static</code> factory method are supplied by <code>&lt;constructor-arg/&gt;</code> elements,
+exactly the same as if a constructor had actually been used. The type of the class being
+returned by the factory method does not have to be of the same type as the class that
+contains the <code>static</code> factory method (although, in this example, it is). An instance
+(non-static) factory method can be used in an essentially identical fashion (aside
+from the use of the <code>factory-bean</code> attribute instead of the <code>class</code> attribute), so we
+do not discuss those details here.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-properties-detailed"><a class="anchor" href="#beans-factory-properties-detailed"></a>Dependencies and Configuration in Detail</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>As mentioned in the <a href="#beans-factory-collaborators">previous section</a>, you can define bean
+properties and constructor arguments as references to other managed beans (collaborators)
+or as values defined inline. Spring&#8217;s XML-based configuration metadata supports
+sub-element types within its <code>&lt;property/&gt;</code> and <code>&lt;constructor-arg/&gt;</code> elements for this
+purpose.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-value-element"><a class="anchor" href="#beans-value-element"></a>Straight Values (Primitives, Strings, and so on)</h3>
+<div class="paragraph">
+<p>The <code>value</code> attribute of the <code>&lt;property/&gt;</code> element specifies a property or constructor
+argument as a human-readable string representation. Spring&#8217;s
+<a href="#core-convert-ConversionService-API">conversion service</a> is used to convert these
+values from a <code>String</code> to the actual type of the property or argument.
+The following example shows various values being set:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource" destroy-method="close"&gt;
+	&lt;!-- results in a setDriverClassName(String) call --&gt;
+	&lt;property name="driverClassName" value="com.mysql.jdbc.Driver"/&gt;
+	&lt;property name="url" value="jdbc:mysql://localhost:3306/mydb"/&gt;
+	&lt;property name="username" value="root"/&gt;
+	&lt;property name="password" value="misterkaoli"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example uses the <a href="#beans-p-namespace">p-namespace</a> for even more succinct
+XML configuration:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+	https://www.springframework.org/schema/beans/spring-beans.xsd"&gt;
+
+	&lt;bean id="myDataSource" class="org.apache.commons.dbcp.BasicDataSource"
+		destroy-method="close"
+		p:driverClassName="com.mysql.jdbc.Driver"
+		p:url="jdbc:mysql://localhost:3306/mydb"
+		p:username="root"
+		p:password="misterkaoli"/&gt;
+
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding XML is more succinct. However, typos are discovered at runtime rather than
+design time, unless you use an IDE (such as <a href="https://www.jetbrains.com/idea/">IntelliJ
+IDEA</a> or the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>)
+that supports automatic property completion when you create bean definitions. Such IDE
+assistance is highly recommended.</p>
+</div>
+<div class="paragraph">
+<p>You can also configure a <code>java.util.Properties</code> instance, as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="mappings"
+	class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"&gt;
+
+	&lt;!-- typed as a java.util.Properties --&gt;
+	&lt;property name="properties"&gt;
+		&lt;value&gt;
+			jdbc.driver.className=com.mysql.jdbc.Driver
+			jdbc.url=jdbc:mysql://localhost:3306/mydb
+		&lt;/value&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The Spring container converts the text inside the <code>&lt;value/&gt;</code> element into a
+<code>java.util.Properties</code> instance by using the JavaBeans <code>PropertyEditor</code> mechanism. This
+is a nice shortcut, and is one of a few places where the Spring team do favor the use of
+the nested <code>&lt;value/&gt;</code> element over the <code>value</code> attribute style.</p>
+</div>
+<div class="sect3">
+<h4 id="beans-idref-element"><a class="anchor" href="#beans-idref-element"></a>The <code>idref</code> element</h4>
+<div class="paragraph">
+<p>The <code>idref</code> element is simply an error-proof way to pass the <code>id</code> (a string value - not
+a reference) of another bean in the container to a <code>&lt;constructor-arg/&gt;</code> or <code>&lt;property/&gt;</code>
+element. The following example shows how to use it:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="theTargetBean" class="..."/&gt;
+
+&lt;bean id="theClientBean" class="..."&gt;
+	&lt;property name="targetName"&gt;
+		&lt;idref bean="theTargetBean"/&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding bean definition snippet is exactly equivalent (at runtime) to the
+following snippet:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="theTargetBean" class="..." /&gt;
+
+&lt;bean id="client" class="..."&gt;
+	&lt;property name="targetName" value="theTargetBean"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The first form is preferable to the second, because using the <code>idref</code> tag lets the
+container validate at deployment time that the referenced, named bean actually
+exists. In the second variation, no validation is performed on the value that is passed
+to the <code>targetName</code> property of the <code>client</code> bean. Typos are only discovered (with most
+likely fatal results) when the <code>client</code> bean is actually instantiated. If the <code>client</code>
+bean is a <a href="#beans-factory-scopes">prototype</a> bean, this typo and the resulting exception
+may only be discovered long after the container is deployed.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>local</code> attribute on the <code>idref</code> element is no longer supported in the 4.0 beans
+XSD, since it does not provide value over a regular <code>bean</code> reference any more. Change
+your existing <code>idref local</code> references to <code>idref bean</code> when upgrading to the 4.0 schema.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A common place (at least in versions earlier than Spring 2.0) where the <code>&lt;idref/&gt;</code> element
+brings value is in the configuration of <a href="#aop-pfb-1">AOP interceptors</a> in a
+<code>ProxyFactoryBean</code> bean definition. Using <code>&lt;idref/&gt;</code> elements when you specify the
+interceptor names prevents you from misspelling an interceptor ID.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-ref-element"><a class="anchor" href="#beans-ref-element"></a>References to Other Beans (Collaborators)</h3>
+<div class="paragraph">
+<p>The <code>ref</code> element is the final element inside a <code>&lt;constructor-arg/&gt;</code> or <code>&lt;property/&gt;</code>
+definition element. Here, you set the value of the specified property of a bean to be a
+reference to another bean (a collaborator) managed by the container. The referenced bean
+is a dependency of the bean whose property is to be set, and it is initialized on demand
+as needed before the property is set. (If the collaborator is a singleton bean, it may
+already be initialized by the container.) All references are ultimately a reference to
+another object. Scoping and validation depend on whether you specify the ID or name of the
+other object through the <code>bean</code> or <code>parent</code> attribute.</p>
+</div>
+<div class="paragraph">
+<p>Specifying the target bean through the <code>bean</code> attribute of the <code>&lt;ref/&gt;</code> tag is the most
+general form and allows creation of a reference to any bean in the same container or
+parent container, regardless of whether it is in the same XML file. The value of the
+<code>bean</code> attribute may be the same as the <code>id</code> attribute of the target bean or be the same
+as one of the values in the <code>name</code> attribute of the target bean. The following example
+shows how to use a <code>ref</code> element:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;ref bean="someBean"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Specifying the target bean through the <code>parent</code> attribute creates a reference to a bean
+that is in a parent container of the current container. The value of the <code>parent</code>
+attribute may be the same as either the <code>id</code> attribute of the target bean or one of the
+values in the <code>name</code> attribute of the target bean. The target bean must be in a
+parent container of the current one. You should use this bean reference variant mainly
+when you have a hierarchy of containers and you want to wrap an existing bean in a parent
+container with a proxy that has the same name as the parent bean. The following pair of
+listings shows how to use the <code>parent</code> attribute:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- in the parent context --&gt;
+&lt;bean id="accountService" class="com.something.SimpleAccountService"&gt;
+	&lt;!-- insert dependencies as required as here --&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- in the child (descendant) context --&gt;
+&lt;bean id="accountService" &lt;!-- bean name is the same as the parent bean --&gt;
+	class="org.springframework.aop.framework.ProxyFactoryBean"&gt;
+	&lt;property name="target"&gt;
+		&lt;ref parent="accountService"/&gt; &lt;!-- notice how we refer to the parent bean --&gt;
+	&lt;/property&gt;
+	&lt;!-- insert other configuration and dependencies as required here --&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>local</code> attribute on the <code>ref</code> element is no longer supported in the 4.0 beans
+XSD, since it does not provide value over a regular <code>bean</code> reference any more. Change
+your existing <code>ref local</code> references to <code>ref bean</code> when upgrading to the 4.0 schema.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-inner-beans"><a class="anchor" href="#beans-inner-beans"></a>Inner Beans</h3>
+<div class="paragraph">
+<p>A <code>&lt;bean/&gt;</code> element inside the <code>&lt;property/&gt;</code> or <code>&lt;constructor-arg/&gt;</code> elements defines an
+inner bean, as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="outer" class="..."&gt;
+	&lt;!-- instead of using a reference to a target bean, simply define the target bean inline --&gt;
+	&lt;property name="target"&gt;
+		&lt;bean class="com.example.Person"&gt; &lt;!-- this is the inner bean --&gt;
+			&lt;property name="name" value="Fiona Apple"/&gt;
+			&lt;property name="age" value="25"/&gt;
+		&lt;/bean&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>An inner bean definition does not require a defined ID or name. If specified, the container
+does not use such a value as an identifier. The container also ignores the <code>scope</code> flag on
+creation, because inner beans are always anonymous and are always created with the outer
+bean. It is not possible to access inner beans independently or to inject them into
+collaborating beans other than into the enclosing bean.</p>
+</div>
+<div class="paragraph">
+<p>As a corner case, it is possible to receive destruction callbacks from a custom scope&#8201;&#8212;&#8201;for example, for a request-scoped inner bean contained within a singleton bean. The creation
+of the inner bean instance is tied to its containing bean, but destruction callbacks let it
+participate in the request scope&#8217;s lifecycle. This is not a common scenario. Inner beans
+typically simply share their containing bean&#8217;s scope.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-collection-elements"><a class="anchor" href="#beans-collection-elements"></a>Collections</h3>
+<div class="paragraph">
+<p>The <code>&lt;list/&gt;</code>, <code>&lt;set/&gt;</code>, <code>&lt;map/&gt;</code>, and <code>&lt;props/&gt;</code> elements set the properties
+and arguments of the Java <code>Collection</code> types <code>List</code>, <code>Set</code>, <code>Map</code>, and <code>Properties</code>,
+respectively. The following example shows how to use them:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="moreComplexObject" class="example.ComplexObject"&gt;
+	&lt;!-- results in a setAdminEmails(java.util.Properties) call --&gt;
+	&lt;property name="adminEmails"&gt;
+		&lt;props&gt;
+			&lt;prop key="administrator"&gt;administrator@example.org&lt;/prop&gt;
+			&lt;prop key="support"&gt;support@example.org&lt;/prop&gt;
+			&lt;prop key="development"&gt;development@example.org&lt;/prop&gt;
+		&lt;/props&gt;
+	&lt;/property&gt;
+	&lt;!-- results in a setSomeList(java.util.List) call --&gt;
+	&lt;property name="someList"&gt;
+		&lt;list&gt;
+			&lt;value&gt;a list element followed by a reference&lt;/value&gt;
+			&lt;ref bean="myDataSource" /&gt;
+		&lt;/list&gt;
+	&lt;/property&gt;
+	&lt;!-- results in a setSomeMap(java.util.Map) call --&gt;
+	&lt;property name="someMap"&gt;
+		&lt;map&gt;
+			&lt;entry key="an entry" value="just some string"/&gt;
+			&lt;entry key ="a ref" value-ref="myDataSource"/&gt;
+		&lt;/map&gt;
+	&lt;/property&gt;
+	&lt;!-- results in a setSomeSet(java.util.Set) call --&gt;
+	&lt;property name="someSet"&gt;
+		&lt;set&gt;
+			&lt;value&gt;just some string&lt;/value&gt;
+			&lt;ref bean="myDataSource" /&gt;
+		&lt;/set&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The value of a map key or value, or a set value, can also be any of the
+following elements:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">bean | ref | idref | list | set | map | props | value | null</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="beans-collection-elements-merging"><a class="anchor" href="#beans-collection-elements-merging"></a>Collection Merging</h4>
+<div class="paragraph">
+<p>The Spring container also supports merging collections. An application
+developer can define a parent <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, <code>&lt;set/&gt;</code> or <code>&lt;props/&gt;</code> element
+and have child <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, <code>&lt;set/&gt;</code> or <code>&lt;props/&gt;</code> elements inherit and
+override values from the parent collection. That is, the child collection&#8217;s values are
+the result of merging the elements of the parent and child collections, with the child&#8217;s
+collection elements overriding values specified in the parent collection.</p>
+</div>
+<div class="paragraph">
+<p>This section on merging discusses the parent-child bean mechanism. Readers unfamiliar
+with parent and child bean definitions may wish to read the
+<a href="#beans-child-bean-definitions">relevant section</a> before continuing.</p>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates collection merging:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans&gt;
+	&lt;bean id="parent" abstract="true" class="example.ComplexObject"&gt;
+		&lt;property name="adminEmails"&gt;
+			&lt;props&gt;
+				&lt;prop key="administrator"&gt;administrator@example.com&lt;/prop&gt;
+				&lt;prop key="support"&gt;support@example.com&lt;/prop&gt;
+			&lt;/props&gt;
+		&lt;/property&gt;
+	&lt;/bean&gt;
+	&lt;bean id="child" parent="parent"&gt;
+		&lt;property name="adminEmails"&gt;
+			&lt;!-- the merge is specified on the child collection definition --&gt;
+			&lt;props merge="true"&gt;
+				&lt;prop key="sales"&gt;sales@example.com&lt;/prop&gt;
+				&lt;prop key="support"&gt;support@example.co.uk&lt;/prop&gt;
+			&lt;/props&gt;
+		&lt;/property&gt;
+	&lt;/bean&gt;
+&lt;beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice the use of the <code>merge=true</code> attribute on the <code>&lt;props/&gt;</code> element of the
+<code>adminEmails</code> property of the <code>child</code> bean definition. When the <code>child</code> bean is resolved
+and instantiated by the container, the resulting instance has an <code>adminEmails</code>
+<code>Properties</code> collection that contains the result of merging the child&#8217;s
+<code>adminEmails</code> collection with the parent&#8217;s <code>adminEmails</code> collection. The following listing
+shows the result:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>administrator=administrator@example.com
+sales=sales@example.com
+support=support@example.co.uk</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The child <code>Properties</code> collection&#8217;s value set inherits all property elements from the
+parent <code>&lt;props/&gt;</code>, and the child&#8217;s value for the <code>support</code> value overrides the value in
+the parent collection.</p>
+</div>
+<div class="paragraph">
+<p>This merging behavior applies similarly to the <code>&lt;list/&gt;</code>, <code>&lt;map/&gt;</code>, and <code>&lt;set/&gt;</code>
+collection types. In the specific case of the <code>&lt;list/&gt;</code> element, the semantics
+associated with the <code>List</code> collection type (that is, the notion of an <code>ordered</code>
+collection of values) is maintained. The parent&#8217;s values precede all of the child list&#8217;s
+values. In the case of the <code>Map</code>, <code>Set</code>, and <code>Properties</code> collection types, no ordering
+exists. Hence, no ordering semantics are in effect for the collection types that underlie
+the associated <code>Map</code>, <code>Set</code>, and <code>Properties</code> implementation types that the container
+uses internally.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="beans-collection-merge-limitations"><a class="anchor" href="#beans-collection-merge-limitations"></a>Limitations of Collection Merging</h4>
+<div class="paragraph">
+<p>You cannot merge different collection types (such as a <code>Map</code> and a <code>List</code>). If you
+do attempt to do so, an appropriate <code>Exception</code> is thrown. The <code>merge</code> attribute must be
+specified on the lower, inherited, child definition. Specifying the <code>merge</code> attribute on
+a parent collection definition is redundant and does not result in the desired merging.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="beans-collection-elements-strongly-typed"><a class="anchor" href="#beans-collection-elements-strongly-typed"></a>Strongly-typed collection</h4>
+<div class="paragraph">
+<p>With the introduction of generic types in Java 5, you can use strongly typed collections.
+That is, it is possible to declare a <code>Collection</code> type such that it can only contain
+(for example) <code>String</code> elements. If you use Spring to dependency-inject a
+strongly-typed <code>Collection</code> into a bean, you can take advantage of Spring&#8217;s
+type-conversion support such that the elements of your strongly-typed <code>Collection</code>
+instances are converted to the appropriate type prior to being added to the <code>Collection</code>.
+The following Java class and bean definition show how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SomeClass {
+
+	private Map&lt;String, Float&gt; accounts;
+
+	public void setAccounts(Map&lt;String, Float&gt; accounts) {
+		this.accounts = accounts;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class SomeClass {
+	lateinit var accounts: Map&lt;String, Float&gt;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans&gt;
+	&lt;bean id="something" class="x.y.SomeClass"&gt;
+		&lt;property name="accounts"&gt;
+			&lt;map&gt;
+				&lt;entry key="one" value="9.99"/&gt;
+				&lt;entry key="two" value="2.75"/&gt;
+				&lt;entry key="six" value="3.99"/&gt;
+			&lt;/map&gt;
+		&lt;/property&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the <code>accounts</code> property of the <code>something</code> bean is prepared for injection, the generics
+information about the element type of the strongly-typed <code>Map&lt;String, Float&gt;</code> is
+available by reflection. Thus, Spring&#8217;s type conversion infrastructure recognizes the
+various value elements as being of type <code>Float</code>, and the string values (<code>9.99, 2.75</code>, and
+<code>3.99</code>) are converted into an actual <code>Float</code> type.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-null-element"><a class="anchor" href="#beans-null-element"></a>Null and Empty String Values</h3>
+<div class="paragraph">
+<p>Spring treats empty arguments for properties and the like as empty <code>Strings</code>. The
+following XML-based configuration metadata snippet sets the <code>email</code> property to the empty
+<code>String</code> value ("").</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean class="ExampleBean"&gt;
+	&lt;property name="email" value=""/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding example is equivalent to the following Java code:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">exampleBean.setEmail("");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">exampleBean.email = ""</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>&lt;null/&gt;</code> element handles <code>null</code> values. The following listing shows an example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean class="ExampleBean"&gt;
+	&lt;property name="email"&gt;
+		&lt;null/&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding configuration is equivalent to the following Java code:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">exampleBean.setEmail(null);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">exampleBean.email = null</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-p-namespace"><a class="anchor" href="#beans-p-namespace"></a>XML Shortcut with the p-namespace</h3>
+<div class="paragraph">
+<p>The p-namespace lets you use the <code>bean</code> element&#8217;s attributes (instead of nested
+<code>&lt;property/&gt;</code> elements) to describe your property values collaborating beans, or both.</p>
+</div>
+<div class="paragraph">
+<p>Spring supports extensible configuration formats <a href="../../core.html#xsd-schemas" class="page">with namespaces</a>,
+which are based on an XML Schema definition. The <code>beans</code> configuration format discussed in
+this chapter is defined in an XML Schema document. However, the p-namespace is not defined
+in an XSD file and exists only in the core of Spring.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows two XML snippets (the first uses
+standard XML format and the second uses the p-namespace) that resolve to the same result:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd"&gt;
+
+	&lt;bean name="classic" class="com.example.ExampleBean"&gt;
+		&lt;property name="email" value="someone@somewhere.com"/&gt;
+	&lt;/bean&gt;
+
+	&lt;bean name="p-namespace" class="com.example.ExampleBean"
+		p:email="someone@somewhere.com"/&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The example shows an attribute in the p-namespace called <code>email</code> in the bean definition.
+This tells Spring to include a property declaration. As previously mentioned, the
+p-namespace does not have a schema definition, so you can set the name of the attribute
+to the property name.</p>
+</div>
+<div class="paragraph">
+<p>This next example includes two more bean definitions that both have a reference to
+another bean:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd"&gt;
+
+	&lt;bean name="john-classic" class="com.example.Person"&gt;
+		&lt;property name="name" value="John Doe"/&gt;
+		&lt;property name="spouse" ref="jane"/&gt;
+	&lt;/bean&gt;
+
+	&lt;bean name="john-modern"
+		class="com.example.Person"
+		p:name="John Doe"
+		p:spouse-ref="jane"/&gt;
+
+	&lt;bean name="jane" class="com.example.Person"&gt;
+		&lt;property name="name" value="Jane Doe"/&gt;
+	&lt;/bean&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example includes not only a property value using the p-namespace
+but also uses a special format to declare property references. Whereas the first bean
+definition uses <code>&lt;property name="spouse" ref="jane"/&gt;</code> to create a reference from bean
+<code>john</code> to bean <code>jane</code>, the second bean definition uses <code>p:spouse-ref="jane"</code> as an
+attribute to do the exact same thing. In this case, <code>spouse</code> is the property name,
+whereas the <code>-ref</code> part indicates that this is not a straight value but rather a
+reference to another bean.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The p-namespace is not as flexible as the standard XML format. For example, the format
+for declaring property references clashes with properties that end in <code>Ref</code>, whereas the
+standard XML format does not. We recommend that you choose your approach carefully and
+communicate this to your team members to avoid producing XML documents that use all
+three approaches at the same time.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-c-namespace"><a class="anchor" href="#beans-c-namespace"></a>XML Shortcut with the c-namespace</h3>
+<div class="paragraph">
+<p>Similar to the <a href="#beans-p-namespace">XML Shortcut with the p-namespace</a>, the c-namespace, introduced in Spring
+3.1, allows inlined attributes for configuring the constructor arguments rather
+then nested <code>constructor-arg</code> elements.</p>
+</div>
+<div class="paragraph">
+<p>The following example uses the <code>c:</code> namespace to do the same thing as the from
+<a href="#beans-constructor-injection">Constructor-based Dependency Injection</a>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:c="http://www.springframework.org/schema/c"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd"&gt;
+
+	&lt;bean id="beanTwo" class="x.y.ThingTwo"/&gt;
+	&lt;bean id="beanThree" class="x.y.ThingThree"/&gt;
+
+	&lt;!-- traditional declaration with optional argument names --&gt;
+	&lt;bean id="beanOne" class="x.y.ThingOne"&gt;
+		&lt;constructor-arg name="thingTwo" ref="beanTwo"/&gt;
+		&lt;constructor-arg name="thingThree" ref="beanThree"/&gt;
+		&lt;constructor-arg name="email" value="something@somewhere.com"/&gt;
+	&lt;/bean&gt;
+
+	&lt;!-- c-namespace declaration with argument names --&gt;
+	&lt;bean id="beanOne" class="x.y.ThingOne" c:thingTwo-ref="beanTwo"
+		c:thingThree-ref="beanThree" c:email="something@somewhere.com"/&gt;
+
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>c:</code> namespace uses the same conventions as the <code>p:</code> one (a trailing <code>-ref</code> for
+bean references) for setting the constructor arguments by their names. Similarly,
+it needs to be declared in the XML file even though it is not defined in an XSD schema
+(it exists inside the Spring core).</p>
+</div>
+<div class="paragraph">
+<p>For the rare cases where the constructor argument names are not available (usually if
+the bytecode was compiled without debugging information), you can use fallback to the
+argument indexes, as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- c-namespace index declaration --&gt;
+&lt;bean id="beanOne" class="x.y.ThingOne" c:_0-ref="beanTwo" c:_1-ref="beanThree"
+	c:_2="something@somewhere.com"/&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Due to the XML grammar, the index notation requires the presence of the leading <code>_</code>,
+as XML attribute names cannot start with a number (even though some IDEs allow it).
+A corresponding index notation is also available for <code>&lt;constructor-arg&gt;</code> elements but
+not commonly used since the plain order of declaration is usually sufficient there.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In practice, the constructor resolution
+<a href="#beans-factory-ctor-arguments-resolution">mechanism</a> is quite efficient in matching
+arguments, so unless you really need to, we recommend using the name notation
+through-out your configuration.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-compound-property-names"><a class="anchor" href="#beans-compound-property-names"></a>Compound Property Names</h3>
+<div class="paragraph">
+<p>You can use compound or nested property names when you set bean properties, as long as
+all components of the path except the final property name are not <code>null</code>. Consider the
+following bean definition:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="something" class="things.ThingOne"&gt;
+	&lt;property name="fred.bob.sammy" value="123" /&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>something</code> bean has a <code>fred</code> property, which has a <code>bob</code> property, which has a <code>sammy</code>
+property, and that final <code>sammy</code> property is being set to a value of <code>123</code>. In order for
+this to work, the <code>fred</code> property of <code>something</code> and the <code>bob</code> property of <code>fred</code> must not
+be <code>null</code> after the bean is constructed. Otherwise, a <code>NullPointerException</code> is thrown.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-dependson"><a class="anchor" href="#beans-factory-dependson"></a>Using <code>depends-on</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>If a bean is a dependency of another bean, that usually means that one bean is set as a
+property of another. Typically you accomplish this with the <a href="#beans-ref-element"><code>&lt;ref/&gt;</code>
+element</a> in XML-based configuration metadata. However, sometimes dependencies between
+beans are less direct. An example is when a static initializer in a class needs to be
+triggered, such as for database driver registration. The <code>depends-on</code> attribute can
+explicitly force one or more beans to be initialized before the bean using this element
+is initialized. The following example uses the <code>depends-on</code> attribute to express a
+dependency on a single bean:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="beanOne" class="ExampleBean" depends-on="manager"/&gt;
+&lt;bean id="manager" class="ManagerBean" /&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To express a dependency on multiple beans, supply a list of bean names as the value of
+the <code>depends-on</code> attribute (commas, whitespace, and semicolons are valid
+delimiters):</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="beanOne" class="ExampleBean" depends-on="manager,accountDao"&gt;
+	&lt;property name="manager" ref="manager" /&gt;
+&lt;/bean&gt;
+
+&lt;bean id="manager" class="ManagerBean" /&gt;
+&lt;bean id="accountDao" class="x.y.jdbc.JdbcAccountDao" /&gt;</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>depends-on</code> attribute can specify both an initialization-time dependency and,
+in the case of <a href="#beans-factory-scopes-singleton">singleton</a> beans only, a corresponding
+destruction-time dependency. Dependent beans that define a <code>depends-on</code> relationship
+with a given bean are destroyed first, prior to the given bean itself being destroyed.
+Thus, <code>depends-on</code> can also control shutdown order.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-lazy-init"><a class="anchor" href="#beans-factory-lazy-init"></a>Lazy-initialized Beans</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, <code>ApplicationContext</code> implementations eagerly create and configure all
+<a href="#beans-factory-scopes-singleton">singleton</a> beans as part of the initialization
+process. Generally, this pre-instantiation is desirable, because errors in the
+configuration or surrounding environment are discovered immediately, as opposed to hours
+or even days later. When this behavior is not desirable, you can prevent
+pre-instantiation of a singleton bean by marking the bean definition as being
+lazy-initialized. A lazy-initialized bean tells the IoC container to create a bean
+instance when it is first requested, rather than at startup.</p>
+</div>
+<div class="paragraph">
+<p>In XML, this behavior is controlled by the <code>lazy-init</code> attribute on the <code>&lt;bean/&gt;</code>
+element, as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="lazy" class="com.something.ExpensiveToCreateBean" lazy-init="true"/&gt;
+&lt;bean name="not.lazy" class="com.something.AnotherBean"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When the preceding configuration is consumed by an <code>ApplicationContext</code>, the <code>lazy</code> bean
+is not eagerly pre-instantiated when the <code>ApplicationContext</code> starts,
+whereas the <code>not.lazy</code> bean is eagerly pre-instantiated.</p>
+</div>
+<div class="paragraph">
+<p>However, when a lazy-initialized bean is a dependency of a singleton bean that is
+not lazy-initialized, the <code>ApplicationContext</code> creates the lazy-initialized bean at
+startup, because it must satisfy the singleton&#8217;s dependencies. The lazy-initialized bean
+is injected into a singleton bean elsewhere that is not lazy-initialized.</p>
+</div>
+<div class="paragraph">
+<p>You can also control lazy-initialization at the container level by using the
+<code>default-lazy-init</code> attribute on the <code>&lt;beans/&gt;</code> element, as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;beans default-lazy-init="true"&gt;
+	&lt;!-- no beans will be pre-instantiated... --&gt;
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-autowire"><a class="anchor" href="#beans-factory-autowire"></a>Autowiring Collaborators</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Spring container can autowire relationships between collaborating beans. You can
+let Spring resolve collaborators (other beans) automatically for your bean by
+inspecting the contents of the <code>ApplicationContext</code>. Autowiring has the following
+advantages:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Autowiring can significantly reduce the need to specify properties or constructor
+arguments. (Other mechanisms such as a bean template
+<a href="#beans-child-bean-definitions">discussed elsewhere in this chapter</a> are also valuable
+in this regard.)</p>
+</li>
+<li>
+<p>Autowiring can update a configuration as your objects evolve. For example, if you need
+to add a dependency to a class, that dependency can be satisfied automatically without
+you needing to modify the configuration. Thus autowiring can be especially useful
+during development, without negating the option of switching to explicit wiring when
+the code base becomes more stable.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>When using XML-based configuration metadata (see <a href="#beans-factory-collaborators">Dependency Injection</a>), you
+can specify the autowire mode for a bean definition with the <code>autowire</code> attribute of the
+<code>&lt;bean/&gt;</code> element. The autowiring functionality has four modes. You specify autowiring
+per bean and can thus choose which ones to autowire. The following table describes the
+four autowiring modes:</p>
+</div>
+<table id="beans-factory-autowiring-modes-tbl" class="tableblock frame-all grid-all stretch">
+<caption class="title">Table 1. Autowiring modes</caption>
+<colgroup>
+<col style="width: 20%;">
+<col style="width: 80%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Mode</th>
+<th class="tableblock halign-left valign-top">Explanation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>no</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">(Default) No autowiring. Bean references must be defined by <code>ref</code> elements. Changing
+the default setting is not recommended for larger deployments, because specifying
+collaborators explicitly gives greater control and clarity. To some extent, it
+documents the structure of a system.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>byName</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autowiring by property name. Spring looks for a bean with the same name as the
+property that needs to be autowired. For example, if a bean definition is set to
+autowire by name and it contains a <code>master</code> property (that is, it has a
+<code>setMaster(..)</code> method), Spring looks for a bean definition named <code>master</code> and uses
+it to set the property.</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>byType</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Lets a property be autowired if exactly one bean of the property type exists in
+the container. If more than one exists, a fatal exception is thrown, which indicates
+that you may not use <code>byType</code> autowiring for that bean. If there are no matching
+beans, nothing happens (the property is not set).</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>constructor</code></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Analogous to <code>byType</code> but applies to constructor arguments. If there is not exactly
+one bean of the constructor argument type in the container, a fatal error is raised.</p></td>
+</tr>
+</tbody>
+</table>
+<div class="paragraph">
+<p>With <code>byType</code> or <code>constructor</code> autowiring mode, you can wire arrays and
+typed collections. In such cases, all autowire candidates within the container that
+match the expected type are provided to satisfy the dependency. You can autowire
+strongly-typed <code>Map</code> instances if the expected key type is <code>String</code>. An autowired <code>Map</code>
+instance&#8217;s values consist of all bean instances that match the expected type, and the
+<code>Map</code> instance&#8217;s keys contain the corresponding bean names.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-autowired-exceptions"><a class="anchor" href="#beans-autowired-exceptions"></a>Limitations and Disadvantages of Autowiring</h3>
+<div class="paragraph">
+<p>Autowiring works best when it is used consistently across a project. If autowiring is
+not used in general, it might be confusing to developers to use it to wire only one or
+two bean definitions.</p>
+</div>
+<div class="paragraph">
+<p>Consider the limitations and disadvantages of autowiring:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Explicit dependencies in <code>property</code> and <code>constructor-arg</code> settings always override
+autowiring. You cannot autowire simple properties such as primitives,
+<code>Strings</code>, and <code>Classes</code> (and arrays of such simple properties). This limitation is
+by-design.</p>
+</li>
+<li>
+<p>Autowiring is less exact than explicit wiring. Although, as noted in the earlier table,
+Spring is careful to avoid guessing in case of ambiguity that might have unexpected
+results. The relationships between your Spring-managed objects are no longer
+documented explicitly.</p>
+</li>
+<li>
+<p>Wiring information may not be available to tools that may generate documentation from
+a Spring container.</p>
+</li>
+<li>
+<p>Multiple bean definitions within the container may match the type specified by the
+setter method or constructor argument to be autowired. For arrays, collections, or
+<code>Map</code> instances, this is not necessarily a problem. However, for dependencies that
+expect a single value, this ambiguity is not arbitrarily resolved. If no unique bean
+definition is available, an exception is thrown.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>In the latter scenario, you have several options:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Abandon autowiring in favor of explicit wiring.</p>
+</li>
+<li>
+<p>Avoid autowiring for a bean definition by setting its <code>autowire-candidate</code> attributes
+to <code>false</code>, as described in the <a href="#beans-factory-autowire-candidate">next section</a>.</p>
+</li>
+<li>
+<p>Designate a single bean definition as the primary candidate by setting the
+<code>primary</code> attribute of its <code>&lt;bean/&gt;</code> element to <code>true</code>.</p>
+</li>
+<li>
+<p>Implement the more fine-grained control available with annotation-based configuration,
+as described in <a href="#beans-annotation-config">[beans-annotation-config]</a>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-autowire-candidate"><a class="anchor" href="#beans-factory-autowire-candidate"></a>Excluding a Bean from Autowiring</h3>
+<div class="paragraph">
+<p>On a per-bean basis, you can exclude a bean from autowiring. In Spring&#8217;s XML format, set
+the <code>autowire-candidate</code> attribute of the <code>&lt;bean/&gt;</code> element to <code>false</code>. The container
+makes that specific bean definition unavailable to the autowiring infrastructure
+(including annotation style configurations such as <a href="#beans-autowired-annotation"><code>@Autowired</code></a>).</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>autowire-candidate</code> attribute is designed to only affect type-based autowiring.
+It does not affect explicit references by name, which get resolved even if the
+specified bean is not marked as an autowire candidate. As a consequence, autowiring
+by name nevertheless injects a bean if the name matches.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can also limit autowire candidates based on pattern-matching against bean names. The
+top-level <code>&lt;beans/&gt;</code> element accepts one or more patterns within its
+<code>default-autowire-candidates</code> attribute. For example, to limit autowire candidate status
+to any bean whose name ends with <code>Repository</code>, provide a value of <code>*Repository</code>. To
+provide multiple patterns, define them in a comma-separated list. An explicit value of
+<code>true</code> or <code>false</code> for a bean definition&#8217;s <code>autowire-candidate</code> attribute always takes
+precedence. For such beans, the pattern matching rules do not apply.</p>
+</div>
+<div class="paragraph">
+<p>These techniques are useful for beans that you never want to be injected into other
+beans by autowiring. It does not mean that an excluded bean cannot itself be configured by
+using autowiring. Rather, the bean itself is not a candidate for autowiring other beans.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-method-injection"><a class="anchor" href="#beans-factory-method-injection"></a>Method Injection</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In most application scenarios, most beans in the container are
+<a href="#beans-factory-scopes-singleton">singletons</a>. When a singleton bean needs to
+collaborate with another singleton bean or a non-singleton bean needs to collaborate
+with another non-singleton bean, you typically handle the dependency by defining one
+bean as a property of the other. A problem arises when the bean lifecycles are
+different. Suppose singleton bean A needs to use non-singleton (prototype) bean B,
+perhaps on each method invocation on A. The container creates the singleton bean A only
+once, and thus only gets one opportunity to set the properties. The container cannot
+provide bean A with a new instance of bean B every time one is needed.</p>
+</div>
+<div class="paragraph">
+<p>A solution is to forego some inversion of control. You can <a href="#beans-factory-aware">make
+bean A aware of the container</a> by implementing the <code>ApplicationContextAware</code> interface,
+and by <a href="#beans-factory-client">making a <code>getBean("B")</code> call to the container</a> ask for (a
+typically new) bean B instance every time bean A needs it. The following example
+shows this approach:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// a class that uses a stateful Command-style class to perform some processing
+package fiona.apple;
+
+// Spring-API imports
+import org.springframework.beans.BeansException;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
+
+public class CommandManager implements ApplicationContextAware {
+
+	private ApplicationContext applicationContext;
+
+	public Object process(Map commandState) {
+		// grab a new instance of the appropriate Command
+		Command command = createCommand();
+		// set the state on the (hopefully brand new) Command instance
+		command.setState(commandState);
+		return command.execute();
+	}
+
+	protected Command createCommand() {
+		// notice the Spring API dependency!
+		return this.applicationContext.getBean("command", Command.class);
+	}
+
+	public void setApplicationContext(
+			ApplicationContext applicationContext) throws BeansException {
+		this.applicationContext = applicationContext;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// a class that uses a stateful Command-style class to perform some processing
+package fiona.apple
+
+// Spring-API imports
+import org.springframework.context.ApplicationContext
+import org.springframework.context.ApplicationContextAware
+
+class CommandManager : ApplicationContextAware {
+
+	private lateinit var applicationContext: ApplicationContext
+
+	fun process(commandState: Map&lt;*, *&gt;): Any {
+		// grab a new instance of the appropriate Command
+		val command = createCommand()
+		// set the state on the (hopefully brand new) Command instance
+		command.state = commandState
+		return command.execute()
+	}
+
+	// notice the Spring API dependency!
+	protected fun createCommand() =
+			applicationContext.getBean("command", Command::class.java)
+
+	override fun setApplicationContext(applicationContext: ApplicationContext) {
+		this.applicationContext = applicationContext
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The preceding is not desirable, because the business code is aware of and coupled to the
+Spring Framework. Method Injection, a somewhat advanced feature of the Spring IoC
+container, lets you handle this use case cleanly.</p>
+</div>
+<div class="sidebarblock">
+<div class="content">
+<div class="paragraph">
+<p>You can read more about the motivation for Method Injection in
+<a href="https://spring.io/blog/2004/08/06/method-injection/">this blog entry</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-lookup-method-injection"><a class="anchor" href="#beans-factory-lookup-method-injection"></a>Lookup Method Injection</h3>
+<div class="paragraph">
+<p>Lookup method injection is the ability of the container to override methods on
+container-managed beans and return the lookup result for another named bean in the
+container. The lookup typically involves a prototype bean, as in the scenario described
+in <a href="#beans-factory-method-injection">the preceding section</a>. The Spring Framework
+implements this method injection by using bytecode generation from the CGLIB library to
+dynamically generate a subclass that overrides the method.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="ulist">
+<ul>
+<li>
+<p>For this dynamic subclassing to work, the class that the Spring bean container
+subclasses cannot be <code>final</code>, and the method to be overridden cannot be <code>final</code>, either.</p>
+</li>
+<li>
+<p>Unit-testing a class that has an <code>abstract</code> method requires you to subclass the class
+yourself and to supply a stub implementation of the <code>abstract</code> method.</p>
+</li>
+<li>
+<p>Concrete methods are also necessary for component scanning, which requires concrete
+classes to pick up.</p>
+</li>
+<li>
+<p>A further key limitation is that lookup methods do not work with factory methods and
+in particular not with <code>@Bean</code> methods in configuration classes, since, in that case,
+the container is not in charge of creating the instance and therefore cannot create
+a runtime-generated subclass on the fly.</p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In the case of the <code>CommandManager</code> class in the previous code snippet, the
+Spring container dynamically overrides the implementation of the <code>createCommand()</code>
+method. The <code>CommandManager</code> class does not have any Spring dependencies, as
+the reworked example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package fiona.apple;
+
+// no more Spring imports!
+
+public abstract class CommandManager {
+
+	public Object process(Object commandState) {
+		// grab a new instance of the appropriate Command interface
+		Command command = createCommand();
+		// set the state on the (hopefully brand new) Command instance
+		command.setState(commandState);
+		return command.execute();
+	}
+
+	// okay... but where is the implementation of this method?
+	protected abstract Command createCommand();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">package fiona.apple
+
+// no more Spring imports!
+
+abstract class CommandManager {
+
+	fun process(commandState: Any): Any {
+		// grab a new instance of the appropriate Command interface
+		val command = createCommand()
+		// set the state on the (hopefully brand new) Command instance
+		command.state = commandState
+		return command.execute()
+	}
+
+	// okay... but where is the implementation of this method?
+	protected abstract fun createCommand(): Command
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In the client class that contains the method to be injected (the <code>CommandManager</code> in this
+case), the method to be injected requires a signature of the following form:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;public|protected&gt; [abstract] &lt;return-type&gt; theMethodName(no-arguments);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the method is <code>abstract</code>, the dynamically-generated subclass implements the method.
+Otherwise, the dynamically-generated subclass overrides the concrete method defined in
+the original class. Consider the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!-- a stateful bean deployed as a prototype (non-singleton) --&gt;
+&lt;bean id="myCommand" class="fiona.apple.AsyncCommand" scope="prototype"&gt;
+	&lt;!-- inject dependencies here as required --&gt;
+&lt;/bean&gt;
+
+&lt;!-- commandProcessor uses statefulCommandHelper --&gt;
+&lt;bean id="commandManager" class="fiona.apple.CommandManager"&gt;
+	&lt;lookup-method name="createCommand" bean="myCommand"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bean identified as <code>commandManager</code> calls its own <code>createCommand()</code> method
+whenever it needs a new instance of the <code>myCommand</code> bean. You must be careful to deploy
+the <code>myCommand</code> bean as a prototype if that is actually what is needed. If it is
+a <a href="#beans-factory-scopes-singleton">singleton</a>, the same instance of the <code>myCommand</code>
+bean is returned each time.</p>
+</div>
+<div class="paragraph">
+<p>Alternatively, within the annotation-based component model, you can declare a lookup
+method through the <code>@Lookup</code> annotation, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public abstract class CommandManager {
+
+	public Object process(Object commandState) {
+		Command command = createCommand();
+		command.setState(commandState);
+		return command.execute();
+	}
+
+	@Lookup("myCommand")
+	protected abstract Command createCommand();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">abstract class CommandManager {
+
+	fun process(commandState: Any): Any {
+		val command = createCommand()
+		command.state = commandState
+		return command.execute()
+	}
+
+	@Lookup("myCommand")
+	protected abstract fun createCommand(): Command
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, more idiomatically, you can rely on the target bean getting resolved against the
+declared return type of the lookup method:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public abstract class CommandManager {
+
+	public Object process(Object commandState) {
+		MyCommand command = createCommand();
+		command.setState(commandState);
+		return command.execute();
+	}
+
+	@Lookup
+	protected abstract MyCommand createCommand();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">abstract class CommandManager {
+
+	fun process(commandState: Any): Any {
+		val command = createCommand()
+		command.state = commandState
+		return command.execute()
+	}
+
+	@Lookup
+	protected abstract fun createCommand(): Command
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that you should typically declare such annotated lookup methods with a concrete
+stub implementation, in order for them to be compatible with Spring&#8217;s component
+scanning rules where abstract classes get ignored by default. This limitation does not
+apply to explicitly registered or explicitly imported bean classes.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Another way of accessing differently scoped target beans is an <code>ObjectFactory</code>/
+<code>Provider</code> injection point. See <a href="#beans-factory-scopes-other-injection">[beans-factory-scopes-other-injection]</a>.</p>
+</div>
+<div class="paragraph">
+<p>You may also find the <code>ServiceLocatorFactoryBean</code> (in the
+<code>org.springframework.beans.factory.config</code> package) to be useful.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-arbitrary-method-replacement"><a class="anchor" href="#beans-factory-arbitrary-method-replacement"></a>Arbitrary Method Replacement</h3>
+<div class="paragraph">
+<p>A less useful form of method injection than lookup method injection is the ability to
+replace arbitrary methods in a managed bean with another method implementation. You
+can safely skip the rest of this section until you actually need this functionality.</p>
+</div>
+<div class="paragraph">
+<p>With XML-based configuration metadata, you can use the <code>replaced-method</code> element to
+replace an existing method implementation with another, for a deployed bean. Consider
+the following class, which has a method called <code>computeValue</code> that we want to override:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyValueCalculator {
+
+	public String computeValue(String input) {
+		// some real code...
+	}
+
+	// some other methods...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class MyValueCalculator {
+
+	fun computeValue(input: String): String {
+		// some real code...
+	}
+
+	// some other methods...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>A class that implements the <code>org.springframework.beans.factory.support.MethodReplacer</code>
+interface provides the new method definition, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">/**
+ * meant to be used to override the existing computeValue(String)
+ * implementation in MyValueCalculator
+ */
+public class ReplacementComputeValue implements MethodReplacer {
+
+	public Object reimplement(Object o, Method m, Object[] args) throws Throwable {
+		// get the input value, work with it, and return a computed result
+		String input = (String) args[0];
+		...
+		return ...;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">/**
+* meant to be used to override the existing computeValue(String)
+* implementation in MyValueCalculator
+*/
+class ReplacementComputeValue : MethodReplacer {
+
+	override fun reimplement(obj: Any, method: Method, args: Array&lt;out Any&gt;): Any {
+		// get the input value, work with it, and return a computed result
+		val input = args[0] as String;
+		...
+		return ...;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The bean definition to deploy the original class and specify the method override would
+resemble the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="myValueCalculator" class="x.y.z.MyValueCalculator"&gt;
+	&lt;!-- arbitrary method replacement --&gt;
+	&lt;replaced-method name="computeValue" replacer="replacementComputeValue"&gt;
+		&lt;arg-type&gt;String&lt;/arg-type&gt;
+	&lt;/replaced-method&gt;
+&lt;/bean&gt;
+
+&lt;bean id="replacementComputeValue" class="a.b.c.ReplacementComputeValue"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can use one or more <code>&lt;arg-type/&gt;</code> elements within the <code>&lt;replaced-method/&gt;</code>
+element to indicate the method signature of the method being overridden. The signature
+for the arguments is necessary only if the method is overloaded and multiple variants
+exist within the class. For convenience, the type string for an argument may be a
+substring of the fully qualified type name. For example, the following all match
+<code>java.lang.String</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">java.lang.String
+String
+Str</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Because the number of arguments is often enough to distinguish between each possible
+choice, this shortcut can save a lot of typing, by letting you type only the
+shortest string that matches an argument type.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

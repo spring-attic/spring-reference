@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Container Extension Points :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../core.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">The IoC Container</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="container.html">Container Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="bean.html">Bean Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="dependencies.html">Bean Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="scopes.html">Bean Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="customizing.html">Customizing the Nature of a Bean</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="inheritance.html">Bean Definition Inheritance</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="extension.html">Container Extension Points</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="annotation.html">Annotation-based Container Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="scanning.html">Classpath Scanning and Managed Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jsr330.html">Using JSR 330 Standard Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="java.html">Java-based Container configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="env.html">Environment Abstraction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="loadtimeweaver.html">Registering a LoadTimeWeaver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="applicationcontext.html">Additional Capabilities of the ApplicationContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beanfactory.html">The BeanFactory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../resources.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../validation.html">Validation, Data Binding, and Type Conversion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aop.html">Aspect Oriented Programming with Spring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../aop-api.html">Spring AOP APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../null-safety.html">Null-safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../databuffer-codec.html">Data Buffers and Codecs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../spring-jcl.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../../index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../../security/5.6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../security/5.6/overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Spring Framework</a></li>
+    <li><a href="../../core.html">Core</a></li>
+    <li><a href="index.html">The IoC Container</a></li>
+    <li><a href="extension.html">Container Extension Points</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/core/beans/extension.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Container Extension Points</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Typically, an application developer does not need to subclass <code>ApplicationContext</code>
+implementation classes. Instead, the Spring IoC container can be extended by plugging in
+implementations of special integration interfaces. The next few sections describe these
+integration interfaces.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-extension-bpp"><a class="anchor" href="#beans-factory-extension-bpp"></a>Customizing Beans by Using a <code>BeanPostProcessor</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>BeanPostProcessor</code> interface defines callback methods that you can implement to
+provide your own (or override the container&#8217;s default) instantiation logic, dependency
+resolution logic, and so forth. If you want to implement some custom logic after the
+Spring container finishes instantiating, configuring, and initializing a bean, you can
+plug in one or more custom <code>BeanPostProcessor</code> implementations.</p>
+</div>
+<div class="paragraph">
+<p>You can configure multiple <code>BeanPostProcessor</code> instances, and you can control the order
+in which these <code>BeanPostProcessor</code> instances run by setting the <code>order</code> property.
+You can set this property only if the <code>BeanPostProcessor</code> implements the <code>Ordered</code>
+interface. If you write your own <code>BeanPostProcessor</code>, you should consider implementing
+the <code>Ordered</code> interface, too. For further details, see the javadoc of the
+{api-spring-framework}/beans/factory/config/BeanPostProcessor.html[<code>BeanPostProcessor</code>]
+and {api-spring-framework}/core/Ordered.html[<code>Ordered</code>] interfaces. See also the note
+on <a href="#beans-factory-programmatically-registering-beanpostprocessors">programmatic
+registration of <code>BeanPostProcessor</code> instances</a>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p><code>BeanPostProcessor</code> instances operate on bean (or object) instances. That is,
+the Spring IoC container instantiates a bean instance and then <code>BeanPostProcessor</code>
+instances do their work.</p>
+</div>
+<div class="paragraph">
+<p><code>BeanPostProcessor</code> instances are scoped per-container. This is relevant only if you
+use container hierarchies. If you define a <code>BeanPostProcessor</code> in one container,
+it post-processes only the beans in that container. In other words, beans that are
+defined in one container are not post-processed by a <code>BeanPostProcessor</code> defined in
+another container, even if both containers are part of the same hierarchy.</p>
+</div>
+<div class="paragraph">
+<p>To change the actual bean definition (that is, the blueprint that defines the bean),
+you instead need to use a <code>BeanFactoryPostProcessor</code>, as described in
+<a href="#beans-factory-extension-factory-postprocessors">Customizing Configuration Metadata with a <code>BeanFactoryPostProcessor</code></a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The <code>org.springframework.beans.factory.config.BeanPostProcessor</code> interface consists of
+exactly two callback methods. When such a class is registered as a post-processor with
+the container, for each bean instance that is created by the container, the
+post-processor gets a callback from the container both before container
+initialization methods (such as <code>InitializingBean.afterPropertiesSet()</code> or any
+declared <code>init</code> method) are called, and after any bean initialization callbacks.
+The post-processor can take any action with the bean instance, including ignoring the
+callback completely. A bean post-processor typically checks for callback interfaces,
+or it may wrap a bean with a proxy. Some Spring AOP infrastructure classes are
+implemented as bean post-processors in order to provide proxy-wrapping logic.</p>
+</div>
+<div class="paragraph">
+<p>An <code>ApplicationContext</code> automatically detects any beans that are defined in the
+configuration metadata that implements the <code>BeanPostProcessor</code> interface. The
+<code>ApplicationContext</code> registers these beans as post-processors so that they can be called
+later, upon bean creation. Bean post-processors can be deployed in the container in the
+same fashion as any other beans.</p>
+</div>
+<div class="paragraph">
+<p>Note that, when declaring a <code>BeanPostProcessor</code> by using an <code>@Bean</code> factory method on a
+configuration class, the return type of the factory method should be the implementation
+class itself or at least the <code>org.springframework.beans.factory.config.BeanPostProcessor</code>
+interface, clearly indicating the post-processor nature of that bean. Otherwise, the
+<code>ApplicationContext</code> cannot autodetect it by type before fully creating it.
+Since a <code>BeanPostProcessor</code> needs to be instantiated early in order to apply to the
+initialization of other beans in the context, this early type detection is critical.</p>
+</div>
+<div id="beans-factory-programmatically-registering-beanpostprocessors" class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title">Programmatically registering <code>BeanPostProcessor</code> instances</div>
+While the recommended approach for <code>BeanPostProcessor</code> registration is through
+<code>ApplicationContext</code> auto-detection (as described earlier), you can register them
+programmatically against a <code>ConfigurableBeanFactory</code> by using the <code>addBeanPostProcessor</code>
+method. This can be useful when you need to evaluate conditional logic before
+registration or even for copying bean post processors across contexts in a hierarchy.
+Note, however, that <code>BeanPostProcessor</code> instances added programmatically do not respect
+the <code>Ordered</code> interface. Here, it is the order of registration that dictates the order
+of execution. Note also that <code>BeanPostProcessor</code> instances registered programmatically
+are always processed before those registered through auto-detection, regardless of any
+explicit ordering.
+</td>
+</tr>
+</table>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="title"><code>BeanPostProcessor</code> instances and AOP auto-proxying</div>
+<div class="paragraph">
+<p>Classes that implement the <code>BeanPostProcessor</code> interface are special and are treated
+differently by the container. All <code>BeanPostProcessor</code> instances and beans that they
+directly reference are instantiated on startup, as part of the special startup phase
+of the <code>ApplicationContext</code>. Next, all <code>BeanPostProcessor</code> instances are registered
+in a sorted fashion and applied to all further beans in the container. Because AOP
+auto-proxying is implemented as a <code>BeanPostProcessor</code> itself, neither <code>BeanPostProcessor</code>
+instances nor the beans they directly reference are eligible for auto-proxying and,
+thus, do not have aspects woven into them.</p>
+</div>
+<div class="paragraph">
+<p>For any such bean, you should see an informational log message: <code>Bean someBean is not
+eligible for getting processed by all BeanPostProcessor interfaces (for example: not
+eligible for auto-proxying)</code>.</p>
+</div>
+<div class="paragraph">
+<p>If you have beans wired into your <code>BeanPostProcessor</code> by using autowiring or
+<code>@Resource</code> (which may fall back to autowiring), Spring might access unexpected beans
+when searching for type-matching dependency candidates and, therefore, make them
+ineligible for auto-proxying or other kinds of bean post-processing. For example, if you
+have a dependency annotated with <code>@Resource</code> where the field or setter name does not
+directly correspond to the declared name of a bean and no name attribute is used,
+Spring accesses other beans for matching them by type.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following examples show how to write, register, and use <code>BeanPostProcessor</code> instances
+in an <code>ApplicationContext</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-extension-bpp-examples-hw"><a class="anchor" href="#beans-factory-extension-bpp-examples-hw"></a>Example: Hello World, <code>BeanPostProcessor</code>-style</h3>
+<div class="paragraph">
+<p>This first example illustrates basic usage. The example shows a custom
+<code>BeanPostProcessor</code> implementation that invokes the <code>toString()</code> method of each bean as
+it is created by the container and prints the resulting string to the system console.</p>
+</div>
+<div class="paragraph">
+<p>The following listing shows the custom <code>BeanPostProcessor</code> implementation class definition:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package scripting;
+
+import org.springframework.beans.factory.config.BeanPostProcessor;
+
+public class InstantiationTracingBeanPostProcessor implements BeanPostProcessor {
+
+	// simply return the instantiated bean as-is
+	public Object postProcessBeforeInitialization(Object bean, String beanName) {
+		return bean; // we could potentially return any object reference here...
+	}
+
+	public Object postProcessAfterInitialization(Object bean, String beanName) {
+		System.out.println("Bean '" + beanName + "' created : " + bean.toString());
+		return bean;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.beans.factory.config.BeanPostProcessor
+
+class InstantiationTracingBeanPostProcessor : BeanPostProcessor {
+
+	// simply return the instantiated bean as-is
+	override fun postProcessBeforeInitialization(bean: Any, beanName: String): Any? {
+		return bean // we could potentially return any object reference here...
+	}
+
+	override fun postProcessAfterInitialization(bean: Any, beanName: String): Any? {
+		println("Bean '$beanName' created : $bean")
+		return bean
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following <code>beans</code> element uses the <code>InstantiationTracingBeanPostProcessor</code>:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;?xml version="1.0" encoding="UTF-8"?&gt;
+&lt;beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:lang="http://www.springframework.org/schema/lang"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans
+		https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/lang
+		https://www.springframework.org/schema/lang/spring-lang.xsd"&gt;
+
+	&lt;lang:groovy id="messenger"
+			script-source="classpath:org/springframework/scripting/groovy/Messenger.groovy"&gt;
+		&lt;lang:property name="message" value="Fiona Apple Is Just So Dreamy."/&gt;
+	&lt;/lang:groovy&gt;
+
+	&lt;!--
+	when the above bean (messenger) is instantiated, this custom
+	BeanPostProcessor implementation will output the fact to the system console
+	--&gt;
+	&lt;bean class="scripting.InstantiationTracingBeanPostProcessor"/&gt;
+
+&lt;/beans&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Notice how the <code>InstantiationTracingBeanPostProcessor</code> is merely defined. It does not
+even have a name, and, because it is a bean, it can be dependency-injected as you would any
+other bean. (The preceding configuration also defines a bean that is backed by a Groovy
+script. The Spring dynamic language support is detailed in the chapter entitled
+<a href="../../languages.html#dynamic-language" class="page">Dynamic Language Support</a>.)</p>
+</div>
+<div class="paragraph">
+<p>The following Java application runs the preceding code and configuration:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+import org.springframework.scripting.Messenger;
+
+public final class Boot {
+
+	public static void main(final String[] args) throws Exception {
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("scripting/beans.xml");
+		Messenger messenger = ctx.getBean("messenger", Messenger.class);
+		System.out.println(messenger);
+	}
+
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">   import org.springframework.beans.factory.getBean
+
+fun main() {
+	val ctx = ClassPathXmlApplicationContext("scripting/beans.xml")
+	val messenger = ctx.getBean&lt;Messenger&gt;("messenger")
+	println(messenger)
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The output of the preceding application resembles the following:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>Bean 'messenger' created : org.springframework.scripting.groovy.GroovyMessenger@272961
+org.springframework.scripting.groovy.GroovyMessenger@272961</pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-extension-bpp-examples-aabpp"><a class="anchor" href="#beans-factory-extension-bpp-examples-aabpp"></a>Example: The <code>AutowiredAnnotationBeanPostProcessor</code></h3>
+<div class="paragraph">
+<p>Using callback interfaces or annotations in conjunction with a custom <code>BeanPostProcessor</code>
+implementation is a common means of extending the Spring IoC container. An example is
+Spring&#8217;s <code>AutowiredAnnotationBeanPostProcessor</code>&#8201;&#8212;&#8201;a <code>BeanPostProcessor</code> implementation
+that ships with the Spring distribution and autowires annotated fields, setter methods,
+and arbitrary config methods.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-extension-factory-postprocessors"><a class="anchor" href="#beans-factory-extension-factory-postprocessors"></a>Customizing Configuration Metadata with a <code>BeanFactoryPostProcessor</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The next extension point that we look at is the
+<code>org.springframework.beans.factory.config.BeanFactoryPostProcessor</code>. The semantics of
+this interface are similar to those of the <code>BeanPostProcessor</code>, with one major
+difference: <code>BeanFactoryPostProcessor</code> operates on the bean configuration metadata.
+That is, the Spring IoC container lets a <code>BeanFactoryPostProcessor</code> read the
+configuration metadata and potentially change it <em>before</em> the container instantiates
+any beans other than <code>BeanFactoryPostProcessor</code> instances.</p>
+</div>
+<div class="paragraph">
+<p>You can configure multiple <code>BeanFactoryPostProcessor</code> instances, and you can control the order in
+which these <code>BeanFactoryPostProcessor</code> instances run by setting the <code>order</code> property.
+However, you can only set this property if the <code>BeanFactoryPostProcessor</code> implements the
+<code>Ordered</code> interface. If you write your own <code>BeanFactoryPostProcessor</code>, you should
+consider implementing the <code>Ordered</code> interface, too. See the javadoc of the
+{api-spring-framework}/beans/factory/config/BeanFactoryPostProcessor.html[<code>BeanFactoryPostProcessor</code>]
+and {api-spring-framework}/core/Ordered.html[<code>Ordered</code>] interfaces for more details.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>If you want to change the actual bean instances (that is, the objects that are created
+from the configuration metadata), then you instead need to use a <code>BeanPostProcessor</code>
+(described earlier in <a href="#beans-factory-extension-bpp">Customizing Beans by Using a <code>BeanPostProcessor</code></a>). While it is technically possible
+to work with bean instances within a <code>BeanFactoryPostProcessor</code> (for example, by using
+<code>BeanFactory.getBean()</code>), doing so causes premature bean instantiation, violating the
+standard container lifecycle. This may cause negative side effects, such as bypassing
+bean post processing.</p>
+</div>
+<div class="paragraph">
+<p>Also, <code>BeanFactoryPostProcessor</code> instances are scoped per-container. This is only relevant
+if you use container hierarchies. If you define a <code>BeanFactoryPostProcessor</code> in one
+container, it is applied only to the bean definitions in that container. Bean definitions
+in one container are not post-processed by <code>BeanFactoryPostProcessor</code> instances in another
+container, even if both containers are part of the same hierarchy.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>A bean factory post-processor is automatically run when it is declared inside an
+<code>ApplicationContext</code>, in order to apply changes to the configuration metadata that
+define the container. Spring includes a number of predefined bean factory
+post-processors, such as <code>PropertyOverrideConfigurer</code> and
+<code>PropertySourcesPlaceholderConfigurer</code>. You can also use a custom <code>BeanFactoryPostProcessor</code>&#8201;&#8212;&#8201;for example, to register custom property editors.</p>
+</div>
+<div class="paragraph">
+<p>An <code>ApplicationContext</code> automatically detects any beans that are deployed into it that
+implement the <code>BeanFactoryPostProcessor</code> interface. It uses these beans as bean factory
+post-processors, at the appropriate time. You can deploy these post-processor beans as
+you would any other bean.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As with <code>BeanPostProcessor</code>s , you typically do not want to configure
+<code>BeanFactoryPostProcessor</code>s for lazy initialization. If no other bean references a
+<code>Bean(Factory)PostProcessor</code>, that post-processor will not get instantiated at all.
+Thus, marking it for lazy initialization will be ignored, and the
+<code>Bean(Factory)PostProcessor</code> will be instantiated eagerly even if you set the
+<code>default-lazy-init</code> attribute to <code>true</code> on the declaration of your <code>&lt;beans /&gt;</code> element.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-placeholderconfigurer"><a class="anchor" href="#beans-factory-placeholderconfigurer"></a>Example: The Class Name Substitution <code>PropertySourcesPlaceholderConfigurer</code></h3>
+<div class="paragraph">
+<p>You can use the <code>PropertySourcesPlaceholderConfigurer</code> to externalize property values
+from a bean definition in a separate file by using the standard Java <code>Properties</code> format.
+Doing so enables the person deploying an application to customize environment-specific
+properties, such as database URLs and passwords, without the complexity or risk of
+modifying the main XML definition file or files for the container.</p>
+</div>
+<div class="paragraph">
+<p>Consider the following XML-based configuration metadata fragment, where a <code>DataSource</code>
+with placeholder values is defined:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean class="org.springframework.context.support.PropertySourcesPlaceholderConfigurer"&gt;
+	&lt;property name="locations" value="classpath:com/something/jdbc.properties"/&gt;
+&lt;/bean&gt;
+
+&lt;bean id="dataSource" destroy-method="close"
+		class="org.apache.commons.dbcp.BasicDataSource"&gt;
+	&lt;property name="driverClassName" value="${jdbc.driverClassName}"/&gt;
+	&lt;property name="url" value="${jdbc.url}"/&gt;
+	&lt;property name="username" value="${jdbc.username}"/&gt;
+	&lt;property name="password" value="${jdbc.password}"/&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The example shows properties configured from an external <code>Properties</code> file. At runtime,
+a <code>PropertySourcesPlaceholderConfigurer</code> is applied to the metadata that replaces some
+properties of the DataSource. The values to replace are specified as placeholders of the
+form <code>${property-name}</code>, which follows the Ant and log4j and JSP EL style.</p>
+</div>
+<div class="paragraph">
+<p>The actual values come from another file in the standard Java <code>Properties</code> format:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>jdbc.driverClassName=org.hsqldb.jdbcDriver
+jdbc.url=jdbc:hsqldb:hsql://production:9002
+jdbc.username=sa
+jdbc.password=root</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Therefore, the <code>${jdbc.username}</code> string is replaced at runtime with the value, 'sa', and
+the same applies for other placeholder values that match keys in the properties file.
+The <code>PropertySourcesPlaceholderConfigurer</code> checks for placeholders in most properties and
+attributes of a bean definition. Furthermore, you can customize the placeholder prefix and suffix.</p>
+</div>
+<div class="paragraph">
+<p>With the <code>context</code> namespace introduced in Spring 2.5, you can configure property placeholders
+with a dedicated configuration element. You can provide one or more locations as a
+comma-separated list in the <code>location</code> attribute, as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;context:property-placeholder location="classpath:com/something/jdbc.properties"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>PropertySourcesPlaceholderConfigurer</code> not only looks for properties in the <code>Properties</code>
+file you specify. By default, if it cannot find a property in the specified properties files,
+it checks against Spring <code>Environment</code> properties and regular Java <code>System</code> properties.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can use the <code>PropertySourcesPlaceholderConfigurer</code> to substitute class names, which
+is sometimes useful when you have to pick a particular implementation class at runtime.
+The following example shows how to do so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean class="org.springframework.beans.factory.config.PropertySourcesPlaceholderConfigurer"&gt;
+	&lt;property name="locations"&gt;
+		&lt;value&gt;classpath:com/something/strategy.properties&lt;/value&gt;
+	&lt;/property&gt;
+	&lt;property name="properties"&gt;
+		&lt;value&gt;custom.strategy.class=com.something.DefaultStrategy&lt;/value&gt;
+	&lt;/property&gt;
+&lt;/bean&gt;
+
+&lt;bean id="serviceStrategy" class="${custom.strategy.class}"/&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>If the class cannot be resolved at runtime to a valid class, resolution of the bean
+fails when it is about to be created, which is during the <code>preInstantiateSingletons()</code>
+phase of an <code>ApplicationContext</code> for a non-lazy-init bean.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="beans-factory-overrideconfigurer"><a class="anchor" href="#beans-factory-overrideconfigurer"></a>Example: The <code>PropertyOverrideConfigurer</code></h3>
+<div class="paragraph">
+<p>The <code>PropertyOverrideConfigurer</code>, another bean factory post-processor, resembles the
+<code>PropertySourcesPlaceholderConfigurer</code>, but unlike the latter, the original definitions
+can have default values or no values at all for bean properties. If an overriding
+<code>Properties</code> file does not have an entry for a certain bean property, the default
+context definition is used.</p>
+</div>
+<div class="paragraph">
+<p>Note that the bean definition is not aware of being overridden, so it is not
+immediately obvious from the XML definition file that the override configurer is being
+used. In case of multiple <code>PropertyOverrideConfigurer</code> instances that define different
+values for the same bean property, the last one wins, due to the overriding mechanism.</p>
+</div>
+<div class="paragraph">
+<p>Properties file configuration lines take the following format:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>beanName.property=value</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following listing shows an example of the format:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>dataSource.driverClassName=com.mysql.jdbc.Driver
+dataSource.url=jdbc:mysql:mydb</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This example file can be used with a container definition that contains a bean called
+<code>dataSource</code> that has <code>driver</code> and <code>url</code> properties.</p>
+</div>
+<div class="paragraph">
+<p>Compound property names are also supported, as long as every component of the path
+except the final property being overridden is already non-null (presumably initialized
+by the constructors). In the following example, the <code>sammy</code> property of the <code>bob</code> property of the <code>fred</code> property of the <code>tom</code> bean
+is set to the scalar value <code>123</code>:</p>
+</div>
+<div class="literalblock">
+<div class="content">
+<pre>tom.fred.bob.sammy=123</pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Specified override values are always literal values. They are not translated into
+bean references. This convention also applies when the original value in the XML bean
+definition specifies a bean reference.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>With the <code>context</code> namespace introduced in Spring 2.5, it is possible to configure
+property overriding with a dedicated configuration element, as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;context:property-override location="classpath:override.properties"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="beans-factory-extension-factorybean"><a class="anchor" href="#beans-factory-extension-factorybean"></a>Customizing Instantiation Logic with a <code>FactoryBean</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can implement the <code>org.springframework.beans.factory.FactoryBean</code> interface for objects that
+are themselves factories.</p>
+</div>
+<div class="paragraph">
+<p>The <code>FactoryBean</code> interface is a point of pluggability into the Spring IoC container&#8217;s
+instantiation logic. If you have complex initialization code that is better expressed in
+Java as opposed to a (potentially) verbose amount of XML, you can create your own
+<code>FactoryBean</code>, write the complex initialization inside that class, and then plug your
+custom <code>FactoryBean</code> into the container.</p>
+</div>
+<div class="paragraph">
+<p>The <code>FactoryBean&lt;T&gt;</code> interface provides three methods:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>T getObject()</code>: Returns an instance of the object this factory creates. The
+instance can possibly be shared, depending on whether this factory returns singletons
+or prototypes.</p>
+</li>
+<li>
+<p><code>boolean isSingleton()</code>: Returns <code>true</code> if this <code>FactoryBean</code> returns singletons or
+<code>false</code> otherwise. The default implementation of this method returns <code>true</code>.</p>
+</li>
+<li>
+<p><code>Class&lt;?&gt; getObjectType()</code>: Returns the object type returned by the <code>getObject()</code> method
+or <code>null</code> if the type is not known in advance.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>FactoryBean</code> concept and interface are used in a number of places within the Spring
+Framework. More than 50 implementations of the <code>FactoryBean</code> interface ship with Spring
+itself.</p>
+</div>
+<div class="paragraph">
+<p>When you need to ask a container for an actual <code>FactoryBean</code> instance itself instead of
+the bean it produces, prefix the bean&#8217;s <code>id</code> with the ampersand symbol (<code>&amp;</code>) when
+calling the <code>getBean()</code> method of the <code>ApplicationContext</code>. So, for a given <code>FactoryBean</code>
+with an <code>id</code> of <code>myBean</code>, invoking <code>getBean("myBean")</code> on the container returns the
+product of the <code>FactoryBean</code>, whereas invoking <code>getBean("&amp;myBean")</code> returns the
+<code>FactoryBean</code> instance itself.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

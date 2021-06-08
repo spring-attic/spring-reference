@@ -1,0 +1,2761 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring Expression Language (SpEL) :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="beans/index.html">The IoC Container</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/container.html">Container Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/bean.html">Bean Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/dependencies.html">Bean Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/scopes.html">Bean Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/customizing.html">Customizing the Nature of a Bean</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/inheritance.html">Bean Definition Inheritance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/extension.html">Container Extension Points</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/annotation.html">Annotation-based Container Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/scanning.html">Classpath Scanning and Managed Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/jsr330.html">Using JSR 330 Standard Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/java.html">Java-based Container configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/env.html">Environment Abstraction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/loadtimeweaver.html">Registering a LoadTimeWeaver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/applicationcontext.html">Additional Capabilities of the ApplicationContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="beans/beanfactory.html">The BeanFactory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="resources.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="validation.html">Validation, Data Binding, and Type Conversion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="aop.html">Aspect Oriented Programming with Spring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="aop-api.html">Spring AOP APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="null-safety.html">Null-safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="databuffer-codec.html">Data Buffers and Codecs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="spring-jcl.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/5.6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/5.6/overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Framework</a></li>
+    <li><a href="expressions.html">Spring Expression Language (SpEL)</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/core/expressions.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Spring Expression Language (SpEL)</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Spring Expression Language (&#8220;SpEL&#8221; for short) is a powerful expression language that
+supports querying and manipulating an object graph at runtime. The language syntax is
+similar to Unified EL but offers additional features, most notably method invocation and
+basic string templating functionality.</p>
+</div>
+<div class="paragraph">
+<p>While there are several other Java expression languages available&#8201;&#8212;&#8201;OGNL, MVEL, and JBoss
+EL, to name a few&#8201;&#8212;&#8201;the Spring Expression Language was created to provide the Spring
+community with a single well supported expression language that can be used across all
+the products in the Spring portfolio. Its language features are driven by the
+requirements of the projects in the Spring portfolio, including tooling requirements
+for code completion support within the <a href="https://spring.io/tools">Spring Tools for Eclipse</a>.
+That said, SpEL is based on a technology-agnostic API that lets other expression language
+implementations be integrated, should the need arise.</p>
+</div>
+<div class="paragraph">
+<p>While SpEL serves as the foundation for expression evaluation within the Spring
+portfolio, it is not directly tied to Spring and can be used independently. To
+be self contained, many of the examples in this chapter use SpEL as if it were an
+independent expression language. This requires creating a few bootstrapping
+infrastructure classes, such as the parser. Most Spring users need not deal with
+this infrastructure and can, instead, author only expression strings for evaluation.
+An example of this typical use is the integration of SpEL into creating XML or
+annotation-based bean definitions, as shown in
+<a href="#expressions-beandef">Expression support for defining bean definitions</a>.</p>
+</div>
+<div class="paragraph">
+<p>This chapter covers the features of the expression language, its API, and its language
+syntax. In several places, <code>Inventor</code> and <code>Society</code> classes are used as the target
+objects for expression evaluation. These class declarations and the data used to
+populate them are listed at the end of the chapter.</p>
+</div>
+<div class="paragraph">
+<p>The expression language supports the following functionality:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Literal expressions</p>
+</li>
+<li>
+<p>Boolean and relational operators</p>
+</li>
+<li>
+<p>Regular expressions</p>
+</li>
+<li>
+<p>Class expressions</p>
+</li>
+<li>
+<p>Accessing properties, arrays, lists, and maps</p>
+</li>
+<li>
+<p>Method invocation</p>
+</li>
+<li>
+<p>Relational operators</p>
+</li>
+<li>
+<p>Assignment</p>
+</li>
+<li>
+<p>Calling constructors</p>
+</li>
+<li>
+<p>Bean references</p>
+</li>
+<li>
+<p>Array construction</p>
+</li>
+<li>
+<p>Inline lists</p>
+</li>
+<li>
+<p>Inline maps</p>
+</li>
+<li>
+<p>Ternary operator</p>
+</li>
+<li>
+<p>Variables</p>
+</li>
+<li>
+<p>User-defined functions</p>
+</li>
+<li>
+<p>Collection projection</p>
+</li>
+<li>
+<p>Collection selection</p>
+</li>
+<li>
+<p>Templated expressions</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="expressions-evaluation"><a class="anchor" href="#expressions-evaluation"></a>Evaluation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section introduces the simple use of SpEL interfaces and its expression language.
+The complete language reference can be found in
+<a href="#expressions-language-ref">Language Reference</a>.</p>
+</div>
+<div class="paragraph">
+<p>The following code introduces the SpEL API to evaluate the literal string expression,
+<code>Hello World</code>.</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+Expression exp = parser.parseExpression("'Hello World'"); <i class="conum" data-value="1"></i><b>(1)</b>
+String message = (String) exp.getValue();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The value of the message variable is <code>'Hello World'</code>.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+val exp = parser.parseExpression("'Hello World'") <i class="conum" data-value="1"></i><b>(1)</b>
+val message = exp.value as String</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The value of the message variable is <code>'Hello World'</code>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The SpEL classes and interfaces you are most likely to use are located in the
+<code>org.springframework.expression</code> package and its sub-packages, such as <code>spel.support</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>ExpressionParser</code> interface is responsible for parsing an expression string. In
+the preceding example, the expression string is a string literal denoted by the surrounding single
+quotation marks. The <code>Expression</code> interface is responsible for evaluating the previously defined
+expression string. Two exceptions that can be thrown, <code>ParseException</code> and
+<code>EvaluationException</code>, when calling <code>parser.parseExpression</code> and <code>exp.getValue</code>,
+respectively.</p>
+</div>
+<div class="paragraph">
+<p>SpEL supports a wide range of features, such as calling methods, accessing properties,
+and calling constructors.</p>
+</div>
+<div class="paragraph">
+<p>In the following example of method invocation, we call the <code>concat</code> method on the string literal:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+Expression exp = parser.parseExpression("'Hello World'.concat('!')"); <i class="conum" data-value="1"></i><b>(1)</b>
+String message = (String) exp.getValue();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The value of <code>message</code> is now 'Hello World!'.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+val exp = parser.parseExpression("'Hello World'.concat('!')") <i class="conum" data-value="1"></i><b>(1)</b>
+val message = exp.value as String</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The value of <code>message</code> is now 'Hello World!'.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following example of calling a JavaBean property calls the <code>String</code> property <code>Bytes</code>:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+
+// invokes 'getBytes()'
+Expression exp = parser.parseExpression("'Hello World'.bytes"); <i class="conum" data-value="1"></i><b>(1)</b>
+byte[] bytes = (byte[]) exp.getValue();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This line converts the literal to a byte array.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+
+// invokes 'getBytes()'
+val exp = parser.parseExpression("'Hello World'.bytes") <i class="conum" data-value="1"></i><b>(1)</b>
+val bytes = exp.value as ByteArray</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>This line converts the literal to a byte array.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>SpEL also supports nested properties by using the standard dot notation (such as
+<code>prop1.prop2.prop3</code>) and also the corresponding setting of property values.
+Public fields may also be accessed.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows how to use dot notation to get the length of a literal:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+
+// invokes 'getBytes().length'
+Expression exp = parser.parseExpression("'Hello World'.bytes.length"); <i class="conum" data-value="1"></i><b>(1)</b>
+int length = (Integer) exp.getValue();</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>'Hello World'.bytes.length</code> gives the length of the literal.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+
+// invokes 'getBytes().length'
+val exp = parser.parseExpression("'Hello World'.bytes.length") <i class="conum" data-value="1"></i><b>(1)</b>
+val length = exp.value as Int</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td><code>'Hello World'.bytes.length</code> gives the length of the literal.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The String&#8217;s constructor can be called instead of using a string literal, as the following
+example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+Expression exp = parser.parseExpression("new String('hello world').toUpperCase()"); <i class="conum" data-value="1"></i><b>(1)</b>
+String message = exp.getValue(String.class);</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Construct a new <code>String</code> from the literal and make it be upper case.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+val exp = parser.parseExpression("new String('hello world').toUpperCase()")  <i class="conum" data-value="1"></i><b>(1)</b>
+val message = exp.getValue(String::class.java)</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Construct a new <code>String</code> from the literal and make it be upper case.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Note the use of the generic method: <code>public &lt;T&gt; T getValue(Class&lt;T&gt; desiredResultType)</code>.
+Using this method removes the need to cast the value of the expression to the desired
+result type. An <code>EvaluationException</code> is thrown if the value cannot be cast to the
+type <code>T</code> or converted by using the registered type converter.</p>
+</div>
+<div class="paragraph">
+<p>The more common usage of SpEL is to provide an expression string that is evaluated
+against a specific object instance (called the root object). The following example shows
+how to retrieve the <code>name</code> property from an instance of the <code>Inventor</code> class or
+create a boolean condition:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Create and set a calendar
+GregorianCalendar c = new GregorianCalendar();
+c.set(1856, 7, 9);
+
+// The constructor arguments are name, birthday, and nationality.
+Inventor tesla = new Inventor("Nikola Tesla", c.getTime(), "Serbian");
+
+ExpressionParser parser = new SpelExpressionParser();
+
+Expression exp = parser.parseExpression("name"); // Parse name as an expression
+String name = (String) exp.getValue(tesla);
+// name == "Nikola Tesla"
+
+exp = parser.parseExpression("name == 'Nikola Tesla'");
+boolean result = exp.getValue(tesla, Boolean.class);
+// result == true</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// Create and set a calendar
+val c = GregorianCalendar()
+c.set(1856, 7, 9)
+
+// The constructor arguments are name, birthday, and nationality.
+val tesla = Inventor("Nikola Tesla", c.time, "Serbian")
+
+val parser = SpelExpressionParser()
+
+var exp = parser.parseExpression("name") // Parse name as an expression
+val name = exp.getValue(tesla) as String
+// name == "Nikola Tesla"
+
+exp = parser.parseExpression("name == 'Nikola Tesla'")
+val result = exp.getValue(tesla, Boolean::class.java)
+// result == true</code></pre>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-evaluation-context"><a class="anchor" href="#expressions-evaluation-context"></a>Understanding <code>EvaluationContext</code></h3>
+<div class="paragraph">
+<p>The <code>EvaluationContext</code> interface is used when evaluating an expression to resolve
+properties, methods, or fields and to help perform type conversion. Spring provides two
+implementations.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>SimpleEvaluationContext</code>: Exposes a subset of essential SpEL language features and
+configuration options, for categories of expressions that do not require the full extent
+of the SpEL language syntax and should be meaningfully restricted. Examples include but
+are not limited to data binding expressions and property-based filters.</p>
+</li>
+<li>
+<p><code>StandardEvaluationContext</code>: Exposes the full set of SpEL language features and
+configuration options. You can use it to specify a default root object and to configure
+every available evaluation-related strategy.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>SimpleEvaluationContext</code> is designed to support only a subset of the SpEL language syntax.
+It excludes Java type references, constructors, and bean references. It also requires
+you to explicitly choose the level of support for properties and methods in expressions.
+By default, the <code>create()</code> static factory method enables only read access to properties.
+You can also obtain a builder to configure the exact level of support needed, targeting
+one or some combination of the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Custom <code>PropertyAccessor</code> only (no reflection)</p>
+</li>
+<li>
+<p>Data binding properties for read-only access</p>
+</li>
+<li>
+<p>Data binding properties for read and write</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="expressions-type-conversion"><a class="anchor" href="#expressions-type-conversion"></a>Type Conversion</h4>
+<div class="paragraph">
+<p>By default, SpEL uses the conversion service available in Spring core
+(<code>org.springframework.core.convert.ConversionService</code>). This conversion service comes
+with many built-in converters for common conversions but is also fully extensible so that
+you can add custom conversions between types. Additionally, it is
+generics-aware. This means that, when you work with generic types in
+expressions, SpEL attempts conversions to maintain type correctness for any objects
+it encounters.</p>
+</div>
+<div class="paragraph">
+<p>What does this mean in practice? Suppose assignment, using <code>setValue()</code>, is being used
+to set a <code>List</code> property. The type of the property is actually <code>List&lt;Boolean&gt;</code>. SpEL
+recognizes that the elements of the list need to be converted to <code>Boolean</code> before
+being placed in it. The following example shows how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class Simple {
+	public List&lt;Boolean&gt; booleanList = new ArrayList&lt;Boolean&gt;();
+}
+
+Simple simple = new Simple();
+simple.booleanList.add(true);
+
+EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
+
+// "false" is passed in here as a String. SpEL and the conversion service
+// will recognize that it needs to be a Boolean and convert it accordingly.
+parser.parseExpression("booleanList[0]").setValue(context, simple, "false");
+
+// b is false
+Boolean b = simple.booleanList.get(0);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class Simple {
+	var booleanList: MutableList&lt;Boolean&gt; = ArrayList()
+}
+
+val simple = Simple()
+simple.booleanList.add(true)
+
+val context = SimpleEvaluationContext.forReadOnlyDataBinding().build()
+
+// "false" is passed in here as a String. SpEL and the conversion service
+// will recognize that it needs to be a Boolean and convert it accordingly.
+parser.parseExpression("booleanList[0]").setValue(context, simple, "false")
+
+// b is false
+val b = simple.booleanList[0]</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-parser-configuration"><a class="anchor" href="#expressions-parser-configuration"></a>Parser Configuration</h3>
+<div class="paragraph">
+<p>It is possible to configure the SpEL expression parser by using a parser configuration
+object (<code>org.springframework.expression.spel.SpelParserConfiguration</code>). The configuration
+object controls the behavior of some of the expression components. For example, if you
+index into an array or collection and the element at the specified index is <code>null</code>, SpEL
+can automatically create the element. This is useful when using expressions made up of a
+chain of property references. If you index into an array or list and specify an index
+that is beyond the end of the current size of the array or list, SpEL can automatically
+grow the array or list to accommodate that index. In order to add an element at the
+specified index, SpEL will try to create the element using the element type&#8217;s default
+constructor before setting the specified value. If the element type does not have a
+default constructor, <code>null</code> will be added to the array or list. If there is no built-in
+or custom converter that knows how to set the value, <code>null</code> will remain in the array or
+list at the specified index. The following example demonstrates how to automatically grow
+the list:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class Demo {
+	public List&lt;String&gt; list;
+}
+
+// Turn on:
+// - auto null reference initialization
+// - auto collection growing
+SpelParserConfiguration config = new SpelParserConfiguration(true,true);
+
+ExpressionParser parser = new SpelExpressionParser(config);
+
+Expression expression = parser.parseExpression("list[3]");
+
+Demo demo = new Demo();
+
+Object o = expression.getValue(demo);
+
+// demo.list will now be a real collection of 4 entries
+// Each entry is a new empty String</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class Demo {
+	var list: List&lt;String&gt;? = null
+}
+
+// Turn on:
+// - auto null reference initialization
+// - auto collection growing
+val config = SpelParserConfiguration(true, true)
+
+val parser = SpelExpressionParser(config)
+
+val expression = parser.parseExpression("list[3]")
+
+val demo = Demo()
+
+val o = expression.getValue(demo)
+
+// demo.list will now be a real collection of 4 entries
+// Each entry is a new empty String</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-spel-compilation"><a class="anchor" href="#expressions-spel-compilation"></a>SpEL Compilation</h3>
+<div class="paragraph">
+<p>Spring Framework 4.1 includes a basic expression compiler. Expressions are usually
+interpreted, which provides a lot of dynamic flexibility during evaluation but
+does not provide optimum performance. For occasional expression usage,
+this is fine, but, when used by other components such as Spring Integration,
+performance can be very important, and there is no real need for the dynamism.</p>
+</div>
+<div class="paragraph">
+<p>The SpEL compiler is intended to address this need. During evaluation, the compiler
+generates a Java class that embodies the expression behavior at runtime and uses that
+class to achieve much faster expression evaluation. Due to the lack of typing around
+expressions, the compiler uses information gathered during the interpreted evaluations
+of an expression when performing compilation. For example, it does not know the type
+of a property reference purely from the expression, but during the first interpreted
+evaluation, it finds out what it is. Of course, basing compilation on such derived
+information can cause trouble later if the types of the various expression elements
+change over time. For this reason, compilation is best suited to expressions whose
+type information is not going to change on repeated evaluations.</p>
+</div>
+<div class="paragraph">
+<p>Consider the following basic expression:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre>someArray[0].someProperty.someOtherProperty &lt; 0.1</pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Because the preceding expression involves array access, some property de-referencing,
+and numeric operations, the performance gain can be very noticeable. In an example
+micro benchmark run of 50000 iterations, it took 75ms to evaluate by using the
+interpreter and only 3ms using the compiled version of the expression.</p>
+</div>
+<div class="sect3">
+<h4 id="expressions-compiler-configuration"><a class="anchor" href="#expressions-compiler-configuration"></a>Compiler Configuration</h4>
+<div class="paragraph">
+<p>The compiler is not turned on by default, but you can turn it on in either of two
+different ways. You can turn it on by using the parser configuration process
+(<a href="#expressions-parser-configuration">discussed earlier</a>) or by using a Spring property
+when SpEL usage is embedded inside another component. This section discusses both of
+these options.</p>
+</div>
+<div class="paragraph">
+<p>The compiler can operate in one of three modes, which are captured in the
+<code>org.springframework.expression.spel.SpelCompilerMode</code> enum. The modes are as follows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>OFF</code> (default): The compiler is switched off.</p>
+</li>
+<li>
+<p><code>IMMEDIATE</code>: In immediate mode, the expressions are compiled as soon as possible. This
+is typically after the first interpreted evaluation. If the compiled expression fails
+(typically due to a type changing, as described earlier), the caller of the expression
+evaluation receives an exception.</p>
+</li>
+<li>
+<p><code>MIXED</code>: In mixed mode, the expressions silently switch between interpreted and compiled
+mode over time. After some number of interpreted runs, they switch to compiled
+form and, if something goes wrong with the compiled form (such as a type changing, as
+described earlier), the expression automatically switches back to interpreted form
+again. Sometime later, it may generate another compiled form and switch to it. Basically,
+the exception that the user gets in <code>IMMEDIATE</code> mode is instead handled internally.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>IMMEDIATE</code> mode exists because <code>MIXED</code> mode could cause issues for expressions that
+have side effects. If a compiled expression blows up after partially succeeding, it
+may have already done something that has affected the state of the system. If this
+has happened, the caller may not want it to silently re-run in interpreted mode,
+since part of the expression may be running twice.</p>
+</div>
+<div class="paragraph">
+<p>After selecting a mode, use the <code>SpelParserConfiguration</code> to configure the parser. The
+following example shows how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SpelParserConfiguration config = new SpelParserConfiguration(SpelCompilerMode.IMMEDIATE,
+	this.getClass().getClassLoader());
+
+SpelExpressionParser parser = new SpelExpressionParser(config);
+
+Expression expr = parser.parseExpression("payload");
+
+MyMessage message = new MyMessage();
+
+Object payload = expr.getValue(message);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val config = SpelParserConfiguration(SpelCompilerMode.IMMEDIATE,
+		this.javaClass.classLoader)
+
+val parser = SpelExpressionParser(config)
+
+val expr = parser.parseExpression("payload")
+
+val message = MyMessage()
+
+val payload = expr.getValue(message)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>When you specify the compiler mode, you can also specify a classloader (passing null is allowed).
+Compiled expressions are defined in a child classloader created under any that is supplied.
+It is important to ensure that, if a classloader is specified, it can see all the types involved in
+the expression evaluation process. If you do not specify a classloader, a default classloader is used
+(typically the context classloader for the thread that is running during expression evaluation).</p>
+</div>
+<div class="paragraph">
+<p>The second way to configure the compiler is for use when SpEL is embedded inside some
+other component and it may not be possible to configure it through a configuration
+object. In these cases, it is possible to set the <code>spring.expression.compiler.mode</code>
+property via a JVM system property (or via the
+<a href="../appendix.html#appendix-spring-properties" class="page"><code>SpringProperties</code></a> mechanism) to one of the
+<code>SpelCompilerMode</code> enum values (<code>off</code>, <code>immediate</code>, or <code>mixed</code>).</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="expressions-compiler-limitations"><a class="anchor" href="#expressions-compiler-limitations"></a>Compiler Limitations</h4>
+<div class="paragraph">
+<p>Since Spring Framework 4.1, the basic compilation framework is in place. However, the framework
+does not yet support compiling every kind of expression. The initial focus has been on the
+common expressions that are likely to be used in performance-critical contexts. The following
+kinds of expression cannot be compiled at the moment:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Expressions involving assignment</p>
+</li>
+<li>
+<p>Expressions relying on the conversion service</p>
+</li>
+<li>
+<p>Expressions using custom resolvers or accessors</p>
+</li>
+<li>
+<p>Expressions using selection or projection</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>More types of expressions will be compilable in the future.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="expressions-beandef"><a class="anchor" href="#expressions-beandef"></a>Expressions in Bean Definitions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can use SpEL expressions with XML-based or annotation-based configuration metadata for
+defining <code>BeanDefinition</code> instances. In both cases, the syntax to define the expression is of the
+form <code>#{ &lt;expression string&gt; }</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="expressions-beandef-xml-based"><a class="anchor" href="#expressions-beandef-xml-based"></a>XML Configuration</h3>
+<div class="paragraph">
+<p>A property or constructor argument value can be set by using expressions, as the following
+example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="numberGuess" class="org.spring.samples.NumberGuess"&gt;
+	&lt;property name="randomNumber" value="#{ T(java.lang.Math).random() * 100.0 }"/&gt;
+
+	&lt;!-- other properties --&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>All beans in the application context are available as predefined variables with their
+common bean name. This includes standard context beans such as <code>environment</code> (of type
+<code>org.springframework.core.env.Environment</code>) as well as <code>systemProperties</code> and
+<code>systemEnvironment</code> (of type <code>Map&lt;String, Object&gt;</code>) for access to the runtime environment.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows access to the <code>systemProperties</code> bean as a SpEL variable:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="taxCalculator" class="org.spring.samples.TaxCalculator"&gt;
+	&lt;property name="defaultLocale" value="#{ systemProperties['user.region'] }"/&gt;
+
+	&lt;!-- other properties --&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that you do not have to prefix the predefined variable with the <code>#</code> symbol here.</p>
+</div>
+<div class="paragraph">
+<p>You can also refer to other bean properties by name, as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;bean id="numberGuess" class="org.spring.samples.NumberGuess"&gt;
+	&lt;property name="randomNumber" value="#{ T(java.lang.Math).random() * 100.0 }"/&gt;
+
+	&lt;!-- other properties --&gt;
+&lt;/bean&gt;
+
+&lt;bean id="shapeGuess" class="org.spring.samples.ShapeGuess"&gt;
+	&lt;property name="initialShapeSeed" value="#{ numberGuess.randomNumber }"/&gt;
+
+	&lt;!-- other properties --&gt;
+&lt;/bean&gt;</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-beandef-annotation-based"><a class="anchor" href="#expressions-beandef-annotation-based"></a>Annotation Configuration</h3>
+<div class="paragraph">
+<p>To specify a default value, you can place the <code>@Value</code> annotation on fields, methods,
+and method or constructor parameters.</p>
+</div>
+<div class="paragraph">
+<p>The following example sets the default value of a field:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class FieldValueTestBean {
+
+	@Value("#{ systemProperties['user.region'] }")
+	private String defaultLocale;
+
+	public void setDefaultLocale(String defaultLocale) {
+		this.defaultLocale = defaultLocale;
+	}
+
+	public String getDefaultLocale() {
+		return this.defaultLocale;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class FieldValueTestBean {
+
+	@Value("#{ systemProperties['user.region'] }")
+	var defaultLocale: String? = null
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example shows the equivalent but on a property setter method:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class PropertyValueTestBean {
+
+	private String defaultLocale;
+
+	@Value("#{ systemProperties['user.region'] }")
+	public void setDefaultLocale(String defaultLocale) {
+		this.defaultLocale = defaultLocale;
+	}
+
+	public String getDefaultLocale() {
+		return this.defaultLocale;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class PropertyValueTestBean {
+
+	@Value("#{ systemProperties['user.region'] }")
+	var defaultLocale: String? = null
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Autowired methods and constructors can also use the <code>@Value</code> annotation, as the following
+examples show:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SimpleMovieLister {
+
+	private MovieFinder movieFinder;
+	private String defaultLocale;
+
+	@Autowired
+	public void configure(MovieFinder movieFinder,
+			@Value("#{ systemProperties['user.region'] }") String defaultLocale) {
+		this.movieFinder = movieFinder;
+		this.defaultLocale = defaultLocale;
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class SimpleMovieLister {
+
+	private lateinit var movieFinder: MovieFinder
+	private lateinit var defaultLocale: String
+
+	@Autowired
+	fun configure(movieFinder: MovieFinder,
+				@Value("#{ systemProperties['user.region'] }") defaultLocale: String) {
+		this.movieFinder = movieFinder
+		this.defaultLocale = defaultLocale
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MovieRecommender {
+
+	private String defaultLocale;
+
+	private CustomerPreferenceDao customerPreferenceDao;
+
+	public MovieRecommender(CustomerPreferenceDao customerPreferenceDao,
+			@Value("#{systemProperties['user.country']}") String defaultLocale) {
+		this.customerPreferenceDao = customerPreferenceDao;
+		this.defaultLocale = defaultLocale;
+	}
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class MovieRecommender(private val customerPreferenceDao: CustomerPreferenceDao,
+			@Value("#{systemProperties['user.country']}") private val defaultLocale: String) {
+	// ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="expressions-language-ref"><a class="anchor" href="#expressions-language-ref"></a>Language Reference</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how the Spring Expression Language works. It covers the following
+topics:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#expressions-ref-literal">Literal Expressions</a></p>
+</li>
+<li>
+<p><a href="#expressions-properties-arrays">Properties, Arrays, Lists, Maps, and Indexers</a></p>
+</li>
+<li>
+<p><a href="#expressions-inline-lists">Inline Lists</a></p>
+</li>
+<li>
+<p><a href="#expressions-inline-maps">Inline Maps</a></p>
+</li>
+<li>
+<p><a href="#expressions-array-construction">Array Construction</a></p>
+</li>
+<li>
+<p><a href="#expressions-methods">Methods</a></p>
+</li>
+<li>
+<p><a href="#expressions-operators">Operators</a></p>
+</li>
+<li>
+<p><a href="#expressions-types">Types</a></p>
+</li>
+<li>
+<p><a href="#expressions-constructors">Constructors</a></p>
+</li>
+<li>
+<p><a href="#expressions-ref-variables">Variables</a></p>
+</li>
+<li>
+<p><a href="#expressions-ref-functions">Functions</a></p>
+</li>
+<li>
+<p><a href="#expressions-bean-references">Bean References</a></p>
+</li>
+<li>
+<p><a href="#expressions-operator-ternary">Ternary Operator (If-Then-Else)</a></p>
+</li>
+<li>
+<p><a href="#expressions-operator-elvis">The Elvis Operator</a></p>
+</li>
+<li>
+<p><a href="#expressions-operator-safe-navigation">Safe Navigation Operator</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="expressions-ref-literal"><a class="anchor" href="#expressions-ref-literal"></a>Literal Expressions</h3>
+<div class="paragraph">
+<p>The types of literal expressions supported are strings, numeric values (int, real, hex),
+boolean, and null. Strings are delimited by single quotation marks. To put a single quotation mark itself
+in a string, use two single quotation mark characters.</p>
+</div>
+<div class="paragraph">
+<p>The following listing shows simple usage of literals. Typically, they are not used
+in isolation like this but, rather, as part of a more complex expression&#8201;&#8212;&#8201;for example,
+using a literal on one side of a logical comparison operator.</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+
+// evals to "Hello World"
+String helloWorld = (String) parser.parseExpression("'Hello World'").getValue();
+
+double avogadrosNumber = (Double) parser.parseExpression("6.0221415E+23").getValue();
+
+// evals to 2147483647
+int maxValue = (Integer) parser.parseExpression("0x7FFFFFFF").getValue();
+
+boolean trueValue = (Boolean) parser.parseExpression("true").getValue();
+
+Object nullValue = parser.parseExpression("null").getValue();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+
+// evals to "Hello World"
+val helloWorld = parser.parseExpression("'Hello World'").value as String
+
+val avogadrosNumber = parser.parseExpression("6.0221415E+23").value as Double
+
+// evals to 2147483647
+val maxValue = parser.parseExpression("0x7FFFFFFF").value as Int
+
+val trueValue = parser.parseExpression("true").value as Boolean
+
+val nullValue = parser.parseExpression("null").value</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Numbers support the use of the negative sign, exponential notation, and decimal points.
+By default, real numbers are parsed by using <code>Double.parseDouble()</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-properties-arrays"><a class="anchor" href="#expressions-properties-arrays"></a>Properties, Arrays, Lists, Maps, and Indexers</h3>
+<div class="paragraph">
+<p>Navigating with property references is easy. To do so, use a period to indicate a nested
+property value. The instances of the <code>Inventor</code> class, <code>pupin</code> and <code>tesla</code>, were
+populated with data listed in the <a href="#expressions-example-classes">Classes used in the
+examples</a> section. To navigate "down" the object graph and get Tesla&#8217;s year of birth and
+Pupin&#8217;s city of birth, we use the following expressions:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// evals to 1856
+int year = (Integer) parser.parseExpression("birthdate.year + 1900").getValue(context);
+
+String city = (String) parser.parseExpression("placeOfBirth.city").getValue(context);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// evals to 1856
+val year = parser.parseExpression("birthdate.year + 1900").getValue(context) as Int
+
+val city = parser.parseExpression("placeOfBirth.city").getValue(context) as String</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Case insensitivity is allowed for the first letter of property names. Thus, the
+expressions in the above example may be written as <code>Birthdate.Year + 1900</code> and
+<code>PlaceOfBirth.City</code>, respectively. In addition, properties may optionally be accessed via
+method invocations&#8201;&#8212;&#8201;for example, <code>getPlaceOfBirth().getCity()</code> instead of
+<code>placeOfBirth.city</code>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The contents of arrays and lists are obtained by using square bracket notation, as the
+following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
+
+// Inventions Array
+
+// evaluates to "Induction motor"
+String invention = parser.parseExpression("inventions[3]").getValue(
+		context, tesla, String.class);
+
+// Members List
+
+// evaluates to "Nikola Tesla"
+String name = parser.parseExpression("members[0].name").getValue(
+		context, ieee, String.class);
+
+// List and Array navigation
+// evaluates to "Wireless communication"
+String invention = parser.parseExpression("members[0].inventions[6]").getValue(
+		context, ieee, String.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+val context = SimpleEvaluationContext.forReadOnlyDataBinding().build()
+
+// Inventions Array
+
+// evaluates to "Induction motor"
+val invention = parser.parseExpression("inventions[3]").getValue(
+		context, tesla, String::class.java)
+
+// Members List
+
+// evaluates to "Nikola Tesla"
+val name = parser.parseExpression("members[0].name").getValue(
+		context, ieee, String::class.java)
+
+// List and Array navigation
+// evaluates to "Wireless communication"
+val invention = parser.parseExpression("members[0].inventions[6]").getValue(
+		context, ieee, String::class.java)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The contents of maps are obtained by specifying the literal key value within the
+brackets. In the following example, because keys for the <code>officers</code> map are strings, we can specify
+string literals:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Officer's Dictionary
+
+Inventor pupin = parser.parseExpression("officers['president']").getValue(
+		societyContext, Inventor.class);
+
+// evaluates to "Idvor"
+String city = parser.parseExpression("officers['president'].placeOfBirth.city").getValue(
+		societyContext, String.class);
+
+// setting values
+parser.parseExpression("officers['advisors'][0].placeOfBirth.country").setValue(
+		societyContext, "Croatia");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// Officer's Dictionary
+
+val pupin = parser.parseExpression("officers['president']").getValue(
+		societyContext, Inventor::class.java)
+
+// evaluates to "Idvor"
+val city = parser.parseExpression("officers['president'].placeOfBirth.city").getValue(
+		societyContext, String::class.java)
+
+// setting values
+parser.parseExpression("officers['advisors'][0].placeOfBirth.country").setValue(
+		societyContext, "Croatia")</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-inline-lists"><a class="anchor" href="#expressions-inline-lists"></a>Inline Lists</h3>
+<div class="paragraph">
+<p>You can directly express lists in an expression by using <code>{}</code> notation.</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// evaluates to a Java list containing the four numbers
+List numbers = (List) parser.parseExpression("{1,2,3,4}").getValue(context);
+
+List listOfLists = (List) parser.parseExpression("{{'a','b'},{'x','y'}}").getValue(context);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// evaluates to a Java list containing the four numbers
+val numbers = parser.parseExpression("{1,2,3,4}").getValue(context) as List&lt;*&gt;
+
+val listOfLists = parser.parseExpression("{{'a','b'},{'x','y'}}").getValue(context) as List&lt;*&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>{}</code> by itself means an empty list. For performance reasons, if the list is itself
+entirely composed of fixed literals, a constant list is created to represent the
+expression (rather than building a new list on each evaluation).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-inline-maps"><a class="anchor" href="#expressions-inline-maps"></a>Inline Maps</h3>
+<div class="paragraph">
+<p>You can also directly express maps in an expression by using <code>{key:value}</code> notation. The
+following example shows how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// evaluates to a Java map containing the two entries
+Map inventorInfo = (Map) parser.parseExpression("{name:'Nikola',dob:'10-July-1856'}").getValue(context);
+
+Map mapOfMaps = (Map) parser.parseExpression("{name:{first:'Nikola',last:'Tesla'},dob:{day:10,month:'July',year:1856}}").getValue(context);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// evaluates to a Java map containing the two entries
+val inventorInfo = parser.parseExpression("{name:'Nikola',dob:'10-July-1856'}").getValue(context) as Map&lt;*, *&gt;
+
+val mapOfMaps = parser.parseExpression("{name:{first:'Nikola',last:'Tesla'},dob:{day:10,month:'July',year:1856}}").getValue(context) as Map&lt;*, *&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p><code>{:}</code> by itself means an empty map. For performance reasons, if the map is itself
+composed of fixed literals or other nested constant structures (lists or maps), a
+constant map is created to represent the expression (rather than building a new map on
+each evaluation). Quoting of the map keys is optional (unless the key contains a period
+(<code>.</code>)). The examples above do not use quoted keys.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-array-construction"><a class="anchor" href="#expressions-array-construction"></a>Array Construction</h3>
+<div class="paragraph">
+<p>You can build arrays by using the familiar Java syntax, optionally supplying an initializer
+to have the array populated at construction time. The following example shows how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">int[] numbers1 = (int[]) parser.parseExpression("new int[4]").getValue(context);
+
+// Array with initializer
+int[] numbers2 = (int[]) parser.parseExpression("new int[]{1,2,3}").getValue(context);
+
+// Multi dimensional array
+int[][] numbers3 = (int[][]) parser.parseExpression("new int[4][5]").getValue(context);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val numbers1 = parser.parseExpression("new int[4]").getValue(context) as IntArray
+
+// Array with initializer
+val numbers2 = parser.parseExpression("new int[]{1,2,3}").getValue(context) as IntArray
+
+// Multi dimensional array
+val numbers3 = parser.parseExpression("new int[4][5]").getValue(context) as Array&lt;IntArray&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You cannot currently supply an initializer when you construct a multi-dimensional array.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-methods"><a class="anchor" href="#expressions-methods"></a>Methods</h3>
+<div class="paragraph">
+<p>You can invoke methods by using typical Java programming syntax. You can also invoke methods
+on literals. Variable arguments are also supported. The following examples show how to
+invoke methods:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// string literal, evaluates to "bc"
+String bc = parser.parseExpression("'abc'.substring(1, 3)").getValue(String.class);
+
+// evaluates to true
+boolean isMember = parser.parseExpression("isMember('Mihajlo Pupin')").getValue(
+		societyContext, Boolean.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// string literal, evaluates to "bc"
+val bc = parser.parseExpression("'abc'.substring(1, 3)").getValue(String::class.java)
+
+// evaluates to true
+val isMember = parser.parseExpression("isMember('Mihajlo Pupin')").getValue(
+		societyContext, Boolean::class.java)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-operators"><a class="anchor" href="#expressions-operators"></a>Operators</h3>
+<div class="paragraph">
+<p>The Spring Expression Language supports the following kinds of operators:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#expressions-operators-relational">Relational Operators</a></p>
+</li>
+<li>
+<p><a href="#expressions-operators-logical">Logical Operators</a></p>
+</li>
+<li>
+<p><a href="#expressions-operators-mathematical">Mathematical Operators</a></p>
+</li>
+<li>
+<p><a href="#expressions-assignment">The Assignment Operator</a></p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="expressions-operators-relational"><a class="anchor" href="#expressions-operators-relational"></a>Relational Operators</h4>
+<div class="paragraph">
+<p>The relational operators (equal, not equal, less than, less than or equal, greater than,
+and greater than or equal) are supported by using standard operator notation. The
+following listing shows a few examples of operators:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// evaluates to true
+boolean trueValue = parser.parseExpression("2 == 2").getValue(Boolean.class);
+
+// evaluates to false
+boolean falseValue = parser.parseExpression("2 &lt; -5.0").getValue(Boolean.class);
+
+// evaluates to true
+boolean trueValue = parser.parseExpression("'black' &lt; 'block'").getValue(Boolean.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// evaluates to true
+val trueValue = parser.parseExpression("2 == 2").getValue(Boolean::class.java)
+
+// evaluates to false
+val falseValue = parser.parseExpression("2 &lt; -5.0").getValue(Boolean::class.java)
+
+// evaluates to true
+val trueValue = parser.parseExpression("'black' &lt; 'block'").getValue(Boolean::class.java)</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Greater-than and less-than comparisons against <code>null</code> follow a simple rule: <code>null</code> is treated as
+nothing (that is NOT as zero). As a consequence, any other value is always greater
+than <code>null</code> (<code>X &gt; null</code> is always <code>true</code>) and no other value is ever less than nothing
+(<code>X &lt; null</code> is always <code>false</code>).</p>
+</div>
+<div class="paragraph">
+<p>If you prefer numeric comparisons instead, avoid number-based <code>null</code> comparisons
+in favor of comparisons against zero (for example, <code>X &gt; 0</code> or <code>X &lt; 0</code>).</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>In addition to the standard relational operators, SpEL supports the <code>instanceof</code> and regular
+expression-based <code>matches</code> operator. The following listing shows examples of both:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// evaluates to false
+boolean falseValue = parser.parseExpression(
+		"'xyz' instanceof T(Integer)").getValue(Boolean.class);
+
+// evaluates to true
+boolean trueValue = parser.parseExpression(
+		"'5.00' matches '^-?\\d+(\\.\\d{2})?$'").getValue(Boolean.class);
+
+// evaluates to false
+boolean falseValue = parser.parseExpression(
+		"'5.0067' matches '^-?\\d+(\\.\\d{2})?$'").getValue(Boolean.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// evaluates to false
+val falseValue = parser.parseExpression(
+		"'xyz' instanceof T(Integer)").getValue(Boolean::class.java)
+
+// evaluates to true
+val trueValue = parser.parseExpression(
+		"'5.00' matches '^-?\\d+(\\.\\d{2})?$'").getValue(Boolean::class.java)
+
+// evaluates to false
+val falseValue = parser.parseExpression(
+		"'5.0067' matches '^-?\\d+(\\.\\d{2})?$'").getValue(Boolean::class.java)</code></pre>
+</div>
+</div>
+<div class="admonitionblock caution">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-caution" title="Caution"></i>
+</td>
+<td class="content">
+Be careful with primitive types, as they are immediately boxed up to their
+wrapper types. For example, <code>1 instanceof T(int)</code> evaluates to <code>false</code>, while
+<code>1 instanceof T(Integer)</code> evaluates to <code>true</code>, as expected.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Each symbolic operator can also be specified as a purely alphabetic equivalent. This
+avoids problems where the symbols used have special meaning for the document type in
+which the expression is embedded (such as in an XML document). The textual equivalents are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>lt</code> (<code>&lt;</code>)</p>
+</li>
+<li>
+<p><code>gt</code> (<code>&gt;</code>)</p>
+</li>
+<li>
+<p><code>le</code> (<code>&lt;=</code>)</p>
+</li>
+<li>
+<p><code>ge</code> (<code>&gt;=</code>)</p>
+</li>
+<li>
+<p><code>eq</code> (<code>==</code>)</p>
+</li>
+<li>
+<p><code>ne</code> (<code>!=</code>)</p>
+</li>
+<li>
+<p><code>div</code> (<code>/</code>)</p>
+</li>
+<li>
+<p><code>mod</code> (<code>%</code>)</p>
+</li>
+<li>
+<p><code>not</code> (<code>!</code>).</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>All of the textual operators are case-insensitive.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="expressions-operators-logical"><a class="anchor" href="#expressions-operators-logical"></a>Logical Operators</h4>
+<div class="paragraph">
+<p>SpEL supports the following logical operators:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>and</code> (<code>&amp;&amp;</code>)</p>
+</li>
+<li>
+<p><code>or</code> (<code>||</code>)</p>
+</li>
+<li>
+<p><code>not</code> (<code>!</code>)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The following example shows how to use the logical operators:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// -- AND --
+
+// evaluates to false
+boolean falseValue = parser.parseExpression("true and false").getValue(Boolean.class);
+
+// evaluates to true
+String expression = "isMember('Nikola Tesla') and isMember('Mihajlo Pupin')";
+boolean trueValue = parser.parseExpression(expression).getValue(societyContext, Boolean.class);
+
+// -- OR --
+
+// evaluates to true
+boolean trueValue = parser.parseExpression("true or false").getValue(Boolean.class);
+
+// evaluates to true
+String expression = "isMember('Nikola Tesla') or isMember('Albert Einstein')";
+boolean trueValue = parser.parseExpression(expression).getValue(societyContext, Boolean.class);
+
+// -- NOT --
+
+// evaluates to false
+boolean falseValue = parser.parseExpression("!true").getValue(Boolean.class);
+
+// -- AND and NOT --
+String expression = "isMember('Nikola Tesla') and !isMember('Mihajlo Pupin')";
+boolean falseValue = parser.parseExpression(expression).getValue(societyContext, Boolean.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// -- AND --
+
+// evaluates to false
+val falseValue = parser.parseExpression("true and false").getValue(Boolean::class.java)
+
+// evaluates to true
+val expression = "isMember('Nikola Tesla') and isMember('Mihajlo Pupin')"
+val trueValue = parser.parseExpression(expression).getValue(societyContext, Boolean::class.java)
+
+// -- OR --
+
+// evaluates to true
+val trueValue = parser.parseExpression("true or false").getValue(Boolean::class.java)
+
+// evaluates to true
+val expression = "isMember('Nikola Tesla') or isMember('Albert Einstein')"
+val trueValue = parser.parseExpression(expression).getValue(societyContext, Boolean::class.java)
+
+// -- NOT --
+
+// evaluates to false
+val falseValue = parser.parseExpression("!true").getValue(Boolean::class.java)
+
+// -- AND and NOT --
+val expression = "isMember('Nikola Tesla') and !isMember('Mihajlo Pupin')"
+val falseValue = parser.parseExpression(expression).getValue(societyContext, Boolean::class.java)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="expressions-operators-mathematical"><a class="anchor" href="#expressions-operators-mathematical"></a>Mathematical Operators</h4>
+<div class="paragraph">
+<p>You can use the addition operator (<code>+</code>) on both numbers and strings. You can use the
+subtraction (<code>-</code>), multiplication (<code>*</code>), and division (<code>/</code>) operators only on numbers.
+You can also use the modulus (<code>%</code>) and exponential power (<code>^</code>) operators on numbers.
+Standard operator precedence is enforced. The following example shows the mathematical
+operators in use:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// Addition
+int two = parser.parseExpression("1 + 1").getValue(Integer.class);  // 2
+
+String testString = parser.parseExpression(
+		"'test' + ' ' + 'string'").getValue(String.class);  // 'test string'
+
+// Subtraction
+int four = parser.parseExpression("1 - -3").getValue(Integer.class);  // 4
+
+double d = parser.parseExpression("1000.00 - 1e4").getValue(Double.class);  // -9000
+
+// Multiplication
+int six = parser.parseExpression("-2 * -3").getValue(Integer.class);  // 6
+
+double twentyFour = parser.parseExpression("2.0 * 3e0 * 4").getValue(Double.class);  // 24.0
+
+// Division
+int minusTwo = parser.parseExpression("6 / -3").getValue(Integer.class);  // -2
+
+double one = parser.parseExpression("8.0 / 4e0 / 2").getValue(Double.class);  // 1.0
+
+// Modulus
+int three = parser.parseExpression("7 % 4").getValue(Integer.class);  // 3
+
+int one = parser.parseExpression("8 / 5 % 2").getValue(Integer.class);  // 1
+
+// Operator precedence
+int minusTwentyOne = parser.parseExpression("1+2-3*8").getValue(Integer.class);  // -21</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// Addition
+val two = parser.parseExpression("1 + 1").getValue(Int::class.java)  // 2
+
+val testString = parser.parseExpression(
+		"'test' + ' ' + 'string'").getValue(String::class.java)  // 'test string'
+
+// Subtraction
+val four = parser.parseExpression("1 - -3").getValue(Int::class.java)  // 4
+
+val d = parser.parseExpression("1000.00 - 1e4").getValue(Double::class.java)  // -9000
+
+// Multiplication
+val six = parser.parseExpression("-2 * -3").getValue(Int::class.java)  // 6
+
+val twentyFour = parser.parseExpression("2.0 * 3e0 * 4").getValue(Double::class.java)  // 24.0
+
+// Division
+val minusTwo = parser.parseExpression("6 / -3").getValue(Int::class.java)  // -2
+
+val one = parser.parseExpression("8.0 / 4e0 / 2").getValue(Double::class.java)  // 1.0
+
+// Modulus
+val three = parser.parseExpression("7 % 4").getValue(Int::class.java)  // 3
+
+val one = parser.parseExpression("8 / 5 % 2").getValue(Int::class.java)  // 1
+
+// Operator precedence
+val minusTwentyOne = parser.parseExpression("1+2-3*8").getValue(Int::class.java)  // -21</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="expressions-assignment"><a class="anchor" href="#expressions-assignment"></a>The Assignment Operator</h4>
+<div class="paragraph">
+<p>To set a property, use the assignment operator (<code>=</code>). This is typically done within a
+call to <code>setValue</code> but can also be done inside a call to <code>getValue</code>. The following
+listing shows both ways to use the assignment operator:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Inventor inventor = new Inventor();
+EvaluationContext context = SimpleEvaluationContext.forReadWriteDataBinding().build();
+
+parser.parseExpression("name").setValue(context, inventor, "Aleksandar Seovic");
+
+// alternatively
+String aleks = parser.parseExpression(
+		"name = 'Aleksandar Seovic'").getValue(context, inventor, String.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val inventor = Inventor()
+val context = SimpleEvaluationContext.forReadWriteDataBinding().build()
+
+parser.parseExpression("name").setValue(context, inventor, "Aleksandar Seovic")
+
+// alternatively
+val aleks = parser.parseExpression(
+		"name = 'Aleksandar Seovic'").getValue(context, inventor, String::class.java)</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-types"><a class="anchor" href="#expressions-types"></a>Types</h3>
+<div class="paragraph">
+<p>You can use the special <code>T</code> operator to specify an instance of <code>java.lang.Class</code> (the
+type). Static methods are invoked by using this operator as well. The
+<code>StandardEvaluationContext</code> uses a <code>TypeLocator</code> to find types, and the
+<code>StandardTypeLocator</code> (which can be replaced) is built with an understanding of the
+<code>java.lang</code> package. This means that <code>T()</code> references to types within the <code>java.lang</code>
+package do not need to be fully qualified, but all other type references must be. The
+following example shows how to use the <code>T</code> operator:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Class dateClass = parser.parseExpression("T(java.util.Date)").getValue(Class.class);
+
+Class stringClass = parser.parseExpression("T(String)").getValue(Class.class);
+
+boolean trueValue = parser.parseExpression(
+		"T(java.math.RoundingMode).CEILING &lt; T(java.math.RoundingMode).FLOOR")
+		.getValue(Boolean.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val dateClass = parser.parseExpression("T(java.util.Date)").getValue(Class::class.java)
+
+val stringClass = parser.parseExpression("T(String)").getValue(Class::class.java)
+
+val trueValue = parser.parseExpression(
+		"T(java.math.RoundingMode).CEILING &lt; T(java.math.RoundingMode).FLOOR")
+		.getValue(Boolean::class.java)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-constructors"><a class="anchor" href="#expressions-constructors"></a>Constructors</h3>
+<div class="paragraph">
+<p>You can invoke constructors by using the <code>new</code> operator. You should use the fully
+qualified class name for all types except those located in the <code>java.lang</code> package
+(<code>Integer</code>, <code>Float</code>, <code>String</code>, and so on). The following example shows how to use the
+<code>new</code> operator to invoke constructors:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Inventor einstein = p.parseExpression(
+		"new org.spring.samples.spel.inventor.Inventor('Albert Einstein', 'German')")
+		.getValue(Inventor.class);
+
+// create new Inventor instance within the add() method of List
+p.parseExpression(
+		"Members.add(new org.spring.samples.spel.inventor.Inventor(
+			'Albert Einstein', 'German'))").getValue(societyContext);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val einstein = p.parseExpression(
+		"new org.spring.samples.spel.inventor.Inventor('Albert Einstein', 'German')")
+		.getValue(Inventor::class.java)
+
+// create new Inventor instance within the add() method of List
+p.parseExpression(
+		"Members.add(new org.spring.samples.spel.inventor.Inventor('Albert Einstein', 'German'))")
+		.getValue(societyContext)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-ref-variables"><a class="anchor" href="#expressions-ref-variables"></a>Variables</h3>
+<div class="paragraph">
+<p>You can reference variables in the expression by using the <code>#variableName</code> syntax. Variables
+are set by using the <code>setVariable</code> method on <code>EvaluationContext</code> implementations.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Valid variable names must be composed of one or more of the following supported
+characters.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>letters: <code>A</code> to <code>Z</code> and <code>a</code> to <code>z</code></p>
+</li>
+<li>
+<p>digits: <code>0</code> to <code>9</code></p>
+</li>
+<li>
+<p>underscore: <code>_</code></p>
+</li>
+<li>
+<p>dollar sign: <code>$</code></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The following example shows how to use variables.</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Inventor tesla = new Inventor("Nikola Tesla", "Serbian");
+
+EvaluationContext context = SimpleEvaluationContext.forReadWriteDataBinding().build();
+context.setVariable("newName", "Mike Tesla");
+
+parser.parseExpression("name = #newName").getValue(context, tesla);
+System.out.println(tesla.getName())  // "Mike Tesla"</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val tesla = Inventor("Nikola Tesla", "Serbian")
+
+val context = SimpleEvaluationContext.forReadWriteDataBinding().build()
+context.setVariable("newName", "Mike Tesla")
+
+parser.parseExpression("name = #newName").getValue(context, tesla)
+println(tesla.name)  // "Mike Tesla"</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="expressions-this-root"><a class="anchor" href="#expressions-this-root"></a>The <code>#this</code> and <code>#root</code> Variables</h4>
+<div class="paragraph">
+<p>The <code>#this</code> variable is always defined and refers to the current evaluation object
+(against which unqualified references are resolved). The <code>#root</code> variable is always
+defined and refers to the root context object. Although <code>#this</code> may vary as components of
+an expression are evaluated, <code>#root</code> always refers to the root. The following examples
+show how to use the <code>#this</code> and <code>#root</code> variables:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// create an array of integers
+List&lt;Integer&gt; primes = new ArrayList&lt;Integer&gt;();
+primes.addAll(Arrays.asList(2,3,5,7,11,13,17));
+
+// create parser and set variable 'primes' as the array of integers
+ExpressionParser parser = new SpelExpressionParser();
+EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataAccess();
+context.setVariable("primes", primes);
+
+// all prime numbers &gt; 10 from the list (using selection ?{...})
+// evaluates to [11, 13, 17]
+List&lt;Integer&gt; primesGreaterThanTen = (List&lt;Integer&gt;) parser.parseExpression(
+		"#primes.?[#this&gt;10]").getValue(context);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// create an array of integers
+val primes = ArrayList&lt;Int&gt;()
+primes.addAll(listOf(2, 3, 5, 7, 11, 13, 17))
+
+// create parser and set variable 'primes' as the array of integers
+val parser = SpelExpressionParser()
+val context = SimpleEvaluationContext.forReadOnlyDataAccess()
+context.setVariable("primes", primes)
+
+// all prime numbers &gt; 10 from the list (using selection ?{...})
+// evaluates to [11, 13, 17]
+val primesGreaterThanTen = parser.parseExpression(
+		"#primes.?[#this&gt;10]").getValue(context) as List&lt;Int&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-ref-functions"><a class="anchor" href="#expressions-ref-functions"></a>Functions</h3>
+<div class="paragraph">
+<p>You can extend SpEL by registering user-defined functions that can be called within the
+expression string. The function is registered through the <code>EvaluationContext</code>. The
+following example shows how to register a user-defined function:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Method method = ...;
+
+EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
+context.setVariable("myFunction", method);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val method: Method = ...
+
+val context = SimpleEvaluationContext.forReadOnlyDataBinding().build()
+context.setVariable("myFunction", method)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For example, consider the following utility method that reverses a string:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public abstract class StringUtils {
+
+	public static String reverseString(String input) {
+		StringBuilder backwards = new StringBuilder(input.length());
+		for (int i = 0; i &lt; input.length(); i++) {
+			backwards.append(input.charAt(input.length() - 1 - i));
+		}
+		return backwards.toString();
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun reverseString(input: String): String {
+	val backwards = StringBuilder(input.length)
+	for (i in 0 until input.length) {
+		backwards.append(input[input.length - 1 - i])
+	}
+	return backwards.toString()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can then register and use the preceding method, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+
+EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
+context.setVariable("reverseString",
+		StringUtils.class.getDeclaredMethod("reverseString", String.class));
+
+String helloWorldReversed = parser.parseExpression(
+		"#reverseString('hello')").getValue(context, String.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+
+val context = SimpleEvaluationContext.forReadOnlyDataBinding().build()
+context.setVariable("reverseString", ::reverseString::javaMethod)
+
+val helloWorldReversed = parser.parseExpression(
+		"#reverseString('hello')").getValue(context, String::class.java)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-bean-references"><a class="anchor" href="#expressions-bean-references"></a>Bean References</h3>
+<div class="paragraph">
+<p>If the evaluation context has been configured with a bean resolver, you can
+look up beans from an expression by using the <code>@</code> symbol. The following example shows how
+to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+StandardEvaluationContext context = new StandardEvaluationContext();
+context.setBeanResolver(new MyBeanResolver());
+
+// This will end up calling resolve(context,"something") on MyBeanResolver during evaluation
+Object bean = parser.parseExpression("@something").getValue(context);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+val context = StandardEvaluationContext()
+context.setBeanResolver(MyBeanResolver())
+
+// This will end up calling resolve(context,"something") on MyBeanResolver during evaluation
+val bean = parser.parseExpression("@something").getValue(context)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To access a factory bean itself, you should instead prefix the bean name with an <code>&amp;</code> symbol.
+The following example shows how to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+StandardEvaluationContext context = new StandardEvaluationContext();
+context.setBeanResolver(new MyBeanResolver());
+
+// This will end up calling resolve(context,"&amp;foo") on MyBeanResolver during evaluation
+Object bean = parser.parseExpression("&amp;foo").getValue(context);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+val context = StandardEvaluationContext()
+context.setBeanResolver(MyBeanResolver())
+
+// This will end up calling resolve(context,"&amp;foo") on MyBeanResolver during evaluation
+val bean = parser.parseExpression("&amp;foo").getValue(context)</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-operator-ternary"><a class="anchor" href="#expressions-operator-ternary"></a>Ternary Operator (If-Then-Else)</h3>
+<div class="paragraph">
+<p>You can use the ternary operator for performing if-then-else conditional logic inside
+the expression. The following listing shows a minimal example:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String falseString = parser.parseExpression(
+		"false ? 'trueExp' : 'falseExp'").getValue(String.class);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val falseString = parser.parseExpression(
+		"false ? 'trueExp' : 'falseExp'").getValue(String::class.java)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case, the boolean <code>false</code> results in returning the string value <code>'falseExp'</code>. A more
+realistic example follows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">parser.parseExpression("name").setValue(societyContext, "IEEE");
+societyContext.setVariable("queryName", "Nikola Tesla");
+
+expression = "isMember(#queryName)? #queryName + ' is a member of the ' " +
+		"+ Name + ' Society' : #queryName + ' is not a member of the ' + Name + ' Society'";
+
+String queryResultString = parser.parseExpression(expression)
+		.getValue(societyContext, String.class);
+// queryResultString = "Nikola Tesla is a member of the IEEE Society"</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">parser.parseExpression("name").setValue(societyContext, "IEEE")
+societyContext.setVariable("queryName", "Nikola Tesla")
+
+expression = "isMember(#queryName)? #queryName + ' is a member of the ' " + "+ Name + ' Society' : #queryName + ' is not a member of the ' + Name + ' Society'"
+
+val queryResultString = parser.parseExpression(expression)
+		.getValue(societyContext, String::class.java)
+// queryResultString = "Nikola Tesla is a member of the IEEE Society"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the next section on the Elvis operator for an even shorter syntax for the
+ternary operator.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-operator-elvis"><a class="anchor" href="#expressions-operator-elvis"></a>The Elvis Operator</h3>
+<div class="paragraph">
+<p>The Elvis operator is a shortening of the ternary operator syntax and is used in the
+<a href="http://www.groovy-lang.org/operators.html#_elvis_operator">Groovy</a> language.
+With the ternary operator syntax, you usually have to repeat a variable twice, as the
+following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">String name = "Elvis Presley";
+String displayName = (name != null ? name : "Unknown");</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Instead, you can use the Elvis operator (named for the resemblance to Elvis' hair style).
+The following example shows how to use the Elvis operator:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+
+String name = parser.parseExpression("name?:'Unknown'").getValue(new Inventor(), String.class);
+System.out.println(name);  // 'Unknown'</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+
+val name = parser.parseExpression("name?:'Unknown'").getValue(Inventor(), String::class.java)
+println(name)  // 'Unknown'</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following listing shows a more complex example:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
+
+Inventor tesla = new Inventor("Nikola Tesla", "Serbian");
+String name = parser.parseExpression("name?:'Elvis Presley'").getValue(context, tesla, String.class);
+System.out.println(name);  // Nikola Tesla
+
+tesla.setName(null);
+name = parser.parseExpression("name?:'Elvis Presley'").getValue(context, tesla, String.class);
+System.out.println(name);  // Elvis Presley</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+val context = SimpleEvaluationContext.forReadOnlyDataBinding().build()
+
+val tesla = Inventor("Nikola Tesla", "Serbian")
+var name = parser.parseExpression("name?:'Elvis Presley'").getValue(context, tesla, String::class.java)
+println(name)  // Nikola Tesla
+
+tesla.setName(null)
+name = parser.parseExpression("name?:'Elvis Presley'").getValue(context, tesla, String::class.java)
+println(name)  // Elvis Presley</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>You can use the Elvis operator to apply default values in expressions. The following
+example shows how to use the Elvis operator in a <code>@Value</code> expression:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Value("#{systemProperties['pop3.port'] ?: 25}")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This will inject a system property <code>pop3.port</code> if it is defined or 25 if not.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-operator-safe-navigation"><a class="anchor" href="#expressions-operator-safe-navigation"></a>Safe Navigation Operator</h3>
+<div class="paragraph">
+<p>The safe navigation operator is used to avoid a <code>NullPointerException</code> and comes from
+the <a href="http://www.groovy-lang.org/operators.html#_safe_navigation_operator">Groovy</a>
+language. Typically, when you have a reference to an object, you might need to verify that
+it is not null before accessing methods or properties of the object. To avoid this, the
+safe navigation operator returns null instead of throwing an exception. The following
+example shows how to use the safe navigation operator:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ExpressionParser parser = new SpelExpressionParser();
+EvaluationContext context = SimpleEvaluationContext.forReadOnlyDataBinding().build();
+
+Inventor tesla = new Inventor("Nikola Tesla", "Serbian");
+tesla.setPlaceOfBirth(new PlaceOfBirth("Smiljan"));
+
+String city = parser.parseExpression("placeOfBirth?.city").getValue(context, tesla, String.class);
+System.out.println(city);  // Smiljan
+
+tesla.setPlaceOfBirth(null);
+city = parser.parseExpression("placeOfBirth?.city").getValue(context, tesla, String.class);
+System.out.println(city);  // null - does not throw NullPointerException!!!</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val parser = SpelExpressionParser()
+val context = SimpleEvaluationContext.forReadOnlyDataBinding().build()
+
+val tesla = Inventor("Nikola Tesla", "Serbian")
+tesla.setPlaceOfBirth(PlaceOfBirth("Smiljan"))
+
+var city = parser.parseExpression("placeOfBirth?.city").getValue(context, tesla, String::class.java)
+println(city)  // Smiljan
+
+tesla.setPlaceOfBirth(null)
+city = parser.parseExpression("placeOfBirth?.city").getValue(context, tesla, String::class.java)
+println(city)  // null - does not throw NullPointerException!!!</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-collection-selection"><a class="anchor" href="#expressions-collection-selection"></a>Collection Selection</h3>
+<div class="paragraph">
+<p>Selection is a powerful expression language feature that lets you transform a
+source collection into another collection by selecting from its entries.</p>
+</div>
+<div class="paragraph">
+<p>Selection uses a syntax of <code>.?[selectionExpression]</code>. It filters the collection and
+returns a new collection that contains a subset of the original elements. For example,
+selection lets us easily get a list of Serbian inventors, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">List&lt;Inventor&gt; list = (List&lt;Inventor&gt;) parser.parseExpression(
+		"members.?[nationality == 'Serbian']").getValue(societyContext);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val list = parser.parseExpression(
+		"members.?[nationality == 'Serbian']").getValue(societyContext) as List&lt;Inventor&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Selection is supported for arrays and anything that implements <code>java.lang.Iterable</code> or
+<code>java.util.Map</code>. For a list or array, the selection criteria is evaluated against each
+individual element. Against a map, the selection criteria is evaluated against each map
+entry (objects of the Java type <code>Map.Entry</code>). Each map entry has its <code>key</code> and <code>value</code>
+accessible as properties for use in the selection.</p>
+</div>
+<div class="paragraph">
+<p>The following expression returns a new map that consists of those elements of the
+original map where the entry&#8217;s value is less than 27:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map newMap = parser.parseExpression("map.?[value&lt;27]").getValue();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val newMap = parser.parseExpression("map.?[value&lt;27]").getValue()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In addition to returning all the selected elements, you can retrieve only the first or
+the last element. To obtain the first element matching the selection, the syntax is
+<code>.^[selectionExpression]</code>. To obtain the last matching selection, the syntax is
+<code>.$[selectionExpression]</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-collection-projection"><a class="anchor" href="#expressions-collection-projection"></a>Collection Projection</h3>
+<div class="paragraph">
+<p>Projection lets a collection drive the evaluation of a sub-expression, and the result is
+a new collection. The syntax for projection is <code>.![projectionExpression]</code>. For example,
+suppose we have a list of inventors but want the list of cities where they were born.
+Effectively, we want to evaluate 'placeOfBirth.city' for every entry in the inventor
+list. The following example uses projection to do so:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// returns ['Smiljan', 'Idvor' ]
+List placesOfBirth = (List)parser.parseExpression("members.![placeOfBirth.city]");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// returns ['Smiljan', 'Idvor' ]
+val placesOfBirth = parser.parseExpression("members.![placeOfBirth.city]") as List&lt;*&gt;</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Projection is supported for arrays and anything that implements <code>java.lang.Iterable</code> or
+<code>java.util.Map</code>. When using a map to drive projection, the projection expression is
+evaluated against each entry in the map (represented as a Java <code>Map.Entry</code>). The result
+of a projection across a map is a list that consists of the evaluation of the projection
+expression against each map entry.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="expressions-templating"><a class="anchor" href="#expressions-templating"></a>Expression templating</h3>
+<div class="paragraph">
+<p>Expression templates allow mixing literal text with one or more evaluation blocks.
+Each evaluation block is delimited with prefix and suffix characters that you can
+define. A common choice is to use <code>#{ }</code> as the delimiters, as the following example
+shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String randomPhrase = parser.parseExpression(
+		"random number is #{T(java.lang.Math).random()}",
+		new TemplateParserContext()).getValue(String.class);
+
+// evaluates to "random number is 0.7038186818312008"</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val randomPhrase = parser.parseExpression(
+		"random number is #{T(java.lang.Math).random()}",
+		TemplateParserContext()).getValue(String::class.java)
+
+// evaluates to "random number is 0.7038186818312008"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The string is evaluated by concatenating the literal text <code>'random number is '</code> with the
+result of evaluating the expression inside the <code>#{ }</code> delimiter (in this case, the result
+of calling that <code>random()</code> method). The second argument to the <code>parseExpression()</code> method
+is of the type <code>ParserContext</code>. The <code>ParserContext</code> interface is used to influence how
+the expression is parsed in order to support the expression templating functionality.
+The definition of <code>TemplateParserContext</code> follows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class TemplateParserContext implements ParserContext {
+
+	public String getExpressionPrefix() {
+		return "#{";
+	}
+
+	public String getExpressionSuffix() {
+		return "}";
+	}
+
+	public boolean isTemplate() {
+		return true;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class TemplateParserContext : ParserContext {
+
+	override fun getExpressionPrefix(): String {
+		return "#{"
+	}
+
+	override fun getExpressionSuffix(): String {
+		return "}"
+	}
+
+	override fun isTemplate(): Boolean {
+		return true
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="expressions-example-classes"><a class="anchor" href="#expressions-example-classes"></a>Classes Used in the Examples</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section lists the classes used in the examples throughout this chapter.</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Inventor.Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.spring.samples.spel.inventor;
+
+import java.util.Date;
+import java.util.GregorianCalendar;
+
+public class Inventor {
+
+	private String name;
+	private String nationality;
+	private String[] inventions;
+	private Date birthdate;
+	private PlaceOfBirth placeOfBirth;
+
+	public Inventor(String name, String nationality) {
+		GregorianCalendar c= new GregorianCalendar();
+		this.name = name;
+		this.nationality = nationality;
+		this.birthdate = c.getTime();
+	}
+
+	public Inventor(String name, Date birthdate, String nationality) {
+		this.name = name;
+		this.nationality = nationality;
+		this.birthdate = birthdate;
+	}
+
+	public Inventor() {
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public String getNationality() {
+		return nationality;
+	}
+
+	public void setNationality(String nationality) {
+		this.nationality = nationality;
+	}
+
+	public Date getBirthdate() {
+		return birthdate;
+	}
+
+	public void setBirthdate(Date birthdate) {
+		this.birthdate = birthdate;
+	}
+
+	public PlaceOfBirth getPlaceOfBirth() {
+		return placeOfBirth;
+	}
+
+	public void setPlaceOfBirth(PlaceOfBirth placeOfBirth) {
+		this.placeOfBirth = placeOfBirth;
+	}
+
+	public void setInventions(String[] inventions) {
+		this.inventions = inventions;
+	}
+
+	public String[] getInventions() {
+		return inventions;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Inventor.kt</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class Inventor(
+	var name: String,
+	var nationality: String,
+	var inventions: Array&lt;String&gt;? = null,
+	var birthdate: Date =  GregorianCalendar().time,
+	var placeOfBirth: PlaceOfBirth? = null)</code></pre>
+</div>
+</div>
+<div class="listingblock primary">
+<div class="title">PlaceOfBirth.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.spring.samples.spel.inventor;
+
+public class PlaceOfBirth {
+
+	private String city;
+	private String country;
+
+	public PlaceOfBirth(String city) {
+		this.city=city;
+	}
+
+	public PlaceOfBirth(String city, String country) {
+		this(city);
+		this.country = country;
+	}
+
+	public String getCity() {
+		return city;
+	}
+
+	public void setCity(String s) {
+		this.city = s;
+	}
+
+	public String getCountry() {
+		return country;
+	}
+
+	public void setCountry(String country) {
+		this.country = country;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">PlaceOfBirth.kt</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class PlaceOfBirth(var city: String, var country: String? = null) {</code></pre>
+</div>
+</div>
+<div class="listingblock primary">
+<div class="title">Society.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">package org.spring.samples.spel.inventor;
+
+import java.util.*;
+
+public class Society {
+
+	private String name;
+
+	public static String Advisors = "advisors";
+	public static String President = "president";
+
+	private List&lt;Inventor&gt; members = new ArrayList&lt;Inventor&gt;();
+	private Map officers = new HashMap();
+
+	public List getMembers() {
+		return members;
+	}
+
+	public Map getOfficers() {
+		return officers;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	public boolean isMember(String name) {
+		for (Inventor inventor : members) {
+			if (inventor.getName().equals(name)) {
+				return true;
+			}
+		}
+		return false;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Society.kt</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">package org.spring.samples.spel.inventor
+
+import java.util.*
+
+class Society {
+
+	val Advisors = "advisors"
+	val President = "president"
+
+	var name: String? = null
+
+	val members = ArrayList&lt;Inventor&gt;()
+	val officers = mapOf&lt;Any, Any&gt;()
+
+	fun isMember(name: String): Boolean {
+		for (inventor in members) {
+			if (inventor.name == name) {
+				return true
+			}
+		}
+		return false
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

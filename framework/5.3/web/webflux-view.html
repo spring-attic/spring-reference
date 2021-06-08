@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>View Technologies :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/beans/index.html">The IoC Container</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/container.html">Container Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/bean.html">Bean Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/dependencies.html">Bean Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/scopes.html">Bean Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/customizing.html">Customizing the Nature of a Bean</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/inheritance.html">Bean Definition Inheritance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/extension.html">Container Extension Points</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/annotation.html">Annotation-based Container Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/scanning.html">Classpath Scanning and Managed Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/jsr330.html">Using JSR 330 Standard Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/java.html">Java-based Container configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/env.html">Environment Abstraction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/loadtimeweaver.html">Registering a LoadTimeWeaver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/applicationcontext.html">Additional Capabilities of the ApplicationContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/beanfactory.html">The BeanFactory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/resources.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/validation.html">Validation, Data Binding, and Type Conversion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/aop.html">Aspect Oriented Programming with Spring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/aop-api.html">Spring AOP APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/null-safety.html">Null-safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/databuffer-codec.html">Data Buffers and Codecs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/spring-jcl.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/5.6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/5.6/overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Framework</a></li>
+    <li><a href="webflux-view.html">View Technologies</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/web/webflux-view.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">View Technologies</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>The use of view technologies in Spring WebFlux is pluggable. Whether you decide to
+use Thymeleaf, FreeMarker, or some other view technology is primarily a matter of a
+configuration change. This chapter covers the view technologies integrated with Spring
+WebFlux. We assume you are already familiar with <a href="#webflux-viewresolution">[webflux-viewresolution]</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-view-thymeleaf"><a class="anchor" href="#webflux-view-thymeleaf"></a>Thymeleaf</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-view-thymeleaf" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p>Thymeleaf is a modern server-side Java template engine that emphasizes natural HTML
+templates that can be previewed in a browser by double-clicking, which is very
+helpful for independent work on UI templates (for example, by a designer) without the need for a
+running server. Thymeleaf offers an extensive set of features, and it is actively developed
+and maintained. For a more complete introduction, see the
+<a href="https://www.thymeleaf.org/">Thymeleaf</a> project home page.</p>
+</div>
+<div class="paragraph">
+<p>The Thymeleaf integration with Spring WebFlux is managed by the Thymeleaf project. The
+configuration involves a few bean declarations, such as
+<code>SpringResourceTemplateResolver</code>, <code>SpringWebFluxTemplateEngine</code>, and
+<code>ThymeleafReactiveViewResolver</code>. For more details, see
+<a href="https://www.thymeleaf.org/documentation.html">Thymeleaf+Spring</a> and the WebFlux integration
+<a href="http://forum.thymeleaf.org/Thymeleaf-3-0-8-JUST-PUBLISHED-td4030687.html">announcement</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-view-freemarker"><a class="anchor" href="#webflux-view-freemarker"></a>FreeMarker</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-view-freemarker" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p><a href="https://freemarker.apache.org/">Apache FreeMarker</a> is a template engine for generating any
+kind of text output from HTML to email and others. The Spring Framework has built-in
+integration for using Spring WebFlux with FreeMarker templates.</p>
+</div>
+<div class="sect2">
+<h3 id="webflux-view-freemarker-contextconfig"><a class="anchor" href="#webflux-view-freemarker-contextconfig"></a>View Configuration</h3>
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-view-freemarker-contextconfig" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p>The following example shows how to configure FreeMarker as a view technology:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableWebFlux
+public class WebConfig implements WebFluxConfigurer {
+
+	@Override
+	public void configureViewResolvers(ViewResolverRegistry registry) {
+		registry.freeMarker();
+	}
+
+	// Configure FreeMarker...
+
+	@Bean
+	public FreeMarkerConfigurer freeMarkerConfigurer() {
+		FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
+		configurer.setTemplateLoaderPath("classpath:/templates/freemarker");
+		return configurer;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+@EnableWebFlux
+class WebConfig : WebFluxConfigurer {
+
+	override fun configureViewResolvers(registry: ViewResolverRegistry) {
+		registry.freeMarker()
+	}
+
+	// Configure FreeMarker...
+
+	@Bean
+	fun freeMarkerConfigurer() = FreeMarkerConfigurer().apply {
+		setTemplateLoaderPath("classpath:/templates/freemarker")
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Your templates need to be stored in the directory specified by the <code>FreeMarkerConfigurer</code>,
+shown in the preceding example. Given the preceding configuration, if your controller
+returns the view name, <code>welcome</code>, the resolver looks for the
+<code>classpath:/templates/freemarker/welcome.ftl</code> template.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-views-freemarker"><a class="anchor" href="#webflux-views-freemarker"></a>FreeMarker Configuration</h3>
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-views-freemarker" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p>You can pass FreeMarker 'Settings' and 'SharedVariables' directly to the FreeMarker
+<code>Configuration</code> object (which is managed by Spring) by setting the appropriate bean
+properties on the <code>FreeMarkerConfigurer</code> bean. The <code>freemarkerSettings</code> property requires
+a <code>java.util.Properties</code> object, and the <code>freemarkerVariables</code> property requires a
+<code>java.util.Map</code>. The following example shows how to use a <code>FreeMarkerConfigurer</code>:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableWebFlux
+public class WebConfig implements WebFluxConfigurer {
+
+	// ...
+
+	@Bean
+	public FreeMarkerConfigurer freeMarkerConfigurer() {
+		Map&lt;String, Object&gt; variables = new HashMap&lt;&gt;();
+		variables.put("xml_escape", new XmlEscape());
+
+		FreeMarkerConfigurer configurer = new FreeMarkerConfigurer();
+		configurer.setTemplateLoaderPath("classpath:/templates");
+		configurer.setFreemarkerVariables(variables);
+		return configurer;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+@EnableWebFlux
+class WebConfig : WebFluxConfigurer {
+
+	// ...
+
+	@Bean
+	fun freeMarkerConfigurer() = FreeMarkerConfigurer().apply {
+		setTemplateLoaderPath("classpath:/templates")
+		setFreemarkerVariables(mapOf("xml_escape" to XmlEscape()))
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the FreeMarker documentation for details of settings and variables as they apply to
+the <code>Configuration</code> object.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-view-freemarker-forms"><a class="anchor" href="#webflux-view-freemarker-forms"></a>Form Handling</h3>
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-view-freemarker-forms" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p>Spring provides a tag library for use in JSPs that contains, among others, a
+<code>&lt;spring:bind/&gt;</code> element. This element primarily lets forms display values from
+form-backing objects and show the results of failed validations from a <code>Validator</code> in the
+web or business tier. Spring also has support for the same functionality in FreeMarker,
+with additional convenience macros for generating form input elements themselves.</p>
+</div>
+<div class="sect3">
+<h4 id="webflux-view-bind-macros"><a class="anchor" href="#webflux-view-bind-macros"></a>The Bind Macros</h4>
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-view-bind-macros" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p>A standard set of macros are maintained within the <code>spring-webflux.jar</code> file for
+FreeMarker, so they are always available to a suitably configured application.</p>
+</div>
+<div class="paragraph">
+<p>Some of the macros defined in the Spring templating libraries are considered internal
+(private), but no such scoping exists in the macro definitions, making all macros visible
+to calling code and user templates. The following sections concentrate only on the macros
+you need to directly call from within your templates. If you wish to view the macro code
+directly, the file is called <code>spring.ftl</code> and is in the
+<code>org.springframework.web.reactive.result.view.freemarker</code> package.</p>
+</div>
+<div class="paragraph">
+<p>For additional details on binding support, see <a href="../web.html#mvc-view-simple-binding" class="page">Simple
+Binding</a> for Spring MVC.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-views-form-macros"><a class="anchor" href="#webflux-views-form-macros"></a>Form Macros</h4>
+<div class="paragraph">
+<p>For details on Spring&#8217;s form macro support for FreeMarker templates, consult the following
+sections of the Spring MVC documentation.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="../web.html#mvc-views-form-macros" class="page">Input Macros</a></p>
+</li>
+<li>
+<p><a href="../web.html#mvc-views-form-macros-input" class="page">Input Fields</a></p>
+</li>
+<li>
+<p><a href="../web.html#mvc-views-form-macros-select" class="page">Selection Fields</a></p>
+</li>
+<li>
+<p><a href="../web.html#mvc-views-form-macros-html-escaping" class="page">HTML Escaping</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-view-script"><a class="anchor" href="#webflux-view-script"></a>Script Views</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-view-script" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p>The Spring Framework has a built-in integration for using Spring WebFlux with any
+templating library that can run on top of the
+<a href="https://www.jcp.org/en/jsr/detail?id=223">JSR-223</a> Java scripting engine.
+The following table shows the templating libraries that we have tested on different script engines:</p>
+</div>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Scripting Library</th>
+<th class="tableblock halign-left valign-top">Scripting Engine</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://handlebarsjs.com/">Handlebars</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://openjdk.java.net/projects/nashorn/">Nashorn</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://mustache.github.io/">Mustache</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://openjdk.java.net/projects/nashorn/">Nashorn</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://facebook.github.io/react/">React</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://openjdk.java.net/projects/nashorn/">Nashorn</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.embeddedjs.com/">EJS</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://openjdk.java.net/projects/nashorn/">Nashorn</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.stuartellis.name/articles/erb/">ERB</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.jruby.org">JRuby</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://docs.python.org/2/library/string.html#template-strings">String templates</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://www.jython.org/">Jython</a></p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://github.com/sdeleuze/kotlin-script-templating">Kotlin Script templating</a></p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://kotlinlang.org/">Kotlin</a></p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The basic rule for integrating any other script engine is that it must implement the
+<code>ScriptEngine</code> and <code>Invocable</code> interfaces.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect2">
+<h3 id="webflux-view-script-dependencies"><a class="anchor" href="#webflux-view-script-dependencies"></a>Requirements</h3>
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-view-script-dependencies" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p>You need to have the script engine on your classpath, the details of which vary by script engine:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The <a href="https://openjdk.java.net/projects/nashorn/">Nashorn</a> JavaScript engine is provided with
+Java 8+. Using the latest update release available is highly recommended.</p>
+</li>
+<li>
+<p><a href="https://www.jruby.org">JRuby</a> should be added as a dependency for Ruby support.</p>
+</li>
+<li>
+<p><a href="https://www.jython.org">Jython</a> should be added as a dependency for Python support.</p>
+</li>
+<li>
+<p><code>org.jetbrains.kotlin:kotlin-script-util</code> dependency and a <code>META-INF/services/javax.script.ScriptEngineFactory</code>
+file containing a <code>org.jetbrains.kotlin.script.jsr223.KotlinJsr223JvmLocalScriptEngineFactory</code>
+line should be added for Kotlin script support. See
+<a href="https://github.com/sdeleuze/kotlin-script-templating">this example</a> for more detail.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>You need to have the script templating library. One way to do that for Javascript is
+through <a href="https://www.webjars.org/">WebJars</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-view-script-integrate"><a class="anchor" href="#webflux-view-script-integrate"></a>Script Templates</h3>
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-view-script-integrate" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p>You can declare a <code>ScriptTemplateConfigurer</code> bean to specify the script engine to use,
+the script files to load, what function to call to render templates, and so on.
+The following example uses Mustache templates and the Nashorn JavaScript engine:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableWebFlux
+public class WebConfig implements WebFluxConfigurer {
+
+	@Override
+	public void configureViewResolvers(ViewResolverRegistry registry) {
+		registry.scriptTemplate();
+	}
+
+	@Bean
+	public ScriptTemplateConfigurer configurer() {
+		ScriptTemplateConfigurer configurer = new ScriptTemplateConfigurer();
+		configurer.setEngineName("nashorn");
+		configurer.setScripts("mustache.js");
+		configurer.setRenderObject("Mustache");
+		configurer.setRenderFunction("render");
+		return configurer;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+@EnableWebFlux
+class WebConfig : WebFluxConfigurer {
+
+	override fun configureViewResolvers(registry: ViewResolverRegistry) {
+		registry.scriptTemplate()
+	}
+
+	@Bean
+	fun configurer() = ScriptTemplateConfigurer().apply {
+		engineName = "nashorn"
+		setScripts("mustache.js")
+		renderObject = "Mustache"
+		renderFunction = "render"
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>render</code> function is called with the following parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>String template</code>: The template content</p>
+</li>
+<li>
+<p><code>Map model</code>: The view model</p>
+</li>
+<li>
+<p><code>RenderingContext renderingContext</code>: The
+{api-spring-framework}/web/servlet/view/script/RenderingContext.html[<code>RenderingContext</code>]
+that gives access to the application context, the locale, the template loader, and the
+URL (since 5.0)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>Mustache.render()</code> is natively compatible with this signature, so you can call it directly.</p>
+</div>
+<div class="paragraph">
+<p>If your templating technology requires some customization, you can provide a script that
+implements a custom render function. For example, <a href="https://handlebarsjs.com">Handlerbars</a>
+needs to compile templates before using them and requires a
+<a href="https://en.wikipedia.org/wiki/Polyfill">polyfill</a> in order to emulate some
+browser facilities not available in the server-side script engine.
+The following example shows how to set a custom render function:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableWebFlux
+public class WebConfig implements WebFluxConfigurer {
+
+	@Override
+	public void configureViewResolvers(ViewResolverRegistry registry) {
+		registry.scriptTemplate();
+	}
+
+	@Bean
+	public ScriptTemplateConfigurer configurer() {
+		ScriptTemplateConfigurer configurer = new ScriptTemplateConfigurer();
+		configurer.setEngineName("nashorn");
+		configurer.setScripts("polyfill.js", "handlebars.js", "render.js");
+		configurer.setRenderFunction("render");
+		configurer.setSharedEngine(false);
+		return configurer;
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+@EnableWebFlux
+class WebConfig : WebFluxConfigurer {
+
+	override fun configureViewResolvers(registry: ViewResolverRegistry) {
+		registry.scriptTemplate()
+	}
+
+	@Bean
+	fun configurer() = ScriptTemplateConfigurer().apply {
+		engineName = "nashorn"
+		setScripts("polyfill.js", "handlebars.js", "render.js")
+		renderFunction = "render"
+		isSharedEngine = false
+	}
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Setting the <code>sharedEngine</code> property to <code>false</code> is required when using non-thread-safe
+script engines with templating libraries not designed for concurrency, such as Handlebars or
+React running on Nashorn. In that case, Java SE 8 update 60 is required, due to
+<a href="https://bugs.openjdk.java.net/browse/JDK-8076099">this bug</a>, but it is generally
+recommended to use a recent Java SE patch release in any case.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p><code>polyfill.js</code> defines only the <code>window</code> object needed by Handlebars to run properly,
+as the following snippet shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">var window = {};</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This basic <code>render.js</code> implementation compiles the template before using it. A production
+ready implementation should also store and reused cached templates or pre-compiled templates.
+This can be done on the script side, as well as any customization you need (managing
+template engine configuration for example).
+The following example shows how compile a template:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-javascript hljs" data-lang="javascript">function render(template, model) {
+	var compiledTemplate = Handlebars.compile(template);
+	return compiledTemplate(model);
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Check out the Spring Framework unit tests,
+{spring-framework-main-code}/spring-webflux/src/test/java/org/springframework/web/reactive/result/view/script[Java], and
+{spring-framework-main-code}/spring-webflux/src/test/resources/org/springframework/web/reactive/result/view/script[resources],
+for more configuration examples.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-view-httpmessagewriter"><a class="anchor" href="#webflux-view-httpmessagewriter"></a>JSON and XML</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small"><a href="../web.html#mvc-view-jackson" class="page">Web MVC</a></span></p>
+</div>
+<div class="paragraph">
+<p>For <a href="#webflux-multiple-representations">[webflux-multiple-representations]</a> purposes, it is useful to be able to alternate
+between rendering a model with an HTML template or as other formats (such as JSON or XML),
+depending on the content type requested by the client. To support doing so, Spring WebFlux
+provides the <code>HttpMessageWriterView</code>, which you can use to plug in any of the available
+<a href="#webflux-codecs">[webflux-codecs]</a> from <code>spring-web</code>, such as <code>Jackson2JsonEncoder</code>, <code>Jackson2SmileEncoder</code>,
+or <code>Jaxb2XmlEncoder</code>.</p>
+</div>
+<div class="paragraph">
+<p>Unlike other view technologies, <code>HttpMessageWriterView</code> does not require a <code>ViewResolver</code>
+but is instead <a href="#webflux-config-view-resolvers">configured</a> as a default view. You can
+configure one or more such default views, wrapping different <code>HttpMessageWriter</code> instances
+or <code>Encoder</code> instances. The one that matches the requested content type is used at runtime.</p>
+</div>
+<div class="paragraph">
+<p>In most cases, a model contains multiple attributes. To determine which one to serialize,
+you can configure <code>HttpMessageWriterView</code> with the name of the model attribute to use for
+rendering. If the model contains only one attribute, that one is used.</p>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

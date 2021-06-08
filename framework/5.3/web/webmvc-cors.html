@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CORS :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/beans/index.html">The IoC Container</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/container.html">Container Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/bean.html">Bean Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/dependencies.html">Bean Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/scopes.html">Bean Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/customizing.html">Customizing the Nature of a Bean</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/inheritance.html">Bean Definition Inheritance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/extension.html">Container Extension Points</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/annotation.html">Annotation-based Container Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/scanning.html">Classpath Scanning and Managed Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/jsr330.html">Using JSR 330 Standard Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/java.html">Java-based Container configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/env.html">Environment Abstraction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/loadtimeweaver.html">Registering a LoadTimeWeaver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/applicationcontext.html">Additional Capabilities of the ApplicationContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/beanfactory.html">The BeanFactory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/resources.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/validation.html">Validation, Data Binding, and Type Conversion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/aop.html">Aspect Oriented Programming with Spring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/aop-api.html">Spring AOP APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/null-safety.html">Null-safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/databuffer-codec.html">Data Buffers and Codecs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/spring-jcl.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/5.6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/5.6/overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Framework</a></li>
+    <li><a href="webmvc-cors.html">CORS</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/web/webmvc-cors.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">CORS</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring MVC lets you handle CORS (Cross-Origin Resource Sharing). This section
+describes how to do so.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mvc-cors-intro"><a class="anchor" href="#mvc-cors-intro"></a>Introduction</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small"><a href="../web-reactive.html#webflux-cors-intro" class="page">WebFlux</a></span></p>
+</div>
+<div class="paragraph">
+<p>For security reasons, browsers prohibit AJAX calls to resources outside the current origin.
+For example, you could have your bank account in one tab and evil.com in another. Scripts
+from evil.com should not be able to make AJAX requests to your bank API with your
+credentials&#8201;&#8212;&#8201;for example withdrawing money from your account!</p>
+</div>
+<div class="paragraph">
+<p>Cross-Origin Resource Sharing (CORS) is a <a href="https://www.w3.org/TR/cors/">W3C specification</a>
+implemented by <a href="https://caniuse.com/#feat=cors">most browsers</a> that lets you specify
+what kind of cross-domain requests are authorized, rather than using less secure and less
+powerful workarounds based on IFRAME or JSONP.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mvc-cors-processing"><a class="anchor" href="#mvc-cors-processing"></a>Processing</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small"><a href="../web-reactive.html#webflux-cors-processing" class="page">WebFlux</a></span></p>
+</div>
+<div class="paragraph">
+<p>The CORS specification distinguishes between preflight, simple, and actual requests.
+To learn how CORS works, you can read
+<a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS">this article</a>, among
+many others, or see the specification for more details.</p>
+</div>
+<div class="paragraph">
+<p>Spring MVC <code>HandlerMapping</code> implementations provide built-in support for CORS. After successfully
+mapping a request to a handler, <code>HandlerMapping</code> implementations check the CORS configuration for the
+given request and handler and take further actions. Preflight requests are handled
+directly, while simple and actual CORS requests are intercepted, validated, and have
+required CORS response headers set.</p>
+</div>
+<div class="paragraph">
+<p>In order to enable cross-origin requests (that is, the <code>Origin</code> header is present and
+differs from the host of the request), you need to have some explicitly declared CORS
+configuration. If no matching CORS configuration is found, preflight requests are
+rejected. No CORS headers are added to the responses of simple and actual CORS requests
+and, consequently, browsers reject them.</p>
+</div>
+<div class="paragraph">
+<p>Each <code>HandlerMapping</code> can be
+{api-spring-framework}/web/servlet/handler/AbstractHandlerMapping.html#setCorsConfigurations-java.util.Map-[configured]
+individually with URL pattern-based <code>CorsConfiguration</code> mappings. In most cases, applications
+use the MVC Java configuration or the XML namespace to declare such mappings, which results
+in a single global map being passed to all <code>HandlerMappping</code> instances.</p>
+</div>
+<div class="paragraph">
+<p>You can combine global CORS configuration at the <code>HandlerMapping</code> level with more
+fine-grained, handler-level CORS configuration. For example, annotated controllers can use
+class- or method-level <code>@CrossOrigin</code> annotations (other handlers can implement
+<code>CorsConfigurationSource</code>).</p>
+</div>
+<div class="paragraph">
+<p>The rules for combining global and local configuration are generally additive&#8201;&#8212;&#8201;for example,
+all global and all local origins. For those attributes where only a single value can be
+accepted, e.g. <code>allowCredentials</code> and <code>maxAge</code>, the local overrides the global value. See
+{api-spring-framework}/web/cors/CorsConfiguration.html#combine-org.springframework.web.cors.CorsConfiguration-[<code>CorsConfiguration#combine(CorsConfiguration)</code>]
+for more details.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>To learn more from the source or make advanced customizations, check the code behind:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>CorsConfiguration</code></p>
+</li>
+<li>
+<p><code>CorsProcessor</code>, <code>DefaultCorsProcessor</code></p>
+</li>
+<li>
+<p><code>AbstractHandlerMapping</code></p>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mvc-cors-controller"><a class="anchor" href="#mvc-cors-controller"></a><code>@CrossOrigin</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small"><a href="../web-reactive.html#webflux-cors-controller" class="page">WebFlux</a></span></p>
+</div>
+<div class="paragraph">
+<p>The {api-spring-framework}/web/bind/annotation/CrossOrigin.html[<code>@CrossOrigin</code>]
+annotation enables cross-origin requests on annotated controller methods,
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestController
+@RequestMapping("/account")
+public class AccountController {
+
+	@CrossOrigin
+	@GetMapping("/{id}")
+	public Account retrieve(@PathVariable Long id) {
+		// ...
+	}
+
+	@DeleteMapping("/{id}")
+	public void remove(@PathVariable Long id) {
+		// ...
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RestController
+@RequestMapping("/account")
+class AccountController {
+
+	@CrossOrigin
+	@GetMapping("/{id}")
+	fun retrieve(@PathVariable id: Long): Account {
+		// ...
+	}
+
+	@DeleteMapping("/{id}")
+	fun remove(@PathVariable id: Long) {
+		// ...
+	}
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>By default, <code>@CrossOrigin</code> allows:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All origins.</p>
+</li>
+<li>
+<p>All headers.</p>
+</li>
+<li>
+<p>All HTTP methods to which the controller method is mapped.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>allowCredentials</code> is not enabled by default, since that establishes a trust level
+that exposes sensitive user-specific information (such as cookies and CSRF tokens) and
+should only be used where appropriate. When it is enabled either <code>allowOrigins</code> must be
+set to one or more specific domain (but not the special value <code>"*"</code>) or alternatively
+the <code>allowOriginPatterns</code> property may be used to match to a dynamic set of origins.</p>
+</div>
+<div class="paragraph">
+<p><code>maxAge</code> is set to 30 minutes.</p>
+</div>
+<div class="paragraph">
+<p><code>@CrossOrigin</code> is supported at the class level, too, and is inherited by all methods,
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CrossOrigin(origins = "https://domain2.com", maxAge = 3600)
+@RestController
+@RequestMapping("/account")
+public class AccountController {
+
+	@GetMapping("/{id}")
+	public Account retrieve(@PathVariable Long id) {
+		// ...
+	}
+
+	@DeleteMapping("/{id}")
+	public void remove(@PathVariable Long id) {
+		// ...
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@CrossOrigin(origins = ["https://domain2.com"], maxAge = 3600)
+@RestController
+@RequestMapping("/account")
+class AccountController {
+
+	@GetMapping("/{id}")
+	fun retrieve(@PathVariable id: Long): Account {
+		// ...
+	}
+
+	@DeleteMapping("/{id}")
+	fun remove(@PathVariable id: Long) {
+		// ...
+	}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can use <code>@CrossOrigin</code> at both the class level and the method level,
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@CrossOrigin(maxAge = 3600)
+@RestController
+@RequestMapping("/account")
+public class AccountController {
+
+	@CrossOrigin("https://domain2.com")
+	@GetMapping("/{id}")
+	public Account retrieve(@PathVariable Long id) {
+		// ...
+	}
+
+	@DeleteMapping("/{id}")
+	public void remove(@PathVariable Long id) {
+		// ...
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@CrossOrigin(maxAge = 3600)
+@RestController
+@RequestMapping("/account")
+class AccountController {
+
+	@CrossOrigin("https://domain2.com")
+	@GetMapping("/{id}")
+	fun retrieve(@PathVariable id: Long): Account {
+		// ...
+	}
+
+	@DeleteMapping("/{id}")
+	fun remove(@PathVariable id: Long) {
+		// ...
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mvc-cors-global"><a class="anchor" href="#mvc-cors-global"></a>Global Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small"><a href="../web-reactive.html#webflux-cors-global" class="page">WebFlux</a></span></p>
+</div>
+<div class="paragraph">
+<p>In addition to fine-grained, controller method level configuration, you probably want to
+define some global CORS configuration, too. You can set URL-based <code>CorsConfiguration</code>
+mappings individually on any <code>HandlerMapping</code>. Most applications, however, use the
+MVC Java configuration or the MVC XML namespace to do that.</p>
+</div>
+<div class="paragraph">
+<p>By default, global configuration enables the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>All origins.</p>
+</li>
+<li>
+<p>All headers.</p>
+</li>
+<li>
+<p><code>GET</code>, <code>HEAD</code>, and <code>POST</code> methods.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><code>allowCredentials</code> is not enabled by default, since that establishes a trust level
+that exposes sensitive user-specific information (such as cookies and CSRF tokens) and
+should only be used where appropriate. When it is enabled either <code>allowOrigins</code> must be
+set to one or more specific domain (but not the special value <code>"*"</code>) or alternatively
+the <code>allowOriginPatterns</code> property may be used to match to a dynamic set of origins.</p>
+</div>
+<div class="paragraph">
+<p><code>maxAge</code> is set to 30 minutes.</p>
+</div>
+<div class="sect2">
+<h3 id="mvc-cors-global-java"><a class="anchor" href="#mvc-cors-global-java"></a>Java Configuration</h3>
+<div class="paragraph">
+<p><span class="small"><a href="../web-reactive.html#webflux-cors-global" class="page">WebFlux</a></span></p>
+</div>
+<div class="paragraph">
+<p>To enable CORS in the MVC Java config, you can use the <code>CorsRegistry</code> callback,
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableWebMvc
+public class WebConfig implements WebMvcConfigurer {
+
+	@Override
+	public void addCorsMappings(CorsRegistry registry) {
+
+		registry.addMapping("/api/**")
+			.allowedOrigins("https://domain2.com")
+			.allowedMethods("PUT", "DELETE")
+			.allowedHeaders("header1", "header2", "header3")
+			.exposedHeaders("header1", "header2")
+			.allowCredentials(true).maxAge(3600);
+
+		// Add more mappings...
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+@EnableWebMvc
+class WebConfig : WebMvcConfigurer {
+
+	override fun addCorsMappings(registry: CorsRegistry) {
+
+		registry.addMapping("/api/**")
+				.allowedOrigins("https://domain2.com")
+				.allowedMethods("PUT", "DELETE")
+				.allowedHeaders("header1", "header2", "header3")
+				.exposedHeaders("header1", "header2")
+				.allowCredentials(true).maxAge(3600)
+
+		// Add more mappings...
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="mvc-cors-global-xml"><a class="anchor" href="#mvc-cors-global-xml"></a>XML Configuration</h3>
+<div class="paragraph">
+<p>To enable CORS in the XML namespace, you can use the <code>&lt;mvc:cors&gt;</code> element,
+as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;mvc:cors&gt;
+
+	&lt;mvc:mapping path="/api/**"
+		allowed-origins="https://domain1.com, https://domain2.com"
+		allowed-methods="GET, PUT"
+		allowed-headers="header1, header2, header3"
+		exposed-headers="header1, header2" allow-credentials="true"
+		max-age="123" /&gt;
+
+	&lt;mvc:mapping path="/resources/**"
+		allowed-origins="https://domain1.com" /&gt;
+
+&lt;/mvc:cors&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mvc-cors-filter"><a class="anchor" href="#mvc-cors-filter"></a>CORS Filter</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><span class="small"><a href="#webflux-cors.adoc#webflux-cors-webfilter" class="page unresolved">WebFlux</a></span></p>
+</div>
+<div class="paragraph">
+<p>You can apply CORS support through the built-in
+{api-spring-framework}/web/filter/CorsFilter.html[<code>CorsFilter</code>].</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you try to use the <code>CorsFilter</code> with Spring Security, keep in mind that
+Spring Security has
+<a href="https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#cors">built-in support</a>
+for CORS.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To configure the filter, pass a
+<code>CorsConfigurationSource</code> to its constructor, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">CorsConfiguration config = new CorsConfiguration();
+
+// Possibly...
+// config.applyPermitDefaultValues()
+
+config.setAllowCredentials(true);
+config.addAllowedOrigin("https://domain1.com");
+config.addAllowedHeader("*");
+config.addAllowedMethod("*");
+
+UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
+source.registerCorsConfiguration("/**", config);
+
+CorsFilter filter = new CorsFilter(source);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val config = CorsConfiguration()
+
+// Possibly...
+// config.applyPermitDefaultValues()
+
+config.allowCredentials = true
+config.addAllowedOrigin("https://domain1.com")
+config.addAllowedHeader("*")
+config.addAllowedMethod("*")
+
+val source = UrlBasedCorsConfigurationSource()
+source.registerCorsConfiguration("/**", config)
+
+val filter = CorsFilter(source)</code></pre>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

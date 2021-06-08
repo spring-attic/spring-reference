@@ -1,0 +1,1727 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Kotlin :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/beans/index.html">The IoC Container</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/container.html">Container Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/bean.html">Bean Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/dependencies.html">Bean Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/scopes.html">Bean Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/customizing.html">Customizing the Nature of a Bean</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/inheritance.html">Bean Definition Inheritance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/extension.html">Container Extension Points</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/annotation.html">Annotation-based Container Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/scanning.html">Classpath Scanning and Managed Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/jsr330.html">Using JSR 330 Standard Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/java.html">Java-based Container configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/env.html">Environment Abstraction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/loadtimeweaver.html">Registering a LoadTimeWeaver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/applicationcontext.html">Additional Capabilities of the ApplicationContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/beanfactory.html">The BeanFactory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/resources.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/validation.html">Validation, Data Binding, and Type Conversion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/aop.html">Aspect Oriented Programming with Spring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/aop-api.html">Spring AOP APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/null-safety.html">Null-safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/databuffer-codec.html">Data Buffers and Codecs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/spring-jcl.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/5.6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/5.6/overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Framework</a></li>
+    <li><a href="kotlin.html">Kotlin</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/languages/kotlin.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Kotlin</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><a href="https://kotlinlang.org">Kotlin</a> is a statically typed language that targets the JVM
+(and other platforms) which allows writing concise and elegant code while providing
+very good <a href="https://kotlinlang.org/docs/reference/java-interop.html">interoperability</a>
+with existing libraries written in Java.</p>
+</div>
+<div class="paragraph">
+<p>The Spring Framework provides first-class support for Kotlin and lets developers write
+Kotlin applications almost as if the Spring Framework was a native Kotlin framework.</p>
+</div>
+<div class="paragraph">
+<p>The easiest way to build a Spring application with Kotlin is to leverage Spring Boot and
+its <a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-kotlin.html">dedicated Kotlin support</a>.
+<a href="https://spring.io/guides/tutorials/spring-boot-kotlin/">This comprehensive tutorial</a>
+will teach you how to build Spring Boot applications with Kotlin using <a href="https://start.spring.io/#!language=kotlin&amp;type=gradle-project">start.spring.io</a>.</p>
+</div>
+<div class="paragraph">
+<p>As of Spring Framework 5.2, most of the code samples of the reference documentation are
+provided in Kotlin in addition to Java.</p>
+</div>
+<div class="paragraph">
+<p>Feel free to join the #spring channel of <a href="https://slack.kotlinlang.org/">Kotlin Slack</a>
+or ask a question with <code>spring</code> and <code>kotlin</code> as tags on
+<a href="https://stackoverflow.com/questions/tagged/spring+kotlin">Stackoverflow</a> if you need support.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-requirements"><a class="anchor" href="#kotlin-requirements"></a>Requirements</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Framework supports Kotlin 1.3 and requires
+<a href="https://bintray.com/bintray/jcenter/org.jetbrains.kotlin%3Akotlin-stdlib"><code>kotlin-stdlib</code></a>
+(or one of its variants, such as <a href="https://bintray.com/bintray/jcenter/org.jetbrains.kotlin%3Akotlin-stdlib-jdk8"><code>kotlin-stdlib-jdk8</code></a>)
+and <a href="https://bintray.com/bintray/jcenter/org.jetbrains.kotlin%3Akotlin-reflect"><code>kotlin-reflect</code></a>
+to be present on the classpath. They are provided by default if you bootstrap a Kotlin project on
+<a href="https://start.spring.io/#!language=kotlin&amp;type=gradle-project">start.spring.io</a>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-extensions"><a class="anchor" href="#kotlin-extensions"></a>Extensions</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kotlin <a href="https://kotlinlang.org/docs/reference/extensions.html">extensions</a> provide the ability
+to extend existing classes with additional functionality. The Spring Framework Kotlin APIs
+use these extensions to add new Kotlin-specific conveniences to existing Spring APIs.</p>
+</div>
+<div class="paragraph">
+<p>The {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/[Spring Framework KDoc API] lists
+and documents all available the Kotlin extensions and DSLs.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Keep in mind that Kotlin extensions need to be imported to be used. This means,
+for example, that the <code>GenericApplicationContext.registerBean</code> Kotlin extension
+is available only if <code>org.springframework.context.support.registerBean</code> is imported.
+That said, similar to static imports, an IDE should automatically suggest the import in most cases.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For example, <a href="https://kotlinlang.org/docs/reference/inline-functions.html#reified-type-parameters">Kotlin reified type parameters</a>
+provide a workaround for JVM <a href="https://docs.oracle.com/javase/tutorial/java/generics/erasure.html">generics type erasure</a>,
+and the Spring Framework provides some extensions to take advantage of this feature.
+This allows for a better Kotlin API <code>RestTemplate</code>, for the new <code>WebClient</code> from Spring
+WebFlux, and for various other APIs.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Other libraries, such as Reactor and Spring Data, also provide Kotlin extensions
+for their APIs, thus giving a better Kotlin development experience overall.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>To retrieve a list of <code>User</code> objects in Java, you would normally write the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Flux&lt;User&gt; users  = client.get().retrieve().bodyToFlux(User.class)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>With Kotlin and the Spring Framework extensions, you can instead write the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val users = client.get().retrieve().bodyToFlux&lt;User&gt;()
+// or (both are equivalent)
+val users : Flux&lt;User&gt; = client.get().retrieve().bodyToFlux()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>As in Java, <code>users</code> in Kotlin is strongly typed, but Kotlin&#8217;s clever type inference allows
+for shorter syntax.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-null-safety"><a class="anchor" href="#kotlin-null-safety"></a>Null-safety</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>One of Kotlin&#8217;s key features is <a href="https://kotlinlang.org/docs/reference/null-safety.html">null-safety</a>,
+which cleanly deals with <code>null</code> values at compile time rather than bumping into the famous
+<code>NullPointerException</code> at runtime. This makes applications safer through nullability
+declarations and expressing &#8220;value or no value&#8221; semantics without paying the cost of wrappers, such as <code>Optional</code>.
+(Kotlin allows using functional constructs with nullable values. See this
+<a href="https://www.baeldung.com/kotlin-null-safety">comprehensive guide to Kotlin null-safety</a>.)</p>
+</div>
+<div class="paragraph">
+<p>Although Java does not let you express null-safety in its type-system, the Spring Framework
+provides <a href="../core.html#null-safety" class="page">null-safety of the whole Spring Framework API</a>
+via tooling-friendly annotations declared in the <code>org.springframework.lang</code> package.
+By default, types from Java APIs used in Kotlin are recognized as
+<a href="https://kotlinlang.org/docs/reference/java-interop.html#null-safety-and-platform-types">platform types</a>,
+for which null-checks are relaxed.
+<a href="https://kotlinlang.org/docs/reference/java-interop.html#jsr-305-support">Kotlin support for JSR-305 annotations</a>
+and Spring nullability annotations provide null-safety for the whole Spring Framework API to Kotlin developers,
+with the advantage of dealing with <code>null</code>-related issues at compile time.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Libraries such as Reactor or Spring Data provide null-safe APIs to leverage this feature.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can configure JSR-305 checks by adding the <code>-Xjsr305</code> compiler flag with the following
+options: <code>-Xjsr305={strict|warn|ignore}</code>.</p>
+</div>
+<div class="paragraph">
+<p>For kotlin versions 1.1+, the default behavior is the same as <code>-Xjsr305=warn</code>.
+The <code>strict</code> value is required to have Spring Framework API null-safety taken into account
+in Kotlin types inferred from Spring API but should be used with the knowledge that Spring
+API nullability declaration could evolve even between minor releases and that more checks may
+be added in the future.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Generic type arguments, varargs, and array elements nullability are not supported yet,
+but should be in an upcoming release. See <a href="https://github.com/Kotlin/KEEP/issues/79">this discussion</a>
+for up-to-date information.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-classes-interfaces"><a class="anchor" href="#kotlin-classes-interfaces"></a>Classes and Interfaces</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Spring Framework supports various Kotlin constructs, such as instantiating Kotlin classes
+through primary constructors, immutable classes data binding, and function optional parameters
+with default values.</p>
+</div>
+<div class="paragraph">
+<p>Kotlin parameter names are recognized through a dedicated <code>KotlinReflectionParameterNameDiscoverer</code>,
+which allows finding interface method parameter names without requiring the Java 8 <code>-parameters</code>
+compiler flag to be enabled during compilation.</p>
+</div>
+<div class="paragraph">
+<p>The <a href="https://github.com/FasterXML/jackson-module-kotlin">Jackson Kotlin module</a>, which is required
+for serializing or deserializing JSON data, is automatically registered when
+found in the classpath, and a warning message is logged if Jackson and Kotlin are
+detected without the Jackson Kotlin module being present.</p>
+</div>
+<div class="paragraph">
+<p>You can declare configuration classes as
+<a href="https://kotlinlang.org/docs/reference/nested-classes.html">top level or nested but not inner</a>,
+since the later requires a reference to the outer class.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-annotations"><a class="anchor" href="#kotlin-annotations"></a>Annotations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The Spring Framework also takes advantage of <a href="https://kotlinlang.org/docs/reference/null-safety.html">Kotlin null-safety</a>
+to determine if an HTTP parameter is required without having to explicitly
+define the <code>required</code> attribute. That means <code>@RequestParam name: String?</code> is treated
+as not required and, conversely, <code>@RequestParam name: String</code> is treated as being required.
+This feature is also supported on the Spring Messaging <code>@Header</code> annotation.</p>
+</div>
+<div class="paragraph">
+<p>In a similar fashion, Spring bean injection with <code>@Autowired</code>, <code>@Bean</code>, or <code>@Inject</code> uses
+this information to determine if a bean is required or not.</p>
+</div>
+<div class="paragraph">
+<p>For example, <code>@Autowired lateinit var thing: Thing</code> implies that a bean
+of type <code>Thing</code> must be registered in the application context, while <code>@Autowired lateinit var thing: Thing?</code>
+does not raise an error if such a bean does not exist.</p>
+</div>
+<div class="paragraph">
+<p>Following the same principle, <code>@Bean fun play(toy: Toy, car: Car?) = Baz(toy, Car)</code> implies
+that a bean of type <code>Toy</code> must be registered in the application context, while a bean of
+type <code>Car</code> may or may not exist. The same behavior applies to autowired constructor parameters.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you use bean validation on classes with properties or a primary constructor
+parameters, you may need to use
+<a href="https://kotlinlang.org/docs/reference/annotations.html#annotation-use-site-targets">annotation use-site targets</a>,
+such as <code>@field:NotNull</code> or <code>@get:Size(min=5, max=15)</code>, as described in
+<a href="https://stackoverflow.com/a/35853200/1092077">this Stack Overflow response</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-bean-definition-dsl"><a class="anchor" href="#kotlin-bean-definition-dsl"></a>Bean Definition DSL</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Framework supports registering beans in a functional way by using lambdas
+as an alternative to XML or Java configuration (<code>@Configuration</code> and <code>@Bean</code>). In a nutshell,
+it lets you register beans with a lambda that acts as a <code>FactoryBean</code>.
+This mechanism is very efficient, as it does not require any reflection or CGLIB proxies.</p>
+</div>
+<div class="paragraph">
+<p>In Java, you can, for example, write the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">class Foo {}
+
+class Bar {
+	private final Foo foo;
+	public Bar(Foo foo) {
+		this.foo = foo;
+	}
+}
+
+GenericApplicationContext context = new GenericApplicationContext();
+context.registerBean(Foo.class);
+context.registerBean(Bar.class, () -&gt; new Bar(context.getBean(Foo.class)));</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In Kotlin, with reified type parameters and <code>GenericApplicationContext</code> Kotlin extensions,
+you can instead write the following:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class Foo
+
+class Bar(private val foo: Foo)
+
+val context = GenericApplicationContext().apply {
+	registerBean&lt;Foo&gt;()
+	registerBean { Bar(it.getBean()) }
+}</code></pre>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="paragraph">
+<p>When the class <code>Bar</code> has a single constructor, you can even just specify the bean class,
+the constructor parameters will be autowired by type:</p>
+</div>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val context = GenericApplicationContext().apply {
+	registerBean&lt;Foo&gt;()
+	registerBean&lt;Bar&gt;()
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In order to allow a more declarative approach and cleaner syntax, Spring Framework provides
+a {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.context.support/-bean-definition-dsl/[Kotlin bean definition DSL]
+It declares an <code>ApplicationContextInitializer</code> through a clean declarative API,
+which lets you deal with profiles and <code>Environment</code> for customizing
+how beans are registered.</p>
+</div>
+<div class="paragraph">
+<p>In the following example notice that:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Type inference usually allows to avoid specifying the type for bean references like <code>ref("bazBean")</code></p>
+</li>
+<li>
+<p>It is possible to use Kotlin top level functions to declare beans using callable references like <code>bean(::myRouter)</code> in this example</p>
+</li>
+<li>
+<p>When specifying <code>bean&lt;Bar&gt;()</code> or <code>bean(::myRouter)</code>, parameters are autowired by type</p>
+</li>
+<li>
+<p>The <code>FooBar</code> bean will be registered only if the <code>foobar</code> profile is active</p>
+</li>
+</ul>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class Foo
+class Bar(private val foo: Foo)
+class Baz(var message: String = "")
+class FooBar(private val baz: Baz)
+
+val myBeans = beans {
+	bean&lt;Foo&gt;()
+	bean&lt;Bar&gt;()
+	bean("bazBean") {
+		Baz().apply {
+			message = "Hello world"
+		}
+	}
+	profile("foobar") {
+		bean { FooBar(ref("bazBean")) }
+	}
+	bean(::myRouter)
+}
+
+fun myRouter(foo: Foo, bar: Bar, baz: Baz) = router {
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This DSL is programmatic, meaning it allows custom registration logic of beans
+through an <code>if</code> expression, a <code>for</code> loop, or any other Kotlin constructs.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You can then use this <code>beans()</code> function to register beans on the application context,
+as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val context = GenericApplicationContext().apply {
+	myBeans.initialize(this)
+	refresh()
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Spring Boot is based on JavaConfig and
+<a href="https://github.com/spring-projects/spring-boot/issues/8115">does not yet provide specific support for functional bean definition</a>,
+but you can experimentally use functional bean definitions through Spring Boot&#8217;s <code>ApplicationContextInitializer</code> support.
+See <a href="https://stackoverflow.com/questions/45935931/how-to-use-functional-bean-definition-kotlin-dsl-with-spring-boot-and-spring-w/46033685#46033685">this Stack Overflow answer</a>
+for more details and up-to-date information. See also the experimental Kofu DSL developed in <a href="https://github.com/spring-projects/spring-fu">Spring Fu incubator</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-web"><a class="anchor" href="#kotlin-web"></a>Web</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_router_dsl"><a class="anchor" href="#_router_dsl"></a>Router DSL</h3>
+<div class="paragraph">
+<p>Spring Framework comes with a Kotlin router DSL available in 3 flavors:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>WebMvc.fn DSL with {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.servlet.function/router.html[router { }]</p>
+</li>
+<li>
+<p>WebFlux.fn <a href="../web-reactive.html#webflux-fn" class="page">Reactive</a> DSL with {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/router.html[router { }]</p>
+</li>
+<li>
+<p>WebFlux.fn <a href="#_coroutines">Coroutines</a> DSL with {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/co-router.html[coRouter { }]</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>These DSL let you write clean and idiomatic Kotlin code to build a <code>RouterFunction</code> instance as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class RouterRouterConfiguration {
+
+	@Bean
+	fun mainRouter(userHandler: UserHandler) = router {
+		accept(TEXT_HTML).nest {
+			GET("/") { ok().render("index") }
+			GET("/sse") { ok().render("sse") }
+			GET("/users", userHandler::findAllView)
+		}
+		"/api".nest {
+			accept(APPLICATION_JSON).nest {
+				GET("/users", userHandler::findAll)
+			}
+			accept(TEXT_EVENT_STREAM).nest {
+				GET("/users", userHandler::stream)
+			}
+		}
+		resources("/**", ClassPathResource("static/"))
+	}
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This DSL is programmatic, meaning that it allows custom registration logic of beans
+through an <code>if</code> expression, a <code>for</code> loop, or any other Kotlin constructs. That can be useful
+when you need to register routes depending on dynamic data (for example, from a database).
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>See <a href="https://github.com/mixitconf/mixit/">MiXiT project</a> for a concrete example.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_mockmvc_dsl"><a class="anchor" href="#_mockmvc_dsl"></a>MockMvc DSL</h3>
+<div class="paragraph">
+<p>A Kotlin DSL is provided via <code>MockMvc</code> Kotlin extensions in order to provide a more
+idiomatic Kotlin API and to allow better discoverability (no usage of static methods).</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val mockMvc: MockMvc = ...
+mockMvc.get("/person/{name}", "Lee") {
+	secure = true
+	accept = APPLICATION_JSON
+	headers {
+		contentLanguage = Locale.FRANCE
+	}
+	principal = Principal { "foo" }
+}.andExpect {
+	status { isOk }
+	content { contentType(APPLICATION_JSON) }
+	jsonPath("$.name") { value("Lee") }
+	content { json("""{"someBoolean": false}""", false) }
+}.andDo {
+	print()
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kotlin_script_templates"><a class="anchor" href="#_kotlin_script_templates"></a>Kotlin Script Templates</h3>
+<div class="paragraph">
+<p>Spring Framework provides a
+<a href="https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/servlet/view/script/ScriptTemplateView.html"><code>ScriptTemplateView</code></a>
+which supports <a href="https://www.jcp.org/en/jsr/detail?id=223">JSR-223</a> to render templates by using script engines.</p>
+</div>
+<div class="paragraph">
+<p>By leveraging <code>kotlin-script-runtime</code> and <code>scripting-jsr223-embeddable</code> dependencies, it
+is possible to use such feature to render Kotlin-based templates with
+<a href="https://github.com/Kotlin/kotlinx.html">kotlinx.html</a> DSL or Kotlin multiline interpolated <code>String</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>build.gradle.kts</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">dependencies {
+	compile("org.jetbrains.kotlin:kotlin-script-runtime:${kotlinVersion}")
+	runtime("org.jetbrains.kotlin:kotlin-scripting-jsr223-embeddable:${kotlinVersion}")
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Configuration is usually done with <code>ScriptTemplateConfigurer</code> and <code>ScriptTemplateViewResolver</code>
+beans.</p>
+</div>
+<div class="paragraph">
+<p><code>KotlinScriptConfiguration.kt</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class KotlinScriptConfiguration {
+
+    @Bean
+	fun kotlinScriptConfigurer() = ScriptTemplateConfigurer().apply {
+		engineName = "kotlin"
+		setScripts("scripts/render.kts")
+		renderFunction = "render"
+		isSharedEngine = false
+	}
+
+    @Bean
+    fun kotlinScriptViewResolver() = ScriptTemplateViewResolver().apply {
+        setPrefix("templates/")
+        setSuffix(".kts")
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>See the <a href="https://github.com/sdeleuze/kotlin-script-templating">kotlin-script-templating</a> example
+project for more details.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_kotlin_multiplatform_serialization"><a class="anchor" href="#_kotlin_multiplatform_serialization"></a>Kotlin multiplatform serialization</h3>
+<div class="paragraph">
+<p>As of Spring Framework 5.3, <a href="https://github.com/Kotlin/kotlinx.serialization">Kotlin multiplatform serialization</a> is
+supported in Spring MVC, Spring WebFlux and Spring Messaging (RSocket). The builtin support currently only targets JSON format.</p>
+</div>
+<div class="paragraph">
+<p>To enable it, follow <a href="https://github.com/Kotlin/kotlinx.serialization#setup">those instructions</a> to add the related dependency and plugin.
+With Spring MVC and WebFlux, both Kotlin serialization and Jackson will be configured by default if they are in the classpath since
+Kotlin serialization is designed to serialize only Kotlin classes annotated with <code>@Serializable</code>.
+With Spring Messaging (RSocket), make sure that neither Jackson, GSON or JSONB are in the classpath if you want automatic configuration,
+if Jackson is needed configure <code>KotlinSerializationJsonMessageConverter</code> manually.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_coroutines"><a class="anchor" href="#_coroutines"></a>Coroutines</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Kotlin <a href="https://kotlinlang.org/docs/reference/coroutines-overview.html">Coroutines</a> are Kotlin
+lightweight threads allowing to write non-blocking code in an imperative way. On language side,
+suspending functions provides an abstraction for asynchronous operations while on library side
+<a href="https://github.com/Kotlin/kotlinx.coroutines">kotlinx.coroutines</a> provides functions like
+<a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/async.html"><code>async { }</code></a>
+and types like <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html"><code>Flow</code></a>.</p>
+</div>
+<div class="paragraph">
+<p>Spring Framework provides support for Coroutines on the following scope:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines/-deferred/index.html">Deferred</a> and <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html">Flow</a> return values support in Spring MVC and WebFlux annotated <code>@Controller</code></p>
+</li>
+<li>
+<p>Suspending function support in Spring MVC and WebFlux annotated <code>@Controller</code></p>
+</li>
+<li>
+<p>Extensions for WebFlux {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.client/index.html[client] and {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/index.html[server] functional API.</p>
+</li>
+<li>
+<p>WebFlux.fn {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/co-router.html[coRouter { }] DSL</p>
+</li>
+<li>
+<p>Suspending function and <code>Flow</code> support in RSocket <code>@MessageMapping</code> annotated methods</p>
+</li>
+<li>
+<p>Extensions for {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.messaging.rsocket/index.html[<code>RSocketRequester</code>]</p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_dependencies"><a class="anchor" href="#_dependencies"></a>Dependencies</h3>
+<div class="paragraph">
+<p>Coroutines support is enabled when <code>kotlinx-coroutines-core</code> and <code>kotlinx-coroutines-reactor</code>
+dependencies are in the classpath:</p>
+</div>
+<div class="paragraph">
+<p><code>build.gradle.kts</code></p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">dependencies {
+
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:${coroutinesVersion}")
+	implementation("org.jetbrains.kotlinx:kotlinx-coroutines-reactor:${coroutinesVersion}")
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Version <code>1.4.0</code> and above are supported.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_how_reactive_translates_to_coroutines"><a class="anchor" href="#_how_reactive_translates_to_coroutines"></a>How Reactive translates to Coroutines?</h3>
+<div class="paragraph">
+<p>For return values, the translation from Reactive to Coroutines APIs is the following:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>fun handler(): Mono&lt;Void&gt;</code> becomes <code>suspend fun handler()</code></p>
+</li>
+<li>
+<p><code>fun handler(): Mono&lt;T&gt;</code> becomes <code>suspend fun handler(): T</code> or <code>suspend fun handler(): T?</code> depending on if the <code>Mono</code> can be empty or not (with the advantage of being more statically typed)</p>
+</li>
+<li>
+<p><code>fun handler(): Flux&lt;T&gt;</code> becomes <code>fun handler(): Flow&lt;T&gt;</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>For input parameters:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>If laziness is not needed, <code>fun handler(mono: Mono&lt;T&gt;)</code> becomes <code>fun handler(value: T)</code> since a suspending functions can be invoked to get the value parameter.</p>
+</li>
+<li>
+<p>If laziness is needed, <code>fun handler(mono: Mono&lt;T&gt;)</code> becomes <code>fun handler(supplier: suspend () &#8594; T)</code> or <code>fun handler(supplier: suspend () &#8594; T?)</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p><a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/index.html"><code>Flow</code></a> is <code>Flux</code> equivalent in Coroutines world, suitable for hot or cold stream, finite or infinite streams, with the following main differences:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>Flow</code> is push-based while <code>Flux</code> is push-pull hybrid</p>
+</li>
+<li>
+<p>Backpressure is implemented via suspending functions</p>
+</li>
+<li>
+<p><code>Flow</code> has only a <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/-flow/collect.html">single suspending <code>collect</code> method</a> and operators are implemented as <a href="https://kotlinlang.org/docs/reference/extensions.html">extensions</a></p>
+</li>
+<li>
+<p><a href="https://github.com/Kotlin/kotlinx.coroutines/tree/master/kotlinx-coroutines-core/common/src/flow/operators">Operators are easy to implement</a> thanks to Coroutines</p>
+</li>
+<li>
+<p>Extensions allow to add custom operators to <code>Flow</code></p>
+</li>
+<li>
+<p>Collect operations are suspending functions</p>
+</li>
+<li>
+<p><a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coroutines-core/kotlinx.coroutines.flow/map.html"><code>map</code> operator</a> supports asynchronous operation (no need for <code>flatMap</code>) since it takes a suspending function parameter</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Read this blog post about <a href="https://spring.io/blog/2019/04/12/going-reactive-with-spring-coroutines-and-kotlin-flow">Going Reactive with Spring, Coroutines and Kotlin Flow</a>
+for more details, including how to run code concurrently with Coroutines.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_controllers"><a class="anchor" href="#_controllers"></a>Controllers</h3>
+<div class="paragraph">
+<p>Here is an example of a Coroutines <code>@RestController</code>.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RestController
+class CoroutinesRestController(client: WebClient, banner: Banner) {
+
+	@GetMapping("/suspend")
+	suspend fun suspendingEndpoint(): Banner {
+		delay(10)
+		return banner
+	}
+
+	@GetMapping("/flow")
+	fun flowEndpoint() = flow {
+		delay(10)
+		emit(banner)
+		delay(10)
+		emit(banner)
+	}
+
+	@GetMapping("/deferred")
+	fun deferredEndpoint() = GlobalScope.async {
+		delay(10)
+		banner
+	}
+
+	@GetMapping("/sequential")
+	suspend fun sequential(): List&lt;Banner&gt; {
+		val banner1 = client
+				.get()
+				.uri("/suspend")
+				.accept(MediaType.APPLICATION_JSON)
+				.awaitExchange()
+				.awaitBody&lt;Banner&gt;()
+		val banner2 = client
+				.get()
+				.uri("/suspend")
+				.accept(MediaType.APPLICATION_JSON)
+				.awaitExchange()
+				.awaitBody&lt;Banner&gt;()
+		return listOf(banner1, banner2)
+	}
+
+	@GetMapping("/parallel")
+	suspend fun parallel(): List&lt;Banner&gt; = coroutineScope {
+		val deferredBanner1: Deferred&lt;Banner&gt; = async {
+			client
+					.get()
+					.uri("/suspend")
+					.accept(MediaType.APPLICATION_JSON)
+					.awaitExchange()
+					.awaitBody&lt;Banner&gt;()
+		}
+		val deferredBanner2: Deferred&lt;Banner&gt; = async {
+			client
+					.get()
+					.uri("/suspend")
+					.accept(MediaType.APPLICATION_JSON)
+					.awaitExchange()
+					.awaitBody&lt;Banner&gt;()
+		}
+		listOf(deferredBanner1.await(), deferredBanner2.await())
+	}
+
+	@GetMapping("/error")
+	suspend fun error() {
+		throw IllegalStateException()
+	}
+
+	@GetMapping("/cancel")
+	suspend fun cancel() {
+		throw CancellationException()
+	}
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>View rendering with a <code>@Controller</code> is also supported.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Controller
+class CoroutinesViewController(banner: Banner) {
+
+	@GetMapping("/")
+	suspend fun render(model: Model): String {
+		delay(10)
+		model["banner"] = banner
+		return "index"
+	}
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_webflux_fn"><a class="anchor" href="#_webflux_fn"></a>WebFlux.fn</h3>
+<div class="paragraph">
+<p>Here is an example of Coroutines router defined via the {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/co-router.html[coRouter { }] DSL and related handlers.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+class RouterConfiguration {
+
+	@Bean
+	fun mainRouter(userHandler: UserHandler) = coRouter {
+		GET("/", userHandler::listView)
+		GET("/api/user", userHandler::listApi)
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class UserHandler(builder: WebClient.Builder) {
+
+	private val client = builder.baseUrl("...").build()
+
+	suspend fun listView(request: ServerRequest): ServerResponse =
+			ServerResponse.ok().renderAndAwait("users", mapOf("users" to
+			client.get().uri("...").awaitExchange().awaitBody&lt;User&gt;()))
+
+	suspend fun listApi(request: ServerRequest): ServerResponse =
+				ServerResponse.ok().contentType(MediaType.APPLICATION_JSON).bodyAndAwait(
+				client.get().uri("...").awaitExchange().awaitBody&lt;User&gt;())
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_transactions"><a class="anchor" href="#_transactions"></a>Transactions</h3>
+<div class="paragraph">
+<p>Transactions on Coroutines are supported via the programmatic variant of the Reactive
+transaction management provided as of Spring Framework 5.2.</p>
+</div>
+<div class="paragraph">
+<p>For suspending functions, a <code>TransactionalOperator.executeAndAwait</code> extension is provided.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.transaction.reactive.executeAndAwait
+
+class PersonRepository(private val operator: TransactionalOperator) {
+
+    suspend fun initDatabase() = operator.executeAndAwait {
+        insertPerson1()
+        insertPerson2()
+    }
+
+    private suspend fun insertPerson1() {
+        // INSERT SQL statement
+    }
+
+    private suspend fun insertPerson2() {
+        // INSERT SQL statement
+    }
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>For Kotlin <code>Flow</code>, a  <code>Flow&lt;T&gt;.transactional</code> extension is provided.</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.transaction.reactive.transactional
+
+class PersonRepository(private val operator: TransactionalOperator) {
+
+    fun updatePeople() = findPeople().map(::updatePerson).transactional(operator)
+
+    private fun findPeople(): Flow&lt;Person&gt; {
+        // SELECT SQL statement
+    }
+
+    private suspend fun updatePerson(person: Person): Person {
+        // UPDATE SQL statement
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-spring-projects-in-kotlin"><a class="anchor" href="#kotlin-spring-projects-in-kotlin"></a>Spring Projects in Kotlin</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section provides some specific hints and recommendations worth for developing Spring projects
+in Kotlin.</p>
+</div>
+<div class="sect2">
+<h3 id="_final_by_default"><a class="anchor" href="#_final_by_default"></a>Final by Default</h3>
+<div class="paragraph">
+<p>By default, <a href="https://discuss.kotlinlang.org/t/classes-final-by-default/166">all classes in Kotlin are <code>final</code></a>.
+The <code>open</code> modifier on a class is the opposite of Java&#8217;s <code>final</code>: It allows others to inherit from this
+class. This also applies to member functions, in that they need to be marked as <code>open</code> to be overridden.</p>
+</div>
+<div class="paragraph">
+<p>While Kotlin&#8217;s JVM-friendly design is generally frictionless with Spring, this specific Kotlin feature
+can prevent the application from starting, if this fact is not taken into consideration. This is because
+Spring beans (such as <code>@Configuration</code> annotated classes which by default need to be extended at runtime for technical
+reasons) are normally proxied by CGLIB. The workaround is to add an <code>open</code> keyword on each class and
+member function of Spring beans that are proxied by CGLIB, which can
+quickly become painful and is against the Kotlin principle of keeping code concise and predictable.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It is also possible to avoid CGLIB proxies for configuration classes by using <code>@Configuration(proxyBeanMethods = false)</code>.
+See {api-spring-framework}/context/annotation/Configuration.html#proxyBeanMethods--[<code>proxyBeanMethods</code> Javadoc] for more details.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Fortunately, Kotlin provides a
+<a href="https://kotlinlang.org/docs/reference/compiler-plugins.html#kotlin-spring-compiler-plugin"><code>kotlin-spring</code></a>
+plugin (a preconfigured version of the <code>kotlin-allopen</code> plugin) that automatically opens classes
+and their member functions for types that are annotated or meta-annotated with one of the following
+annotations:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>@Component</code></p>
+</li>
+<li>
+<p><code>@Async</code></p>
+</li>
+<li>
+<p><code>@Transactional</code></p>
+</li>
+<li>
+<p><code>@Cacheable</code></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Meta-annotation support means that types annotated with <code>@Configuration</code>, <code>@Controller</code>,
+<code>@RestController</code>, <code>@Service</code>, or <code>@Repository</code> are automatically opened since these
+annotations are meta-annotated with <code>@Component</code>.</p>
+</div>
+<div class="paragraph">
+<p><a href="https://start.spring.io/#!language=kotlin&amp;type=gradle-project">start.spring.io</a> enables
+the <code>kotlin-spring</code> plugin by default. So, in practice, you can write your Kotlin beans
+without any additional <code>open</code> keyword, as in Java.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The Kotlin code samples in Spring Framework documentation do not explicitly specify
+<code>open</code> on the classes and their member functions. The samples are written for projects
+using the <code>kotlin-allopen</code> plugin, since this is the most commonly used setup.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_using_immutable_class_instances_for_persistence"><a class="anchor" href="#_using_immutable_class_instances_for_persistence"></a>Using Immutable Class Instances for Persistence</h3>
+<div class="paragraph">
+<p>In Kotlin, it is convenient and considered to be a best practice to declare read-only properties
+within the primary constructor, as in the following example:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class Person(val name: String, val age: Int)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can optionally add <a href="https://kotlinlang.org/docs/reference/data-classes.html">the <code>data</code> keyword</a>
+to make the compiler automatically derive the following members from all properties declared
+in the primary constructor:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>equals()</code> and <code>hashCode()</code></p>
+</li>
+<li>
+<p><code>toString()</code> of the form <code>"User(name=John, age=42)"</code></p>
+</li>
+<li>
+<p><code>componentN()</code> functions that correspond to the properties in their order of declaration</p>
+</li>
+<li>
+<p><code>copy()</code> function</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>As the following example shows, this allows for easy changes to individual properties, even if <code>Person</code> properties are read-only:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">data class Person(val name: String, val age: Int)
+
+val jack = Person(name = "Jack", age = 1)
+val olderJack = jack.copy(age = 2)</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Common persistence technologies (such as JPA) require a default constructor, preventing this
+kind of design. Fortunately, there is a workaround for this
+<a href="https://stackoverflow.com/questions/32038177/kotlin-with-jpa-default-constructor-hell">&#8220;default constructor hell&#8221;</a>,
+since Kotlin provides a <a href="https://kotlinlang.org/docs/reference/compiler-plugins.html#kotlin-jpa-compiler-plugin"><code>kotlin-jpa</code></a>
+plugin that generates synthetic no-arg constructor for classes annotated with JPA annotations.</p>
+</div>
+<div class="paragraph">
+<p>If you need to leverage this kind of mechanism for other persistence technologies, you can configure
+the <a href="https://kotlinlang.org/docs/reference/compiler-plugins.html#how-to-use-no-arg-plugin"><code>kotlin-noarg</code></a>
+plugin.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As of the Kay release train, Spring Data supports Kotlin immutable class instances and
+does not require the <code>kotlin-noarg</code> plugin if the module uses Spring Data object mappings
+(such as MongoDB, Redis, Cassandra, and others).
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_injecting_dependencies"><a class="anchor" href="#_injecting_dependencies"></a>Injecting Dependencies</h3>
+<div class="paragraph">
+<p>Our recommendation is to try to favor constructor injection with <code>val</code> read-only (and
+non-nullable when possible) <a href="https://kotlinlang.org/docs/reference/properties.html">properties</a>,
+as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Component
+class YourBean(
+	private val mongoTemplate: MongoTemplate,
+	private val solrClient: SolrClient
+)</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Classes with a single constructor have their parameters automatically autowired.
+That&#8217;s why there is no need for an explicit <code>@Autowired constructor</code> in the example shown
+above.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>If you really need to use field injection, you can use the <code>lateinit var</code> construct,
+as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Component
+class YourBean {
+
+	@Autowired
+	lateinit var mongoTemplate: MongoTemplate
+
+	@Autowired
+	lateinit var solrClient: SolrClient
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_injecting_configuration_properties"><a class="anchor" href="#_injecting_configuration_properties"></a>Injecting Configuration Properties</h3>
+<div class="paragraph">
+<p>In Java, you can inject configuration properties by using annotations (such as <code>@Value("${property}")</code>).
+However, in Kotlin, <code>$</code> is a reserved character that is used for
+<a href="https://kotlinlang.org/docs/reference/idioms.html#string-interpolation">string interpolation</a>.</p>
+</div>
+<div class="paragraph">
+<p>Therefore, if you wish to use the <code>@Value</code> annotation in Kotlin, you need to escape the <code>$</code>
+character by writing <code>@Value("\${property}")</code>.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you use Spring Boot, you should probably use
+<a href="https://docs.spring.io/spring-boot/docs/current/reference/html/boot-features-external-config.html#boot-features-external-config-typesafe-configuration-properties"><code>@ConfigurationProperties</code></a>
+instead of <code>@Value</code> annotations.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>As an alternative, you can customize the property placeholder prefix by declaring the
+following configuration beans:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun propertyConfigurer() = PropertySourcesPlaceholderConfigurer().apply {
+	setPlaceholderPrefix("%{")
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can customize existing code (such as Spring Boot actuators or <code>@LocalServerPort</code>)
+that uses the <code>${&#8230;&#8203;}</code> syntax, with configuration beans, as the following example shows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun kotlinPropertyConfigurer() = PropertySourcesPlaceholderConfigurer().apply {
+	setPlaceholderPrefix("%{")
+	setIgnoreUnresolvablePlaceholders(true)
+}
+
+@Bean
+fun defaultPropertyConfigurer() = PropertySourcesPlaceholderConfigurer()</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_checked_exceptions"><a class="anchor" href="#_checked_exceptions"></a>Checked Exceptions</h3>
+<div class="paragraph">
+<p>Java and <a href="https://kotlinlang.org/docs/reference/exceptions.html">Kotlin exception handling</a>
+are pretty close, with the main difference being that Kotlin treats all exceptions as
+unchecked exceptions. However, when using proxied objects (for example classes or methods
+annotated with <code>@Transactional</code>), checked exceptions thrown will be wrapped by default in
+an <code>UndeclaredThrowableException</code>.</p>
+</div>
+<div class="paragraph">
+<p>To get the original exception thrown like in Java, methods should be annotated with
+<a href="https://kotlinlang.org/api/latest/jvm/stdlib/kotlin.jvm/-throws/index.html"><code>@Throws</code></a>
+to specify explicitly the checked exceptions thrown (for example <code>@Throws(IOException::class)</code>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_annotation_array_attributes"><a class="anchor" href="#_annotation_array_attributes"></a>Annotation Array Attributes</h3>
+<div class="paragraph">
+<p>Kotlin annotations are mostly similar to Java annotations, but array attributes (which are
+extensively used in Spring) behave differently. As explained in the
+<a href="https://kotlinlang.org/docs/reference/annotations.html">Kotlin documentation</a> you can omit
+the <code>value</code> attribute name, unlike other attributes, and specify it as a <code>vararg</code> parameter.</p>
+</div>
+<div class="paragraph">
+<p>To understand what that means, consider <code>@RequestMapping</code> (which is one of the most widely
+used Spring annotations) as an example. This Java annotation is declared as follows:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public @interface RequestMapping {
+
+	@AliasFor("path")
+	String[] value() default {};
+
+	@AliasFor("value")
+	String[] path() default {};
+
+	RequestMethod[] method() default {};
+
+	// ...
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The typical use case for <code>@RequestMapping</code> is to map a handler method to a specific path
+and method. In Java, you can specify a single value for the annotation array attribute,
+and it is automatically converted to an array.</p>
+</div>
+<div class="paragraph">
+<p>That is why one can write
+<code>@RequestMapping(value = "/toys", method = RequestMethod.GET)</code> or
+<code>@RequestMapping(path = "/toys", method = RequestMethod.GET)</code>.</p>
+</div>
+<div class="paragraph">
+<p>However, in Kotlin, you must write <code>@RequestMapping("/toys", method = [RequestMethod.GET])</code>
+or <code>@RequestMapping(path = ["/toys"], method = [RequestMethod.GET])</code> (square brackets need
+to be specified with named array attributes).</p>
+</div>
+<div class="paragraph">
+<p>An alternative for this specific <code>method</code> attribute (the most common one) is to
+use a shortcut annotation, such as <code>@GetMapping</code>, <code>@PostMapping</code>, and others.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the <code>@RequestMapping</code> <code>method</code> attribute is not specified, all HTTP methods will
+be matched, not only the <code>GET</code> method.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_testing"><a class="anchor" href="#_testing"></a>Testing</h3>
+<div class="paragraph">
+<p>This section addresses testing with the combination of Kotlin and Spring Framework.
+The recommended testing framework is <a href="https://junit.org/junit5/">JUnit 5</a> along with
+<a href="https://mockk.io/">Mockk</a> for mocking.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If you are using Spring Boot, see
+<a href="https://docs.spring.io/spring-boot/docs/current/reference/htmlsingle/#boot-features-kotlin-testing">this related documentation</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="sect3">
+<h4 id="_constructor_injection"><a class="anchor" href="#_constructor_injection"></a>Constructor injection</h4>
+<div class="paragraph">
+<p>As described in the <a href="../testing.html#testcontext-junit-jupiter-di#spring-web-reactive" class="page">dedicated section</a>,
+JUnit 5 allows constructor injection of beans which is pretty useful with Kotlin
+in order to use <code>val</code> instead of <code>lateinit var</code>. You can use
+{api-spring-framework}/test/context/TestConstructor.html[<code>@TestConstructor(autowireMode = AutowireMode.ALL)</code>]
+to enable autowiring for all parameters.</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@SpringJUnitConfig(TestConfig::class)
+@TestConstructor(autowireMode = AutowireMode.ALL)
+class OrderServiceIntegrationTests(val orderService: OrderService,
+                                   val customerService: CustomerService) {
+
+    // tests that use the injected OrderService and CustomerService
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_per_class_lifecycle"><a class="anchor" href="#_per_class_lifecycle"></a><code>PER_CLASS</code> Lifecycle</h4>
+<div class="paragraph">
+<p>Kotlin lets you specify meaningful test function names between backticks (<code>`</code>).
+As of JUnit 5, Kotlin test classes can use the <code>@TestInstance(TestInstance.Lifecycle.PER_CLASS)</code>
+annotation to enable single instantiation of test classes, which allows the use of <code>@BeforeAll</code>
+and <code>@AfterAll</code> annotations on non-static methods, which is a good fit for Kotlin.</p>
+</div>
+<div class="paragraph">
+<p>You can also change the default behavior to <code>PER_CLASS</code> thanks to a <code>junit-platform.properties</code>
+file with a <code>junit.jupiter.testinstance.lifecycle.default = per_class</code> property.</p>
+</div>
+<div class="paragraph">
+<p>The following example demonstrates <code>@BeforeAll</code> and <code>@AfterAll</code> annotations on non-static methods:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@TestInstance(TestInstance.Lifecycle.PER_CLASS)
+class IntegrationTests {
+
+  val application = Application(8181)
+  val client = WebClient.create("http://localhost:8181")
+
+  @BeforeAll
+  fun beforeAll() {
+    application.start()
+  }
+
+  @Test
+  fun `Find all users on HTML page`() {
+    client.get().uri("/users")
+        .accept(TEXT_HTML)
+        .retrieve()
+        .bodyToMono&lt;String&gt;()
+        .test()
+        .expectNextMatches { it.contains("Foo") }
+        .verifyComplete()
+  }
+
+  @AfterAll
+  fun afterAll() {
+    application.stop()
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_specification_like_tests"><a class="anchor" href="#_specification_like_tests"></a>Specification-like Tests</h4>
+<div class="paragraph">
+<p>You can create specification-like tests with JUnit 5 and Kotlin.
+The following example shows how to do so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class SpecificationLikeTests {
+
+  @Nested
+  @DisplayName("a calculator")
+  inner class Calculator {
+     val calculator = SampleCalculator()
+
+     @Test
+     fun `should return the result of adding the first number to the second number`() {
+        val sum = calculator.sum(2, 4)
+        assertEquals(6, sum)
+     }
+
+     @Test
+     fun `should return the result of subtracting the second number from the first number`() {
+        val subtract = calculator.subtract(4, 2)
+        assertEquals(2, subtract)
+     }
+  }
+}</code></pre>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="kotlin-webtestclient-issue"><a class="anchor" href="#kotlin-webtestclient-issue"></a><code>WebTestClient</code> Type Inference Issue in Kotlin</h4>
+<div class="paragraph">
+<p>Due to a <a href="https://youtrack.jetbrains.com/issue/KT-5464">type inference issue</a>, you must
+use the Kotlin <code>expectBody</code> extension (such as <code>.expectBody&lt;String&gt;().isEqualTo("toys")</code>),
+since it provides a workaround for the Kotlin issue with the Java API.</p>
+</div>
+<div class="paragraph">
+<p>See also the related <a href="https://jira.spring.io/browse/SPR-16057">SPR-16057</a> issue.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-getting-started"><a class="anchor" href="#kotlin-getting-started"></a>Getting Started</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The easiest way to learn how to build a Spring application with Kotlin is to follow
+<a href="https://spring.io/guides/tutorials/spring-boot-kotlin/">the dedicated tutorial</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="_start_spring_io"><a class="anchor" href="#_start_spring_io"></a><code>start.spring.io</code></h3>
+<div class="paragraph">
+<p>The easiest way to start a new Spring Framework project in Kotlin is to create a new Spring
+Boot 2 project on <a href="https://start.spring.io/#!language=kotlin&amp;type=gradle-project">start.spring.io</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_choosing_the_web_flavor"><a class="anchor" href="#_choosing_the_web_flavor"></a>Choosing the Web Flavor</h3>
+<div class="paragraph">
+<p>Spring Framework now comes with two different web stacks: <a href="../web.html#mvc" class="page">Spring MVC</a> and
+<a href="../web-reactive.html#spring-web-reactive" class="page">Spring WebFlux</a>.</p>
+</div>
+<div class="paragraph">
+<p>Spring WebFlux is recommended if you want to create applications that will deal with latency,
+long-lived connections, streaming scenarios or if you want to use the web functional
+Kotlin DSL.</p>
+</div>
+<div class="paragraph">
+<p>For other use cases, especially if you are using blocking technologies such as JPA, Spring
+MVC and its annotation-based programming model is the recommended choice.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="kotlin-resources"><a class="anchor" href="#kotlin-resources"></a>Resources</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>We recommend the following resources for people learning how to build applications with
+Kotlin and the Spring Framework:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://kotlinlang.org/docs/reference/">Kotlin language reference</a></p>
+</li>
+<li>
+<p><a href="https://slack.kotlinlang.org/">Kotlin Slack</a> (with a dedicated #spring channel)</p>
+</li>
+<li>
+<p><a href="https://stackoverflow.com/questions/tagged/spring+kotlin">Stackoverflow, with <code>spring</code> and <code>kotlin</code> tags</a></p>
+</li>
+<li>
+<p><a href="https://play.kotlinlang.org/">Try Kotlin in your browser</a></p>
+</li>
+<li>
+<p><a href="https://blog.jetbrains.com/kotlin/">Kotlin blog</a></p>
+</li>
+<li>
+<p><a href="https://kotlin.link/">Awesome Kotlin</a></p>
+</li>
+</ul>
+</div>
+<div class="sect2">
+<h3 id="_examples"><a class="anchor" href="#_examples"></a>Examples</h3>
+<div class="paragraph">
+<p>The following Github projects offer examples that you can learn from and possibly even extend:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/sdeleuze/spring-boot-kotlin-demo">spring-boot-kotlin-demo</a>: Regular Spring Boot and Spring Data JPA project</p>
+</li>
+<li>
+<p><a href="https://github.com/mixitconf/mixit">mixit</a>: Spring Boot 2, WebFlux, and Reactive Spring Data MongoDB</p>
+</li>
+<li>
+<p><a href="https://github.com/sdeleuze/spring-kotlin-functional">spring-kotlin-functional</a>: Standalone WebFlux and functional bean definition DSL</p>
+</li>
+<li>
+<p><a href="https://github.com/sdeleuze/spring-kotlin-fullstack">spring-kotlin-fullstack</a>: WebFlux Kotlin fullstack example with Kotlin2js for frontend instead of JavaScript or TypeScript</p>
+</li>
+<li>
+<p><a href="https://github.com/spring-petclinic/spring-petclinic-kotlin">spring-petclinic-kotlin</a>: Kotlin version of the Spring PetClinic Sample Application</p>
+</li>
+<li>
+<p><a href="https://github.com/sdeleuze/spring-kotlin-deepdive">spring-kotlin-deepdive</a>: A step-by-step migration guide for Boot 1.0 and Java to Boot 2.0 and Kotlin</p>
+</li>
+<li>
+<p><a href="https://github.com/spring-cloud/spring-cloud-gcp/tree/master/spring-cloud-gcp-kotlin-samples/spring-cloud-gcp-kotlin-app-sample">spring-cloud-gcp-kotlin-app-sample</a>: Spring Boot with Google Cloud Platform Integrations</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_issues"><a class="anchor" href="#_issues"></a>Issues</h3>
+<div class="paragraph">
+<p>The following list categorizes the pending issues related to Spring and Kotlin support:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Spring Framework</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://github.com/spring-projects/spring-framework/issues/20606">Unable to use WebTestClient with mock server in Kotlin</a></p>
+</li>
+<li>
+<p><a href="https://github.com/spring-projects/spring-framework/issues/20496">Support null-safety at generics, varargs and array elements level</a></p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Kotlin</p>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://youtrack.jetbrains.com/issue/KT-6380">Parent issue for Spring Framework support</a></p>
+</li>
+<li>
+<p><a href="https://youtrack.jetbrains.com/issue/KT-5464">Kotlin requires type inference where Java doesn&#8217;t</a></p>
+</li>
+<li>
+<p><a href="https://youtrack.jetbrains.com/issue/KT-20283">Smart cast regression with open classes</a></p>
+</li>
+<li>
+<p><a href="https://youtrack.jetbrains.com/issue/KT-14984">Impossible to pass not all SAM argument as function</a></p>
+</li>
+<li>
+<p><a href="https://youtrack.jetbrains.com/issue/KT-15125">Support JSR 223 bindings directly via script variables</a></p>
+</li>
+<li>
+<p><a href="https://youtrack.jetbrains.com/issue/KT-6653">Kotlin properties do not override Java-style getters and setters</a></p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>

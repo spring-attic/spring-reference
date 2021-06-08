@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>UriComponents :: Spring</title>
+    <meta name="generator" content="Antora 2.3.4">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">Spring</a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="framework" data-version="5.3">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Framework</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../overview.html">Overview</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core.html">Core</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../core/beans/index.html">The IoC Container</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/container.html">Container Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/bean.html">Bean Overview</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/dependencies.html">Bean Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/scopes.html">Bean Scopes</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/customizing.html">Customizing the Nature of a Bean</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/inheritance.html">Bean Definition Inheritance</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/extension.html">Container Extension Points</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/annotation.html">Annotation-based Container Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/scanning.html">Classpath Scanning and Managed Components</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/jsr330.html">Using JSR 330 Standard Annotations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/java.html">Java-based Container configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/env.html">Environment Abstraction</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/loadtimeweaver.html">Registering a LoadTimeWeaver</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/applicationcontext.html">Additional Capabilities of the ApplicationContext</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../core/beans/beanfactory.html">The BeanFactory</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/resources.html">Resources</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/validation.html">Validation, Data Binding, and Type Conversion</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/aop.html">Aspect Oriented Programming with Spring</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/aop-api.html">Spring AOP APIs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/null-safety.html">Null-safety</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/databuffer-codec.html">Data Buffers and Codecs</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/spring-jcl.html">Logging</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../core/appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../testing.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../data-access.html">Data Access</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web.html">Web Servlet</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-reactive.html">Web Reactive</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../integration.html">Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../languages.html">Languages</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../appendix.html">Appendix</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Framework</span>
+    <span class="version">5.3</span>
+  </div>
+  <ul class="components">
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/5.6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/5.6/overview/prerequisites.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../overview.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Framework</a></li>
+    <li><a href="web-uris.html">UriComponents</a></li>
+  </ul>
+</nav>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-framework/edit/antora-2.x/src/docs/antora/modules/ROOT/pages/web/web-uris.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">UriComponents</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>UriComponentsBuilder</code> helps to build URI&#8217;s from URI templates with variables, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">UriComponents uriComponents = UriComponentsBuilder
+		.fromUriString("https://example.com/hotels/{hotel}")  <i class="conum" data-value="1"></i><b>(1)</b>
+		.queryParam("q", "{q}")  <i class="conum" data-value="2"></i><b>(2)</b>
+		.encode() <i class="conum" data-value="3"></i><b>(3)</b>
+		.build(); <i class="conum" data-value="4"></i><b>(4)</b>
+
+URI uri = uriComponents.expand("Westin", "123").toUri();  <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Static factory method with a URI template.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Add or replace URI components.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Request to have the URI template and URI variables encoded.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Build a <code>UriComponents</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Expand variables and obtain the <code>URI</code>.</td>
+</tr>
+</table>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val uriComponents = UriComponentsBuilder
+		.fromUriString("https://example.com/hotels/{hotel}")  <i class="conum" data-value="1"></i><b>(1)</b>
+		.queryParam("q", "{q}")  <i class="conum" data-value="2"></i><b>(2)</b>
+		.encode() <i class="conum" data-value="3"></i><b>(3)</b>
+		.build() <i class="conum" data-value="4"></i><b>(4)</b>
+
+val uri = uriComponents.expand("Westin", "123").toUri()  <i class="conum" data-value="5"></i><b>(5)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Static factory method with a URI template.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>Add or replace URI components.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>Request to have the URI template and URI variables encoded.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>Build a <code>UriComponents</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>Expand variables and obtain the <code>URI</code>.</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The preceding example can be consolidated into one chain and shortened with <code>buildAndExpand</code>,
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">URI uri = UriComponentsBuilder
+		.fromUriString("https://example.com/hotels/{hotel}")
+		.queryParam("q", "{q}")
+		.encode()
+		.buildAndExpand("Westin", "123")
+		.toUri();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val uri = UriComponentsBuilder
+		.fromUriString("https://example.com/hotels/{hotel}")
+		.queryParam("q", "{q}")
+		.encode()
+		.buildAndExpand("Westin", "123")
+		.toUri()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can shorten it further by going directly to a URI (which implies encoding),
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">URI uri = UriComponentsBuilder
+		.fromUriString("https://example.com/hotels/{hotel}")
+		.queryParam("q", "{q}")
+		.build("Westin", "123");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val uri = UriComponentsBuilder
+		.fromUriString("https://example.com/hotels/{hotel}")
+		.queryParam("q", "{q}")
+		.build("Westin", "123")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can shorten it further still with a full URI template, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">URI uri = UriComponentsBuilder
+		.fromUriString("https://example.com/hotels/{hotel}?q={q}")
+		.build("Westin", "123");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val uri = UriComponentsBuilder
+	.fromUriString("https://example.com/hotels/{hotel}?q={q}")
+	.build("Westin", "123")</code></pre>
+</div>
+</div>
+</div>
+</div>
+<h1 id="web-uribuilder" class="sect0"><a class="anchor" href="#web-uribuilder"></a>UriBuilder</h1>
+<div class="paragraph">
+<p><span class="small">Spring MVC and Spring WebFlux</span></p>
+</div>
+<div class="paragraph">
+<p><a href="#web-uricomponents"><code>UriComponentsBuilder</code></a> implements <code>UriBuilder</code>. You can create a
+<code>UriBuilder</code>, in turn, with a <code>UriBuilderFactory</code>. Together, <code>UriBuilderFactory</code> and
+<code>UriBuilder</code> provide a pluggable mechanism to build URIs from URI templates, based on
+shared configuration, such as a base URL, encoding preferences, and other details.</p>
+</div>
+<div class="paragraph">
+<p>You can configure <code>RestTemplate</code> and <code>WebClient</code> with a <code>UriBuilderFactory</code>
+to customize the preparation of URIs. <code>DefaultUriBuilderFactory</code> is a default
+implementation of <code>UriBuilderFactory</code> that uses <code>UriComponentsBuilder</code> internally and
+exposes shared configuration options.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows how to configure a <code>RestTemplate</code>:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// import org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode;
+
+String baseUrl = "https://example.org";
+DefaultUriBuilderFactory factory = new DefaultUriBuilderFactory(baseUrl);
+factory.setEncodingMode(EncodingMode.TEMPLATE_AND_VALUES);
+
+RestTemplate restTemplate = new RestTemplate();
+restTemplate.setUriTemplateHandler(factory);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// import org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
+
+val baseUrl = "https://example.org"
+val factory = DefaultUriBuilderFactory(baseUrl)
+factory.encodingMode = EncodingMode.TEMPLATE_AND_VALUES
+
+val restTemplate = RestTemplate()
+restTemplate.uriTemplateHandler = factory</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The following example configures a <code>WebClient</code>:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// import org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode;
+
+String baseUrl = "https://example.org";
+DefaultUriBuilderFactory factory = new DefaultUriBuilderFactory(baseUrl);
+factory.setEncodingMode(EncodingMode.TEMPLATE_AND_VALUES);
+
+WebClient client = WebClient.builder().uriBuilderFactory(factory).build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">// import org.springframework.web.util.DefaultUriBuilderFactory.EncodingMode
+
+val baseUrl = "https://example.org"
+val factory = DefaultUriBuilderFactory(baseUrl)
+factory.encodingMode = EncodingMode.TEMPLATE_AND_VALUES
+
+val client = WebClient.builder().uriBuilderFactory(factory).build()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In addition, you can also use <code>DefaultUriBuilderFactory</code> directly. It is similar to using
+<code>UriComponentsBuilder</code> but, instead of static factory methods, it is an actual instance
+that holds configuration and preferences, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String baseUrl = "https://example.com";
+DefaultUriBuilderFactory uriBuilderFactory = new DefaultUriBuilderFactory(baseUrl);
+
+URI uri = uriBuilderFactory.uriString("/hotels/{hotel}")
+		.queryParam("q", "{q}")
+		.build("Westin", "123");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val baseUrl = "https://example.com"
+val uriBuilderFactory = DefaultUriBuilderFactory(baseUrl)
+
+val uri = uriBuilderFactory.uriString("/hotels/{hotel}")
+		.queryParam("q", "{q}")
+		.build("Westin", "123")</code></pre>
+</div>
+</div>
+<h1 id="web-uri-encoding" class="sect0"><a class="anchor" href="#web-uri-encoding"></a>URI Encoding</h1>
+<div class="paragraph">
+<p><span class="small">Spring MVC and Spring WebFlux</span></p>
+</div>
+<div class="paragraph">
+<p><code>UriComponentsBuilder</code> exposes encoding options at two levels:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>{api-spring-framework}/web/util/UriComponentsBuilder.html#encode--[UriComponentsBuilder#encode()]:
+Pre-encodes the URI template first and then strictly encodes URI variables when expanded.</p>
+</li>
+<li>
+<p>{api-spring-framework}/web/util/UriComponents.html#encode--[UriComponents#encode()]:
+Encodes URI components <em>after</em> URI variables are expanded.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Both options replace non-ASCII and illegal characters with escaped octets. However, the first option
+also replaces characters with reserved meaning that appear in URI variables.</p>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+Consider ";", which is legal in a path but has reserved meaning. The first option replaces
+";" with "%3B" in URI variables but not in the URI template. By contrast, the second option never
+replaces ";", since it is a legal character in a path.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>For most cases, the first option is likely to give the expected result, because it treats URI
+variables as opaque data to be fully encoded, while the second option is useful if URI
+variables do intentionally contain reserved characters. The second option is also useful
+when not expanding URI variables at all since that will also encode anything that
+incidentally looks like a URI variable.</p>
+</div>
+<div class="paragraph">
+<p>The following example uses the first option:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">URI uri = UriComponentsBuilder.fromPath("/hotel list/{city}")
+		.queryParam("q", "{q}")
+		.encode()
+		.buildAndExpand("New York", "foo+bar")
+		.toUri();
+
+// Result is "/hotel%20list/New%20York?q=foo%2Bbar"</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val uri = UriComponentsBuilder.fromPath("/hotel list/{city}")
+		.queryParam("q", "{q}")
+		.encode()
+		.buildAndExpand("New York", "foo+bar")
+		.toUri()
+
+// Result is "/hotel%20list/New%20York?q=foo%2Bbar"</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can shorten the preceding example by going directly to the URI (which implies encoding),
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">URI uri = UriComponentsBuilder.fromPath("/hotel list/{city}")
+		.queryParam("q", "{q}")
+		.build("New York", "foo+bar");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val uri = UriComponentsBuilder.fromPath("/hotel list/{city}")
+		.queryParam("q", "{q}")
+		.build("New York", "foo+bar")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>You can shorten it further still with a full URI template, as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">URI uri = UriComponentsBuilder.fromUriString("/hotel list/{city}?q={q}")
+		.build("New York", "foo+bar");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val uri = UriComponentsBuilder.fromUriString("/hotel list/{city}?q={q}")
+		.build("New York", "foo+bar")</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>WebClient</code> and the <code>RestTemplate</code> expand and encode URI templates internally through
+the <code>UriBuilderFactory</code> strategy. Both can be configured with a custom strategy.
+as the following example shows:</p>
+</div>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String baseUrl = "https://example.com";
+DefaultUriBuilderFactory factory = new DefaultUriBuilderFactory(baseUrl)
+factory.setEncodingMode(EncodingMode.TEMPLATE_AND_VALUES);
+
+// Customize the RestTemplate..
+RestTemplate restTemplate = new RestTemplate();
+restTemplate.setUriTemplateHandler(factory);
+
+// Customize the WebClient..
+WebClient client = WebClient.builder().uriBuilderFactory(factory).build();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val baseUrl = "https://example.com"
+val factory = DefaultUriBuilderFactory(baseUrl).apply {
+	encodingMode = EncodingMode.TEMPLATE_AND_VALUES
+}
+
+// Customize the RestTemplate..
+val restTemplate = RestTemplate().apply {
+	uriTemplateHandler = factory
+}
+
+// Customize the WebClient..
+val client = WebClient.builder().uriBuilderFactory(factory).build()</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>DefaultUriBuilderFactory</code> implementation uses <code>UriComponentsBuilder</code> internally to
+expand and encode URI templates. As a factory, it provides a single place to configure
+the approach to encoding, based on one of the below encoding modes:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>TEMPLATE_AND_VALUES</code>: Uses <code>UriComponentsBuilder#encode()</code>, corresponding to
+the first option in the earlier list, to pre-encode the URI template and strictly encode URI variables when
+expanded.</p>
+</li>
+<li>
+<p><code>VALUES_ONLY</code>: Does not encode the URI template and, instead, applies strict encoding
+to URI variables through <code>UriUtils#encodeUriVariables</code> prior to expanding them into the
+template.</p>
+</li>
+<li>
+<p><code>URI_COMPONENT</code>: Uses <code>UriComponents#encode()</code>, corresponding to the second option in the earlier list, to
+encode URI component value <em>after</em> URI variables are expanded.</p>
+</li>
+<li>
+<p><code>NONE</code>: No encoding is applied.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>The <code>RestTemplate</code> is set to <code>EncodingMode.URI_COMPONENT</code> for historic
+reasons and for backwards compatibility. The <code>WebClient</code> relies on the default value
+in <code>DefaultUriBuilderFactory</code>, which was changed from <code>EncodingMode.URI_COMPONENT</code> in
+5.0.x to <code>EncodingMode.TEMPLATE_AND_VALUES</code> in 5.1.</p>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+  </body>
+</html>
