@@ -2,3 +2,6 @@ plugins {
   id "io.github.rwinch.antora" version "0.0.2"
 }
 
+antora {
+  antoraVersion = "2.3.4"
+}
