@@ -416,12 +416,12 @@ as the local file system, the Java <code>CLASSPATH</code>, and so on.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-After you learn about Spring&#8217;s IoC container, you may want to know more about Spring&#8217;s
+<div class="paragraph">
+<p>After you learn about Spring&#8217;s IoC container, you may want to know more about Spring&#8217;s
 <code>Resource</code> abstraction (as described in <a href="#resources">[resources]</a>), which provides a convenient
 mechanism for reading an InputStream from locations defined in a URI syntax. In particular,
-<code>Resource</code> paths are used to construct applications contexts, as described in <a href="#resources-app-ctx">[resources-app-ctx]</a>.
-===
+<code>Resource</code> paths are used to construct applications contexts, as described in <a href="#resources-app-ctx">[resources-app-ctx]</a>.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -527,16 +527,13 @@ be valid XML bean definitions, according to the Spring Schema.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-It is possible, but not recommended, to reference files in parent directories using a
+<div class="paragraph">
+<p>It is possible, but not recommended, to reference files in parent directories using a
 relative "../" path. Doing so creates a dependency on a file that is outside the current
 application. In particular, this reference is not recommended for <code>classpath:</code> URLs (for
 example, <code>classpath:../services.xml</code>), where the runtime resolution process chooses the
 &#8220;nearest&#8221; classpath root and then looks into its parent directory. Classpath
-configuration changes may lead to the choice of a different, incorrect directory.
-</td>
-</tr>
-</table>
+configuration changes may lead to the choice of a different, incorrect directory.</p>
 </div>
 <div class="paragraph">
 <p>You can always use fully qualified resource locations instead of relative paths: for
@@ -544,8 +541,11 @@ example, <code>file:C:/config/services.xml</code> or <code>classpath:/config/ser
 aware that you are coupling your application&#8217;s configuration to specific absolute
 locations. It is generally preferable to keep an indirection for such absolute
 locations&#8201;&#8212;&#8201;for example, through "${&#8230;&#8203;}" placeholders that are resolved against JVM
-system properties at runtime.
-===</p>
+system properties at runtime.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The namespace itself provides the import directive feature. Further

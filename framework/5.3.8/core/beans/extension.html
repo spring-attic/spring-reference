@@ -270,13 +270,10 @@ registration of <code>BeanPostProcessor</code> instances</a>.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-<code>BeanPostProcessor</code> instances operate on bean (or object) instances. That is,
+<div class="paragraph">
+<p><code>BeanPostProcessor</code> instances operate on bean (or object) instances. That is,
 the Spring IoC container instantiates a bean instance and then <code>BeanPostProcessor</code>
-instances do their work.
-</td>
-</tr>
-</table>
+instances do their work.</p>
 </div>
 <div class="paragraph">
 <p><code>BeanPostProcessor</code> instances are scoped per-container. This is relevant only if you
@@ -288,8 +285,11 @@ another container, even if both containers are part of the same hierarchy.</p>
 <div class="paragraph">
 <p>To change the actual bean definition (that is, the blueprint that defines the bean),
 you instead need to use a <code>BeanFactoryPostProcessor</code>, as described in
-<a href="#beans-factory-extension-factory-postprocessors">Customizing Configuration Metadata with a <code>BeanFactoryPostProcessor</code></a>.
-===</p>
+<a href="#beans-factory-extension-factory-postprocessors">Customizing Configuration Metadata with a <code>BeanFactoryPostProcessor</code></a>.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The <code>org.springframework.beans.factory.config.BeanPostProcessor</code> interface consists of
@@ -349,18 +349,15 @@ explicit ordering.
 </td>
 <td class="content">
 <div class="title"><code>BeanPostProcessor</code> instances and AOP auto-proxying</div>
-===
-Classes that implement the <code>BeanPostProcessor</code> interface are special and are treated
+<div class="paragraph">
+<p>Classes that implement the <code>BeanPostProcessor</code> interface are special and are treated
 differently by the container. All <code>BeanPostProcessor</code> instances and beans that they
 directly reference are instantiated on startup, as part of the special startup phase
 of the <code>ApplicationContext</code>. Next, all <code>BeanPostProcessor</code> instances are registered
 in a sorted fashion and applied to all further beans in the container. Because AOP
 auto-proxying is implemented as a <code>BeanPostProcessor</code> itself, neither <code>BeanPostProcessor</code>
 instances nor the beans they directly reference are eligible for auto-proxying and,
-thus, do not have aspects woven into them.
-</td>
-</tr>
-</table>
+thus, do not have aspects woven into them.</p>
 </div>
 <div class="paragraph">
 <p>For any such bean, you should see an informational log message: <code>Bean someBean is not
@@ -374,8 +371,11 @@ when searching for type-matching dependency candidates and, therefore, make them
 ineligible for auto-proxying or other kinds of bean post-processing. For example, if you
 have a dependency annotated with <code>@Resource</code> where the field or setter name does not
 directly correspond to the declared name of a bean and no name attribute is used,
-Spring accesses other beans for matching them by type.
-===</p>
+Spring accesses other beans for matching them by type.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The following examples show how to write, register, and use <code>BeanPostProcessor</code> instances
@@ -549,25 +549,25 @@ and {api-spring-framework}/core/Ordered.html[<code>Ordered</code>] interfaces fo
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-If you want to change the actual bean instances (that is, the objects that are created
+<div class="paragraph">
+<p>If you want to change the actual bean instances (that is, the objects that are created
 from the configuration metadata), then you instead need to use a <code>BeanPostProcessor</code>
 (described earlier in <a href="#beans-factory-extension-bpp">Customizing Beans by Using a <code>BeanPostProcessor</code></a>). While it is technically possible
 to work with bean instances within a <code>BeanFactoryPostProcessor</code> (for example, by using
 <code>BeanFactory.getBean()</code>), doing so causes premature bean instantiation, violating the
 standard container lifecycle. This may cause negative side effects, such as bypassing
-bean post processing.
-</td>
-</tr>
-</table>
+bean post processing.</p>
 </div>
 <div class="paragraph">
 <p>Also, <code>BeanFactoryPostProcessor</code> instances are scoped per-container. This is only relevant
 if you use container hierarchies. If you define a <code>BeanFactoryPostProcessor</code> in one
 container, it is applied only to the bean definitions in that container. Bean definitions
 in one container are not post-processed by <code>BeanFactoryPostProcessor</code> instances in another
-container, even if both containers are part of the same hierarchy.
-===</p>
+container, even if both containers are part of the same hierarchy.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>A bean factory post-processor is automatically run when it is declared inside an

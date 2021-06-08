@@ -660,13 +660,10 @@ and delegate method calls onto the real object.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-You may also use <code>&lt;aop:scoped-proxy/&gt;</code> between beans that are scoped as <code>singleton</code>,
+<div class="paragraph">
+<p>You may also use <code>&lt;aop:scoped-proxy/&gt;</code> between beans that are scoped as <code>singleton</code>,
 with the reference then going through an intermediate proxy that is serializable
-and therefore able to re-obtain the target singleton bean on deserialization.
-</td>
-</tr>
-</table>
+and therefore able to re-obtain the target singleton bean on deserialization.</p>
 </div>
 <div class="paragraph">
 <p>When declaring <code>&lt;aop:scoped-proxy/&gt;</code> against a bean of scope <code>prototype</code>, every method
@@ -687,8 +684,11 @@ several additional access variants, including <code>getIfAvailable</code> and <c
 <div class="paragraph">
 <p>The JSR-330 variant of this is called <code>Provider</code> and is used with a <code>Provider&lt;MyTargetBean&gt;</code>
 declaration and a corresponding <code>get()</code> call for every retrieval attempt.
-See <a href="#beans-standard-annotations">here</a> for more details on JSR-330 overall.
-===</p>
+See <a href="#beans-standard-annotations">here</a> for more details on JSR-330 overall.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>The configuration in the following example is only one line, but it is important to
@@ -799,10 +799,10 @@ the <code>&lt;aop:scoped-proxy/&gt;</code> element, a CGLIB-based class proxy is
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-CGLIB proxies intercept only public method calls! Do not call non-public methods
-on such a proxy. They are not delegated to the actual scoped target object.
-===
+<div class="paragraph">
+<p>CGLIB proxies intercept only public method calls! Do not call non-public methods
+on such a proxy. They are not delegated to the actual scoped target object.</p>
+</div>
 </td>
 </tr>
 </table>

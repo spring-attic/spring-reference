@@ -336,14 +336,14 @@ defined through regular bean definition metadata.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-Bean metadata and manually supplied singleton instances need to be registered as early
+<div class="paragraph">
+<p>Bean metadata and manually supplied singleton instances need to be registered as early
 as possible, in order for the container to properly reason about them during autowiring
 and other introspection steps. While overriding existing metadata and existing
 singleton instances is supported to some degree, the registration of new beans at
 runtime (concurrently with live access to the factory) is not officially supported and may
-lead to concurrent access exceptions, inconsistent state in the bean container, or both.
-===
+lead to concurrent access exceptions, inconsistent state in the bean container, or both.</p>
+</div>
 </td>
 </tr>
 </table>

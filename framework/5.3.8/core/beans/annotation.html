@@ -282,10 +282,10 @@ and <code>@Named</code>. Details about those annotations can be found in the
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-Annotation injection is performed before XML injection. Thus, the XML configuration
-overrides the annotations for properties wired through both approaches.
-===
+<div class="paragraph">
+<p>Annotation injection is performed before XML injection. Thus, the XML configuration
+overrides the annotations for properties wired through both approaches.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -340,13 +340,13 @@ configuration (notice the inclusion of the <code>context</code> namespace):</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-<code>&lt;context:annotation-config/&gt;</code> only looks for annotations on beans in the same
+<div class="paragraph">
+<p><code>&lt;context:annotation-config/&gt;</code> only looks for annotations on beans in the same
 application context in which it is defined. This means that, if you put
 <code>&lt;context:annotation-config/&gt;</code> in a <code>WebApplicationContext</code> for a <code>DispatcherServlet</code>,
 it only checks for <code>@Autowired</code> beans in your controllers, and not your services. See
-<a href="../../web.html#mvc-servlet" class="page">The DispatcherServlet</a> for more information.
-===
+<a href="../../web.html#mvc-servlet" class="page">The DispatcherServlet</a> for more information.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -404,10 +404,10 @@ references and values even when you use the class outside of a container.</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-===
-The {api-spring-framework}/beans/factory/annotation/RequiredAnnotationBeanPostProcessor.html[<code>RequiredAnnotationBeanPostProcessor</code>]
-must be registered as a bean to enable support for the <code>@Required</code> annotation.
-===
+<div class="paragraph">
+<p>The {api-spring-framework}/beans/factory/annotation/RequiredAnnotationBeanPostProcessor.html[<code>RequiredAnnotationBeanPostProcessor</code>]
+must be registered as a bean to enable support for the <code>@Required</code> annotation.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -419,12 +419,12 @@ must be registered as a bean to enable support for the <code>@Required</code> an
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-The <code>@Required</code> annotation and <code>RequiredAnnotationBeanPostProcessor</code> are formally
+<div class="paragraph">
+<p>The <code>@Required</code> annotation and <code>RequiredAnnotationBeanPostProcessor</code> are formally
 deprecated as of Spring Framework 5.1, in favor of using constructor injection for
 required settings (or a custom implementation of <code>InitializingBean.afterPropertiesSet()</code>
-or a custom <code>@PostConstruct</code> method along with bean property setter methods).
-===
+or a custom <code>@PostConstruct</code> method along with bean property setter methods).</p>
+</div>
 </td>
 </tr>
 </table>
@@ -441,10 +441,10 @@ or a custom <code>@PostConstruct</code> method along with bean property setter m
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-JSR 330&#8217;s <code>@Inject</code> annotation can be used in place of Spring&#8217;s <code>@Autowired</code> annotation in the
-examples included in this section. See <a href="#beans-standard-annotations">here</a> for more details.
-===
+<div class="paragraph">
+<p>JSR 330&#8217;s <code>@Inject</code> annotation can be used in place of Spring&#8217;s <code>@Autowired</code> annotation in the
+examples included in this section. See <a href="#beans-standard-annotations">here</a> for more details.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -482,14 +482,14 @@ examples included in this section. See <a href="#beans-standard-annotations">her
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-As of Spring Framework 4.3, an <code>@Autowired</code> annotation on such a constructor is no longer
+<div class="paragraph">
+<p>As of Spring Framework 4.3, an <code>@Autowired</code> annotation on such a constructor is no longer
 necessary if the target bean defines only one constructor to begin with. However, if
 several constructors are available and there is no primary/default constructor, at least
 one of the constructors must be annotated with <code>@Autowired</code> in order to instruct the
 container which one to use. See the discussion on
-<a href="#beans-autowired-annotation-constructor-resolution">constructor resolution</a> for details.
-===
+<a href="#beans-autowired-annotation-constructor-resolution">constructor resolution</a> for details.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -614,13 +614,10 @@ following example shows:</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-===
-Make sure that your target components (for example, <code>MovieCatalog</code> or <code>CustomerPreferenceDao</code>)
+<div class="paragraph">
+<p>Make sure that your target components (for example, <code>MovieCatalog</code> or <code>CustomerPreferenceDao</code>)
 are consistently declared by the type that you use for your <code>@Autowired</code>-annotated
-injection points. Otherwise, injection may fail due to a "no type match found" error at runtime.
-</td>
-</tr>
-</table>
+injection points. Otherwise, injection may fail due to a "no type match found" error at runtime.</p>
 </div>
 <div class="paragraph">
 <p>For XML-defined beans or component classes found via classpath scanning, the container
@@ -628,8 +625,11 @@ usually knows the concrete type up front. However, for <code>@Bean</code> factor
 to make sure that the declared return type is sufficiently expressive. For components
 that implement several interfaces or for components potentially referred to by their
 implementation type, consider declaring the most specific return type on your factory
-method (at least as specific as required by the injection points referring to your bean).
-===</p>
+method (at least as specific as required by the injection points referring to your bean).</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>You can also instruct Spring to provide all beans of a particular type from the
@@ -698,14 +698,11 @@ expects an array of that type, as the following example shows:</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-===
-Your target beans can implement the <code>org.springframework.core.Ordered</code> interface or use
+<div class="paragraph">
+<p>Your target beans can implement the <code>org.springframework.core.Ordered</code> interface or use
 the <code>@Order</code> or standard <code>@Priority</code> annotation if you want items in the array or list
 to be sorted in a specific order. Otherwise, their order follows the registration
-order of the corresponding target bean definitions in the container.
-</td>
-</tr>
-</table>
+order of the corresponding target bean definitions in the container.</p>
 </div>
 <div class="paragraph">
 <p>You can declare the <code>@Order</code> annotation at the target class level and on <code>@Bean</code> methods,
@@ -717,8 +714,11 @@ orthogonal concern determined by dependency relationships and <code>@DependsOn</
 <div class="paragraph">
 <p>Note that the standard <code>javax.annotation.Priority</code> annotation is not available at the
 <code>@Bean</code> level, since it cannot be declared on methods. Its semantics can be modeled
-through <code>@Order</code> values in combination with <code>@Primary</code> on a single bean for each type.
-===</p>
+through <code>@Order</code> values in combination with <code>@Primary</code> on a single bean for each type.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Even typed <code>Map</code> instances can be autowired as long as the expected key type is <code>String</code>.
@@ -815,8 +815,8 @@ without an <code>@Autowired</code> annotation.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-Only one constructor of any given bean class may declare <code>@Autowired</code> with the <code>required</code>
+<div class="paragraph">
+<p>Only one constructor of any given bean class may declare <code>@Autowired</code> with the <code>required</code>
 attribute set to <code>true</code>, indicating <em>the</em> constructor to autowire when used as a Spring
 bean. As a consequence, if the <code>required</code> attribute is left at its default value <code>true</code>,
 only a single constructor may be annotated with <code>@Autowired</code>. If multiple constructors
@@ -828,10 +828,7 @@ then a primary/default constructor (if present) will be used. Similarly, if a cl
 declares multiple constructors but none of them is annotated with <code>@Autowired</code>, then a
 primary/default constructor (if present) will be used. If a class only declares a single
 constructor to begin with, it will always be used, even if not annotated. Note that an
-annotated constructor does not have to be public.
-</td>
-</tr>
-</table>
+annotated constructor does not have to be public.</p>
 </div>
 <div class="paragraph">
 <p>The <code>required</code> attribute of <code>@Autowired</code> is recommended over the deprecated <code>@Required</code>
@@ -839,8 +836,11 @@ annotation on setter methods. Setting the <code>required</code> attribute to <co
 the property is not required for autowiring purposes, and the property is ignored if it
 cannot be autowired. <code>@Required</code>, on the other hand, is stronger in that it enforces the
 property to be set by any means supported by the container, and if no value is defined,
-a corresponding exception is raised.
-===</p>
+a corresponding exception is raised.</p>
+</div>
+</td>
+</tr>
+</table>
 </div>
 <div class="paragraph">
 <p>Alternatively, you can express the non-required nature of a particular dependency
@@ -928,12 +928,12 @@ an <code>ApplicationContext</code> object:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-The <code>@Autowired</code>, <code>@Inject</code>, <code>@Value</code>, and <code>@Resource</code> annotations are handled by Spring
+<div class="paragraph">
+<p>The <code>@Autowired</code>, <code>@Inject</code>, <code>@Value</code>, and <code>@Resource</code> annotations are handled by Spring
 <code>BeanPostProcessor</code> implementations. This means that you cannot apply these annotations
 within your own <code>BeanPostProcessor</code> or <code>BeanFactoryPostProcessor</code> types (if any).
-These types must be 'wired up' explicitly by using XML or a Spring <code>@Bean</code> method.
-===
+These types must be 'wired up' explicitly by using XML or a Spring <code>@Bean</code> method.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -1203,14 +1203,14 @@ injected into a <code>Set&lt;MovieCatalog&gt;</code> annotated with <code>@Quali
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-===
-Letting qualifier values select against target bean names, within the type-matching
+<div class="paragraph">
+<p>Letting qualifier values select against target bean names, within the type-matching
 candidates, does not require a <code>@Qualifier</code> annotation at the injection point.
 If there is no other resolution indicator (such as a qualifier or a primary marker),
 for a non-unique dependency situation, Spring matches the injection point name
 (that is, the field name or parameter name) against the target bean names and choose the
-same-named candidate, if any.
-===
+same-named candidate, if any.</p>
+</div>
 </td>
 </tr>
 </table>
@@ -1253,15 +1253,15 @@ by its unique name.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-Trying to inject the results from <code>@Bean</code> methods on the same configuration class is
+<div class="paragraph">
+<p>Trying to inject the results from <code>@Bean</code> methods on the same configuration class is
 effectively a self-reference scenario as well. Either lazily resolve such references
 in the method signature where it is actually needed (as opposed to an autowired field
 in the configuration class) or declare the affected <code>@Bean</code> methods as <code>static</code>,
 decoupling them from the containing configuration class instance and its lifecycle.
 Otherwise, such beans are only considered in the fallback phase, with matching beans
-on other configuration classes selected as primary candidates instead (if available).
-===
+on other configuration classes selected as primary candidates instead (if available).</p>
+</div>
 </td>
 </tr>
 </table>
@@ -2233,13 +2233,13 @@ cleared upon destruction:</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-===
-Like <code>@Resource</code>, the <code>@PostConstruct</code> and <code>@PreDestroy</code> annotation types were a part
+<div class="paragraph">
+<p>Like <code>@Resource</code>, the <code>@PostConstruct</code> and <code>@PreDestroy</code> annotation types were a part
 of the standard Java libraries from JDK 6 to 8. However, the entire <code>javax.annotation</code>
 package got separated from the core Java modules in JDK 9 and eventually removed in
 JDK 11. If needed, the <code>javax.annotation-api</code> artifact needs to be obtained via Maven
-Central now, simply to be added to the application&#8217;s classpath like any other library.
-===
+Central now, simply to be added to the application&#8217;s classpath like any other library.</p>
+</div>
 </td>
 </tr>
 </table>
