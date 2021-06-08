@@ -11,5 +11,5 @@ content:
       start_path: docs
 ui:
   bundle:
-    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/master/raw/build/ui-bundle.zip?job=bundle-stable
+    url: https://github.com/rwinch/antora-ui-spring/releases/download/latest/ui-bundle.zip
     snapshot: true
