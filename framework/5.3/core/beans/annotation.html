@@ -225,7 +225,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../overview.html" class="home-link"></a>
+  <a href="../../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Spring Framework</a></li>
@@ -327,19 +327,19 @@ configuration (notice the inclusion of the <code>context</code> namespace):</p>
 <div class="ulist">
 <ul>
 <li>
-<p>{api-spring-framework}/context/annotation/ConfigurationClassPostProcessor.html[<code>ConfigurationClassPostProcessor</code>]</p>
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/ConfigurationClassPostProcessor.html"><code>ConfigurationClassPostProcessor</code></a></p>
 </li>
 <li>
-<p>{api-spring-framework}/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.html[<code>AutowiredAnnotationBeanPostProcessor</code>]</p>
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.html"><code>AutowiredAnnotationBeanPostProcessor</code></a></p>
 </li>
 <li>
-<p>{api-spring-framework}/context/annotation/CommonAnnotationBeanPostProcessor.html[<code>CommonAnnotationBeanPostProcessor</code>]</p>
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/CommonAnnotationBeanPostProcessor.html"><code>CommonAnnotationBeanPostProcessor</code></a></p>
 </li>
 <li>
-<p>{api-spring-framework}/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.html[<code>PersistenceAnnotationBeanPostProcessor</code>]</p>
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/orm/jpa/support/PersistenceAnnotationBeanPostProcessor.html"><code>PersistenceAnnotationBeanPostProcessor</code></a></p>
 </li>
 <li>
-<p>{api-spring-framework}/context/event/EventListenerMethodProcessor.html[<code>EventListenerMethodProcessor</code>]</p>
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/event/EventListenerMethodProcessor.html"><code>EventListenerMethodProcessor</code></a></p>
 </li>
 </ul>
 </div>
@@ -415,7 +415,7 @@ references and values even when you use the class outside of a container.</p>
 </td>
 <td class="content">
 <div class="paragraph">
-<p>The {api-spring-framework}/beans/factory/annotation/RequiredAnnotationBeanPostProcessor.html[<code>RequiredAnnotationBeanPostProcessor</code>]
+<p>The <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/factory/annotation/RequiredAnnotationBeanPostProcessor.html"><code>RequiredAnnotationBeanPostProcessor</code></a>
 must be registered as a bean to enable support for the <code>@Required</code> annotation.</p>
 </div>
 </td>
@@ -1734,7 +1734,7 @@ private lateinit var s: List&lt;Store&lt;Integer&gt;&gt;</code></pre>
 <h2 id="beans-custom-autowire-configurer"><a class="anchor" href="#beans-custom-autowire-configurer"></a>Using <code>CustomAutowireConfigurer</code></h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>{api-spring-framework}/beans/factory/annotation/CustomAutowireConfigurer.html[<code>CustomAutowireConfigurer</code>]
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/factory/annotation/CustomAutowireConfigurer.html"><code>CustomAutowireConfigurer</code></a>
 is a <code>BeanFactoryPostProcessor</code> that lets you register your own custom qualifier
 annotation types, even if they are not annotated with Spring&#8217;s <code>@Qualifier</code> annotation.
 The following example shows how to use <code>CustomAutowireConfigurer</code>:</p>
@@ -1870,7 +1870,7 @@ named <code>movieFinder</code> injected into its setter method:</p>
 The name provided with the annotation is resolved as a bean name by the
 <code>ApplicationContext</code> of which the <code>CommonAnnotationBeanPostProcessor</code> is aware.
 The names can be resolved through JNDI if you configure Spring&#8217;s
-{api-spring-framework}/jndi/support/SimpleJndiBeanFactory.html[<code>SimpleJndiBeanFactory</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jndi/support/SimpleJndiBeanFactory.html"><code>SimpleJndiBeanFactory</code></a>
 explicitly. However, we recommend that you rely on the default behavior and
 use Spring&#8217;s JNDI lookup capabilities to preserve the level of indirection.
 </td>

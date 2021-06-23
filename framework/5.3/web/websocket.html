@@ -223,7 +223,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../overview.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Spring Framework</a></li>
@@ -468,14 +468,14 @@ public class WebSocketConfig implements WebSocketConfigurer {
 in the configuration of a <a href="#mvc-servlet"><code>DispatcherServlet</code></a>. However, Spring&#8217;s
 WebSocket support does not depend on Spring MVC. It is relatively simple to
 integrate a <code>WebSocketHandler</code> into other HTTP-serving environments with the help of
-{api-spring-framework}/web/socket/server/support/WebSocketHttpRequestHandler.html[<code>WebSocketHttpRequestHandler</code>].</p>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/socket/server/support/WebSocketHttpRequestHandler.html"><code>WebSocketHttpRequestHandler</code></a>.</p>
 </div>
 <div class="paragraph">
 <p>When using the <code>WebSocketHandler</code> API directly vs indirectly, e.g. through the
 <a href="#websocket-stomp">STOMP</a> messaging, the application must synchronize the sending of messages
 since the underlying standard WebSocket session (JSR-356) does not allow concurrent
 sending. One option is to wrap the <code>WebSocketSession</code> with
-{api-spring-framework}/web/socket/handler/ConcurrentWebSocketSessionDecorator.html[<code>ConcurrentWebSocketSessionDecorator</code>].</p>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/socket/handler/ConcurrentWebSocketSessionDecorator.html"><code>ConcurrentWebSocketSessionDecorator</code></a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1032,7 +1032,7 @@ public class WebSocketConfig implements WebSocketConfigurer {
 configuration of a <a href="#mvc-servlet"><code>DispatcherServlet</code></a>. However, Spring&#8217;s WebSocket
 and SockJS support does not depend on Spring MVC. It is relatively simple to
 integrate into other HTTP serving environments with the help of
-{api-spring-framework}/web/socket/sockjs/support/SockJsHttpRequestHandler.html[<code>SockJsHttpRequestHandler</code>].</p>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/socket/sockjs/support/SockJsHttpRequestHandler.html"><code>SockJsHttpRequestHandler</code></a>.</p>
 </div>
 <div class="paragraph">
 <p>On the browser side, applications can use the
@@ -1092,7 +1092,7 @@ In 3.2, the Spring Security XML namespace does not set that header by default
 but can be configured to do so. In the future, it may set it by default.</p>
 </div>
 <div class="paragraph">
-<p>See {doc-root}/spring-security/site/docs/current/reference/htmlsingle/#headers[Default Security Headers]
+<p>See <a href="https://docs.spring.io/spring-security/site/docs/current/reference/htmlsingle/#headers">Default Security Headers</a>
 of the Spring Security documentation for details on how to configure the
 setting of the <code>X-Frame-Options</code> header. You can also see
 <a href="https://jira.spring.io/browse/SEC-2501">SEC-2501</a> for additional background.</p>
@@ -1726,23 +1726,23 @@ The following list briefly describes a few of the available messaging abstractio
 <div class="ulist">
 <ul>
 <li>
-<p>{api-spring-framework}/messaging/Message.html[Message]:
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/messaging/Message.html">Message</a>:
 Simple representation for a message, including headers and payload.</p>
 </li>
 <li>
-<p>{api-spring-framework}/messaging/MessageHandler.html[MessageHandler]:
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/messaging/MessageHandler.html">MessageHandler</a>:
 Contract for handling a message.</p>
 </li>
 <li>
-<p>{api-spring-framework}/messaging/MessageChannel.html[MessageChannel]:
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/messaging/MessageChannel.html">MessageChannel</a>:
 Contract for sending a message that enables loose coupling between producers and consumers.</p>
 </li>
 <li>
-<p>{api-spring-framework}/messaging/SubscribableChannel.html[SubscribableChannel]:
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/messaging/SubscribableChannel.html">SubscribableChannel</a>:
 <code>MessageChannel</code> with <code>MessageHandler</code> subscribers.</p>
 </li>
 <li>
-<p>{api-spring-framework}/messaging/support/ExecutorSubscribableChannel.html[ExecutorSubscribableChannel]:
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/messaging/support/ExecutorSubscribableChannel.html">ExecutorSubscribableChannel</a>:
 <code>SubscribableChannel</code> that uses an <code>Executor</code> for delivering messages.</p>
 </li>
 </ul>
@@ -2246,7 +2246,7 @@ public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
 </div>
 <div class="paragraph">
 <p>The STOMP broker relay in the preceding configuration is a Spring
-{api-spring-framework}/messaging/MessageHandler.html[<code>MessageHandler</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/messaging/MessageHandler.html"><code>MessageHandler</code></a>
 that handles messages by forwarding them to an external message broker.
 To do so, it establishes TCP connections to the broker, forwards all messages to it,
 and then forwards all messages received from the broker to clients through their

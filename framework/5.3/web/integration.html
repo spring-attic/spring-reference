@@ -223,7 +223,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../overview.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Spring Framework</a></li>
@@ -278,7 +278,7 @@ context&#8221;). This section details how you can configure a Spring container (
 </div>
 <div class="paragraph">
 <p>Moving on to specifics, all you one need to do is declare a
-{api-spring-framework}/web/context/ContextLoaderListener.html[<code>ContextLoaderListener</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/context/ContextLoaderListener.html"><code>ContextLoaderListener</code></a>
 in the standard Java EE servlet <code>web.xml</code> file of your web application and add a
 <code>contextConfigLocation</code>&lt;context-param/&gt; section (in the same file) that defines which
 set of Spring XML configuration files to load.</p>
@@ -308,7 +308,7 @@ set of Spring XML configuration files to load.</p>
 <p>If you do not specify the <code>contextConfigLocation</code> context parameter, the
 <code>ContextLoaderListener</code> looks for a file called <code>/WEB-INF/applicationContext.xml</code> to
 load. Once the context files are loaded, Spring creates a
-{api-spring-framework}/web/context/WebApplicationContext.html[<code>WebApplicationContext</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/context/WebApplicationContext.html"><code>WebApplicationContext</code></a>
 object based on the bean definitions and stores it in the <code>ServletContext</code> of the web
 application.</p>
 </div>
@@ -327,7 +327,7 @@ created by the <code>ContextLoaderListener</code>.</p>
 </div>
 <div class="paragraph">
 <p>The
-{api-spring-framework}/web/context/support/WebApplicationContextUtils.html[<code>WebApplicationContextUtils</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/context/support/WebApplicationContextUtils.html"><code>WebApplicationContextUtils</code></a>
 class is for convenience, so you need not remember the name of the <code>ServletContext</code>
 attribute. Its <code>getWebApplicationContext()</code> method returns <code>null</code> if an object
 does not exist under the <code>WebApplicationContext.ROOT_WEB_APPLICATION_CONTEXT_ATTRIBUTE</code>
@@ -393,7 +393,7 @@ default resolver of the underlying JSF implementation.</p>
 <div class="paragraph">
 <p>A custom <code>ELResolver</code> works well when mapping your properties to beans in
 <code>faces-config.xml</code>, but, at times, you may need to explicitly grab a bean.
-The {api-spring-framework}/web/jsf/FacesContextUtils.html[<code>FacesContextUtils</code>]
+The <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/jsf/FacesContextUtils.html"><code>FacesContextUtils</code></a>
 class makes this easy. It is similar to <code>WebApplicationContextUtils</code>, except that
 it takes a <code>FacesContext</code> parameter rather than a <code>ServletContext</code> parameter.</p>
 </div>

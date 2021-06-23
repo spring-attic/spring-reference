@@ -225,7 +225,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="overview.html" class="home-link"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Spring Framework</a></li>
@@ -443,21 +443,21 @@ methods.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/util/AopTestUtils.html"><code>AopTestUtils</code></a> is a collection of
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/util/AopTestUtils.html"><code>AopTestUtils</code></a> is a collection of
 AOP-related utility methods. You can use these methods to obtain a reference to the
 underlying target object hidden behind one or more Spring proxies. For example, if you
 have configured a bean as a dynamic mock by using a library such as EasyMock or Mockito,
 and the mock is wrapped in a Spring proxy, you may need direct access to the underlying
 mock to configure expectations on it and perform verifications. For Spring&#8217;s core AOP
-utilities, see <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/aop/support/AopUtils.html"><code>AopUtils</code></a> and
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/aop/framework/AopProxyUtils.html"><code>AopProxyUtils</code></a>.</p>
+utilities, see <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/aop/support/AopUtils.html"><code>AopUtils</code></a> and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/aop/framework/AopProxyUtils.html"><code>AopProxyUtils</code></a>.</p>
 </div>
 </div>
 <div class="sect3">
 <h4 id="unit-testing-spring-mvc"><a class="anchor" href="#unit-testing-spring-mvc"></a>Spring MVC Testing Utilities</h4>
 <div class="paragraph">
 <p>The <code>org.springframework.test.web</code> package contains
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/web/ModelAndViewAssert.html"><code>ModelAndViewAssert</code></a>, which you
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/web/ModelAndViewAssert.html"><code>ModelAndViewAssert</code></a>, which you
 can use in combination with JUnit, TestNG, or any other testing framework for unit tests
 that deal with Spring MVC <code>ModelAndView</code> objects.</p>
 </div>
@@ -1135,7 +1135,7 @@ class WebAppTests {
 <p>Note that <code>@WebAppConfiguration</code> must be used in conjunction with
 <code>@ContextConfiguration</code>, either within a single test class or within a test class
 hierarchy. See the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html"><code>@WebAppConfiguration</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html"><code>@WebAppConfiguration</code></a>
 javadoc for further details.</p>
 </div>
 </div>
@@ -1202,7 +1202,7 @@ class WebIntegrationTests {
 hierarchy within a test class hierarchy, you must explicitly name that level by supplying
 the same value to the <code>name</code> attribute in <code>@ContextConfiguration</code> at each corresponding
 level in the class hierarchy. See <a href="#testcontext-ctx-management-ctx-hierarchies">Context Hierarchies</a> and the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/ContextHierarchy.html"><code>@ContextHierarchy</code></a> javadoc
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/ContextHierarchy.html"><code>@ContextHierarchy</code></a> javadoc
 for further examples.</p>
 </div>
 </div>
@@ -1311,7 +1311,7 @@ and registering it by using the <code>resolver</code> attribute of <code>@Active
 <div class="paragraph">
 <p>See <a href="#testcontext-ctx-management-env-profiles">Context Configuration with Environment Profiles</a>,
 <a href="#testcontext-junit-jupiter-nested-test-configuration"><code>@Nested</code> test class configuration</a>, and the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/ActiveProfiles.html"><code>@ActiveProfiles</code></a> javadoc for
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/ActiveProfiles.html"><code>@ActiveProfiles</code></a> javadoc for
 examples and further details.</p>
 </div>
 </div>
@@ -1820,7 +1820,7 @@ class ExtendedTests : BaseTests() {
 </div>
 <div class="paragraph">
 <p>For further details regarding the <code>EXHAUSTIVE</code> and <code>CURRENT_LEVEL</code> algorithms, see the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/annotation/DirtiesContext.HierarchyMode.html"><code>DirtiesContext.HierarchyMode</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/annotation/DirtiesContext.HierarchyMode.html"><code>DirtiesContext.HierarchyMode</code></a>
 javadoc.</p>
 </div>
 </div>
@@ -1875,7 +1875,7 @@ class CustomTestExecutionListenerTests {
 <p>By default, <code>@TestExecutionListeners</code> provides support for inheriting listeners from
 superclasses or enclosing classes. See
 <a href="#testcontext-junit-jupiter-nested-test-configuration"><code>@Nested</code> test class configuration</a> and the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/TestExecutionListeners.html"><code>@TestExecutionListeners</code>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/TestExecutionListeners.html"><code>@TestExecutionListeners</code>
 javadoc</a> for an example and further details.</p>
 </div>
 </div>
@@ -1891,7 +1891,7 @@ javadoc</a> for an example and further details.</p>
 </div>
 <div class="paragraph">
 <p>See <a href="#testcontext-application-events">Application Events</a> and the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/event/RecordApplicationEvents.html"><code>@RecordApplicationEvents</code>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/event/RecordApplicationEvents.html"><code>@RecordApplicationEvents</code>
 javadoc</a> for an example and further details.</p>
 </div>
 </div>
@@ -2808,7 +2808,7 @@ class XmlJUnitJupiterSpringTests {
 </div>
 <div class="paragraph">
 <p>See <a href="#testcontext-ctx-management">Context Management</a> as well as the javadoc for
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/junit/jupiter/SpringJUnitConfig.html"><code>@SpringJUnitConfig</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/junit/jupiter/SpringJUnitConfig.html"><code>@SpringJUnitConfig</code></a>
 and <code>@ContextConfiguration</code> for further details.</p>
 </div>
 </div>
@@ -2903,9 +2903,9 @@ class XmlJUnitJupiterSpringWebTests {
 </div>
 <div class="paragraph">
 <p>See <a href="#testcontext-ctx-management">Context Management</a> as well as the javadoc for
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/junit/jupiter/web/SpringJUnitWebConfig.html"><code>@SpringJUnitWebConfig</code></a>,
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/ContextConfiguration.html"><code>@ContextConfiguration</code></a>, and
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html"><code>@WebAppConfiguration</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/junit/jupiter/web/SpringJUnitWebConfig.html"><code>@SpringJUnitWebConfig</code></a>,
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/ContextConfiguration.html"><code>@ContextConfiguration</code></a>, and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/web/WebAppConfiguration.html"><code>@WebAppConfiguration</code></a>
 for further details.</p>
 </div>
 </div>
@@ -3574,7 +3574,7 @@ in turn, manages a <code>TestContext</code> that holds the context of the curren
 and delegates to <code>TestExecutionListener</code> implementations, which instrument the actual
 test execution by providing dependency injection, managing transactions, and so on. A
 <code>SmartContextLoader</code> is responsible for loading an <code>ApplicationContext</code> for a given test
-class. See the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/package-summary.html">javadoc</a> and the
+class. See the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/package-summary.html">javadoc</a> and the
 Spring test suite for further information and examples of various implementations.</p>
 </div>
 <div class="sect4">
@@ -3766,7 +3766,7 @@ annotation.</p>
 <p>You can register <code>TestExecutionListener</code> implementations for a test class and its
 subclasses by using the <code>@TestExecutionListeners</code> annotation. See
 <a href="#integration-testing-annotations">annotation support</a> and the javadoc for
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/TestExecutionListeners.html"><code>@TestExecutionListeners</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/TestExecutionListeners.html"><code>@TestExecutionListeners</code></a>
 for details and examples.</p>
 </div>
 </div>
@@ -4032,7 +4032,7 @@ class OrderServiceTests {
 </div>
 <div class="paragraph">
 <p>See the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/event/ApplicationEvents.html"><code>ApplicationEvents</code>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/event/ApplicationEvents.html"><code>ApplicationEvents</code>
 javadoc</a> for further details regarding the <code>ApplicationEvents</code> API.</p>
 </div>
 </div>
@@ -4713,8 +4713,8 @@ of a single constructor without the use of Spring annotations.</p>
 </div>
 <div class="paragraph">
 <p>See the javadoc of
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/context/annotation/Configuration.html"><code>@Configuration</code></a> and
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/context/annotation/Bean.html"><code>@Bean</code></a> for further information
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/Configuration.html"><code>@Configuration</code></a> and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/Bean.html"><code>@Bean</code></a> for further information
 regarding the configuration and semantics of component classes, paying special attention
 to the discussion of <code>@Bean</code> Lite Mode.</p>
 </div>
@@ -4728,7 +4728,7 @@ TestContext framework tries to detect the presence of default configuration clas
 Specifically, <code>AnnotationConfigContextLoader</code> and <code>AnnotationConfigWebContextLoader</code>
 detect all <code>static</code> nested classes of the test class that meet the requirements for
 configuration class implementations, as specified in the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/context/annotation/Configuration.html"><code>@Configuration</code></a> javadoc.
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/Configuration.html"><code>@Configuration</code></a> javadoc.
 Note that the name of the configuration class is arbitrary. In addition, a test class can
 contain more than one <code>static</code> nested configuration class if desired. In the following
 example, the <code>OrderServiceTest</code> class declares a <code>static</code> nested configuration class
@@ -5675,7 +5675,7 @@ programmatically instead of declaratively&#8201;&#8212;&#8201;for example, based
 <p>To resolve active bean definition profiles programmatically, you can implement
 a custom <code>ActiveProfilesResolver</code> and register it by using the <code>resolver</code>
 attribute of <code>@ActiveProfiles</code>. For further information, see the corresponding
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/ActiveProfilesResolver.html">javadoc</a>.
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/ActiveProfilesResolver.html">javadoc</a>.
 The following example demonstrates how to implement and register a custom
 <code>OperatingSystemActiveProfilesResolver</code>:</p>
 </div>
@@ -6854,7 +6854,7 @@ If you use <code>@DirtiesContext</code> in a test whose context is configured as
 context hierarchy, you can use the <code>hierarchyMode</code> flag to control how the context cache
 is cleared. For further details, see the discussion of <code>@DirtiesContext</code> in
 <a href="#spring-testing-annotation-dirtiescontext">Spring Testing Annotations</a> and the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/annotation/DirtiesContext.html"><code>@DirtiesContext</code></a> javadoc.
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/annotation/DirtiesContext.html"><code>@DirtiesContext</code></a> javadoc.
 </td>
 </tr>
 </table>
@@ -7571,7 +7571,7 @@ Support for <code>TestTransaction</code> is automatically available whenever the
 </div>
 <div class="paragraph">
 <p>The following example demonstrates some of the features of <code>TestTransaction</code>. See the
-javadoc for <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/transaction/TestTransaction.html"><code>TestTransaction</code></a>
+javadoc for <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/transaction/TestTransaction.html"><code>TestTransaction</code></a>
 for further details.</p>
 </div>
 <div class="listingblock primary">
@@ -7675,7 +7675,7 @@ of <code>PlatformTransactionManager</code> within the test&#8217;s <code>Applica
 qualifier by using <code>@Transactional("myTxMgr")</code> or <code>@Transactional(transactionManager =
 "myTxMgr")</code>, or <code>TransactionManagementConfigurer</code> can be implemented by an
 <code>@Configuration</code> class. Consult the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/transaction/TestContextTransactionUtils.html#retrieveTransactionManager-org.springframework.test.context.TestContext-java.lang.String-">javadoc
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/transaction/TestContextTransactionUtils.html#retrieveTransactionManager-org.springframework.test.context.TestContext-java.lang.String-">javadoc
 for <code>TestContextTransactionUtils.retrieveTransactionManager()</code></a> for details on the
 algorithm used to look up a transaction manager in the test&#8217;s <code>ApplicationContext</code>.</p>
 </div>
@@ -7946,7 +7946,7 @@ integration test methods.</p>
 scripts and is mainly intended for internal use within the framework. However, if you
 require full control over how SQL scripts are parsed and run, <code>ScriptUtils</code> may suit
 your needs better than some of the other alternatives described later. See the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jdbc/datasource/init/ScriptUtils.html">javadoc</a> for individual
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jdbc/datasource/init/ScriptUtils.html">javadoc</a> for individual
 methods in <code>ScriptUtils</code> for further details.</p>
 </div>
 <div class="paragraph">
@@ -7956,7 +7956,7 @@ resources. <code>ResourceDatabasePopulator</code> provides options for configuri
 encoding, statement separator, comment delimiters, and error handling flags used when
 parsing and running the scripts. Each of the configuration options has a reasonable
 default value. See the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jdbc/datasource/init/ResourceDatabasePopulator.html">javadoc</a> for
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jdbc/datasource/init/ResourceDatabasePopulator.html">javadoc</a> for
 details on default values. To run the scripts configured in a
 <code>ResourceDatabasePopulator</code>, you can invoke either the <code>populate(Connection)</code> method to
 run the populator against a <code>java.sql.Connection</code> or the <code>execute(DataSource)</code> method
@@ -8242,8 +8242,8 @@ local <code>@SqlConfig</code> attributes do not supply an explicit value other t
 <p>The configuration options provided by <code>@Sql</code> and <code>@SqlConfig</code> are equivalent to those
 supported by <code>ScriptUtils</code> and <code>ResourceDatabasePopulator</code> but are a superset of those
 provided by the <code>&lt;jdbc:initialize-database/&gt;</code> XML namespace element. See the javadoc of
-individual attributes in <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/jdbc/Sql.html"><code>@Sql</code></a> and
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.html"><code>@SqlConfig</code></a> for details.</p>
+individual attributes in <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/jdbc/Sql.html"><code>@Sql</code></a> and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.html"><code>@SqlConfig</code></a> for details.</p>
 </div>
 <div id="testcontext-executing-sql-declaratively-tx" class="paragraph">
 <p><strong>Transaction management for <code>@Sql</code></strong></p>
@@ -8267,8 +8267,8 @@ behavior by setting the <code>transactionMode</code> attribute of <code>@SqlConf
 scripts should be run in an isolated transaction). Although a thorough discussion of all
 supported options for transaction management with <code>@Sql</code> is beyond the scope of this
 reference manual, the javadoc for
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.html"><code>@SqlConfig</code></a> and
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/jdbc/SqlScriptsTestExecutionListener.html"><code>SqlScriptsTestExecutionListener</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/jdbc/SqlConfig.html"><code>@SqlConfig</code></a> and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/jdbc/SqlScriptsTestExecutionListener.html"><code>SqlScriptsTestExecutionListener</code></a>
 provide detailed information, and the following example shows a typical testing scenario
 that uses JUnit Jupiter and transactional tests with <code>@Sql</code>:</p>
 </div>
@@ -8437,7 +8437,7 @@ for details.</p>
 <td class="content">
 Parallel test execution in the Spring TestContext Framework is only possible if
 the underlying <code>TestContext</code> implementation provides a copy constructor, as explained in
-the javadoc for <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/context/TestContext.html"><code>TestContext</code></a>. The
+the javadoc for <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/TestContext.html"><code>TestContext</code></a>. The
 <code>DefaultTestContext</code> used in Spring provides such a constructor. However, if you use a
 third-party library that provides a custom <code>TestContext</code> implementation, you need to
 verify that it is suitable for parallel test execution.
@@ -9228,7 +9228,7 @@ to handle requests:</p>
 </div>
 <div class="paragraph">
 <p>For Spring MVC, use the following which delegates to the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/setup/StandaloneMockMvcBuilder.html">StandaloneMockMvcBuilder</a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/setup/StandaloneMockMvcBuilder.html">StandaloneMockMvcBuilder</a>
 to load infrastructure equivalent to the <a href="web.html#mvc-config" class="page">WebMvc Java config</a>,
 registers the given controller(s), and creates an instance of
 <a href="#spring-mvc-test-framework">MockMvc</a> to handle requests:</p>
@@ -9256,7 +9256,7 @@ and response objects, without a running server.</p>
 </div>
 <div class="paragraph">
 <p>For WebFlux, use the following where the Spring <code>ApplicationContext</code> is passed to
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/web/server/adapter/WebHttpHandlerBuilder.html#applicationContext-org.springframework.context.ApplicationContext-">WebHttpHandlerBuilder</a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/server/adapter/WebHttpHandlerBuilder.html#applicationContext-org.springframework.context.ApplicationContext-">WebHttpHandlerBuilder</a>
 to create the <a href="web-reactive.html#webflux-web-handler-api" class="page">WebHandler chain</a> to handle
 requests:</p>
 </div>
@@ -9324,7 +9324,7 @@ class MyTests {
 </div>
 <div class="paragraph">
 <p>For Spring MVC, use the following where the Spring <code>ApplicationContext</code> is passed to
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/web/servlet/setup/MockMvcBuilders.html#webAppContextSetup-org.springframework.web.context.WebApplicationContext-">MockMvcBuilders.webAppContextSetup</a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/web/servlet/setup/MockMvcBuilders.html#webAppContextSetup-org.springframework.web.context.WebApplicationContext-">MockMvcBuilders.webAppContextSetup</a>
 to create a <a href="#spring-mvc-test-framework">MockMvc</a> instance to handle
 requests:</p>
 </div>
@@ -9621,7 +9621,7 @@ val result = client.get().uri("/persons/1")
 <td class="content">
 When you need to decode to a target type with generics, look for the overloaded methods
 that accept
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/core/ParameterizedTypeReference.html"><code>ParameterizedTypeReference</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/core/ParameterizedTypeReference.html"><code>ParameterizedTypeReference</code></a>
 instead of <code>Class&lt;T&gt;</code>.
 </td>
 </tr>
@@ -10147,7 +10147,7 @@ MockMvc mockMvc = MockMvcBuilders.standaloneSetup(new TestController())
 </div>
 <div class="paragraph">
 <p>See the javadoc for
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/web/servlet/setup/ConfigurableMockMvcBuilder.html"><code>ConfigurableMockMvcBuilder</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/web/servlet/setup/ConfigurableMockMvcBuilder.html"><code>ConfigurableMockMvcBuilder</code></a>
 for a list of all MockMvc builder features or use the IDE to explore the available options.</p>
 </div>
 </div>
@@ -10719,10 +10719,10 @@ of testing even within the same project.</p>
 <h5 id="spring-mvc-test-server-resources"><a class="anchor" href="#spring-mvc-test-server-resources"></a>Further Examples</h5>
 <div class="paragraph">
 <p>The framework&#8217;s own tests include
-{spring-framework-main-code}/spring-test/src/test/java/org/springframework/test/web/servlet/samples[
-many sample tests] intended to show how to use MockMvc on its own or through the
-{spring-framework-main-code}/spring-test/src/test/java/org/springframework/test/web/servlet/samples/client[
-WebTestClient]. Browse these examples for further ideas.</p>
+<a href="https://github.com/spring-projects/spring-framework/tree/main/spring-test/src/test/java/org/springframework/test/web/servlet/samples">
+many sample tests</a> intended to show how to use MockMvc on its own or through the
+<a href="https://github.com/spring-projects/spring-framework/tree/main/spring-test/src/test/java/org/springframework/test/web/servlet/samples/client">
+WebTestClient</a>. Browse these examples for further ideas.</p>
 </div>
 </div>
 </div>
@@ -12178,8 +12178,8 @@ configuration. Check for the support for code completion on static members.</p>
 <h4 id="spring-mvc-test-client-resources"><a class="anchor" href="#spring-mvc-test-client-resources"></a>Further Examples of Client-side REST Tests</h4>
 <div class="paragraph">
 <p>Spring MVC Test&#8217;s own tests include
-{spring-framework-main-code}/spring-test/src/test/java/org/springframework/test/web/client/samples[example
-tests] of client-side REST tests.</p>
+<a href="https://github.com/spring-projects/spring-framework/tree/main/spring-test/src/test/java/org/springframework/test/web/client/samples">example
+tests</a> of client-side REST tests.</p>
 </div>
 </div>
 </div>

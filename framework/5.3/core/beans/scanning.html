@@ -225,7 +225,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../overview.html" class="home-link"></a>
+  <a href="../../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Spring Framework</a></li>
@@ -1035,7 +1035,7 @@ class MovieFinderImpl : MovieFinder {
 <div class="paragraph">
 <p>If you do not want to rely on the default bean-naming strategy, you can provide a custom
 bean-naming strategy. First, implement the
-{api-spring-framework}/beans/factory/support/BeanNameGenerator.html[<code>BeanNameGenerator</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/factory/support/BeanNameGenerator.html"><code>BeanNameGenerator</code></a>
 interface, and be sure to include a default no-arg constructor. Then, provide the fully
 qualified class name when configuring the scanner, as the following example annotation
 and bean definition show.</p>
@@ -1152,7 +1152,7 @@ possibly also declaring a custom scoped-proxy mode.</p>
 <td class="content">
 To provide a custom strategy for scope resolution rather than relying on the
 annotation-based approach, you can implement the
-{api-spring-framework}/context/annotation/ScopeMetadataResolver.html[<code>ScopeMetadataResolver</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/ScopeMetadataResolver.html"><code>ScopeMetadataResolver</code></a>
 interface. Be sure to include a default no-arg constructor. Then you can provide the
 fully qualified class name when configuring the scanner, as the following example of both
 an annotation and a bean definition shows:

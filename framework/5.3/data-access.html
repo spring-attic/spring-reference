@@ -225,7 +225,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="overview.html" class="home-link"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Spring Framework</a></li>
@@ -1866,7 +1866,7 @@ subclass-level annotation.</p>
 <p>When a POJO class such as the one above is defined as a bean in a Spring context,
 you can make the bean instance transactional through an <code>@EnableTransactionManagement</code>
 annotation in a <code>@Configuration</code> class. See the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/transaction/annotation/EnableTransactionManagement.html">javadoc</a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/transaction/annotation/EnableTransactionManagement.html">javadoc</a>
 for full details.</p>
 </div>
 <div class="paragraph">
@@ -2113,7 +2113,7 @@ is modified) to support <code>@Transactional</code> runtime behavior on any kind
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>transaction-manager</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/transaction/annotation/TransactionManagementConfigurer.html"><code>TransactionManagementConfigurer</code></a> javadoc)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/transaction/annotation/TransactionManagementConfigurer.html"><code>TransactionManagementConfigurer</code></a> javadoc)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>transactionManager</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name of the transaction manager to use. Required only if the name of the transaction
   manager is not <code>transactionManager</code>, as in the preceding example.</p></td>
@@ -2606,7 +2606,7 @@ that it can roll back to. Such partial rollbacks let an inner transaction scope
 trigger a rollback for its scope, with the outer transaction being able to continue
 the physical transaction despite some operations having been rolled back. This setting
 is typically mapped onto JDBC savepoints, so it works only with JDBC resource
-transactions. See Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jdbc/datasource/DataSourceTransactionManager.html"><code>DataSourceTransactionManager</code></a>.</p>
+transactions. See Spring&#8217;s <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jdbc/datasource/DataSourceTransactionManager.html"><code>DataSourceTransactionManager</code></a>.</p>
 </div>
 </div>
 </div>
@@ -3538,7 +3538,7 @@ the JTA <code>UserTransaction</code> and <code>TransactionManager</code> objects
 the latter object, which varies by application server. Having access to the JTA
 <code>TransactionManager</code> allows for enhanced transaction semantics&#8201;&#8212;&#8201;in particular,
 supporting transaction suspension. See the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/transaction/jta/JtaTransactionManager.html"><code>JtaTransactionManager</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/transaction/jta/JtaTransactionManager.html"><code>JtaTransactionManager</code></a>
 javadoc for details.</p>
 </div>
 <div class="paragraph">
@@ -4089,7 +4089,7 @@ corresponding to the fully qualified class name of the template instance (typica
 <div class="paragraph">
 <p>The following sections provide some examples of <code>JdbcTemplate</code> usage. These examples
 are not an exhaustive list of all of the functionality exposed by the <code>JdbcTemplate</code>.
-See the attendant <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html">javadoc</a> for that.</p>
+See the attendant <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jdbc/core/JdbcTemplate.html">javadoc</a> for that.</p>
 </div>
 <div class="sect4">
 <h5 id="jdbc-JdbcTemplate-examples-query"><a class="anchor" href="#jdbc-JdbcTemplate-examples-query"></a>Querying (<code>SELECT</code>)</h5>
@@ -5346,7 +5346,7 @@ own new code by using the higher level abstractions for resource management, suc
 </table>
 </div>
 <div class="paragraph">
-<p>See the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jdbc/datasource/TransactionAwareDataSourceProxy.html"><code>TransactionAwareDataSourceProxy</code></a>
+<p>See the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jdbc/datasource/TransactionAwareDataSourceProxy.html"><code>TransactionAwareDataSourceProxy</code></a>
 javadoc for more details.</p>
 </div>
 </div>
@@ -7538,7 +7538,7 @@ db.shutdown()</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>See the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jdbc/datasource/embedded/EmbeddedDatabaseBuilder.html">javadoc for <code>EmbeddedDatabaseBuilder</code></a>
+<p>See the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jdbc/datasource/embedded/EmbeddedDatabaseBuilder.html">javadoc for <code>EmbeddedDatabaseBuilder</code></a>
 for further details on all supported options.</p>
 </div>
 <div class="paragraph">
@@ -8114,7 +8114,7 @@ run.</p>
 <i class="fa icon-tip" title="Tip"></i>
 </td>
 <td class="content">
-Dialects are resolved by <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/r2dbc/core/binding/BindMarkersFactoryResolver.html"><code>BindMarkersFactoryResolver</code></a>
+Dialects are resolved by <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/r2dbc/core/binding/BindMarkersFactoryResolver.html"><code>BindMarkersFactoryResolver</code></a>
  from a <code>ConnectionFactory</code>, typically by inspecting <code>ConnectionFactoryMetadata</code>.
 <br>
 You can let Spring auto-discover your <code>BindMarkersFactory</code> by registering a
@@ -8158,7 +8158,7 @@ the reactive sequence to aid debugging.</p>
 <div class="paragraph">
 <p>The following sections provide some examples of <code>DatabaseClient</code> usage. These examples
 are not an exhaustive list of all of the functionality exposed by the <code>DatabaseClient</code>.
-See the attendant <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/r2dbc/core/DatabaseClient.html">javadoc</a> for that.</p>
+See the attendant <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/r2dbc/core/DatabaseClient.html">javadoc</a> for that.</p>
 </div>
 <div class="sect4">
 <h5 id="r2dbc-DatabaseClient-examples-statement"><a class="anchor" href="#r2dbc-DatabaseClient-examples-statement"></a>Executing Statements</h5>
@@ -8832,7 +8832,7 @@ for resource management.
 </table>
 </div>
 <div class="paragraph">
-<p>See the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/r2dbc/connection/TransactionAwareConnectionFactoryProxy.html"><code>TransactionAwareConnectionFactoryProxy</code></a>
+<p>See the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/r2dbc/connection/TransactionAwareConnectionFactoryProxy.html"><code>TransactionAwareConnectionFactoryProxy</code></a>
 javadoc for more details.</p>
 </div>
 </div>
@@ -10265,8 +10265,8 @@ Spring-driven transaction management (that is, for use with <code>JpaTransaction
 </table>
 </div>
 <div class="paragraph">
-<p>See the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/orm/jpa/JpaDialect.html"><code>JpaDialect</code></a> and
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/orm/jpa/JpaVendorAdapter.html"><code>JpaVendorAdapter</code></a> javadoc for
+<p>See the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/orm/jpa/JpaDialect.html"><code>JpaDialect</code></a> and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/orm/jpa/JpaVendorAdapter.html"><code>JpaVendorAdapter</code></a> javadoc for
 more details of its operations and how they are used within Spring&#8217;s JPA support.</p>
 </div>
 </div>
@@ -10409,8 +10409,8 @@ simpler.</p>
 <div class="sect3">
 <h4 id="oxm-consistent-interfaces"><a class="anchor" href="#oxm-consistent-interfaces"></a>Consistent Interfaces</h4>
 <div class="paragraph">
-<p>Spring&#8217;s O-X mapping operates through two global interfaces: <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/oxm/Marshaller.html"><code>Marshaller</code></a> and
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/oxm/Unmarshaller.html"><code>Unmarshaller</code></a>. These abstractions let you switch O-X mapping frameworks
+<p>Spring&#8217;s O-X mapping operates through two global interfaces: <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/oxm/Marshaller.html"><code>Marshaller</code></a> and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/oxm/Unmarshaller.html"><code>Unmarshaller</code></a>. These abstractions let you switch O-X mapping frameworks
 with relative ease, with little or no change required on the classes that do the
 marshalling. This approach has the additional benefit of making it possible to do XML
 marshalling with a mix-and-match approach (for example, some marshalling performed using JAXB
@@ -11024,7 +11024,7 @@ set the <code>supportedClasses</code> property on the <code>XStreamMarshaller</c
 </div>
 <div class="paragraph">
 <p>Additionally, you can register
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/oxm/xstream/XStreamMarshaller.html#setConverters(com.thoughtworks.xstream.converters.ConverterMatcher&#8230;&#8203;)">custom
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/oxm/xstream/XStreamMarshaller.html#setConverters(com.thoughtworks.xstream.converters.ConverterMatcher&#8230;&#8203;)">custom
 converters</a> to make sure that only your supported classes can be unmarshalled. You might
 want to add a <code>CatchAllConverter</code> as the last converter in the list, in addition to
 converters that explicitly support the domain classes that should be supported. As a

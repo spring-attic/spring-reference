@@ -223,7 +223,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../overview.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Spring Framework</a></li>
@@ -249,8 +249,8 @@ Netty, Undertow, and Servlet 3.1+ containers.</p>
 </div>
 <div class="paragraph">
 <p>Both web frameworks mirror the names of their source modules
-({spring-framework-main-code}/spring-webmvc[spring-webmvc] and
-{spring-framework-main-code}/spring-webflux[spring-webflux]) and co-exist side by side in the
+(<a href="https://github.com/spring-projects/spring-framework/tree/main/spring-webmvc">spring-webmvc</a> and
+<a href="https://github.com/spring-projects/spring-framework/tree/main/spring-webflux">spring-webflux</a>) and co-exist side by side in the
 Spring Framework. Each module is optional. Applications can use one or the other module or,
 in some cases, both&#8201;&#8212;&#8201;for example, Spring MVC controllers with the reactive <code>WebClient</code>.</p>
 </div>
@@ -649,7 +649,7 @@ deserialization of HTTP request and response content.</p>
 <div class="sect2">
 <h3 id="webflux-httphandler"><a class="anchor" href="#webflux-httphandler"></a><code>HttpHandler</code></h3>
 <div class="paragraph">
-<p>{api-spring-framework}/http/server/reactive/HttpHandler.html[HttpHandler]
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/http/server/reactive/HttpHandler.html">HttpHandler</a>
 is a simple contract with a single method to handle a request and a response. It is
 intentionally minimal, and its main and only purpose is to be a minimal abstraction
 over different HTTP server APIs.</p>
@@ -860,7 +860,7 @@ server.start()</code></pre>
 </div>
 <div class="paragraph">
 <p>To deploy as a WAR to any Servlet 3.1+ container, you can extend and include
-{api-spring-framework}/web/server/adapter/AbstractReactiveWebInitializer.html[<code>AbstractReactiveWebInitializer</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/server/adapter/AbstractReactiveWebInitializer.html"><code>AbstractReactiveWebInitializer</code></a>
 in the WAR. That class wraps an <code>HttpHandler</code> with <code>ServletHttpHandlerAdapter</code> and registers
 that as a <code>Servlet</code>.</p>
 </div>
@@ -870,9 +870,9 @@ that as a <code>Servlet</code>.</p>
 <div class="paragraph">
 <p>The <code>org.springframework.web.server</code> package builds on the <a href="#webflux-httphandler"><code>HttpHandler</code></a> contract
 to provide a general-purpose web API for processing requests through a chain of multiple
-{api-spring-framework}/web/server/WebExceptionHandler.html[<code>WebExceptionHandler</code>], multiple
-{api-spring-framework}/web/server/WebFilter.html[<code>WebFilter</code>], and a single
-{api-spring-framework}/web/server/WebHandler.html[<code>WebHandler</code>] component. The chain can
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/server/WebExceptionHandler.html"><code>WebExceptionHandler</code></a>, multiple
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/server/WebFilter.html"><code>WebFilter</code></a>, and a single
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/server/WebHandler.html"><code>WebHandler</code></a> component. The chain can
 be put together with <code>WebHttpHandlerBuilder</code> by simply pointing to a Spring
 <code>ApplicationContext</code> where components are
 <a href="#webflux-web-handler-api-special-beans">auto-detected</a>, and/or by registering components
@@ -1144,7 +1144,7 @@ by implementing <code>Ordered</code>.</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ResponseStatusExceptionHandler</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Provides handling for exceptions of type
-  {api-spring-framework}/web/server/ResponseStatusException.html[<code>ResponseStatusException</code>]
+  <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/server/ResponseStatusException.html"><code>ResponseStatusException</code></a>
   by setting the response to the HTTP status code of the exception.</p></td>
 </tr>
 <tr>
@@ -1169,13 +1169,13 @@ Reactive Streams back pressure. The following describes this support:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>{api-spring-framework}/core/codec/Encoder.html[<code>Encoder</code>] and
-{api-spring-framework}/core/codec/Decoder.html[<code>Decoder</code>] are low level contracts to
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/core/codec/Encoder.html"><code>Encoder</code></a> and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/core/codec/Decoder.html"><code>Decoder</code></a> are low level contracts to
 encode and decode content independent of HTTP.</p>
 </li>
 <li>
-<p>{api-spring-framework}/http/codec/HttpMessageReader.html[<code>HttpMessageReader</code>] and
-{api-spring-framework}/http/codec/HttpMessageWriter.html[<code>HttpMessageWriter</code>] are contracts
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/http/codec/HttpMessageReader.html"><code>HttpMessageReader</code></a> and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/http/codec/HttpMessageWriter.html"><code>HttpMessageWriter</code></a> are contracts
 to encode and decode HTTP message content.</p>
 </li>
 <li>
@@ -1183,7 +1183,7 @@ to encode and decode HTTP message content.</p>
 application, while a <code>Decoder</code> can be wrapped with <code>DecoderHttpMessageReader</code>.</p>
 </li>
 <li>
-<p>{api-spring-framework}/core/io/buffer/DataBuffer.html[<code>DataBuffer</code>] abstracts different
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/core/io/buffer/DataBuffer.html"><code>DataBuffer</code></a> abstracts different
 byte buffer representations (e.g. Netty <code>ByteBuf</code>, <code>java.nio.ByteBuffer</code>, etc.) and is
 what all codecs work on. See <a href="../core.html#databuffers" class="page">Data Buffers and Codecs</a> in the
 "Spring Core" section for more on this topic.</p>
@@ -1305,7 +1305,7 @@ collects the parts into a <code>MultiValueMap</code>.
 By default, the <code>DefaultPartHttpMessageReader</code> is used, but this can be changed through the
 <code>ServerCodecConfigurer</code>.
 For more information about the <code>DefaultPartHttpMessageReader</code>, refer to to the
-{api-spring-framework}/http/codec/multipart/DefaultPartHttpMessageReader.html[javadoc of <code>DefaultPartHttpMessageReader</code>].</p>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/http/codec/multipart/DefaultPartHttpMessageReader.html">javadoc of <code>DefaultPartHttpMessageReader</code></a>.</p>
 </div>
 <div class="paragraph">
 <p>On the server side where multipart form content may need to be accessed from multiple
@@ -1409,11 +1409,11 @@ WebFlux log messages are prefixed with a request-specific ID by default.</p>
 </div>
 <div class="paragraph">
 <p>On the server side, the log ID is stored in the <code>ServerWebExchange</code> attribute
-({api-spring-framework}/web/server/ServerWebExchange.html#LOG_ID_ATTRIBUTE[<code>LOG_ID_ATTRIBUTE</code>]),
+(<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/server/ServerWebExchange.html#LOG_ID_ATTRIBUTE"><code>LOG_ID_ATTRIBUTE</code></a>),
 while a fully formatted prefix based on that ID is available from
 <code>ServerWebExchange#getLogPrefix()</code>. On the <code>WebClient</code> side, the log ID is stored in the
 <code>ClientRequest</code> attribute
-({api-spring-framework}/web/reactive/function/client/ClientRequest.html#LOG_ID_ATTRIBUTE[<code>LOG_ID_ATTRIBUTE</code>])
+(<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/reactive/function/client/ClientRequest.html#LOG_ID_ATTRIBUTE"><code>LOG_ID_ATTRIBUTE</code></a>)
 ,while a fully formatted prefix is available from <code>ClientRequest#logPrefix()</code>.</p>
 </div>
 </div>
@@ -1548,7 +1548,7 @@ This model is flexible and supports diverse workflows.</p>
 It is also designed to be a Spring bean itself and implements <code>ApplicationContextAware</code>
 for access to the context in which it runs. If <code>DispatcherHandler</code> is declared with a bean
 name of <code>webHandler</code>, it is, in turn, discovered by
-{api-spring-framework}/web/server/adapter/WebHttpHandlerBuilder.html[<code>WebHttpHandlerBuilder</code>],
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/server/adapter/WebHttpHandlerBuilder.html"><code>WebHttpHandlerBuilder</code></a>,
 which puts together a request-processing chain, as described in <a href="#webflux-web-handler-api"><code>WebHandler</code> API</a>.</p>
 </div>
 <div class="paragraph">
@@ -1733,9 +1733,9 @@ as a <code>HandlerResult</code>, along with some additional context, and passed 
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>ViewResolutionResultHandler</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CharSequence</code>, {api-spring-framework}/web/reactive/result/view/View.html[<code>View</code>],
-  {api-spring-framework}/ui/Model.html[Model], <code>Map</code>,
-  {api-spring-framework}/web/reactive/result/view/Rendering.html[Rendering],
+<td class="tableblock halign-left valign-top"><p class="tableblock"><code>CharSequence</code>, <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/reactive/result/view/View.html"><code>View</code></a>,
+  <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/ui/Model.html">Model</a>, <code>Map</code>,
+  <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/reactive/result/view/Rendering.html">Rendering</a>,
   or any other <code>Object</code> is treated as a model attribute.</p>
 <p class="tableblock">  See also <a href="#webflux-viewresolution">View Resolution</a>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>Integer.MAX_VALUE</code></p></td>
@@ -1812,7 +1812,7 @@ was not provided (for example, model attribute was returned) or an async return 
 (for example, <code>Mono</code> completed empty).</p>
 </li>
 <li>
-<p>{api-spring-framework}/web/reactive/result/view/Rendering.html[Rendering]: API for
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/reactive/result/view/Rendering.html">Rendering</a>: API for
 view resolution scenarios. Explore the options in your IDE with code completion.</p>
 </li>
 <li>
@@ -1820,9 +1820,9 @@ view resolution scenarios. Explore the options in your IDE with code completion.
 </li>
 <li>
 <p>Any other: Any other return value (except for simple types, as determined by
-{api-spring-framework}/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-[BeanUtils#isSimpleProperty])
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils#isSimpleProperty</a>)
 is treated as a model attribute to be added to the model. The attribute name is derived
-from the class name by using {api-spring-framework}/core/Conventions.html[conventions],
+from the class name by using <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/core/Conventions.html">conventions</a>,
 unless a handler method <code>@ModelAttribute</code> annotation is present.</p>
 </li>
 </ul>
@@ -2766,7 +2766,7 @@ and others) and is equivalent to <code>required=false</code>.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Any other argument</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">If a method argument is not matched to any of the above, it is, by default, resolved as
   a <code>@RequestParam</code> if it is a simple type, as determined by
-  {api-spring-framework}/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-[BeanUtils#isSimpleProperty],
+  <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils#isSimpleProperty</a>,
   or as a <code>@ModelAttribute</code>, otherwise.</p></td>
 </tr>
 </tbody>
@@ -2860,7 +2860,7 @@ generally supported for all return values.</p>
 <td class="tableblock halign-left valign-top"><p class="tableblock">If a return value is not matched to any of the above, it is, by default, treated as a view
   name, if it is <code>String</code> or <code>void</code> (default view name selection applies), or as a model
   attribute to be added to the model, unless it is a simple type, as determined by
-  {api-spring-framework}/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-[BeanUtils#isSimpleProperty],
+  <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils#isSimpleProperty</a>,
   in which case it remains unresolved.</p></td>
 </tr>
 </tbody>
@@ -3135,7 +3135,7 @@ wrapper.</p>
 <div class="paragraph">
 <p>Note that use of <code>@RequestParam</code> is optional&#8201;&#8212;&#8201;for example, to set its attributes. By
 default, any argument that is a simple value type (as determined by
-{api-spring-framework}/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-[BeanUtils#isSimpleProperty])
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils#isSimpleProperty</a>)
 and is not resolved by any other argument resolver is treated as if it were annotated
 with <code>@RequestParam</code>.</p>
 </div>
@@ -3499,7 +3499,7 @@ fun processSubmit(@Valid @ModelAttribute("pet") petMono: Mono&lt;Pet&gt;): Mono&
 <div class="paragraph">
 <p>Note that use of <code>@ModelAttribute</code> is optional&#8201;&#8212;&#8201;for example, to set its attributes.
 By default, any argument that is not a simple value type( as determined by
-{api-spring-framework}/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-[BeanUtils#isSimpleProperty])
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/BeanUtils.html#isSimpleProperty-java.lang.Class-">BeanUtils#isSimpleProperty</a>)
 and is not resolved by any other argument resolver is treated as if it were annotated
 with <code>@ModelAttribute</code>.</p>
 </div>
@@ -4390,7 +4390,7 @@ fun addAccount(@RequestParam number: String): Account {
 </td>
 <td class="content">
 When a name is not explicitly specified, a default name is chosen based on the type,
-as explained in the javadoc for {api-spring-framework}/core/Conventions.html[<code>Conventions</code>].
+as explained in the javadoc for <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/core/Conventions.html"><code>Conventions</code></a>.
 You can always assign an explicit name by using the overloaded <code>addAttribute</code> method or
 through the name attribute on <code>@ModelAttribute</code> (for a return value).
 </td>
@@ -4783,7 +4783,7 @@ public class ExampleAdvice3 {}</code></pre>
 <div class="paragraph">
 <p>The selectors in the preceding example are evaluated at runtime and may negatively impact
 performance if used extensively. See the
-{api-spring-framework}/web/bind/annotation/ControllerAdvice.html[<code>@ControllerAdvice</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/bind/annotation/ControllerAdvice.html"><code>@ControllerAdvice</code></a>
 javadoc for more details.</p>
 </div>
 </div>
@@ -6132,11 +6132,11 @@ val uri = uriBuilderFactory.uriString("/hotels/{hotel}")
 <div class="ulist">
 <ul>
 <li>
-<p>{api-spring-framework}/web/util/UriComponentsBuilder.html#encode--[UriComponentsBuilder#encode()]:
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/util/UriComponentsBuilder.html#encode--">UriComponentsBuilder#encode()</a>:
 Pre-encodes the URI template first and then strictly encodes URI variables when expanded.</p>
 </li>
 <li>
-<p>{api-spring-framework}/web/util/UriComponents.html#encode--[UriComponents#encode()]:
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/util/UriComponents.html#encode--">UriComponents#encode()</a>:
 Encodes URI components <em>after</em> URI variables are expanded.</p>
 </li>
 </ul>
@@ -6357,7 +6357,7 @@ and, consequently, browsers reject them.</p>
 </div>
 <div class="paragraph">
 <p>Each <code>HandlerMapping</code> can be
-{api-spring-framework}/web/reactive/handler/AbstractHandlerMapping.html#setCorsConfigurations-java.util.Map-[configured]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/reactive/handler/AbstractHandlerMapping.html#setCorsConfigurations-java.util.Map-">configured</a>
 individually with URL pattern-based <code>CorsConfiguration</code> mappings. In most cases, applications
 use the WebFlux Java configuration to declare such mappings, which results in a single,
 global map passed to all <code>HandlerMapping</code> implementations.</p>
@@ -6372,7 +6372,7 @@ class- or method-level <code>@CrossOrigin</code> annotations (other handlers can
 <p>The rules for combining global and local configuration are generally additive&#8201;&#8212;&#8201;for example,
 all global and all local origins. For those attributes where only a single value can be
 accepted, such as <code>allowCredentials</code> and <code>maxAge</code>, the local overrides the global value. See
-{api-spring-framework}/web/cors/CorsConfiguration.html#combine-org.springframework.web.cors.CorsConfiguration-[<code>CorsConfiguration#combine(CorsConfiguration)</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/cors/CorsConfiguration.html#combine-org.springframework.web.cors.CorsConfiguration-"><code>CorsConfiguration#combine(CorsConfiguration)</code></a>
 for more details.</p>
 </div>
 <div class="admonitionblock tip">
@@ -6409,7 +6409,7 @@ for more details.</p>
 <p><span class="small"><a href="../web.html#mvc-cors-controller" class="page">Web MVC</a></span></p>
 </div>
 <div class="paragraph">
-<p>The {api-spring-framework}/web/bind/annotation/CrossOrigin.html[<code>@CrossOrigin</code>]
+<p>The <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/bind/annotation/CrossOrigin.html"><code>@CrossOrigin</code></a>
 annotation enables cross-origin requests on annotated controller methods, as the
 following example shows:</p>
 </div>
@@ -6686,7 +6686,7 @@ class WebConfig : WebFluxConfigurer {
 </div>
 <div class="paragraph">
 <p>You can apply CORS support through the built-in
-{api-spring-framework}/web/cors/reactive/CorsWebFilter.html[<code>CorsWebFilter</code>], which is a
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/cors/reactive/CorsWebFilter.html"><code>CorsWebFilter</code></a>, which is a
 good fit with <a href="#webflux-fn">functional endpoints</a>.</p>
 </div>
 <div class="admonitionblock note">
@@ -6771,16 +6771,16 @@ reference documentation, including:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>{doc-root}/spring-security/site/docs/current/reference/html5/#jc-webflux[WebFlux Security]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/#jc-webflux">WebFlux Security</a></p>
 </li>
 <li>
-<p>{doc-root}/spring-security/site/docs/current/reference/html5/#test-webflux[WebFlux Testing Support]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/#test-webflux">WebFlux Testing Support</a></p>
 </li>
 <li>
-<p>{doc-root}/spring-security/site/docs/current/reference/html5/#csrf[CSRF Protection]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/#csrf">CSRF Protection</a></p>
 </li>
 <li>
-<p>{doc-root}/spring-security/site/docs/current/reference/html5/#headers[Security Response Headers]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/#headers">Security Response Headers</a></p>
 </li>
 </ul>
 </div>
@@ -7170,7 +7170,7 @@ class WebConfig : WebFluxConfigurer {
 </li>
 <li>
 <p><code>RenderingContext renderingContext</code>: The
-{api-spring-framework}/web/servlet/view/script/RenderingContext.html[<code>RenderingContext</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/servlet/view/script/RenderingContext.html"><code>RenderingContext</code></a>
 that gives access to the application context, the locale, the template loader, and the
 URL (since 5.0)</p>
 </li>
@@ -7274,8 +7274,8 @@ The following example shows how compile a template:</p>
 </div>
 <div class="paragraph">
 <p>Check out the Spring Framework unit tests,
-{spring-framework-main-code}/spring-webflux/src/test/java/org/springframework/web/reactive/result/view/script[Java], and
-{spring-framework-main-code}/spring-webflux/src/test/resources/org/springframework/web/reactive/result/view/script[resources],
+<a href="https://github.com/spring-projects/spring-framework/tree/main/spring-webflux/src/test/java/org/springframework/web/reactive/result/view/script">Java</a>, and
+<a href="https://github.com/spring-projects/spring-framework/tree/main/spring-webflux/src/test/resources/org/springframework/web/reactive/result/view/script">resources</a>,
 for more configuration examples.</p>
 </div>
 </div>
@@ -7331,7 +7331,7 @@ the <code>Last-Modified</code> header.</p>
 <p><span class="small"><a href="../web.html#mvc-caching-cachecontrol" class="page">Web MVC</a></span></p>
 </div>
 <div class="paragraph">
-<p>{api-spring-framework}/http/CacheControl.html[<code>CacheControl</code>] provides support for
+<p><a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/http/CacheControl.html"><code>CacheControl</code></a> provides support for
 configuring settings related to the <code>Cache-Control</code> header and is accepted as an argument
 in a number of places:</p>
 </div>
@@ -7865,7 +7865,7 @@ more readers and writers, customize the default ones, or replace the default one
 </div>
 <div class="paragraph">
 <p>For Jackson JSON and XML, consider using
-{api-spring-framework}/http/converter/json/Jackson2ObjectMapperBuilder.html[<code>Jackson2ObjectMapperBuilder</code>],
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/http/converter/json/Jackson2ObjectMapperBuilder.html"><code>Jackson2ObjectMapperBuilder</code></a>,
 which customizes Jackson&#8217;s default properties with the following ones:</p>
 </div>
 <div class="ulist">
@@ -8071,7 +8071,7 @@ class WebConfig : WebFluxConfigurer {
 </div>
 <div class="paragraph">
 <p>This option provides a convenient way to serve static resources from a list of
-{api-spring-framework}/core/io/Resource.html[<code>Resource</code>]-based locations.</p>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/core/io/Resource.html"><code>Resource</code></a>-based locations.</p>
 </div>
 <div class="paragraph">
 <p>In the next example, given a request that starts with <code>/resources</code>, the relative path is
@@ -8115,8 +8115,8 @@ class WebConfig : WebFluxConfigurer {
 </div>
 <div class="paragraph">
 <p>The resource handler also supports a chain of
-{api-spring-framework}/web/reactive/resource/ResourceResolver.html[<code>ResourceResolver</code>] implementations and
-{api-spring-framework}/web/reactive/resource/ResourceTransformer.html[<code>ResourceTransformer</code>] implementations,
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/reactive/resource/ResourceResolver.html"><code>ResourceResolver</code></a> implementations and
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/reactive/resource/ResourceTransformer.html"><code>ResourceTransformer</code></a> implementations,
 which can be used to create a toolchain for working with optimized resources.</p>
 </div>
 <div class="paragraph">
@@ -8195,7 +8195,7 @@ without versions&#8201;&#8212;&#8201;for example, from <code>/jquery/jquery.min.
 </div>
 <div class="paragraph">
 <p>You can customize options related to path matching. For details on the individual options, see the
-{api-spring-framework}/web/reactive/config/PathMatchConfigurer.html[<code>PathMatchConfigurer</code>] javadoc.
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/reactive/config/PathMatchConfigurer.html"><code>PathMatchConfigurer</code></a> javadoc.
 The following example shows how to use <code>PathMatchConfigurer</code>:</p>
 </div>
 <div class="listingblock primary">

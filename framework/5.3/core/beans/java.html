@@ -225,7 +225,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../../overview.html" class="home-link"></a>
+  <a href="../../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Spring Framework</a></li>
@@ -1191,7 +1191,7 @@ be particularly useful when beans are exposed (perhaps through JMX) for monitori
 </div>
 <div class="paragraph">
 <p>To add a description to a <code>@Bean</code>, you can use the
-{api-spring-framework}/context/annotation/Description.html[<code>@Description</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/Description.html"><code>@Description</code></a>
 annotation, as the following example shows:</p>
 </div>
 <div class="listingblock primary">
@@ -1734,7 +1734,7 @@ parameter-based injection, as in the preceding example.</p>
 through <code>@Bean</code>. Those should usually be declared as <code>static @Bean</code> methods, not triggering the
 instantiation of their containing configuration class. Otherwise, <code>@Autowired</code> and <code>@Value</code> may not
 work on the configuration class itself, since it is possible to create it as a bean instance earlier than
-{api-spring-framework}/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.html[<code>AutowiredAnnotationBeanPostProcessor</code>].</p>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/beans/factory/annotation/AutowiredAnnotationBeanPostProcessor.html"><code>AutowiredAnnotationBeanPostProcessor</code></a>.</p>
 </div>
 </td>
 </tr>
@@ -2045,7 +2045,7 @@ for details).</p>
 </div>
 <div class="paragraph">
 <p>The <code>@Profile</code> annotation is actually implemented by using a much more flexible annotation
-called {api-spring-framework}/context/annotation/Conditional.html[<code>@Conditional</code>].
+called <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/Conditional.html"><code>@Conditional</code></a>.
 The <code>@Conditional</code> annotation indicates specific
 <code>org.springframework.context.annotation.Condition</code> implementations that should be
 consulted before a <code>@Bean</code> is registered.</p>
@@ -2093,7 +2093,7 @@ public boolean matches(ConditionContext context, AnnotatedTypeMetadata metadata)
 </div>
 </div>
 <div class="paragraph">
-<p>See the {api-spring-framework}/context/annotation/Conditional.html[<code>@Conditional</code>]
+<p>See the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/Conditional.html"><code>@Conditional</code></a>
 javadoc for more detail.</p>
 </div>
 </div>

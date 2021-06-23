@@ -223,7 +223,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../overview.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Spring Framework</a></li>
@@ -289,7 +289,7 @@ to extend existing classes with additional functionality. The Spring Framework K
 use these extensions to add new Kotlin-specific conveniences to existing Spring APIs.</p>
 </div>
 <div class="paragraph">
-<p>The {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/[Spring Framework KDoc API] lists
+<p>The <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/">Spring Framework KDoc API</a> lists
 and documents all available the Kotlin extensions and DSLs.</p>
 </div>
 <div class="admonitionblock note">
@@ -542,7 +542,7 @@ the constructor parameters will be autowired by type:</p>
 </div>
 <div class="paragraph">
 <p>In order to allow a more declarative approach and cleaner syntax, Spring Framework provides
-a {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.context.support/-bean-definition-dsl/[Kotlin bean definition DSL]
+a <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.context.support/-bean-definition-dsl/">Kotlin bean definition DSL</a>
 It declares an <code>ApplicationContextInitializer</code> through a clean declarative API,
 which lets you deal with profiles and <code>Environment</code> for customizing
 how beans are registered.</p>
@@ -646,13 +646,13 @@ for more details and up-to-date information. See also the experimental Kofu DSL 
 <div class="ulist">
 <ul>
 <li>
-<p>WebMvc.fn DSL with {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.servlet.function/router.html[router { }]</p>
+<p>WebMvc.fn DSL with <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.servlet.function/router.html">router { }</a></p>
 </li>
 <li>
-<p>WebFlux.fn <a href="../web-reactive.html#webflux-fn" class="page">Reactive</a> DSL with {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/router.html[router { }]</p>
+<p>WebFlux.fn <a href="../web-reactive.html#webflux-fn" class="page">Reactive</a> DSL with <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/router.html">router { }</a></p>
 </li>
 <li>
-<p>WebFlux.fn <a href="#_coroutines">Coroutines</a> DSL with {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/co-router.html[coRouter { }]</p>
+<p>WebFlux.fn <a href="#_coroutines">Coroutines</a> DSL with <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/co-router.html">coRouter { }</a></p>
 </li>
 </ul>
 </div>
@@ -824,16 +824,16 @@ and types like <a href="https://kotlin.github.io/kotlinx.coroutines/kotlinx-coro
 <p>Suspending function support in Spring MVC and WebFlux annotated <code>@Controller</code></p>
 </li>
 <li>
-<p>Extensions for WebFlux {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.client/index.html[client] and {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/index.html[server] functional API.</p>
+<p>Extensions for WebFlux <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.client/index.html">client</a> and <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/index.html">server</a> functional API.</p>
 </li>
 <li>
-<p>WebFlux.fn {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/co-router.html[coRouter { }] DSL</p>
+<p>WebFlux.fn <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/co-router.html">coRouter { }</a> DSL</p>
 </li>
 <li>
 <p>Suspending function and <code>Flow</code> support in RSocket <code>@MessageMapping</code> annotated methods</p>
 </li>
 <li>
-<p>Extensions for {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.messaging.rsocket/index.html[<code>RSocketRequester</code>]</p>
+<p>Extensions for <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.messaging.rsocket/index.html"><code>RSocketRequester</code></a></p>
 </li>
 </ul>
 </div>
@@ -1025,7 +1025,7 @@ class CoroutinesViewController(banner: Banner) {
 <div class="sect2">
 <h3 id="_webflux_fn"><a class="anchor" href="#_webflux_fn"></a>WebFlux.fn</h3>
 <div class="paragraph">
-<p>Here is an example of Coroutines router defined via the {doc-root}/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/co-router.html[coRouter { }] DSL and related handlers.</p>
+<p>Here is an example of Coroutines router defined via the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/kdoc-api/spring-framework/org.springframework.web.reactive.function.server/co-router.html">coRouter { }</a> DSL and related handlers.</p>
 </div>
 <div class="listingblock">
 <div class="content">
@@ -1141,7 +1141,7 @@ quickly become painful and is against the Kotlin principle of keeping code conci
 </td>
 <td class="content">
 It is also possible to avoid CGLIB proxies for configuration classes by using <code>@Configuration(proxyBeanMethods = false)</code>.
-See {api-spring-framework}/context/annotation/Configuration.html#proxyBeanMethods--[<code>proxyBeanMethods</code> Javadoc] for more details.
+See <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/context/annotation/Configuration.html#proxyBeanMethods--"><code>proxyBeanMethods</code> Javadoc</a> for more details.
 </td>
 </tr>
 </table>
@@ -1468,7 +1468,7 @@ If you are using Spring Boot, see
 <p>As described in the <a href="../testing.html#testcontext-junit-jupiter-di#spring-web-reactive" class="page">dedicated section</a>,
 JUnit 5 allows constructor injection of beans which is pretty useful with Kotlin
 in order to use <code>val</code> instead of <code>lateinit var</code>. You can use
-{api-spring-framework}/test/context/TestConstructor.html[<code>@TestConstructor(autowireMode = AutowireMode.ALL)</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/context/TestConstructor.html"><code>@TestConstructor(autowireMode = AutowireMode.ALL)</code></a>
 to enable autowiring for all parameters.</p>
 </div>
 <div class="exampleblock">

@@ -225,7 +225,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="overview.html" class="home-link"></a>
+  <a href="index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Spring Framework</a></li>
@@ -2647,7 +2647,7 @@ containers that ships with Spring (in this case, <code>DefaultMessageListenerCon
 </div>
 <div class="paragraph">
 <p>See the Spring javadoc of the various message listener containers (all of which implement
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jms/listener/MessageListenerContainer.html">MessageListenerContainer</a>)
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jms/listener/MessageListenerContainer.html">MessageListenerContainer</a>)
 for a full description of the features supported by each implementation.</p>
 </div>
 </div>
@@ -2975,9 +2975,9 @@ listeners can then interact with the server-hosted <code>ResourceAdapter</code>,
 server&#8217;s built-in <code>WorkManager</code>.</p>
 </div>
 <div class="paragraph">
-<p>See the javadoc for <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jms/listener/endpoint/JmsMessageEndpointManager.html"><code>JmsMessageEndpointManager</code></a>,
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jms/listener/endpoint/JmsActivationSpecConfig.html"><code>JmsActivationSpecConfig</code></a>,
-and <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jca/support/ResourceAdapterFactoryBean.html"><code>ResourceAdapterFactoryBean</code></a>
+<p>See the javadoc for <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jms/listener/endpoint/JmsMessageEndpointManager.html"><code>JmsMessageEndpointManager</code></a>,
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jms/listener/endpoint/JmsActivationSpecConfig.html"><code>JmsActivationSpecConfig</code></a>,
+and <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jca/support/ResourceAdapterFactoryBean.html"><code>ResourceAdapterFactoryBean</code></a>
 for more details.</p>
 </div>
 <div class="paragraph">
@@ -2986,7 +2986,7 @@ for more details.</p>
 for using any message listener type (such as a JMS <code>MessageListener</code>) and any
 provider-specific <code>ActivationSpec</code> object. See your JCA provider&#8217;s documentation to
 find out about the actual capabilities of your connector, and see the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jca/endpoint/GenericMessageEndpointManager.html"><code>GenericMessageEndpointManager</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jca/endpoint/GenericMessageEndpointManager.html"><code>GenericMessageEndpointManager</code></a>
 javadoc for the Spring-specific configuration details.</p>
 </div>
 <div class="admonitionblock note">
@@ -3085,7 +3085,7 @@ method with a core poll size of three threads and a maximum pool size of ten thr
 configure an explicit default by implementing the <code>JmsListenerConfigurer</code> interface.
 The default is required only if at least one endpoint is registered without a specific
 container factory. See the javadoc of classes that implement
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jms/annotation/JmsListenerConfigurer.html"><code>JmsListenerConfigurer</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jms/annotation/JmsListenerConfigurer.html"><code>JmsListenerConfigurer</code></a>
 for details and examples.</p>
 </div>
 <div class="paragraph">
@@ -3474,7 +3474,7 @@ as the following example shows:</p>
 </div>
 <div class="paragraph">
 <p>The following table describes all available attributes. See the class-level javadoc
-of the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jms/listener/AbstractMessageListenerContainer.html"><code>AbstractMessageListenerContainer</code></a>
+of the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jms/listener/AbstractMessageListenerContainer.html"><code>AbstractMessageListenerContainer</code></a>
 and its concrete subclasses for more details on the individual properties. The javadoc
 also provides a discussion of transaction choices and message redelivery scenarios.</p>
 </div>
@@ -3655,7 +3655,7 @@ as the following example shows:</p>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>activation-spec-factory</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A reference to the <code>JmsActivationSpecFactory</code>. The default is to autodetect the JMS
-  provider and its <code>ActivationSpec</code> class (see <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jms/listener/endpoint/DefaultJmsActivationSpecFactory.html"><code>DefaultJmsActivationSpecFactory</code></a>).</p></td>
+  provider and its <code>ActivationSpec</code> class (see <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jms/listener/endpoint/DefaultJmsActivationSpecFactory.html"><code>DefaultJmsActivationSpecFactory</code></a>).</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>destination-resolver</code></p></td>
@@ -5173,7 +5173,7 @@ which the bean can then use to publish <code>Notifications</code>.</p>
 </div>
 <div class="paragraph">
 <p>As stated in the javadoc of the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/jmx/export/notification/NotificationPublisher.html"><code>NotificationPublisher</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/jmx/export/notification/NotificationPublisher.html"><code>NotificationPublisher</code></a>
 interface, managed beans that publish events through the <code>NotificationPublisher</code>
 mechanism are not responsible for the state management of notification listeners.
 Spring&#8217;s JMX support takes care of handling all the JMX infrastructure issues.
@@ -5303,7 +5303,7 @@ interface. A simple value object that encapsulates the properties of a simple ma
 as <code>from</code> and <code>to</code> (plus many others) is the <code>SimpleMailMessage</code> class. This package
 also contains a hierarchy of checked exceptions that provide a higher level of
 abstraction over the lower level mail system exceptions, with the root exception being
-<code>MailException</code>. See the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/mail/MailException.html">javadoc</a>
+<code>MailException</code>. See the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/mail/MailException.html">javadoc</a>
 for more information on the rich mail exception hierarchy.</p>
 </div>
 <div class="paragraph">
@@ -5927,8 +5927,8 @@ public class AppConfig {
 if you need only support for <code>@Scheduled</code>, you can omit <code>@EnableAsync</code>. For more
 fine-grained control, you can additionally implement the <code>SchedulingConfigurer</code>
 interface, the <code>AsyncConfigurer</code> interface, or both. See the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/scheduling/annotation/SchedulingConfigurer.html"><code>SchedulingConfigurer</code></a>
-and <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/scheduling/annotation/AsyncConfigurer.html"><code>AsyncConfigurer</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/scheduling/annotation/SchedulingConfigurer.html"><code>SchedulingConfigurer</code></a>
+and <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/scheduling/annotation/AsyncConfigurer.html"><code>AsyncConfigurer</code></a>
 javadoc for full details.</p>
 </div>
 <div class="paragraph">
@@ -6791,7 +6791,7 @@ seconds and one running every morning at 6 AM. To finalize everything, we need t
 <div class="paragraph">
 <p>More properties are available for the <code>SchedulerFactoryBean</code>, such as the calendars
 used by the job details, properties to customize Quartz with, and others. See the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/scheduling/quartz/SchedulerFactoryBean.html"><code>SchedulerFactoryBean</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/scheduling/quartz/SchedulerFactoryBean.html"><code>SchedulerFactoryBean</code></a>
 javadoc for more information.</p>
 </div>
 </div>
@@ -7605,7 +7605,7 @@ switching to <code>aspectj</code> mode in combination with compile-time or load-
 <td class="content">
 For more detail about advanced customizations (using Java configuration) that are
 required to implement <code>CachingConfigurer</code>, see the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html">javadoc</a>.
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html">javadoc</a>.
 </td>
 </tr>
 </table>
@@ -7629,7 +7629,7 @@ required to implement <code>CachingConfigurer</code>, see the
 <tbody>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cache-manager</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html"><code>CachingConfigurer</code></a> javadoc)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html"><code>CachingConfigurer</code></a> javadoc)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cacheManager</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name of the cache manager to use. A default <code>CacheResolver</code> is initialized behind
   the scenes with this cache manager (or <code>cacheManager</code> if not set). For more
@@ -7638,7 +7638,7 @@ required to implement <code>CachingConfigurer</code>, see the
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>cache-resolver</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html"><code>CachingConfigurer</code></a> javadoc)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html"><code>CachingConfigurer</code></a> javadoc)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">A <code>SimpleCacheResolver</code> using the configured <code>cacheManager</code>.</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The bean name of the CacheResolver that is to be used to resolve the backing caches.
   This attribute is not required and needs to be specified only as an alternative to
@@ -7646,13 +7646,13 @@ required to implement <code>CachingConfigurer</code>, see the
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>key-generator</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html"><code>CachingConfigurer</code></a> javadoc)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html"><code>CachingConfigurer</code></a> javadoc)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SimpleKeyGenerator</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">Name of the custom key generator to use.</p></td>
 </tr>
 <tr>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>error-handler</code></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see the <a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html"><code>CachingConfigurer</code></a> javadoc)</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">N/A (see the <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/cache/annotation/CachingConfigurer.html"><code>CachingConfigurer</code></a> javadoc)</p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock"><code>SimpleCacheErrorHandler</code></p></td>
 <td class="tableblock halign-left valign-top"><p class="tableblock">The name of the custom cache error handler to use. By default, any exception thrown during
   a cache related operation is thrown back at the client.</p></td>

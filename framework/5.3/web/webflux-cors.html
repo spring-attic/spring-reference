@@ -223,7 +223,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../overview.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Spring Framework</a></li>
@@ -294,7 +294,7 @@ and, consequently, browsers reject them.</p>
 </div>
 <div class="paragraph">
 <p>Each <code>HandlerMapping</code> can be
-{api-spring-framework}/web/reactive/handler/AbstractHandlerMapping.html#setCorsConfigurations-java.util.Map-[configured]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/reactive/handler/AbstractHandlerMapping.html#setCorsConfigurations-java.util.Map-">configured</a>
 individually with URL pattern-based <code>CorsConfiguration</code> mappings. In most cases, applications
 use the WebFlux Java configuration to declare such mappings, which results in a single,
 global map passed to all <code>HandlerMapping</code> implementations.</p>
@@ -309,7 +309,7 @@ class- or method-level <code>@CrossOrigin</code> annotations (other handlers can
 <p>The rules for combining global and local configuration are generally additive&#8201;&#8212;&#8201;for example,
 all global and all local origins. For those attributes where only a single value can be
 accepted, such as <code>allowCredentials</code> and <code>maxAge</code>, the local overrides the global value. See
-{api-spring-framework}/web/cors/CorsConfiguration.html#combine-org.springframework.web.cors.CorsConfiguration-[<code>CorsConfiguration#combine(CorsConfiguration)</code>]
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/cors/CorsConfiguration.html#combine-org.springframework.web.cors.CorsConfiguration-"><code>CorsConfiguration#combine(CorsConfiguration)</code></a>
 for more details.</p>
 </div>
 <div class="admonitionblock tip">
@@ -348,7 +348,7 @@ for more details.</p>
 <p><span class="small"><a href="../web.html#mvc-cors-controller" class="page">Web MVC</a></span></p>
 </div>
 <div class="paragraph">
-<p>The {api-spring-framework}/web/bind/annotation/CrossOrigin.html[<code>@CrossOrigin</code>]
+<p>The <a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/bind/annotation/CrossOrigin.html"><code>@CrossOrigin</code></a>
 annotation enables cross-origin requests on annotated controller methods, as the
 following example shows:</p>
 </div>
@@ -629,7 +629,7 @@ class WebConfig : WebFluxConfigurer {
 </div>
 <div class="paragraph">
 <p>You can apply CORS support through the built-in
-{api-spring-framework}/web/cors/reactive/CorsWebFilter.html[<code>CorsWebFilter</code>], which is a
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/cors/reactive/CorsWebFilter.html"><code>CorsWebFilter</code></a>, which is a
 good fit with <a href="#webflux-fn">functional endpoints</a>.</p>
 </div>
 <div class="admonitionblock note">

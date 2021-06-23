@@ -223,7 +223,7 @@
 <main class="article">
 <div class="toolbar" role="navigation">
 <button class="nav-toggle"></button>
-  <a href="../overview.html" class="home-link"></a>
+  <a href="../index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Spring Framework</a></li>
@@ -296,7 +296,7 @@ to handle requests:</p>
 </div>
 <div class="paragraph">
 <p>For Spring MVC, use the following which delegates to the
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/setup/StandaloneMockMvcBuilder.html">StandaloneMockMvcBuilder</a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/test/web/servlet/setup/StandaloneMockMvcBuilder.html">StandaloneMockMvcBuilder</a>
 to load infrastructure equivalent to the <a href="../web.html#mvc-config" class="page">WebMvc Java config</a>,
 registers the given controller(s), and creates an instance of
 <a href="../testing.html#spring-mvc-test-framework" class="page">MockMvc</a> to handle requests:</p>
@@ -324,7 +324,7 @@ and response objects, without a running server.</p>
 </div>
 <div class="paragraph">
 <p>For WebFlux, use the following where the Spring <code>ApplicationContext</code> is passed to
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/web/server/adapter/WebHttpHandlerBuilder.html#applicationContext-org.springframework.context.ApplicationContext-">WebHttpHandlerBuilder</a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/web/server/adapter/WebHttpHandlerBuilder.html#applicationContext-org.springframework.context.ApplicationContext-">WebHttpHandlerBuilder</a>
 to create the <a href="../web-reactive.html#webflux-web-handler-api" class="page">WebHandler chain</a> to handle
 requests:</p>
 </div>
@@ -392,7 +392,7 @@ class MyTests {
 </div>
 <div class="paragraph">
 <p>For Spring MVC, use the following where the Spring <code>ApplicationContext</code> is passed to
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/test/web/servlet/setup/MockMvcBuilders.html#webAppContextSetup-org.springframework.web.context.WebApplicationContext-">MockMvcBuilders.webAppContextSetup</a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/test/web/servlet/setup/MockMvcBuilders.html#webAppContextSetup-org.springframework.web.context.WebApplicationContext-">MockMvcBuilders.webAppContextSetup</a>
 to create a <a href="../testing.html#spring-mvc-test-framework" class="page">MockMvc</a> instance to handle
 requests:</p>
 </div>
@@ -691,7 +691,7 @@ val result = client.get().uri("/persons/1")
 <td class="content">
 When you need to decode to a target type with generics, look for the overloaded methods
 that accept
-<a href="https://docs.spring.io/spring-framework/docs/{spring-version}/javadoc-api/org/springframework/core/ParameterizedTypeReference.html"><code>ParameterizedTypeReference</code></a>
+<a href="https://docs.spring.io/spring-framework/docs/5.3.8/javadoc-api/org/springframework/core/ParameterizedTypeReference.html"><code>ParameterizedTypeReference</code></a>
 instead of <code>Class&lt;T&gt;</code>.
 </td>
 </tr>
