@@ -1,6 +1,6 @@
 site:
   title: Spring
-  start_page: framework::overview.adoc
+  start_page: framework::index.adoc
 asciidoc:
   attributes:
     page-pagination: true
