@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Username/Password Authentication :: Spring</title>
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../../_/css/vendor/docsearch.min.css">
@@ -235,7 +235,7 @@ First, we see how the user is redirected to the log in form.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/unpwd/loginurlauthenticationentrypoint.png" alt="loginurlauthenticationentrypoint">
+<img src="images/servlet/authentication/unpwd/loginurlauthenticationentrypoint.png" alt="loginurlauthenticationentrypoint">
 </div>
 <div class="title">Figure 1. Redirecting to the Log In Page</div>
 </div>
@@ -243,20 +243,20 @@ First, we see how the user is redirected to the log in form.</p>
 <p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
+<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em> and sends a redirect to the log in page with the configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a>.
+<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em> and sends a redirect to the log in page with the configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a>.
 In most cases the <code>AuthenticationEntryPoint</code> is an instance of {security-api-url}org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html[<code>LoginUrlAuthenticationEntryPoint</code>].</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> The browser will then request the log in page that it was redirected to.</p>
+<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> The browser will then request the log in page that it was redirected to.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_5.png" alt="number 5"></span> Something within the application, must <a href="#servlet-authentication-form-custom">render the log in page</a>.</p>
+<p><span class="image"><img src="images/icons/number_5.png" alt="number 5"></span> Something within the application, must <a href="#servlet-authentication-form-custom">render the log in page</a>.</p>
 </div>
 <div id="servlet-authentication-usernamepasswordauthenticationfilter" class="paragraph">
 <p>When the username and password are submitted, the <code>UsernamePasswordAuthenticationFilter</code> authenticates the username and password.
@@ -264,7 +264,7 @@ The <code>UsernamePasswordAuthenticationFilter</code> extends <a href="#servlet-
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/unpwd/usernamepasswordauthenticationfilter.png" alt="usernamepasswordauthenticationfilter">
+<img src="images/servlet/authentication/unpwd/usernamepasswordauthenticationfilter.png" alt="usernamepasswordauthenticationfilter">
 </div>
 <div class="title">Figure 2. Authenticating Username and Password</div>
 </div>
@@ -272,14 +272,14 @@ The <code>UsernamePasswordAuthenticationFilter</code> extends <a href="#servlet-
 <p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>UsernamePasswordAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
+<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>UsernamePasswordAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
+<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
 The details of what <code>AuthenticationManager</code> look like depend on how the <a href="#servlet-authentication-unpwd-storage">user information is stored</a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
 </div>
 <div class="ulist">
 <ul>
@@ -296,7 +296,7 @@ If remember me is not configured, this is a no-op.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -519,7 +519,7 @@ First, we see the <a href="https://tools.ietf.org/html/rfc7235#section-4.1">WWW-
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/unpwd/basicauthenticationentrypoint.png" alt="basicauthenticationentrypoint">
+<img src="images/servlet/authentication/unpwd/basicauthenticationentrypoint.png" alt="basicauthenticationentrypoint">
 </div>
 <div class="title">Figure 3. Sending WWW-Authenticate Header</div>
 </div>
@@ -527,13 +527,13 @@ First, we see the <a href="https://tools.ietf.org/html/rfc7235#section-4.1">WWW-
 <p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
+<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
+<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
 The configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is an instance of {security-api-url}org/springframework/security/web/authentication/www/BasicAuthenticationEntryPoint.html[<code>BasicAuthenticationEntryPoint</code>] which sends a WWW-Authenticate header.
 The <code>RequestCache</code> is typically a <code>NullRequestCache</code> that does not save the request since the client is capable of replaying the requests it originally requested.</p>
 </div>
@@ -543,7 +543,7 @@ Below is the flow for the username and password being processed.</p>
 </div>
 <div id="servlet-authentication-basicauthenticationfilter" class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/unpwd/basicauthenticationfilter.png" alt="basicauthenticationfilter">
+<img src="images/servlet/authentication/unpwd/basicauthenticationfilter.png" alt="basicauthenticationfilter">
 </div>
 <div class="title">Figure 4. Authenticating Username and Password</div>
 </div>
@@ -551,14 +551,14 @@ Below is the flow for the username and password being processed.</p>
 <p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>BasicAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
+<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>BasicAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
+<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
 The details of what <code>AuthenticationManager</code> look like depend on how the <a href="#servlet-authentication-unpwd-storage">user information is stored</a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
 </div>
 <div class="ulist">
 <ul>
@@ -575,7 +575,7 @@ If remember me is not configured, this is a no-op.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1222,24 +1222,24 @@ The figure explains details of how the <a href="#servlet-authentication-authenti
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/unpwd/daoauthenticationprovider.png" alt="daoauthenticationprovider">
+<img src="images/servlet/authentication/unpwd/daoauthenticationprovider.png" alt="daoauthenticationprovider">
 </div>
 <div class="title">Figure 5. <code>DaoAuthenticationProvider</code> Usage</div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#servlet-authentication-unpwd-input">Reading the Username &amp; Password</a> passes a <code>UsernamePasswordAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
+<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#servlet-authentication-unpwd-input">Reading the Username &amp; Password</a> passes a <code>UsernamePasswordAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="#servlet-authentication-authenticationprovider">[servlet-authentication-authenticationprovider]</a> of type <code>DaoAuthenticationProvider</code>.</p>
+<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="#servlet-authentication-authenticationprovider">[servlet-authentication-authenticationprovider]</a> of type <code>DaoAuthenticationProvider</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> <code>DaoAuthenticationProvider</code> looks up the <code>UserDetails</code> from the <code>UserDetailsService</code>.</p>
+<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> <code>DaoAuthenticationProvider</code> looks up the <code>UserDetails</code> from the <code>UserDetailsService</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> <code>DaoAuthenticationProvider</code> then uses the <a href="#servlet-authentication-password-storage"><code>PasswordEncoder</code></a> to validate the password on the <code>UserDetails</code> returned in the previous step.</p>
+<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> <code>DaoAuthenticationProvider</code> then uses the <a href="#servlet-authentication-password-storage"><code>PasswordEncoder</code></a> to validate the password on the <code>UserDetails</code> returned in the previous step.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is of type <code>UsernamePasswordAuthenticationToken</code> and has a principal that is the <code>UserDetails</code> returned by the configured <code>UserDetailsService</code>.
+<p><span class="image"><img src="images/icons/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is of type <code>UsernamePasswordAuthenticationToken</code> and has a principal that is the <code>UserDetails</code> returned by the configured <code>UserDetailsService</code>.
 Ultimately, the returned <code>UsernamePasswordAuthenticationToken</code> will be set on the <a href="#servlet-authentication-securitycontextholder"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
 </div>
 </div>

@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>A Review of Filters :: Spring</title>
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/docsearch.min.css">
@@ -176,6 +176,12 @@
 <div class="paragraph">
 <p>Spring Security&#8217;s Servlet support is based on Servlet <code>Filter</code>s, so it is helpful to look at the role of <code>Filter</code>s generally first.
 The picture below shows the typical layering of the handlers for a single HTTP request.</p>
+</div>
+<div id="servlet-filterchain-figure" class="imageblock">
+<div class="content">
+<img src="{figures}/filterchain.png" alt="filterchain">
+</div>
+<div class="title">Figure 1. FilterChain</div>
 </div>
 <div class="paragraph">
 <p>The client sends a request to the application, and the container creates a <code>FilterChain</code> which contains the <code>Filter</code>s and <code>Servlet</code> that should process the <code>HttpServletRequest</code> based on the path of the request URI.

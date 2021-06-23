@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: Spring</title>
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../../_/css/vendor/docsearch.min.css">
@@ -177,7 +177,7 @@ It contains the <a href="#servlet-authentication-securitycontext">SecurityContex
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/architecture/securitycontextholder.png" alt="securitycontextholder">
+<img src="images/servlet/authentication/architecture/securitycontextholder.png" alt="securitycontextholder">
 </div>
 </div>
 <div class="paragraph">
@@ -376,7 +376,7 @@ If none of the configured <code>AuthenticationProvider</code>s can authenticate,
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/architecture/providermanager.png" alt="providermanager">
+<img src="images/servlet/authentication/architecture/providermanager.png" alt="providermanager">
 </div>
 </div>
 <div class="paragraph">
@@ -390,7 +390,7 @@ The parent can be any type of <code>AuthenticationManager</code>, but it is ofte
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/architecture/providermanager-parent.png" alt="providermanager parent">
+<img src="images/servlet/authentication/architecture/providermanager-parent.png" alt="providermanager parent">
 </div>
 </div>
 <div class="paragraph">
@@ -399,7 +399,7 @@ This is somewhat common in scenarios where there are multiple <a href="#servlet-
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/architecture/providermanagers-parent.png" alt="providermanagers parent">
+<img src="images/servlet/authentication/architecture/providermanagers-parent.png" alt="providermanagers parent">
 </div>
 </div>
 <div id="servlet-authentication-providermanager-erasing-credentials" class="paragraph">
@@ -455,19 +455,19 @@ Before the credentials can be authenticated, Spring Security typically requests 
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../../_images/images/servlet/authentication/architecture/abstractauthenticationprocessingfilter.png" alt="abstractauthenticationprocessingfilter">
+<img src="images/servlet/authentication/architecture/abstractauthenticationprocessingfilter.png" alt="abstractauthenticationprocessingfilter">
 </div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_1.png" alt="number 1"></span> When the user submits their credentials, the <code>AbstractAuthenticationProcessingFilter</code> creates an <a href="#servlet-authentication-authentication"><code>Authentication</code></a> from the <code>HttpServletRequest</code> to be authenticated.
+<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> When the user submits their credentials, the <code>AbstractAuthenticationProcessingFilter</code> creates an <a href="#servlet-authentication-authentication"><code>Authentication</code></a> from the <code>HttpServletRequest</code> to be authenticated.
 The type of <code>Authentication</code> created depends on the subclass of <code>AbstractAuthenticationProcessingFilter</code>.
 For example, <a href="#servlet-authentication-usernamepasswordauthenticationfilter"><code>UsernamePasswordAuthenticationFilter</code></a> creates a <code>UsernamePasswordAuthenticationToken</code> from a <em>username</em> and <em>password</em> that are submitted in the <code>HttpServletRequest</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_2.png" alt="number 2"></span> Next, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> is passed into the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> to be authenticated.</p>
+<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> Next, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> is passed into the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> to be authenticated.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
 </div>
 <div class="ulist">
 <ul>
@@ -484,7 +484,7 @@ If remember me is not configured, this is a no-op.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
 </div>
 <div class="ulist">
 <ul>

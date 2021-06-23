@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: Spring</title>
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/docsearch.min.css">
@@ -414,7 +414,7 @@ Make sure your configuration allows anonymous access to the login page, either b
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>DEBUG [ExceptionTranslationFilter] - Access is denied (user is anonymous); redirecting to authentication entry point
+<pre class="highlightjs highlight"><code class="language-none hljs">DEBUG [ExceptionTranslationFilter] - Access is denied (user is anonymous); redirecting to authentication entry point
 org.springframework.security.AccessDeniedException: Access is denied
 at org.springframework.security.vote.AffirmativeBased.decide(AffirmativeBased.java:68)
 at org.springframework.security.intercept.AbstractSecurityInterceptor.beforeInvocation(AbstractSecurityInterceptor.java:262)</code></pre>
@@ -439,7 +439,7 @@ Note that SSL requests are never cached.</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>DEBUG [ExceptionTranslationFilter] - Authentication exception occurred; redirecting to authentication entry point
+<pre class="highlightjs highlight"><code class="language-none hljs">DEBUG [ExceptionTranslationFilter] - Authentication exception occurred; redirecting to authentication entry point
 org.springframework.security.AuthenticationCredentialsNotFoundException:
 							An Authentication object was not found in the SecurityContext
 at org.springframework.security.intercept.AbstractSecurityInterceptor.credentialsNotFound(AbstractSecurityInterceptor.java:342)
@@ -692,7 +692,7 @@ Any which are marked as "optional" in the Spring Security POM files will have to
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>&lt;dependency&gt;
+<pre class="highlightjs highlight"><code class="language-none hljs">&lt;dependency&gt;
 		&lt;groupId&gt;org.apache.directory.server&lt;/groupId&gt;
 		&lt;artifactId&gt;apacheds-core&lt;/artifactId&gt;
 		&lt;version&gt;1.5.5&lt;/version&gt;

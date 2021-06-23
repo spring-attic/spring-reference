@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>DaoAuthenticationProvider :: Spring</title>
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../../_/css/vendor/docsearch.min.css">
@@ -180,20 +180,26 @@
 <p>Let&#8217;s take a look at how <code>DaoAuthenticationProvider</code> works within Spring Security.
 The figure explains details of how the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> in figures from <a href="#servlet-authentication-unpwd-input">Reading the Username &amp; Password</a> works.</p>
 </div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/{icondir}/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#servlet-authentication-unpwd-input">Reading the Username &amp; Password</a> passes a <code>UsernamePasswordAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
+<div class="imageblock">
+<div class="content">
+<img src="{figures}/daoauthenticationprovider.png" alt="daoauthenticationprovider">
+</div>
+<div class="title">Figure 1. <code>DaoAuthenticationProvider</code> Usage</div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/{icondir}/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="#servlet-authentication-authenticationprovider">[servlet-authentication-authenticationprovider]</a> of type <code>DaoAuthenticationProvider</code>.</p>
+<p><span class="image"><img src="{icondir}/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#servlet-authentication-unpwd-input">Reading the Username &amp; Password</a> passes a <code>UsernamePasswordAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/{icondir}/number_3.png" alt="number 3"></span> <code>DaoAuthenticationProvider</code> looks up the <code>UserDetails</code> from the <code>UserDetailsService</code>.</p>
+<p><span class="image"><img src="{icondir}/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="#servlet-authentication-authenticationprovider">[servlet-authentication-authenticationprovider]</a> of type <code>DaoAuthenticationProvider</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/{icondir}/number_4.png" alt="number 4"></span> <code>DaoAuthenticationProvider</code> then uses the <a href="#servlet-authentication-password-storage"><code>PasswordEncoder</code></a> to validate the password on the <code>UserDetails</code> returned in the previous step.</p>
+<p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> <code>DaoAuthenticationProvider</code> looks up the <code>UserDetails</code> from the <code>UserDetailsService</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/{icondir}/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is of type <code>UsernamePasswordAuthenticationToken</code> and has a principal that is the <code>UserDetails</code> returned by the configured <code>UserDetailsService</code>.
+<p><span class="image"><img src="{icondir}/number_4.png" alt="number 4"></span> <code>DaoAuthenticationProvider</code> then uses the <a href="#servlet-authentication-password-storage"><code>PasswordEncoder</code></a> to validate the password on the <code>UserDetails</code> returned in the previous step.</p>
+</div>
+<div class="paragraph">
+<p><span class="image"><img src="{icondir}/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is of type <code>UsernamePasswordAuthenticationToken</code> and has a principal that is the <code>UserDetails</code> returned by the configured <code>UserDetailsService</code>.
 Ultimately, the returned <code>UsernamePasswordAuthenticationToken</code> will be set on the <a href="#servlet-authentication-securitycontextholder"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
 </div>
 </article>

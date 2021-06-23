@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: Spring</title>
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/docsearch.min.css">
@@ -3373,7 +3373,7 @@ An SQL statement to query for a user&#8217;s granted authorities given a usernam
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>select username, authority from authorities where username = ?</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">select username, authority from authorities where username = ?</code></pre>
 </div>
 </div>
 <div id="nsa-jdbc-user-service-cache-ref" class="ulist">
@@ -3400,7 +3400,7 @@ An SQL statement to query user&#8217;s group authorities given a username.
 The default is</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>select
+<pre class="highlightjs highlight"><code class="language-none hljs">select
 g.id, g.group_name, ga.authority
 from
 groups g, group_members gm, group_authorities ga
@@ -3436,7 +3436,7 @@ An SQL statement to query a username, password, and enabled status given a usern
 The default is</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>select username, password, enabled from users where username = ?</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">select username, password, enabled from users where username = ?</code></pre>
 </div>
 </div>
 </li>
@@ -3507,7 +3507,7 @@ A bean identifier, used for referring to the bean elsewhere in the context.</p>
 The location of a Properties file where each line is in the format of</p>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code>username=password,grantedAuthority[,grantedAuthority][,enabled|disabled]</code></pre>
+<pre class="highlightjs highlight"><code class="language-none hljs">username=password,grantedAuthority[,grantedAuthority][,enabled|disabled]</code></pre>
 </div>
 </div>
 </li>

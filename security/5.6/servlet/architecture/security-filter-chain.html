@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>SecurityFilterChain :: Spring</title>
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/docsearch.min.css">
@@ -176,6 +176,12 @@
 <div class="paragraph">
 <p>{security-api-url}org/springframework/security/web/SecurityFilterChain.html[<code>SecurityFilterChain</code>] is used by <a href="#servlet-filterchainproxy">[servlet-filterchainproxy]</a> to determine which Spring Security <code>Filter</code>s should be invoked for this request.</p>
 </div>
+<div id="servlet-securityfilterchain-figure" class="imageblock">
+<div class="content">
+<img src="{figures}/securityfilterchain.png" alt="securityfilterchain">
+</div>
+<div class="title">Figure 1. SecurityFilterChain</div>
+</div>
 <div class="paragraph">
 <p>The <a href="#servlet-security-filters">Security Filters</a> in <code>SecurityFilterChain</code> are typically Beans, but they are registered with <code>FilterChainProxy</code> instead of <a href="#servlet-delegatingfilterproxy">[servlet-delegatingfilterproxy]</a>.
 <code>FilterChainProxy</code> provides a number of advantages to registering directly with the Servlet container or <a href="#servlet-delegatingfilterproxy">[servlet-delegatingfilterproxy]</a>.
@@ -196,8 +202,14 @@ However, <code>FilterChainProxy</code> can determine invocation based upon anyth
 <p>In fact, <code>FilterChainProxy</code> can be used to determine which <code>SecurityFilterChain</code> should be used.
 This allows providing a totally separate configuration for different <em>slices</em> of your application.</p>
 </div>
+<div id="servlet-multi-securityfilterchain-figure" class="imageblock">
+<div class="content">
+<img src="{figures}/multi-securityfilterchain.png" alt="multi securityfilterchain">
+</div>
+<div class="title">Figure 2. Multiple SecurityFilterChain</div>
+</div>
 <div class="paragraph">
-<p>In the <a href="#servlet-multi-securityfilterchain-figure">[servlet-multi-securityfilterchain-figure]</a> Figure <code>FilterChainProxy</code> decides which <code>SecurityFilterChain</code> should be used.
+<p>In the <a href="#servlet-multi-securityfilterchain-figure">Multiple SecurityFilterChain</a> Figure <code>FilterChainProxy</code> decides which <code>SecurityFilterChain</code> should be used.
 Only the first <code>SecurityFilterChain</code> that matches will be invoked.
 If a URL of <code>/api/messages/</code> is requested, it will first match on <code>SecurityFilterChain<sub>0</sub></code>'s pattern of <code>/api/**</code>, so only <code>SecurityFilterChain<sub>0</sub></code> will be invoked even though it also matches on <code>SecurityFilterChain<sub>n</sub></code>.
 If a URL of <code>/messages/</code> is requested, it will not match on <code>SecurityFilterChain<sub>0</sub></code>'s pattern of <code>/api/**</code>, so <code>FilterChainProxy</code> will continue trying each <code>SecurityFilterChain</code>.

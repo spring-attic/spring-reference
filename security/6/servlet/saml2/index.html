@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>SAML2 :: Spring</title>
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/docsearch.min.css">
@@ -218,7 +218,7 @@ It does this through a series of redirects.</p>
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="../../_images/images/servlet/saml2/saml2webssoauthenticationrequestfilter.png" alt="saml2webssoauthenticationrequestfilter">
+<img src="images/servlet/saml2/saml2webssoauthenticationrequestfilter.png" alt="saml2webssoauthenticationrequestfilter">
 </div>
 <div class="title">Figure 1. Redirecting to Asserting Party Authentication</div>
 </div>
@@ -226,30 +226,30 @@ It does this through a series of redirects.</p>
 <p>The figure above builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> and <a href="#servlet-authentication-abstractprocessingfilter"><code>AbstractAuthenticationProcessingFilter</code></a> diagrams:</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
+<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_3.png" alt="number 3"></span> Since the user lacks authorization, the <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
+<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> Since the user lacks authorization, the <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
 The configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is an instance of {security-api-url}org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html[<code>LoginUrlAuthenticationEntryPoint</code>] which redirects to <a href="#servlet-saml2login-sp-initiated-factory">the <code>&lt;saml2:AuthnRequest&gt;</code> generating endpoint</a>, <code>Saml2WebSsoAuthenticationRequestFilter</code>.
 Or, if you&#8217;ve <a href="#servlet-saml2login-relyingpartyregistrationrepository">configured more than one asserting party</a>, it will first redirect to a picker page.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_4.png" alt="number 4"></span> Next, the <code>Saml2WebSsoAuthenticationRequestFilter</code> creates, signs, serializes, and encodes a <code>&lt;saml2:AuthnRequest&gt;</code> using its configured <a href="#servlet-saml2login-sp-initiated-factory"><code>Saml2AuthenticationRequestFactory</code></a>.</p>
+<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> Next, the <code>Saml2WebSsoAuthenticationRequestFilter</code> creates, signs, serializes, and encodes a <code>&lt;saml2:AuthnRequest&gt;</code> using its configured <a href="#servlet-saml2login-sp-initiated-factory"><code>Saml2AuthenticationRequestFactory</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_5.png" alt="number 5"></span> Then, the browser takes this <code>&lt;saml2:AuthnRequest&gt;</code> and presents it to the asserting party.
+<p><span class="image"><img src="images/icons/number_5.png" alt="number 5"></span> Then, the browser takes this <code>&lt;saml2:AuthnRequest&gt;</code> and presents it to the asserting party.
 The asserting party attempts to authentication the user.
 If successful, it will return a <code>&lt;saml2:Response&gt;</code> back to the browser.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_6.png" alt="number 6"></span> The browser then POSTs the <code>&lt;saml2:Response&gt;</code> to the assertion consumer service endpoint.</p>
+<p><span class="image"><img src="images/icons/number_6.png" alt="number 6"></span> The browser then POSTs the <code>&lt;saml2:Response&gt;</code> to the assertion consumer service endpoint.</p>
 </div>
 <div id="servlet-saml2login-authentication-saml2webssoauthenticationfilter" class="imageblock">
 <div class="content">
-<img src="../../_images/images/servlet/saml2/saml2webssoauthenticationfilter.png" alt="saml2webssoauthenticationfilter">
+<img src="images/servlet/saml2/saml2webssoauthenticationfilter.png" alt="saml2webssoauthenticationfilter">
 </div>
 <div class="title">Figure 2. Authenticating a <code>&lt;saml2:Response&gt;</code></div>
 </div>
@@ -257,16 +257,16 @@ If successful, it will return a <code>&lt;saml2:Response&gt;</code> back to the 
 <p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_1.png" alt="number 1"></span> When the browser submits a <code>&lt;saml2:Response&gt;</code> to the application, it <a href="#servlet-saml2login-authenticate-responses">delegates to <code>Saml2WebSsoAuthenticationFilter</code></a>.
+<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> When the browser submits a <code>&lt;saml2:Response&gt;</code> to the application, it <a href="#servlet-saml2login-authenticate-responses">delegates to <code>Saml2WebSsoAuthenticationFilter</code></a>.
 This filter calls its configured <code>AuthenticationConverter</code> to create a <code>Saml2AuthenticationToken</code> by extracting the response from the <code>HttpServletRequest</code>.
 This converter additionally resolves the <a href="#servlet-saml2login-relyingpartyregistration"><code>RelyingPartyRegistration</code></a> and supplies it to <code>Saml2AuthenticationToken</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_2.png" alt="number 2"></span> Next, the filter passes the token to its configured <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a>.
+<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> Next, the filter passes the token to its configured <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a>.
 By default, it will use the <a href="#servlet-saml2login-architecture"><code>OpenSamlAuthenticationProvider</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
 </div>
 <div class="ulist">
 <ul>
@@ -279,7 +279,7 @@ By default, it will use the <a href="#servlet-saml2login-architecture"><code>Ope
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -442,49 +442,49 @@ Instead, classes like <code>OpenSamlAuthenticationRequestFactory</code> and <cod
 </div>
 <div class="paragraph">
 <div class="title">Authenticating an OpenSAML <code>Response</code></div>
-<p><span class="image"><img src="../../_images/images/servlet/saml2/opensamlauthenticationprovider.png" alt="opensamlauthenticationprovider"></span></p>
+<p><span class="image"><img src="images/servlet/saml2/opensamlauthenticationprovider.png" alt="opensamlauthenticationprovider"></span></p>
 </div>
 <div class="paragraph">
 <p>This figure builds off of the <a href="#servlet-saml2login-authentication-saml2webssoauthenticationfilter"><code>Saml2WebSsoAuthenticationFilter</code> diagram</a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_1.png" alt="number 1"></span> The <code>Saml2WebSsoAuthenticationFilter</code> formulates the <code>Saml2AuthenticationToken</code> and invokes the <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a>.</p>
+<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> The <code>Saml2WebSsoAuthenticationFilter</code> formulates the <code>Saml2AuthenticationToken</code> and invokes the <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_2.png" alt="number 2"></span> The <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a> invokes the <code>OpenSamlAuthenticationProvider</code>.</p>
+<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> The <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a> invokes the <code>OpenSamlAuthenticationProvider</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_3.png" alt="number 3"></span> The authentication provider deserializes the response into an OpenSAML <code>Response</code> and checks its signature.
+<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> The authentication provider deserializes the response into an OpenSAML <code>Response</code> and checks its signature.
 If the signature is invalid, authentication fails.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_4.png" alt="number 4"></span> Then, the provider <a href="#servlet-saml2login-opensamlauthenticationprovider-decryption">decrypts any <code>EncryptedAssertion</code> elements</a>.
+<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> Then, the provider <a href="#servlet-saml2login-opensamlauthenticationprovider-decryption">decrypts any <code>EncryptedAssertion</code> elements</a>.
 If any decryptions fail, authentication fails.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_5.png" alt="number 5"></span> Next, the provider validates the response&#8217;s <code>Issuer</code> and <code>Destination</code> values.
+<p><span class="image"><img src="images/icons/number_5.png" alt="number 5"></span> Next, the provider validates the response&#8217;s <code>Issuer</code> and <code>Destination</code> values.
 If they don&#8217;t match what&#8217;s in the <code>RelyingPartyRegistration</code>, authentication fails.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_6.png" alt="number 6"></span> After that, the provider verifies the signature of each <code>Assertion</code>.
+<p><span class="image"><img src="images/icons/number_6.png" alt="number 6"></span> After that, the provider verifies the signature of each <code>Assertion</code>.
 If any signature is invalid, authentication fails.
 Also, if neither the response nor the assertions have signatures, authentication fails.
 Either the response or all the assertions must have signatures.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_7.png" alt="number 7"></span> Then, the provider <a href="#servlet-saml2login-opensamlauthenticationprovider-decryption">decrypts any <code>EncryptedID</code> or <code>EncryptedAttribute</code> elements</a>.
+<p><span class="image"><img src="images/icons/number_7.png" alt="number 7"></span> Then, the provider <a href="#servlet-saml2login-opensamlauthenticationprovider-decryption">decrypts any <code>EncryptedID</code> or <code>EncryptedAttribute</code> elements</a>.
 If any decryptions fail, authentication fails.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_8.png" alt="number 8"></span> Next, the provider validates each assertion&#8217;s <code>ExpiresAt</code> and <code>NotBefore</code> timestamps, the <code>&lt;Subject&gt;</code> and any <code>&lt;AudienceRestriction&gt;</code> conditions.
+<p><span class="image"><img src="images/icons/number_8.png" alt="number 8"></span> Next, the provider validates each assertion&#8217;s <code>ExpiresAt</code> and <code>NotBefore</code> timestamps, the <code>&lt;Subject&gt;</code> and any <code>&lt;AudienceRestriction&gt;</code> conditions.
 If any validations fail, authentication fails.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_9.png" alt="number 9"></span> Following that, the provider takes the first assertion&#8217;s <code>AttributeStatement</code> and maps it to a <code>Map&lt;String, List&lt;Object&gt;&gt;</code>.
+<p><span class="image"><img src="images/icons/number_9.png" alt="number 9"></span> Following that, the provider takes the first assertion&#8217;s <code>AttributeStatement</code> and maps it to a <code>Map&lt;String, List&lt;Object&gt;&gt;</code>.
 It also grants the <code>ROLE_USER</code> granted authority.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/images/icons/number_10.png" alt="number 10"></span> And finally, it takes the <code>NameID</code> from the first assertion, the <code>Map</code> of attributes, and the <code>GrantedAuthority</code> and constructs a <code>Saml2AuthenticatedPrincipal</code>.
+<p><span class="image"><img src="images/icons/number_10.png" alt="number 10"></span> And finally, it takes the <code>NameID</code> from the first assertion, the <code>Map</code> of attributes, and the <code>GrantedAuthority</code> and constructs a <code>Saml2AuthenticatedPrincipal</code>.
 Then, it places that principal and the authorities into a <code>Saml2Authentication</code>.</p>
 </div>
 <div class="paragraph">

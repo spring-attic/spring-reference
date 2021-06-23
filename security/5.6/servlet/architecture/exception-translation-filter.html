@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Handling Security Exceptions :: Spring</title>
-    <meta name="generator" content="Antora 2.3.4">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
 <link rel="stylesheet" href="../../../../_/css/vendor/docsearch.min.css">
@@ -179,13 +179,18 @@
 <div class="paragraph">
 <p><code>ExceptionTranslationFilter</code> is inserted into the <a href="#servlet-filterchainproxy">[servlet-filterchainproxy]</a> as one of the <a href="#servlet-security-filters">[servlet-security-filters]</a>.</p>
 </div>
+<div class="imageblock">
+<div class="content">
+<img src="{figures}/exceptiontranslationfilter.png" alt="exceptiontranslationfilter">
+</div>
+</div>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="image"><img src="../../_images/{icondir}/number_1.png" alt="number 1"></span> First, the <code>ExceptionTranslationFilter</code> invokes <code>FilterChain.doFilter(request, response)</code> to invoke the rest of the application.</p>
+<p><span class="image"><img src="{icondir}/number_1.png" alt="number 1"></span> First, the <code>ExceptionTranslationFilter</code> invokes <code>FilterChain.doFilter(request, response)</code> to invoke the rest of the application.</p>
 </li>
 <li>
-<p><span class="image"><img src="../../_images/{icondir}/number_2.png" alt="number 2"></span> If the user is not authenticated or it is an <code>AuthenticationException</code>, then <em>Start Authentication</em>.</p>
+<p><span class="image"><img src="{icondir}/number_2.png" alt="number 2"></span> If the user is not authenticated or it is an <code>AuthenticationException</code>, then <em>Start Authentication</em>.</p>
 <div class="ulist">
 <ul>
 <li>
@@ -203,7 +208,7 @@ For example, it might redirect to a log in page or send a <code>WWW-Authenticate
 </div>
 </li>
 <li>
-<p><span class="image"><img src="../../_images/{icondir}/number_3.png" alt="number 3"></span> Otherwise if it is an <code>AccessDeniedException</code>, then <em>Access Denied</em>.
+<p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> Otherwise if it is an <code>AccessDeniedException</code>, then <em>Access Denied</em>.
 The <code>AccessDeniedHandler</code> is invoked to handle access denied.</p>
 </li>
 </ul>
