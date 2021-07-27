@@ -76,30 +76,45 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../overview/index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../overview/features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/authentication/index.html">Authentication</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/exploits/index.html">Protection Against Exploits</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -109,7 +124,139 @@
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authorization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OAuth2</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../saml2/index.html">SAML2</a>
   </li>
 </ul>
   </li>
@@ -139,7 +286,7 @@
           <a href="../../../6/overview/prerequisites.html">6</a>
         </li>
         <li class="version is-current">
-          <a href="../../overview/prerequisites.html">5.6</a>
+          <a href="../../overview/index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -175,7 +322,10 @@ It wraps a delegate <code>Runnable</code> in order to initialize the <code>Secur
 It then invokes the delegate Runnable ensuring to clear the <code>SecurityContextHolder</code> afterwards.
 The <code>DelegatingSecurityContextRunnable</code> looks something like this:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void run() {
 try {
@@ -187,6 +337,21 @@ try {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun run() {
+    try {
+        SecurityContextHolder.setContext(securityContext)
+        delegate.run()
+    } finally {
+        SecurityContextHolder.clearContext()
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>While very simple, it makes it seamless to transfer the SecurityContext from one Thread to another.
 This is important since, in most cases, the SecurityContextHolder acts on a per Thread basis.
@@ -194,7 +359,10 @@ For example, you might have used Spring Security&#8217;s <a href="#nsa-global-me
 You can now easily transfer the <code>SecurityContext</code> of the current <code>Thread</code> to the <code>Thread</code> that invokes the secured service.
 An example of how you might do this can be found below:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Runnable originalRunnable = new Runnable() {
 public void run() {
@@ -207,6 +375,20 @@ DelegatingSecurityContextRunnable wrappedRunnable =
 	new DelegatingSecurityContextRunnable(originalRunnable, context);
 
 new Thread(wrappedRunnable).start();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val originalRunnable = Runnable {
+    // invoke secured service
+}
+val context: SecurityContext = SecurityContextHolder.getContext()
+val wrappedRunnable = DelegatingSecurityContextRunnable(originalRunnable, context)
+
+Thread(wrappedRunnable).start()</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -233,7 +415,10 @@ Notice that it is not aware of Spring Security</p>
 <p>Since it is quite common to create a <code>DelegatingSecurityContextRunnable</code> with the <code>SecurityContext</code> from the <code>SecurityContextHolder</code> there is a shortcut constructor for it.
 The following code is the same as the code above:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Runnable originalRunnable = new Runnable() {
 public void run() {
@@ -245,6 +430,20 @@ DelegatingSecurityContextRunnable wrappedRunnable =
 	new DelegatingSecurityContextRunnable(originalRunnable);
 
 new Thread(wrappedRunnable).start();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val originalRunnable = Runnable {
+    // invoke secured service
+}
+
+val wrappedRunnable = DelegatingSecurityContextRunnable(originalRunnable)
+
+Thread(wrappedRunnable).start()</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -262,7 +461,10 @@ Let&#8217;s take a look at how <code>DelegatingSecurityContextExecutor</code> ca
 <p>The design of <code>DelegatingSecurityContextExecutor</code> is very similar to that of <code>DelegatingSecurityContextRunnable</code> except it accepts a delegate <code>Executor</code> instead of a delegate <code>Runnable</code>.
 You can see an example of how it might be used below:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SecurityContext context = SecurityContextHolder.createEmptyContext();
 Authentication authentication =
@@ -281,6 +483,26 @@ public void run() {
 };
 
 executor.execute(originalRunnable);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val context: SecurityContext = SecurityContextHolder.createEmptyContext()
+val authentication: Authentication =
+    UsernamePasswordAuthenticationToken("user", "doesnotmatter", AuthorityUtils.createAuthorityList("ROLE_USER"))
+context.authentication = authentication
+
+val delegateExecutor = SimpleAsyncTaskExecutor()
+val executor = DelegatingSecurityContextExecutor(delegateExecutor, context)
+
+val originalRunnable = Runnable {
+    // invoke secured service
+}
+
+executor.execute(originalRunnable)</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -307,7 +529,10 @@ This is nice if we are running background tasks that need to be run by a user wi
 </li>
 </ul>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
 private Executor executor; // becomes an instance of our DelegatingSecurityContextExecutor
@@ -322,6 +547,22 @@ executor.execute(originalRunnable);
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Autowired
+lateinit var executor: Executor // becomes an instance of our DelegatingSecurityContextExecutor
+
+fun submitRunnable() {
+    val originalRunnable = Runnable {
+        // invoke secured service
+    }
+    executor.execute(originalRunnable)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Now our code is unaware that the <code>SecurityContext</code> is being propagated to the <code>Thread</code>, then the <code>originalRunnable</code> is run, and then the <code>SecurityContextHolder</code> is cleared out.
 In this example, the same user is being used to run each thread.
@@ -329,11 +570,23 @@ What if we wanted to use the user from <code>SecurityContextHolder</code> at the
 This can be done by removing the <code>SecurityContext</code> argument from our <code>DelegatingSecurityContextExecutor</code> constructor.
 For example:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SimpleAsyncTaskExecutor delegateExecutor = new SimpleAsyncTaskExecutor();
 DelegatingSecurityContextExecutor executor =
 	new DelegatingSecurityContextExecutor(delegateExecutor);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val delegateExecutor = SimpleAsyncTaskExecutor()
+val executor = DelegatingSecurityContextExecutor(delegateExecutor)</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">

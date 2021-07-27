@@ -76,30 +76,45 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../overview/index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../overview/features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/authentication/index.html">Authentication</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/exploits/index.html">Protection Against Exploits</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -109,7 +124,139 @@
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authorization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OAuth2</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../saml2/index.html">SAML2</a>
   </li>
 </ul>
   </li>
@@ -139,7 +286,7 @@
           <a href="../../../6/overview/prerequisites.html">6</a>
         </li>
         <li class="version is-current">
-          <a href="../../overview/prerequisites.html">5.6</a>
+          <a href="../../overview/index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -183,7 +330,10 @@ Spring Security&#8217;s testing support requires spring-test-4.1.3.RELEASE or gr
 </tr>
 </table>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.security.test.web.servlet.setup.SecurityMockMvcConfigurers.*;
 
@@ -208,6 +358,31 @@ public class CsrfShowcaseTests {
 ...</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RunWith(SpringJUnit4ClassRunner::class)
+@ContextConfiguration(classes = [SecurityConfig::class])
+@WebAppConfiguration
+class CsrfShowcaseTests {
+
+    @Autowired
+    private lateinit var context: WebApplicationContext
+
+    private var mvc: MockMvc? = null
+
+    @Before
+    fun setup() {
+        mvc = MockMvcBuilders
+            .webAppContextSetup(context)
+            .apply&lt;DefaultMockMvcBuilder&gt;(springSecurity()) <i class="conum" data-value="1"></i><b>(1)</b>
+            .build()
+    }
+// ...</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="colist arabic">
 <table>
 <tr>
@@ -224,9 +399,20 @@ public class CsrfShowcaseTests {
 Spring Security provides a number of <code>RequestPostProcessor</code> implementations that make testing easier.
 In order to use Spring Security&#8217;s <code>RequestPostProcessor</code> implementations ensure the following static import is used:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestPostProcessors.*</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -235,28 +421,67 @@ In order to use Spring Security&#8217;s <code>RequestPostProcessor</code> implem
 <p>When testing any non-safe HTTP methods and using Spring Security&#8217;s CSRF protection, you must be sure to include a valid CSRF Token in the request.
 To specify a valid CSRF token as a request parameter using the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(post("/").with(csrf()))</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.post("/") {
+    with(csrf())
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>If you like you can include CSRF token in the header instead:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(post("/").with(csrf().asHeader()))</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.post("/") {
+    with(csrf().asHeader())
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>You can also test providing an invalid CSRF token using the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(post("/").with(csrf().useInvalidToken()))</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.post("/") {
+    with(csrf().useInvalidToken())
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -312,39 +537,91 @@ A few ways to do this are:</p>
 </tr>
 </table>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(get("/").with(user("user")))</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/") {
+    with(user("user"))
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>You can easily make customizations.
 For example, the following will run as a user (which does not need to exist) with the username "admin", the password "pass", and the roles "ROLE_USER" and "ROLE_ADMIN".</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(get("/admin").with(user("admin").password("pass").roles("USER","ADMIN")))</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/admin") {
+    with(user("admin").password("pass").roles("USER","ADMIN"))
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>If you have a custom <code>UserDetails</code> that you would like to use, you can easily specify that as well.
 For example, the following will use the specified <code>UserDetails</code> (which does not need to exist) to run with a <code>UsernamePasswordAuthenticationToken</code> that has a principal of the specified <code>UserDetails</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(get("/").with(user(userDetails)))</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/") {
+    with(user(userDetails))
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>You can run as anonymous user using the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(get("/").with(anonymous()))</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/") {
+    with(anonymous())
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -353,26 +630,55 @@ For example, the following will use the specified <code>UserDetails</code> (whic
 <div class="paragraph">
 <p>If you want a custom <code>Authentication</code> (which does not need to exist) you can do so using the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(get("/").with(authentication(authentication)))</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/") {
+    with(authentication(authentication))
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>You can even customize the <code>SecurityContext</code> using the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(get("/").with(securityContext(securityContext)))</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/") {
+    with(securityContext(securityContext))
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>We can also ensure to run as a specific user for every request by using <code>MockMvcBuilders</code>'s default request.
 For example, the following will run as a user (which does not need to exist) with the username "admin", the password "password", and the role "ROLE_ADMIN":</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc = MockMvcBuilders
 		.webAppContextSetup(context)
@@ -381,21 +687,49 @@ For example, the following will run as a user (which does not need to exist) wit
 		.build();</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc = MockMvcBuilders
+    .webAppContextSetup(context)
+    .defaultRequest&lt;DefaultMockMvcBuilder&gt;(get("/").with(user("user").roles("ADMIN")))
+    .apply&lt;DefaultMockMvcBuilder&gt;(springSecurity())
+    .build()</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>If you find you are using the same user in many of your tests, it is recommended to move the user to a method.
 For example, you can specify the following in your own class named <code>CustomSecurityMockMvcRequestPostProcessors</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public static RequestPostProcessor rob() {
 	return user("rob").roles("ADMIN");
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun rob(): RequestPostProcessor {
+    return user("rob").roles("ADMIN")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Now you can perform a static import on <code>SecurityMockMvcRequestPostProcessors</code> and use that within your tests:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static sample.CustomSecurityMockMvcRequestPostProcessors.*;
 
@@ -405,13 +739,30 @@ mvc
 	.perform(get("/").with(rob()))</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import sample.CustomSecurityMockMvcRequestPostProcessors.*
+
+//...
+
+mvc.get("/") {
+    with(rob())
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="sect4">
 <h5 id="_running_as_a_user_in_spring_mvc_test_with_annotations"><a class="anchor" href="#_running_as_a_user_in_spring_mvc_test_with_annotations"></a>Running as a User in Spring MVC Test with Annotations</h5>
 <div class="paragraph">
 <p>As an alternative to using a <code>RequestPostProcessor</code> to create your user, you can use annotations described in <a href="#Testing Method Security">[Testing Method Security]</a>.
 For example, the following will run the test with the user with username "user", password "password", and role "ROLE_USER":</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
 @WithMockUser
@@ -422,10 +773,27 @@ mvc
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Test
+@WithMockUser
+fun requestProtectedUrlWithUser() {
+    mvc
+        .get("/")
+        // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Alternatively, the following will run the test with the user with username "user", password "password", and role "ROLE_ADMIN":</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
 @WithMockUser(roles="ADMIN")
@@ -434,6 +802,20 @@ mvc
 		.perform(get("/"))
 		...
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Test
+@WithMockUser(roles = ["ADMIN"])
+fun requestProtectedUrlWithUser() {
+    mvc
+        .get("/")
+        // ...
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -445,10 +827,23 @@ mvc
 Now this can be done using Spring Security&#8217;s <code>httpBasic</code> <code>RequestPostProcessor</code>.
 For example, the snippet below:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(get("/").with(httpBasic("user","password")))</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/") {
+    with(httpBasic("user","password"))
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -468,12 +863,26 @@ For example, the snippet below:</p>
 <div class="paragraph">
 <p>For example, for a controller that looks like this:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
 public String foo(Principal user) {
     return user.getName();
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/endpoint")
+fun foo(user: Principal): String {
+    return user.name
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -482,12 +891,26 @@ public String foo(Principal user) {
 <div class="paragraph">
 <p>But, in cases where your controllers are bound to some aspect of Spring Security&#8217;s OAuth 2.0 support, like the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
 public String foo(@AuthenticationPrincipal OidcUser user) {
     return user.getIdToken().getSubject();
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/endpoint")
+fun foo(@AuthenticationPrincipal user: OidcUser): String {
+    return user.idToken.subject
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -503,10 +926,23 @@ Certainly this would be a daunting task, which is why Spring Security ships with
 <div class="paragraph">
 <p>For example, we can tell Spring Security to include a default <code>OidcUser</code> using the <code>SecurityMockMvcRequestPostProcessors#oidcLogin</code> method, like so:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint").with(oidcLogin()));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(oidcLogin())
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -515,26 +951,60 @@ Certainly this would be a daunting task, which is why Spring Security ships with
 <div class="paragraph">
 <p>Specifically, it will include an <code>OidcIdToken</code> with a <code>sub</code> claim set to <code>user</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(user.getIdToken().getClaim("sub")).isEqualTo("user");</code></pre>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(user.getIdToken().getClaim("sub")).isEqualTo("user");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(user.idToken.getClaim&lt;String&gt;("sub")).isEqualTo("user")</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>an <code>OidcUserInfo</code> with no claims set:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(user.getUserInfo().getClaims()).isEmpty();</code></pre>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(user.getUserInfo().getClaims()).isEmpty();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(user.userInfo.claims).isEmpty()</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>and a <code>Collection</code> of authorities with just one authority, <code>SCOPE_read</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(user.getAuthorities()).hasSize(1);
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(user.getAuthorities()).hasSize(1);
 assertThat(user.getAuthorities()).containsExactly(new SimpleGrantedAuthority("SCOPE_read"));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(user.authorities).hasSize(1)
+assertThat(user.authorities).containsExactly(SimpleGrantedAuthority("SCOPE_read"))</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -552,7 +1022,10 @@ This can be handy if your tests <a href="#testing-oauth2-client">use the <code>@
 <div class="paragraph">
 <p>In this case, you can supply what granted authorities you need using the <code>authorities()</code> method:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
@@ -560,6 +1033,18 @@ This can be handy if your tests <a href="#testing-oauth2-client">use the <code>@
             .authorities(new SimpleGrantedAuthority("SCOPE_message:read"))
         )
     );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(oidcLogin()
+        .authorities(SimpleGrantedAuthority("SCOPE_message:read"))
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -572,7 +1057,10 @@ This can be handy if your tests <a href="#testing-oauth2-client">use the <code>@
 <p>Let&#8217;s say, for example, that you&#8217;ve got a <code>user_id</code> claim that indicates the user&#8217;s id in your system.
 You might access it like so in a controller:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
 public String foo(@AuthenticationPrincipal OidcUser oidcUser) {
@@ -581,10 +1069,25 @@ public String foo(@AuthenticationPrincipal OidcUser oidcUser) {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/endpoint")
+fun foo(@AuthenticationPrincipal oidcUser: OidcUser): String {
+    val userId = oidcUser.idToken.getClaim&lt;String&gt;("user_id")
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>In that case, you&#8217;d want to specify that claim with the <code>idToken()</code> method:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
@@ -592,6 +1095,20 @@ public String foo(@AuthenticationPrincipal OidcUser oidcUser) {
                 .idToken(token -&gt; token.claim("user_id", "1234"))
         )
     );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(oidcLogin()
+        .idToken {
+            it.claim("user_id", "1234")
+        }
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -625,17 +1142,36 @@ public String foo(@AuthenticationPrincipal OidcUser oidcUser) {
 <p>For example, let&#8217;s say that your authorization server sends the principal name in the <code>user_name</code> claim instead of the <code>sub</code> claim.
 In that case, you can configure an <code>OidcUser</code> by hand:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">OidcUser oidcUser = new DefaultOidcUser(
         AuthorityUtils.createAuthorityList("SCOPE_message:read"),
-        Collections.singletonMap("user_name", "foo_user"),
+        OidcIdToken.withTokenValue("id-token").claim("user_name", "foo_user").build(),
         "user_name");
 
 mvc
     .perform(get("/endpoint")
         .with(oidcLogin().oidcUser(oidcUser))
     );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val oidcUser: OidcUser = DefaultOidcUser(
+    AuthorityUtils.createAuthorityList("SCOPE_message:read"),
+    OidcIdToken.withTokenValue("id-token").claim("user_name", "foo_user").build(),
+    "user_name"
+)
+
+mvc.get("/endpoint") {
+    with(oidcLogin().oidcUser(oidcUser))
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -649,7 +1185,10 @@ And because of that, Spring Security also has test support for non-OIDC use case
 <div class="paragraph">
 <p>Let&#8217;s say that we&#8217;ve got a controller that gets the logged-in user as an <code>OAuth2User</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
 public String foo(@AuthenticationPrincipal OAuth2User oauth2User) {
@@ -657,13 +1196,37 @@ public String foo(@AuthenticationPrincipal OAuth2User oauth2User) {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/endpoint")
+fun foo(@AuthenticationPrincipal oauth2User: OAuth2User): String? {
+    return oauth2User.getAttribute("sub")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>In that case, we can tell Spring Security to include a default <code>OAuth2User</code> using the <code>SecurityMockMvcRequestPostProcessors#oauth2User</code> method, like so:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint").with(oauth2Login()));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(oauth2Login())
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -672,18 +1235,41 @@ public String foo(@AuthenticationPrincipal OAuth2User oauth2User) {
 <div class="paragraph">
 <p>Specifically, it will include a <code>Map</code> with a key/value pair of <code>sub</code>/<code>user</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat((String) user.getAttribute("sub")).isEqualTo("user");</code></pre>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat((String) user.getAttribute("sub")).isEqualTo("user");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(user.getAttribute&lt;String&gt;("sub")).isEqualTo("user")</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>and a <code>Collection</code> of authorities with just one authority, <code>SCOPE_read</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(user.getAuthorities()).hasSize(1);
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(user.getAuthorities()).hasSize(1);
 assertThat(user.getAuthorities()).containsExactly(new SimpleGrantedAuthority("SCOPE_read"));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(user.authorities).hasSize(1)
+assertThat(user.authorities).containsExactly(SimpleGrantedAuthority("SCOPE_read"))</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -701,7 +1287,10 @@ This can be handy if your tests <a href="#testing-oauth2-client">use the <code>@
 <div class="paragraph">
 <p>In this case, you can supply what granted authorities you need using the <code>authorities()</code> method:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
@@ -709,6 +1298,18 @@ This can be handy if your tests <a href="#testing-oauth2-client">use the <code>@
             .authorities(new SimpleGrantedAuthority("SCOPE_message:read"))
         )
     );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(oauth2Login()
+        .authorities(SimpleGrantedAuthority("SCOPE_message:read"))
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -721,7 +1322,10 @@ This can be handy if your tests <a href="#testing-oauth2-client">use the <code>@
 <p>Let&#8217;s say, for example, that you&#8217;ve got a <code>user_id</code> attribute that indicates the user&#8217;s id in your system.
 You might access it like so in a controller:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
 public String foo(@AuthenticationPrincipal OAuth2User oauth2User) {
@@ -730,10 +1334,25 @@ public String foo(@AuthenticationPrincipal OAuth2User oauth2User) {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/endpoint")
+fun foo(@AuthenticationPrincipal oauth2User: OAuth2User): String {
+    val userId = oauth2User.getAttribute&lt;String&gt;("user_id")
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>In that case, you&#8217;d want to specify that attribute with the <code>attributes()</code> method:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
@@ -741,6 +1360,18 @@ public String foo(@AuthenticationPrincipal OAuth2User oauth2User) {
                 .attributes(attrs -&gt; attrs.put("user_id", "1234"))
         )
     );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(oauth2Login()
+        .attributes { attrs -&gt; attrs["user_id"] = "1234" }
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -768,7 +1399,10 @@ public String foo(@AuthenticationPrincipal OAuth2User oauth2User) {
 <p>For example, let&#8217;s say that your authorization server sends the principal name in the <code>user_name</code> claim instead of the <code>sub</code> claim.
 In that case, you can configure an <code>OAuth2User</code> by hand:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">OAuth2User oauth2User = new DefaultOAuth2User(
         AuthorityUtils.createAuthorityList("SCOPE_message:read"),
@@ -781,6 +1415,22 @@ mvc
     );</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val oauth2User: OAuth2User = DefaultOAuth2User(
+    AuthorityUtils.createAuthorityList("SCOPE_message:read"),
+    mapOf(Pair("user_name", "foo_user")),
+    "user_name"
+)
+
+mvc.get("/endpoint") {
+    with(oauth2Login().oauth2User(oauth2User))
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -789,9 +1439,12 @@ mvc
 <p>Independent of how your user authenticates, you may have other tokens and client registrations that are in play for the request you are testing.
 For example, your controller may be relying on the client credentials grant to get a token that isn&#8217;t associated with the user at all:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">@GetMapping("/endpoint")
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
 public String foo(@RegisteredOAuth2AuthorizedClient("my-app") OAuth2AuthorizedClient authorizedClient) {
     return this.webClient.get()
         .attributes(oauth2AuthorizedClient(authorizedClient))
@@ -801,14 +1454,44 @@ public String foo(@RegisteredOAuth2AuthorizedClient("my-app") OAuth2AuthorizedCl
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/endpoint")
+fun foo(@RegisteredOAuth2AuthorizedClient("my-app") authorizedClient: OAuth2AuthorizedClient?): String? {
+    return this.webClient.get()
+        .attributes(oauth2AuthorizedClient(authorizedClient))
+        .retrieve()
+        .bodyToMono(String::class.java)
+        .block()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Simulating this handshake with the authorization server could be cumbersome.
 Instead, you can use <code>SecurityMockMvcRequestPostProcessor#oauth2Client</code> to add a <code>OAuth2AuthorizedClient</code> into a mock <code>OAuth2AuthorizedClientRepository</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint").with(oauth2Client("my-app")));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(
+        oauth2Client("my-app")
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -817,27 +1500,62 @@ Instead, you can use <code>SecurityMockMvcRequestPostProcessor#oauth2Client</cod
 <div class="paragraph">
 <p>Specifically, it will include a <code>ClientRegistration</code> with a client id of "test-client" and client secret of "test-secret":</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(authorizedClient.getClientRegistration().getClientId()).isEqualTo("test-client");
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(authorizedClient.getClientRegistration().getClientId()).isEqualTo("test-client");
 assertThat(authorizedClient.getClientRegistration().getClientSecret()).isEqualTo("test-secret");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(authorizedClient.clientRegistration.clientId).isEqualTo("test-client")
+assertThat(authorizedClient.clientRegistration.clientSecret).isEqualTo("test-secret")</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>a resource owner name of "user":</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(authorizedClient.getPrincipalName()).isEqualTo("user");</code></pre>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(authorizedClient.getPrincipalName()).isEqualTo("user");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(authorizedClient.principalName).isEqualTo("user")</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>and an <code>OAuth2AccessToken</code> with just one scope, <code>read</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(authorizedClient.getAccessToken().getScopes()).hasSize(1);
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(authorizedClient.getAccessToken().getScopes()).hasSize(1);
 assertThat(authorizedClient.getAccessToken().getScopes()).containsExactly("read");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(authorizedClient.accessToken.scopes).hasSize(1)
+assertThat(authorizedClient.accessToken.scopes).containsExactly("read")</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -849,9 +1567,12 @@ assertThat(authorizedClient.getAccessToken().getScopes()).containsExactly("read"
 <p>In many circumstances, the OAuth 2.0 access token comes with a set of scopes.
 If your controller inspects these, say like so:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">@GetMapping("/endpoint")
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
 public String foo(@RegisteredOAuth2AuthorizedClient("my-app") OAuth2AuthorizedClient authorizedClient) {
     Set&lt;String&gt; scopes = authorizedClient.getAccessToken().getScopes();
     if (scopes.contains("message:read")) {
@@ -865,10 +1586,32 @@ public String foo(@RegisteredOAuth2AuthorizedClient("my-app") OAuth2AuthorizedCl
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/endpoint")
+fun foo(@RegisteredOAuth2AuthorizedClient("my-app") authorizedClient: OAuth2AuthorizedClient): String? {
+    val scopes = authorizedClient.accessToken.scopes
+    if (scopes.contains("message:read")) {
+        return webClient.get()
+            .attributes(oauth2AuthorizedClient(authorizedClient))
+            .retrieve()
+            .bodyToMono(String::class.java)
+            .block()
+    }
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>then you can configure the scope using the <code>accessToken()</code> method:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
@@ -876,6 +1619,18 @@ public String foo(@RegisteredOAuth2AuthorizedClient("my-app") OAuth2AuthorizedCl
             .accessToken(new OAuth2AccessToken(BEARER, "token", null, null, Collections.singleton("message:read"))))
         )
     );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(oauth2Client("my-app")
+            .accessToken(OAuth2AccessToken(BEARER, "token", null, null, Collections.singleton("message:read")))
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -906,7 +1661,10 @@ public String foo(@RegisteredOAuth2AuthorizedClient("my-app") OAuth2AuthorizedCl
 <div class="paragraph">
 <p>In that case, your test can autowire the <code>ClientRegistrationRepository</code> and look up the one your test needs:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
 ClientRegistrationRepository clientRegistrationRepository;
@@ -917,6 +1675,23 @@ mvc
     .perform(get("/endpoint")
         .with(oauth2Client()
             .clientRegistration(this.clientRegistrationRepository.findByRegistrationId("facebook"))));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Autowired
+lateinit var clientRegistrationRepository: ClientRegistrationRepository
+
+// ...
+
+mvc.get("/endpoint") {
+    with(oauth2Client("my-app")
+        .clientRegistration(clientRegistrationRepository.findByRegistrationId("facebook"))
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -940,10 +1715,23 @@ We&#8217;ll look at two of them now:</p>
 <p>The first way is via a <code>RequestPostProcessor</code>.
 The simplest of these would look something like this:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint").with(jwt()));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(jwt())
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -966,13 +1754,24 @@ The simplest of these would look something like this:</p>
 <div class="paragraph">
 <p>And the resulting <code>Jwt</code>, were it tested, would pass in the following way:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(jwt.getTokenValue()).isEqualTo("token");
 assertThat(jwt.getHeaders().get("alg")).isEqualTo("none");
-assertThat(jwt.getSubject()).isEqualTo("sub");
-GrantedAuthority authority = jwt.getAuthorities().iterator().next();
-assertThat(authority.getAuthority()).isEqualTo("read");</code></pre>
+assertThat(jwt.getSubject()).isEqualTo("sub");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(jwt.tokenValue).isEqualTo("token")
+assertThat(jwt.headers["alg"]).isEqualTo("none")
+assertThat(jwt.subject).isEqualTo("sub")</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -981,54 +1780,136 @@ assertThat(authority.getAuthority()).isEqualTo("read");</code></pre>
 <div class="paragraph">
 <p>Any headers or claims can be configured with their corresponding methods:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
         .with(jwt().jwt(jwt -&gt; jwt.header("kid", "one").claim("iss", "https://idp.example.org"))));</code></pre>
 </div>
 </div>
-<div class="listingblock">
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(
+        jwt().jwt { jwt -&gt; jwt.header("kid", "one").claim("iss", "https://idp.example.org") }
+    )
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
         .with(jwt().jwt(jwt -&gt; jwt.claims(claims -&gt; claims.remove("scope")))));</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(
+        jwt().jwt { jwt -&gt; jwt.claims { claims -&gt; claims.remove("scope") } }
+    )
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>The <code>scope</code> and <code>scp</code> claims are processed the same way here as they are in a normal bearer token request.
 However, this can be overridden simply by providing the list of <code>GrantedAuthority</code> instances that you need for your test:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
         .with(jwt().authorities(new SimpleGrantedAuthority("SCOPE_messages"))));</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(
+        jwt().authorities(SimpleGrantedAuthority("SCOPE_messages"))
+    )
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Or, if you have a custom <code>Jwt</code> to <code>Collection&lt;GrantedAuthority&gt;</code> converter, you can also use that to derive the authorities:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
         .with(jwt().authorities(new MyConverter())));</code></pre>
 </div>
 </div>
-<div class="paragraph">
-<p>You can also specify a complete <code>Jwt</code>, for which <code>{security-api-url}org/springframework/security/oauth2/jwt/Jwt.Builder.html[Jwt.Builder]</code> comes quite handy:</p>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(
+        jwt().authorities(MyConverter())
+    )
+}</code></pre>
 </div>
-<div class="listingblock">
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also specify a complete <code>Jwt</code>, for which <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/Jwt.Builder.html">Jwt.Builder</a></code> comes quite handy:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Jwt jwt = Jwt.withTokenValue("token")
     .header("alg", "none")
     .claim("sub", "user")
-    .claim("scope", "read");
+    .claim("scope", "read")
+    .build();
 
 mvc
     .perform(get("/endpoint")
         .with(jwt().jwt(jwt)));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val jwt: Jwt = Jwt.withTokenValue("token")
+    .header("alg", "none")
+    .claim("sub", "user")
+    .claim("scope", "read")
+    .build()
+
+mvc.get("/endpoint") {
+    with(
+        jwt().jwt(jwt)
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1038,7 +1919,10 @@ mvc
 <p>The second way is by using the <code>authentication()</code> <code>RequestPostProcessor</code>.
 Essentially, you can instantiate your own <code>JwtAuthenticationToken</code> and provide it in your test, like so:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Jwt jwt = Jwt.withTokenValue("token")
     .header("alg", "none")
@@ -1050,6 +1934,25 @@ JwtAuthenticationToken token = new JwtAuthenticationToken(jwt, authorities);
 mvc
     .perform(get("/endpoint")
         .with(authentication(token)));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val jwt = Jwt.withTokenValue("token")
+    .header("alg", "none")
+    .claim("sub", "user")
+    .build()
+val authorities: Collection&lt;GrantedAuthority&gt; = AuthorityUtils.createAuthorityList("SCOPE_read")
+val token = JwtAuthenticationToken(jwt, authorities)
+
+mvc.get("/endpoint") {
+    with(
+        authentication(token)
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1066,21 +1969,48 @@ To help with that, Spring Security has test support for opaque tokens.</p>
 <div class="paragraph">
 <p>Let&#8217;s say that we&#8217;ve got a controller that retrieves the authentication as a <code>BearerTokenAuthentication</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
 public String foo(BearerTokenAuthentication authentication) {
-    return (String) authentication.getTokenAttributes("sub");
+    return (String) authentication.getTokenAttributes().get("sub");
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/endpoint")
+fun foo(authentication: BearerTokenAuthentication): String {
+    return authentication.tokenAttributes["sub"] as String
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>In that case, we can tell Spring Security to include a default <code>BearerTokenAuthentication</code> using the <code>SecurityMockMvcRequestPostProcessors#opaqueToken</code> method, like so:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint").with(opaqueToken()));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(opaqueToken())
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1089,18 +2019,41 @@ public String foo(BearerTokenAuthentication authentication) {
 <div class="paragraph">
 <p>Specifically, it will include a <code>Map</code> with a key/value pair of <code>sub</code>/<code>user</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat((String) token.getTokenAttributes().get("sub")).isEqualTo("user");</code></pre>
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat((String) token.getTokenAttributes().get("sub")).isEqualTo("user");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(token.tokenAttributes["sub"] as String).isEqualTo("user")</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>and a <code>Collection</code> of authorities with just one authority, <code>SCOPE_read</code>:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">assertThat(token.getAuthorities()).hasSize(1);
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">assertThat(token.getAuthorities()).hasSize(1);
 assertThat(token.getAuthorities()).containsExactly(new SimpleGrantedAuthority("SCOPE_read"));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">assertThat(token.authorities).hasSize(1)
+assertThat(token.authorities).containsExactly(SimpleGrantedAuthority("SCOPE_read"))</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1114,7 +2067,10 @@ assertThat(token.getAuthorities()).containsExactly(new SimpleGrantedAuthority("S
 <div class="paragraph">
 <p>In this case, you can supply what granted authorities you need using the <code>authorities()</code> method:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
@@ -1122,6 +2078,18 @@ assertThat(token.getAuthorities()).containsExactly(new SimpleGrantedAuthority("S
             .authorities(new SimpleGrantedAuthority("SCOPE_message:read"))
         )
     );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(opaqueToken()
+        .authorities(SimpleGrantedAuthority("SCOPE_message:read"))
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1134,7 +2102,10 @@ assertThat(token.getAuthorities()).containsExactly(new SimpleGrantedAuthority("S
 <p>Let&#8217;s say, for example, that you&#8217;ve got a <code>user_id</code> attribute that indicates the user&#8217;s id in your system.
 You might access it like so in a controller:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/endpoint")
 public String foo(BearerTokenAuthentication authentication) {
@@ -1143,10 +2114,25 @@ public String foo(BearerTokenAuthentication authentication) {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/endpoint")
+fun foo(authentication: BearerTokenAuthentication): String {
+    val userId = authentication.tokenAttributes["user_id"] as String
+    // ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>In that case, you&#8217;d want to specify that attribute with the <code>attributes()</code> method:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
     .perform(get("/endpoint")
@@ -1154,6 +2140,18 @@ public String foo(BearerTokenAuthentication authentication) {
                 .attributes(attrs -&gt; attrs.put("user_id", "1234"))
         )
     );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc.get("/endpoint") {
+    with(opaqueToken()
+        .attributes { attrs -&gt; attrs["user_id"] = "1234" }
+    )
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1174,7 +2172,10 @@ public String foo(BearerTokenAuthentication authentication) {
 <p>For example, let&#8217;s say that your authorization server sends the principal name in the <code>user_name</code> attribute instead of the <code>sub</code> attribute.
 In that case, you can configure an <code>OAuth2AuthenticatedPrincipal</code> by hand:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Map&lt;String, Object&gt; attributes = Collections.singletonMap("user_name", "foo_user");
 OAuth2AuthenticatedPrincipal principal = new DefaultOAuth2AuthenticatedPrincipal(
@@ -1186,6 +2187,23 @@ mvc
     .perform(get("/endpoint")
         .with(opaqueToken().principal(principal))
     );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val attributes: Map&lt;String, Any&gt; = Collections.singletonMap("user_name", "foo_user")
+val principal: OAuth2AuthenticatedPrincipal = DefaultOAuth2AuthenticatedPrincipal(
+    attributes["user_name"] as String?,
+    attributes,
+    AuthorityUtils.createAuthorityList("SCOPE_message:read")
+)
+
+mvc.get("/endpoint") {
+    with(opaqueToken().principal(principal))
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1201,9 +2219,20 @@ mvc
 Spring Security provides a few <code>RequestBuilder</code> implementations that can be used to make testing easier.
 In order to use Spring Security&#8217;s <code>RequestBuilder</code> implementations ensure the following static import is used:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.*;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.security.test.web.servlet.request.SecurityMockMvcRequestBuilders.*</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -1212,30 +2241,66 @@ In order to use Spring Security&#8217;s <code>RequestBuilder</code> implementati
 <p>You can easily create a request to test a form based authentication using Spring Security&#8217;s testing support.
 For example, the following will submit a POST to "/login" with the username "user", the password "password", and a valid CSRF token:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(formLogin())</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+	.perform(formLogin())</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>It is easy to customize the request.
 For example, the following will submit a POST to "/auth" with the username "admin", the password "pass", and a valid CSRF token:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(formLogin("/auth").user("admin").password("pass"))</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+    .perform(formLogin("/auth").user("admin").password("pass"))</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>We can also customize the parameters names that the username and password are included on.
 For example, this is the above request modified to include the username on the HTTP parameter "u" and the password on the HTTP parameter "p".</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(formLogin("/auth").user("u","admin").password("p","pass"))</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+    .perform(formLogin("/auth").user("u","admin").password("p","pass"))</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1245,20 +2310,44 @@ For example, this is the above request modified to include the username on the H
 <p>While fairly trivial using standard Spring MVC Test, you can use Spring Security&#8217;s testing support to make testing log out easier.
 For example, the following will submit a POST to "/logout" with a valid CSRF token:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(logout())</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+    .perform(logout())</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>You can also customize the URL to post to.
 For example, the snippet below will submit a POST to "/signout" with a valid CSRF token:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(logout("/signout"))</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+	.perform(logout("/signout"))</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1270,9 +2359,20 @@ For example, the snippet below will submit a POST to "/signout" with a valid CSR
 To accommodate this need, Spring Security Test support implements Spring MVC Test&#8217;s <code>ResultMatcher</code> interface.
 In order to use Spring Security&#8217;s <code>ResultMatcher</code> implementations ensure the following static import is used:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.security.test.web.servlet.response.SecurityMockMvcResultMatchers.*;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.security.test.web.servlet.response.SecurityMockMvcResultMatchers.*</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -1282,11 +2382,24 @@ In order to use Spring Security&#8217;s <code>ResultMatcher</code> implementatio
 For example, you might want to test submitting an invalid username and password and verify that no user is authenticated.
 You can easily do this with Spring Security&#8217;s testing support using something like the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(formLogin().password("invalid"))
 	.andExpect(unauthenticated());</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+    .perform(formLogin().password("invalid"))
+    .andExpect { unauthenticated() }</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1297,52 +2410,121 @@ You can easily do this with Spring Security&#8217;s testing support using someth
 For example, we may want to verify that we authenticated successfully.
 We could verify that a form based login was successful with the following snippet of code:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(formLogin())
 	.andExpect(authenticated());</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+    .perform(formLogin())
+    .andExpect { authenticated() }</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>If we wanted to assert the roles of the user, we could refine our previous code as shown below:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(formLogin().user("admin"))
 	.andExpect(authenticated().withRoles("USER","ADMIN"));</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+    .perform(formLogin())
+    .andExpect { authenticated().withRoles("USER","ADMIN") }</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Alternatively, we could verify the username:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(formLogin().user("admin"))
 	.andExpect(authenticated().withUsername("admin"));</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+    .perform(formLogin().user("admin"))
+    .andExpect { authenticated().withUsername("admin") }</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>We can also combine the assertions:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
-	.perform(formLogin().user("admin").roles("USER","ADMIN"))
-	.andExpect(authenticated().withUsername("admin"));</code></pre>
+	.perform(formLogin().user("admin"))
+	.andExpect(authenticated().withUsername("admin").withRoles("USER", "ADMIN"));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+    .perform(formLogin().user("admin"))
+    .andExpect { authenticated().withUsername("admin").withRoles("USER", "ADMIN") }</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
 <p>We can also make arbitrary assertions on the authentication</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
 	.perform(formLogin())
 	.andExpect(authenticated().withAuthentication(auth -&gt;
 		assertThat(auth).isInstanceOf(UsernamePasswordAuthenticationToken.class)));</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">mvc
+    .perform(formLogin())
+    .andExpect {
+        authenticated().withAuthentication { auth -&gt;
+            assertThat(auth).isInstanceOf(UsernamePasswordAuthenticationToken::class.java) }
+        }
+    }</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>

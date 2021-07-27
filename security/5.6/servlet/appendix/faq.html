@@ -76,30 +76,45 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../overview/index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../overview/features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/authentication/index.html">Authentication</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/exploits/index.html">Protection Against Exploits</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -109,7 +124,139 @@
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authorization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OAuth2</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../saml2/index.html">SAML2</a>
   </li>
 </ul>
   </li>
@@ -139,7 +286,7 @@
           <a href="../../../6/overview/prerequisites.html">6</a>
         </li>
         <li class="version is-current">
-          <a href="../../overview/prerequisites.html">5.6</a>
+          <a href="../../overview/index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -455,7 +602,10 @@ This will be different in different companies, so you have to find it out yourse
 Before adding a Spring Security LDAP configuration to an application, it&#8217;s a good idea to write a simple test using standard Java LDAP code (without Spring Security involved), and make sure you can get that to work first.
 For example, to authenticate a user, you could use the following code:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Test
 public void ldapAuthenticationIsSuccessful() throws Exception {
@@ -469,6 +619,23 @@ public void ldapAuthenticationIsSuccessful() throws Exception {
 		InitialLdapContext ctx = new InitialLdapContext(env, null);
 
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Test
+fun ldapAuthenticationIsSuccessful() {
+    val env = Hashtable&lt;String, String&gt;()
+    env[Context.SECURITY_AUTHENTICATION] = "simple"
+    env[Context.SECURITY_PRINCIPAL] = "cn=joe,ou=users,dc=mycompany,dc=com"
+    env[Context.PROVIDER_URL] = "ldap://mycompany.com:389/dc=mycompany,dc=com"
+    env[Context.SECURITY_CREDENTIALS] = "joespassword"
+    env[Context.INITIAL_CONTEXT_FACTORY] = "com.sun.jndi.ldap.LdapCtxFactory"
+    val ctx = InitialLdapContext(env, null)
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -520,7 +687,7 @@ To get around this, you can disable session fixation protection, but in newer Se
 Note that switching between HTTP and HTTPS is not a good idea in general, as any application which uses HTTP at all is vulnerable to man-in-the-middle attacks.
 To be truly secure, the user should begin accessing your site in HTTPS and continue using it until they log out.
 Even clicking on an HTTPS link from a page accessed over HTTP is potentially risky.
-If you need more convincing, check out a tool like <a href="https://www.thoughtcrime.org/software/sslstrip/">sslstrip</a>.</p>
+If you need more convincing, check out a tool like <a href="https://github.com/moxie0/sslstrip/">sslstrip</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -667,7 +834,7 @@ If you&#8217;re using security namespace configuration you need the <code>spring
 A good starting point is to copy those from one of the pre-built sample applications WEB-INF/lib directories.
 For a basic application, you can start with the tutorial sample.
 If you want to use LDAP, with an embedded test server, then use the LDAP sample as a starting point.
-The reference manual also includes <a href="https://static.springsource.org/spring-security/site/docs/3.1.x/reference/springsecurity-single.html#appendix-dependencies">an appendix</a> listing the first-level dependencies for each Spring Security module with some information on whether they are optional and what they are required for.</p>
+The reference manual also includes <a href="https://docs.spring.io/spring-security/site/docs/reference/html5/#modules">an appendix</a> listing the first-level dependencies for each Spring Security module with some information on whether they are optional and what they are required for.</p>
 </div>
 <div class="paragraph">
 <p>If you are building your project with maven, then adding the appropriate Spring Security modules as dependencies to your pom.xml will automatically pull in the core jars that the framework requires.
@@ -819,7 +986,10 @@ For web security, the interceptor class is <code>FilterSecurityInterceptor</code
 You can&#8217;t use the namespace.
 You would then implement <code>FilterInvocationSecurityMetadataSource</code> to load the data as you please for a particular <code>FilterInvocation</code> <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>. A very basic outline would look something like this:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">	public class MyFilterSecurityMetadataSource implements FilterInvocationSecurityMetadataSource {
 
@@ -845,6 +1015,32 @@ You would then implement <code>FilterInvocationSecurityMetadataSource</code> to 
 	}</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class MyFilterSecurityMetadataSource : FilterInvocationSecurityMetadataSource {
+    override fun getAttributes(securedObject: Any): List&lt;ConfigAttribute&gt; {
+        val fi = securedObject as FilterInvocation
+        val url = fi.requestUrl
+        val httpMethod = fi.request.method
+
+        // Lookup your database (or other source) using this information and populate the
+        // list of attributes
+        return ArrayList()
+    }
+
+    override fun getAllConfigAttributes(): Collection&lt;ConfigAttribute&gt;? {
+        return null
+    }
+
+    override fun supports(clazz: Class&lt;*&gt;): Boolean {
+        return FilterInvocation::class.java.isAssignableFrom(clazz)
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>For more information, look at the code for <code>DefaultFilterInvocationSecurityMetadataSource</code>.</p>
 </div>
@@ -858,26 +1054,53 @@ The <code>DefaultLdapAuthoritiesPopulator</code> loads the user authorities from
 <div class="paragraph">
 <p>To use JDBC instead, you can implement the interface yourself, using whatever SQL is appropriate for your schema:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">	public class MyAuthoritiesPopulator implements LdapAuthoritiesPopulator {
 		@Autowired
 		JdbcTemplate template;
 
 		List&lt;GrantedAuthority&gt; getGrantedAuthorities(DirContextOperations userData, String username) {
-			List&lt;GrantedAuthority&gt; = template.query("select role from roles where username = ?",
-																									new String[] {username},
-																									new RowMapper&lt;GrantedAuthority&gt;() {
-				/**
+			return template.query("select role from roles where username = ?",
+					new String[] {username},
+					new RowMapper&lt;GrantedAuthority&gt;() {
+				 /**
 				 *  We're assuming here that you're using the standard convention of using the role
 				 *  prefix "ROLE_" to mark attributes which are supported by Spring Security's RoleVoter.
 				 */
+				@Override
 				public GrantedAuthority mapRow(ResultSet rs, int rowNum) throws SQLException {
-					return new SimpleGrantedAuthority("ROLE_" + rs.getString(1);
+					return new SimpleGrantedAuthority("ROLE_" + rs.getString(1));
 				}
-			}
+			});
 		}
 	}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class MyAuthoritiesPopulator : LdapAuthoritiesPopulator {
+    @Autowired
+    lateinit var template: JdbcTemplate
+
+    override fun getGrantedAuthorities(userData: DirContextOperations, username: String): MutableList&lt;GrantedAuthority?&gt; {
+        return template.query("select role from roles where username = ?",
+            arrayOf(username)
+        ) { rs, _ -&gt;
+            /**
+             * We're assuming here that you're using the standard convention of using the role
+             * prefix "ROLE_" to mark attributes which are supported by Spring Security's RoleVoter.
+             */
+            SimpleGrantedAuthority("ROLE_" + rs.getString(1))
+        }
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -900,9 +1123,12 @@ More information can be found in the <a href="https://docs.spring.io/spring/docs
 <p>Normally, you would add the functionality you require to the <code>postProcessBeforeInitialization</code> method of <code>BeanPostProcessor</code>. Let&#8217;s say that you want to customize the <code>AuthenticationDetailsSource</code> used by the <code>UsernamePasswordAuthenticationFilter</code>, (created by the <code>form-login</code> element). You want to extract a particular header called <code>CUSTOM_HEADER</code> from the request and make use of it while authenticating the user.
 The processor class would look like this:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class BeanPostProcessor implements BeanPostProcessor {
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class CustomBeanPostProcessor implements BeanPostProcessor {
 
 		public Object postProcessAfterInitialization(Object bean, String name) {
 				if (bean instanceof UsernamePasswordAuthenticationFilter) {
@@ -921,6 +1147,27 @@ The processor class would look like this:</p>
 				return bean;
 		}
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class CustomBeanPostProcessor : BeanPostProcessor {
+    override fun postProcessAfterInitialization(bean: Any, name: String): Any {
+        if (bean is UsernamePasswordAuthenticationFilter) {
+            println("********* Post-processing $name")
+            bean.setAuthenticationDetailsSource(
+                AuthenticationDetailsSource&lt;HttpServletRequest, Any?&gt; { context -&gt; context.getHeader("CUSTOM_HEADER") })
+        }
+        return bean
+    }
+
+    override fun postProcessBeforeInitialization(bean: Any, name: String?): Any {
+        return bean
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">

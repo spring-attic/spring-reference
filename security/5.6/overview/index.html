@@ -3,7 +3,8 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Introduction :: Spring</title>
+    <title>Overview :: Spring</title>
+    <link rel="next" href="prerequisites.html">
     <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../_/css/site.css">
 <link rel="stylesheet" href="../../../_/css/site-extra.css">
@@ -76,30 +77,45 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/authentication/index.html">Authentication</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/exploits/index.html">Protection Against Exploits</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="modules.html">Project Modules &amp; Dependencies</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -109,7 +125,139 @@
     <a class="nav-link" href="../servlet/hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../servlet/architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../servlet/architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../servlet/authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../servlet/authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authorization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OAuth2</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../servlet/oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../servlet/saml2/index.html">SAML2</a>
   </li>
 </ul>
   </li>
@@ -139,7 +287,7 @@
           <a href="../../6/overview/prerequisites.html">6</a>
         </li>
         <li class="version is-current">
-          <a href="prerequisites.html">5.6</a>
+          <a href="index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -157,1127 +305,14 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Introduction</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 class="page">Overview</h1>
 <div class="paragraph">
-<p>This section discusses the logistics of Spring Security.</p>
+<p>Spring Security is a framework that provides authentication, authorization, and protection against common attacks.
+With first class support for both imperative and reactive applications, it is the de-facto standard for securing Spring-based applications.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="prerequisites"><a class="anchor" href="#prerequisites"></a>Prerequisites</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Spring Security requires a Java 8 or higher Runtime Environment.</p>
-</div>
-<div class="paragraph">
-<p>As Spring Security aims to operate in a self-contained manner, you do not need to place any special configuration files in your Java Runtime Environment.
-In particular, you need not configure a special Java Authentication and Authorization Service (JAAS) policy file or place Spring Security into common classpath locations.</p>
-</div>
-<div class="paragraph">
-<p>Similarly, if you use an EJB Container or Servlet Container, you need not put any special configuration files anywhere nor include Spring Security in a server classloader.
-All the required files are contained within your application.</p>
-</div>
-<div class="paragraph">
-<p>This design offers maximum deployment time flexibility, as you can copy your target artifact (be it a JAR, WAR, or EAR) from one system to another and it immediately works.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="community"><a class="anchor" href="#community"></a>Spring Security Community</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Welcome to the Spring Security Community!
-This section discusses how you can make the most of our vast community.</p>
-</div>
-<div class="sect2">
-<h3 id="community-help"><a class="anchor" href="#community-help"></a>Getting Help</h3>
-<div class="paragraph">
-<p>If you need help with Spring Security, we are here to help.
-The following are some of the best ways to get help:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Read through this documentation.</p>
-</li>
-<li>
-<p>Try one of our many <a href="#samples">sample applications</a>.</p>
-</li>
-<li>
-<p>Ask a question on <a href="https://stackoverflow.com/questions/tagged/spring-security">https://stackoverflow.com</a> with the <code>spring-security</code> tag.</p>
-</li>
-<li>
-<p>Report bugs and enhancement requests at <a href="https://github.com/spring-projects/spring-security/issues" class="bare">https://github.com/spring-projects/spring-security/issues</a></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="community-becoming-involved"><a class="anchor" href="#community-becoming-involved"></a>Becoming Involved</h3>
-<div class="paragraph">
-<p>We welcome your involvement in the Spring Security project.
-There are many ways to contribute, including answering questions on Stack Overflow, writing new code, improving existing code, assisting with documentation, developing samples or tutorials, reporting bugs, or simply making suggestions.
-For more information, see our <a href="https://github.com/spring-projects/spring-security/blob/main/CONTRIBUTING.adoc">Contributing</a> documentation.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="community-source"><a class="anchor" href="#community-source"></a>Source Code</h3>
-<div class="paragraph">
-<p>You can find Spring Security&#8217;s source code on GitHub at <a href="https://github.com/spring-projects/spring-security/" class="bare">https://github.com/spring-projects/spring-security/</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="community-license"><a class="anchor" href="#community-license"></a>Apache 2 License</h3>
-<div class="paragraph">
-<p>Spring Security is Open Source software released under the <a href="https://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0 license</a>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_social_media"><a class="anchor" href="#_social_media"></a>Social Media</h3>
-<div class="paragraph">
-<p>You can follow <a href="https://twitter.com/SpringSecurity">@SpringSecurity</a> and the <a href="https://twitter.com/SpringSecurity/lists/team">Spring Security team</a> on Twitter to stay up to date with the latest news.
-You can also follow <a href="https://twitter.com/SpringCentral">@SpringCentral</a> to keep up to date with the entire Spring portfolio.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="new"><a class="anchor" href="#new"></a>What&#8217;s New in Spring Security 5.6</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Spring Security 5.6 provides a number of new features.
-Below are the highlights of the release.</p>
-</div>
-<div class="sect2">
-<h3 id="whats-new-servlet"><a class="anchor" href="#whats-new-servlet"></a>Servlet</h3>
-<div class="ulist">
-<ul>
-<li>
-<p>Configuration</p>
-<div class="ulist">
-<ul>
-<li>
-<p>Introduced <a href="https://github.com/spring-projects/spring-security/pull/9630"><code>AuthorizationManager</code></a> for method security</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="getting"><a class="anchor" href="#getting"></a>Getting Spring Security</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This section discusses all you need to know about getting the Spring Security binaries.
-See <a href="#community-source">Source Code</a> for how to obtain the source code.</p>
-</div>
-<div class="sect2">
-<h3 id="_release_numbering"><a class="anchor" href="#_release_numbering"></a>Release Numbering</h3>
-<div class="paragraph">
-<p>Spring Security versions are formatted as MAJOR.MINOR.PATCH such that:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>MAJOR versions may contain breaking changes.
-Typically, these are done to provide improved security to match modern security practices.</p>
-</li>
-<li>
-<p>MINOR versions contain enhancements but are considered passive updates</p>
-</li>
-<li>
-<p>PATCH level should be perfectly compatible, forwards and backwards, with the possible exception of changes that fix bugs.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="maven"><a class="anchor" href="#maven"></a>Usage with Maven</h3>
-<div class="paragraph">
-<p>As most open source projects, Spring Security deploys its dependencies as Maven artifacts.
-The topics in this section provide detail on how to consume Spring Security when using Maven.</p>
-</div>
-<div class="sect3">
-<h4 id="getting-maven-boot"><a class="anchor" href="#getting-maven-boot"></a>Spring Boot with Maven</h4>
-<div class="paragraph">
-<p>Spring Boot provides a <code>spring-boot-starter-security</code> starter that aggregates Spring Security-related dependencies together.
-The simplest and preferred way to use the starter is to use <a href="https://docs.spring.io/initializr/docs/current/reference/htmlsingle/">Spring Initializr</a> by using an IDE integration (<a href="https://joshlong.com/jl/blogPost/tech_tip_geting_started_with_spring_boot.html">Eclipse</a>, <a href="https://www.jetbrains.com/help/idea/spring-boot.html#d1489567e2">IntelliJ</a>, <a href="https://github.com/AlexFalappa/nb-springboot/wiki/Quick-Tour">NetBeans</a>) or through <a href="https://start.spring.io" class="bare">https://start.spring.io</a>.</p>
-</div>
-<div class="paragraph">
-<p>Alternatively, you can manually add the starter, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 1. pom.xml</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
-	&lt;!-- ... other dependency elements ... --&gt;
-	&lt;dependency&gt;
-		&lt;groupId&gt;org.springframework.boot&lt;/groupId&gt;
-		&lt;artifactId&gt;spring-boot-starter-security&lt;/artifactId&gt;
-	&lt;/dependency&gt;
-&lt;/dependencies&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Since Spring Boot provides a Maven BOM to manage dependency versions, you do not need to specify a version.
-If you wish to override the Spring Security version, you may do so by providing a Maven property, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 2. pom.xml</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;properties&gt;
-	&lt;!-- ... --&gt;
-	&lt;spring-security.version&gt;{spring-security-version}&lt;/spring-security.version&gt;
-&lt;/dependencies&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Since Spring Security makes breaking changes only in major releases, it is safe to use a newer version of Spring Security with Spring Boot.
-However, at times, you may need to update the version of Spring Framework as well.
-You can do so by adding a Maven property, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 3. pom.xml</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;properties&gt;
-	&lt;!-- ... --&gt;
-	&lt;spring.version&gt;{spring-core-version}&lt;/spring.version&gt;
-&lt;/dependencies&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you use additional features (such as LDAP, OpenID, and others), you need to also include the appropriate <a href="#modules">Project Modules and Dependencies</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="getting-maven-no-boot"><a class="anchor" href="#getting-maven-no-boot"></a>Maven Without Spring Boot</h4>
-<div class="paragraph">
-<p>When you use Spring Security without Spring Boot, the preferred way is to use Spring Security&#8217;s BOM to ensure a consistent version of Spring Security is used throughout the entire project. The following example shows how to do so:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 4. pom.xml</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencyManagement&gt;
-	&lt;dependencies&gt;
-		&lt;!-- ... other dependency elements ... --&gt;
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
-			&lt;artifactId&gt;spring-security-bom&lt;/artifactId&gt;
-			&lt;version&gt;{spring-security-version}&lt;/version&gt;
-			&lt;type&gt;pom&lt;/type&gt;
-			&lt;scope&gt;import&lt;/scope&gt;
-		&lt;/dependency&gt;
-	&lt;/dependencies&gt;
-&lt;/dependencyManagement&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>A minimal Spring Security Maven set of dependencies typically looks like the following:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 5. pom.xml</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
-	&lt;!-- ... other dependency elements ... --&gt;
-	&lt;dependency&gt;
-		&lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
-		&lt;artifactId&gt;spring-security-web&lt;/artifactId&gt;
-	&lt;/dependency&gt;
-	&lt;dependency&gt;
-		&lt;groupId&gt;org.springframework.security&lt;/groupId&gt;
-		&lt;artifactId&gt;spring-security-config&lt;/artifactId&gt;
-	&lt;/dependency&gt;
-&lt;/dependencies&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you use additional features (such as LDAP, OpenID, and others), you need to also include the appropriate <a href="#modules">Project Modules and Dependencies</a>.</p>
-</div>
-<div class="paragraph">
-<p>Spring Security builds against Spring Framework {spring-core-version} but should generally work with any newer version of Spring Framework 5.x.
-Many users are likely to run afoul of the fact that Spring Security&#8217;s transitive dependencies resolve Spring Framework {spring-core-version}, which can cause strange classpath problems.
-The easiest way to resolve this is to use the <code>spring-framework-bom</code> within the <code>&lt;dependencyManagement&gt;</code> section of your <code>pom.xml</code> as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 6. pom.xml</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencyManagement&gt;
-	&lt;dependencies&gt;
-		&lt;!-- ... other dependency elements ... --&gt;
-		&lt;dependency&gt;
-			&lt;groupId&gt;org.springframework&lt;/groupId&gt;
-			&lt;artifactId&gt;spring-framework-bom&lt;/artifactId&gt;
-			&lt;version&gt;{spring-core-version}&lt;/version&gt;
-			&lt;type&gt;pom&lt;/type&gt;
-			&lt;scope&gt;import&lt;/scope&gt;
-		&lt;/dependency&gt;
-	&lt;/dependencies&gt;
-&lt;/dependencyManagement&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>The preceding example ensures that all the transitive dependencies of Spring Security use the Spring {spring-core-version} modules.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This approach uses Maven&#8217;s &#8220;bill of materials&#8221; (BOM) concept and is only available in Maven 2.0.9+.
-For additional details about how dependencies are resolved, see <a href="https://maven.apache.org/guides/introduction/introduction-to-dependency-mechanism.html">Maven&#8217;s Introduction to the Dependency Mechanism documentation</a>.
-</td>
-</tr>
-</table>
-</div>
-</div>
-<div class="sect3">
-<h4 id="maven-repositories"><a class="anchor" href="#maven-repositories"></a>Maven Repositories</h4>
-<div class="paragraph">
-<p>All GA releases (that is, versions ending in .RELEASE) are deployed to Maven Central, so no additional Maven repositories need to be declared in your pom.</p>
-</div>
-<div class="paragraph">
-<p>If you use a SNAPSHOT version, you need to ensure that you have the Spring Snapshot repository defined, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 7. pom.xml</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;repositories&gt;
-	&lt;!-- ... possibly other repository elements ... --&gt;
-	&lt;repository&gt;
-		&lt;id&gt;spring-snapshot&lt;/id&gt;
-		&lt;name&gt;Spring Snapshot Repository&lt;/name&gt;
-		&lt;url&gt;https://repo.spring.io/snapshot&lt;/url&gt;
-	&lt;/repository&gt;
-&lt;/repositories&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you use a milestone or release candidate version, you need to ensure that you have the Spring Milestone repository defined, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 8. pom.xml</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;repositories&gt;
-	&lt;!-- ... possibly other repository elements ... --&gt;
-	&lt;repository&gt;
-		&lt;id&gt;spring-milestone&lt;/id&gt;
-		&lt;name&gt;Spring Milestone Repository&lt;/name&gt;
-		&lt;url&gt;https://repo.spring.io/milestone&lt;/url&gt;
-	&lt;/repository&gt;
-&lt;/repositories&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect2">
-<h3 id="getting-gradle"><a class="anchor" href="#getting-gradle"></a>Gradle</h3>
-<div class="paragraph">
-<p>As most open source projects, Spring Security deploys its dependencies as Maven artifacts, which allows for first-class Gradle support.
-The following topics provide detail on how to consume Spring Security when using Gradle.</p>
-</div>
-<div class="sect3">
-<h4 id="getting-gradle-boot"><a class="anchor" href="#getting-gradle-boot"></a>Spring Boot with Gradle</h4>
-<div class="paragraph">
-<p>Spring Boot provides a <code>spring-boot-starter-security</code> starter that aggregates Spring Security related dependencies together.
-The simplest and preferred method to use the starter is to use <a href="https://docs.spring.io/initializr/docs/current/reference/htmlsingle/">Spring Initializr</a> by using an IDE integration (<a href="https://joshlong.com/jl/blogPost/tech_tip_geting_started_with_spring_boot.html">Eclipse</a>, <a href="https://www.jetbrains.com/help/idea/spring-boot.html#d1489567e2">IntelliJ</a>, <a href="https://github.com/AlexFalappa/nb-springboot/wiki/Quick-Tour">NetBeans</a>) or through <a href="https://start.spring.io" class="bare">https://start.spring.io</a>.</p>
-</div>
-<div class="paragraph">
-<p>Alternatively, you can manually add the starter, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 9. build.gradle</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
-	compile "org.springframework.boot:spring-boot-starter-security"
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Since Spring Boot provides a Maven BOM to manage dependency versions, you need not specify a version.
-If you wish to override the Spring Security version, you may do so by providing a Gradle property, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 10. build.gradle</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">ext['spring-security.version']='{spring-security-version}'</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Since Spring Security makes breaking changes only in major releases, it is safe to use a newer version of Spring Security with Spring Boot.
-However, at times, you may need to update the version of Spring Framework as well.
-You can do so by adding a Gradle property, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 11. build.gradle</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">ext['spring.version']='{spring-core-version}'</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you use additional features (such as LDAP, OpenID, and others), you need to also include the appropriate <a href="#modules">Project Modules and Dependencies</a>.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="_gradle_without_spring_boot"><a class="anchor" href="#_gradle_without_spring_boot"></a>Gradle Without Spring Boot</h4>
-<div class="paragraph">
-<p>When you use Spring Security without Spring Boot, the preferred way is to use Spring Security&#8217;s BOM to ensure a consistent version of Spring Security is used throughout the entire project.
-You can do so by using the <a href="https://github.com/spring-gradle-plugins/dependency-management-plugin">Dependency Management Plugin</a>, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 12. build.gradle</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">plugins {
-	id "io.spring.dependency-management" version "1.0.6.RELEASE"
-}
-
-dependencyManagement {
-	imports {
-		mavenBom 'org.springframework.security:spring-security-bom:{spring-security-version}'
-	}
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>A minimal Spring Security Maven set of dependencies typically looks like the following:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 13. build.gradle</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">dependencies {
-	compile "org.springframework.security:spring-security-web"
-	compile "org.springframework.security:spring-security-config"
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you use additional features (such as LDAP, OpenID, and others), you need to also include the appropriate <a href="#modules">Project Modules and Dependencies</a>.</p>
-</div>
-<div class="paragraph">
-<p>Spring Security builds against Spring Framework {spring-core-version} but should generally work with any newer version of Spring Framework 5.x.
-Many users are likely to run afoul of the fact that Spring Security&#8217;s transitive dependencies resolve Spring Framework {spring-core-version}, which can cause strange classpath problems.
-The easiest way to resolve this is to use the <code>spring-framework-bom</code> within your <code>&lt;dependencyManagement&gt;</code> section of your <code>pom.xml</code>.
-You can do so by using the <a href="https://github.com/spring-gradle-plugins/dependency-management-plugin">Dependency Management Plugin</a>, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 14. build.gradle</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">plugins {
-	id "io.spring.dependency-management" version "1.0.6.RELEASE"
-}
-
-dependencyManagement {
-	imports {
-		mavenBom 'org.springframework:spring-framework-bom:{spring-core-version}'
-	}
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>The preceding example ensures that all the transitive dependencies of Spring Security use the Spring {spring-core-version} modules.</p>
-</div>
-</div>
-<div class="sect3">
-<h4 id="gradle-repositories"><a class="anchor" href="#gradle-repositories"></a>Gradle Repositories</h4>
-<div class="paragraph">
-<p>All GA releases (that is, versions ending in .RELEASE) are deployed to Maven Central, so using the mavenCentral() repository is sufficient for GA releases. The following example shows how to do so:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 15. build.gradle</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">repositories {
-	mavenCentral()
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you use a SNAPSHOT version, you need to ensure you have the Spring Snapshot repository defined, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 16. build.gradle</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">repositories {
-	maven { url 'https://repo.spring.io/snapshot' }
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If you use a milestone or release candidate version, you need to ensure that you have the Spring Milestone repository defined, as the following example shows:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 17. build.gradle</div>
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">repositories {
-	maven { url 'https://repo.spring.io/milestone' }
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="features"><a class="anchor" href="#features"></a>Features</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Spring Security provides comprehensive support for <a href="#authentication">authentication</a>, authorization, and protection against <a href="#exploits">common exploits</a>.
-It also provides integration with other libraries to simplify its usage.</p>
-</div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/overview/features.adoc - include::authentication/index.adoc[]</p>
-</div>
-<div class="paragraph">
-<p>Unresolved include directive in modules/ROOT/pages/overview/features.adoc - include::exploits/index.adoc[]</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="modules"><a class="anchor" href="#modules"></a>Project Modules and Dependencies</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>In Spring Security 3.0, the codebase was sub-divided into separate jars which more clearly separate different functionality areas and third-party dependencies.
-If you use Maven to build your project, these are the modules you should add to your <code>pom.xml</code>.
-Even if you do not use Maven, we recommend that you consult the <code>pom.xml</code> files to get an idea of third-party dependencies and versions.
-Another good idea is to examine the libraries that are included in the sample applications.</p>
-</div>
-<div class="paragraph">
-<p>This section provides a reference of the modules in Spring Security and the additional dependencies that they require in order to function in a running application.
-We don&#8217;t include dependencies that are only used when building or testing Spring Security itself.
-Nor do we include transitive dependencies which are required by external dependencies.</p>
-</div>
-<div class="paragraph">
-<p>The version of Spring required is listed on the project website, so the specific versions are omitted for Spring dependencies below.
-Note that some of the dependencies listed as "optional" below may still be required for other non-security functionality in a Spring application.
-Also dependencies listed as "optional" may not actually be marked as such in the project&#8217;s Maven POM files if they are used in most applications.
-They are "optional" only in the sense that you don&#8217;t need them unless you are using the specified functionality.</p>
-</div>
-<div class="paragraph">
-<p>Where a module depends on another Spring Security module, the non-optional dependencies of the module it depends on are also assumed to be required and are not listed separately.</p>
-</div>
-<div class="sect2">
-<h3 id="spring-security-core"><a class="anchor" href="#spring-security-core"></a>Core&#8201;&#8212;&#8201;<code>spring-security-core.jar</code></h3>
-<div class="paragraph">
-<p>This module contains core authentication and access-contol classes and interfaces, remoting support, and basic provisioning APIs.
-It is required by any application that uses Spring Security.
-It supports standalone applications, remote clients, method (service layer) security, and JDBC user provisioning.
-It contains the following top-level packages:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>org.springframework.security.core</code></p>
-</li>
-<li>
-<p><code>org.springframework.security.access</code></p>
-</li>
-<li>
-<p><code>org.springframework.security.authentication</code></p>
-</li>
-<li>
-<p><code>org.springframework.security.provisioning</code></p>
-</li>
-</ul>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 1. Core Dependencies</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Dependency</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ehcache</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if the Ehcache-based user cache implementation is used (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-aop</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Method security is based on Spring AOP</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-beans</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required for Spring configuration</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-expression</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required for expression-based method security (optional)</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-jdbc</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if using a database to store user data (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-tx</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if using a database to store user data (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">aspectjrt</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if using AspectJ support (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">jsr250-api</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using JSR-250 method-security annotations (optional).</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="spring-security-remoting"><a class="anchor" href="#spring-security-remoting"></a>Remoting&#8201;&#8212;&#8201;<code>spring-security-remoting.jar</code></h3>
-<div class="paragraph">
-<p>This module provides integration with Spring Remoting.
-You do not need this unless you are writing a remote client that uses Spring Remoting.
-The main package is <code>org.springframework.security.remoting</code>.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 2. Remoting Dependencies</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Dependency</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-core</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-web</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required for clients which use HTTP remoting support.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="spring-security-web"><a class="anchor" href="#spring-security-web"></a>Web&#8201;&#8212;&#8201;<code>spring-security-web.jar</code></h3>
-<div class="paragraph">
-<p>This module contains filters and related web-security infrastructure code.
-It contains anything with a servlet API dependency.
-You need it if you require Spring Security web authentication services and URL-based access-control.
-The main package is <code>org.springframework.security.web</code>.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 3. Web Dependencies</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Dependency</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-core</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-web</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spring web support classes are used extensively.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-jdbc</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required for JDBC-based persistent remember-me token repository (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-tx</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required by remember-me persistent token repository implementations (optional).</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="spring-security-config"><a class="anchor" href="#spring-security-config"></a>Config&#8201;&#8212;&#8201;<code>spring-security-config.jar</code></h3>
-<div class="paragraph">
-<p>This module contains the security namespace parsing code and Java configuration code.
-You need it if you use the Spring Security XML namespace for configuration or Spring Security&#8217;s Java Configuration support.
-The main package is <code>org.springframework.security.config</code>.
-None of the classes are intended for direct use in an application.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 4. Config Dependencies</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Dependency</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-core</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-web</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using any web-related namespace configuration (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-ldap</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using the LDAP namespace options (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-openid</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using OpenID authentication (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">aspectjweaver</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.10</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if using the protect-pointcut namespace syntax (optional).</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="spring-security-ldap"><a class="anchor" href="#spring-security-ldap"></a>LDAP&#8201;&#8212;&#8201;<code>spring-security-ldap.jar</code></h3>
-<div class="paragraph">
-<p>This module provides LDAP authentication and provisioning code.
-It is required if you need to use LDAP authentication or manage LDAP user entries.
-The top-level package is <code>org.springframework.security.ldap</code>.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 5. LDAP Dependencies</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Dependency</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-core</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-ldap-core</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.3.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">LDAP support is based on Spring LDAP.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-tx</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Data exception classes are required.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">apache-ds <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.5.5</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using an embedded LDAP server (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">shared-ldap</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.9.15</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using an embedded LDAP server (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ldapsdk</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Mozilla LdapSDK.
-Used for decoding LDAP password policy controls if you are using password-policy functionality with OpenLDAP, for example.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="spring-security-oauth2-core"><a class="anchor" href="#spring-security-oauth2-core"></a>OAuth 2.0 Core&#8201;&#8212;&#8201;<code>spring-security-oauth2-core.jar</code></h3>
-<div class="paragraph">
-<p><code>spring-security-oauth2-core.jar</code> contains core classes and interfaces that provide support for the OAuth 2.0 Authorization Framework and for OpenID Connect Core 1.0.
-It is required by applications that use OAuth 2.0 or OpenID Connect Core 1.0, such as client, resource server, and authorization server.
-The top-level package is <code>org.springframework.security.oauth2.core</code>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="spring-security-oauth2-client"><a class="anchor" href="#spring-security-oauth2-client"></a>OAuth 2.0 Client&#8201;&#8212;&#8201;<code>spring-security-oauth2-client.jar</code></h3>
-<div class="paragraph">
-<p><code>spring-security-oauth2-client.jar</code> contains Spring Security&#8217;s client support for OAuth 2.0 Authorization Framework and OpenID Connect Core 1.0.
-It is required by applications that use OAuth 2.0 Login or OAuth Client support.
-The top-level package is <code>org.springframework.security.oauth2.client</code>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="spring-security-oauth2-jose"><a class="anchor" href="#spring-security-oauth2-jose"></a>OAuth 2.0 JOSE&#8201;&#8212;&#8201;<code>spring-security-oauth2-jose.jar</code></h3>
-<div class="paragraph">
-<p><code>spring-security-oauth2-jose.jar</code> contains Spring Security&#8217;s support for the JOSE (Javascript Object Signing and Encryption) framework.
-The JOSE framework is intended to provide a method to securely transfer claims between parties.
-It is built from a collection of specifications:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>JSON Web Token (JWT)</p>
-</li>
-<li>
-<p>JSON Web Signature (JWS)</p>
-</li>
-<li>
-<p>JSON Web Encryption (JWE)</p>
-</li>
-<li>
-<p>JSON Web Key (JWK)</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>It contains the following top-level packages:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>org.springframework.security.oauth2.jwt</code></p>
-</li>
-<li>
-<p><code>org.springframework.security.oauth2.jose</code></p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="spring-security-oauth2-resource-server"><a class="anchor" href="#spring-security-oauth2-resource-server"></a>OAuth 2.0 Resource Server&#8201;&#8212;&#8201;<code>spring-security-oauth2-resource-server.jar</code></h3>
-<div class="paragraph">
-<p><code>spring-security-oauth2-resource-server.jar</code> contains Spring Security&#8217;s support for OAuth 2.0 Resource Servers.
-It is used to protect APIs via OAuth 2.0 Bearer Tokens.
-The top-level package is <code>org.springframework.security.oauth2.server.resource</code>.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="spring-security-acl"><a class="anchor" href="#spring-security-acl"></a>ACL&#8201;&#8212;&#8201;<code>spring-security-acl.jar</code></h3>
-<div class="paragraph">
-<p>This module contains a specialized domain object ACL implementation.
-It is used to apply security to specific domain object instances within your application.
-The top-level package is <code>org.springframework.security.acls</code>.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 6. ACL Dependencies</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Dependency</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-core</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ehcache</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if the Ehcache-based ACL cache implementation is used (optional if you are using your own implementation).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-jdbc</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using the default JDBC-based AclService (optional if you implement your own).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-tx</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using the default JDBC-based AclService (optional if you implement your own).</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="spring-security-cas"><a class="anchor" href="#spring-security-cas"></a>CAS&#8201;&#8212;&#8201;<code>spring-security-cas.jar</code></h3>
-<div class="paragraph">
-<p>This module contains Spring Security&#8217;s CAS client integration.
-You should use it if you want to use Spring Security web authentication with a CAS single sign-on server.
-The top-level package is <code>org.springframework.security.cas</code>.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 7. CAS Dependencies</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Dependency</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-core</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-web</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">cas-client-core</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">3.1.12</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">The JA-SIG CAS Client.
-This is the basis of the Spring Security integration.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">ehcache</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">1.6.2</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using the Ehcache-based ticket cache (optional).</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="spring-security-openid"><a class="anchor" href="#spring-security-openid"></a>OpenID&#8201;&#8212;&#8201;<code>spring-security-openid.jar</code></h3>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-The OpenID 1.0 and 2.0 protocols have been deprecated and users are encouraged to migrate to OpenID Connect, which is supported by spring-security-oauth2.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>This module contains OpenID web authentication support.
-It is used to authenticate users against an external OpenID server.
-The top-level package is <code>org.springframework.security.openid</code>.
-It requires OpenID4Java.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 8. OpenID Dependencies</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Dependency</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-core</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-web</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openid4java-nodeps</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">0.9.6</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Spring Security&#8217;s OpenID integration uses OpenID4Java.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">httpclient</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">4.1.1</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openid4java-nodeps depends on HttpClient 4.</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">guice</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">2.0</p></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">openid4java-nodeps depends on Guice 2.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-<div class="sect2">
-<h3 id="spring-security-test"><a class="anchor" href="#spring-security-test"></a>Test&#8201;&#8212;&#8201;<code>spring-security-test.jar</code></h3>
-<div class="paragraph">
-<p>This module contains support for testing with Spring Security.</p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="spring-security-taglibs"><a class="anchor" href="#spring-security-taglibs"></a>Taglibs&#8201;&#8212;&#8201;<code>spring-secuity-taglibs.jar</code></h3>
-<div class="paragraph">
-<p>Provides Spring Security&#8217;s JSP tag implementations.</p>
-</div>
-<table class="tableblock frame-all grid-all stretch">
-<caption class="title">Table 9. Taglib Dependencies</caption>
-<colgroup>
-<col style="width: 33.3333%;">
-<col style="width: 33.3333%;">
-<col style="width: 33.3334%;">
-</colgroup>
-<thead>
-<tr>
-<th class="tableblock halign-left valign-top">Dependency</th>
-<th class="tableblock halign-left valign-top">Version</th>
-<th class="tableblock halign-left valign-top">Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-core</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-web</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-security-acl</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using the <code>accesscontrollist</code> tag or <code>hasPermission()</code> expressions with ACLs (optional).</p></td>
-</tr>
-<tr>
-<td class="tableblock halign-left valign-top"><p class="tableblock">spring-expression</p></td>
-<td class="tableblock halign-left valign-top"></td>
-<td class="tableblock halign-left valign-top"><p class="tableblock">Required if you are using SPEL expressions in your tag access constraints.</p></td>
-</tr>
-</tbody>
-</table>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="samples"><a class="anchor" href="#samples"></a>Samples</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Spring Security includes many {gh-samples-url}[samples] applications.</p>
-</div>
-</div>
-</div>
-<div id="footnotes">
-<hr>
-<div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. The modules <code>apacheds-core</code>, <code>apacheds-core-entry</code>, <code>apacheds-protocol-shared</code>, <code>apacheds-protocol-ldap</code> and <code>apacheds-server-jndi</code> are required.
-</div>
-</div>
+<nav class="pagination">
+  <span class="next"><a href="prerequisites.html">Prerequisites</a></span>
+</nav>
 </article>
   </div>
 </main>

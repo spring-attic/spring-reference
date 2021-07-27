@@ -1,0 +1,2642 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>OAuth 2.0 Resource Server :: Spring</title>
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
+    <link rel="stylesheet" href="../../../../_/css/site.css">
+<link rel="stylesheet" href="../../../../_/css/site-extra.css">
+<link rel="stylesheet" href="../../../../_/css/vendor/docsearch.min.css">
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->    <script>var uiRootPath = '../../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../../..">Spring</a>
+      <div class="navbar-item">
+        <input id="search-input" type="text" placeholder="Search docs">
+      </div>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Reactive</a>
+            <a class="navbar-item" href="#">Event Driven</a>
+            <a class="navbar-item" href="#">Cloud</a>
+            <a class="navbar-item" href="#">Web Applications</a>
+            <a class="navbar-item" href="#">Serverless</a>
+            <a class="navbar-item" href="#">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Quickstart</a>
+            <a class="navbar-item" href="#">Guides</a>
+            <a class="navbar-item" href="#">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Spring Boot</a>
+            <a class="navbar-item" href="#">...</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="#">Training</a>
+        <a class="navbar-item" href="#">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Overview</a>
+            <a class="navbar-item" href="#">Events</a>
+            <a class="navbar-item" href="#">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="security" data-version="5.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../../overview/index.html">Spring Security</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../overview/community.html">Community</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../overview/features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/authentication/index.html">Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/exploits/index.html">Protection Against Exploits</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Servlet Applications</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../servlet/hello/index.html">Hello Spring Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../servlet/architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../servlet/authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../../servlet/authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authorization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OAuth2</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../servlet/oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../servlet/saml2/index.html">SAML2</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore" style="display: none;">
+  <div class="context">
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../../../6/overview/prerequisites.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../6/overview/prerequisites.html">6</a>
+        </li>
+        <li class="version is-current">
+          <a href="../../overview/index.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="" role="navigation">
+<button class="nav-toggle"></button>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">OAuth 2.0 Resource Server</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Security supports protecting endpoints using two forms of OAuth 2.0 <a href="https://tools.ietf.org/html/rfc6750.html">Bearer Tokens</a>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="https://tools.ietf.org/html/rfc7519">JWT</a></p>
+</li>
+<li>
+<p>Opaque Tokens</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>This is handy in circumstances where an application has delegated its authority management to an <a href="https://tools.ietf.org/html/rfc6749">authorization server</a> (for example, Okta or Ping Identity).
+This authorization server can be consulted by resource servers to authorize requests.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>A complete working example for <a href="https://github.com/spring-projects/spring-security-samples/tree/main/reactive/webflux/java/oauth2/resource-server"><strong>JWTs</strong></a>  is available in the <a href="https://github.com/spring-projects/spring-security-samples/tree/main">Spring Security repository</a>.</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-oauth2resourceserver-jwt-minimaldependencies"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-minimaldependencies"></a>Minimal Dependencies for JWT</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Most Resource Server support is collected into <code>spring-security-oauth2-resource-server</code>.
+However, the support for decoding and verifying JWTs is in <code>spring-security-oauth2-jose</code>, meaning that both are necessary in order to have a working resource server that supports JWT-encoded Bearer Tokens.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-oauth2resourceserver-jwt-minimalconfiguration"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-minimalconfiguration"></a>Minimal Configuration for JWTs</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>When using <a href="https://spring.io/projects/spring-boot">Spring Boot</a>, configuring an application as a resource server consists of two basic steps.
+First, include the needed dependencies and second, indicate the location of the authorization server.</p>
+</div>
+<div class="sect2">
+<h3 id="_specifying_the_authorization_server"><a class="anchor" href="#_specifying_the_authorization_server"></a>Specifying the Authorization Server</h3>
+<div class="paragraph">
+<p>In a Spring Boot application, to specify which authorization server to use, simply do:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yml hljs" data-lang="yml">spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://idp.example.com/issuer</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where <code><a href="https://idp.example.com/issuer" class="bare">https://idp.example.com/issuer</a></code> is the value contained in the <code>iss</code> claim for JWT tokens that the authorization server will issue.
+Resource Server will use this property to further self-configure, discover the authorization server&#8217;s public keys, and subsequently validate incoming JWTs.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+To use the <code>issuer-uri</code> property, it must also be true that one of <code><a href="https://idp.example.com/issuer/.well-known/openid-configuration" class="bare">https://idp.example.com/issuer/.well-known/openid-configuration</a></code>, <code><a href="https://idp.example.com/.well-known/openid-configuration/issuer" class="bare">https://idp.example.com/.well-known/openid-configuration/issuer</a></code>, or <code><a href="https://idp.example.com/.well-known/oauth-authorization-server/issuer" class="bare">https://idp.example.com/.well-known/oauth-authorization-server/issuer</a></code> is a supported endpoint for the authorization server.
+This endpoint is referred to as a <a href="https://openid.net/specs/openid-connect-discovery-1_0.html#ProviderConfig">Provider Configuration</a> endpoint or a <a href="https://tools.ietf.org/html/rfc8414#section-3">Authorization Server Metadata</a> endpoint.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>And that&#8217;s it!</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_startup_expectations"><a class="anchor" href="#_startup_expectations"></a>Startup Expectations</h3>
+<div class="paragraph">
+<p>When this property and these dependencies are used, Resource Server will automatically configure itself to validate JWT-encoded Bearer Tokens.</p>
+</div>
+<div class="paragraph">
+<p>It achieves this through a deterministic startup process:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Hit the Provider Configuration or Authorization Server Metadata endpoint, processing the response for the <code>jwks_url</code> property</p>
+</li>
+<li>
+<p>Configure the validation strategy to query <code>jwks_url</code> for valid public keys</p>
+</li>
+<li>
+<p>Configure the validation strategy to validate each JWTs <code>iss</code> claim against <code><a href="https://idp.example.com" class="bare">https://idp.example.com</a></code>.</p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>A consequence of this process is that the authorization server must be up and receiving requests in order for Resource Server to successfully start up.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If the authorization server is down when Resource Server queries it (given appropriate timeouts), then startup will fail.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_runtime_expectations"><a class="anchor" href="#_runtime_expectations"></a>Runtime Expectations</h3>
+<div class="paragraph">
+<p>Once the application is started up, Resource Server will attempt to process any request containing an <code>Authorization: Bearer</code> header:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-html hljs" data-lang="html">GET / HTTP/1.1
+Authorization: Bearer some-token-value # Resource Server will process this</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So long as this scheme is indicated, Resource Server will attempt to process the request according to the Bearer Token specification.</p>
+</div>
+<div class="paragraph">
+<p>Given a well-formed JWT, Resource Server will:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Validate its signature against a public key obtained from the <code>jwks_url</code> endpoint during startup and matched against the JWTs header</p>
+</li>
+<li>
+<p>Validate the JWTs <code>exp</code> and <code>nbf</code> timestamps and the JWTs <code>iss</code> claim, and</p>
+</li>
+<li>
+<p>Map each scope to an authority with the prefix <code>SCOPE_</code>.</p>
+</li>
+</ol>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+As the authorization server makes available new keys, Spring Security will automatically rotate the keys used to validate the JWT tokens.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code>Jwt</code> object, and <code>Authentication#getName</code> maps to the JWT&#8217;s <code>sub</code> property, if one is present.</p>
+</div>
+<div class="paragraph">
+<p>From here, consider jumping to:</p>
+</div>
+<div class="paragraph">
+<p><a href="#webflux-oauth2resourceserver-jwt-jwkseturi">How to Configure without Tying Resource Server startup to an authorization server&#8217;s availability</a></p>
+</div>
+<div class="paragraph">
+<p><a href="#webflux-oauth2resourceserver-jwt-sansboot">How to Configure without Spring Boot</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-jwt-jwkseturi"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-jwkseturi"></a>Specifying the Authorization Server JWK Set Uri Directly</h3>
+<div class="paragraph">
+<p>If the authorization server doesn&#8217;t support any configuration endpoints, or if Resource Server must be able to start up independently from the authorization server, then the <code>jwk-set-uri</code> can be supplied as well:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          issuer-uri: https://idp.example.com
+          jwk-set-uri: https://idp.example.com/.well-known/jwks.json</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The JWK Set uri is not standardized, but can typically be found in the authorization server&#8217;s documentation
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Consequently, Resource Server will not ping the authorization server at startup.
+We still specify the <code>issuer-uri</code> so that Resource Server still validates the <code>iss</code> claim on incoming JWTs.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+This property can also be supplied directly on the <a href="#webflux-oauth2resourceserver-jwt-jwkseturi-dsl">DSL</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-jwt-sansboot"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-sansboot"></a>Overriding or Replacing Boot Auto Configuration</h3>
+<div class="paragraph">
+<p>There are two <code>@Bean</code> s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
+</div>
+<div class="paragraph">
+<p>The first is a <code>SecurityWebFilterChain</code> that configures the app as a resource server. When including <code>spring-security-oauth2-jose</code>, this <code>SecurityWebFilterChain</code> looks like:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 1. Resource Server SecurityWebFilterChain</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+	http
+		.authorizeExchange(exchanges -&gt; exchanges
+			.anyExchange().authenticated()
+		)
+		.oauth2ResourceServer(OAuth2ResourceServerSpec::jwt)
+	return http.build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            jwt { }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If the application doesn&#8217;t expose a <code>SecurityWebFilterChain</code> bean, then Spring Boot will expose the above default one.</p>
+</div>
+<div class="paragraph">
+<p>Replacing this is as simple as exposing the bean within the application:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 2. Replacing SecurityWebFilterChain</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+	http
+		.authorizeExchange(exchanges -&gt; exchanges
+			.pathMatchers("/message/**").hasAuthority("SCOPE_message:read")
+			.anyExchange().authenticated()
+		)
+		.oauth2ResourceServer(oauth2 -&gt; oauth2
+			.jwt(withDefaults())
+		);
+	return http.build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize("/message/**", hasAuthority("SCOPE_message:read"))
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            jwt { }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The above requires the scope of <code>message:read</code> for any URL that starts with <code>/messages/</code>.</p>
+</div>
+<div class="paragraph">
+<p>Methods on the <code>oauth2ResourceServer</code> DSL will also override or replace auto configuration.</p>
+</div>
+<div class="paragraph">
+<p>For example, the second <code>@Bean</code> Spring Boot creates is a <code>ReactiveJwtDecoder</code>, which decodes <code>String</code> tokens into validated instances of <code>Jwt</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. ReactiveJwtDecoder</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactiveJwtDecoder jwtDecoder() {
+    return ReactiveJwtDecoders.fromIssuerLocation(issuerUri);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun jwtDecoder(): ReactiveJwtDecoder {
+    return ReactiveJwtDecoders.fromIssuerLocation(issuerUri)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Calling <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/ReactiveJwtDecoders.html#fromIssuerLocation-java.lang.String-">ReactiveJwtDecoders#fromIssuerLocation</a></code> is what invokes the Provider Configuration or Authorization Server Metadata endpoint in order to derive the JWK Set Uri.
+If the application doesn&#8217;t expose a <code>ReactiveJwtDecoder</code> bean, then Spring Boot will expose the above default one.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>And its configuration can be overridden using <code>jwkSetUri()</code> or replaced using <code>decoder()</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-jwt-jwkseturi-dsl"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-jwkseturi-dsl"></a>Using <code>jwkSetUri()</code></h4>
+<div class="paragraph">
+<p>An authorization server&#8217;s JWK Set Uri can be configured <a href="#webflux-oauth2resourceserver-jwt-jwkseturi">as a configuration property</a> or it can be supplied in the DSL:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+	http
+		.authorizeExchange(exchanges -&gt; exchanges
+			.anyExchange().authenticated()
+		)
+		.oauth2ResourceServer(oauth2 -&gt; oauth2
+			.jwt(jwt -&gt; jwt
+				.jwkSetUri("https://idp.example.com/.well-known/jwks.json")
+			)
+		);
+	return http.build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            jwt {
+                jwkSetUri = "https://idp.example.com/.well-known/jwks.json"
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Using <code>jwkSetUri()</code> takes precedence over any configuration property.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-jwt-decoder-dsl"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-decoder-dsl"></a>Using <code>decoder()</code></h4>
+<div class="paragraph">
+<p>More powerful than <code>jwkSetUri()</code> is <code>decoder()</code>, which will completely replace any Boot auto configuration of <code>JwtDecoder</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+	http
+		.authorizeExchange(exchanges -&gt; exchanges
+			.anyExchange().authenticated()
+		)
+		.oauth2ResourceServer(oauth2 -&gt; oauth2
+			.jwt(jwt -&gt; jwt
+				.decoder(myCustomDecoder())
+			)
+		);
+    return http.build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            jwt {
+                jwtDecoder = myCustomDecoder()
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>This is handy when deeper configuration, like <a href="#webflux-oauth2resourceserver-jwt-validation">validation</a>, is necessary.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-decoder-bean"><a class="anchor" href="#webflux-oauth2resourceserver-decoder-bean"></a>Exposing a <code>ReactiveJwtDecoder</code> <code>@Bean</code></h4>
+<div class="paragraph">
+<p>Or, exposing a <code>ReactiveJwtDecoder</code> <code>@Bean</code> has the same effect as <code>decoder()</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactiveJwtDecoder jwtDecoder() {
+    return NimbusReactiveJwtDecoder.withJwkSetUri(jwkSetUri).build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun jwtDecoder(): ReactiveJwtDecoder {
+    return ReactiveJwtDecoders.fromIssuerLocation(issuerUri)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-oauth2resourceserver-jwt-decoder-algorithm"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-decoder-algorithm"></a>Configuring Trusted Algorithms</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, <code>NimbusReactiveJwtDecoder</code>, and hence Resource Server, will only trust and verify tokens using <code>RS256</code>.</p>
+</div>
+<div class="paragraph">
+<p>You can customize this via <a href="#webflux-oauth2resourceserver-jwt-boot-algorithm">Spring Boot</a> or <a href="#webflux-oauth2resourceserver-jwt-decoder-builder">the NimbusJwtDecoder builder</a>.</p>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-jwt-boot-algorithm"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-boot-algorithm"></a>Via Spring Boot</h3>
+<div class="paragraph">
+<p>The simplest way to set the algorithm is as a property:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jws-algorithm: RS512
+          jwk-set-uri: https://idp.example.org/.well-known/jwks.json</code></pre>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-jwt-decoder-builder"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-decoder-builder"></a>Using a Builder</h3>
+<div class="paragraph">
+<p>For greater power, though, we can use a builder that ships with <code>NimbusReactiveJwtDecoder</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ReactiveJwtDecoder jwtDecoder() {
+    return NimbusReactiveJwtDecoder.withJwkSetUri(this.jwkSetUri)
+            .jwsAlgorithm(RS512).build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun jwtDecoder(): ReactiveJwtDecoder {
+    return NimbusReactiveJwtDecoder.withJwkSetUri(this.jwkSetUri)
+            .jwsAlgorithm(RS512).build()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Calling <code>jwsAlgorithm</code> more than once will configure <code>NimbusReactiveJwtDecoder</code> to trust more than one algorithm, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ReactiveJwtDecoder jwtDecoder() {
+    return NimbusReactiveJwtDecoder.withJwkSetUri(this.jwkSetUri)
+            .jwsAlgorithm(RS512).jwsAlgorithm(ES512).build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun jwtDecoder(): ReactiveJwtDecoder {
+    return NimbusReactiveJwtDecoder.withJwkSetUri(this.jwkSetUri)
+            .jwsAlgorithm(RS512).jwsAlgorithm(ES512).build()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, you can call <code>jwsAlgorithms</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ReactiveJwtDecoder jwtDecoder() {
+    return NimbusReactiveJwtDecoder.withJwkSetUri(this.jwkSetUri)
+            .jwsAlgorithms(algorithms -&gt; {
+                    algorithms.add(RS512);
+                    algorithms.add(ES512);
+            }).build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun jwtDecoder(): ReactiveJwtDecoder {
+    return NimbusReactiveJwtDecoder.withJwkSetUri(this.jwkSetUri)
+            .jwsAlgorithms {
+                it.add(RS512)
+                it.add(ES512)
+            }
+            .build()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-jwt-decoder-public-key"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-decoder-public-key"></a>Trusting a Single Asymmetric Key</h3>
+<div class="paragraph">
+<p>Simpler than backing a Resource Server with a JWK Set endpoint is to hard-code an RSA public key.
+The public key can be provided via <a href="#webflux-oauth2resourceserver-jwt-decoder-public-key-boot">Spring Boot</a> or by <a href="#webflux-oauth2resourceserver-jwt-decoder-public-key-builder">Using a Builder</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-jwt-decoder-public-key-boot"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-decoder-public-key-boot"></a>Via Spring Boot</h4>
+<div class="paragraph">
+<p>Specifying a key via Spring Boot is quite simple.
+The key&#8217;s location can be specified like so:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          public-key-location: classpath:my-key.pub</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Or, to allow for a more sophisticated lookup, you can post-process the <code>RsaKeyConversionServicePostProcessor</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. BeanFactoryPostProcessor</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+BeanFactoryPostProcessor conversionServiceCustomizer() {
+    return beanFactory -&gt;
+        beanFactory.getBean(RsaKeyConversionServicePostProcessor.class)
+                .setResourceLoader(new CustomResourceLoader());
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun conversionServiceCustomizer(): BeanFactoryPostProcessor {
+    return BeanFactoryPostProcessor { beanFactory: ConfigurableListableBeanFactory -&gt;
+        beanFactory.getBean&lt;RsaKeyConversionServicePostProcessor&gt;()
+                .setResourceLoader(CustomResourceLoader())
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Specify your key&#8217;s location:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">key.location: hfds://my-key.pub</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>And then autowire the value:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Value("${key.location}")
+RSAPublicKey key;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Value("\${key.location}")
+val key: RSAPublicKey? = null</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-jwt-decoder-public-key-builder"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-decoder-public-key-builder"></a>Using a Builder</h4>
+<div class="paragraph">
+<p>To wire an <code>RSAPublicKey</code> directly, you can simply use the appropriate <code>NimbusReactiveJwtDecoder</code> builder, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactiveJwtDecoder jwtDecoder() {
+    return NimbusReactiveJwtDecoder.withPublicKey(this.key).build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun jwtDecoder(): ReactiveJwtDecoder {
+    return NimbusReactiveJwtDecoder.withPublicKey(key).build()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-jwt-decoder-secret-key"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-decoder-secret-key"></a>Trusting a Single Symmetric Key</h3>
+<div class="paragraph">
+<p>Using a single symmetric key is also simple.
+You can simply load in your <code>SecretKey</code> and use the appropriate <code>NimbusReactiveJwtDecoder</code> builder, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactiveJwtDecoder jwtDecoder() {
+    return NimbusReactiveJwtDecoder.withSecretKey(this.key).build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun jwtDecoder(): ReactiveJwtDecoder {
+    return NimbusReactiveJwtDecoder.withSecretKey(this.key).build()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-jwt-authorization"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-authorization"></a>Configuring Authorization</h3>
+<div class="paragraph">
+<p>A JWT that is issued from an OAuth 2.0 Authorization Server will typically either have a <code>scope</code> or <code>scp</code> attribute, indicating the scopes (or authorities) it&#8217;s been granted, for example:</p>
+</div>
+<div class="paragraph">
+<p><code>{ &#8230;&#8203;, "scope" : "messages contacts"}</code></p>
+</div>
+<div class="paragraph">
+<p>When this is the case, Resource Server will attempt to coerce these scopes into a list of granted authorities, prefixing each scope with the string "SCOPE_".</p>
+</div>
+<div class="paragraph">
+<p>This means that to protect an endpoint or method with a scope derived from a JWT, the corresponding expressions should include this prefix:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+	http
+		.authorizeExchange(exchanges -&gt; exchanges
+			.mvcMatchers("/contacts/**").hasAuthority("SCOPE_contacts")
+			.mvcMatchers("/messages/**").hasAuthority("SCOPE_messages")
+			.anyExchange().authenticated()
+		)
+		.oauth2ResourceServer(OAuth2ResourceServerSpec::jwt);
+    return http.build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize("/contacts/**", hasAuthority("SCOPE_contacts"))
+            authorize("/messages/**", hasAuthority("SCOPE_messages"))
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            jwt { }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Or similarly with method security:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@PreAuthorize("hasAuthority('SCOPE_messages')")
+public Flux&lt;Message&gt; getMessages(...) {}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@PreAuthorize("hasAuthority('SCOPE_messages')")
+fun getMessages(): Flux&lt;Message&gt; { }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-jwt-authorization-extraction"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-authorization-extraction"></a>Extracting Authorities Manually</h4>
+<div class="paragraph">
+<p>However, there are a number of circumstances where this default is insufficient.
+For example, some authorization servers don&#8217;t use the <code>scope</code> attribute, but instead have their own custom attribute.
+Or, at other times, the resource server may need to adapt the attribute or a composition of attributes into internalized authorities.</p>
+</div>
+<div class="paragraph">
+<p>To this end, the DSL exposes <code>jwtAuthenticationConverter()</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+	http
+		.authorizeExchange(exchanges -&gt; exchanges
+			.anyExchange().authenticated()
+		)
+		.oauth2ResourceServer(oauth2 -&gt; oauth2
+			.jwt(jwt -&gt; jwt
+				.jwtAuthenticationConverter(grantedAuthoritiesExtractor())
+			)
+		);
+	return http.build();
+}
+
+Converter&lt;Jwt, Mono&lt;AbstractAuthenticationToken&gt;&gt; grantedAuthoritiesExtractor() {
+    JwtAuthenticationConverter jwtAuthenticationConverter =
+            new JwtAuthenticationConverter();
+    jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter
+            (new GrantedAuthoritiesExtractor());
+    return new ReactiveJwtAuthenticationConverterAdapter(jwtAuthenticationConverter);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            jwt {
+                jwtAuthenticationConverter = grantedAuthoritiesExtractor()
+            }
+        }
+    }
+}
+
+fun grantedAuthoritiesExtractor(): Converter&lt;Jwt, Mono&lt;AbstractAuthenticationToken&gt;&gt; {
+    val jwtAuthenticationConverter = JwtAuthenticationConverter()
+    jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(GrantedAuthoritiesExtractor())
+    return ReactiveJwtAuthenticationConverterAdapter(jwtAuthenticationConverter)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>which is responsible for converting a <code>Jwt</code> into an <code>Authentication</code>.
+As part of its configuration, we can supply a subsidiary converter to go from <code>Jwt</code> to a <code>Collection</code> of granted authorities.</p>
+</div>
+<div class="paragraph">
+<p>That final converter might be something like <code>GrantedAuthoritiesExtractor</code> below:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">static class GrantedAuthoritiesExtractor
+        implements Converter&lt;Jwt, Collection&lt;GrantedAuthority&gt;&gt; {
+
+    public Collection&lt;GrantedAuthority&gt; convert(Jwt jwt) {
+        Collection&lt;?&gt; authorities = (Collection&lt;?&gt;)
+                jwt.getClaims().getOrDefault("mycustomclaim", Collections.emptyList());
+
+        return authorities.stream()
+                .map(Object::toString)
+                .map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">internal class GrantedAuthoritiesExtractor : Converter&lt;Jwt, Collection&lt;GrantedAuthority&gt;&gt; {
+    override fun convert(jwt: Jwt): Collection&lt;GrantedAuthority&gt; {
+        val authorities: List&lt;Any&gt; = jwt.claims
+                .getOrDefault("mycustomclaim", emptyList&lt;Any&gt;()) as List&lt;Any&gt;
+        return authorities
+                .map { it.toString() }
+                .map { SimpleGrantedAuthority(it) }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For more flexibility, the DSL supports entirely replacing the converter with any class that implements <code>Converter&lt;Jwt, Mono&lt;AbstractAuthenticationToken&gt;&gt;</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">static class CustomAuthenticationConverter implements Converter&lt;Jwt, Mono&lt;AbstractAuthenticationToken&gt;&gt; {
+    public AbstractAuthenticationToken convert(Jwt jwt) {
+        return Mono.just(jwt).map(this::doConversion);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">internal class CustomAuthenticationConverter : Converter&lt;Jwt, Mono&lt;AbstractAuthenticationToken&gt;&gt; {
+    override fun convert(jwt: Jwt): Mono&lt;AbstractAuthenticationToken&gt; {
+        return Mono.just(jwt).map(this::doConversion)
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-jwt-validation"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-validation"></a>Configuring Validation</h3>
+<div class="paragraph">
+<p>Using <a href="#webflux-oauth2resourceserver-jwt-minimalconfiguration">minimal Spring Boot configuration</a>, indicating the authorization server&#8217;s issuer uri, Resource Server will default to verifying the <code>iss</code> claim as well as the <code>exp</code> and <code>nbf</code> timestamp claims.</p>
+</div>
+<div class="paragraph">
+<p>In circumstances where validation needs to be customized, Resource Server ships with two standard validators and also accepts custom <code>OAuth2TokenValidator</code> instances.</p>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-jwt-validation-clockskew"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-validation-clockskew"></a>Customizing Timestamp Validation</h4>
+<div class="paragraph">
+<p>JWT&#8217;s typically have a window of validity, with the start of the window indicated in the <code>nbf</code> claim and the end indicated in the <code>exp</code> claim.</p>
+</div>
+<div class="paragraph">
+<p>However, every server can experience clock drift, which can cause tokens to appear expired to one server, but not to another.
+This can cause some implementation heartburn as the number of collaborating servers increases in a distributed system.</p>
+</div>
+<div class="paragraph">
+<p>Resource Server uses <code>JwtTimestampValidator</code> to verify a token&#8217;s validity window, and it can be configured with a <code>clockSkew</code> to alleviate the above problem:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ReactiveJwtDecoder jwtDecoder() {
+     NimbusReactiveJwtDecoder jwtDecoder = (NimbusReactiveJwtDecoder)
+             ReactiveJwtDecoders.fromIssuerLocation(issuerUri);
+
+     OAuth2TokenValidator&lt;Jwt&gt; withClockSkew = new DelegatingOAuth2TokenValidator&lt;&gt;(
+            new JwtTimestampValidator(Duration.ofSeconds(60)),
+            new IssuerValidator(issuerUri));
+
+     jwtDecoder.setJwtValidator(withClockSkew);
+
+     return jwtDecoder;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun jwtDecoder(): ReactiveJwtDecoder {
+    val jwtDecoder = ReactiveJwtDecoders.fromIssuerLocation(issuerUri) as NimbusReactiveJwtDecoder
+    val withClockSkew: OAuth2TokenValidator&lt;Jwt&gt; = DelegatingOAuth2TokenValidator(
+            JwtTimestampValidator(Duration.ofSeconds(60)),
+            JwtIssuerValidator(issuerUri))
+    jwtDecoder.setJwtValidator(withClockSkew)
+    return jwtDecoder
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+By default, Resource Server configures a clock skew of 60 seconds.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-validation-custom"><a class="anchor" href="#webflux-oauth2resourceserver-validation-custom"></a>Configuring a Custom Validator</h4>
+<div class="paragraph">
+<p>Adding a check for the <code>aud</code> claim is simple with the <code>OAuth2TokenValidator</code> API:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class AudienceValidator implements OAuth2TokenValidator&lt;Jwt&gt; {
+    OAuth2Error error = new OAuth2Error("invalid_token", "The required audience is missing", null);
+
+    public OAuth2TokenValidatorResult validate(Jwt jwt) {
+        if (jwt.getAudience().contains("messaging")) {
+            return OAuth2TokenValidatorResult.success();
+        } else {
+            return OAuth2TokenValidatorResult.failure(error);
+        }
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class AudienceValidator : OAuth2TokenValidator&lt;Jwt&gt; {
+    var error: OAuth2Error = OAuth2Error("invalid_token", "The required audience is missing", null)
+    override fun validate(jwt: Jwt): OAuth2TokenValidatorResult {
+        return if (jwt.audience.contains("messaging")) {
+            OAuth2TokenValidatorResult.success()
+        } else {
+            OAuth2TokenValidatorResult.failure(error)
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Then, to add into a resource server, it&#8217;s a matter of specifying the <code>ReactiveJwtDecoder</code> instance:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ReactiveJwtDecoder jwtDecoder() {
+    NimbusReactiveJwtDecoder jwtDecoder = (NimbusReactiveJwtDecoder)
+            ReactiveJwtDecoders.fromIssuerLocation(issuerUri);
+
+    OAuth2TokenValidator&lt;Jwt&gt; audienceValidator = new AudienceValidator();
+    OAuth2TokenValidator&lt;Jwt&gt; withIssuer = JwtValidators.createDefaultWithIssuer(issuerUri);
+    OAuth2TokenValidator&lt;Jwt&gt; withAudience = new DelegatingOAuth2TokenValidator&lt;&gt;(withIssuer, audienceValidator);
+
+    jwtDecoder.setJwtValidator(withAudience);
+
+    return jwtDecoder;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun jwtDecoder(): ReactiveJwtDecoder {
+    val jwtDecoder = ReactiveJwtDecoders.fromIssuerLocation(issuerUri) as NimbusReactiveJwtDecoder
+    val audienceValidator: OAuth2TokenValidator&lt;Jwt&gt; = AudienceValidator()
+    val withIssuer: OAuth2TokenValidator&lt;Jwt&gt; = JwtValidators.createDefaultWithIssuer(issuerUri)
+    val withAudience: OAuth2TokenValidator&lt;Jwt&gt; = DelegatingOAuth2TokenValidator(withIssuer, audienceValidator)
+    jwtDecoder.setJwtValidator(withAudience)
+    return jwtDecoder
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-opaque-minimaldependencies"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-minimaldependencies"></a>Minimal Dependencies for Introspection</h3>
+<div class="paragraph">
+<p>As described in <a href="#oauth2resourceserver-jwt-minimaldependencies">Minimal Dependencies for JWT</a> most of Resource Server support is collected in <code>spring-security-oauth2-resource-server</code>.
+However unless a custom <a href="#webflux-oauth2resourceserver-opaque-introspector-bean"><code>ReactiveOpaqueTokenIntrospector</code></a> is provided, the Resource Server will fallback to ReactiveOpaqueTokenIntrospector.
+Meaning that both <code>spring-security-oauth2-resource-server</code> and <code>oauth2-oidc-sdk</code> are necessary in order to have a working minimal Resource Server that supports opaque Bearer Tokens.
+Please refer to <code>spring-security-oauth2-resource-server</code> in order to determin the correct version for <code>oauth2-oidc-sdk</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-opaque-minimalconfiguration"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-minimalconfiguration"></a>Minimal Configuration for Introspection</h3>
+<div class="paragraph">
+<p>Typically, an opaque token can be verified via an <a href="https://tools.ietf.org/html/rfc7662">OAuth 2.0 Introspection Endpoint</a>, hosted by the authorization server.
+This can be handy when revocation is a requirement.</p>
+</div>
+<div class="paragraph">
+<p>When using <a href="https://spring.io/projects/spring-boot">Spring Boot</a>, configuring an application as a resource server that uses introspection consists of two basic steps.
+First, include the needed dependencies and second, indicate the introspection endpoint details.</p>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-opaque-introspectionuri"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-introspectionuri"></a>Specifying the Authorization Server</h4>
+<div class="paragraph">
+<p>To specify where the introspection endpoint is, simply do:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">security:
+  oauth2:
+    resourceserver:
+      opaque-token:
+        introspection-uri: https://idp.example.com/introspect
+        client-id: client
+        client-secret: secret</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Where <code><a href="https://idp.example.com/introspect" class="bare">https://idp.example.com/introspect</a></code> is the introspection endpoint hosted by your authorization server and <code>client-id</code> and <code>client-secret</code> are the credentials needed to hit that endpoint.</p>
+</div>
+<div class="paragraph">
+<p>Resource Server will use these properties to further self-configure and subsequently validate incoming JWTs.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+When using introspection, the authorization server&#8217;s word is the law.
+If the authorization server responses that the token is valid, then it is.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>And that&#8217;s it!</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_startup_expectations_2"><a class="anchor" href="#_startup_expectations_2"></a>Startup Expectations</h4>
+<div class="paragraph">
+<p>When this property and these dependencies are used, Resource Server will automatically configure itself to validate Opaque Bearer Tokens.</p>
+</div>
+<div class="paragraph">
+<p>This startup process is quite a bit simpler than for JWTs since no endpoints need to be discovered and no additional validation rules get added.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_runtime_expectations_2"><a class="anchor" href="#_runtime_expectations_2"></a>Runtime Expectations</h4>
+<div class="paragraph">
+<p>Once the application is started up, Resource Server will attempt to process any request containing an <code>Authorization: Bearer</code> header:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-http hljs" data-lang="http">GET / HTTP/1.1
+Authorization: Bearer some-token-value # Resource Server will process this</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>So long as this scheme is indicated, Resource Server will attempt to process the request according to the Bearer Token specification.</p>
+</div>
+<div class="paragraph">
+<p>Given an Opaque Token, Resource Server will</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Query the provided introspection endpoint using the provided credentials and the token</p>
+</li>
+<li>
+<p>Inspect the response for an <code>{ 'active' : true }</code> attribute</p>
+</li>
+<li>
+<p>Map each scope to an authority with the prefix <code>SCOPE_</code></p>
+</li>
+</ol>
+</div>
+<div class="paragraph">
+<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/OAuth2AuthenticatedPrincipal.html">OAuth2AuthenticatedPrincipal</a></code> object, and <code>Authentication#getName</code> maps to the token&#8217;s <code>sub</code> property, if one is present.</p>
+</div>
+<div class="paragraph">
+<p>From here, you may want to jump to:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#webflux-oauth2resourceserver-opaque-attributes">Looking Up Attributes Post-Authentication</a></p>
+</li>
+<li>
+<p><a href="#webflux-oauth2resourceserver-opaque-authorization-extraction">Extracting Authorities Manually</a></p>
+</li>
+<li>
+<p><a href="#webflux-oauth2resourceserver-opaque-jwt-introspector">Using Introspection with JWTs</a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-opaque-attributes"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-attributes"></a>Looking Up Attributes Post-Authentication</h3>
+<div class="paragraph">
+<p>Once a token is authenticated, an instance of <code>BearerTokenAuthentication</code> is set in the <code>SecurityContext</code>.</p>
+</div>
+<div class="paragraph">
+<p>This means that it&#8217;s available in <code>@Controller</code> methods when using <code>@EnableWebFlux</code> in your configuration:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/foo")
+public Mono&lt;String&gt; foo(BearerTokenAuthentication authentication) {
+    return Mono.just(authentication.getTokenAttributes().get("sub") + " is the subject");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/foo")
+fun foo(authentication: BearerTokenAuthentication): Mono&lt;String&gt; {
+    return Mono.just(authentication.tokenAttributes["sub"].toString() + " is the subject")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Since <code>BearerTokenAuthentication</code> holds an <code>OAuth2AuthenticatedPrincipal</code>, that also means that it&#8217;s available to controller methods, too:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@GetMapping("/foo")
+public Mono&lt;String&gt; foo(@AuthenticationPrincipal OAuth2AuthenticatedPrincipal principal) {
+    return Mono.just(principal.getAttribute("sub") + " is the subject");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@GetMapping("/foo")
+fun foo(@AuthenticationPrincipal principal: OAuth2AuthenticatedPrincipal): Mono&lt;String&gt; {
+    return Mono.just(principal.getAttribute&lt;Any&gt;("sub").toString() + " is the subject")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_looking_up_attributes_via_spel"><a class="anchor" href="#_looking_up_attributes_via_spel"></a>Looking Up Attributes Via SpEL</h4>
+<div class="paragraph">
+<p>Of course, this also means that attributes can be accessed via SpEL.</p>
+</div>
+<div class="paragraph">
+<p>For example, if using <code>@EnableReactiveMethodSecurity</code> so that you can use <code>@PreAuthorize</code> annotations, you can do:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@PreAuthorize("principal?.attributes['sub'] == 'foo'")
+public Mono&lt;String&gt; forFoosEyesOnly() {
+    return Mono.just("foo");
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@PreAuthorize("principal.attributes['sub'] == 'foo'")
+fun forFoosEyesOnly(): Mono&lt;String&gt; {
+    return Mono.just("foo")
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-opaque-sansboot"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-sansboot"></a>Overriding or Replacing Boot Auto Configuration</h3>
+<div class="paragraph">
+<p>There are two <code>@Bean</code> s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
+</div>
+<div class="paragraph">
+<p>The first is a <code>SecurityWebFilterChain</code> that configures the app as a resource server.
+When use Opaque Token, this <code>SecurityWebFilterChain</code> looks like:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+	http
+		.authorizeExchange(exchanges -&gt; exchanges
+			.anyExchange().authenticated()
+		)
+		.oauth2ResourceServer(ServerHttpSecurity.OAuth2ResourceServerSpec::opaqueToken)
+	return http.build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            opaqueToken { }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If the application doesn&#8217;t expose a <code>SecurityWebFilterChain</code> bean, then Spring Boot will expose the above default one.</p>
+</div>
+<div class="paragraph">
+<p>Replacing this is as simple as exposing the bean within the application:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 5. Replacing SecurityWebFilterChain</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebFluxSecurity
+public class MyCustomSecurityConfiguration {
+    @Bean
+    SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+        http
+            .authorizeExchange(exchanges -&gt; exchanges
+                .pathMatchers("/messages/**").hasAuthority("SCOPE_message:read")
+                .anyExchange().authenticated()
+            )
+            .oauth2ResourceServer(oauth2 -&gt; oauth2
+                .opaqueToken(opaqueToken -&gt; opaqueToken
+                    .introspector(myIntrospector())
+                )
+            );
+        return http.build();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize("/messages/**", hasAuthority("SCOPE_message:read"))
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            opaqueToken {
+                introspector = myIntrospector()
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The above requires the scope of <code>message:read</code> for any URL that starts with <code>/messages/</code>.</p>
+</div>
+<div class="paragraph">
+<p>Methods on the <code>oauth2ResourceServer</code> DSL will also override or replace auto configuration.</p>
+</div>
+<div class="paragraph">
+<p>For example, the second <code>@Bean</code> Spring Boot creates is a <code>ReactiveOpaqueTokenIntrospector</code>, which decodes <code>String</code> tokens into validated instances of <code>OAuth2AuthenticatedPrincipal</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactiveOpaqueTokenIntrospector introspector() {
+    return new NimbusReactiveOpaqueTokenIntrospector(introspectionUri, clientId, clientSecret);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun introspector(): ReactiveOpaqueTokenIntrospector {
+    return NimbusReactiveOpaqueTokenIntrospector(introspectionUri, clientId, clientSecret)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If the application doesn&#8217;t expose a <code>ReactiveOpaqueTokenIntrospector</code> bean, then Spring Boot will expose the above default one.</p>
+</div>
+<div class="paragraph">
+<p>And its configuration can be overridden using <code>introspectionUri()</code> and <code>introspectionClientCredentials()</code> or replaced using <code>introspector()</code>.</p>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-opaque-introspectionuri-dsl"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-introspectionuri-dsl"></a>Using <code>introspectionUri()</code></h4>
+<div class="paragraph">
+<p>An authorization server&#8217;s Introspection Uri can be configured <a href="#webflux-oauth2resourceserver-opaque-introspectionuri">as a configuration property</a> or it can be supplied in the DSL:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebFluxSecurity
+public class DirectlyConfiguredIntrospectionUri {
+    @Bean
+    SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+        http
+            .authorizeExchange(exchanges -&gt; exchanges
+                .anyExchange().authenticated()
+            )
+            .oauth2ResourceServer(oauth2 -&gt; oauth2
+                .opaqueToken(opaqueToken -&gt; opaqueToken
+                    .introspectionUri("https://idp.example.com/introspect")
+                    .introspectionClientCredentials("client", "secret")
+                )
+            );
+        return http.build();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            opaqueToken {
+                introspectionUri = "https://idp.example.com/introspect"
+                introspectionClientCredentials("client", "secret")
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Using <code>introspectionUri()</code> takes precedence over any configuration property.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-opaque-introspector-dsl"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-introspector-dsl"></a>Using <code>introspector()</code></h4>
+<div class="paragraph">
+<p>More powerful than <code>introspectionUri()</code> is <code>introspector()</code>, which will completely replace any Boot auto configuration of <code>ReactiveOpaqueTokenIntrospector</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebFluxSecurity
+public class DirectlyConfiguredIntrospector {
+    @Bean
+    SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+        http
+            .authorizeExchange(exchanges -&gt; exchanges
+                .anyExchange().authenticated()
+            )
+            .oauth2ResourceServer(oauth2 -&gt; oauth2
+                .opaqueToken(opaqueToken -&gt; opaqueToken
+                    .introspector(myCustomIntrospector())
+                )
+            );
+        return http.build();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            opaqueToken {
+                introspector = myCustomIntrospector()
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>This is handy when deeper configuration, like <a href="#webflux-oauth2resourceserver-opaque-authorization-extraction">authority mapping</a>or <a href="#webflux-oauth2resourceserver-opaque-jwt-introspector">JWT revocation</a> is necessary.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-opaque-introspector-bean"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-introspector-bean"></a>Exposing a <code>ReactiveOpaqueTokenIntrospector</code> <code>@Bean</code></h4>
+<div class="paragraph">
+<p>Or, exposing a <code>ReactiveOpaqueTokenIntrospector</code> <code>@Bean</code> has the same effect as <code>introspector()</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactiveOpaqueTokenIntrospector introspector() {
+    return new NimbusReactiveOpaqueTokenIntrospector(introspectionUri, clientId, clientSecret);
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun introspector(): ReactiveOpaqueTokenIntrospector {
+    return NimbusReactiveOpaqueTokenIntrospector(introspectionUri, clientId, clientSecret)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-opaque-authorization"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-authorization"></a>Configuring Authorization</h3>
+<div class="paragraph">
+<p>An OAuth 2.0 Introspection endpoint will typically return a <code>scope</code> attribute, indicating the scopes (or authorities) it&#8217;s been granted, for example:</p>
+</div>
+<div class="paragraph">
+<p><code>{ &#8230;&#8203;, "scope" : "messages contacts"}</code></p>
+</div>
+<div class="paragraph">
+<p>When this is the case, Resource Server will attempt to coerce these scopes into a list of granted authorities, prefixing each scope with the string "SCOPE_".</p>
+</div>
+<div class="paragraph">
+<p>This means that to protect an endpoint or method with a scope derived from an Opaque Token, the corresponding expressions should include this prefix:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebFluxSecurity
+public class MappedAuthorities {
+    @Bean
+    SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {
+        http
+            .authorizeExchange(exchange -&gt; exchange
+                .pathMatchers("/contacts/**").hasAuthority("SCOPE_contacts")
+                .pathMatchers("/messages/**").hasAuthority("SCOPE_messages")
+                .anyExchange().authenticated()
+            )
+            .oauth2ResourceServer(ServerHttpSecurity.OAuth2ResourceServerSpec::opaqueToken);
+        return http.build();
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun springSecurityFilterChain(http: ServerHttpSecurity): SecurityWebFilterChain {
+    return http {
+        authorizeExchange {
+            authorize("/contacts/**", hasAuthority("SCOPE_contacts"))
+            authorize("/messages/**", hasAuthority("SCOPE_messages"))
+            authorize(anyExchange, authenticated)
+        }
+        oauth2ResourceServer {
+            opaqueToken { }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Or similarly with method security:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@PreAuthorize("hasAuthority('SCOPE_messages')")
+public Flux&lt;Message&gt; getMessages(...) {}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@PreAuthorize("hasAuthority('SCOPE_messages')")
+fun getMessages(): Flux&lt;Message&gt; { }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="webflux-oauth2resourceserver-opaque-authorization-extraction"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-authorization-extraction"></a>Extracting Authorities Manually</h4>
+<div class="paragraph">
+<p>By default, Opaque Token support will extract the scope claim from an introspection response and parse it into individual <code>GrantedAuthority</code> instances.</p>
+</div>
+<div class="paragraph">
+<p>For example, if the introspection response were:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-json hljs" data-lang="json">{
+    "active" : true,
+    "scope" : "message:read message:write"
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Then Resource Server would generate an <code>Authentication</code> with two authorities, one for <code>message:read</code> and the other for <code>message:write</code>.</p>
+</div>
+<div class="paragraph">
+<p>This can, of course, be customized using a custom <code>ReactiveOpaqueTokenIntrospector</code> that takes a look at the attribute set and converts in its own way:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class CustomAuthoritiesOpaqueTokenIntrospector implements ReactiveOpaqueTokenIntrospector {
+    private ReactiveOpaqueTokenIntrospector delegate =
+            new NimbusReactiveOpaqueTokenIntrospector("https://idp.example.org/introspect", "client", "secret");
+
+    public Mono&lt;OAuth2AuthenticatedPrincipal&gt; introspect(String token) {
+        return this.delegate.introspect(token)
+                .map(principal -&gt; new DefaultOAuth2AuthenticatedPrincipal(
+                        principal.getName(), principal.getAttributes(), extractAuthorities(principal)));
+    }
+
+    private Collection&lt;GrantedAuthority&gt; extractAuthorities(OAuth2AuthenticatedPrincipal principal) {
+        List&lt;String&gt; scopes = principal.getAttribute(OAuth2IntrospectionClaimNames.SCOPE);
+        return scopes.stream()
+                .map(SimpleGrantedAuthority::new)
+                .collect(Collectors.toList());
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class CustomAuthoritiesOpaqueTokenIntrospector : ReactiveOpaqueTokenIntrospector {
+    private val delegate: ReactiveOpaqueTokenIntrospector = NimbusReactiveOpaqueTokenIntrospector("https://idp.example.org/introspect", "client", "secret")
+    override fun introspect(token: String): Mono&lt;OAuth2AuthenticatedPrincipal&gt; {
+        return delegate.introspect(token)
+                .map { principal: OAuth2AuthenticatedPrincipal -&gt;
+                    DefaultOAuth2AuthenticatedPrincipal(
+                            principal.name, principal.attributes, extractAuthorities(principal))
+                }
+    }
+
+    private fun extractAuthorities(principal: OAuth2AuthenticatedPrincipal): Collection&lt;GrantedAuthority&gt; {
+        val scopes = principal.getAttribute&lt;List&lt;String&gt;&gt;(OAuth2IntrospectionClaimNames.SCOPE)
+        return scopes
+                .map { SimpleGrantedAuthority(it) }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Thereafter, this custom introspector can be configured simply by exposing it as a <code>@Bean</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactiveOpaqueTokenIntrospector introspector() {
+    return new CustomAuthoritiesOpaqueTokenIntrospector();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun introspector(): ReactiveOpaqueTokenIntrospector {
+    return CustomAuthoritiesOpaqueTokenIntrospector()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-opaque-jwt-introspector"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-jwt-introspector"></a>Using Introspection with JWTs</h3>
+<div class="paragraph">
+<p>A common question is whether or not introspection is compatible with JWTs.
+Spring Security&#8217;s Opaque Token support has been designed to not care about the format of the token&#8201;&#8212;&#8201;it will gladly pass any token to the introspection endpoint provided.</p>
+</div>
+<div class="paragraph">
+<p>So, let&#8217;s say that you&#8217;ve got a requirement that requires you to check with the authorization server on each request, in case the JWT has been revoked.</p>
+</div>
+<div class="paragraph">
+<p>Even though you are using the JWT format for the token, your validation method is introspection, meaning you&#8217;d want to do:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-yaml hljs" data-lang="yaml">spring:
+  security:
+    oauth2:
+      resourceserver:
+        opaque-token:
+          introspection-uri: https://idp.example.org/introspection
+          client-id: client
+          client-secret: secret</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case, the resulting <code>Authentication</code> would be <code>BearerTokenAuthentication</code>.
+Any attributes in the corresponding <code>OAuth2AuthenticatedPrincipal</code> would be whatever was returned by the introspection endpoint.</p>
+</div>
+<div class="paragraph">
+<p>But, let&#8217;s say that, oddly enough, the introspection endpoint only returns whether or not the token is active.
+Now what?</p>
+</div>
+<div class="paragraph">
+<p>In this case, you can create a custom <code>ReactiveOpaqueTokenIntrospector</code> that still hits the endpoint, but then updates the returned principal to have the JWTs claims as the attributes:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class JwtOpaqueTokenIntrospector implements ReactiveOpaqueTokenIntrospector {
+	private ReactiveOpaqueTokenIntrospector delegate =
+			new NimbusReactiveOpaqueTokenIntrospector("https://idp.example.org/introspect", "client", "secret");
+	private ReactiveJwtDecoder jwtDecoder = new NimbusReactiveJwtDecoder(new ParseOnlyJWTProcessor());
+
+	public Mono&lt;OAuth2AuthenticatedPrincipal&gt; introspect(String token) {
+		return this.delegate.introspect(token)
+				.flatMap(principal -&gt; this.jwtDecoder.decode(token))
+				.map(jwt -&gt; new DefaultOAuth2AuthenticatedPrincipal(jwt.getClaims(), NO_AUTHORITIES));
+	}
+
+	private static class ParseOnlyJWTProcessor implements Converter&lt;JWT, Mono&lt;JWTClaimsSet&gt;&gt; {
+		public Mono&lt;JWTClaimsSet&gt; convert(JWT jwt) {
+			try {
+				return Mono.just(jwt.getJWTClaimsSet());
+			} catch (Exception ex) {
+				return Mono.error(ex);
+			}
+		}
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class JwtOpaqueTokenIntrospector : ReactiveOpaqueTokenIntrospector {
+    private val delegate: ReactiveOpaqueTokenIntrospector = NimbusReactiveOpaqueTokenIntrospector("https://idp.example.org/introspect", "client", "secret")
+    private val jwtDecoder: ReactiveJwtDecoder = NimbusReactiveJwtDecoder(ParseOnlyJWTProcessor())
+    override fun introspect(token: String): Mono&lt;OAuth2AuthenticatedPrincipal&gt; {
+        return delegate.introspect(token)
+                .flatMap { jwtDecoder.decode(token) }
+                .map { jwt: Jwt -&gt; DefaultOAuth2AuthenticatedPrincipal(jwt.claims, NO_AUTHORITIES) }
+    }
+
+    private class ParseOnlyJWTProcessor : Converter&lt;JWT, Mono&lt;JWTClaimsSet&gt;&gt; {
+        override fun convert(jwt: JWT): Mono&lt;JWTClaimsSet&gt; {
+            return try {
+                Mono.just(jwt.jwtClaimsSet)
+            } catch (e: Exception) {
+                Mono.error(e)
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Thereafter, this custom introspector can be configured simply by exposing it as a <code>@Bean</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public ReactiveOpaqueTokenIntrospector introspector() {
+    return new JwtOpaqueTokenIntropsector();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun introspector(): ReactiveOpaqueTokenIntrospector {
+    return JwtOpaqueTokenIntrospector()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="webflux-oauth2resourceserver-opaque-userinfo"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-userinfo"></a>Calling a <code>/userinfo</code> Endpoint</h3>
+<div class="paragraph">
+<p>Generally speaking, a Resource Server doesn&#8217;t care about the underlying user, but instead about the authorities that have been granted.</p>
+</div>
+<div class="paragraph">
+<p>That said, at times it can be valuable to tie the authorization statement back to a user.</p>
+</div>
+<div class="paragraph">
+<p>If an application is also using <code>spring-security-oauth2-client</code>, having set up the appropriate <code>ClientRegistrationRepository</code>, then this is quite simple with a custom <code>OpaqueTokenIntrospector</code>.
+This implementation below does three things:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Delegates to the introspection endpoint, to affirm the token&#8217;s validity</p>
+</li>
+<li>
+<p>Looks up the appropriate client registration associated with the <code>/userinfo</code> endpoint</p>
+</li>
+<li>
+<p>Invokes and returns the response from the <code>/userinfo</code> endpoint</p>
+</li>
+</ul>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class UserInfoOpaqueTokenIntrospector implements ReactiveOpaqueTokenIntrospector {
+	private final ReactiveOpaqueTokenIntrospector delegate =
+			new NimbusReactiveOpaqueTokenIntrospector("https://idp.example.org/introspect", "client", "secret");
+	private final ReactiveOAuth2UserService&lt;OAuth2UserRequest, OAuth2User&gt; oauth2UserService =
+			new DefaultReactiveOAuth2UserService();
+
+	private final ReactiveClientRegistrationRepository repository;
+
+	// ... constructor
+
+	@Override
+	public Mono&lt;OAuth2AuthenticatedPrincipal&gt; introspect(String token) {
+		return Mono.zip(this.delegate.introspect(token), this.repository.findByRegistrationId("registration-id"))
+				.map(t -&gt; {
+					OAuth2AuthenticatedPrincipal authorized = t.getT1();
+					ClientRegistration clientRegistration = t.getT2();
+					Instant issuedAt = authorized.getAttribute(ISSUED_AT);
+					Instant expiresAt = authorized.getAttribute(OAuth2IntrospectionClaimNames.EXPIRES_AT);
+					OAuth2AccessToken accessToken = new OAuth2AccessToken(BEARER, token, issuedAt, expiresAt);
+					return new OAuth2UserRequest(clientRegistration, accessToken);
+				})
+				.flatMap(this.oauth2UserService::loadUser);
+	}
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class UserInfoOpaqueTokenIntrospector : ReactiveOpaqueTokenIntrospector {
+    private val delegate: ReactiveOpaqueTokenIntrospector = NimbusReactiveOpaqueTokenIntrospector("https://idp.example.org/introspect", "client", "secret")
+    private val oauth2UserService: ReactiveOAuth2UserService&lt;OAuth2UserRequest, OAuth2User&gt; = DefaultReactiveOAuth2UserService()
+    private val repository: ReactiveClientRegistrationRepository? = null
+
+    // ... constructor
+    override fun introspect(token: String?): Mono&lt;OAuth2AuthenticatedPrincipal&gt; {
+        return Mono.zip&lt;OAuth2AuthenticatedPrincipal, ClientRegistration&gt;(delegate.introspect(token), repository!!.findByRegistrationId("registration-id"))
+                .map&lt;OAuth2UserRequest&gt; { t: Tuple2&lt;OAuth2AuthenticatedPrincipal, ClientRegistration&gt; -&gt;
+                    val authorized = t.t1
+                    val clientRegistration = t.t2
+                    val issuedAt: Instant? = authorized.getAttribute(ISSUED_AT)
+                    val expiresAt: Instant? = authorized.getAttribute(OAuth2IntrospectionClaimNames.EXPIRES_AT)
+                    val accessToken = OAuth2AccessToken(BEARER, token, issuedAt, expiresAt)
+                    OAuth2UserRequest(clientRegistration, accessToken)
+                }
+                .flatMap { userRequest: OAuth2UserRequest -&gt; oauth2UserService.loadUser(userRequest) }
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you aren&#8217;t using <code>spring-security-oauth2-client</code>, it&#8217;s still quite simple.
+You will simply need to invoke the <code>/userinfo</code> with your own instance of <code>WebClient</code>:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class UserInfoOpaqueTokenIntrospector implements ReactiveOpaqueTokenIntrospector {
+    private final ReactiveOpaqueTokenIntrospector delegate =
+            new NimbusReactiveOpaqueTokenIntrospector("https://idp.example.org/introspect", "client", "secret");
+    private final WebClient rest = WebClient.create();
+
+    @Override
+    public Mono&lt;OAuth2AuthenticatedPrincipal&gt; introspect(String token) {
+        return this.delegate.introspect(token)
+		        .map(this::makeUserInfoRequest);
+    }
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class UserInfoOpaqueTokenIntrospector : ReactiveOpaqueTokenIntrospector {
+    private val delegate: ReactiveOpaqueTokenIntrospector = NimbusReactiveOpaqueTokenIntrospector("https://idp.example.org/introspect", "client", "secret")
+    private val rest: WebClient = WebClient.create()
+
+    override fun introspect(token: String): Mono&lt;OAuth2AuthenticatedPrincipal&gt; {
+        return delegate.introspect(token)
+                .map(this::makeUserInfoRequest)
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Either way, having created your <code>ReactiveOpaqueTokenIntrospector</code>, you should publish it as a <code>@Bean</code> to override the defaults:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ReactiveOpaqueTokenIntrospector introspector() {
+    return new UserInfoOpaqueTokenIntrospector();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun introspector(): ReactiveOpaqueTokenIntrospector {
+    return UserInfoOpaqueTokenIntrospector()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-oauth2resourceserver-multitenancy"><a class="anchor" href="#webflux-oauth2resourceserver-multitenancy"></a>Multi-tenancy</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A resource server is considered multi-tenant when there are multiple strategies for verifying a bearer token, keyed by some tenant identifier.</p>
+</div>
+<div class="paragraph">
+<p>For example, your resource server may accept bearer tokens from two different authorization servers.
+Or, your authorization server may represent a multiplicity of issuers.</p>
+</div>
+<div class="paragraph">
+<p>In each case, there are two things that need to be done and trade-offs associated with how you choose to do them:</p>
+</div>
+<div class="olist arabic">
+<ol class="arabic">
+<li>
+<p>Resolve the tenant</p>
+</li>
+<li>
+<p>Propagate the tenant</p>
+</li>
+</ol>
+</div>
+<div class="sect2">
+<h3 id="_resolving_the_tenant_by_claim"><a class="anchor" href="#_resolving_the_tenant_by_claim"></a>Resolving the Tenant By Claim</h3>
+<div class="paragraph">
+<p>One way to differentiate tenants is by the issuer claim. Since the issuer claim accompanies signed JWTs, this can be done with the <code>JwtIssuerReactiveAuthenticationManagerResolver</code>, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">JwtIssuerReactiveAuthenticationManagerResolver authenticationManagerResolver = new JwtIssuerReactiveAuthenticationManagerResolver
+    ("https://idp.example.org/issuerOne", "https://idp.example.org/issuerTwo");
+
+http
+    .authorizeExchange(exchanges -&gt; exchanges
+        .anyExchange().authenticated()
+    )
+    .oauth2ResourceServer(oauth2 -&gt; oauth2
+        .authenticationManagerResolver(authenticationManagerResolver)
+    );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val customAuthenticationManagerResolver = JwtIssuerReactiveAuthenticationManagerResolver("https://idp.example.org/issuerOne", "https://idp.example.org/issuerTwo")
+
+return http {
+    authorizeExchange {
+        authorize(anyExchange, authenticated)
+    }
+    oauth2ResourceServer {
+        authenticationManagerResolver = customAuthenticationManagerResolver
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>This is nice because the issuer endpoints are loaded lazily.
+In fact, the corresponding <code>JwtReactiveAuthenticationManager</code> is instantiated only when the first request with the corresponding issuer is sent.
+This allows for an application startup that is independent from those authorization servers being up and available.</p>
+</div>
+<div class="sect3">
+<h4 id="_dynamic_tenants"><a class="anchor" href="#_dynamic_tenants"></a>Dynamic Tenants</h4>
+<div class="paragraph">
+<p>Of course, you may not want to restart the application each time a new tenant is added.
+In this case, you can configure the <code>JwtIssuerReactiveAuthenticationManagerResolver</code> with a repository of <code>ReactiveAuthenticationManager</code> instances, which you can edit at runtime, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private Mono&lt;ReactiveAuthenticationManager&gt; addManager(
+		Map&lt;String, ReactiveAuthenticationManager&gt; authenticationManagers, String issuer) {
+
+	return Mono.fromCallable(() -&gt; ReactiveJwtDecoders.fromIssuerLocation(issuer))
+            .subscribeOn(Schedulers.boundedElastic())
+            .map(JwtReactiveAuthenticationManager::new)
+            .doOnNext(authenticationManager -&gt; authenticationManagers.put(issuer, authenticationManager));
+}
+
+// ...
+
+JwtIssuerReactiveAuthenticationManagerResolver authenticationManagerResolver =
+        new JwtIssuerReactiveAuthenticationManagerResolver(authenticationManagers::get);
+
+http
+    .authorizeExchange(exchanges -&gt; exchanges
+        .anyExchange().authenticated()
+    )
+    .oauth2ResourceServer(oauth2 -&gt; oauth2
+        .authenticationManagerResolver(authenticationManagerResolver)
+    );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">private fun addManager(
+        authenticationManagers: MutableMap&lt;String, ReactiveAuthenticationManager&gt;, issuer: String): Mono&lt;JwtReactiveAuthenticationManager&gt; {
+    return Mono.fromCallable { ReactiveJwtDecoders.fromIssuerLocation(issuer) }
+            .subscribeOn(Schedulers.boundedElastic())
+            .map { jwtDecoder: ReactiveJwtDecoder -&gt; JwtReactiveAuthenticationManager(jwtDecoder) }
+            .doOnNext { authenticationManager: JwtReactiveAuthenticationManager -&gt; authenticationManagers[issuer] = authenticationManager }
+}
+
+// ...
+
+var customAuthenticationManagerResolver = JwtIssuerReactiveAuthenticationManagerResolver(authenticationManagers::get)
+return http {
+    authorizeExchange {
+        authorize(anyExchange, authenticated)
+    }
+    oauth2ResourceServer {
+        authenticationManagerResolver = customAuthenticationManagerResolver
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case, you construct <code>JwtIssuerReactiveAuthenticationManagerResolver</code> with a strategy for obtaining the <code>ReactiveAuthenticationManager</code> given the issuer.
+This approach allows us to add and remove elements from the repository (shown as a <code>Map</code> in the snippet) at runtime.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+It would be unsafe to simply take any issuer and construct an <code>ReactiveAuthenticationManager</code> from it.
+The issuer should be one that the code can verify from a trusted source like an allowed list of issuers.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-oauth2resourceserver-bearertoken-resolver"><a class="anchor" href="#webflux-oauth2resourceserver-bearertoken-resolver"></a>Bearer Token Resolution</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>By default, Resource Server looks for a bearer token in the <code>Authorization</code> header.
+This, however, can be customized.</p>
+</div>
+<div class="paragraph">
+<p>For example, you may have a need to read the bearer token from a custom header.
+To achieve this, you can wire an instance of <code>ServerBearerTokenAuthenticationConverter</code> into the DSL, as you can see in the following example:</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 6. Custom Bearer Token Header</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ServerBearerTokenAuthenticationConverter converter = new ServerBearerTokenAuthenticationConverter();
+converter.setBearerTokenHeaderName(HttpHeaders.PROXY_AUTHORIZATION);
+http
+    .oauth2ResourceServer(oauth2 -&gt; oauth2
+        .bearerTokenConverter(converter)
+    );</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val converter = ServerBearerTokenAuthenticationConverter()
+converter.setBearerTokenHeaderName(HttpHeaders.PROXY_AUTHORIZATION)
+return http {
+    oauth2ResourceServer {
+        bearerTokenConverter = converter
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_bearer_token_propagation"><a class="anchor" href="#_bearer_token_propagation"></a>Bearer Token Propagation</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Now that you&#8217;re in possession of a bearer token, it might be handy to pass that to downstream services.
+This is quite simple with <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/web/reactive/function/client/ServerBearerExchangeFilterFunction.html">ServerBearerExchangeFilterFunction</a></code>, which you can see in the following example:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public WebClient rest() {
+    return WebClient.builder()
+            .filter(new ServerBearerExchangeFilterFunction())
+            .build();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun rest(): WebClient {
+    return WebClient.builder()
+            .filter(ServerBearerExchangeFilterFunction())
+            .build()
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When the above <code>WebClient</code> is used to perform requests, Spring Security will look up the current <code>Authentication</code> and extract any <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/AbstractOAuth2Token.html">AbstractOAuth2Token</a></code> credential.
+Then, it will propagate that token in the <code>Authorization</code> header.</p>
+</div>
+<div class="paragraph">
+<p>For example:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">this.rest.get()
+        .uri("https://other-service.example.com/endpoint")
+        .retrieve()
+        .bodyToMono(String.class)</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">this.rest.get()
+        .uri("https://other-service.example.com/endpoint")
+        .retrieve()
+        .bodyToMono&lt;String&gt;()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Will invoke the <code><a href="https://other-service.example.com/endpoint" class="bare">https://other-service.example.com/endpoint</a></code>, adding the bearer token <code>Authorization</code> header for you.</p>
+</div>
+<div class="paragraph">
+<p>In places where you need to override this behavior, it&#8217;s a simple matter of supplying the header yourself, like so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">this.rest.get()
+        .uri("https://other-service.example.com/endpoint")
+        .headers(headers -&gt; headers.setBearerAuth(overridingToken))
+        .retrieve()
+        .bodyToMono(String.class)</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">rest.get()
+        .uri("https://other-service.example.com/endpoint")
+        .headers { it.setBearerAuth(overridingToken) }
+        .retrieve()
+        .bodyToMono&lt;String&gt;()</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In this case, the filter will fall back and simply forward the request onto the rest of the web filter chain.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Unlike the <a href="https://docs.spring.io/spring-security/site/docs/current-SNAPSHOT/api/org/springframework/security/oauth2/client/web/reactive/function/client/ServerOAuth2AuthorizedClientExchangeFilterFunction.html">OAuth 2.0 Client filter function</a>, this filter function makes no attempt to renew the token, should it be expired.
+To obtain this level of support, please use the OAuth 2.0 Client filter.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script src="../../../../_/js/site.js"></script>
+<script async src="../../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../../_/js/tabs.js"></script>
+<script src="../../../../_/js/vendor/docsearch.min.js"></script>
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
+<script>
+docsearch({
+  appId: 'L0TI0XV6RD',
+  apiKey: '278da59d0706716556405ce7a28ba297',
+  indexName: 'dev_spring',
+  inputSelector: '#search-input',
+  algoliaOptions: { hitsPerPage: 10 }
+})
+</script>  </body>
+</html>

@@ -4,6 +4,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Untitled :: Spring</title>
+    <link rel="prev" href="oauth2-client.html">
+    <link rel="next" href="../saml2/index.html">
     <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
@@ -76,30 +78,45 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../overview/index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../overview/features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/authentication/index.html">Authentication</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/exploits/index.html">Protection Against Exploits</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -109,7 +126,139 @@
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authorization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OAuth2</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../saml2/index.html">SAML2</a>
   </li>
 </ul>
   </li>
@@ -139,7 +288,7 @@
           <a href="../../../6/overview/prerequisites.html">6</a>
         </li>
         <li class="version is-current">
-          <a href="../../overview/prerequisites.html">5.6</a>
+          <a href="../../overview/index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -188,7 +337,7 @@ This authorization server can be consulted by resource servers to authorize requ
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Working samples for both {gh-samples-url}/boot/oauth2resourceserver[JWTs] and {gh-samples-url}/boot/oauth2resourceserver-opaque[Opaque Tokens] are available in the {gh-samples-url}[Spring Security repository].</p>
+<p>Working samples for both <a href="https://github.com/spring-projects/spring-security-samples/tree/main/servlet/spring-boot/java/oauth2/resource-server/jwe">JWTs</a> and <a href="https://github.com/spring-projects/spring-security-samples/tree/main/servlet/spring-boot/java/oauth2/resource-server/opaque">Opaque Tokens</a> are available in the <a href="https://github.com/spring-projects/spring-security-samples/tree/main">Spring Security Samples repository</a>.</p>
 </div>
 </td>
 </tr>
@@ -200,7 +349,7 @@ First, we see that, like <a href="#servlet-authentication-basic">Basic Authentic
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/servlet/oauth2/bearerauthenticationentrypoint.png" alt="bearerauthenticationentrypoint">
+<img src="servlet/architecture/bearerauthenticationentrypoint.png" alt="bearerauthenticationentrypoint">
 </div>
 <div class="title">Figure 1. Sending WWW-Authenticate Header</div>
 </div>
@@ -208,14 +357,14 @@ First, we see that, like <a href="#servlet-authentication-basic">Basic Authentic
 <p>The figure above builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
+<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
-The configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is an instance of {security-api-url}org/springframework/security/oauth2/server/resource/authentication/BearerTokenAuthenticationEntryPoint.html[<code>BearerTokenAuthenticationEntryPoint</code>] which sends a WWW-Authenticate header.
+<p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
+The configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/web/BearerTokenAuthenticationEntryPoint.html"><code>BearerTokenAuthenticationEntryPoint</code></a> which sends a WWW-Authenticate header.
 The <code>RequestCache</code> is typically a <code>NullRequestCache</code> that does not save the request since the client is capable of replaying the requests it originally requested.</p>
 </div>
 <div class="paragraph">
@@ -224,7 +373,7 @@ Below is the flow for the bearer token being processed.</p>
 </div>
 <div id="oauth2resourceserver-authentication-bearertokenauthenticationfilter" class="imageblock">
 <div class="content">
-<img src="images/servlet/oauth2/bearertokenauthenticationfilter.png" alt="bearertokenauthenticationfilter">
+<img src="servlet/architecture/bearertokenauthenticationfilter.png" alt="bearertokenauthenticationfilter">
 </div>
 <div class="title">Figure 2. Authenticating Bearer Token</div>
 </div>
@@ -232,14 +381,14 @@ Below is the flow for the bearer token being processed.</p>
 <p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> When the user submits their bearer token, the <code>BearerTokenAuthenticationFilter</code> creates a <code>BearerTokenAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the token from the <code>HttpServletRequest</code>.</p>
+<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their bearer token, the <code>BearerTokenAuthenticationFilter</code> creates a <code>BearerTokenAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the token from the <code>HttpServletRequest</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> Next, the <code>HttpServletRequest</code> is passed to the <code>AuthenticationManagerResolver</code>, which selects the <code>AuthenticationManager</code>. The <code>BearerTokenAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> Next, the <code>HttpServletRequest</code> is passed to the <code>AuthenticationManagerResolver</code>, which selects the <code>AuthenticationManager</code>. The <code>BearerTokenAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
 The details of what <code>AuthenticationManager</code> looks like depends on whether you&#8217;re configured for <a href="#oauth2resourceserver-jwt-minimalconfiguration">JWT</a> or <a href="#oauth2resourceserver-opaque-minimalconfiguration">opaque token</a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+<p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
 </div>
 <div class="ulist">
 <ul>
@@ -252,7 +401,7 @@ The details of what <code>AuthenticationManager</code> looks like depends on whe
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+<p><span class="image"><img src="../../_images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -422,7 +571,7 @@ As the authorization server makes available new keys, Spring Security will autom
 <p>Next, let&#8217;s see the architectural components that Spring Security uses to support <a href="https://tools.ietf.org/html/rfc7519">JWT</a> Authentication in servlet-based applications, like the one we just saw.</p>
 </div>
 <div class="paragraph">
-<p>{security-api-url}org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationProvider.html[<code>JwtAuthenticationProvider</code>] is an <a href="#servlet-authentication-authenticationprovider"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-jwt-decoder"><code>JwtDecoder</code></a> and <a href="#oauth2resourceserver-jwt-authorization-extraction"><code>JwtAuthenticationConverter</code></a> to authenticate a JWT.</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationProvider.html"><code>JwtAuthenticationProvider</code></a> is an <a href="#servlet-authentication-authenticationprovider"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-jwt-decoder"><code>JwtDecoder</code></a> and <a href="#oauth2resourceserver-jwt-authorization-extraction"><code>JwtAuthenticationConverter</code></a> to authenticate a JWT.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s take a look at how <code>JwtAuthenticationProvider</code> works within Spring Security.
@@ -430,24 +579,24 @@ The figure explains details of how the <a href="#servlet-authentication-authenti
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/servlet/oauth2/jwtauthenticationprovider.png" alt="jwtauthenticationprovider">
+<img src="servlet/architecture/jwtauthenticationprovider.png" alt="jwtauthenticationprovider">
 </div>
 <div class="title">Figure 3. <code>JwtAuthenticationProvider</code> Usage</div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> passes a <code>BearerTokenAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
+<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> passes a <code>BearerTokenAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="#servlet-authentication-authenticationprovider">[servlet-authentication-authenticationprovider]</a> of type <code>JwtAuthenticationProvider</code>.</p>
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="#servlet-authentication-authenticationprovider">[servlet-authentication-authenticationprovider]</a> of type <code>JwtAuthenticationProvider</code>.</p>
 </div>
 <div id="oauth2resourceserver-jwt-architecture-jwtdecoder" class="paragraph">
-<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> <code>JwtAuthenticationProvider</code> decodes, verifies, and validates the <code>Jwt</code> using a <a href="#oauth2resourceserver-jwt-decoder"><code>JwtDecoder</code></a>.</p>
+<p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> <code>JwtAuthenticationProvider</code> decodes, verifies, and validates the <code>Jwt</code> using a <a href="#oauth2resourceserver-jwt-decoder"><code>JwtDecoder</code></a>.</p>
 </div>
 <div id="oauth2resourceserver-jwt-architecture-jwtauthenticationconverter" class="paragraph">
-<p><span class="image"><img src="images/icons/number_4.png" alt="number 4"></span> <code>JwtAuthenticationProvider</code> then uses the <a href="#oauth2resourceserver-jwt-authorization-extraction"><code>JwtAuthenticationConverter</code></a> to convert the <code>Jwt</code> into a <code>Collection</code> of granted authorities.</p>
+<p><span class="image"><img src="../../_images/icons/number_4.png" alt="number 4"></span> <code>JwtAuthenticationProvider</code> then uses the <a href="#oauth2resourceserver-jwt-authorization-extraction"><code>JwtAuthenticationConverter</code></a> to convert the <code>Jwt</code> into a <code>Collection</code> of granted authorities.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is of type <code>JwtAuthenticationToken</code> and has a principal that is the <code>Jwt</code> returned by the configured <code>JwtDecoder</code>.
+<p><span class="image"><img src="../../_images/icons/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is of type <code>JwtAuthenticationToken</code> and has a principal that is the <code>Jwt</code> returned by the configured <code>JwtDecoder</code>.
 Ultimately, the returned <code>JwtAuthenticationToken</code> will be set on the <a href="#servlet-authentication-securitycontextholder"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
 </div>
 </div>
@@ -627,7 +776,7 @@ fun jwtDecoder(): JwtDecoder {
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Calling <code>{security-api-url}org/springframework/security/oauth2/jwt/JwtDecoders.html#fromIssuerLocation-java.lang.String-[JwtDecoders#fromIssuerLocation]</code> is what invokes the Provider Configuration or Authorization Server Metadata endpoint in order to derive the JWK Set Uri.
+Calling <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/JwtDecoders.html#fromIssuerLocation-java.lang.String-">JwtDecoders#fromIssuerLocation</a></code> is what invokes the Provider Configuration or Authorization Server Metadata endpoint in order to derive the JWK Set Uri.
 </td>
 </tr>
 </table>
@@ -1206,10 +1355,22 @@ class DirectlyConfiguredJwkSetUri : WebSecurityConfigurerAdapter() {
 <div class="paragraph">
 <p>Or similarly with method security:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@PreAuthorize("hasAuthority('SCOPE_messages')")
 public List&lt;Message&gt; getMessages(...) {}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@PreAuthorize("hasAuthority('SCOPE_messages')")
+fun getMessages(): List&lt;Message&gt; { }</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="sect3">
@@ -2030,7 +2191,7 @@ Authorization: Bearer some-token-value # Resource Server will process this</code
 </ol>
 </div>
 <div class="paragraph">
-<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code>{security-api-url}org/springframework/security/oauth2/core/OAuth2AuthenticatedPrincipal.html[OAuth2AuthenticatedPrincipal]</code> object, and <code>Authentication#getName</code> maps to the token&#8217;s <code>sub</code> property, if one is present.</p>
+<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/OAuth2AuthenticatedPrincipal.html">OAuth2AuthenticatedPrincipal</a></code> object, and <code>Authentication#getName</code> maps to the token&#8217;s <code>sub</code> property, if one is present.</p>
 </div>
 <div class="paragraph">
 <p>From here, you may want to jump to:</p>
@@ -2059,7 +2220,7 @@ Authorization: Bearer some-token-value # Resource Server will process this</code
 <p>Next, let&#8217;s see the architectural components that Spring Security uses to support <a href="https://tools.ietf.org/html/rfc7662">opaque token</a> Authentication in servlet-based applications, like the one we just saw.</p>
 </div>
 <div class="paragraph">
-<p>{security-api-url}org/springframework/security/oauth2/server/resource/authentication/OpaqueTokenAuthenticationProvider.html[<code>OpaqueTokenAuthenticationProvider</code>] is an <a href="#servlet-authentication-authenticationprovider"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a> to authenticate an opaque token.</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/authentication/OpaqueTokenAuthenticationProvider.html"><code>OpaqueTokenAuthenticationProvider</code></a> is an <a href="#servlet-authentication-authenticationprovider"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a> to authenticate an opaque token.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s take a look at how <code>OpaqueTokenAuthenticationProvider</code> works within Spring Security.
@@ -2067,18 +2228,18 @@ The figure explains details of how the <a href="#servlet-authentication-authenti
 </div>
 <div class="imageblock">
 <div class="content">
-<img src="images/servlet/oauth2/opaquetokenauthenticationprovider.png" alt="opaquetokenauthenticationprovider">
+<img src="servlet/architecture/opaquetokenauthenticationprovider.png" alt="opaquetokenauthenticationprovider">
 </div>
 <div class="title">Figure 4. <code>OpaqueTokenAuthenticationProvider</code> Usage</div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> passes a <code>BearerTokenAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
+<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> passes a <code>BearerTokenAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="#servlet-authentication-authenticationprovider">[servlet-authentication-authenticationprovider]</a> of type <code>OpaqueTokenAuthenticationProvider</code>.</p>
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="#servlet-authentication-authenticationprovider">[servlet-authentication-authenticationprovider]</a> of type <code>OpaqueTokenAuthenticationProvider</code>.</p>
 </div>
 <div id="oauth2resourceserver-opaque-architecture-introspector" class="paragraph">
-<p><span class="image"><img src="images/icons/number_3.png" alt="number 3"></span> <code>OpaqueTokenAuthenticationProvider</code> introspects the opaque token and adds granted authorities using an <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a>.
+<p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> <code>OpaqueTokenAuthenticationProvider</code> introspects the opaque token and adds granted authorities using an <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a>.
 When authentication is successful, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is of type <code>BearerTokenAuthentication</code> and has a principal that is the <code>OAuth2AuthenticatedPrincipal</code> returned by the configured <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a>.
 Ultimately, the returned <code>BearerTokenAuthentication</code> will be set on the <a href="#servlet-authentication-securitycontextholder"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
 </div>
@@ -3242,7 +3403,7 @@ The issuer should be one that the code can verify from a trusted source like a l
 <p>You may have observed that this strategy, while simple, comes with the trade-off that the JWT is parsed once by the <code>AuthenticationManagerResolver</code> and then again by the <a href="#oauth2resourceserver-jwt-architecture-jwtdecoder"><code>JwtDecoder</code></a> later on in the request.</p>
 </div>
 <div class="paragraph">
-<p>This extra parsing can be alleviated by configuring the <a href="#oauth2resourceserver-jwt-architecture-jwtdecoder"><code>JwtDecoder</code></a> directly with a <code>JWTClaimSetAwareJWSKeySelector</code> from Nimbus:</p>
+<p>This extra parsing can be alleviated by configuring the <a href="#oauth2resourceserver-jwt-architecture-jwtdecoder"><code>JwtDecoder</code></a> directly with a <code>JWTClaimsSetAwareJWSKeySelector</code> from Nimbus:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -3251,7 +3412,7 @@ The issuer should be one that the code can verify from a trusted source like a l
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
 public class TenantJWSKeySelector
-    implements JWTClaimSetAwareJWSKeySelector&lt;SecurityContext&gt; {
+    implements JWTClaimsSetAwareJWSKeySelector&lt;SecurityContext&gt; {
 
 	private final TenantRepository tenants; <i class="conum" data-value="1"></i><b>(1)</b>
 	private final Map&lt;String, JWSKeySelector&lt;SecurityContext&gt;&gt; selectors = new ConcurrentHashMap&lt;&gt;(); <i class="conum" data-value="2"></i><b>(2)</b>
@@ -3292,7 +3453,7 @@ public class TenantJWSKeySelector
 <div class="title">Kotlin</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Component
-class TenantJWSKeySelector(tenants: TenantRepository) : JWTClaimSetAwareJWSKeySelector&lt;SecurityContext&gt; {
+class TenantJWSKeySelector(tenants: TenantRepository) : JWTClaimsSetAwareJWSKeySelector&lt;SecurityContext&gt; {
     private val tenants: TenantRepository <i class="conum" data-value="1"></i><b>(1)</b>
     private val selectors: MutableMap&lt;String, JWSKeySelector&lt;SecurityContext&gt;&gt; = ConcurrentHashMap() <i class="conum" data-value="2"></i><b>(2)</b>
 
@@ -3620,7 +3781,7 @@ http {
 <h3 id="_bearer_token_propagation"><a class="anchor" href="#_bearer_token_propagation"></a>Bearer Token Propagation</h3>
 <div class="paragraph">
 <p>Now that you&#8217;re resource server has validated the token, it might be handy to pass it to downstream services.
-This is quite simple with <code>{security-api-url}org/springframework/security/oauth2/server/resource/web/reactive/function/client/ServletBearerExchangeFilterFunction.html[ServletBearerExchangeFilterFunction]</code>, which you can see in the following example:</p>
+This is quite simple with <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/web/reactive/function/client/ServletBearerExchangeFilterFunction.html">ServletBearerExchangeFilterFunction</a></code>, which you can see in the following example:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -3649,7 +3810,7 @@ fun rest(): WebClient {
 </div>
 </div>
 <div class="paragraph">
-<p>When the above <code>WebClient</code> is used to perform requests, Spring Security will look up the current <code>Authentication</code> and extract any <code>{security-api-url}org/springframework/security/oauth2/core/AbstractOAuth2Token.html[AbstractOAuth2Token]</code> credential.
+<p>When the above <code>WebClient</code> is used to perform requests, Spring Security will look up the current <code>Authentication</code> and extract any <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/AbstractOAuth2Token.html">AbstractOAuth2Token</a></code> credential.
 Then, it will propagate that token in the <code>Authorization</code> header.</p>
 </div>
 <div class="paragraph">
@@ -3721,7 +3882,7 @@ Then, it will propagate that token in the <code>Authorization</code> header.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Unlike the {security-api-url}org/springframework/security/oauth2/client/web/reactive/function/client/ServletOAuth2AuthorizedClientExchangeFilterFunction.html[OAuth 2.0 Client filter function], this filter function makes no attempt to renew the token, should it be expired.
+Unlike the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/client/web/reactive/function/client/ServletOAuth2AuthorizedClientExchangeFilterFunction.html">OAuth 2.0 Client filter function</a>, this filter function makes no attempt to renew the token, should it be expired.
 To obtain this level of support, please use the OAuth 2.0 Client filter.
 </td>
 </tr>
@@ -3791,7 +3952,7 @@ fun rest(): RestTemplate {
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Unlike the {security-api-url}org/springframework/security/oauth2/client/OAuth2AuthorizedClientManager.html[OAuth 2.0 Authorized Client Manager], this filter interceptor makes no attempt to renew the token, should it be expired.
+Unlike the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/client/OAuth2AuthorizedClientManager.html">OAuth 2.0 Authorized Client Manager</a>, this filter interceptor makes no attempt to renew the token, should it be expired.
 To obtain this level of support, please create an interceptor using the <a href="#oauth2client">OAuth 2.0 Authorized Client Manager</a>.
 </td>
 </tr>
@@ -3825,7 +3986,7 @@ WWW-Authenticate: Bearer error_code="invalid_token", error_description="Unsuppor
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Component
 public class FailureEvents {
 	@EventListener
-    public void onFailure(AuthenticationFailureEvent failure) {
+    public void onFailure(AuthenticationFailureBadCredentialsEvent badCredentials) {
 		if (badCredentials.getAuthentication() instanceof BearerTokenAuthenticationToken) {
 		    // ... handle
         }
@@ -3852,6 +4013,10 @@ class FailureEvents {
 </div>
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="oauth2-client.html">OAuth2 Client</a></span>
+  <span class="next"><a href="../saml2/index.html">SAML2</a></span>
+</nav>
 </article>
   </div>
 </main>

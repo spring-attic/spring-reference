@@ -76,30 +76,45 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../overview/index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../overview/features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/authentication/index.html">Authentication</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../overview/features/exploits/index.html">Protection Against Exploits</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
@@ -109,7 +124,139 @@
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authorization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">OAuth2</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../saml2/index.html">SAML2</a>
   </li>
 </ul>
   </li>
@@ -139,7 +286,7 @@
           <a href="../../../6/overview/prerequisites.html">6</a>
         </li>
         <li class="version is-current">
-          <a href="../../overview/prerequisites.html">5.6</a>
+          <a href="../../overview/index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -184,7 +331,10 @@ This can be useful if you need additional information about your user.
 For example, you might have created a custom <code>UserDetailsService</code> that returns a custom <code>UserDetails</code> containing a first and last name for your user.
 You could obtain this information with the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Authentication auth = httpServletRequest.getUserPrincipal();
 // assume integrated custom UserDetails called MyCustomUserDetails
@@ -192,6 +342,19 @@ You could obtain this information with the following:</p>
 MyCustomUserDetails userDetails = (MyCustomUserDetails) auth.getPrincipal();
 String firstName = userDetails.getFirstName();
 String lastName = userDetails.getLastName();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val auth: Authentication = httpServletRequest.getUserPrincipal()
+// assume integrated custom UserDetails called MyCustomUserDetails
+// by default, typically instance of UserDetails
+val userDetails: MyCustomUserDetails = auth.principal as MyCustomUserDetails
+val firstName: String = userDetails.firstName
+val lastName: String = userDetails.lastName</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -217,9 +380,20 @@ Instead, one should centralize it to reduce any coupling of Spring Security and 
 Typically users should not pass in the "ROLE_" prefix into this method since it is added automatically.
 For example, if you want to determine if the current user has the authority "ROLE_ADMIN", you could use the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">boolean isAdmin = httpServletRequest.isUserInRole("ADMIN");</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val isAdmin: Boolean = httpServletRequest.isUserInRole("ADMIN")</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -246,13 +420,28 @@ If they are not authenticated, the configured AuthenticationEntryPoint will be u
 <p>The <a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#login%28java.lang.String,%20java.lang.String%29">HttpServletRequest.login(String,String)</a> method can be used to authenticate the user with the current <code>AuthenticationManager</code>.
 For example, the following would attempt to authenticate with the username "user" and password "password":</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">try {
 httpServletRequest.login("user","password");
 } catch(ServletException ex) {
 // fail to authenticate
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">try {
+    httpServletRequest.login("user", "password")
+} catch (ex: ServletException) {
+    // fail to authenticate
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -289,7 +478,10 @@ Typically this would involve a redirect to the welcome page.</p>
 Using Spring Security&#8217;s concurrency support, Spring Security overrides the AsyncContext.start(Runnable) to ensure that the current SecurityContext is used when processing the Runnable.
 For example, the following would output the current user&#8217;s Authentication:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">final AsyncContext async = httpServletRequest.startAsync();
 async.start(new Runnable() {
@@ -305,6 +497,25 @@ async.start(new Runnable() {
 		}
 	}
 });</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val async: AsyncContext = httpServletRequest.startAsync()
+async.start {
+    val authentication: Authentication = SecurityContextHolder.getContext().authentication
+    try {
+        val asyncResponse = async.response as HttpServletResponse
+        asyncResponse.status = HttpServletResponse.SC_OK
+        asyncResponse.writer.write(String.valueOf(authentication))
+        async.complete()
+    } catch (ex: Exception) {
+        throw RuntimeException(ex)
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -356,7 +567,10 @@ Prior to Spring Security 3.2, the SecurityContext from the SecurityContextHolder
 This can cause issues in an Async environment.
 For example, consider the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">httpServletRequest.startAsync();
 new Thread("AsyncThread") {
@@ -373,6 +587,27 @@ new Thread("AsyncThread") {
 		}
 	}
 }.start();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">httpServletRequest.startAsync()
+object : Thread("AsyncThread") {
+    override fun run() {
+        try {
+            // Do work
+            TimeUnit.SECONDS.sleep(1)
+
+            // Write to and commit the httpServletResponse
+            httpServletResponse.outputStream.flush()
+        } catch (ex: java.lang.Exception) {
+            ex.printStackTrace()
+        }
+    }
+}.start()</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -412,12 +647,26 @@ It is not only useful but necessary to include the user in the queries to suppor
 <p>To use this support, add <code>org.springframework.security:spring-security-data</code> dependency and provide a bean of type <code>SecurityEvaluationContextExtension</code>.
 In Java Configuration, this would look like:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
 public SecurityEvaluationContextExtension securityEvaluationContextExtension() {
 	return new SecurityEvaluationContextExtension();
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun securityEvaluationContextExtension(): SecurityEvaluationContextExtension {
+    return SecurityEvaluationContextExtension()
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -435,13 +684,28 @@ public SecurityEvaluationContextExtension securityEvaluationContextExtension() {
 <p>Now Spring Security can be used within your queries.
 For example:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Repository
 public interface MessageRepository extends PagingAndSortingRepository&lt;Message,Long&gt; {
 	@Query("select m from Message m where m.to.id = ?#{ principal?.id }")
 	Page&lt;Message&gt; findInbox(Pageable pageable);
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Repository
+interface MessageRepository : PagingAndSortingRepository&lt;Message?, Long?&gt; {
+    @Query("select m from Message m where m.to.id = ?#{ principal?.id }")
+    fun findInbox(pageable: Pageable?): Page&lt;Message?&gt;?
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -470,7 +734,10 @@ It wraps a delegate <code>Runnable</code> in order to initialize the <code>Secur
 It then invokes the delegate Runnable ensuring to clear the <code>SecurityContextHolder</code> afterwards.
 The <code>DelegatingSecurityContextRunnable</code> looks something like this:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public void run() {
 try {
@@ -482,6 +749,21 @@ try {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun run() {
+    try {
+        SecurityContextHolder.setContext(securityContext)
+        delegate.run()
+    } finally {
+        SecurityContextHolder.clearContext()
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>While very simple, it makes it seamless to transfer the SecurityContext from one Thread to another.
 This is important since, in most cases, the SecurityContextHolder acts on a per Thread basis.
@@ -489,7 +771,10 @@ For example, you might have used Spring Security&#8217;s <a href="#nsa-global-me
 You can now easily transfer the <code>SecurityContext</code> of the current <code>Thread</code> to the <code>Thread</code> that invokes the secured service.
 An example of how you might do this can be found below:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Runnable originalRunnable = new Runnable() {
 public void run() {
@@ -502,6 +787,20 @@ DelegatingSecurityContextRunnable wrappedRunnable =
 	new DelegatingSecurityContextRunnable(originalRunnable, context);
 
 new Thread(wrappedRunnable).start();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val originalRunnable = Runnable {
+    // invoke secured service
+}
+val context: SecurityContext = SecurityContextHolder.getContext()
+val wrappedRunnable = DelegatingSecurityContextRunnable(originalRunnable, context)
+
+Thread(wrappedRunnable).start()</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -528,7 +827,10 @@ Notice that it is not aware of Spring Security</p>
 <p>Since it is quite common to create a <code>DelegatingSecurityContextRunnable</code> with the <code>SecurityContext</code> from the <code>SecurityContextHolder</code> there is a shortcut constructor for it.
 The following code is the same as the code above:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Runnable originalRunnable = new Runnable() {
 public void run() {
@@ -540,6 +842,20 @@ DelegatingSecurityContextRunnable wrappedRunnable =
 	new DelegatingSecurityContextRunnable(originalRunnable);
 
 new Thread(wrappedRunnable).start();</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val originalRunnable = Runnable {
+    // invoke secured service
+}
+
+val wrappedRunnable = DelegatingSecurityContextRunnable(originalRunnable)
+
+Thread(wrappedRunnable).start()</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -557,7 +873,10 @@ Let&#8217;s take a look at how <code>DelegatingSecurityContextExecutor</code> ca
 <p>The design of <code>DelegatingSecurityContextExecutor</code> is very similar to that of <code>DelegatingSecurityContextRunnable</code> except it accepts a delegate <code>Executor</code> instead of a delegate <code>Runnable</code>.
 You can see an example of how it might be used below:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SecurityContext context = SecurityContextHolder.createEmptyContext();
 Authentication authentication =
@@ -576,6 +895,26 @@ public void run() {
 };
 
 executor.execute(originalRunnable);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val context: SecurityContext = SecurityContextHolder.createEmptyContext()
+val authentication: Authentication =
+    UsernamePasswordAuthenticationToken("user", "doesnotmatter", AuthorityUtils.createAuthorityList("ROLE_USER"))
+context.authentication = authentication
+
+val delegateExecutor = SimpleAsyncTaskExecutor()
+val executor = DelegatingSecurityContextExecutor(delegateExecutor, context)
+
+val originalRunnable = Runnable {
+    // invoke secured service
+}
+
+executor.execute(originalRunnable)</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -602,7 +941,10 @@ This is nice if we are running background tasks that need to be run by a user wi
 </li>
 </ul>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Autowired
 private Executor executor; // becomes an instance of our DelegatingSecurityContextExecutor
@@ -617,6 +959,22 @@ executor.execute(originalRunnable);
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Autowired
+lateinit var executor: Executor // becomes an instance of our DelegatingSecurityContextExecutor
+
+fun submitRunnable() {
+    val originalRunnable = Runnable {
+        // invoke secured service
+    }
+    executor.execute(originalRunnable)
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Now our code is unaware that the <code>SecurityContext</code> is being propagated to the <code>Thread</code>, then the <code>originalRunnable</code> is run, and then the <code>SecurityContextHolder</code> is cleared out.
 In this example, the same user is being used to run each thread.
@@ -624,11 +982,23 @@ What if we wanted to use the user from <code>SecurityContextHolder</code> at the
 This can be done by removing the <code>SecurityContext</code> argument from our <code>DelegatingSecurityContextExecutor</code> constructor.
 For example:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SimpleAsyncTaskExecutor delegateExecutor = new SimpleAsyncTaskExecutor();
 DelegatingSecurityContextExecutor executor =
 	new DelegatingSecurityContextExecutor(delegateExecutor);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val delegateExecutor = SimpleAsyncTaskExecutor()
+val executor = DelegatingSecurityContextExecutor(delegateExecutor)</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -686,7 +1056,10 @@ This can improve the performance of serializing Spring Security related classes 
 <div class="paragraph">
 <p>To use it, register the <code>SecurityJackson2Modules.getModules(ClassLoader)</code> with <code>ObjectMapper</code> (<a href="https://github.com/FasterXML/jackson-databind">jackson-databind</a>):</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">ObjectMapper mapper = new ObjectMapper();
 ClassLoader loader = getClass().getClassLoader();
@@ -697,6 +1070,22 @@ mapper.registerModules(modules);
 SecurityContext context = new SecurityContextImpl();
 // ...
 String json = mapper.writeValueAsString(context);</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">val mapper = ObjectMapper()
+val loader = javaClass.classLoader
+val modules: MutableList&lt;Module&gt; = SecurityJackson2Modules.getModules(loader)
+mapper.registerModules(modules)
+
+// ... use ObjectMapper as normally ...
+val context: SecurityContext = SecurityContextImpl()
+// ...
+val json: String = mapper.writeValueAsString(context)</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -861,7 +1250,10 @@ This is necessary because Spring Security&#8217;s <code>MvcRequestMatcher</code>
 <div class="paragraph">
 <p>Below <code>WebSecurityConfiguration</code> in placed in the <code>DispatcherServlet</code>s <code>ApplicationContext</code>.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SecurityInitializer extends
     AbstractAnnotationConfigDispatcherServletInitializer {
@@ -882,6 +1274,29 @@ This is necessary because Spring Security&#8217;s <code>MvcRequestMatcher</code>
     return new String[] { "/" };
   }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class SecurityInitializer : AbstractAnnotationConfigDispatcherServletInitializer() {
+    override fun getRootConfigClasses(): Array&lt;Class&lt;*&gt;&gt;? {
+        return null
+    }
+
+    override fun getServletConfigClasses(): Array&lt;Class&lt;*&gt;&gt; {
+        return arrayOf(
+            RootConfiguration::class.java,
+            WebMvcConfiguration::class.java
+        )
+    }
+
+    override fun getServletMappings(): Array&lt;String&gt; {
+        return arrayOf("/")
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -906,16 +1321,31 @@ This is what is known as <a href="https://en.wikipedia.org/wiki/Defense_in_depth
 <div class="paragraph">
 <p>Consider a controller that is mapped as follows:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/admin")
 public String admin() {</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping("/admin")
+fun admin(): String {</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>If we wanted to restrict access to this controller method to admin users, a developer can provide authorization rules by matching on the <code>HttpServletRequest</code> with the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected configure(HttpSecurity http) throws Exception {
 	http
@@ -923,6 +1353,20 @@ public String admin() {</code></pre>
 			.antMatchers("/admin").hasRole("ADMIN")
 		);
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">override fun configure(http: HttpSecurity) {
+    http {
+        authorizeRequests {
+            authorize(AntPathRequestMatcher("/admin"), hasRole("ADMIN"))
+        }
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -948,7 +1392,10 @@ We could add additional rules for all the permutations of Spring MVC, but this w
 <p>Instead, we can leverage Spring Security&#8217;s <code>MvcRequestMatcher</code>.
 The following configuration will protect the same URLs that Spring MVC will match on by using Spring MVC to match on the URL.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected configure(HttpSecurity http) throws Exception {
 	http
@@ -956,6 +1403,20 @@ The following configuration will protect the same URLs that Spring MVC will matc
 			.mvcMatchers("/admin").hasRole("ADMIN")
 		);
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">override fun configure(http: HttpSecurity) {
+    http {
+        authorizeRequests {
+            authorize("/admin", hasRole("ADMIN"))
+        }
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -992,7 +1453,10 @@ For example:</p>
 <div class="paragraph">
 <p>Consider a situation where a custom <code>UserDetailsService</code> that returns an <code>Object</code> that implements <code>UserDetails</code> and your own <code>CustomUser</code> <code>Object</code>. The <code>CustomUser</code> of the currently authenticated user could be accessed using the following code:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/messages/inbox")
 public ModelAndView findMessagesForUser() {
@@ -1004,10 +1468,27 @@ public ModelAndView findMessagesForUser() {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping("/messages/inbox")
+open fun findMessagesForUser(): ModelAndView {
+    val authentication: Authentication = SecurityContextHolder.getContext().authentication
+    val custom: CustomUser? = if (authentication as CustomUser == null) null else authentication.principal
+
+    // .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>As of Spring Security 3.2 we can resolve the argument more directly by adding an annotation. For example:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
@@ -1020,13 +1501,28 @@ public ModelAndView findMessagesForUser(@AuthenticationPrincipal CustomUser cust
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping("/messages/inbox")
+open fun findMessagesForUser(@AuthenticationPrincipal customUser: CustomUser?): ModelAndView {
+
+    // .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Sometimes it may be necessary to transform the principal in some way.
 For example, if <code>CustomUser</code> needed to be final it could not be extended.
 In this situation the <code>UserDetailsService</code> might returns an <code>Object</code> that implements <code>UserDetails</code> and provides a method named <code>getCustomUser</code> to access <code>CustomUser</code>.
 For example, it might look like:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class CustomUserUserDetails extends User {
 		// ...
@@ -1036,10 +1532,28 @@ For example, it might look like:</p>
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class CustomUserUserDetails(
+    username: String?,
+    password: String?,
+    authorities: MutableCollection&lt;out GrantedAuthority&gt;?
+) : User(username, password, authorities) {
+    // ...
+    val customUser: CustomUser? = null
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>We could then access the <code>CustomUser</code> using a <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html">SpEL expression</a> that uses <code>Authentication.getPrincipal()</code> as the root object:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
@@ -1052,11 +1566,30 @@ public ModelAndView findMessagesForUser(@AuthenticationPrincipal(expression = "c
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.security.core.annotation.AuthenticationPrincipal
+
+// ...
+
+@RequestMapping("/messages/inbox")
+open fun findMessagesForUser(@AuthenticationPrincipal(expression = "customUser") customUser: CustomUser?): ModelAndView {
+
+    // .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>We can also refer to Beans in our SpEL expressions.
 For example, the following could be used if we were using JPA to manage our Users and we wanted to modify and save a property on the current user.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
@@ -1071,6 +1604,28 @@ public ModelAndView updateName(@AuthenticationPrincipal(expression = "@jpaEntity
 
 	// ...
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.security.core.annotation.AuthenticationPrincipal
+
+// ...
+
+@PutMapping("/users/self")
+open fun updateName(
+    @AuthenticationPrincipal(expression = "@jpaEntityManager.merge(#this)") attachedCustomUser: CustomUser,
+    @RequestParam firstName: String?
+): ModelAndView {
+
+    // change the firstName on an attached instance which will be persisted to the database
+    attachedCustomUser.setFirstName(firstName)
+
+    // ...
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1090,7 +1645,10 @@ This step is not strictly required, but assists in isolating your dependency to 
 </tr>
 </table>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Target({ElementType.PARAMETER, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
@@ -1099,17 +1657,44 @@ This step is not strictly required, but assists in isolating your dependency to 
 public @interface CurrentUser {}</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.TYPE)
+@Retention(AnnotationRetention.RUNTIME)
+@MustBeDocumented
+@AuthenticationPrincipal
+annotation class CurrentUser</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Now that <code>@CurrentUser</code> has been specified, we can use it to signal to resolve our <code>CustomUser</code> of the currently authenticated user.
 We have also isolated our dependency on Spring Security to a single file.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/messages/inbox")
 public ModelAndView findMessagesForUser(@CurrentUser CustomUser customUser) {
 
 	// .. find messages for this user and return them ...
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping("/messages/inbox")
+open fun findMessagesForUser(@CurrentUser customUser: CustomUser?): ModelAndView {
+
+    // .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1120,7 +1705,10 @@ public ModelAndView findMessagesForUser(@CurrentUser CustomUser customUser) {
 With no additional configuration, Spring Security will automatically setup the <code>SecurityContext</code> to the <code>Thread</code> that invokes a <code>Callable</code> returned by your controllers.
 For example, the following method will automatically have its <code>Callable</code> invoked with the <code>SecurityContext</code> that was available when the <code>Callable</code> was created:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping(method=RequestMethod.POST)
 public Callable&lt;String&gt; processUpload(final MultipartFile file) {
@@ -1132,6 +1720,20 @@ return new Callable&lt;String&gt;() {
 	}
 };
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping(method = [RequestMethod.POST])
+open fun processUpload(file: MultipartFile?): Callable&lt;String&gt; {
+    return Callable {
+        // ...
+        "someView"
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -1214,7 +1816,10 @@ If you use XML based configuration, you must add this yourself.</p>
 <div class="paragraph">
 <p>Once <code>CsrfTokenArgumentResolver</code> is properly configured, you can expose the <code>CsrfToken</code> to your static HTML based application.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestController
 public class CsrfController {
@@ -1224,6 +1829,20 @@ public class CsrfController {
 		return token;
 	}
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RestController
+class CsrfController {
+    @RequestMapping("/csrf")
+    fun csrf(token: CsrfToken): CsrfToken {
+        return token
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1258,7 +1877,10 @@ Additionally, JSR-356 does not provide a way to intercept messages, so security 
 To configure authorization using Java Configuration, simply extend the <code>AbstractSecurityWebSocketMessageBrokerConfigurer</code> and configure the <code>MessageSecurityMetadataSourceRegistry</code>.
 For example:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
 public class WebSocketSecurityConfig
@@ -1269,6 +1891,19 @@ public class WebSocketSecurityConfig
                 .simpDestMatchers("/user/**").authenticated() <i class="conum" data-value="3"></i><b>(3)</b>
     }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+open class WebSocketSecurityConfig : AbstractSecurityWebSocketMessageBrokerConfigurer() { <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="2"></i><b>(2)</b>
+    override fun configureInbound(messages: MessageSecurityMetadataSourceRegistry) {
+        messages.simpDestMatchers("/user/**").authenticated() <i class="conum" data-value="3"></i><b>(3)</b>
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1340,7 +1975,10 @@ If you are using Spring Security, the <code>Principal</code> on the <code>HttpSe
 To configure authorization using Java Configuration, simply extend the <code>AbstractSecurityWebSocketMessageBrokerConfigurer</code> and configure the <code>MessageSecurityMetadataSourceRegistry</code>.
 For example:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
 public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBrokerConfigurer {
@@ -1357,6 +1995,25 @@ public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBro
 
     }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+open class WebSocketSecurityConfig : AbstractSecurityWebSocketMessageBrokerConfigurer() {
+    override fun configureInbound(messages: MessageSecurityMetadataSourceRegistry) {
+        messages
+            .nullDestMatcher().authenticated() <i class="conum" data-value="1"></i><b>(1)</b>
+            .simpSubscribeDestMatchers("/user/queue/errors").permitAll() <i class="conum" data-value="2"></i><b>(2)</b>
+            .simpDestMatchers("/app/**").hasRole("USER") <i class="conum" data-value="3"></i><b>(3)</b>
+            .simpSubscribeDestMatchers("/user/**", "/topic/friends/*").hasRole("USER") <i class="conum" data-value="4"></i><b>(4)</b>
+            .simpTypeMatchers(MESSAGE, SUBSCRIBE).denyAll() <i class="conum" data-value="5"></i><b>(5)</b>
+            .anyMessage().denyAll() <i class="conum" data-value="6"></i><b>(6)</b>
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1555,7 +2212,7 @@ This means developers need to explicitly protect their applications from externa
 <h4 id="websocket-sameorigin-spring"><a class="anchor" href="#websocket-sameorigin-spring"></a>Spring WebSocket Allowed Origin</h4>
 <div class="paragraph">
 <p>Fortunately, since Spring 4.1.5 Spring&#8217;s WebSocket and SockJS support restricts access to the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-server-allowed-origins">current domain</a>.
-Spring Security adds an additional layer of protection to provide <a href="https://en.wikipedia.org/wiki/Defense_in_depth_%2528computing%2529">defence in depth</a>.</p>
+Spring Security adds an additional layer of protection to provide <a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">defence in depth</a>.</p>
 </div>
 </div>
 <div class="sect3">
@@ -1584,7 +2241,10 @@ var token = "${_csrf.token}";</code></pre>
 <p>If you are using static HTML, you can expose the <code>CsrfToken</code> on a REST endpoint.
 For example, the following would expose the <code>CsrfToken</code> on the URL /csrf</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestController
 public class CsrfController {
@@ -1594,6 +2254,20 @@ public class CsrfController {
         return token;
     }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RestController
+class CsrfController {
+    @RequestMapping("/csrf")
+    fun csrf(token: CsrfToken): CsrfToken {
+        return token
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1621,7 +2295,10 @@ stompClient.connect(headers, function(frame) {
 <p>If you want to allow other domains to access your site, you can disable Spring Security&#8217;s protection.
 For example, in Java Configuration you can use the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
 public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBrokerConfigurer {
@@ -1633,6 +2310,22 @@ public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBro
         return true;
     }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+open class WebSocketSecurityConfig : AbstractSecurityWebSocketMessageBrokerConfigurer() {
+
+    // ...
+
+    override fun sameOriginDisabled(): Boolean {
+        return true
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1669,7 +2362,10 @@ For example, the following will instruct Spring Security to use "X-Frame-Options
 <div class="paragraph">
 <p>Similarly, you can customize frame options to use the same origin within Java Configuration using the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
 public class WebSecurityConfig extends
@@ -1686,6 +2382,26 @@ public class WebSecurityConfig extends
         );
     }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableWebSecurity
+open class WebSecurityConfig : WebSecurityConfigurerAdapter() {
+    override fun configure(http: HttpSecurity) {
+        http {
+            // ...
+            headers {
+                frameOptions {
+                    sameOrigin = true
+                }
+            }
+        }
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -1708,7 +2424,10 @@ Otherwise our site will be vulnerable to CSRF attacks.</p>
 Our Java Configuration makes this extremely easy.
 For example, if our stomp endpoint is "/chat" we can disable CSRF protection for only URLs that start with "/chat/" using the following configuration:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
 @EnableWebSecurity
@@ -1732,6 +2451,30 @@ public class WebSecurityConfig
                 ...
             )
             ...</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+@EnableWebSecurity
+open class WebSecurityConfig : WebSecurityConfigurerAdapter() {
+    override fun configure(http: HttpSecurity) {
+        http {
+            csrf {
+                ignoringAntMatchers("/chat/**")
+            }
+            headers {
+                frameOptions {
+                    sameOrigin = true
+                }
+            }
+            authorizeRequests {
+                // ...
+            }
+            // ...</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -1779,7 +2522,10 @@ If the request does not contain any cookies and Spring Security is first, the re
 <p>The easiest way to ensure that CORS is handled first is to use the <code>CorsFilter</code>.
 Users can integrate the <code>CorsFilter</code> with Spring Security by providing a <code>CorsConfigurationSource</code> using the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -1804,6 +2550,33 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableWebSecurity
+open class WebSecurityConfig : WebSecurityConfigurerAdapter() {
+    override fun configure(http: HttpSecurity) {
+        http {
+            // by default uses a Bean by the name of corsConfigurationSource
+            cors { }
+            // ...
+        }
+    }
+
+    @Bean
+    open fun corsConfigurationSource(): CorsConfigurationSource {
+        val configuration = CorsConfiguration()
+        configuration.allowedOrigins = listOf("https://example.com")
+        configuration.allowedMethods = listOf("GET", "POST")
+        val source = UrlBasedCorsConfigurationSource()
+        source.registerCorsConfiguration("/**", configuration)
+        return source
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>or in XML</p>
 </div>
@@ -1821,7 +2594,10 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 <div class="paragraph">
 <p>If you are using Spring MVC&#8217;s CORS support, you can omit specifying the <code>CorsConfigurationSource</code> and Spring Security will leverage the CORS configuration provided to Spring MVC.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
@@ -1835,6 +2611,24 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 			...
 	}
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableWebSecurity
+open class WebSecurityConfig : WebSecurityConfigurerAdapter() {
+    override fun configure(http: HttpSecurity) {
+        http {
+            // if Spring MVC is on classpath and no CorsConfigurationSource is provided,
+            // Spring Security will use CORS configuration provided to Spring MVC
+            cors { }
+            // ...
+        }
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
