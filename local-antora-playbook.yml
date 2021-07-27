@@ -4,10 +4,10 @@ site:
 content:
   sources:
     - url: ../../spring-projects/spring-framework
-      branches: antora-2.x
+      branches: HEAD
       start_path: src/docs/antora
     - url: ../../spring-projects/spring-security
-      branches: antora-2.x
+      branches: HEAD
       start_path: docs
 ui:
   bundle:
