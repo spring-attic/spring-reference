@@ -16,4 +16,3 @@ ui:
   bundle:
     url: https://github.com/rwinch/antora-ui-spring/releases/download/latest/ui-bundle.zip
     snapshot: true
-  supplemental_files: ./supplemental-ui
