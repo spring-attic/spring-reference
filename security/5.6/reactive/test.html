@@ -520,7 +520,7 @@
 <h2 id="test-erms"><a class="anchor" href="#test-erms"></a>Testing Reactive Method Security</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>For example, we can test our example from <a href="#jc-erms">[jc-erms]</a> using the same setup and annotations we did in <a href="#test-method">[test-method]</a>.
+<p>For example, we can test our example from <a href="method.html#jc-erms" class="page">EnableReactiveMethodSecurity</a> using the same setup and annotations we did in <a href="../servlet/test/method.html#test-method" class="page">Testing Method Security</a>.
 Here is a minimal sample of what we can do:</p>
 </div>
 <div class="exampleblock">
@@ -932,7 +932,7 @@ assertThat(user.authorities).containsExactly(SimpleGrantedAuthority("SCOPE_read"
 </div>
 </div>
 <div class="paragraph">
-<p>Spring Security does the necessary work to make sure that the <code>OidcUser</code> instance is available for <a href="#mvc-authentication-principal">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
+<p>Spring Security does the necessary work to make sure that the <code>OidcUser</code> instance is available for <a href="../servlet/integrations/mvc.html#mvc-authentication-principal" class="page">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
 </div>
 <div class="paragraph">
 <p>Further, it also links that <code>OidcUser</code> to a simple instance of <code>OAuth2AuthorizedClient</code> that it deposits into a mock <code>ServerOAuth2AuthorizedClientRepository</code>.
@@ -1193,7 +1193,7 @@ assertThat(user.authorities).containsExactly(SimpleGrantedAuthority("SCOPE_read"
 </div>
 </div>
 <div class="paragraph">
-<p>Spring Security does the necessary work to make sure that the <code>OAuth2User</code> instance is available for <a href="#mvc-authentication-principal">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
+<p>Spring Security does the necessary work to make sure that the <code>OAuth2User</code> instance is available for <a href="../servlet/integrations/mvc.html#mvc-authentication-principal" class="page">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
 </div>
 <div class="paragraph">
 <p>Further, it also links that <code>OAuth2User</code> to a simple instance of <code>OAuth2AuthorizedClient</code> that it deposits in a mock <code>ServerOAuth2AuthorizedClientRepository</code>.

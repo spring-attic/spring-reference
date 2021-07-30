@@ -547,7 +547,7 @@ In some cases, the external mechanism may supply role/authority information for 
 <div class="paragraph">
 <p>Because most pre-authentication mechanisms follow the same pattern, Spring Security has a set of classes which provide an internal framework for implementing pre-authenticated authentication providers.
 This removes duplication and allows new implementations to be added in a structured fashion, without having to write everything from scratch.
-You don&#8217;t need to know about these classes if you want to use something like <a href="#servlet-x509">X.509 authentication</a>, as it already has a namespace configuration option which is simpler to use and get started with.
+You don&#8217;t need to know about these classes if you want to use something like <a href="x509.html#servlet-x509" class="page">X.509 authentication</a>, as it already has a namespace configuration option which is simpler to use and get started with.
 If you need to use explicit bean configuration or are planning on writing your own implementation then an understanding of how the provided implementations work will be useful.
 You will find classes under the <code>org.springframework.security.web.authentication.preauth</code>.
 We just provide an outline here so you should consult the Javadoc and source where appropriate.</p>
@@ -626,7 +626,7 @@ Alternatively, it may delegate to a standard <code>UserDetailsService</code> via
 <div class="sect2">
 <h3 id="http403forbiddenentrypoint"><a class="anchor" href="#http403forbiddenentrypoint"></a>Http403ForbiddenEntryPoint</h3>
 <div class="paragraph">
-<p>The <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is responsible for kick-starting the authentication process for an unauthenticated user (when they try to access a protected resource), but in the pre-authenticated case this doesn&#8217;t apply.
+<p>The <a href="architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is responsible for kick-starting the authentication process for an unauthenticated user (when they try to access a protected resource), but in the pre-authenticated case this doesn&#8217;t apply.
 You would only configure the <code>ExceptionTranslationFilter</code> with an instance of this class if you aren&#8217;t using pre-authentication in combination with other authentication mechanisms.
 It will be called if the user is rejected by the <code>AbstractPreAuthenticatedProcessingFilter</code> resulting in a null authentication.
 It always returns a <code>403</code>-forbidden response code if called.</p>
@@ -638,7 +638,7 @@ It always returns a <code>403</code>-forbidden response code if called.</p>
 <h2 id="concrete-implementations"><a class="anchor" href="#concrete-implementations"></a>Concrete Implementations</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>X.509 authentication is covered in its <a href="#servlet-x509">own chapter</a>.
+<p>X.509 authentication is covered in its <a href="x509.html#servlet-x509" class="page">own chapter</a>.
 Here we&#8217;ll look at some classes which provide support for other pre-authenticated scenarios.</p>
 </div>
 <div class="sect2">
@@ -697,7 +697,7 @@ If an attacker is able to forge the headers in their original request without th
 </div>
 </div>
 <div class="paragraph">
-<p>We&#8217;ve assumed here that the <a href="#ns-config">security namespace</a> is being used for configuration.
+<p>We&#8217;ve assumed here that the <a href="../namespace/index.html#ns-config" class="page">security namespace</a> is being used for configuration.
 It&#8217;s also assumed that you have added a <code>UserDetailsService</code> (called "userDetailsService") to your configuration to load the user&#8217;s roles.</p>
 </div>
 </div>

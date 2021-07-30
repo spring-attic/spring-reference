@@ -520,7 +520,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>This section discusses Spring Security&#8217;s high level architecture within Servlet based applications.
-We build on this high level understanding within <a href="#servlet-authentication">[servlet-authentication]</a>, <a href="#servlet-authorization">[servlet-authorization]</a>, <a href="#servlet-exploits">[servlet-exploits]</a> sections of the reference.</p>
+We build on this high level understanding within <a href="../authentication/index.html#servlet-authentication" class="page">Authentication</a>, <a href="../authorization/index.html#servlet-authorization" class="page">Authorization</a>, <a href="../exploits/index.html#servlet-exploits" class="page">Protection Against Exploits</a> sections of the reference.</p>
 </div>
 </div>
 </div>
@@ -681,7 +681,7 @@ For that reason, if you are attempting to troubleshoot Spring Security&#8217;s S
 <div class="paragraph">
 <p>Second, since <code>FilterChainProxy</code> is central to Spring Security usage it can perform tasks that are not viewed as optional.
 For example, it clears out the <code>SecurityContext</code> to avoid memory leaks.
-It also applies Spring Security&#8217;s <a href="#servlet-httpfirewall"><code>HttpFirewall</code></a> to protect applications against certain types of attacks.</p>
+It also applies Spring Security&#8217;s <a href="../exploits/firewall.html#servlet-httpfirewall" class="page"><code>HttpFirewall</code></a> to protect applications against certain types of attacks.</p>
 </div>
 <div class="paragraph">
 <p>In addition, it provides more flexibility in determining when a <code>SecurityFilterChain</code> should be invoked.
@@ -770,7 +770,7 @@ However, there are times that it is beneficial to know the ordering</p>
 <p>Saml2WebSsoAuthenticationFilter</p>
 </li>
 <li>
-<p><a href="#servlet-authentication-usernamepasswordauthenticationfilter"><code>UsernamePasswordAuthenticationFilter</code></a></p>
+<p><a href="../authentication/unpwd/form.html#servlet-authentication-usernamepasswordauthenticationfilter" class="page"><code>UsernamePasswordAuthenticationFilter</code></a></p>
 </li>
 <li>
 <p>OpenIDAuthenticationFilter</p>
@@ -785,13 +785,13 @@ However, there are times that it is beneficial to know the ordering</p>
 <p>ConcurrentSessionFilter</p>
 </li>
 <li>
-<p><a href="#servlet-authentication-digest"><code>DigestAuthenticationFilter</code></a></p>
+<p><a href="../authentication/unpwd/digest.html#servlet-authentication-digest" class="page"><code>DigestAuthenticationFilter</code></a></p>
 </li>
 <li>
 <p>BearerTokenAuthenticationFilter</p>
 </li>
 <li>
-<p><a href="#servlet-authentication-basic"><code>BasicAuthenticationFilter</code></a></p>
+<p><a href="../authentication/unpwd/basic.html#servlet-authentication-basic" class="page"><code>BasicAuthenticationFilter</code></a></p>
 </li>
 <li>
 <p>RequestCacheAwareFilter</p>
@@ -818,7 +818,7 @@ However, there are times that it is beneficial to know the ordering</p>
 <p><a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a></p>
 </li>
 <li>
-<p><a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a></p>
+<p><a href="../authorization/authorize-requests.html#servlet-authorization-filtersecurityinterceptor" class="page"><code>FilterSecurityInterceptor</code></a></p>
 </li>
 <li>
 <p>SwitchUserFilter</p>
@@ -851,7 +851,7 @@ However, there are times that it is beneficial to know the ordering</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a> is cleared out</p>
+<p>The <a href="../authentication/architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a> is cleared out</p>
 </li>
 <li>
 <p>The <code>HttpServletRequest</code> is saved in the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/savedrequest/RequestCache.html"><code>RequestCache</code></a>.
@@ -906,7 +906,7 @@ The <code>AccessDeniedHandler</code> is invoked to handle access denied.</p>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
 <td>You will recall from <a href="#servlet-filters-review">A Review of <code>Filter</code>s</a> that invoking <code>FilterChain.doFilter(request, response)</code> is the equivalent of invoking the rest of the application.
-This means that if another part of the application, (i.e. <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> or method security) throws an <code>AuthenticationException</code> or <code>AccessDeniedException</code> it will be caught and handled here.</td>
+This means that if another part of the application, (i.e. <a href="../authorization/authorize-requests.html#servlet-authorization-filtersecurityinterceptor" class="page"><code>FilterSecurityInterceptor</code></a> or method security) throws an <code>AuthenticationException</code> or <code>AccessDeniedException</code> it will be caught and handled here.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>

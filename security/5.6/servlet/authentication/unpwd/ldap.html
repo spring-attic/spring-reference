@@ -526,7 +526,7 @@
 It can also be used to store the role information for application users.</p>
 </div>
 <div class="paragraph">
-<p>Spring Security&#8217;s LDAP based authentication is used by Spring Security when it is configured to <a href="#servlet-authentication-unpwd-input">accept a username/password</a> for authentication.
+<p>Spring Security&#8217;s LDAP based authentication is used by Spring Security when it is configured to <a href="index.html#servlet-authentication-unpwd-input" class="page">accept a username/password</a> for authentication.
 However, despite leveraging a username/password for authentication it does not integrate using <code>UserDetailsService</code> because in <a href="#servlet-authentication-ldap-bind">bind authentication</a> the LDAP server does not return the password so the application cannot perform validation of the password.</p>
 </div>
 <div class="paragraph">
@@ -814,7 +814,7 @@ This is done by creating an LDAP <code>ContextSource</code>, which is the equiva
 <h2 id="servlet-authentication-ldap-authentication"><a class="anchor" href="#servlet-authentication-ldap-authentication"></a>Authentication</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Spring Security&#8217;s LDAP support does not use the <a href="#servlet-authentication-userdetailsservice">[servlet-authentication-userdetailsservice]</a> because LDAP bind authentication does not allow clients to read the password or even a hashed version of the password.
+<p>Spring Security&#8217;s LDAP support does not use the <a href="user-details-service.html#servlet-authentication-userdetailsservice" class="page">UserDetailsService</a> because LDAP bind authentication does not allow clients to read the password or even a hashed version of the password.
 This means there is no way a password to be read and then authenticated by Spring Security.</p>
 </div>
 <div class="paragraph">

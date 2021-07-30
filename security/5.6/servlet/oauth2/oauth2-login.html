@@ -602,7 +602,7 @@ OAuth 2.0 Login is implemented by using the <strong>Authorization Code Grant</st
 </td>
 <td class="content">
 The default redirect URI template is <code>{baseUrl}/login/oauth2/code/{registrationId}</code>.
-The <strong><em>registrationId</em></strong> is a unique identifier for the <a href="#oauth2Client-client-registration">ClientRegistration</a>.
+The <strong><em>registrationId</em></strong> is a unique identifier for the <a href="oauth2-client.html#oauth2Client-client-registration" class="page">ClientRegistration</a>.
 </td>
 </tr>
 </table>
@@ -614,8 +614,8 @@ The <strong><em>registrationId</em></strong> is a unique identifier for the <a h
 <i class="fa icon-important" title="Important"></i>
 </td>
 <td class="content">
-If the OAuth Client is running behind a proxy server, it is recommended to check <a href="#http-proxy-server">Proxy Server Configuration</a> to ensure the application is correctly configured.
-Also, see the supported <a href="#oauth2Client-auth-code-redirect-uri"><code>URI</code> template variables</a> for <code>redirect-uri</code>.
+If the OAuth Client is running behind a proxy server, it is recommended to check <a href="../../overview/features/exploits/http.html#http-proxy-server" class="page">Proxy Server Configuration</a> to ensure the application is correctly configured.
+Also, see the supported <a href="oauth2-client.html#oauth2Client-auth-code-redirect-uri" class="page"> <code>URI</code> template variables</a> for <code>redirect-uri</code>.
 </td>
 </tr>
 </table>
@@ -654,7 +654,7 @@ To do so:</p>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Following the base property prefix is the ID for the <a href="#oauth2Client-client-registration">ClientRegistration</a>, such as google.</td>
+<td>Following the base property prefix is the ID for the <a href="oauth2-client.html#oauth2Client-client-registration" class="page">ClientRegistration</a>, such as google.</td>
 </tr>
 </table>
 </div>
@@ -691,7 +691,7 @@ Click <strong>Allow</strong> to authorize the OAuth Client to access your email 
 <h2 id="oauth2login-boot-property-mappings"><a class="anchor" href="#oauth2login-boot-property-mappings"></a>Spring Boot 2.x Property Mappings</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following table outlines the mapping of the Spring Boot 2.x OAuth Client properties to the <a href="#oauth2Client-client-registration">ClientRegistration</a> properties.</p>
+<p>The following table outlines the mapping of the Spring Boot 2.x OAuth Client properties to the <a href="oauth2-client.html#oauth2Client-client-registration" class="page">ClientRegistration</a> properties.</p>
 </div>
 <table class="tableblock frame-all grid-all stretch">
 <colgroup>
@@ -1465,7 +1465,7 @@ class OAuth2LoginSecurityConfig : WebSecurityConfigurerAdapter() {
 <p>In addition to the <code>oauth2Login()</code> DSL, XML configuration is also supported.</p>
 </div>
 <div class="paragraph">
-<p>The following code shows the complete configuration options available in the <a href="#nsa-oauth2-login">security namespace</a>:</p>
+<p>The following code shows the complete configuration options available in the <a href="../appendix/namespace.html#nsa-oauth2-login" class="page"> security namespace</a>:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 7. OAuth2 Login XML Configuration Options</div>

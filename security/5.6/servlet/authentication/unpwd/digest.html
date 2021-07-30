@@ -540,7 +540,7 @@ Instead, you should store credentials using a one way adaptive password hash (i.
 </table>
 </div>
 <div class="paragraph">
-<p>Digest Authentication attempts to solve many of the weaknesses of <a href="#servlet-authentication-basic">Basic authentication</a>, specifically by ensuring credentials are never sent in clear text across the wire.
+<p>Digest Authentication attempts to solve many of the weaknesses of <a href="basic.html#servlet-authentication-basic" class="page">Basic authentication</a>, specifically by ensuring credentials are never sent in clear text across the wire.
 Many <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Digest#Browser_compatibility">browsers support Digest Authentication</a>.</p>
 </div>
 <div class="paragraph">
@@ -548,7 +548,7 @@ Many <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Digest#B
 Most user agents implement RFC 2617.
 Spring Security&#8217;s Digest Authentication support is compatible with the &#8220;auth&#8221; quality of protection (<code>qop</code>) prescribed by RFC 2617, which also provides backward compatibility with RFC 2069.
 Digest Authentication was seen as a more attractive option if you need to use unencrypted HTTP (i.e. no TLS/HTTPS) and wish to maximise security of the authentication process.
-However, everyone should use <a href="#http">HTTPS</a>.</p>
+However, everyone should use <a href="../../../overview/features/exploits/http.html#http" class="page">HTTPS</a>.</p>
 </div>
 <div class="paragraph">
 <p>Central to Digest Authentication is a "nonce".
@@ -568,7 +568,7 @@ key:              A private key to prevent modification of the nonce token</code
 </div>
 </div>
 <div class="paragraph">
-<p>You will need to ensure you <a href="#authentication-password-storage-configuration">configure</a> insecure plain text <a href="#authentication-password-storage">Password Storage</a> using NoOpPasswordEncoder`.
+<p>You will need to ensure you <a href="../../../overview/features/authentication/password-storage.html#authentication-password-storage-configuration" class="page">configure</a> insecure plain text <a href="../../../overview/features/authentication/password-storage.html#authentication-password-storage" class="page">Password Storage</a> using NoOpPasswordEncoder`.
 The following provides an example of configuring Digest Authentication with Java Configuration:</p>
 </div>
 <div class="exampleblock">

@@ -564,7 +564,7 @@ This process is similar to the one started in 2017 for <a href="#oauth2">Spring 
 </div>
 <div class="paragraph">
 <p>Let&#8217;s take a look at how SAML 2.0 Relying Party Authentication works within Spring Security.
-First, we see that, like <a href="#oauth2login">OAuth 2.0 Login</a>, Spring Security takes the user to a third-party for performing authentication.
+First, we see that, like <a href="../oauth2/oauth2-login.html#oauth2login" class="page"> OAuth 2.0 Login</a>, Spring Security takes the user to a third-party for performing authentication.
 It does this through a series of redirects.</p>
 </div>
 <div class="imageblock">
@@ -574,17 +574,17 @@ It does this through a series of redirects.</p>
 <div class="title">Figure 1. Redirecting to Asserting Party Authentication</div>
 </div>
 <div class="paragraph">
-<p>The figure above builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> and <a href="#servlet-authentication-abstractprocessingfilter"><code>AbstractAuthenticationProcessingFilter</code></a> diagrams:</p>
+<p>The figure above builds off our <a href="../architecture/index.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> and <a href="../authentication/architecture/index.html#servlet-authentication-abstractprocessingfilter" class="page"> <code>AbstractAuthenticationProcessingFilter</code></a> diagrams:</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="../authorization/authorize-requests.html#servlet-authorization-filtersecurityinterceptor" class="page"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> Since the user lacks authorization, the <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
-The configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html"><code>LoginUrlAuthenticationEntryPoint</code></a> which redirects to <a href="#servlet-saml2login-sp-initiated-factory">the <code>&lt;saml2:AuthnRequest&gt;</code> generating endpoint</a>, <code>Saml2WebSsoAuthenticationRequestFilter</code>.
+<p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> Since the user lacks authorization, the <a href="../architecture/index.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
+The configured <a href="../authentication/architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html"><code>LoginUrlAuthenticationEntryPoint</code></a> which redirects to <a href="#servlet-saml2login-sp-initiated-factory">the <code>&lt;saml2:AuthnRequest&gt;</code> generating endpoint</a>, <code>Saml2WebSsoAuthenticationRequestFilter</code>.
 Or, if you&#8217;ve <a href="#servlet-saml2login-relyingpartyregistrationrepository">configured more than one asserting party</a>, it will first redirect to a picker page.</p>
 </div>
 <div class="paragraph">
@@ -605,7 +605,7 @@ If successful, it will return a <code>&lt;saml2:Response&gt;</code> back to the 
 <div class="title">Figure 2. Authenticating a <code>&lt;saml2:Response&gt;</code></div>
 </div>
 <div class="paragraph">
-<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+<p>The figure builds off our <a href="../architecture/index.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> When the browser submits a <code>&lt;saml2:Response&gt;</code> to the application, it <a href="#servlet-saml2login-authenticate-responses">delegates to <code>Saml2WebSsoAuthenticationFilter</code></a>.
@@ -613,7 +613,7 @@ This filter calls its configured <code>AuthenticationConverter</code> to create 
 This converter additionally resolves the <a href="#servlet-saml2login-relyingpartyregistration"><code>RelyingPartyRegistration</code></a> and supplies it to <code>Saml2AuthenticationToken</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> Next, the filter passes the token to its configured <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a>.
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> Next, the filter passes the token to its configured <a href="../authentication/architecture/index.html#servlet-authentication-providermanager" class="page"><code>AuthenticationManager</code></a>.
 By default, it will use the <a href="#servlet-saml2login-architecture"><code>OpenSAML authentication provider</code></a>.</p>
 </div>
 <div class="paragraph">
@@ -622,10 +622,10 @@ By default, it will use the <a href="#servlet-saml2login-architecture"><code>Ope
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="#servlet-authentication-securitycontextholder"><code>SecurityContextHolder</code></a> is cleared out.</p>
+<p>The <a href="../authentication/architecture/index.html#servlet-authentication-securitycontextholder" class="page"> <code>SecurityContextHolder</code></a> is cleared out.</p>
 </li>
 <li>
-<p>The <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a> is invoked to restart the authentication process.</p>
+<p>The <a href="../authentication/architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is invoked to restart the authentication process.</p>
 </li>
 </ul>
 </div>
@@ -635,7 +635,7 @@ By default, it will use the <a href="#servlet-saml2login-architecture"><code>Ope
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="#servlet-authentication-authentication"><code>Authentication</code></a> is set on the <a href="#servlet-authentication-securitycontextholder"><code>SecurityContextHolder</code></a>.</p>
+<p>The <a href="../authentication/architecture/index.html#servlet-authentication-authentication" class="page"> <code>Authentication</code></a> is set on the <a href="../authentication/architecture/index.html#servlet-authentication-securitycontextholder" class="page"> <code>SecurityContextHolder</code></a>.</p>
 </li>
 <li>
 <p>The <code>Saml2WebSsoAuthenticationFilter</code> invokes <code>FilterChain#doFilter(request,response)</code> to continue with the rest of the application logic.</p>
@@ -814,10 +814,10 @@ If you manage your OpenSAML dependency to 4.x, then Spring Security will select 
 <p>This figure builds off of the <a href="#servlet-saml2login-authentication-saml2webssoauthenticationfilter"><code>Saml2WebSsoAuthenticationFilter</code> diagram</a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> The <code>Saml2WebSsoAuthenticationFilter</code> formulates the <code>Saml2AuthenticationToken</code> and invokes the <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a>.</p>
+<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> The <code>Saml2WebSsoAuthenticationFilter</code> formulates the <code>Saml2AuthenticationToken</code> and invokes the <a href="../authentication/architecture/index.html#servlet-authentication-providermanager" class="page"><code>AuthenticationManager</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> The <a href="#servlet-authentication-providermanager"><code>AuthenticationManager</code></a> invokes the OpenSAML authentication provider.</p>
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> The <a href="../authentication/architecture/index.html#servlet-authentication-providermanager" class="page"><code>AuthenticationManager</code></a> invokes the OpenSAML authentication provider.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> The authentication provider deserializes the response into an OpenSAML <code>Response</code> and checks its signature.
@@ -2139,7 +2139,7 @@ open class SecurityConfig : WebSecurityConfigurerAdapter() {
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>Second, call the <a href="#servlet-authentication-userdetailsservice"><code>UserDetailsService</code></a> using the relevant information</td>
+<td>Second, call the <a href="../authentication/unpwd/user-details-service.html#servlet-authentication-userdetailsservice" class="page"> <code>UserDetailsService</code></a> using the relevant information</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>

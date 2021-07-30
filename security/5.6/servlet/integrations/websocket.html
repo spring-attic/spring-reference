@@ -592,7 +592,7 @@ open class WebSocketSecurityConfig : AbstractSecurityWebSocketMessageBrokerConfi
 </table>
 </div>
 <div class="paragraph">
-<p>Spring Security also provides <a href="#nsa-websocket-security">XML Namespace</a> support for securing WebSockets.
+<p>Spring Security also provides <a href="../appendix/namespace.html#nsa-websocket-security" class="page">XML Namespace</a> support for securing WebSockets.
 A comparable XML based configuration looks like the following:</p>
 </div>
 <div class="listingblock">
@@ -718,7 +718,7 @@ open class WebSocketSecurityConfig : AbstractSecurityWebSocketMessageBrokerConfi
 </table>
 </div>
 <div class="paragraph">
-<p>Spring Security also provides <a href="#nsa-websocket-security">XML Namespace</a> support for securing WebSockets.
+<p>Spring Security also provides <a href="../appendix/namespace.html#nsa-websocket-security" class="page">XML Namespace</a> support for securing WebSockets.
 A comparable XML based configuration looks like the following:</p>
 </div>
 <div class="listingblock">
@@ -890,7 +890,7 @@ Spring Security adds an additional layer of protection to provide <a href="https
 <div class="sect2">
 <h3 id="websocket-sameorigin-csrf"><a class="anchor" href="#websocket-sameorigin-csrf"></a>Adding CSRF to Stomp Headers</h3>
 <div class="paragraph">
-<p>By default Spring Security requires the <a href="#csrf">CSRF token</a> in any CONNECT message type.
+<p>By default Spring Security requires the <a href="../../overview/features/exploits/csrf.html#csrf" class="page">CSRF token</a> in any CONNECT message type.
 This ensures that only a site that has access to the CSRF token can connect.
 Since only the <strong>Same Origin</strong> can access the CSRF token, external domains are not allowed to make a connection.</p>
 </div>
@@ -900,7 +900,7 @@ However, SockJS does not allow for these options.
 Instead, we must include the token in the Stomp headers</p>
 </div>
 <div class="paragraph">
-<p>Applications can <a href="#servlet-csrf-include">obtain a CSRF token</a> by accessing the request attribute named _csrf.
+<p>Applications can <a href="../exploits/csrf.html#servlet-csrf-include" class="page">obtain a CSRF token</a> by accessing the request attribute named _csrf.
 For example, the following will allow accessing the <code>CsrfToken</code> in a JSP:</p>
 </div>
 <div class="listingblock">
@@ -1014,11 +1014,11 @@ When using the fallback options we need to relax a few security constraints to a
 <h3 id="websocket-sockjs-sameorigin"><a class="anchor" href="#websocket-sockjs-sameorigin"></a>SockJS &amp; frame-options</h3>
 <div class="paragraph">
 <p>SockJS may use an <a href="https://github.com/sockjs/sockjs-client/tree/v0.3.4">transport that leverages an iframe</a>.
-By default Spring Security will <a href="#headers-frame-options">deny</a> the site from being framed to prevent Clickjacking attacks.
+By default Spring Security will <a href="../../overview/features/exploits/headers.html#headers-frame-options" class="page">deny</a> the site from being framed to prevent Clickjacking attacks.
 To allow SockJS frame based transports to work, we need to configure Spring Security to allow the same origin to frame the content.</p>
 </div>
 <div class="paragraph">
-<p>You can customize X-Frame-Options with the <a href="#nsa-frame-options">frame-options</a> element.
+<p>You can customize X-Frame-Options with the <a href="../appendix/namespace.html#nsa-frame-options" class="page">frame-options</a> element.
 For example, the following will instruct Spring Security to use "X-Frame-Options: SAMEORIGIN" which allows iframes within the same domain:</p>
 </div>
 <div class="listingblock">
@@ -1152,7 +1152,7 @@ open class WebSecurityConfig : WebSecurityConfigurerAdapter() {
 </div>
 </div>
 <div class="paragraph">
-<p>If we are using XML based configuration, we can use the <a href="#nsa-csrf-request-matcher-ref">csrf@request-matcher-ref</a>.
+<p>If we are using XML based configuration, we can use the <a href="../appendix/namespace.html#nsa-csrf-request-matcher-ref" class="page">csrf@request-matcher-ref</a>.
 For example:</p>
 </div>
 <div class="listingblock">

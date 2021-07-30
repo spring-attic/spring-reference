@@ -524,7 +524,7 @@
 This means that when work is done on a new <code>Thread</code>, the <code>SecurityContext</code> is lost.
 Spring Security provides some infrastructure to help make this much easier for users.
 Spring Security provides low level abstractions for working with Spring Security in multi-threaded environments.
-In fact, this is what Spring Security builds on to integration with <a href="#servletapi-start-runnable">[servletapi-start-runnable]</a> and <a href="#mvc-async">[mvc-async]</a>.</p>
+In fact, this is what Spring Security builds on to integration with <a href="servlet-api.html#servletapi-start-runnable" class="page">AsyncContext.start(Runnable)</a> and <a href="mvc.html#mvc-async" class="page">Spring MVC Async Integration</a>.</p>
 </div>
 </div>
 </div>
@@ -570,7 +570,7 @@ try {
 <div class="paragraph">
 <p>While very simple, it makes it seamless to transfer the SecurityContext from one Thread to another.
 This is important since, in most cases, the SecurityContextHolder acts on a per Thread basis.
-For example, you might have used Spring Security&#8217;s <a href="#nsa-global-method-security">[nsa-global-method-security]</a> support to secure one of your services.
+For example, you might have used Spring Security&#8217;s <a href="../appendix/namespace.html#nsa-global-method-security" class="page">&lt;global-method-security&gt;</a> support to secure one of your services.
 You can now easily transfer the <code>SecurityContext</code> of the current <code>Thread</code> to the <code>Thread</code> that invokes the secured service.
 An example of how you might do this can be found below:</p>
 </div>

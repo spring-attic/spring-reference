@@ -520,12 +520,12 @@
 <article class="doc">
 <h1 class="page">In-Memory Authentication</h1>
 <div class="paragraph">
-<p>Spring Security&#8217;s <code>InMemoryUserDetailsManager</code> implements <a href="#servlet-authentication-userdetailsservice">UserDetailsService</a> to provide support for username/password based authentication that is retrieved in memory.
+<p>Spring Security&#8217;s <code>InMemoryUserDetailsManager</code> implements <a href="user-details-service.html#servlet-authentication-userdetailsservice" class="page">UserDetailsService</a> to provide support for username/password based authentication that is retrieved in memory.
 <code>InMemoryUserDetailsManager</code> provides management of <code>UserDetails</code> by implementing the <code>UserDetailsManager</code> interface.
-<code>UserDetails</code> based authentication is used by Spring Security when it is configured to <a href="#servlet-authentication-unpwd-input">accept a username/password</a> for authentication.</p>
+<code>UserDetails</code> based authentication is used by Spring Security when it is configured to <a href="index.html#servlet-authentication-unpwd-input" class="page">accept a username/password</a> for authentication.</p>
 </div>
 <div class="paragraph">
-<p>In this sample we use <a href="#authentication-password-storage-boot-cli">Spring Boot CLI</a> to encode the password of <code>password</code> and get the encoded password of <code>{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW</code>.</p>
+<p>In this sample we use <a href="../../../overview/features/authentication/password-storage.html#authentication-password-storage-boot-cli" class="page">Spring Boot CLI</a> to encode the password of <code>password</code> and get the encoded password of <code>{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW</code>.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 1. InMemoryUserDetailsManager Java Configuration</div>
@@ -587,7 +587,7 @@ fun users(): UserDetailsService {
 <p>The samples above store the passwords in a secure format, but leave a lot to be desired in terms of getting started experience.</p>
 </div>
 <div class="paragraph">
-<p>In the sample below we leverage <a href="#authentication-password-storage-dep-getting-started">User.withDefaultPasswordEncoder</a> to ensure that the password stored in memory is protected.
+<p>In the sample below we leverage <a href="../../../overview/features/authentication/password-storage.html#authentication-password-storage-dep-getting-started" class="page">User.withDefaultPasswordEncoder</a> to ensure that the password stored in memory is protected.
 However, it does not protect against obtaining the password by decompiling the source code.
 For this reason, <code>User.withDefaultPasswordEncoder</code> should only be used for "getting started" and is not intended for production.</p>
 </div>
@@ -640,7 +640,7 @@ fun users(): UserDetailsService {
 </div>
 <div class="paragraph">
 <p>There is no simple way to use <code>User.withDefaultPasswordEncoder</code> with XML based configuration.
-For demos or just getting started, you can choose to prefix the password with <code>{noop}</code> to indicate <a href="#authentication-password-storage-dpe-format">no encoding should be used</a>.</p>
+For demos or just getting started, you can choose to prefix the password with <code>{noop}</code> to indicate <a href="../../../overview/features/authentication/password-storage.html#authentication-password-storage-dpe-format" class="page">no encoding should be used</a>.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 3. &lt;user-service&gt; <code>{noop}</code> XML Configuration</div>

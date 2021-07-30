@@ -534,16 +534,16 @@ First, we see how the user is redirected to the log in form.</p>
 <div class="title">Figure 1. Redirecting to the Log In Page</div>
 </div>
 <div class="paragraph">
-<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+<p>The figure builds off our <a href="../../architecture/index.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="#servlet-authorization-filtersecurityinterceptor"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="../../authorization/authorize-requests.html#servlet-authorization-filtersecurityinterceptor" class="page"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em> and sends a redirect to the log in page with the configured <a href="#servlet-authentication-authenticationentrypoint"><code>AuthenticationEntryPoint</code></a>.
+<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../../architecture/index.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em> and sends a redirect to the log in page with the configured <a href="../architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a>.
 In most cases the <code>AuthenticationEntryPoint</code> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html"><code>LoginUrlAuthenticationEntryPoint</code></a>.</p>
 </div>
 <div class="paragraph">
@@ -554,7 +554,7 @@ In most cases the <code>AuthenticationEntryPoint</code> is an instance of <a hre
 </div>
 <div id="servlet-authentication-usernamepasswordauthenticationfilter" class="paragraph">
 <p>When the username and password are submitted, the <code>UsernamePasswordAuthenticationFilter</code> authenticates the username and password.
-The <code>UsernamePasswordAuthenticationFilter</code> extends <a href="#servlet-authentication-abstractprocessingfilter">[servlet-authentication-abstractprocessingfilter]</a>, so this diagram should look pretty similar.</p>
+The <code>UsernamePasswordAuthenticationFilter</code> extends <a href="../architecture/index.html#servlet-authentication-abstractprocessingfilter" class="page">AbstractAuthenticationProcessingFilter</a>, so this diagram should look pretty similar.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -563,14 +563,14 @@ The <code>UsernamePasswordAuthenticationFilter</code> extends <a href="#servlet-
 <div class="title">Figure 2. Authenticating Username and Password</div>
 </div>
 <div class="paragraph">
-<p>The figure builds off our <a href="#servlet-securityfilterchain"><code>SecurityFilterChain</code></a> diagram.</p>
+<p>The figure builds off our <a href="../../architecture/index.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>UsernamePasswordAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="#servlet-authentication-authentication"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
+<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>UsernamePasswordAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="../architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
-The details of what <code>AuthenticationManager</code> look like depend on how the <a href="#servlet-authentication-unpwd-storage">user information is stored</a>.</p>
+The details of what <code>AuthenticationManager</code> look like depend on how the <a href="index.html#servlet-authentication-unpwd-storage" class="page">user information is stored</a>.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
@@ -578,7 +578,7 @@ The details of what <code>AuthenticationManager</code> look like depend on how t
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a> is cleared out.</p>
+<p>The <a href="../architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a> is cleared out.</p>
 </li>
 <li>
 <p><code>RememberMeServices.loginFail</code> is invoked.
@@ -598,7 +598,7 @@ If remember me is not configured, this is a no-op.</p>
 <p><code>SessionAuthenticationStrategy</code> is notified of a new log in.</p>
 </li>
 <li>
-<p>The <a href="#servlet-authentication-authentication">[servlet-authentication-authentication]</a> is set on the <a href="#servlet-authentication-securitycontextholder">[servlet-authentication-securitycontextholder]</a>.</p>
+<p>The <a href="../architecture/index.html#servlet-authentication-authentication" class="page">Authentication</a> is set on the <a href="../architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a>.</p>
 </li>
 <li>
 <p><code>RememberMeServices.loginSuccess</code> is invoked.
@@ -608,7 +608,7 @@ If remember me is not configured, this is a no-op.</p>
 <p><code>ApplicationEventPublisher</code> publishes an <code>InteractiveAuthenticationSuccessEvent</code>.</p>
 </li>
 <li>
-<p>The <code>AuthenticationSuccessHandler</code> is invoked. Typically this is a <code>SimpleUrlAuthenticationSuccessHandler</code> which will redirect to a request saved by <a href="#servlet-exceptiontranslationfilter"><code>ExceptionTranslationFilter</code></a> when we redirect to the log in page.</p>
+<p>The <code>AuthenticationSuccessHandler</code> is invoked. Typically this is a <code>SimpleUrlAuthenticationSuccessHandler</code> which will redirect to a request saved by <a href="../../architecture/index.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> when we redirect to the log in page.</p>
 </li>
 </ul>
 </div>
@@ -746,7 +746,7 @@ Below is a <a href="https://www.thymeleaf.org/">Thymeleaf</a> template that prod
 <p>The form should perform a <code>post</code> to <code>/login</code></p>
 </li>
 <li>
-<p>The form will need to include a <a href="#servlet-csrf">CSRF Token</a> which is <a href="#servlet-csrf-include-form-auto">automatically included</a> by Thymeleaf.</p>
+<p>The form will need to include a <a href="../../exploits/csrf.html#servlet-csrf" class="page">CSRF Token</a> which is <a href="../../exploits/csrf.html#servlet-csrf-include-form-auto" class="page">automatically included</a> by Thymeleaf.</p>
 </li>
 <li>
 <p>The form should specify the username in a parameter named <code>username</code></p>

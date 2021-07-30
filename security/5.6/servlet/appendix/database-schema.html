@@ -607,7 +607,7 @@ If you write your own or choose to implement <code>AuthenticationProvider</code>
 <h2 id="persistent-login-remember-me-schema"><a class="anchor" href="#persistent-login-remember-me-schema"></a>Persistent Login (Remember-Me) Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>This table is used to store data used by the more secure <a href="#remember-me-persistent-token">persistent token</a> remember-me implementation.
+<p>This table is used to store data used by the more secure <a href="../authentication/rememberme.html#remember-me-persistent-token" class="page">persistent token</a> remember-me implementation.
 If you are using <code>JdbcTokenRepositoryImpl</code> either directly or through the namespace, then you will need this table.
 Remember to adjust this schema to match the database dialect you are using.</p>
 </div>
@@ -627,7 +627,7 @@ Remember to adjust this schema to match the database dialect you are using.</p>
 <h2 id="dbschema-acl"><a class="anchor" href="#dbschema-acl"></a>ACL Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are four tables used by the Spring Security <a href="#domain-acls">ACL</a> implementation.</p>
+<p>There are four tables used by the Spring Security <a href="../authorization/acls.html#domain-acls" class="page">ACL</a> implementation.</p>
 </div>
 <div class="olist arabic">
 <ol class="arabic">
@@ -932,7 +932,7 @@ END;</code></pre>
 <h2 id="dbschema-oauth2-client"><a class="anchor" href="#dbschema-oauth2-client"></a>OAuth 2.0 Client Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The JDBC implementation of <a href="#oauth2Client-authorized-repo-service">OAuth2AuthorizedClientService</a> (<code>JdbcOAuth2AuthorizedClientService</code>) requires a table for persisting <code>OAuth2AuthorizedClient</code>(s).
+<p>The JDBC implementation of <a href="../oauth2/oauth2-client.html#oauth2Client-authorized-repo-service" class="page"> OAuth2AuthorizedClientService</a> (<code>JdbcOAuth2AuthorizedClientService</code>) requires a table for persisting <code>OAuth2AuthorizedClient</code>(s).
 You will need to adjust this schema to match the database dialect you are using.</p>
 </div>
 <div class="listingblock">

@@ -1102,7 +1102,7 @@ fun foo(user: Principal): String {
 </div>
 </div>
 <div class="paragraph">
-<p>There&#8217;s nothing OAuth2-specific about it, so you will likely be able to simply <a href="#test-method-withmockuser">use <code>@WithMockUser</code></a> and be fine.</p>
+<p>There&#8217;s nothing OAuth2-specific about it, so you will likely be able to simply <a href="method.html#test-method-withmockuser" class="page">use <code>@WithMockUser</code></a> and be fine.</p>
 </div>
 <div class="paragraph">
 <p>But, in cases where your controllers are bound to some aspect of Spring Security&#8217;s OAuth 2.0 support, like the following:</p>
@@ -1224,7 +1224,7 @@ assertThat(user.authorities).containsExactly(SimpleGrantedAuthority("SCOPE_read"
 </div>
 </div>
 <div class="paragraph">
-<p>Spring Security does the necessary work to make sure that the <code>OidcUser</code> instance is available for <a href="#mvc-authentication-principal">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
+<p>Spring Security does the necessary work to make sure that the <code>OidcUser</code> instance is available for <a href="../integrations/mvc.html#mvc-authentication-principal" class="page">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
 </div>
 <div class="paragraph">
 <p>Further, it also links that <code>OidcUser</code> to a simple instance of <code>OAuth2AuthorizedClient</code> that it deposits into an mock <code>OAuth2AuthorizedClientRepository</code>.
@@ -1489,7 +1489,7 @@ assertThat(user.authorities).containsExactly(SimpleGrantedAuthority("SCOPE_read"
 </div>
 </div>
 <div class="paragraph">
-<p>Spring Security does the necessary work to make sure that the <code>OAuth2User</code> instance is available for <a href="#mvc-authentication-principal">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
+<p>Spring Security does the necessary work to make sure that the <code>OAuth2User</code> instance is available for <a href="../integrations/mvc.html#mvc-authentication-principal" class="page">the <code>@AuthenticationPrincipal</code> annotation</a>.</p>
 </div>
 <div class="paragraph">
 <p>Further, it also links that <code>OAuth2User</code> to a simple instance of <code>OAuth2AuthorizedClient</code> that it deposits in a mock <code>OAuth2AuthorizedClientRepository</code>.

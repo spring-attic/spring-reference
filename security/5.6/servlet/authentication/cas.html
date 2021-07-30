@@ -661,7 +661,7 @@ Let&#8217;s now look at how this is configured</p>
 It is assumed you already know the basics of using Spring Security, so these are not covered again below.
 We&#8217;ll assume a namespace based configuration is being used and add in the CAS beans as required.
 Each section builds upon the previous section.
-A full CAS sample application can be found in the Spring Security <a href="#samples">Samples</a>.</p>
+A full CAS sample application can be found in the Spring Security <a href="../../overview/samples.html#samples" class="page">Samples</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="cas-st"><a class="anchor" href="#cas-st"></a>Service Ticket Authentication</h3>
@@ -711,7 +711,7 @@ Instead, the user will need to re-enter their username and password in order to 
 </div>
 <div class="paragraph">
 <p>For CAS to operate, the <code>ExceptionTranslationFilter</code> must have its <code>authenticationEntryPoint</code> property set to the <code>CasAuthenticationEntryPoint</code> bean.
-This can easily be done using <a href="#nsa-http-entry-point-ref">entry-point-ref</a> as is done in the example above.
+This can easily be done using <a href="../appendix/namespace.html#nsa-http-entry-point-ref" class="page">entry-point-ref</a> as is done in the example above.
 The <code>CasAuthenticationEntryPoint</code> must refer to the <code>ServiceProperties</code> bean (discussed above), which provides the URL to the enterprise&#8217;s CAS login server.
 This is where the user&#8217;s browser will be redirected.</p>
 </div>
@@ -932,7 +932,7 @@ An example configuration is shown below.</p>
 <h4 id="cas-pt-client-sample"><a class="anchor" href="#cas-pt-client-sample"></a>Calling a Stateless Service Using a Proxy Ticket</h4>
 <div class="paragraph">
 <p>Now that Spring Security obtains PGTs, you can use them to create proxy tickets which can be used to authenticate to a stateless service.
-The CAS <a href="#samples">sample application</a> contains a working example in the <code>ProxyTicketSampleServlet</code>.
+The CAS <a href="../../overview/samples.html#samples" class="page">sample application</a> contains a working example in the <code>ProxyTicketSampleServlet</code>.
 Example code can be found below:</p>
 </div>
 <div class="exampleblock">

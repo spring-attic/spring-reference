@@ -1626,7 +1626,7 @@ fun jwtDecoder(): ReactiveJwtDecoder {
 <div class="sect2">
 <h3 id="webflux-oauth2resourceserver-opaque-minimaldependencies"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-minimaldependencies"></a>Minimal Dependencies for Introspection</h3>
 <div class="paragraph">
-<p>As described in <a href="#oauth2resourceserver-jwt-minimaldependencies">Minimal Dependencies for JWT</a> most of Resource Server support is collected in <code>spring-security-oauth2-resource-server</code>.
+<p>As described in <a href="../../servlet/oauth2/oauth2-resourceserver.html#oauth2resourceserver-jwt-minimaldependencies" class="page">Minimal Dependencies for JWT</a> most of Resource Server support is collected in <code>spring-security-oauth2-resource-server</code>.
 However unless a custom <a href="#webflux-oauth2resourceserver-opaque-introspector-bean"><code>ReactiveOpaqueTokenIntrospector</code></a> is provided, the Resource Server will fallback to ReactiveOpaqueTokenIntrospector.
 Meaning that both <code>spring-security-oauth2-resource-server</code> and <code>oauth2-oidc-sdk</code> are necessary in order to have a working minimal Resource Server that supports opaque Bearer Tokens.
 Please refer to <code>spring-security-oauth2-resource-server</code> in order to determin the correct version for <code>oauth2-oidc-sdk</code>.</p>

@@ -522,9 +522,9 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Spring Security&#8217;s <code>JdbcDaoImpl</code> implements <a href="#servlet-authentication-userdetailsservice">UserDetailsService</a> to provide support for username/password based authentication that is retrieved using JDBC.
+<p>Spring Security&#8217;s <code>JdbcDaoImpl</code> implements <a href="user-details-service.html#servlet-authentication-userdetailsservice" class="page">UserDetailsService</a> to provide support for username/password based authentication that is retrieved using JDBC.
 <code>JdbcUserDetailsManager</code> extends <code>JdbcDaoImpl</code> to provide management of <code>UserDetails</code> through the <code>UserDetailsManager</code> interface.
-<code>UserDetails</code> based authentication is used by Spring Security when it is configured to <a href="#servlet-authentication-unpwd-input">accept a username/password</a> for authentication.</p>
+<code>UserDetails</code> based authentication is used by Spring Security when it is configured to <a href="index.html#servlet-authentication-unpwd-input" class="page">accept a username/password</a> for authentication.</p>
 </div>
 <div class="paragraph">
 <p>In the following sections we will discuss:</p>
@@ -708,8 +708,8 @@ fun dataSource(): DataSource {
 <h2 id="servlet-authentication-jdbc-bean"><a class="anchor" href="#servlet-authentication-jdbc-bean"></a>JdbcUserDetailsManager Bean</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>In this sample we use <a href="#authentication-password-storage-boot-cli">Spring Boot CLI</a> to encode the password of <code>password</code> and get the encoded password of <code>{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW</code>.
-See the <a href="#authentication-password-storage">PasswordEncoder</a> section for more details about how to store passwords.</p>
+<p>In this sample we use <a href="../../../overview/features/authentication/password-storage.html#authentication-password-storage-boot-cli" class="page">Spring Boot CLI</a> to encode the password of <code>password</code> and get the encoded password of <code>{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW</code>.
+See the <a href="../../../overview/features/authentication/password-storage.html#authentication-password-storage" class="page">PasswordEncoder</a> section for more details about how to store passwords.</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 5. JdbcUserDetailsManager</div>

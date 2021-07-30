@@ -536,7 +536,7 @@ For example, adding the following element from the security namespace to an appl
 <div class="paragraph">
 <p>This is much simpler than wiring up the equivalent Apache Directory Server beans.
 The most common alternative configuration requirements are supported by attributes on the <code>ldap-server</code> element and the user is isolated from worrying about which beans they need to create and what the bean property names are.
-<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
+<sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.].
 Use of a good XML editor while editing the application context file should provide information on the attributes and elements that are available.
 We would recommend that you try out the <a href="https://spring.io/tools">Eclipse IDE with Spring Tools</a> as it has special features for working with standard Spring namespaces.</p>
 </div>
@@ -668,7 +668,7 @@ Web security services are configured using the <code>&lt;http&gt;</code> element
 <div class="paragraph">
 <p>Which says that we want all URLs within our application to be secured, requiring the role <code>ROLE_USER</code> to access them, we want to log in to the application using a form with username and password, and that we want a logout URL registered which will allow us to log out of the application.
 <code>&lt;http&gt;</code> element is the parent for all web-related namespace functionality.
-The <code>&lt;intercept-url&gt;</code> element defines a <code>pattern</code> which is matched against the URLs of incoming requests using an ant path style syntax <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup>.
+The <code>&lt;intercept-url&gt;</code> element defines a <code>pattern</code> which is matched against the URLs of incoming requests using an ant path style syntax <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> for more details on how matches are actually performed.].
 You can also use regular-expression matching as an alternative (see the namespace appendix for more details).
 The <code>access</code> attribute defines the access requirements for requests matching the given pattern.
 With the default configuration, this is typically a comma-separated list of roles, one of which a user must have to be allowed to make the request.
@@ -676,7 +676,7 @@ The prefix "ROLE_" is a marker which indicates that a simple comparison with the
 In other words, a normal role-based check should be used.
 Access-control in Spring Security is not limited to the use of simple roles (hence the use of the prefix to differentiate between different types of security attributes).
 We&#8217;ll see later how the interpretation can vary <sup class="footnote">[<a id="_footnoteref_3" class="footnote" href="#_footnotedef_3" title="View footnote.">3</a>]</sup>.
-In Spring Security 3.0, the attribute can also be populated with an <a href="#el-access">EL expression</a>.</p>
+In Spring Security 3.0, the attribute can also be populated with an <a href="../authorization/expression-based.html#el-access" class="page">EL expression</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -742,7 +742,7 @@ Common problems like incorrect filter ordering are no longer an issue as the fil
 <div class="paragraph">
 <p>The <code>&lt;authentication-provider&gt;</code> element creates a <code>DaoAuthenticationProvider</code> bean and the <code>&lt;user-service&gt;</code> element creates an <code>InMemoryDaoImpl</code>.
 All <code>authentication-provider</code> elements must be children of the <code>&lt;authentication-manager&gt;</code> element, which creates a <code>ProviderManager</code> and registers the authentication providers with it.
-You can find more detailed information on the beans that are created in the <a href="#appendix-namespace">namespace appendix</a>.
+You can find more detailed information on the beans that are created in the <a href="../appendix/namespace.html#appendix-namespace" class="page">namespace appendix</a>.
 It&#8217;s worth cross-checking this if you want to start understanding what the important classes in the framework are and how they are used, particularly if you want to customise things later.</p>
 </div>
 </div>
@@ -750,7 +750,7 @@ It&#8217;s worth cross-checking this if you want to start understanding what the
 <div class="paragraph">
 <p>The configuration above defines two users, their passwords and their roles within the application (which will be used for access control).
 It is also possible to load user information from a standard properties file using the <code>properties</code> attribute on <code>user-service</code>.
-See the section on <a href="#servlet-authentication-inmemory">in-memory authentication</a> for more details on the file format.
+See the section on <a href="../authentication/unpwd/in-memory.html#servlet-authentication-inmemory" class="page">in-memory authentication</a> for more details on the file format.
 Using the <code>&lt;authentication-provider&gt;</code> element means that the user information will be used by the authentication manager to process authentication requests.
 You can have multiple <code>&lt;authentication-provider&gt;</code> elements to define different authentication sources and each will be consulted in turn.</p>
 </div>
@@ -962,7 +962,7 @@ Remove any elements which create filters whose functionality you want to replace
 <div class="paragraph">
 <p>Note that you can&#8217;t replace filters which are created by the use of the <code>&lt;http&gt;</code> element itself - <code>SecurityContextPersistenceFilter</code>, <code>ExceptionTranslationFilter</code> or <code>FilterSecurityInterceptor</code>.
 Some other filters are added by default, but you can disable them.
-An <code>AnonymousAuthenticationFilter</code> is added by default and unless you have <a href="#ns-session-fixation">session-fixation protection</a> disabled, a <code>SessionManagementFilter</code> will also be added to the filter chain.</p>
+An <code>AnonymousAuthenticationFilter</code> is added by default and unless you have <a href="../authentication/session-management.html#ns-session-fixation" class="page">session-fixation protection</a> disabled, a <code>SessionManagementFilter</code> will also be added to the filter chain.</p>
 </div>
 </td>
 </tr>
@@ -980,7 +980,7 @@ An <code>AnonymousAuthenticationFilter</code> is added by default and unless you
 <div class="paragraph">
 <p>From version 2.0 onwards Spring Security has improved support substantially for adding security to your service layer methods.
 It provides support for JSR-250 annotation security as well as the framework&#8217;s original <code>@Secured</code> annotation.
-From 3.0 you can also make use of new <a href="#el-access">expression-based annotations</a>.
+From 3.0 you can also make use of new <a href="../authorization/expression-based.html#el-access" class="page">expression-based annotations</a>.
 You can apply security to a single bean, using the <code>intercept-methods</code> element to decorate the bean declaration, or you can secure multiple beans across the entire service layer using the AspectJ style pointcuts.</p>
 </div>
 </div>
@@ -997,7 +997,7 @@ If you don&#8217;t you can skip it and come back to it later, as this section is
 </div>
 <div class="paragraph">
 <p>The default strategy is to use an <code>AffirmativeBased</code> <code>AccessDecisionManager</code> with a <code>RoleVoter</code> and an <code>AuthenticatedVoter</code>.
-You can find out more about these in the chapter on <a href="#authz-arch">authorization</a>.</p>
+You can find out more about these in the chapter on <a href="../authorization/architecture.html#authz-arch" class="page">authorization</a>.</p>
 </div>
 <div class="sect2">
 <h3 id="ns-custom-access-mgr"><a class="anchor" href="#ns-custom-access-mgr"></a>Customizing the AccessDecisionManager</h3>
@@ -1030,10 +1030,10 @@ You can find out more about these in the chapter on <a href="#authz-arch">author
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. You can find out more about the use of the <code>ldap-server</code> element in the chapter on <a href="#servlet-authentication-ldap">[servlet-authentication-ldap]</a>.
+<a href="#_footnoteref_1">1</a>. You can find out more about the use of the <code>ldap-server</code> element in the chapter on xref:servlet/authentication/unpwd/ldap.adoc#servlet-authentication-ldap[LDAP Authentication
 </div>
 <div class="footnote" id="_footnotedef_2">
-<a href="#_footnoteref_2">2</a>. See the section on <a href="#servlet-httpfirewall">`HttpFirewall`</a> for more details on how matches are actually performed.
+<a href="#_footnoteref_2">2</a>. See the section on xref:servlet/exploits/firewall.adoc#servlet-httpfirewall[`HttpFirewall`
 </div>
 <div class="footnote" id="_footnotedef_3">
 <a href="#_footnoteref_3">3</a>. The interpretation of the comma-separated values in the <code>access</code> attribute depends on the implementation of the <a href="#ns-access-manager">AccessDecisionManager</a> which is used.

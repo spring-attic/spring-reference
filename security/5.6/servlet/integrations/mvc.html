@@ -1113,7 +1113,7 @@ The <code>SecurityContext</code> that is used to process the <code>Callable</cod
 <div class="paragraph">
 <p>There is no automatic integration with a <code>DeferredResult</code> that is returned by controllers.
 This is because <code>DeferredResult</code> is processed by the users and thus there is no way of automatically integrating with it.
-However, you can still use <a href="#concurrency">Concurrency Support</a> to provide transparent integration with Spring Security.</p>
+However, you can still use <a href="concurrency.html#concurrency" class="page">Concurrency Support</a> to provide transparent integration with Spring Security.</p>
 </div>
 </div>
 </div>
@@ -1123,7 +1123,7 @@ However, you can still use <a href="#concurrency">Concurrency Support</a> to pro
 <div class="sect2">
 <h3 id="automatic-token-inclusion"><a class="anchor" href="#automatic-token-inclusion"></a>Automatic Token Inclusion</h3>
 <div class="paragraph">
-<p>Spring Security will automatically <a href="#servlet-csrf-include">include the CSRF Token</a> within forms that use the <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html#view-jsp-formtaglib-formtag">Spring MVC form tag</a>.
+<p>Spring Security will automatically <a href="../exploits/csrf.html#servlet-csrf-include" class="page">include the CSRF Token</a> within forms that use the <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html#view-jsp-formtaglib-formtag">Spring MVC form tag</a>.
 For example, the following JSP:</p>
 </div>
 <div class="listingblock">
@@ -1170,7 +1170,7 @@ For example, the following JSP:</p>
 <h3 id="mvc-csrf-resolver"><a class="anchor" href="#mvc-csrf-resolver"></a>Resolving the CsrfToken</h3>
 <div class="paragraph">
 <p>Spring Security provides <code>CsrfTokenArgumentResolver</code> which can automatically resolve the current <code>CsrfToken</code> for Spring MVC arguments.
-By using <a href="#jc-hello-wsca">@EnableWebSecurity</a> you will automatically have this added to your Spring MVC configuration.
+By using <a href="../java-configuration/index.html#jc-hello-wsca" class="page">@EnableWebSecurity</a> you will automatically have this added to your Spring MVC configuration.
 If you use XML based configuration, you must add this yourself.</p>
 </div>
 <div class="paragraph">

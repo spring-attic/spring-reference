@@ -542,15 +542,15 @@ This may include sensitive information, such as request parameters or headers, a
 <div class="paragraph">
 <p>If you use an <code>&lt;http&gt;</code> element within your application, a <code>FilterChainProxy</code> bean named "springSecurityFilterChain" is created and the configuration within the element is used to build a filter chain within
 <code>FilterChainProxy</code>.
-As of Spring Security 3.1, additional <code>http</code> elements can be used to add extra filter chains <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
+As of Spring Security 3.1, additional <code>http</code> elements can be used to add extra filter chains <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> for how to set up the mapping from your <code>web.xml</code> ].
 Some core filters are always created in a filter chain and others will be added to the stack depending on the attributes and child elements which are present.
 The positions of the standard filters are fixed (see
-<a href="#filter-stack">the filter order table</a> in the namespace introduction), removing a common source of errors with previous versions of the framework when users had to configure the filter chain explicitly in the
+<a href="../namespace/index.html#filter-stack" class="page">the filter order table</a> in the namespace introduction), removing a common source of errors with previous versions of the framework when users had to configure the filter chain explicitly in the
 <code>FilterChainProxy</code> bean.
 You can, of course, still do this if you need full control of the configuration.</p>
 </div>
 <div class="paragraph">
-<p>All filters which require a reference to the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> will be automatically injected with the internal instance created by the namespace configuration.</p>
+<p>All filters which require a reference to the <a href="../authentication/architecture/index.html#servlet-authentication-authenticationmanager" class="page"><code>AuthenticationManager</code></a> will be automatically injected with the internal instance created by the namespace configuration.</p>
 </div>
 <div class="paragraph">
 <p>Each <code>&lt;http&gt;</code> namespace block always creates an <code>SecurityContextPersistenceFilter</code>, an <code>ExceptionTranslationFilter</code> and a <code>FilterSecurityInterceptor</code>.
@@ -731,7 +731,7 @@ Defaults to <code>true</code>.</p>
 <ul>
 <li>
 <p><strong>use-expressions</strong>
-Enables EL-expressions in the <code>access</code> attribute, as described in the chapter on <a href="#el-access-web">expression-based access-control</a>.
+Enables EL-expressions in the <code>access</code> attribute, as described in the chapter on <a href="../authorization/expression-based.html#el-access-web" class="page">expression-based access-control</a>.
 The default value is true.</p>
 </li>
 </ul>
@@ -815,7 +815,7 @@ The default value is true.</p>
 <h3 id="nsa-access-denied-handler"><a class="anchor" href="#nsa-access-denied-handler"></a>&lt;access-denied-handler&gt;</h3>
 <div class="paragraph">
 <p>This element allows you to set the <code>errorPage</code> property for the default <code>AccessDeniedHandler</code> used by the <code>ExceptionTranslationFilter</code>, using the <a href="#nsa-access-denied-handler-error-page">error-page</a> attribute, or to supply your own implementation using the<a href="#nsa-access-denied-handler-ref">ref</a> attribute.
-This is discussed in more detail in the section on the <a href="#servlet-exceptiontranslationfilter">ExceptionTranslationFilter</a>.</p>
+This is discussed in more detail in the section on the <a href="../architecture/index.html#servlet-exceptiontranslationfilter" class="page">ExceptionTranslationFilter</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-access-denied-handler-parents"><a class="anchor" href="#nsa-access-denied-handler-parents"></a>Parent Elements of &lt;access-denied-handler&gt;</h4>
@@ -891,7 +891,7 @@ Optional attribute that specifies the bean name of a <code>CorsConfigurationSour
 <div class="paragraph">
 <p>This element allows for configuring additional (security) headers to be send with the response.
 It enables easy configuration for several headers and also allows for setting custom headers through the <a href="#nsa-header">header</a> element.
-Additional information, can be found in the <a href="#headers">Security Headers</a> section of the reference.</p>
+Additional information, can be found in the <a href="../../overview/features/exploits/headers.html#headers" class="page">Security Headers</a> section of the reference.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -1561,7 +1561,7 @@ if unset, defaults to <code>anonymousUser</code>.</p>
 <div class="paragraph">
 <p>This element will add <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross Site Request Forger (CSRF)</a> protection to the application.
 It also updates the default RequestCache to only replay "GET" requests upon successful authentication.
-Additional information can be found in the <a href="#csrf">Cross Site Request Forgery (CSRF)</a> section of the reference.</p>
+Additional information can be found in the <a href="../../overview/features/exploits/csrf.html#csrf" class="page">Cross Site Request Forgery (CSRF)</a> section of the reference.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-csrf-parents"><a class="anchor" href="#nsa-csrf-parents"></a>Parent Elements of &lt;csrf&gt;</h4>
@@ -1610,7 +1610,7 @@ Default is any HTTP method except "GET", "TRACE", "HEAD", "OPTIONS".</p>
 <div class="paragraph">
 <p>This element is used to add a filter to the filter chain.
 It doesn&#8217;t create any additional beans but is used to select a bean of type <code>javax.servlet.Filter</code> which is already defined in the application context and add that at a particular position in the filter chain maintained by Spring Security.
-Full details can be found in the <a href="#ns-custom-filters">namespace chapter</a>.</p>
+Full details can be found in the <a href="../namespace/index.html#ns-custom-filters" class="page"> namespace chapter</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-custom-filter-parents"><a class="anchor" href="#nsa-custom-filter-parents"></a>Parent Elements of &lt;custom-filter&gt;</h4>
@@ -1832,7 +1832,7 @@ Maps a <code>ForwardAuthenticationFailureHandler</code> to <code>authenticationF
 <div class="sect2">
 <h3 id="nsa-oauth2-login"><a class="anchor" href="#nsa-oauth2-login"></a>&lt;oauth2-login&gt;</h3>
 <div class="paragraph">
-<p>The <a href="#oauth2login">OAuth 2.0 Login</a> feature configures authentication support using an OAuth 2.0 and/or OpenID Connect 1.0 Provider.</p>
+<p>The <a href="../oauth2/oauth2-login.html#oauth2login" class="page">OAuth 2.0 Login</a> feature configures authentication support using an OAuth 2.0 and/or OpenID Connect 1.0 Provider.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-oauth2-login-parents"><a class="anchor" href="#nsa-oauth2-login-parents"></a>Parent Elements of &lt;oauth2-login&gt;</h4>
@@ -1963,7 +1963,7 @@ Reference to the <code>JwtDecoderFactory</code> used by <code>OidcAuthorizationC
 <div class="sect2">
 <h3 id="nsa-oauth2-client"><a class="anchor" href="#nsa-oauth2-client"></a>&lt;oauth2-client&gt;</h3>
 <div class="paragraph">
-<p>Configures <a href="#oauth2client">OAuth 2.0 Client</a> support.</p>
+<p>Configures <a href="../oauth2/oauth2-client.html#oauth2client" class="page">OAuth 2.0 Client</a> support.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-oauth2-client-parents"><a class="anchor" href="#nsa-oauth2-client-parents"></a>Parent Elements of &lt;oauth2-client&gt;</h4>
@@ -2016,7 +2016,7 @@ Reference to the <code>OAuth2AuthorizedClientService</code>.</p>
 <div class="sect2">
 <h3 id="nsa-authorization-code-grant"><a class="anchor" href="#nsa-authorization-code-grant"></a>&lt;authorization-code-grant&gt;</h3>
 <div class="paragraph">
-<p>Configures <a href="#oauth2Client-auth-grant-support">OAuth 2.0 Authorization Code Grant</a>.</p>
+<p>Configures <a href="../oauth2/oauth2-client.html#oauth2Client-auth-grant-support" class="page">OAuth 2.0 Authorization Code Grant</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-authorization-code-grant-parents"><a class="anchor" href="#nsa-authorization-code-grant-parents"></a>Parent Elements of &lt;authorization-code-grant&gt;</h4>
@@ -2059,7 +2059,7 @@ Reference to the <code>OAuth2AccessTokenResponseClient</code>.</p>
 <div class="sect2">
 <h3 id="nsa-client-registrations"><a class="anchor" href="#nsa-client-registrations"></a>&lt;client-registrations&gt;</h3>
 <div class="paragraph">
-<p>A container element for client(s) registered (<a href="#oauth2Client-client-registration">ClientRegistration</a>) with an OAuth 2.0 or OpenID Connect 1.0 Provider.</p>
+<p>A container element for client(s) registered (<a href="../oauth2/oauth2-client.html#oauth2Client-client-registration" class="page">ClientRegistration</a>) with an OAuth 2.0 or OpenID Connect 1.0 Provider.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-client-registrations-children"><a class="anchor" href="#nsa-client-registrations-children"></a>Child Elements of &lt;client-registrations&gt;</h4>
@@ -2819,7 +2819,7 @@ Defaults to "username".</p>
 <h3 id="nsa-attribute-exchange"><a class="anchor" href="#nsa-attribute-exchange"></a>&lt;attribute-exchange&gt;</h3>
 <div class="paragraph">
 <p>The <code>attribute-exchange</code> element defines the list of attributes which should be requested from the identity provider.
-An example can be found in the <a href="#servlet-openid">OpenID Support</a> section of the namespace configuration chapter.
+An example can be found in the <a href="../authentication/openid.html#servlet-openid" class="page">OpenID Support</a> section of the namespace configuration chapter.
 More than one can be used, in which case each must have an <code>identifier-match</code> attribute, containing a regular expression which is matched against the supplied OpenID identifier.
 This allows different attribute lists to be fetched from different providers (Google, Yahoo etc).</p>
 </div>
@@ -2946,7 +2946,7 @@ The change password page. Defaults to "/change-password".</p>
 This element can optionally be used to override the default mappings which that class defines.
 Each child <code>&lt;port-mapping&gt;</code> element defines a pair of HTTP:HTTPS ports.
 The default mappings are 80:443 and 8080:8443.
-An example of overriding these can be found in <a href="#servlet-http-redirect">[servlet-http-redirect]</a>.</p>
+An example of overriding these can be found in <a href="../exploits/http.html#servlet-http-redirect" class="page">Redirect to HTTPS</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-port-mappings-parents"><a class="anchor" href="#nsa-port-mappings-parents"></a>Parent Elements of &lt;port-mappings&gt;</h4>
@@ -3641,7 +3641,7 @@ This attribute allows you to define an alias name for the internal instance for 
 <li>
 <p><strong>erase-credentials</strong>
 If set to true, the AuthenticationManager will attempt to clear any credentials data in the returned Authentication object, once the user has been authenticated.
-Literally it maps to the <code>eraseCredentialsAfterAuthentication</code> property of the <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
+Literally it maps to the <code>eraseCredentialsAfterAuthentication</code> property of the <a href="../authentication/architecture/index.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
 </li>
 </ul>
 </div>
@@ -3830,7 +3830,7 @@ The default is</p>
 <div class="sect2">
 <h3 id="nsa-password-encoder"><a class="anchor" href="#nsa-password-encoder"></a>&lt;password-encoder&gt;</h3>
 <div class="paragraph">
-<p>Authentication providers can optionally be configured to use a password encoder as described in the <a href="#authentication-password-storage">[authentication-password-storage]</a>.
+<p>Authentication providers can optionally be configured to use a password encoder as described in the <a href="../../overview/features/authentication/password-storage.html#authentication-password-storage" class="page">Password Storage</a>.
 This will result in the bean being injected with the appropriate <code>PasswordEncoder</code> instance.</p>
 </div>
 <div class="sect3">
@@ -4301,7 +4301,7 @@ Defines a reference to a Spring bean Id.</p>
 <div class="paragraph">
 <p><code>&lt;protect-pointcut&gt;</code>
 Rather than defining security attributes on an individual method or class basis using the <code>@Secured</code> annotation, you can define cross-cutting security constraints across whole sets of methods and interfaces in your service layer using the <code>&lt;protect-pointcut&gt;</code> element.
-You can find an example in the <a href="#ns-protect-pointcut">namespace introduction</a>.</p>
+You can find an example in the <a href="../authorization/method-security.html#ns-protect-pointcut" class="page">namespace introduction</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-protect-pointcut-parents"><a class="anchor" href="#nsa-protect-pointcut-parents"></a>Parent Elements of &lt;protect-pointcut&gt;</h4>
@@ -4446,7 +4446,7 @@ A method name</p>
 <h2 id="nsa-ldap"><a class="anchor" href="#nsa-ldap"></a>LDAP Namespace Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>LDAP is covered in some details in <a href="#servlet-authentication-ldap">its own chapter</a>.
+<p>LDAP is covered in some details in <a href="../authentication/unpwd/ldap.html#servlet-authentication-ldap" class="page">its own chapter</a>.
 We will expand on that here with some explanation of how the namespace options map to Spring beans.
 The LDAP implementation uses Spring LDAP extensively, so some familiarity with that project&#8217;s API may be useful.</p>
 </div>
@@ -4456,7 +4456,7 @@ The LDAP implementation uses Spring LDAP extensively, so some familiarity with t
 <p><code>&lt;ldap-server&gt;</code> Element
 This element sets up a Spring LDAP <code>ContextSource</code> for use by the other LDAP beans, defining the location of the LDAP server and other information (such as a username and password, if it doesn&#8217;t allow anonymous access) for connecting to it.
 It can also be used to create an embedded server for testing.
-Details of the syntax for both options are covered in the <a href="#servlet-authentication-ldap">LDAP chapter</a>.
+Details of the syntax for both options are covered in the <a href="../authentication/unpwd/ldap.html#servlet-authentication-ldap" class="page">LDAP chapter</a>.
 The actual <code>ContextSource</code> implementation is <code>DefaultSpringSecurityContextSource</code> which extends Spring LDAP&#8217;s <code>LdapContextSource</code> class.
 The <code>manager-dn</code> and <code>manager-password</code> attributes map to the latter&#8217;s <code>userDn</code> and <code>password</code> properties respectively.</p>
 </div>
@@ -4843,7 +4843,7 @@ The substituted parameter is the user&#8217;s login name.</p>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. See the <a href="#ns-web-xml">introductory chapter</a> for how to set up the mapping from your <code>web.xml</code>
+<a href="#_footnoteref_1">1</a>. See the xref:servlet/namespace/index.adoc#ns-web-xml[introductory chapter
 </div>
 <div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. This feature is really just provided for convenience and is not intended for production (where a view technology will have been chosen and can be used to render a customized login page). The class <code>DefaultLoginPageGeneratingFilter</code> is responsible for rendering the login page and will provide login forms for both normal form login and/or OpenID if required.

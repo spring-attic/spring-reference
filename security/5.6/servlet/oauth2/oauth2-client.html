@@ -623,7 +623,7 @@ class OAuth2ClientSecurityConfig : WebSecurityConfigurerAdapter() {
 <p>In addition to the <code>HttpSecurity.oauth2Client()</code> DSL, XML configuration is also supported.</p>
 </div>
 <div class="paragraph">
-<p>The following code shows the complete configuration options available in the <a href="#nsa-oauth2-client">security namespace</a>:</p>
+<p>The following code shows the complete configuration options available in the <a href="../appendix/namespace.html#nsa-oauth2-client" class="page"> security namespace</a>:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 2. OAuth2 Client XML Configuration Options</div>
@@ -1108,7 +1108,7 @@ However, the application may choose to override and register a custom <code>OAut
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-<code>JdbcOAuth2AuthorizedClientService</code> depends on the table definition described in <a href="#dbschema-oauth2-client">OAuth 2.0 Client Schema</a>.
+<code>JdbcOAuth2AuthorizedClientService</code> depends on the table definition described in <a href="../appendix/database-schema.html#dbschema-oauth2-client" class="page"> OAuth 2.0 Client Schema</a>.
 </td>
 </tr>
 </table>
@@ -1498,7 +1498,7 @@ If the client is running in an untrusted environment (eg. native application or 
 </table>
 </div>
 <div class="paragraph">
-<p>Configuring the <code>redirect-uri</code> with <code>URI</code> template variables is especially useful when the OAuth 2.0 Client is running behind a <a href="#http-proxy-server">Proxy Server</a>.
+<p>Configuring the <code>redirect-uri</code> with <code>URI</code> template variables is especially useful when the OAuth 2.0 Client is running behind a <a href="../../overview/features/exploits/http.html#http-proxy-server" class="page">Proxy Server</a>.
 This ensures that the <code>X-Forwarded-*</code> headers are used when expanding the <code>redirect-uri</code>.</p>
 </div>
 </div>
