@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Spring</title>
+    <title>Spring MVC Integration :: Spring</title>
+    <link rel="prev" href="localization.html">
+    <link rel="next" href="websocket.html">
     <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 <link rel="stylesheet" href="../../../../_/css/site-extra.css">
@@ -101,10 +103,28 @@
     <a class="nav-link" href="../../overview/features/index.html">Features</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../overview/features/authentication/index.html">Authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../overview/features/authentication/password-storage.html">Password Storage</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../overview/features/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../overview/features/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../overview/features/exploits/headers.html">HTTP Headers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../overview/features/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
@@ -118,7 +138,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Servlet Applications</span>
+    <a class="nav-link" href="../index.html">Servlet Applications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
@@ -218,7 +238,7 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Authorization</span>
+    <a class="nav-link" href="../authorization/index.html">Authorization</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
@@ -242,7 +262,7 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">OAuth2</span>
+    <a class="nav-link" href="../oauth2/index.html">OAuth2</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../oauth2/oauth2-login.html">OAuth2 Log In</a>
@@ -259,10 +279,55 @@
     <a class="nav-link" href="../saml2/index.html">SAML2</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/csrf.html">Cross Site Request Forgery (CSRF) for Servlet Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/headers.html">Security HTTP Response Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/http.html">HTTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="index.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="servlet-api.html">Servlet APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data.html">Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="concurrency.html">Java&#8217;s Concurrency APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jackson.html">Jackson</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="mvc.html">Spring MVC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="websocket.html">WebSocket</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cors.html">Spring&#8217;s CORS Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jsp-taglibs.html">JSP Taglib</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -283,25 +348,67 @@
     <a class="nav-link" href="../test/index.html">Testing</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test/method.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../test/mockmvc.html">MockMvc Support</a>
+  </li>
+  <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../crypto/index.html">Cryptography</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/namespace.html">XML Namespace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/faq.html">FAQ</a>
+  </li>
+</ul>
   </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Reactive Applications</span>
+    <a class="nav-link" href="../../reactive/index.html">Reactive Applications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webflux.html">WebFlux Security</a>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../reactive/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/headers.html">Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../../reactive/oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/login.html">OAuth 2.0 Login</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/access-token.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/resource-server.html">OAuth 2.0 Resource Server</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
@@ -370,15 +477,18 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<div class="sect1">
-<h2 id="mvc"><a class="anchor" href="#mvc"></a>Spring MVC Integration</h2>
+<h1 class="page">Spring MVC Integration</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security provides a number of optional integrations with Spring MVC.
 This section covers the integration in further detail.</p>
 </div>
-<div class="sect2">
-<h3 id="mvc-enablewebmvcsecurity"><a class="anchor" href="#mvc-enablewebmvcsecurity"></a>@EnableWebMvcSecurity</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mvc-enablewebmvcsecurity"><a class="anchor" href="#mvc-enablewebmvcsecurity"></a>@EnableWebMvcSecurity</h2>
+<div class="sectionbody">
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -409,8 +519,10 @@ This means that if you are using more advanced options, like integrating with <c
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="mvc-requestmatcher"><a class="anchor" href="#mvc-requestmatcher"></a>MvcRequestMatcher</h3>
+</div>
+<div class="sect1">
+<h2 id="mvc-requestmatcher"><a class="anchor" href="#mvc-requestmatcher"></a>MvcRequestMatcher</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security provides deep integration with how Spring MVC matches on URLs with <code>MvcRequestMatcher</code>.
 This is helpful to ensure your Security rules match the logic used to handle your requests.</p>
@@ -633,8 +745,10 @@ The following configuration will protect the same URLs that Spring MVC will matc
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="mvc-authentication-principal"><a class="anchor" href="#mvc-authentication-principal"></a>@AuthenticationPrincipal</h3>
+</div>
+<div class="sect1">
+<h2 id="mvc-authentication-principal"><a class="anchor" href="#mvc-authentication-principal"></a>@AuthenticationPrincipal</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security provides <code>AuthenticationPrincipalArgumentResolver</code> which can automatically resolve the current <code>Authentication.getPrincipal()</code> for Spring MVC arguments.
 By using <code>@EnableWebSecurity</code> you will automatically have this added to your Spring MVC configuration.
@@ -901,8 +1015,10 @@ open fun findMessagesForUser(@CurrentUser customUser: CustomUser?): ModelAndView
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="mvc-async"><a class="anchor" href="#mvc-async"></a>Spring MVC Async Integration</h3>
+</div>
+<div class="sect1">
+<h2 id="mvc-async"><a class="anchor" href="#mvc-async"></a>Spring MVC Async Integration</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Spring Web MVC 3.2+ has excellent support for <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-ann-async">Asynchronous Request Processing</a>.
 With no additional configuration, Spring Security will automatically setup the <code>SecurityContext</code> to the <code>Thread</code> that invokes a <code>Callable</code> returned by your controllers.
@@ -961,10 +1077,12 @@ This is because <code>DeferredResult</code> is processed by the users and thus t
 However, you can still use <a href="#concurrency">Concurrency Support</a> to provide transparent integration with Spring Security.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="mvc-csrf"><a class="anchor" href="#mvc-csrf"></a>Spring MVC and CSRF Integration</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="mvc-csrf"><a class="anchor" href="#mvc-csrf"></a>Spring MVC and CSRF Integration</h3>
-<div class="sect3">
-<h4 id="_automatic_token_inclusion"><a class="anchor" href="#_automatic_token_inclusion"></a>Automatic Token Inclusion</h4>
+<h3 id="automatic-token-inclusion"><a class="anchor" href="#automatic-token-inclusion"></a>Automatic Token Inclusion</h3>
 <div class="paragraph">
 <p>Spring Security will automatically <a href="#servlet-csrf-include">include the CSRF Token</a> within forms that use the <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html#view-jsp-formtaglib-formtag">Spring MVC form tag</a>.
 For example, the following JSP:</p>
@@ -1009,8 +1127,8 @@ For example, the following JSP:</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="mvc-csrf-resolver"><a class="anchor" href="#mvc-csrf-resolver"></a>Resolving the CsrfToken</h4>
+<div class="sect2">
+<h3 id="mvc-csrf-resolver"><a class="anchor" href="#mvc-csrf-resolver"></a>Resolving the CsrfToken</h3>
 <div class="paragraph">
 <p>Spring Security provides <code>CsrfTokenArgumentResolver</code> which can automatically resolve the current <code>CsrfToken</code> for Spring MVC arguments.
 By using <a href="#jc-hello-wsca">@EnableWebSecurity</a> you will automatically have this added to your Spring MVC configuration.
@@ -1055,7 +1173,10 @@ This means if you are using <a href="https://developer.mozilla.org/en-US/docs/We
 </div>
 </div>
 </div>
-</div>
+<nav class="pagination">
+  <span class="prev"><a href="localization.html">Localization</a></span>
+  <span class="next"><a href="websocket.html">WebSocket</a></span>
+</nav>
 </article>
   </div>
 </main>
