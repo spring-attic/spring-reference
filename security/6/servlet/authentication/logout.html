@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Spring</title>
+    <title>Handling Logouts :: Spring</title>
+    <link rel="prev" href="runas.html">
+    <link rel="next" href="events.html">
     <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 
@@ -87,40 +89,361 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/community.html">Community</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/authentication/index.html">Authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/authentication/password-storage.html">Password Storage</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+</ul>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/headers.html">HTTP Headers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Servlet Applications</span>
+    <a class="nav-link" href="../index.html">Servlet Applications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="runas.html">Run-As</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authorization/index.html">Authorization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../saml2/index.html">SAML2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/csrf.html">Cross Site Request Forgery (CSRF) for Servlet Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/headers.html">Security HTTP Response Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/http.html">HTTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../integrations/index.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/servlet-api.html">Servlet APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/data.html">Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/concurrency.html">Java&#8217;s Concurrency APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/jackson.html">Jackson</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/localization.html">Localization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/mvc.html">Spring MVC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/websocket.html">WebSocket</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/cors.html">Spring&#8217;s CORS Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/jsp-taglibs.html">JSP Taglib</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../java-configuration/index.html">Java Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../kotlin-configuration/index.html">Kotlin Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../namespace/index.html">Namespace Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../test/index.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../test/method.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../test/mockmvc.html">MockMvc Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../crypto/index.html">Cryptography</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../appendix/index.html">Appendix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/namespace.html">XML Namespace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/index.html">Reactive Applications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/webflux.html">WebFlux Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/headers.html">Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/login.html">OAuth 2.0 Login</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/access-token.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/resource-server.html">OAuth 2.0 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/method.html">EnableReactiveMethodSecurity</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/cors.html">CORS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/test.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/rsocket.html">RSocket</a>
   </li>
 </ul>
   </li>
@@ -144,13 +467,13 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../overview/prerequisites.html">6</a>
+          <a href="../../index.html">6</a>
         </li>
         <li class="version">
-          <a href="../../../5.6/overview/index.html">5.6</a>
+          <a href="../../../5.6/index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -164,6 +487,12 @@
 <button class="nav-toggle"></button>
   <a href="../../../../framework/5.3/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Spring Security</a></li>
+    <li><a href="../index.html">Servlet Applications</a></li>
+    <li>Authentication</li>
+    <li><a href="logout.html">Logout</a></li>
+  </ul>
 </nav>
 <div>
   <input id="search-input" type="text" placeholder="Search docs">
@@ -182,13 +511,12 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
+<h1 class="page">Handling Logouts</h1>
 <div class="sect1">
-<h2 id="jc-logout"><a class="anchor" href="#jc-logout"></a>Handling Logouts</h2>
+<h2 id="logout-java-configuration"><a class="anchor" href="#logout-java-configuration"></a>Logout Java/Kotlin Configuration</h2>
 <div class="sectionbody">
-<div class="sect2">
-<h3 id="logout-java-configuration"><a class="anchor" href="#logout-java-configuration"></a>Logout Java/Kotlin Configuration</h3>
 <div class="paragraph">
-<p>When using the <code>{security-api-url}org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.html[WebSecurityConfigurerAdapter]</code>, logout capabilities are automatically applied.
+<p>When using the <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.html">WebSecurityConfigurerAdapter</a></code>, logout capabilities are automatically applied.
 The default is that accessing the URL <code>/logout</code> will log the user out by:</p>
 </div>
 <div class="ulist">
@@ -260,26 +588,26 @@ This is automatically applied when using <code>WebSecurityConfigurerAdapter</cod
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>The URL that triggers log out to occur (default is <code>/logout</code>).
 If CSRF protection is enabled (default), then the request must also be a POST.
-For more information, please consult the {security-api-url}org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutUrl-java.lang.String-[JavaDoc].</td>
+For more information, please consult the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutUrl-java.lang.String-">JavaDoc</a>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 <td>The URL to redirect to after logout has occurred.
 The default is <code>/login?logout</code>.
-For more information, please consult the {security-api-url}org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutSuccessUrl-java.lang.String-[JavaDoc].</td>
+For more information, please consult the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutSuccessUrl-java.lang.String-">JavaDoc</a>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 <td>Let&#8217;s you specify a custom <code>LogoutSuccessHandler</code>.
 If this is specified, <code>logoutSuccessUrl()</code> is ignored.
-For more information, please consult the {security-api-url}org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutSuccessHandler-org.springframework.security.web.authentication.logout.LogoutSuccessHandler-[JavaDoc].</td>
+For more information, please consult the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutSuccessHandler-org.springframework.security.web.authentication.logout.LogoutSuccessHandler-">JavaDoc</a>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
 <td>Specify whether to invalidate the <code>HttpSession</code> at the time of logout.
 This is <strong>true</strong> by default.
 Configures the <code>SecurityContextLogoutHandler</code> under the covers.
-For more information, please consult the {security-api-url}org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#invalidateHttpSession-boolean-[JavaDoc].</td>
+For more information, please consult the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#invalidateHttpSession-boolean-">JavaDoc</a>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="6"></i><b>6</b></td>
@@ -302,7 +630,7 @@ This is a shortcut for adding a <code>CookieClearingLogoutHandler</code> explici
 <td class="content">
 <div class="paragraph">
 <p>Logouts can of course also be configured using the XML Namespace notation.
-Please see the documentation for the <a href="#nsa-logout">logout element</a> in the Spring Security XML Namespace section for further details.</p>
+Please see the documentation for the <a href="../appendix/namespace.html#nsa-logout" class="page"> logout element</a> in the Spring Security XML Namespace section for further details.</p>
 </div>
 </td>
 </tr>
@@ -310,26 +638,30 @@ Please see the documentation for the <a href="#nsa-logout">logout element</a> in
 </div>
 <div class="paragraph">
 <p>Generally, in order to customize logout functionality, you can add
-<code>{security-api-url}org/springframework/security/web/authentication/logout/LogoutHandler.html[LogoutHandler]</code>
+<code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/LogoutHandler.html">LogoutHandler</a></code>
 and/or
-<code>{security-api-url}org/springframework/security/web/authentication/logout/LogoutSuccessHandler.html[LogoutSuccessHandler]</code>
+<code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/LogoutSuccessHandler.html">LogoutSuccessHandler</a></code>
 implementations.
 For many common scenarios, these handlers are applied under the
 covers when using the fluent API.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="ns-logout"><a class="anchor" href="#ns-logout"></a>Logout XML Configuration</h3>
+</div>
+<div class="sect1">
+<h2 id="ns-logout"><a class="anchor" href="#ns-logout"></a>Logout XML Configuration</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>logout</code> element adds support for logging out by navigating to a particular URL.
 The default logout URL is <code>/logout</code>, but you can set it to something else using the <code>logout-url</code> attribute.
 More information on other available attributes may be found in the namespace appendix.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="jc-logout-handler"><a class="anchor" href="#jc-logout-handler"></a>LogoutHandler</h3>
+</div>
+<div class="sect1">
+<h2 id="jc-logout-handler"><a class="anchor" href="#jc-logout-handler"></a>LogoutHandler</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Generally, <code>{security-api-url}org/springframework/security/web/authentication/logout/LogoutHandler.html[LogoutHandler]</code>
+<p>Generally, <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/LogoutHandler.html">LogoutHandler</a></code>
 implementations indicate classes that are able to participate in logout handling.
 They are expected to be invoked to perform necessary clean-up.
 As such they should
@@ -339,27 +671,27 @@ Various implementations are provided:</p>
 <div class="ulist">
 <ul>
 <li>
-<p>{security-api-url}org/springframework/security/web/authentication/rememberme/PersistentTokenBasedRememberMeServices.html[PersistentTokenBasedRememberMeServices]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/rememberme/PersistentTokenBasedRememberMeServices.html">PersistentTokenBasedRememberMeServices</a></p>
 </li>
 <li>
-<p>{security-api-url}org/springframework/security/web/authentication/rememberme/TokenBasedRememberMeServices.html[TokenBasedRememberMeServices]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/rememberme/TokenBasedRememberMeServices.html">TokenBasedRememberMeServices</a></p>
 </li>
 <li>
-<p>{security-api-url}org/springframework/security/web/authentication/logout/CookieClearingLogoutHandler.html[CookieClearingLogoutHandler]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/CookieClearingLogoutHandler.html">CookieClearingLogoutHandler</a></p>
 </li>
 <li>
-<p>{security-api-url}org/springframework/security/web/csrf/CsrfLogoutHandler.html[CsrfLogoutHandler]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/csrf/CsrfLogoutHandler.html">CsrfLogoutHandler</a></p>
 </li>
 <li>
-<p>{security-api-url}org/springframework/security/web/authentication/logout/SecurityContextLogoutHandler.html[SecurityContextLogoutHandler]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/SecurityContextLogoutHandler.html">SecurityContextLogoutHandler</a></p>
 </li>
 <li>
-<p>{security-api-url}org/springframework/security/web/authentication/logout/HeaderWriterLogoutHandler.html[HeaderWriterLogoutHandler]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/HeaderWriterLogoutHandler.html">HeaderWriterLogoutHandler</a></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Please see <a href="#remember-me-impls">[remember-me-impls]</a> for details.</p>
+<p>Please see <a href="rememberme.html#remember-me-impls" class="page">Remember-Me Interfaces and Implementations</a> for details.</p>
 </div>
 <div class="paragraph">
 <p>Instead of providing <code>LogoutHandler</code> implementations directly, the fluent API also provides shortcuts that provide the respective <code>LogoutHandler</code> implementations under the covers.
@@ -367,8 +699,10 @@ E.g. <code>deleteCookies()</code> allows specifying the names of one or more coo
 This is a shortcut compared to adding a <code>CookieClearingLogoutHandler</code>.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="jc-logout-success-handler"><a class="anchor" href="#jc-logout-success-handler"></a>LogoutSuccessHandler</h3>
+</div>
+<div class="sect1">
+<h2 id="jc-logout-success-handler"><a class="anchor" href="#jc-logout-success-handler"></a>LogoutSuccessHandler</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>The <code>LogoutSuccessHandler</code> is called after a successful logout by the <code>LogoutFilter</code>, to handle e.g.
 redirection or forwarding to the appropriate destination.
@@ -380,7 +714,7 @@ Note that the interface is almost the same as the <code>LogoutHandler</code> but
 <div class="ulist">
 <ul>
 <li>
-<p>{security-api-url}org/springframework/security/web/authentication/logout/SimpleUrlLogoutSuccessHandler.html[SimpleUrlLogoutSuccessHandler]</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/SimpleUrlLogoutSuccessHandler.html">SimpleUrlLogoutSuccessHandler</a></p>
 </li>
 <li>
 <p>HttpStatusReturningLogoutSuccessHandler</p>
@@ -400,36 +734,41 @@ Instead of redirecting to a URL upon the successful logout, this <code>LogoutSuc
 If not configured a status code 200 will be returned by default.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="jc-logout-references"><a class="anchor" href="#jc-logout-references"></a>Further Logout-Related References</h3>
+</div>
+<div class="sect1">
+<h2 id="jc-logout-references"><a class="anchor" href="#jc-logout-references"></a>Further Logout-Related References</h2>
+<div class="sectionbody">
 <div class="ulist">
 <ul>
 <li>
 <p><a href="#ns-logout">Logout Handling</a></p>
 </li>
 <li>
-<p><a href="#test-logout">Testing Logout</a></p>
+<p><a href="../test/mockmvc.html#test-logout" class="page"> Testing Logout</a></p>
 </li>
 <li>
-<p><a href="#servletapi-logout">HttpServletRequest.logout()</a></p>
+<p><a href="../integrations/servlet-api.html#servletapi-logout" class="page"> HttpServletRequest.logout()</a></p>
 </li>
 <li>
-<p><a href="#remember-me-impls">[remember-me-impls]</a></p>
+<p><a href="rememberme.html#remember-me-impls" class="page">Remember-Me Interfaces and Implementations</a></p>
 </li>
 <li>
-<p><a href="#servlet-considerations-csrf-logout">Logging Out</a> in section CSRF Caveats</p>
+<p><a href="../exploits/csrf.html#servlet-considerations-csrf-logout" class="page"> Logging Out</a> in section CSRF Caveats</p>
 </li>
 <li>
-<p>Section <a href="#cas-singlelogout">Single Logout</a> (CAS protocol)</p>
+<p>Section <a href="cas.html#cas-singlelogout" class="page"> Single Logout</a> (CAS protocol)</p>
 </li>
 <li>
-<p>Documentation for the <a href="#nsa-logout">logout element</a> in the Spring Security XML Namespace section</p>
+<p>Documentation for the <a href="../appendix/namespace.html#nsa-logout" class="page"> logout element</a> in the Spring Security XML Namespace section</p>
 </li>
 </ul>
 </div>
 </div>
 </div>
-</div>
+<nav class="pagination">
+  <span class="prev"><a href="runas.html">Run-As</a></span>
+  <span class="next"><a href="events.html">Authentication Events</a></span>
+</nav>
 </article>
   </div>
 </main>

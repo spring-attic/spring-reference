@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Spring</title>
+    <title>WebSocket Security :: Spring</title>
+    <link rel="prev" href="mvc.html">
+    <link rel="next" href="cors.html">
     <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 
@@ -87,40 +89,361 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/community.html">Community</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/authentication/index.html">Authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/authentication/password-storage.html">Password Storage</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+</ul>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/headers.html">HTTP Headers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Servlet Applications</span>
+    <a class="nav-link" href="../index.html">Servlet Applications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authorization/index.html">Authorization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../saml2/index.html">SAML2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/csrf.html">Cross Site Request Forgery (CSRF) for Servlet Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/headers.html">Security HTTP Response Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/http.html">HTTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="servlet-api.html">Servlet APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data.html">Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="concurrency.html">Java&#8217;s Concurrency APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jackson.html">Jackson</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="mvc.html">Spring MVC</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="websocket.html">WebSocket</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cors.html">Spring&#8217;s CORS Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jsp-taglibs.html">JSP Taglib</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../java-configuration/index.html">Java Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../kotlin-configuration/index.html">Kotlin Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../namespace/index.html">Namespace Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../test/index.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../test/method.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../test/mockmvc.html">MockMvc Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../crypto/index.html">Cryptography</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../appendix/index.html">Appendix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/namespace.html">XML Namespace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/index.html">Reactive Applications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/webflux.html">WebFlux Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/headers.html">Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/login.html">OAuth 2.0 Login</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/access-token.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/resource-server.html">OAuth 2.0 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/method.html">EnableReactiveMethodSecurity</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/cors.html">CORS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/test.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/rsocket.html">RSocket</a>
   </li>
 </ul>
   </li>
@@ -144,13 +467,13 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../overview/prerequisites.html">6</a>
+          <a href="../../index.html">6</a>
         </li>
         <li class="version">
-          <a href="../../../5.6/overview/index.html">5.6</a>
+          <a href="../../../5.6/index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -164,6 +487,12 @@
 <button class="nav-toggle"></button>
   <a href="../../../../framework/5.3/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Spring Security</a></li>
+    <li><a href="../index.html">Servlet Applications</a></li>
+    <li><a href="index.html">Integrations</a></li>
+    <li><a href="websocket.html">WebSocket</a></li>
+  </ul>
 </nav>
 <div>
   <input id="search-input" type="text" placeholder="Search docs">
@@ -182,8 +511,8 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<div class="sect1">
-<h2 id="websocket"><a class="anchor" href="#websocket"></a>WebSocket Security</h2>
+<h1 class="page">WebSocket Security</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security 4 added support for securing <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html">Spring&#8217;s WebSocket support</a>.
@@ -199,14 +528,20 @@ Additionally, JSR-356 does not provide a way to intercept messages, so security 
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="websocket-configuration"><a class="anchor" href="#websocket-configuration"></a>WebSocket Configuration</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="websocket-configuration"><a class="anchor" href="#websocket-configuration"></a>WebSocket Configuration</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security 4.0 has introduced authorization support for WebSockets through the Spring Messaging abstraction.
 To configure authorization using Java Configuration, simply extend the <code>AbstractSecurityWebSocketMessageBrokerConfigurer</code> and configure the <code>MessageSecurityMetadataSourceRegistry</code>.
 For example:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
 public class WebSocketSecurityConfig
@@ -217,6 +552,19 @@ public class WebSocketSecurityConfig
                 .simpDestMatchers("/user/**").authenticated() <i class="conum" data-value="3"></i><b>(3)</b>
     }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+open class WebSocketSecurityConfig : AbstractSecurityWebSocketMessageBrokerConfigurer() { <i class="conum" data-value="1"></i><b>(1)</b> <i class="conum" data-value="2"></i><b>(2)</b>
+    override fun configureInbound(messages: MessageSecurityMetadataSourceRegistry) {
+        messages.simpDestMatchers("/user/**").authenticated() <i class="conum" data-value="3"></i><b>(3)</b>
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -239,7 +587,7 @@ public class WebSocketSecurityConfig
 </table>
 </div>
 <div class="paragraph">
-<p>Spring Security also provides <a href="#nsa-websocket-security">XML Namespace</a> support for securing WebSockets.
+<p>Spring Security also provides <a href="../appendix/namespace.html#nsa-websocket-security" class="page">XML Namespace</a> support for securing WebSockets.
 A comparable XML based configuration looks like the following:</p>
 </div>
 <div class="listingblock">
@@ -270,8 +618,10 @@ A comparable XML based configuration looks like the following:</p>
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="websocket-authentication"><a class="anchor" href="#websocket-authentication"></a>WebSocket Authentication</h3>
+</div>
+<div class="sect1">
+<h2 id="websocket-authentication"><a class="anchor" href="#websocket-authentication"></a>WebSocket Authentication</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>WebSockets reuse the same authentication information that is found in the HTTP request when the WebSocket connection was made.
 This means that the <code>Principal</code> on the <code>HttpServletRequest</code> will be handed off to WebSockets.
@@ -281,14 +631,19 @@ If you are using Spring Security, the <code>Principal</code> on the <code>HttpSe
 <p>More concretely, to ensure a user has authenticated to your WebSocket application, all that is necessary is to ensure that you setup Spring Security to authenticate your HTTP based web application.</p>
 </div>
 </div>
-<div class="sect2">
-<h3 id="websocket-authorization"><a class="anchor" href="#websocket-authorization"></a>WebSocket Authorization</h3>
+</div>
+<div class="sect1">
+<h2 id="websocket-authorization"><a class="anchor" href="#websocket-authorization"></a>WebSocket Authorization</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security 4.0 has introduced authorization support for WebSockets through the Spring Messaging abstraction.
 To configure authorization using Java Configuration, simply extend the <code>AbstractSecurityWebSocketMessageBrokerConfigurer</code> and configure the <code>MessageSecurityMetadataSourceRegistry</code>.
 For example:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
 public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBrokerConfigurer {
@@ -305,6 +660,25 @@ public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBro
 
     }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+open class WebSocketSecurityConfig : AbstractSecurityWebSocketMessageBrokerConfigurer() {
+    override fun configureInbound(messages: MessageSecurityMetadataSourceRegistry) {
+        messages
+            .nullDestMatcher().authenticated() <i class="conum" data-value="1"></i><b>(1)</b>
+            .simpSubscribeDestMatchers("/user/queue/errors").permitAll() <i class="conum" data-value="2"></i><b>(2)</b>
+            .simpDestMatchers("/app/**").hasRole("USER") <i class="conum" data-value="3"></i><b>(3)</b>
+            .simpSubscribeDestMatchers("/user/**", "/topic/friends/*").hasRole("USER") <i class="conum" data-value="4"></i><b>(4)</b>
+            .simpTypeMatchers(MESSAGE, SUBSCRIBE).denyAll() <i class="conum" data-value="5"></i><b>(5)</b>
+            .anyMessage().denyAll() <i class="conum" data-value="6"></i><b>(6)</b>
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -339,7 +713,7 @@ public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBro
 </table>
 </div>
 <div class="paragraph">
-<p>Spring Security also provides <a href="#nsa-websocket-security">XML Namespace</a> support for securing WebSockets.
+<p>Spring Security also provides <a href="../appendix/namespace.html#nsa-websocket-security" class="page">XML Namespace</a> support for securing WebSockets.
 A comparable XML based configuration looks like the following:</p>
 </div>
 <div class="listingblock">
@@ -396,13 +770,13 @@ A comparable XML based configuration looks like the following:</p>
 </tr>
 </table>
 </div>
-<div class="sect3">
-<h4 id="websocket-authorization-notes"><a class="anchor" href="#websocket-authorization-notes"></a>WebSocket Authorization Notes</h4>
+<div class="sect2">
+<h3 id="websocket-authorization-notes"><a class="anchor" href="#websocket-authorization-notes"></a>WebSocket Authorization Notes</h3>
 <div class="paragraph">
 <p>In order to properly secure your application it is important to understand Spring&#8217;s WebSocket support.</p>
 </div>
-<div class="sect4">
-<h5 id="websocket-authorization-notes-messagetypes"><a class="anchor" href="#websocket-authorization-notes-messagetypes"></a>WebSocket Authorization on Message Types</h5>
+<div class="sect3">
+<h4 id="websocket-authorization-notes-messagetypes"><a class="anchor" href="#websocket-authorization-notes-messagetypes"></a>WebSocket Authorization on Message Types</h4>
 <div class="paragraph">
 <p>It is important to understand the distinction between SUBSCRIBE and MESSAGE types of messages and how it works within Spring.</p>
 </div>
@@ -427,8 +801,8 @@ If we allowed sending a MESSAGE to "/topic/system/notifications", then clients c
 <p>In general, it is common for applications to deny any MESSAGE sent to a destination that starts with the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-stomp">broker prefix</a> (i.e. "/topic/" or "/queue/").</p>
 </div>
 </div>
-<div class="sect4">
-<h5 id="websocket-authorization-notes-destinations"><a class="anchor" href="#websocket-authorization-notes-destinations"></a>WebSocket Authorization on Destinations</h5>
+<div class="sect3">
+<h4 id="websocket-authorization-notes-destinations"><a class="anchor" href="#websocket-authorization-notes-destinations"></a>WebSocket Authorization on Destinations</h4>
 <div class="paragraph">
 <p>It is also is important to understand how destinations are transformed.</p>
 </div>
@@ -461,8 +835,8 @@ Of course we may provide exceptions to account for things like</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="websocket-authorization-notes-outbound"><a class="anchor" href="#websocket-authorization-notes-outbound"></a>Outbound Messages</h4>
+<div class="sect2">
+<h3 id="websocket-authorization-notes-outbound"><a class="anchor" href="#websocket-authorization-notes-outbound"></a>Outbound Messages</h3>
 <div class="paragraph">
 <p>Spring contains a section titled <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-stomp-message-flow">Flow of Messages</a> that describes how messages flow through the system.
 It is important to note that Spring Security only secures the <code>clientInboundChannel</code>.
@@ -475,14 +849,16 @@ Instead of securing the outbound messages, we encourage securing the subscriptio
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="websocket-sameorigin"><a class="anchor" href="#websocket-sameorigin"></a>Enforcing Same Origin Policy</h3>
+</div>
+<div class="sect1">
+<h2 id="websocket-sameorigin"><a class="anchor" href="#websocket-sameorigin"></a>Enforcing Same Origin Policy</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>It is important to emphasize that the browser does not enforce the <a href="https://en.wikipedia.org/wiki/Same-origin_policy">Same Origin Policy</a> for WebSocket connections.
 This is an extremely important consideration.</p>
 </div>
-<div class="sect3">
-<h4 id="websocket-sameorigin-why"><a class="anchor" href="#websocket-sameorigin-why"></a>Why Same Origin?</h4>
+<div class="sect2">
+<h3 id="websocket-sameorigin-why"><a class="anchor" href="#websocket-sameorigin-why"></a>Why Same Origin?</h3>
 <div class="paragraph">
 <p>Consider the following scenario.
 A user visits bank.com and authenticates to their account.
@@ -499,17 +875,17 @@ This means that anything the user can do over the webSocket (i.e. transfer money
 This means developers need to explicitly protect their applications from external domains when using SockJS.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="websocket-sameorigin-spring"><a class="anchor" href="#websocket-sameorigin-spring"></a>Spring WebSocket Allowed Origin</h4>
+<div class="sect2">
+<h3 id="websocket-sameorigin-spring"><a class="anchor" href="#websocket-sameorigin-spring"></a>Spring WebSocket Allowed Origin</h3>
 <div class="paragraph">
 <p>Fortunately, since Spring 4.1.5 Spring&#8217;s WebSocket and SockJS support restricts access to the <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-server-allowed-origins">current domain</a>.
-Spring Security adds an additional layer of protection to provide <a href="https://en.wikipedia.org/wiki/Defense_in_depth_%2528computing%2529">defence in depth</a>.</p>
+Spring Security adds an additional layer of protection to provide <a href="https://en.wikipedia.org/wiki/Defense_in_depth_(computing)">defence in depth</a>.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="websocket-sameorigin-csrf"><a class="anchor" href="#websocket-sameorigin-csrf"></a>Adding CSRF to Stomp Headers</h4>
+<div class="sect2">
+<h3 id="websocket-sameorigin-csrf"><a class="anchor" href="#websocket-sameorigin-csrf"></a>Adding CSRF to Stomp Headers</h3>
 <div class="paragraph">
-<p>By default Spring Security requires the <a href="#csrf">CSRF token</a> in any CONNECT message type.
+<p>By default Spring Security requires the <a href="../../features/exploits/csrf.html#csrf" class="page">CSRF token</a> in any CONNECT message type.
 This ensures that only a site that has access to the CSRF token can connect.
 Since only the <strong>Same Origin</strong> can access the CSRF token, external domains are not allowed to make a connection.</p>
 </div>
@@ -519,7 +895,7 @@ However, SockJS does not allow for these options.
 Instead, we must include the token in the Stomp headers</p>
 </div>
 <div class="paragraph">
-<p>Applications can <a href="#servlet-csrf-include">obtain a CSRF token</a> by accessing the request attribute named _csrf.
+<p>Applications can <a href="../exploits/csrf.html#servlet-csrf-include" class="page">obtain a CSRF token</a> by accessing the request attribute named _csrf.
 For example, the following will allow accessing the <code>CsrfToken</code> in a JSP:</p>
 </div>
 <div class="listingblock">
@@ -532,7 +908,10 @@ var token = "${_csrf.token}";</code></pre>
 <p>If you are using static HTML, you can expose the <code>CsrfToken</code> on a REST endpoint.
 For example, the following would expose the <code>CsrfToken</code> on the URL /csrf</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestController
 public class CsrfController {
@@ -542,6 +921,20 @@ public class CsrfController {
         return token;
     }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RestController
+class CsrfController {
+    @RequestMapping("/csrf")
+    fun csrf(token: CsrfToken): CsrfToken {
+        return token
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -563,13 +956,16 @@ stompClient.connect(headers, function(frame) {
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="websocket-sameorigin-disable"><a class="anchor" href="#websocket-sameorigin-disable"></a>Disable CSRF within WebSockets</h4>
+<div class="sect2">
+<h3 id="websocket-sameorigin-disable"><a class="anchor" href="#websocket-sameorigin-disable"></a>Disable CSRF within WebSockets</h3>
 <div class="paragraph">
 <p>If you want to allow other domains to access your site, you can disable Spring Security&#8217;s protection.
 For example, in Java Configuration you can use the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
 public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBrokerConfigurer {
@@ -583,23 +979,41 @@ public class WebSocketSecurityConfig extends AbstractSecurityWebSocketMessageBro
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+open class WebSocketSecurityConfig : AbstractSecurityWebSocketMessageBrokerConfigurer() {
+
+    // ...
+
+    override fun sameOriginDisabled(): Boolean {
+        return true
+    }
+}</code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="websocket-sockjs"><a class="anchor" href="#websocket-sockjs"></a>Working with SockJS</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="websocket-sockjs"><a class="anchor" href="#websocket-sockjs"></a>Working with SockJS</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/websocket.html#websocket-fallback">SockJS</a> provides fallback transports to support older browsers.
 When using the fallback options we need to relax a few security constraints to allow SockJS to work with Spring Security.</p>
 </div>
-<div class="sect3">
-<h4 id="websocket-sockjs-sameorigin"><a class="anchor" href="#websocket-sockjs-sameorigin"></a>SockJS &amp; frame-options</h4>
+<div class="sect2">
+<h3 id="websocket-sockjs-sameorigin"><a class="anchor" href="#websocket-sockjs-sameorigin"></a>SockJS &amp; frame-options</h3>
 <div class="paragraph">
 <p>SockJS may use an <a href="https://github.com/sockjs/sockjs-client/tree/v0.3.4">transport that leverages an iframe</a>.
-By default Spring Security will <a href="#headers-frame-options">deny</a> the site from being framed to prevent Clickjacking attacks.
+By default Spring Security will <a href="../../features/exploits/headers.html#headers-frame-options" class="page">deny</a> the site from being framed to prevent Clickjacking attacks.
 To allow SockJS frame based transports to work, we need to configure Spring Security to allow the same origin to frame the content.</p>
 </div>
 <div class="paragraph">
-<p>You can customize X-Frame-Options with the <a href="#nsa-frame-options">frame-options</a> element.
+<p>You can customize X-Frame-Options with the <a href="../appendix/namespace.html#nsa-frame-options" class="page">frame-options</a> element.
 For example, the following will instruct Spring Security to use "X-Frame-Options: SAMEORIGIN" which allows iframes within the same domain:</p>
 </div>
 <div class="listingblock">
@@ -617,7 +1031,10 @@ For example, the following will instruct Spring Security to use "X-Frame-Options
 <div class="paragraph">
 <p>Similarly, you can customize frame options to use the same origin within Java Configuration using the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
 public class WebSecurityConfig extends
@@ -636,9 +1053,29 @@ public class WebSecurityConfig extends
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableWebSecurity
+open class WebSecurityConfig : WebSecurityConfigurerAdapter() {
+    override fun configure(http: HttpSecurity) {
+        http {
+            // ...
+            headers {
+                frameOptions {
+                    sameOrigin = true
+                }
+            }
+        }
+    }
+}</code></pre>
 </div>
-<div class="sect3">
-<h4 id="websocket-sockjs-csrf"><a class="anchor" href="#websocket-sockjs-csrf"></a>SockJS &amp; Relaxing CSRF</h4>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="websocket-sockjs-csrf"><a class="anchor" href="#websocket-sockjs-csrf"></a>SockJS &amp; Relaxing CSRF</h3>
 <div class="paragraph">
 <p>SockJS uses a POST on the CONNECT messages for any HTTP based transport.
 Typically we need to include the CSRF token in an HTTP header or an HTTP parameter.
@@ -656,7 +1093,10 @@ Otherwise our site will be vulnerable to CSRF attacks.</p>
 Our Java Configuration makes this extremely easy.
 For example, if our stomp endpoint is "/chat" we can disable CSRF protection for only URLs that start with "/chat/" using the following configuration:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
 @EnableWebSecurity
@@ -682,8 +1122,32 @@ public class WebSecurityConfig
             ...</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Configuration
+@EnableWebSecurity
+open class WebSecurityConfig : WebSecurityConfigurerAdapter() {
+    override fun configure(http: HttpSecurity) {
+        http {
+            csrf {
+                ignoringAntMatchers("/chat/**")
+            }
+            headers {
+                frameOptions {
+                    sameOrigin = true
+                }
+            }
+            authorizeRequests {
+                // ...
+            }
+            // ...</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
-<p>If we are using XML based configuration, we can use the <a href="#nsa-csrf-request-matcher-ref">csrf@request-matcher-ref</a>.
+<p>If we are using XML based configuration, we can use the <a href="../appendix/namespace.html#nsa-csrf-request-matcher-ref" class="page">csrf@request-matcher-ref</a>.
 For example:</p>
 </div>
 <div class="listingblock">
@@ -714,7 +1178,10 @@ For example:</p>
 </div>
 </div>
 </div>
-</div>
+<nav class="pagination">
+  <span class="prev"><a href="mvc.html">Spring MVC</a></span>
+  <span class="next"><a href="cors.html">Spring&#8217;s CORS Support</a></span>
+</nav>
 </article>
   </div>
 </main>

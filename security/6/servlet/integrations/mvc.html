@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Spring</title>
+    <title>Spring MVC Integration :: Spring</title>
+    <link rel="prev" href="localization.html">
+    <link rel="next" href="websocket.html">
     <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 
@@ -87,40 +89,361 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/community.html">Community</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/authentication/index.html">Authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/authentication/password-storage.html">Password Storage</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+</ul>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/headers.html">HTTP Headers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Servlet Applications</span>
+    <a class="nav-link" href="../index.html">Servlet Applications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authorization/index.html">Authorization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../saml2/index.html">SAML2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/csrf.html">Cross Site Request Forgery (CSRF) for Servlet Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/headers.html">Security HTTP Response Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/http.html">HTTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="servlet-api.html">Servlet APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="data.html">Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="concurrency.html">Java&#8217;s Concurrency APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jackson.html">Jackson</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="localization.html">Localization</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="mvc.html">Spring MVC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="websocket.html">WebSocket</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="cors.html">Spring&#8217;s CORS Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="jsp-taglibs.html">JSP Taglib</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../java-configuration/index.html">Java Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../kotlin-configuration/index.html">Kotlin Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../namespace/index.html">Namespace Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../test/index.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../test/method.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../test/mockmvc.html">MockMvc Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../crypto/index.html">Cryptography</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../appendix/index.html">Appendix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/namespace.html">XML Namespace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../appendix/faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/index.html">Reactive Applications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/webflux.html">WebFlux Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/headers.html">Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/login.html">OAuth 2.0 Login</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/access-token.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/resource-server.html">OAuth 2.0 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/method.html">EnableReactiveMethodSecurity</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/cors.html">CORS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/test.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/rsocket.html">RSocket</a>
   </li>
 </ul>
   </li>
@@ -144,13 +467,13 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../overview/prerequisites.html">6</a>
+          <a href="../../index.html">6</a>
         </li>
         <li class="version">
-          <a href="../../../5.6/overview/index.html">5.6</a>
+          <a href="../../../5.6/index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -164,6 +487,12 @@
 <button class="nav-toggle"></button>
   <a href="../../../../framework/5.3/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Spring Security</a></li>
+    <li><a href="../index.html">Servlet Applications</a></li>
+    <li><a href="index.html">Integrations</a></li>
+    <li><a href="mvc.html">Spring MVC</a></li>
+  </ul>
 </nav>
 <div>
   <input id="search-input" type="text" placeholder="Search docs">
@@ -182,15 +511,18 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<div class="sect1">
-<h2 id="mvc"><a class="anchor" href="#mvc"></a>Spring MVC Integration</h2>
+<h1 class="page">Spring MVC Integration</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security provides a number of optional integrations with Spring MVC.
 This section covers the integration in further detail.</p>
 </div>
-<div class="sect2">
-<h3 id="mvc-enablewebmvcsecurity"><a class="anchor" href="#mvc-enablewebmvcsecurity"></a>@EnableWebMvcSecurity</h3>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mvc-enablewebmvcsecurity"><a class="anchor" href="#mvc-enablewebmvcsecurity"></a>@EnableWebMvcSecurity</h2>
+<div class="sectionbody">
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -221,8 +553,10 @@ This means that if you are using more advanced options, like integrating with <c
 </table>
 </div>
 </div>
-<div class="sect2">
-<h3 id="mvc-requestmatcher"><a class="anchor" href="#mvc-requestmatcher"></a>MvcRequestMatcher</h3>
+</div>
+<div class="sect1">
+<h2 id="mvc-requestmatcher"><a class="anchor" href="#mvc-requestmatcher"></a>MvcRequestMatcher</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security provides deep integration with how Spring MVC matches on URLs with <code>MvcRequestMatcher</code>.
 This is helpful to ensure your Security rules match the logic used to handle your requests.</p>
@@ -265,7 +599,10 @@ This is necessary because Spring Security&#8217;s <code>MvcRequestMatcher</code>
 <div class="paragraph">
 <p>Below <code>WebSecurityConfiguration</code> in placed in the <code>DispatcherServlet</code>s <code>ApplicationContext</code>.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SecurityInitializer extends
     AbstractAnnotationConfigDispatcherServletInitializer {
@@ -286,6 +623,29 @@ This is necessary because Spring Security&#8217;s <code>MvcRequestMatcher</code>
     return new String[] { "/" };
   }
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class SecurityInitializer : AbstractAnnotationConfigDispatcherServletInitializer() {
+    override fun getRootConfigClasses(): Array&lt;Class&lt;*&gt;&gt;? {
+        return null
+    }
+
+    override fun getServletConfigClasses(): Array&lt;Class&lt;*&gt;&gt; {
+        return arrayOf(
+            RootConfiguration::class.java,
+            WebMvcConfiguration::class.java
+        )
+    }
+
+    override fun getServletMappings(): Array&lt;String&gt; {
+        return arrayOf("/")
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -310,16 +670,31 @@ This is what is known as <a href="https://en.wikipedia.org/wiki/Defense_in_depth
 <div class="paragraph">
 <p>Consider a controller that is mapped as follows:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/admin")
 public String admin() {</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping("/admin")
+fun admin(): String {</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>If we wanted to restrict access to this controller method to admin users, a developer can provide authorization rules by matching on the <code>HttpServletRequest</code> with the following:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected configure(HttpSecurity http) throws Exception {
 	http
@@ -327,6 +702,20 @@ public String admin() {</code></pre>
 			.antMatchers("/admin").hasRole("ADMIN")
 		);
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">override fun configure(http: HttpSecurity) {
+    http {
+        authorizeRequests {
+            authorize(AntPathRequestMatcher("/admin"), hasRole("ADMIN"))
+        }
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -352,7 +741,10 @@ We could add additional rules for all the permutations of Spring MVC, but this w
 <p>Instead, we can leverage Spring Security&#8217;s <code>MvcRequestMatcher</code>.
 The following configuration will protect the same URLs that Spring MVC will match on by using Spring MVC to match on the URL.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected configure(HttpSecurity http) throws Exception {
 	http
@@ -360,6 +752,20 @@ The following configuration will protect the same URLs that Spring MVC will matc
 			.mvcMatchers("/admin").hasRole("ADMIN")
 		);
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">override fun configure(http: HttpSecurity) {
+    http {
+        authorizeRequests {
+            authorize("/admin", hasRole("ADMIN"))
+        }
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -373,8 +779,10 @@ The following configuration will protect the same URLs that Spring MVC will matc
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="mvc-authentication-principal"><a class="anchor" href="#mvc-authentication-principal"></a>@AuthenticationPrincipal</h3>
+</div>
+<div class="sect1">
+<h2 id="mvc-authentication-principal"><a class="anchor" href="#mvc-authentication-principal"></a>@AuthenticationPrincipal</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security provides <code>AuthenticationPrincipalArgumentResolver</code> which can automatically resolve the current <code>Authentication.getPrincipal()</code> for Spring MVC arguments.
 By using <code>@EnableWebSecurity</code> you will automatically have this added to your Spring MVC configuration.
@@ -396,7 +804,10 @@ For example:</p>
 <div class="paragraph">
 <p>Consider a situation where a custom <code>UserDetailsService</code> that returns an <code>Object</code> that implements <code>UserDetails</code> and your own <code>CustomUser</code> <code>Object</code>. The <code>CustomUser</code> of the currently authenticated user could be accessed using the following code:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/messages/inbox")
 public ModelAndView findMessagesForUser() {
@@ -408,10 +819,27 @@ public ModelAndView findMessagesForUser() {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping("/messages/inbox")
+open fun findMessagesForUser(): ModelAndView {
+    val authentication: Authentication = SecurityContextHolder.getContext().authentication
+    val custom: CustomUser? = if (authentication as CustomUser == null) null else authentication.principal
+
+    // .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>As of Spring Security 3.2 we can resolve the argument more directly by adding an annotation. For example:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
@@ -424,13 +852,28 @@ public ModelAndView findMessagesForUser(@AuthenticationPrincipal CustomUser cust
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping("/messages/inbox")
+open fun findMessagesForUser(@AuthenticationPrincipal customUser: CustomUser?): ModelAndView {
+
+    // .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Sometimes it may be necessary to transform the principal in some way.
 For example, if <code>CustomUser</code> needed to be final it could not be extended.
 In this situation the <code>UserDetailsService</code> might returns an <code>Object</code> that implements <code>UserDetails</code> and provides a method named <code>getCustomUser</code> to access <code>CustomUser</code>.
 For example, it might look like:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class CustomUserUserDetails extends User {
 		// ...
@@ -440,10 +883,28 @@ For example, it might look like:</p>
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">class CustomUserUserDetails(
+    username: String?,
+    password: String?,
+    authorities: MutableCollection&lt;out GrantedAuthority&gt;?
+) : User(username, password, authorities) {
+    // ...
+    val customUser: CustomUser? = null
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>We could then access the <code>CustomUser</code> using a <a href="https://docs.spring.io/spring/docs/current/spring-framework-reference/html/expressions.html">SpEL expression</a> that uses <code>Authentication.getPrincipal()</code> as the root object:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
@@ -456,11 +917,30 @@ public ModelAndView findMessagesForUser(@AuthenticationPrincipal(expression = "c
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.security.core.annotation.AuthenticationPrincipal
+
+// ...
+
+@RequestMapping("/messages/inbox")
+open fun findMessagesForUser(@AuthenticationPrincipal(expression = "customUser") customUser: CustomUser?): ModelAndView {
+
+    // .. find messages for this user and return them ...
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>We can also refer to Beans in our SpEL expressions.
 For example, the following could be used if we were using JPA to manage our Users and we wanted to modify and save a property on the current user.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.core.annotation.AuthenticationPrincipal;
 
@@ -475,6 +955,28 @@ public ModelAndView updateName(@AuthenticationPrincipal(expression = "@jpaEntity
 
 	// ...
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">import org.springframework.security.core.annotation.AuthenticationPrincipal
+
+// ...
+
+@PutMapping("/users/self")
+open fun updateName(
+    @AuthenticationPrincipal(expression = "@jpaEntityManager.merge(#this)") attachedCustomUser: CustomUser,
+    @RequestParam firstName: String?
+): ModelAndView {
+
+    // change the firstName on an attached instance which will be persisted to the database
+    attachedCustomUser.setFirstName(firstName)
+
+    // ...
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -494,7 +996,10 @@ This step is not strictly required, but assists in isolating your dependency to 
 </tr>
 </table>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Target({ElementType.PARAMETER, ElementType.TYPE})
 @Retention(RetentionPolicy.RUNTIME)
@@ -503,11 +1008,26 @@ This step is not strictly required, but assists in isolating your dependency to 
 public @interface CurrentUser {}</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Target(AnnotationTarget.VALUE_PARAMETER, AnnotationTarget.TYPE)
+@Retention(AnnotationRetention.RUNTIME)
+@MustBeDocumented
+@AuthenticationPrincipal
+annotation class CurrentUser</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>Now that <code>@CurrentUser</code> has been specified, we can use it to signal to resolve our <code>CustomUser</code> of the currently authenticated user.
 We have also isolated our dependency on Spring Security to a single file.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping("/messages/inbox")
 public ModelAndView findMessagesForUser(@CurrentUser CustomUser customUser) {
@@ -516,15 +1036,32 @@ public ModelAndView findMessagesForUser(@CurrentUser CustomUser customUser) {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping("/messages/inbox")
+open fun findMessagesForUser(@CurrentUser customUser: CustomUser?): ModelAndView {
+
+    // .. find messages for this user and return them ...
+}</code></pre>
 </div>
-<div class="sect2">
-<h3 id="mvc-async"><a class="anchor" href="#mvc-async"></a>Spring MVC Async Integration</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="mvc-async"><a class="anchor" href="#mvc-async"></a>Spring MVC Async Integration</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Spring Web MVC 3.2+ has excellent support for <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-ann-async">Asynchronous Request Processing</a>.
 With no additional configuration, Spring Security will automatically setup the <code>SecurityContext</code> to the <code>Thread</code> that invokes a <code>Callable</code> returned by your controllers.
 For example, the following method will automatically have its <code>Callable</code> invoked with the <code>SecurityContext</code> that was available when the <code>Callable</code> was created:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RequestMapping(method=RequestMethod.POST)
 public Callable&lt;String&gt; processUpload(final MultipartFile file) {
@@ -536,6 +1073,20 @@ return new Callable&lt;String&gt;() {
 	}
 };
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RequestMapping(method = [RequestMethod.POST])
+open fun processUpload(file: MultipartFile?): Callable&lt;String&gt; {
+    return Callable {
+        // ...
+        "someView"
+    }
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -557,15 +1108,17 @@ The <code>SecurityContext</code> that is used to process the <code>Callable</cod
 <div class="paragraph">
 <p>There is no automatic integration with a <code>DeferredResult</code> that is returned by controllers.
 This is because <code>DeferredResult</code> is processed by the users and thus there is no way of automatically integrating with it.
-However, you can still use <a href="#concurrency">Concurrency Support</a> to provide transparent integration with Spring Security.</p>
+However, you can still use <a href="concurrency.html#concurrency" class="page">Concurrency Support</a> to provide transparent integration with Spring Security.</p>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="mvc-csrf"><a class="anchor" href="#mvc-csrf"></a>Spring MVC and CSRF Integration</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="mvc-csrf"><a class="anchor" href="#mvc-csrf"></a>Spring MVC and CSRF Integration</h3>
-<div class="sect3">
-<h4 id="_automatic_token_inclusion"><a class="anchor" href="#_automatic_token_inclusion"></a>Automatic Token Inclusion</h4>
+<h3 id="automatic-token-inclusion"><a class="anchor" href="#automatic-token-inclusion"></a>Automatic Token Inclusion</h3>
 <div class="paragraph">
-<p>Spring Security will automatically <a href="#servlet-csrf-include">include the CSRF Token</a> within forms that use the <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html#view-jsp-formtaglib-formtag">Spring MVC form tag</a>.
+<p>Spring Security will automatically <a href="../exploits/csrf.html#servlet-csrf-include" class="page">include the CSRF Token</a> within forms that use the <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/view.html#view-jsp-formtaglib-formtag">Spring MVC form tag</a>.
 For example, the following JSP:</p>
 </div>
 <div class="listingblock">
@@ -608,17 +1161,20 @@ For example, the following JSP:</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="mvc-csrf-resolver"><a class="anchor" href="#mvc-csrf-resolver"></a>Resolving the CsrfToken</h4>
+<div class="sect2">
+<h3 id="mvc-csrf-resolver"><a class="anchor" href="#mvc-csrf-resolver"></a>Resolving the CsrfToken</h3>
 <div class="paragraph">
 <p>Spring Security provides <code>CsrfTokenArgumentResolver</code> which can automatically resolve the current <code>CsrfToken</code> for Spring MVC arguments.
-By using <a href="#jc-hello-wsca">@EnableWebSecurity</a> you will automatically have this added to your Spring MVC configuration.
+By using <a href="../java-configuration/index.html#jc-hello-wsca" class="page">@EnableWebSecurity</a> you will automatically have this added to your Spring MVC configuration.
 If you use XML based configuration, you must add this yourself.</p>
 </div>
 <div class="paragraph">
 <p>Once <code>CsrfTokenArgumentResolver</code> is properly configured, you can expose the <code>CsrfToken</code> to your static HTML based application.</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@RestController
 public class CsrfController {
@@ -630,6 +1186,20 @@ public class CsrfController {
 }</code></pre>
 </div>
 </div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@RestController
+class CsrfController {
+    @RequestMapping("/csrf")
+    fun csrf(token: CsrfToken): CsrfToken {
+        return token
+    }
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>It is important to keep the <code>CsrfToken</code> a secret from other domains.
 This means if you are using <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Access_control_CORS">Cross Origin Sharing (CORS)</a>, you should <strong>NOT</strong> expose the <code>CsrfToken</code> to any external domains.</p>
@@ -637,7 +1207,10 @@ This means if you are using <a href="https://developer.mozilla.org/en-US/docs/We
 </div>
 </div>
 </div>
-</div>
+<nav class="pagination">
+  <span class="prev"><a href="localization.html">Localization</a></span>
+  <span class="next"><a href="websocket.html">WebSocket</a></span>
+</nav>
 </article>
   </div>
 </main>

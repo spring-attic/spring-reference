@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Untitled :: Spring</title>
+    <title>The Security Namespace :: Spring</title>
+    <link rel="prev" href="database-schema.html">
+    <link rel="next" href="faq.html">
     <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 
@@ -87,40 +89,361 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../overview/prerequisites.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/prerequisites.html">Prerequisites</a>
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Overview</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../prerequisites.html">Prerequisites</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/community.html">Community</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../community.html">Community</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/whats-new.html">What&#8217;s New</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../whats-new.html">What&#8217;s New</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/getting-spring-security.html">Getting Spring Security</a>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../getting-spring-security.html">Getting Spring Security</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/features.html">Features</a>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/index.html">Features</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/authentication/index.html">Authentication</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/authentication/password-storage.html">Password Storage</a>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/modules.html">Project Modules &amp; Dependencies</a>
+</ul>
   </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../../overview/samples.html">Samples</a>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/headers.html">HTTP Headers</a>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <a class="nav-link" href="../../features/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../modules.html">Project Modules &amp; Dependencies</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../samples.html">Samples</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Servlet Applications</span>
+    <a class="nav-link" href="../index.html">Servlet Applications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">Servet Security: The Big Picture</a>
+    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authentication/unpwd/index.html">Username/Password</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Reading Username/Password</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/form.html">Form</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/basic.html">Basic</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/digest.html">Digest</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Password Storage</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/in-memory.html">In Memory</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details.html">UserDetails</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/user-details-service.html">UserDetailsService</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+  </li>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="../authentication/unpwd/ldap.html">LDAP</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/session-management.html">Session Management</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/rememberme.html">Remember Me</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/openid.html">OpenID</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/anonymous.html">Anonymous</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/preauth.html">Pre-Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/jaas.html">JAAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/cas.html">CAS</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/x509.html">X509</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/runas.html">Run-As</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/logout.html">Logout</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/events.html">Authentication Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../authorization/index.html">Authorization</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/architecture.html">Authorization Architecture</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/authorize-requests.html">Authorize HTTP Requests</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/expression-based.html">Expression-Based Access Control</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/secure-objects.html">Secure Object Implementations</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/method-security.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authorization/acls.html">Domain Object Security ACLs</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-login.html">OAuth2 Log In</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-client.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../oauth2/oauth2-resourceserver.html">OAuth2 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../saml2/index.html">SAML2</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/csrf.html">Cross Site Request Forgery (CSRF) for Servlet Environments</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/headers.html">Security HTTP Response Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/http.html">HTTP</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../integrations/index.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/servlet-api.html">Servlet APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/data.html">Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/concurrency.html">Java&#8217;s Concurrency APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/jackson.html">Jackson</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/localization.html">Localization</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/mvc.html">Spring MVC</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/websocket.html">WebSocket</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/cors.html">Spring&#8217;s CORS Support</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/jsp-taglibs.html">JSP Taglib</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Configuration</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../java-configuration/index.html">Java Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../kotlin-configuration/index.html">Kotlin Configuration</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../namespace/index.html">Namespace Configuration</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../test/index.html">Testing</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../test/method.html">Method Security</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../test/mockmvc.html">MockMvc Support</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../crypto/index.html">Cryptography</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="index.html">Appendix</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="database-schema.html">Database Schemas</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="namespace.html">XML Namespace</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="faq.html">FAQ</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/index.html">Reactive Applications</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/webflux.html">WebFlux Security</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/headers.html">Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/login.html">OAuth 2.0 Login</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/access-token.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/resource-server.html">OAuth 2.0 Resource Server</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/method.html">EnableReactiveMethodSecurity</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/cors.html">CORS</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/test.html">Testing</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/rsocket.html">RSocket</a>
   </li>
 </ul>
   </li>
@@ -144,13 +467,13 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="../../overview/prerequisites.html">Spring Security</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../overview/prerequisites.html">6</a>
+          <a href="../../index.html">6</a>
         </li>
         <li class="version">
-          <a href="../../../5.6/overview/index.html">5.6</a>
+          <a href="../../../5.6/index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -164,6 +487,12 @@
 <button class="nav-toggle"></button>
   <a href="../../../../framework/5.3/index.html" class="home-link"></a>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../../index.html">Spring Security</a></li>
+    <li><a href="../index.html">Servlet Applications</a></li>
+    <li><a href="index.html">Appendix</a></li>
+    <li><a href="namespace.html">XML Namespace</a></li>
+  </ul>
 </nav>
 <div>
   <input id="search-input" type="text" placeholder="Search docs">
@@ -182,47 +511,48 @@
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<div class="sect1">
-<h2 id="appendix-namespace"><a class="anchor" href="#appendix-namespace"></a>The Security Namespace</h2>
+<h1 class="page">The Security Namespace</h1>
+<div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This appendix provides a reference to the elements available in the security namespace and information on the underlying beans they create (a knowledge of the individual classes and how they work together is assumed - you can find more information in the project Javadoc and elsewhere in this document).
-If you haven&#8217;t used the namespace before, please read the <a href="#ns-config">introductory chapter</a> on namespace configuration, as this is intended as a supplement to the information there.
-Using a good quality XML editor while editing a configuration based on the schema is recommended as this will provide contextual information on which elements and attributes are available as well as comments explaining their purpose.
+<p>Using a good quality XML editor while editing a configuration based on the schema is recommended as this will provide contextual information on which elements and attributes are available as well as comments explaining their purpose.
 The namespace is written in <a href="https://relaxng.org/">RELAX NG</a> Compact format and later converted into an XSD schema.
 If you are familiar with this format, you may wish to examine the <a href="https://raw.githubusercontent.com/spring-projects/spring-security/main/config/src/main/resources/org/springframework/security/config/spring-security-4.1.rnc">schema file</a> directly.</p>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="nsa-web"><a class="anchor" href="#nsa-web"></a>Web Application Security</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="nsa-web"><a class="anchor" href="#nsa-web"></a>Web Application Security</h3>
-<div class="sect3">
-<h4 id="nsa-debug"><a class="anchor" href="#nsa-debug"></a>&lt;debug&gt;</h4>
+<h3 id="nsa-debug"><a class="anchor" href="#nsa-debug"></a>&lt;debug&gt;</h3>
 <div class="paragraph">
 <p>Enables Spring Security debugging infrastructure.
 This will provide human-readable (multi-line) debugging information to monitor requests coming into the security filters.
 This may include sensitive information, such as request parameters or headers, and should only be used in a development environment.</p>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-http"><a class="anchor" href="#nsa-http"></a>&lt;http&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-http"><a class="anchor" href="#nsa-http"></a>&lt;http&gt;</h3>
 <div class="paragraph">
 <p>If you use an <code>&lt;http&gt;</code> element within your application, a <code>FilterChainProxy</code> bean named "springSecurityFilterChain" is created and the configuration within the element is used to build a filter chain within
 <code>FilterChainProxy</code>.
-As of Spring Security 3.1, additional <code>http</code> elements can be used to add extra filter chains <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
+As of Spring Security 3.1, additional <code>http</code> elements can be used to add extra filter chains <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> for how to set up the mapping from your <code>web.xml</code> ].
 Some core filters are always created in a filter chain and others will be added to the stack depending on the attributes and child elements which are present.
 The positions of the standard filters are fixed (see
-<a href="#filter-stack">the filter order table</a> in the namespace introduction), removing a common source of errors with previous versions of the framework when users had to configure the filter chain explicitly in the
+<a href="../namespace/index.html#filter-stack" class="page">the filter order table</a> in the namespace introduction), removing a common source of errors with previous versions of the framework when users had to configure the filter chain explicitly in the
 <code>FilterChainProxy</code> bean.
 You can, of course, still do this if you need full control of the configuration.</p>
 </div>
 <div class="paragraph">
-<p>All filters which require a reference to the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> will be automatically injected with the internal instance created by the namespace configuration.</p>
+<p>All filters which require a reference to the <a href="../authentication/architecture/index.html#servlet-authentication-authenticationmanager" class="page"><code>AuthenticationManager</code></a> will be automatically injected with the internal instance created by the namespace configuration.</p>
 </div>
 <div class="paragraph">
 <p>Each <code>&lt;http&gt;</code> namespace block always creates an <code>SecurityContextPersistenceFilter</code>, an <code>ExceptionTranslationFilter</code> and a <code>FilterSecurityInterceptor</code>.
 These are fixed and cannot be replaced with alternatives.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-http-attributes"><a class="anchor" href="#nsa-http-attributes"></a>&lt;http&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-http-attributes"><a class="anchor" href="#nsa-http-attributes"></a>&lt;http&gt; Attributes</h4>
 <div class="paragraph">
 <p>The attributes on the <code>&lt;http&gt;</code> element control some of the properties on the core filters.</p>
 </div>
@@ -396,14 +726,14 @@ Defaults to <code>true</code>.</p>
 <ul>
 <li>
 <p><strong>use-expressions</strong>
-Enables EL-expressions in the <code>access</code> attribute, as described in the chapter on <a href="#el-access-web">expression-based access-control</a>.
+Enables EL-expressions in the <code>access</code> attribute, as described in the chapter on <a href="../authorization/expression-based.html#el-access-web" class="page">expression-based access-control</a>.
 The default value is true.</p>
 </li>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-http-children"><a class="anchor" href="#nsa-http-children"></a>Child Elements of &lt;http&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-http-children"><a class="anchor" href="#nsa-http-children"></a>Child Elements of &lt;http&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -455,6 +785,9 @@ The default value is true.</p>
 <p><a href="#nsa-openid-login">openid-login</a></p>
 </li>
 <li>
+<p><a href="#nsa-password-management">password-management</a></p>
+</li>
+<li>
 <p><a href="#nsa-port-mappings">port-mappings</a></p>
 </li>
 <li>
@@ -473,14 +806,14 @@ The default value is true.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-access-denied-handler"><a class="anchor" href="#nsa-access-denied-handler"></a>&lt;access-denied-handler&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-access-denied-handler"><a class="anchor" href="#nsa-access-denied-handler"></a>&lt;access-denied-handler&gt;</h3>
 <div class="paragraph">
 <p>This element allows you to set the <code>errorPage</code> property for the default <code>AccessDeniedHandler</code> used by the <code>ExceptionTranslationFilter</code>, using the <a href="#nsa-access-denied-handler-error-page">error-page</a> attribute, or to supply your own implementation using the<a href="#nsa-access-denied-handler-ref">ref</a> attribute.
-This is discussed in more detail in the section on the <a href="#servlet-exceptiontranslationfilter">ExceptionTranslationFilter</a>.</p>
+This is discussed in more detail in the section on the <a href="../architecture/index.html#servlet-exceptiontranslationfilter" class="page">ExceptionTranslationFilter</a>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-access-denied-handler-parents"><a class="anchor" href="#nsa-access-denied-handler-parents"></a>Parent Elements of &lt;access-denied-handler&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-access-denied-handler-parents"><a class="anchor" href="#nsa-access-denied-handler-parents"></a>Parent Elements of &lt;access-denied-handler&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -489,8 +822,8 @@ This is discussed in more detail in the section on the <a href="#servlet-excepti
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-access-denied-handler-attributes"><a class="anchor" href="#nsa-access-denied-handler-attributes"></a>&lt;access-denied-handler&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-access-denied-handler-attributes"><a class="anchor" href="#nsa-access-denied-handler-attributes"></a>&lt;access-denied-handler&gt; Attributes</h4>
 <div id="nsa-access-denied-handler-error-page" class="ulist">
 <ul>
 <li>
@@ -509,14 +842,14 @@ Defines a reference to a Spring bean of type <code>AccessDeniedHandler</code>.</
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-cors"><a class="anchor" href="#nsa-cors"></a>&lt;cors&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-cors"><a class="anchor" href="#nsa-cors"></a>&lt;cors&gt;</h3>
 <div class="paragraph">
 <p>This element allows for configuring a <code>CorsFilter</code>.
 If no <code>CorsFilter</code> or <code>CorsConfigurationSource</code> is specified and Spring MVC is on the classpath, a <code>HandlerMappingIntrospector</code> is used as the <code>CorsConfigurationSource</code>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-cors-attributes"><a class="anchor" href="#nsa-cors-attributes"></a>&lt;cors&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-cors-attributes"><a class="anchor" href="#nsa-cors-attributes"></a>&lt;cors&gt; Attributes</h4>
 <div class="paragraph">
 <p>The attributes on the <code>&lt;cors&gt;</code> element control the headers element.</p>
 </div>
@@ -537,8 +870,8 @@ Optional attribute that specifies the bean name of a <code>CorsConfigurationSour
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-cors-parents"><a class="anchor" href="#nsa-cors-parents"></a>Parent Elements of &lt;cors&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-cors-parents"><a class="anchor" href="#nsa-cors-parents"></a>Parent Elements of &lt;cors&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -548,12 +881,12 @@ Optional attribute that specifies the bean name of a <code>CorsConfigurationSour
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-headers"><a class="anchor" href="#nsa-headers"></a>&lt;headers&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-headers"><a class="anchor" href="#nsa-headers"></a>&lt;headers&gt;</h3>
 <div class="paragraph">
 <p>This element allows for configuring additional (security) headers to be send with the response.
 It enables easy configuration for several headers and also allows for setting custom headers through the <a href="#nsa-header">header</a> element.
-Additional information, can be found in the <a href="#headers">Security Headers</a> section of the reference.</p>
+Additional information, can be found in the <a href="../../features/exploits/headers.html#headers" class="page">Security Headers</a> section of the reference.</p>
 </div>
 <div class="ulist">
 <ul>
@@ -594,8 +927,8 @@ This allows HTTPS websites to resist impersonation by attackers using mis-issued
 </li>
 </ul>
 </div>
-<div class="sect4">
-<h5 id="nsa-headers-attributes"><a class="anchor" href="#nsa-headers-attributes"></a>&lt;headers&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-headers-attributes"><a class="anchor" href="#nsa-headers-attributes"></a>&lt;headers&gt; Attributes</h4>
 <div class="paragraph">
 <p>The attributes on the <code>&lt;headers&gt;</code> element control the headers element.</p>
 </div>
@@ -618,8 +951,8 @@ The default is false (the headers are enabled).</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-headers-parents"><a class="anchor" href="#nsa-headers-parents"></a>Parent Elements of &lt;headers&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-headers-parents"><a class="anchor" href="#nsa-headers-parents"></a>Parent Elements of &lt;headers&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -628,8 +961,8 @@ The default is false (the headers are enabled).</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-headers-children"><a class="anchor" href="#nsa-headers-children"></a>Child Elements of &lt;headers&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-headers-children"><a class="anchor" href="#nsa-headers-children"></a>Child Elements of &lt;headers&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -669,13 +1002,13 @@ The default is false (the headers are enabled).</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-cache-control"><a class="anchor" href="#nsa-cache-control"></a>&lt;cache-control&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-cache-control"><a class="anchor" href="#nsa-cache-control"></a>&lt;cache-control&gt;</h3>
 <div class="paragraph">
 <p>Adds <code>Cache-Control</code>, <code>Pragma</code>, and <code>Expires</code> headers to ensure that the browser does not cache your secured pages.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-cache-control-attributes"><a class="anchor" href="#nsa-cache-control-attributes"></a>&lt;cache-control&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-cache-control-attributes"><a class="anchor" href="#nsa-cache-control-attributes"></a>&lt;cache-control&gt; Attributes</h4>
 <div id="nsa-cache-control-disabled" class="ulist">
 <ul>
 <li>
@@ -686,8 +1019,8 @@ Default false.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-cache-control-parents"><a class="anchor" href="#nsa-cache-control-parents"></a>Parent Elements of &lt;cache-control&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-cache-control-parents"><a class="anchor" href="#nsa-cache-control-parents"></a>Parent Elements of &lt;cache-control&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -697,14 +1030,14 @@ Default false.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-hsts"><a class="anchor" href="#nsa-hsts"></a>&lt;hsts&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-hsts"><a class="anchor" href="#nsa-hsts"></a>&lt;hsts&gt;</h3>
 <div class="paragraph">
 <p>When enabled adds the <a href="https://tools.ietf.org/html/rfc6797">Strict-Transport-Security</a> header to the response for any secure request.
 This allows the server to instruct browsers to automatically use HTTPS for future requests.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-hsts-attributes"><a class="anchor" href="#nsa-hsts-attributes"></a>&lt;hsts&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-hsts-attributes"><a class="anchor" href="#nsa-hsts-attributes"></a>&lt;hsts&gt; Attributes</h4>
 <div id="nsa-hsts-disabled" class="ulist">
 <ul>
 <li>
@@ -751,8 +1084,8 @@ Default false.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-hsts-parents"><a class="anchor" href="#nsa-hsts-parents"></a>Parent Elements of &lt;hsts&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-hsts-parents"><a class="anchor" href="#nsa-hsts-parents"></a>Parent Elements of &lt;hsts&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -762,14 +1095,14 @@ Default false.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-hpkp"><a class="anchor" href="#nsa-hpkp"></a>&lt;hpkp&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-hpkp"><a class="anchor" href="#nsa-hpkp"></a>&lt;hpkp&gt;</h3>
 <div class="paragraph">
 <p>When enabled adds the <a href="https://tools.ietf.org/html/rfc7469">Public Key Pinning Extension for HTTP</a> header to the response for any secure request.
 This allows HTTPS websites to resist impersonation by attackers using mis-issued or otherwise fraudulent certificates.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-hpkp-attributes"><a class="anchor" href="#nsa-hpkp-attributes"></a>&lt;hpkp&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-hpkp-attributes"><a class="anchor" href="#nsa-hpkp-attributes"></a>&lt;hpkp&gt; Attributes</h4>
 <div id="nsa-hpkp-disabled" class="ulist">
 <ul>
 <li>
@@ -815,8 +1148,8 @@ Specifies the URI to which the browser should report pin validation failures.</p
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-hpkp-parents"><a class="anchor" href="#nsa-hpkp-parents"></a>Parent Elements of &lt;hpkp&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-hpkp-parents"><a class="anchor" href="#nsa-hpkp-parents"></a>Parent Elements of &lt;hpkp&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -826,13 +1159,13 @@ Specifies the URI to which the browser should report pin validation failures.</p
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-pins"><a class="anchor" href="#nsa-pins"></a>&lt;pins&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-pins"><a class="anchor" href="#nsa-pins"></a>&lt;pins&gt;</h3>
 <div class="paragraph">
 <p>The list of pins</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-pins-children"><a class="anchor" href="#nsa-pins-children"></a>Child Elements of &lt;pins&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-pins-children"><a class="anchor" href="#nsa-pins-children"></a>Child Elements of &lt;pins&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -842,13 +1175,13 @@ Specifies the URI to which the browser should report pin validation failures.</p
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-pin"><a class="anchor" href="#nsa-pin"></a>&lt;pin&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-pin"><a class="anchor" href="#nsa-pin"></a>&lt;pin&gt;</h3>
 <div class="paragraph">
 <p>A pin is specified using the base64-encoded SPKI fingerprint as value and the cryptographic hash algorithm as attribute</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-pin-attributes"><a class="anchor" href="#nsa-pin-attributes"></a>&lt;pin&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-pin-attributes"><a class="anchor" href="#nsa-pin-attributes"></a>&lt;pin&gt; Attributes</h4>
 <div id="nsa-pin-algorithm" class="ulist">
 <ul>
 <li>
@@ -859,8 +1192,8 @@ Default is SHA256.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-pin-parents"><a class="anchor" href="#nsa-pin-parents"></a>Parent Elements of &lt;pin&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-pin-parents"><a class="anchor" href="#nsa-pin-parents"></a>Parent Elements of &lt;pin&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -870,14 +1203,14 @@ Default is SHA256.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-content-security-policy"><a class="anchor" href="#nsa-content-security-policy"></a>&lt;content-security-policy&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-content-security-policy"><a class="anchor" href="#nsa-content-security-policy"></a>&lt;content-security-policy&gt;</h3>
 <div class="paragraph">
 <p>When enabled adds the <a href="https://www.w3.org/TR/CSP2/">Content Security Policy (CSP)</a> header to the response.
 CSP is a mechanism that web applications can leverage to mitigate content injection vulnerabilities, such as cross-site scripting (XSS).</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-content-security-policy-attributes"><a class="anchor" href="#nsa-content-security-policy-attributes"></a>&lt;content-security-policy&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-content-security-policy-attributes"><a class="anchor" href="#nsa-content-security-policy-attributes"></a>&lt;content-security-policy&gt; Attributes</h4>
 <div id="nsa-content-security-policy-policy-directives" class="ulist">
 <ul>
 <li>
@@ -896,8 +1229,8 @@ Defaults to false.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-content-security-policy-parents"><a class="anchor" href="#nsa-content-security-policy-parents"></a>Parent Elements of &lt;content-security-policy&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-content-security-policy-parents"><a class="anchor" href="#nsa-content-security-policy-parents"></a>Parent Elements of &lt;content-security-policy&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -907,13 +1240,13 @@ Defaults to false.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-referrer-policy"><a class="anchor" href="#nsa-referrer-policy"></a>&lt;referrer-policy&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-referrer-policy"><a class="anchor" href="#nsa-referrer-policy"></a>&lt;referrer-policy&gt;</h3>
 <div class="paragraph">
 <p>When enabled adds the <a href="https://www.w3.org/TR/referrer-policy/">Referrer Policy</a> header to the response.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-referrer-policy-attributes"><a class="anchor" href="#nsa-referrer-policy-attributes"></a>&lt;referrer-policy&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-referrer-policy-attributes"><a class="anchor" href="#nsa-referrer-policy-attributes"></a>&lt;referrer-policy&gt; Attributes</h4>
 <div id="nsa-referrer-policy-policy" class="ulist">
 <ul>
 <li>
@@ -924,8 +1257,8 @@ Default "no-referrer".</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-referrer-policy-parents"><a class="anchor" href="#nsa-referrer-policy-parents"></a>Parent Elements of &lt;referrer-policy&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-referrer-policy-parents"><a class="anchor" href="#nsa-referrer-policy-parents"></a>Parent Elements of &lt;referrer-policy&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -935,13 +1268,13 @@ Default "no-referrer".</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-feature-policy"><a class="anchor" href="#nsa-feature-policy"></a>&lt;feature-policy&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-feature-policy"><a class="anchor" href="#nsa-feature-policy"></a>&lt;feature-policy&gt;</h3>
 <div class="paragraph">
 <p>When enabled adds the <a href="https://wicg.github.io/feature-policy/">Feature Policy</a> header to the response.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-feature-policy-attributes"><a class="anchor" href="#nsa-feature-policy-attributes"></a>&lt;feature-policy&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-feature-policy-attributes"><a class="anchor" href="#nsa-feature-policy-attributes"></a>&lt;feature-policy&gt; Attributes</h4>
 <div id="nsa-feature-policy-policy-directives" class="ulist">
 <ul>
 <li>
@@ -951,8 +1284,8 @@ The security policy directive(s) for the Feature-Policy header.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-feature-policy-parents"><a class="anchor" href="#nsa-feature-policy-parents"></a>Parent Elements of &lt;feature-policy&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-feature-policy-parents"><a class="anchor" href="#nsa-feature-policy-parents"></a>Parent Elements of &lt;feature-policy&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -962,13 +1295,13 @@ The security policy directive(s) for the Feature-Policy header.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-frame-options"><a class="anchor" href="#nsa-frame-options"></a>&lt;frame-options&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-frame-options"><a class="anchor" href="#nsa-frame-options"></a>&lt;frame-options&gt;</h3>
 <div class="paragraph">
 <p>When enabled adds the <a href="https://tools.ietf.org/html/draft-ietf-websec-x-frame-options">X-Frame-Options header</a> to the response, this allows newer browsers to do some security checks and prevent <a href="https://en.wikipedia.org/wiki/Clickjacking">clickjacking</a> attacks.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-frame-options-attributes"><a class="anchor" href="#nsa-frame-options-attributes"></a>&lt;frame-options&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-frame-options-attributes"><a class="anchor" href="#nsa-frame-options-attributes"></a>&lt;frame-options&gt; Attributes</h4>
 <div id="nsa-frame-options-disabled" class="ulist">
 <ul>
 <li>
@@ -1001,8 +1334,8 @@ On the other hand, if you specify SAMEORIGIN, you can still use the page in a fr
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-frame-options-parents"><a class="anchor" href="#nsa-frame-options-parents"></a>Parent Elements of &lt;frame-options&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-frame-options-parents"><a class="anchor" href="#nsa-frame-options-parents"></a>Parent Elements of &lt;frame-options&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1012,13 +1345,13 @@ On the other hand, if you specify SAMEORIGIN, you can still use the page in a fr
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-permissions-policy"><a class="anchor" href="#nsa-permissions-policy"></a>&lt;permissions-policy&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-permissions-policy"><a class="anchor" href="#nsa-permissions-policy"></a>&lt;permissions-policy&gt;</h3>
 <div class="paragraph">
 <p>Adds the <a href="https://w3c.github.io/webappsec-permissions-policy/">Permissions-Policy header</a> to the response.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-permissions-policy-attributes"><a class="anchor" href="#nsa-permissions-policy-attributes"></a>&lt;permissions-policy&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-permissions-policy-attributes"><a class="anchor" href="#nsa-permissions-policy-attributes"></a>&lt;permissions-policy&gt; Attributes</h4>
 <div id="nsa-permissions-policy-policy" class="ulist">
 <ul>
 <li>
@@ -1028,8 +1361,8 @@ The policy value to write for the <code>Permissions-Policy</code> header</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-permissions-policy-parents"><a class="anchor" href="#nsa-permissions-policy-parents"></a>Parent Elements of &lt;permissions-policy&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-permissions-policy-parents"><a class="anchor" href="#nsa-permissions-policy-parents"></a>Parent Elements of &lt;permissions-policy&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1039,14 +1372,14 @@ The policy value to write for the <code>Permissions-Policy</code> header</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-xss-protection"><a class="anchor" href="#nsa-xss-protection"></a>&lt;xss-protection&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-xss-protection"><a class="anchor" href="#nsa-xss-protection"></a>&lt;xss-protection&gt;</h3>
 <div class="paragraph">
 <p>Adds the <a href="https://blogs.msdn.com/b/ie/archive/2008/07/02/ie8-security-part-iv-the-xss-filter.aspx">X-XSS-Protection header</a> to the response to assist in protecting against <a href="https://en.wikipedia.org/wiki/Cross-site_scripting#Non-Persistent">reflected / Type-1 Cross-Site Scripting (XSS)</a> attacks.
 This is in no-way a full protection to XSS attacks!</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-xss-protection-attributes"><a class="anchor" href="#nsa-xss-protection-attributes"></a>&lt;xss-protection&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-xss-protection-attributes"><a class="anchor" href="#nsa-xss-protection-attributes"></a>&lt;xss-protection&gt; Attributes</h4>
 <div id="nsa-xss-protection-disabled" class="ulist">
 <ul>
 <li>
@@ -1075,8 +1408,8 @@ Note that there are sometimes ways of bypassing this mode which can often times 
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-xss-protection-parents"><a class="anchor" href="#nsa-xss-protection-parents"></a>Parent Elements of &lt;xss-protection&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-xss-protection-parents"><a class="anchor" href="#nsa-xss-protection-parents"></a>Parent Elements of &lt;xss-protection&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1086,14 +1419,14 @@ Note that there are sometimes ways of bypassing this mode which can often times 
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-content-type-options"><a class="anchor" href="#nsa-content-type-options"></a>&lt;content-type-options&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-content-type-options"><a class="anchor" href="#nsa-content-type-options"></a>&lt;content-type-options&gt;</h3>
 <div class="paragraph">
 <p>Add the X-Content-Type-Options header with the value of nosniff to the response.
 This <a href="https://blogs.msdn.com/b/ie/archive/2008/09/02/ie8-security-part-vi-beta-2-update.aspx">disables MIME-sniffing</a> for IE8+ and Chrome extensions.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-content-type-options-attributes"><a class="anchor" href="#nsa-content-type-options-attributes"></a>&lt;content-type-options&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-content-type-options-attributes"><a class="anchor" href="#nsa-content-type-options-attributes"></a>&lt;content-type-options&gt; Attributes</h4>
 <div id="nsa-content-type-options-disabled" class="ulist">
 <ul>
 <li>
@@ -1104,8 +1437,8 @@ Default false.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-content-type-options-parents"><a class="anchor" href="#nsa-content-type-options-parents"></a>Parent Elements of &lt;content-type-options&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-content-type-options-parents"><a class="anchor" href="#nsa-content-type-options-parents"></a>Parent Elements of &lt;content-type-options&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1115,13 +1448,13 @@ Default false.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-header"><a class="anchor" href="#nsa-header"></a>&lt;header&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-header"><a class="anchor" href="#nsa-header"></a>&lt;header&gt;</h3>
 <div class="paragraph">
 <p>Add additional headers to the response, both the name and value need to be specified.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-header-attributes"><a class="anchor" href="#nsa-header-attributes"></a>&lt;header-attributes&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-header-attributes"><a class="anchor" href="#nsa-header-attributes"></a>&lt;header-attributes&gt; Attributes</h4>
 <div id="nsa-header-name" class="ulist">
 <ul>
 <li>
@@ -1147,8 +1480,8 @@ Reference to a custom implementation of the <code>HeaderWriter</code> interface.
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-header-parents"><a class="anchor" href="#nsa-header-parents"></a>Parent Elements of &lt;header&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-header-parents"><a class="anchor" href="#nsa-header-parents"></a>Parent Elements of &lt;header&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1158,14 +1491,14 @@ Reference to a custom implementation of the <code>HeaderWriter</code> interface.
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-anonymous"><a class="anchor" href="#nsa-anonymous"></a>&lt;anonymous&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-anonymous"><a class="anchor" href="#nsa-anonymous"></a>&lt;anonymous&gt;</h3>
 <div class="paragraph">
 <p>Adds an <code>AnonymousAuthenticationFilter</code> to the stack and an <code>AnonymousAuthenticationProvider</code>.
 Required if you are using the <code>IS_AUTHENTICATED_ANONYMOUSLY</code> attribute.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-anonymous-parents"><a class="anchor" href="#nsa-anonymous-parents"></a>Parent Elements of &lt;anonymous&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-anonymous-parents"><a class="anchor" href="#nsa-anonymous-parents"></a>Parent Elements of &lt;anonymous&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1174,8 +1507,8 @@ Required if you are using the <code>IS_AUTHENTICATED_ANONYMOUSLY</code> attribut
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-anonymous-attributes"><a class="anchor" href="#nsa-anonymous-attributes"></a>&lt;anonymous&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-anonymous-attributes"><a class="anchor" href="#nsa-anonymous-attributes"></a>&lt;anonymous&gt; Attributes</h4>
 <div id="nsa-anonymous-enabled" class="ulist">
 <ul>
 <li>
@@ -1218,15 +1551,15 @@ if unset, defaults to <code>anonymousUser</code>.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-csrf"><a class="anchor" href="#nsa-csrf"></a>&lt;csrf&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-csrf"><a class="anchor" href="#nsa-csrf"></a>&lt;csrf&gt;</h3>
 <div class="paragraph">
 <p>This element will add <a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">Cross Site Request Forger (CSRF)</a> protection to the application.
 It also updates the default RequestCache to only replay "GET" requests upon successful authentication.
-Additional information can be found in the <a href="#csrf">Cross Site Request Forgery (CSRF)</a> section of the reference.</p>
+Additional information can be found in the <a href="../../features/exploits/csrf.html#csrf" class="page">Cross Site Request Forgery (CSRF)</a> section of the reference.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-csrf-parents"><a class="anchor" href="#nsa-csrf-parents"></a>Parent Elements of &lt;csrf&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-csrf-parents"><a class="anchor" href="#nsa-csrf-parents"></a>Parent Elements of &lt;csrf&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1235,8 +1568,8 @@ Additional information can be found in the <a href="#csrf">Cross Site Request Fo
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-csrf-attributes"><a class="anchor" href="#nsa-csrf-attributes"></a>&lt;csrf&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-csrf-attributes"><a class="anchor" href="#nsa-csrf-attributes"></a>&lt;csrf&gt; Attributes</h4>
 <div id="nsa-csrf-disabled" class="ulist">
 <ul>
 <li>
@@ -1267,15 +1600,15 @@ Default is any HTTP method except "GET", "TRACE", "HEAD", "OPTIONS".</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-custom-filter"><a class="anchor" href="#nsa-custom-filter"></a>&lt;custom-filter&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-custom-filter"><a class="anchor" href="#nsa-custom-filter"></a>&lt;custom-filter&gt;</h3>
 <div class="paragraph">
 <p>This element is used to add a filter to the filter chain.
 It doesn&#8217;t create any additional beans but is used to select a bean of type <code>javax.servlet.Filter</code> which is already defined in the application context and add that at a particular position in the filter chain maintained by Spring Security.
-Full details can be found in the <a href="#ns-custom-filters">namespace chapter</a>.</p>
+Full details can be found in the <a href="../namespace/index.html#ns-custom-filters" class="page"> namespace chapter</a>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-custom-filter-parents"><a class="anchor" href="#nsa-custom-filter-parents"></a>Parent Elements of &lt;custom-filter&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-custom-filter-parents"><a class="anchor" href="#nsa-custom-filter-parents"></a>Parent Elements of &lt;custom-filter&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1284,8 +1617,8 @@ Full details can be found in the <a href="#ns-custom-filters">namespace chapter<
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-custom-filter-attributes"><a class="anchor" href="#nsa-custom-filter-attributes"></a>&lt;custom-filter&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-custom-filter-attributes"><a class="anchor" href="#nsa-custom-filter-attributes"></a>&lt;custom-filter&gt; Attributes</h4>
 <div id="nsa-custom-filter-after" class="ulist">
 <ul>
 <li>
@@ -1323,14 +1656,14 @@ Defines a reference to a Spring bean that implements <code>Filter</code>.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-expression-handler"><a class="anchor" href="#nsa-expression-handler"></a>&lt;expression-handler&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-expression-handler"><a class="anchor" href="#nsa-expression-handler"></a>&lt;expression-handler&gt;</h3>
 <div class="paragraph">
 <p>Defines the <code>SecurityExpressionHandler</code> instance which will be used if expression-based access-control is enabled.
 A default implementation (with no ACL support) will be used if not supplied.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-expression-handler-parents"><a class="anchor" href="#nsa-expression-handler-parents"></a>Parent Elements of &lt;expression-handler&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-expression-handler-parents"><a class="anchor" href="#nsa-expression-handler-parents"></a>Parent Elements of &lt;expression-handler&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1348,8 +1681,8 @@ A default implementation (with no ACL support) will be used if not supplied.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-expression-handler-attributes"><a class="anchor" href="#nsa-expression-handler-attributes"></a>&lt;expression-handler&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-expression-handler-attributes"><a class="anchor" href="#nsa-expression-handler-attributes"></a>&lt;expression-handler&gt; Attributes</h4>
 <div id="nsa-expression-handler-ref" class="ulist">
 <ul>
 <li>
@@ -1360,15 +1693,15 @@ Defines a reference to a Spring bean that implements <code>SecurityExpressionHan
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-form-login"><a class="anchor" href="#nsa-form-login"></a>&lt;form-login&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-form-login"><a class="anchor" href="#nsa-form-login"></a>&lt;form-login&gt;</h3>
 <div class="paragraph">
 <p>Used to add an <code>UsernamePasswordAuthenticationFilter</code> to the filter stack and an <code>LoginUrlAuthenticationEntryPoint</code> to the application context to provide authentication on demand.
 This will always take precedence over other namespace-created entry points.
 If no attributes are supplied, a login page will be generated automatically at the URL "/login" <sup class="footnote">[<a id="_footnoteref_2" class="footnote" href="#_footnotedef_2" title="View footnote.">2</a>]</sup> The behaviour can be customized using the <a href="#nsa-form-login-attributes"><code>&lt;form-login&gt;</code> Attributes</a>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-form-login-parents"><a class="anchor" href="#nsa-form-login-parents"></a>Parent Elements of &lt;form-login&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-form-login-parents"><a class="anchor" href="#nsa-form-login-parents"></a>Parent Elements of &lt;form-login&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1377,8 +1710,8 @@ If no attributes are supplied, a login page will be generated automatically at t
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-form-login-attributes"><a class="anchor" href="#nsa-form-login-attributes"></a>&lt;form-login&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-form-login-attributes"><a class="anchor" href="#nsa-form-login-attributes"></a>&lt;form-login&gt; Attributes</h4>
 <div id="nsa-form-login-always-use-default-target" class="ulist">
 <ul>
 <li>
@@ -1491,13 +1824,13 @@ Maps a <code>ForwardAuthenticationFailureHandler</code> to <code>authenticationF
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-oauth2-login"><a class="anchor" href="#nsa-oauth2-login"></a>&lt;oauth2-login&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-oauth2-login"><a class="anchor" href="#nsa-oauth2-login"></a>&lt;oauth2-login&gt;</h3>
 <div class="paragraph">
-<p>The <a href="#oauth2login">OAuth 2.0 Login</a> feature configures authentication support using an OAuth 2.0 and/or OpenID Connect 1.0 Provider.</p>
+<p>The <a href="../oauth2/oauth2-login.html#oauth2login" class="page">OAuth 2.0 Login</a> feature configures authentication support using an OAuth 2.0 and/or OpenID Connect 1.0 Provider.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-oauth2-login-parents"><a class="anchor" href="#nsa-oauth2-login-parents"></a>Parent Elements of &lt;oauth2-login&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-oauth2-login-parents"><a class="anchor" href="#nsa-oauth2-login-parents"></a>Parent Elements of &lt;oauth2-login&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1506,8 +1839,8 @@ Maps a <code>ForwardAuthenticationFailureHandler</code> to <code>authenticationF
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-oauth2-login-attributes"><a class="anchor" href="#nsa-oauth2-login-attributes"></a>&lt;oauth2-login&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-oauth2-login-attributes"><a class="anchor" href="#nsa-oauth2-login-attributes"></a>&lt;oauth2-login&gt; Attributes</h4>
 <div id="nsa-oauth2-login-client-registration-repository-ref" class="ulist">
 <ul>
 <li>
@@ -1622,13 +1955,13 @@ Reference to the <code>JwtDecoderFactory</code> used by <code>OidcAuthorizationC
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-oauth2-client"><a class="anchor" href="#nsa-oauth2-client"></a>&lt;oauth2-client&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-oauth2-client"><a class="anchor" href="#nsa-oauth2-client"></a>&lt;oauth2-client&gt;</h3>
 <div class="paragraph">
-<p>Configures <a href="#oauth2client">OAuth 2.0 Client</a> support.</p>
+<p>Configures <a href="../oauth2/oauth2-client.html#oauth2client" class="page">OAuth 2.0 Client</a> support.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-oauth2-client-parents"><a class="anchor" href="#nsa-oauth2-client-parents"></a>Parent Elements of &lt;oauth2-client&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-oauth2-client-parents"><a class="anchor" href="#nsa-oauth2-client-parents"></a>Parent Elements of &lt;oauth2-client&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1637,8 +1970,8 @@ Reference to the <code>JwtDecoderFactory</code> used by <code>OidcAuthorizationC
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-oauth2-client-attributes"><a class="anchor" href="#nsa-oauth2-client-attributes"></a>&lt;oauth2-client&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-oauth2-client-attributes"><a class="anchor" href="#nsa-oauth2-client-attributes"></a>&lt;oauth2-client&gt; Attributes</h4>
 <div id="nsa-oauth2-client-client-registration-repository-ref" class="ulist">
 <ul>
 <li>
@@ -1664,8 +1997,8 @@ Reference to the <code>OAuth2AuthorizedClientService</code>.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-oauth2-client-children"><a class="anchor" href="#nsa-oauth2-client-children"></a>Child Elements of &lt;oauth2-client&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-oauth2-client-children"><a class="anchor" href="#nsa-oauth2-client-children"></a>Child Elements of &lt;oauth2-client&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1675,13 +2008,13 @@ Reference to the <code>OAuth2AuthorizedClientService</code>.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-authorization-code-grant"><a class="anchor" href="#nsa-authorization-code-grant"></a>&lt;authorization-code-grant&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-authorization-code-grant"><a class="anchor" href="#nsa-authorization-code-grant"></a>&lt;authorization-code-grant&gt;</h3>
 <div class="paragraph">
-<p>Configures <a href="#oauth2Client-auth-grant-support">OAuth 2.0 Authorization Code Grant</a>.</p>
+<p>Configures <a href="../oauth2/oauth2-client.html#oauth2Client-auth-grant-support" class="page">OAuth 2.0 Authorization Code Grant</a>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-authorization-code-grant-parents"><a class="anchor" href="#nsa-authorization-code-grant-parents"></a>Parent Elements of &lt;authorization-code-grant&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-authorization-code-grant-parents"><a class="anchor" href="#nsa-authorization-code-grant-parents"></a>Parent Elements of &lt;authorization-code-grant&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1690,8 +2023,8 @@ Reference to the <code>OAuth2AuthorizedClientService</code>.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-authorization-code-grant-attributes"><a class="anchor" href="#nsa-authorization-code-grant-attributes"></a>&lt;authorization-code-grant&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-authorization-code-grant-attributes"><a class="anchor" href="#nsa-authorization-code-grant-attributes"></a>&lt;authorization-code-grant&gt; Attributes</h4>
 <div id="nsa-authorization-code-grant-authorization-request-repository-ref" class="ulist">
 <ul>
 <li>
@@ -1718,13 +2051,13 @@ Reference to the <code>OAuth2AccessTokenResponseClient</code>.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-client-registrations"><a class="anchor" href="#nsa-client-registrations"></a>&lt;client-registrations&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-client-registrations"><a class="anchor" href="#nsa-client-registrations"></a>&lt;client-registrations&gt;</h3>
 <div class="paragraph">
-<p>A container element for client(s) registered (<a href="#oauth2Client-client-registration">ClientRegistration</a>) with an OAuth 2.0 or OpenID Connect 1.0 Provider.</p>
+<p>A container element for client(s) registered (<a href="../oauth2/oauth2-client.html#oauth2Client-client-registration" class="page">ClientRegistration</a>) with an OAuth 2.0 or OpenID Connect 1.0 Provider.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-client-registrations-children"><a class="anchor" href="#nsa-client-registrations-children"></a>Child Elements of &lt;client-registrations&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-client-registrations-children"><a class="anchor" href="#nsa-client-registrations-children"></a>Child Elements of &lt;client-registrations&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1737,13 +2070,13 @@ Reference to the <code>OAuth2AccessTokenResponseClient</code>.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-client-registration"><a class="anchor" href="#nsa-client-registration"></a>&lt;client-registration&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-client-registration"><a class="anchor" href="#nsa-client-registration"></a>&lt;client-registration&gt;</h3>
 <div class="paragraph">
 <p>Represents a client registered with an OAuth 2.0 or OpenID Connect 1.0 Provider.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-client-registration-parents"><a class="anchor" href="#nsa-client-registration-parents"></a>Parent Elements of &lt;client-registration&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-client-registration-parents"><a class="anchor" href="#nsa-client-registration-parents"></a>Parent Elements of &lt;client-registration&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1752,8 +2085,8 @@ Reference to the <code>OAuth2AccessTokenResponseClient</code>.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-client-registration-attributes"><a class="anchor" href="#nsa-client-registration-attributes"></a>&lt;client-registration&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-client-registration-attributes"><a class="anchor" href="#nsa-client-registration-attributes"></a>&lt;client-registration&gt; Attributes</h4>
 <div id="nsa-client-registration-registration-id" class="ulist">
 <ul>
 <li>
@@ -1831,13 +2164,13 @@ A reference to the associated provider. May reference a <code>&lt;provider&gt;</
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-provider"><a class="anchor" href="#nsa-provider"></a>&lt;provider&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-provider"><a class="anchor" href="#nsa-provider"></a>&lt;provider&gt;</h3>
 <div class="paragraph">
 <p>The configuration information for an OAuth 2.0 or OpenID Connect 1.0 Provider.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-provider-parents"><a class="anchor" href="#nsa-provider-parents"></a>Parent Elements of &lt;provider&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-provider-parents"><a class="anchor" href="#nsa-provider-parents"></a>Parent Elements of &lt;provider&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1846,8 +2179,8 @@ A reference to the associated provider. May reference a <code>&lt;provider&gt;</
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-provider-attributes"><a class="anchor" href="#nsa-provider-attributes"></a>&lt;provider&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-provider-attributes"><a class="anchor" href="#nsa-provider-attributes"></a>&lt;provider&gt; Attributes</h4>
 <div id="nsa-provider-provider-id" class="ulist">
 <ul>
 <li>
@@ -1915,14 +2248,14 @@ The URI used to initially configure a <code>ClientRegistration</code> using disc
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-oauth2-resource-server"><a class="anchor" href="#nsa-oauth2-resource-server"></a>&lt;oauth2-resource-server&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-oauth2-resource-server"><a class="anchor" href="#nsa-oauth2-resource-server"></a>&lt;oauth2-resource-server&gt;</h3>
 <div class="paragraph">
 <p>Adds a <code>BearerTokenAuthenticationFilter</code>, <code>BearerTokenAuthenticationEntryPoint</code>, and <code>BearerTokenAccessDeniedHandler</code> to the configuration.
 In addition, either <code>&lt;jwt&gt;</code> or <code>&lt;opaque-token&gt;</code> must be specified.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-oauth2-resource-server-parents"><a class="anchor" href="#nsa-oauth2-resource-server-parents"></a>Parents Elements of &lt;oauth2-resource-server&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-oauth2-resource-server-parents"><a class="anchor" href="#nsa-oauth2-resource-server-parents"></a>Parents Elements of &lt;oauth2-resource-server&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1931,8 +2264,8 @@ In addition, either <code>&lt;jwt&gt;</code> or <code>&lt;opaque-token&gt;</code
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-oauth2-resource-server-children"><a class="anchor" href="#nsa-oauth2-resource-server-children"></a>Child Elements of &lt;oauth2-resource-server&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-oauth2-resource-server-children"><a class="anchor" href="#nsa-oauth2-resource-server-children"></a>Child Elements of &lt;oauth2-resource-server&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1944,8 +2277,8 @@ In addition, either <code>&lt;jwt&gt;</code> or <code>&lt;opaque-token&gt;</code
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-oauth2-resource-server-attributes"><a class="anchor" href="#nsa-oauth2-resource-server-attributes"></a>&lt;oauth2-resource-server&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-oauth2-resource-server-attributes"><a class="anchor" href="#nsa-oauth2-resource-server-attributes"></a>&lt;oauth2-resource-server&gt; Attributes</h4>
 <div id="nsa-oauth2-resource-server-authentication-manager-resolver-ref" class="ulist">
 <ul>
 <li>
@@ -1972,13 +2305,13 @@ Reference to a <code>AuthenticationEntryPoint</code> which will handle unauthori
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-jwt"><a class="anchor" href="#nsa-jwt"></a>&lt;jwt&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-jwt"><a class="anchor" href="#nsa-jwt"></a>&lt;jwt&gt;</h3>
 <div class="paragraph">
 <p>Represents an OAuth 2.0 Resource Server that will authorize JWTs</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-jwt-parents"><a class="anchor" href="#nsa-jwt-parents"></a>Parent Elements of &lt;jwt&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-jwt-parents"><a class="anchor" href="#nsa-jwt-parents"></a>Parent Elements of &lt;jwt&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -1987,8 +2320,8 @@ Reference to a <code>AuthenticationEntryPoint</code> which will handle unauthori
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-jwt-attributes"><a class="anchor" href="#nsa-jwt-attributes"></a>&lt;jwt&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-jwt-attributes"><a class="anchor" href="#nsa-jwt-attributes"></a>&lt;jwt&gt; Attributes</h4>
 <div id="nsa-jwt-jwt-authentication-converter-ref" class="ulist">
 <ul>
 <li>
@@ -2015,13 +2348,13 @@ The JWK Set Uri used to load signing verification keys from an OAuth 2.0 Authori
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-opaque-token"><a class="anchor" href="#nsa-opaque-token"></a>&lt;opaque-token&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-opaque-token"><a class="anchor" href="#nsa-opaque-token"></a>&lt;opaque-token&gt;</h3>
 <div class="paragraph">
 <p>Represents an OAuth 2.0 Resource Server that will authorize opaque tokens</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-opaque-token-parents"><a class="anchor" href="#nsa-opaque-token-parents"></a>Parent Elements of &lt;opaque-token&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-opaque-token-parents"><a class="anchor" href="#nsa-opaque-token-parents"></a>Parent Elements of &lt;opaque-token&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2030,8 +2363,8 @@ The JWK Set Uri used to load signing verification keys from an OAuth 2.0 Authori
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-opaque-token-attributes"><a class="anchor" href="#nsa-opaque-token-attributes"></a>&lt;opaque-token&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-opaque-token-attributes"><a class="anchor" href="#nsa-opaque-token-attributes"></a>&lt;opaque-token&gt; Attributes</h4>
 <div id="nsa-opaque-token-introspector-ref" class="ulist">
 <ul>
 <li>
@@ -2066,14 +2399,14 @@ The Client Secret to use for client authentication against the provided <code>in
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-http-basic"><a class="anchor" href="#nsa-http-basic"></a>&lt;http-basic&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-http-basic"><a class="anchor" href="#nsa-http-basic"></a>&lt;http-basic&gt;</h3>
 <div class="paragraph">
 <p>Adds a <code>BasicAuthenticationFilter</code> and <code>BasicAuthenticationEntryPoint</code> to the configuration.
 The latter will only be used as the configuration entry point if form-based login is not enabled.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-http-basic-parents"><a class="anchor" href="#nsa-http-basic-parents"></a>Parent Elements of &lt;http-basic&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-http-basic-parents"><a class="anchor" href="#nsa-http-basic-parents"></a>Parent Elements of &lt;http-basic&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2082,8 +2415,8 @@ The latter will only be used as the configuration entry point if form-based logi
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-http-basic-attributes"><a class="anchor" href="#nsa-http-basic-attributes"></a>&lt;http-basic&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-http-basic-attributes"><a class="anchor" href="#nsa-http-basic-attributes"></a>&lt;http-basic&gt; Attributes</h4>
 <div id="nsa-http-basic-authentication-details-source-ref" class="ulist">
 <ul>
 <li>
@@ -2102,14 +2435,14 @@ Sets the <code>AuthenticationEntryPoint</code> which is used by the <code>BasicA
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-http-firewall"><a class="anchor" href="#nsa-http-firewall"></a>&lt;http-firewall&gt; Element</h4>
+<div class="sect2">
+<h3 id="nsa-http-firewall"><a class="anchor" href="#nsa-http-firewall"></a>&lt;http-firewall&gt; Element</h3>
 <div class="paragraph">
 <p>This is a top-level element which can be used to inject a custom implementation of <code>HttpFirewall</code> into the <code>FilterChainProxy</code> created by the namespace.
 The default implementation should be suitable for most applications.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-http-firewall-attributes"><a class="anchor" href="#nsa-http-firewall-attributes"></a>&lt;http-firewall&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-http-firewall-attributes"><a class="anchor" href="#nsa-http-firewall-attributes"></a>&lt;http-firewall&gt; Attributes</h4>
 <div id="nsa-http-firewall-ref" class="ulist">
 <ul>
 <li>
@@ -2120,8 +2453,8 @@ Defines a reference to a Spring bean that implements <code>HttpFirewall</code>.<
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-intercept-url"><a class="anchor" href="#nsa-intercept-url"></a>&lt;intercept-url&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-intercept-url"><a class="anchor" href="#nsa-intercept-url"></a>&lt;intercept-url&gt;</h3>
 <div class="paragraph">
 <p>This element is used to define the set of URL patterns that the application is interested in and to configure how they should be handled.
 It is used to construct the <code>FilterInvocationSecurityMetadataSource</code> used by the <code>FilterSecurityInterceptor</code>.
@@ -2129,8 +2462,8 @@ It is also responsible for configuring a <code>ChannelProcessingFilter</code> if
 When matching the specified patterns against an incoming request, the matching is done in the order in which the elements are declared.
 So the most specific patterns should come first and the most general should come last.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-intercept-url-parents"><a class="anchor" href="#nsa-intercept-url-parents"></a>Parent Elements of &lt;intercept-url&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-intercept-url-parents"><a class="anchor" href="#nsa-intercept-url-parents"></a>Parent Elements of &lt;intercept-url&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2142,8 +2475,8 @@ So the most specific patterns should come first and the most general should come
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-intercept-url-attributes"><a class="anchor" href="#nsa-intercept-url-attributes"></a>&lt;intercept-url&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-intercept-url-attributes"><a class="anchor" href="#nsa-intercept-url-attributes"></a>&lt;intercept-url&gt; Attributes</h4>
 <div id="nsa-intercept-url-access" class="ulist">
 <ul>
 <li>
@@ -2229,13 +2562,13 @@ This property is invalid for <a href="#nsa-filter-security-metadata-source">filt
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-jee"><a class="anchor" href="#nsa-jee"></a>&lt;jee&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-jee"><a class="anchor" href="#nsa-jee"></a>&lt;jee&gt;</h3>
 <div class="paragraph">
 <p>Adds a J2eePreAuthenticatedProcessingFilter to the filter chain to provide integration with container authentication.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-jee-parents"><a class="anchor" href="#nsa-jee-parents"></a>Parent Elements of &lt;jee&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-jee-parents"><a class="anchor" href="#nsa-jee-parents"></a>Parent Elements of &lt;jee&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2244,8 +2577,8 @@ This property is invalid for <a href="#nsa-filter-security-metadata-source">filt
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-jee-attributes"><a class="anchor" href="#nsa-jee-attributes"></a>&lt;jee&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-jee-attributes"><a class="anchor" href="#nsa-jee-attributes"></a>&lt;jee&gt; Attributes</h4>
 <div id="nsa-jee-mappable-roles" class="ulist">
 <ul>
 <li>
@@ -2264,14 +2597,14 @@ A reference to a user-service (or UserDetailsService bean) Id</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-logout"><a class="anchor" href="#nsa-logout"></a>&lt;logout&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-logout"><a class="anchor" href="#nsa-logout"></a>&lt;logout&gt;</h3>
 <div class="paragraph">
 <p>Adds a <code>LogoutFilter</code> to the filter stack.
 This is configured with a <code>SecurityContextLogoutHandler</code>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-logout-parents"><a class="anchor" href="#nsa-logout-parents"></a>Parent Elements of &lt;logout&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-logout-parents"><a class="anchor" href="#nsa-logout-parents"></a>Parent Elements of &lt;logout&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2280,8 +2613,8 @@ This is configured with a <code>SecurityContextLogoutHandler</code>.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-logout-attributes"><a class="anchor" href="#nsa-logout-attributes"></a>&lt;logout&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-logout-attributes"><a class="anchor" href="#nsa-logout-attributes"></a>&lt;logout&gt; Attributes</h4>
 <div id="nsa-logout-delete-cookies" class="ulist">
 <ul>
 <li>
@@ -2331,8 +2664,8 @@ May be used to supply an instance of <code>LogoutSuccessHandler</code> which wil
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-openid-login"><a class="anchor" href="#nsa-openid-login"></a>&lt;openid-login&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-openid-login"><a class="anchor" href="#nsa-openid-login"></a>&lt;openid-login&gt;</h3>
 <div class="paragraph">
 <p>Similar to <code>&lt;form-login&gt;</code> and has the same attributes.
 The default value for <code>login-processing-url</code> is "/login/openid".
@@ -2340,8 +2673,8 @@ An <code>OpenIDAuthenticationFilter</code> and <code>OpenIDAuthenticationProvide
 The latter requires a reference to a <code>UserDetailsService</code>.
 Again, this can be specified by <code>id</code>, using the <code>user-service-ref</code> attribute, or will be located automatically in the application context.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-openid-login-parents"><a class="anchor" href="#nsa-openid-login-parents"></a>Parent Elements of &lt;openid-login&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-openid-login-parents"><a class="anchor" href="#nsa-openid-login-parents"></a>Parent Elements of &lt;openid-login&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2350,8 +2683,8 @@ Again, this can be specified by <code>id</code>, using the <code>user-service-re
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-openid-login-attributes"><a class="anchor" href="#nsa-openid-login-attributes"></a>&lt;openid-login&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-openid-login-attributes"><a class="anchor" href="#nsa-openid-login-attributes"></a>&lt;openid-login&gt; Attributes</h4>
 <div id="nsa-openid-login-always-use-default-target" class="ulist">
 <ul>
 <li>
@@ -2466,8 +2799,8 @@ Defaults to "username".</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-openid-login-children"><a class="anchor" href="#nsa-openid-login-children"></a>Child Elements of &lt;openid-login&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-openid-login-children"><a class="anchor" href="#nsa-openid-login-children"></a>Child Elements of &lt;openid-login&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2477,16 +2810,16 @@ Defaults to "username".</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-attribute-exchange"><a class="anchor" href="#nsa-attribute-exchange"></a>&lt;attribute-exchange&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-attribute-exchange"><a class="anchor" href="#nsa-attribute-exchange"></a>&lt;attribute-exchange&gt;</h3>
 <div class="paragraph">
 <p>The <code>attribute-exchange</code> element defines the list of attributes which should be requested from the identity provider.
-An example can be found in the <a href="#servlet-openid">OpenID Support</a> section of the namespace configuration chapter.
+An example can be found in the <a href="../authentication/openid.html#servlet-openid" class="page">OpenID Support</a> section of the namespace configuration chapter.
 More than one can be used, in which case each must have an <code>identifier-match</code> attribute, containing a regular expression which is matched against the supplied OpenID identifier.
 This allows different attribute lists to be fetched from different providers (Google, Yahoo etc).</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-attribute-exchange-parents"><a class="anchor" href="#nsa-attribute-exchange-parents"></a>Parent Elements of &lt;attribute-exchange&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-attribute-exchange-parents"><a class="anchor" href="#nsa-attribute-exchange-parents"></a>Parent Elements of &lt;attribute-exchange&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2495,8 +2828,8 @@ This allows different attribute lists to be fetched from different providers (Go
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-attribute-exchange-attributes"><a class="anchor" href="#nsa-attribute-exchange-attributes"></a>&lt;attribute-exchange&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-attribute-exchange-attributes"><a class="anchor" href="#nsa-attribute-exchange-attributes"></a>&lt;attribute-exchange&gt; Attributes</h4>
 <div id="nsa-attribute-exchange-identifier-match" class="ulist">
 <ul>
 <li>
@@ -2506,8 +2839,8 @@ A regular expression which will be compared against the claimed identity, when d
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-attribute-exchange-children"><a class="anchor" href="#nsa-attribute-exchange-children"></a>Child Elements of &lt;attribute-exchange&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-attribute-exchange-children"><a class="anchor" href="#nsa-attribute-exchange-children"></a>Child Elements of &lt;attribute-exchange&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2517,13 +2850,13 @@ A regular expression which will be compared against the claimed identity, when d
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-openid-attribute"><a class="anchor" href="#nsa-openid-attribute"></a>&lt;openid-attribute&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-openid-attribute"><a class="anchor" href="#nsa-openid-attribute"></a>&lt;openid-attribute&gt;</h3>
 <div class="paragraph">
 <p>Attributes used when making an OpenID AX <a href="https://openid.net/specs/openid-attribute-exchange-1_0.html#fetch_request"> Fetch Request</a></p>
 </div>
-<div class="sect4">
-<h5 id="nsa-openid-attribute-parents"><a class="anchor" href="#nsa-openid-attribute-parents"></a>Parent Elements of &lt;openid-attribute&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-openid-attribute-parents"><a class="anchor" href="#nsa-openid-attribute-parents"></a>Parent Elements of &lt;openid-attribute&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2532,8 +2865,8 @@ A regular expression which will be compared against the claimed identity, when d
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-openid-attribute-attributes"><a class="anchor" href="#nsa-openid-attribute-attributes"></a>&lt;openid-attribute&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-openid-attribute-attributes"><a class="anchor" href="#nsa-openid-attribute-attributes"></a>&lt;openid-attribute&gt; Attributes</h4>
 <div id="nsa-openid-attribute-count" class="ulist">
 <ul>
 <li>
@@ -2574,17 +2907,13 @@ See your OP&#8217;s documentation for valid attribute types.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-port-mappings"><a class="anchor" href="#nsa-port-mappings"></a>&lt;port-mappings&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-password-management"><a class="anchor" href="#nsa-password-management"></a>&lt;password-management&gt;</h3>
 <div class="paragraph">
-<p>By default, an instance of <code>PortMapperImpl</code> will be added to the configuration for use in redirecting to secure and insecure URLs.
-This element can optionally be used to override the default mappings which that class defines.
-Each child <code>&lt;port-mapping&gt;</code> element defines a pair of HTTP:HTTPS ports.
-The default mappings are 80:443 and 8080:8443.
-An example of overriding these can be found in <a href="#servlet-http-redirect">[servlet-http-redirect]</a>.</p>
+<p>This element configures password management.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-port-mappings-parents"><a class="anchor" href="#nsa-port-mappings-parents"></a>Parent Elements of &lt;port-mappings&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-password-management-parents"><a class="anchor" href="#nsa-password-management-parents"></a>Parent Elements of &lt;password-management&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2593,8 +2922,39 @@ An example of overriding these can be found in <a href="#servlet-http-redirect">
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-port-mappings-children"><a class="anchor" href="#nsa-port-mappings-children"></a>Child Elements of &lt;port-mappings&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-password-management-attributes"><a class="anchor" href="#nsa-password-management-attributes"></a>&lt;password-management&gt; Attributes</h4>
+<div id="nsa-password-management-change-password-page" class="ulist">
+<ul>
+<li>
+<p><strong>change-password-page</strong>
+The change password page. Defaults to "/change-password".</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="nsa-port-mappings"><a class="anchor" href="#nsa-port-mappings"></a>&lt;port-mappings&gt;</h3>
+<div class="paragraph">
+<p>By default, an instance of <code>PortMapperImpl</code> will be added to the configuration for use in redirecting to secure and insecure URLs.
+This element can optionally be used to override the default mappings which that class defines.
+Each child <code>&lt;port-mapping&gt;</code> element defines a pair of HTTP:HTTPS ports.
+The default mappings are 80:443 and 8080:8443.
+An example of overriding these can be found in <a href="../exploits/http.html#servlet-http-redirect" class="page">Redirect to HTTPS</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="nsa-port-mappings-parents"><a class="anchor" href="#nsa-port-mappings-parents"></a>Parent Elements of &lt;port-mappings&gt;</h4>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#nsa-http">http</a></p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="nsa-port-mappings-children"><a class="anchor" href="#nsa-port-mappings-children"></a>Child Elements of &lt;port-mappings&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2604,13 +2964,13 @@ An example of overriding these can be found in <a href="#servlet-http-redirect">
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-port-mapping"><a class="anchor" href="#nsa-port-mapping"></a>&lt;port-mapping&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-port-mapping"><a class="anchor" href="#nsa-port-mapping"></a>&lt;port-mapping&gt;</h3>
 <div class="paragraph">
 <p>Provides a method to map http ports to https ports when forcing a redirect.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-port-mapping-parents"><a class="anchor" href="#nsa-port-mapping-parents"></a>Parent Elements of &lt;port-mapping&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-port-mapping-parents"><a class="anchor" href="#nsa-port-mapping-parents"></a>Parent Elements of &lt;port-mapping&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2619,8 +2979,8 @@ An example of overriding these can be found in <a href="#servlet-http-redirect">
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-port-mapping-attributes"><a class="anchor" href="#nsa-port-mapping-attributes"></a>&lt;port-mapping&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-port-mapping-attributes"><a class="anchor" href="#nsa-port-mapping-attributes"></a>&lt;port-mapping&gt; Attributes</h4>
 <div id="nsa-port-mapping-http" class="ulist">
 <ul>
 <li>
@@ -2639,14 +2999,14 @@ The https port to use.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-remember-me"><a class="anchor" href="#nsa-remember-me"></a>&lt;remember-me&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-remember-me"><a class="anchor" href="#nsa-remember-me"></a>&lt;remember-me&gt;</h3>
 <div class="paragraph">
 <p>Adds the <code>RememberMeAuthenticationFilter</code> to the stack.
 This in turn will be configured with either a <code>TokenBasedRememberMeServices</code>, a <code>PersistentTokenBasedRememberMeServices</code> or a user-specified bean implementing <code>RememberMeServices</code> depending on the attribute settings.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-remember-me-parents"><a class="anchor" href="#nsa-remember-me-parents"></a>Parent Elements of &lt;remember-me&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-remember-me-parents"><a class="anchor" href="#nsa-remember-me-parents"></a>Parent Elements of &lt;remember-me&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2655,8 +3015,8 @@ This in turn will be configured with either a <code>TokenBasedRememberMeServices
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-remember-me-attributes"><a class="anchor" href="#nsa-remember-me-attributes"></a>&lt;remember-me&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-remember-me-attributes"><a class="anchor" href="#nsa-remember-me-attributes"></a>&lt;remember-me&gt; Attributes</h4>
 <div id="nsa-remember-me-authentication-success-handler-ref" class="ulist">
 <ul>
 <li>
@@ -2766,13 +3126,13 @@ If there are multiple instances, you can specify a bean <code>id</code> explicit
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-request-cache"><a class="anchor" href="#nsa-request-cache"></a>&lt;request-cache&gt; Element</h4>
+<div class="sect2">
+<h3 id="nsa-request-cache"><a class="anchor" href="#nsa-request-cache"></a>&lt;request-cache&gt; Element</h3>
 <div class="paragraph">
 <p>Sets the <code>RequestCache</code> instance which will be used by the <code>ExceptionTranslationFilter</code> to store request information before invoking an <code>AuthenticationEntryPoint</code>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-request-cache-parents"><a class="anchor" href="#nsa-request-cache-parents"></a>Parent Elements of &lt;request-cache&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-request-cache-parents"><a class="anchor" href="#nsa-request-cache-parents"></a>Parent Elements of &lt;request-cache&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2781,8 +3141,8 @@ If there are multiple instances, you can specify a bean <code>id</code> explicit
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-request-cache-attributes"><a class="anchor" href="#nsa-request-cache-attributes"></a>&lt;request-cache&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-request-cache-attributes"><a class="anchor" href="#nsa-request-cache-attributes"></a>&lt;request-cache&gt; Attributes</h4>
 <div id="nsa-request-cache-ref" class="ulist">
 <ul>
 <li>
@@ -2793,13 +3153,13 @@ Defines a reference to a Spring bean that is a <code>RequestCache</code>.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-session-management"><a class="anchor" href="#nsa-session-management"></a>&lt;session-management&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-session-management"><a class="anchor" href="#nsa-session-management"></a>&lt;session-management&gt;</h3>
 <div class="paragraph">
 <p>Session-management related functionality is implemented by the addition of a <code>SessionManagementFilter</code> to the filter stack.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-session-management-parents"><a class="anchor" href="#nsa-session-management-parents"></a>Parent Elements of &lt;session-management&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-session-management-parents"><a class="anchor" href="#nsa-session-management-parents"></a>Parent Elements of &lt;session-management&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2808,8 +3168,8 @@ Defines a reference to a Spring bean that is a <code>RequestCache</code>.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-session-management-attributes"><a class="anchor" href="#nsa-session-management-attributes"></a>&lt;session-management&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-session-management-attributes"><a class="anchor" href="#nsa-session-management-attributes"></a>&lt;session-management&gt; Attributes</h4>
 <div id="nsa-session-management-invalid-session-url" class="ulist">
 <ul>
 <li>
@@ -2865,8 +3225,8 @@ See the Javadoc for this class for more details.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-session-management-children"><a class="anchor" href="#nsa-session-management-children"></a>Child Elements of &lt;session-management&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-session-management-children"><a class="anchor" href="#nsa-session-management-children"></a>Child Elements of &lt;session-management&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2876,16 +3236,16 @@ See the Javadoc for this class for more details.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-concurrency-control"><a class="anchor" href="#nsa-concurrency-control"></a>&lt;concurrency-control&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-concurrency-control"><a class="anchor" href="#nsa-concurrency-control"></a>&lt;concurrency-control&gt;</h3>
 <div class="paragraph">
 <p>Adds support for concurrent session control, allowing limits to be placed on the number of active sessions a user can have.
 A <code>ConcurrentSessionFilter</code> will be created, and a <code>ConcurrentSessionControlAuthenticationStrategy</code> will be used with the <code>SessionManagementFilter</code>.
 If a <code>form-login</code> element has been declared, the strategy object will also be injected into the created authentication filter.
 An instance of <code>SessionRegistry</code> (a <code>SessionRegistryImpl</code> instance unless the user wishes to use a custom bean) will be created for use by the strategy.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-concurrency-control-parents"><a class="anchor" href="#nsa-concurrency-control-parents"></a>Parent Elements of &lt;concurrency-control&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-concurrency-control-parents"><a class="anchor" href="#nsa-concurrency-control-parents"></a>Parent Elements of &lt;concurrency-control&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2894,8 +3254,8 @@ An instance of <code>SessionRegistry</code> (a <code>SessionRegistryImpl</code> 
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-concurrency-control-attributes"><a class="anchor" href="#nsa-concurrency-control-attributes"></a>&lt;concurrency-control&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-concurrency-control-attributes"><a class="anchor" href="#nsa-concurrency-control-attributes"></a>&lt;concurrency-control&gt; Attributes</h4>
 <div id="nsa-concurrency-control-error-if-maximum-exceeded" class="ulist">
 <ul>
 <li>
@@ -2952,16 +3312,16 @@ The other concurrent session control beans will be wired up to use it.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-x509"><a class="anchor" href="#nsa-x509"></a>&lt;x509&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-x509"><a class="anchor" href="#nsa-x509"></a>&lt;x509&gt;</h3>
 <div class="paragraph">
 <p>Adds support for X.509 authentication.
 An <code>X509AuthenticationFilter</code> will be added to the stack and an <code>Http403ForbiddenEntryPoint</code> bean will be created.
 The latter will only be used if no other authentication mechanisms are in use (its only functionality is to return an HTTP 403 error code).
 A <code>PreAuthenticatedAuthenticationProvider</code> will also be created which delegates the loading of user authorities to a <code>UserDetailsService</code>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-x509-parents"><a class="anchor" href="#nsa-x509-parents"></a>Parent Elements of &lt;x509&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-x509-parents"><a class="anchor" href="#nsa-x509-parents"></a>Parent Elements of &lt;x509&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -2970,8 +3330,8 @@ A <code>PreAuthenticatedAuthenticationProvider</code> will also be created which
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-x509-attributes"><a class="anchor" href="#nsa-x509-attributes"></a>&lt;x509&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-x509-attributes"><a class="anchor" href="#nsa-x509-attributes"></a>&lt;x509&gt; Attributes</h4>
 <div id="nsa-x509-authentication-details-source-ref" class="ulist">
 <ul>
 <li>
@@ -2999,13 +3359,13 @@ If not set, an attempt will be made to locate a suitable instance automatically 
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-filter-chain-map"><a class="anchor" href="#nsa-filter-chain-map"></a>&lt;filter-chain-map&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-filter-chain-map"><a class="anchor" href="#nsa-filter-chain-map"></a>&lt;filter-chain-map&gt;</h3>
 <div class="paragraph">
 <p>Used to explicitly configure a FilterChainProxy instance with a FilterChainMap</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-filter-chain-map-attributes"><a class="anchor" href="#nsa-filter-chain-map-attributes"></a>&lt;filter-chain-map&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-filter-chain-map-attributes"><a class="anchor" href="#nsa-filter-chain-map-attributes"></a>&lt;filter-chain-map&gt; Attributes</h4>
 <div id="nsa-filter-chain-map-request-matcher" class="ulist">
 <ul>
 <li>
@@ -3016,8 +3376,8 @@ Currently the options are 'ant' (for ant path patterns), 'regex' for regular exp
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-filter-chain-map-children"><a class="anchor" href="#nsa-filter-chain-map-children"></a>Child Elements of &lt;filter-chain-map&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-filter-chain-map-children"><a class="anchor" href="#nsa-filter-chain-map-children"></a>Child Elements of &lt;filter-chain-map&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3027,14 +3387,14 @@ Currently the options are 'ant' (for ant path patterns), 'regex' for regular exp
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-filter-chain"><a class="anchor" href="#nsa-filter-chain"></a>&lt;filter-chain&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-filter-chain"><a class="anchor" href="#nsa-filter-chain"></a>&lt;filter-chain&gt;</h3>
 <div class="paragraph">
 <p>Used within to define a specific URL pattern and the list of filters which apply to the URLs matching that pattern.
 When multiple filter-chain elements are assembled in a list in order to configure a FilterChainProxy, the most specific patterns must be placed at the top of the list, with most general ones at the bottom.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-filter-chain-parents"><a class="anchor" href="#nsa-filter-chain-parents"></a>Parent Elements of &lt;filter-chain&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-filter-chain-parents"><a class="anchor" href="#nsa-filter-chain-parents"></a>Parent Elements of &lt;filter-chain&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3043,8 +3403,8 @@ When multiple filter-chain elements are assembled in a list in order to configur
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-filter-chain-attributes"><a class="anchor" href="#nsa-filter-chain-attributes"></a>&lt;filter-chain&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-filter-chain-attributes"><a class="anchor" href="#nsa-filter-chain-attributes"></a>&lt;filter-chain&gt; Attributes</h4>
 <div id="nsa-filter-chain-filters" class="ulist">
 <ul>
 <li>
@@ -3072,16 +3432,16 @@ A reference to a <code>RequestMatcher</code> that will be used to determine if a
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-filter-security-metadata-source"><a class="anchor" href="#nsa-filter-security-metadata-source"></a>&lt;filter-security-metadata-source&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-filter-security-metadata-source"><a class="anchor" href="#nsa-filter-security-metadata-source"></a>&lt;filter-security-metadata-source&gt;</h3>
 <div class="paragraph">
 <p>Used to explicitly configure a FilterSecurityMetadataSource bean for use with a FilterSecurityInterceptor.
 Usually only needed if you are configuring a FilterChainProxy explicitly, rather than using the&lt;http&gt; element.
 The intercept-url elements used should only contain pattern, method and access attributes.
 Any others will result in a configuration error.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-filter-security-metadata-source-attributes"><a class="anchor" href="#nsa-filter-security-metadata-source-attributes"></a>&lt;filter-security-metadata-source&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-filter-security-metadata-source-attributes"><a class="anchor" href="#nsa-filter-security-metadata-source-attributes"></a>&lt;filter-security-metadata-source&gt; Attributes</h4>
 <div id="nsa-filter-security-metadata-source-id" class="ulist">
 <ul>
 <li>
@@ -3111,8 +3471,8 @@ If the expression evaluates to 'true', access will be granted.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-filter-security-metadata-source-children"><a class="anchor" href="#nsa-filter-security-metadata-source-children"></a>Child Elements of &lt;filter-security-metadata-source&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-filter-security-metadata-source-children"><a class="anchor" href="#nsa-filter-security-metadata-source-children"></a>Child Elements of &lt;filter-security-metadata-source&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3123,14 +3483,16 @@ If the expression evaluates to 'true', access will be granted.</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="nsa-websocket-security"><a class="anchor" href="#nsa-websocket-security"></a>WebSocket Security</h3>
+</div>
+<div class="sect1">
+<h2 id="nsa-websocket-security"><a class="anchor" href="#nsa-websocket-security"></a>WebSocket Security</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security 4.0+ provides support for authorizing messages.
 One concrete example of where this is useful is to provide authorization in WebSocket based applications.</p>
 </div>
-<div class="sect3">
-<h4 id="nsa-websocket-message-broker"><a class="anchor" href="#nsa-websocket-message-broker"></a>&lt;websocket-message-broker&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-websocket-message-broker"><a class="anchor" href="#nsa-websocket-message-broker"></a>&lt;websocket-message-broker&gt;</h3>
 <div class="paragraph">
 <p>The websocket-message-broker element has two different modes.
 If the <a href="#nsa-websocket-message-broker-id">websocket-message-broker@id</a> is not specified, then it will do the following things:</p>
@@ -3164,8 +3526,8 @@ This ensures that the expected CsrfToken from the HttpServletRequest is copied i
 All the wiring with Spring&#8217;s messaging infrastructure can then be done manually.
 This is more cumbersome, but provides greater control over the configuration.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-websocket-message-broker-attributes"><a class="anchor" href="#nsa-websocket-message-broker-attributes"></a>&lt;websocket-message-broker&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-websocket-message-broker-attributes"><a class="anchor" href="#nsa-websocket-message-broker-attributes"></a>&lt;websocket-message-broker&gt; Attributes</h4>
 <div id="nsa-websocket-message-broker-id" class="ulist">
 <ul>
 <li>
@@ -3184,8 +3546,8 @@ Changing the default is useful if it is necessary to allow other origins to make
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-websocket-message-broker-children"><a class="anchor" href="#nsa-websocket-message-broker-children"></a>Child Elements of &lt;websocket-message-broker&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-websocket-message-broker-children"><a class="anchor" href="#nsa-websocket-message-broker-children"></a>Child Elements of &lt;websocket-message-broker&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3198,13 +3560,13 @@ Changing the default is useful if it is necessary to allow other origins to make
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-intercept-message"><a class="anchor" href="#nsa-intercept-message"></a>&lt;intercept-message&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-intercept-message"><a class="anchor" href="#nsa-intercept-message"></a>&lt;intercept-message&gt;</h3>
 <div class="paragraph">
 <p>Defines an authorization rule for a message.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-intercept-message-parents"><a class="anchor" href="#nsa-intercept-message-parents"></a>Parent Elements of &lt;intercept-message&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-intercept-message-parents"><a class="anchor" href="#nsa-intercept-message-parents"></a>Parent Elements of &lt;intercept-message&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3213,8 +3575,8 @@ Changing the default is useful if it is necessary to allow other origins to make
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-intercept-message-attributes"><a class="anchor" href="#nsa-intercept-message-attributes"></a>&lt;intercept-message&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-intercept-message-attributes"><a class="anchor" href="#nsa-intercept-message-attributes"></a>&lt;intercept-message&gt; Attributes</h4>
 <div id="nsa-intercept-message-pattern" class="ulist">
 <ul>
 <li>
@@ -3242,23 +3604,25 @@ For example, "denyAll" will deny access to all of the matching Messages; "permit
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="nsa-authentication"><a class="anchor" href="#nsa-authentication"></a>Authentication Services</h3>
+</div>
+<div class="sect1">
+<h2 id="nsa-authentication"><a class="anchor" href="#nsa-authentication"></a>Authentication Services</h2>
+<div class="sectionbody">
 <div class="paragraph">
 <p>Before Spring Security 3.0, an <code>AuthenticationManager</code> was automatically registered internally.
 Now you must register one explicitly using the <code>&lt;authentication-manager&gt;</code> element.
 This creates an instance of Spring Security&#8217;s <code>ProviderManager</code> class, which needs to be configured with a list of one or more <code>AuthenticationProvider</code> instances.
 These can either be created using syntax elements provided by the namespace, or they can be standard bean definitions, marked for addition to the list using the <code>authentication-provider</code> element.</p>
 </div>
-<div class="sect3">
-<h4 id="nsa-authentication-manager"><a class="anchor" href="#nsa-authentication-manager"></a>&lt;authentication-manager&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-authentication-manager"><a class="anchor" href="#nsa-authentication-manager"></a>&lt;authentication-manager&gt;</h3>
 <div class="paragraph">
 <p>Every Spring Security application which uses the namespace must have include this element somewhere.
 It is responsible for registering the <code>AuthenticationManager</code> which provides authentication services to the application.
 All elements which create <code>AuthenticationProvider</code> instances should be children of this element.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-authentication-manager-attributes"><a class="anchor" href="#nsa-authentication-manager-attributes"></a>&lt;authentication-manager&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-authentication-manager-attributes"><a class="anchor" href="#nsa-authentication-manager-attributes"></a>&lt;authentication-manager&gt; Attributes</h4>
 <div id="nsa-authentication-manager-alias" class="ulist">
 <ul>
 <li>
@@ -3272,7 +3636,7 @@ This attribute allows you to define an alias name for the internal instance for 
 <li>
 <p><strong>erase-credentials</strong>
 If set to true, the AuthenticationManager will attempt to clear any credentials data in the returned Authentication object, once the user has been authenticated.
-Literally it maps to the <code>eraseCredentialsAfterAuthentication</code> property of the <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.</p>
+Literally it maps to the <code>eraseCredentialsAfterAuthentication</code> property of the <a href="../authentication/architecture/index.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
 </li>
 </ul>
 </div>
@@ -3286,8 +3650,8 @@ It is the same as the alias element, but provides a more consistent experience w
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-authentication-manager-children"><a class="anchor" href="#nsa-authentication-manager-children"></a>Child Elements of &lt;authentication-manager&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-authentication-manager-children"><a class="anchor" href="#nsa-authentication-manager-children"></a>Child Elements of &lt;authentication-manager&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3300,15 +3664,15 @@ It is the same as the alias element, but provides a more consistent experience w
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-authentication-provider"><a class="anchor" href="#nsa-authentication-provider"></a>&lt;authentication-provider&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-authentication-provider"><a class="anchor" href="#nsa-authentication-provider"></a>&lt;authentication-provider&gt;</h3>
 <div class="paragraph">
 <p>Unless used with a <code>ref</code> attribute, this element is shorthand for configuring a <code>DaoAuthenticationProvider</code>.
 <code>DaoAuthenticationProvider</code> loads user information from a <code>UserDetailsService</code> and compares the username/password combination with the values supplied at login.
 The <code>UserDetailsService</code> instance can be defined either by using an available namespace element (<code>jdbc-user-service</code> or by using the <code>user-service-ref</code> attribute to point to a bean defined elsewhere in the application context).</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-authentication-provider-parents"><a class="anchor" href="#nsa-authentication-provider-parents"></a>Parent Elements of &lt;authentication-provider&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-authentication-provider-parents"><a class="anchor" href="#nsa-authentication-provider-parents"></a>Parent Elements of &lt;authentication-provider&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3317,8 +3681,8 @@ The <code>UserDetailsService</code> instance can be defined either by using an a
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-authentication-provider-attributes"><a class="anchor" href="#nsa-authentication-provider-attributes"></a>&lt;authentication-provider&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-authentication-provider-attributes"><a class="anchor" href="#nsa-authentication-provider-attributes"></a>&lt;authentication-provider&gt; Attributes</h4>
 <div id="nsa-authentication-provider-ref" class="ulist">
 <ul>
 <li>
@@ -3347,8 +3711,8 @@ A reference to a bean that implements UserDetailsService that may be created usi
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-authentication-provider-children"><a class="anchor" href="#nsa-authentication-provider-children"></a>Child Elements of &lt;authentication-provider&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-authentication-provider-children"><a class="anchor" href="#nsa-authentication-provider-children"></a>Child Elements of &lt;authentication-provider&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3367,13 +3731,13 @@ A reference to a bean that implements UserDetailsService that may be created usi
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-jdbc-user-service"><a class="anchor" href="#nsa-jdbc-user-service"></a>&lt;jdbc-user-service&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-jdbc-user-service"><a class="anchor" href="#nsa-jdbc-user-service"></a>&lt;jdbc-user-service&gt;</h3>
 <div class="paragraph">
 <p>Causes creation of a JDBC-based UserDetailsService.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-jdbc-user-service-attributes"><a class="anchor" href="#nsa-jdbc-user-service-attributes"></a>&lt;jdbc-user-service&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-jdbc-user-service-attributes"><a class="anchor" href="#nsa-jdbc-user-service-attributes"></a>&lt;jdbc-user-service&gt; Attributes</h4>
 <div id="nsa-jdbc-user-service-authorities-by-username-query" class="ulist">
 <ul>
 <li>
@@ -3458,14 +3822,14 @@ The default is</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-password-encoder"><a class="anchor" href="#nsa-password-encoder"></a>&lt;password-encoder&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-password-encoder"><a class="anchor" href="#nsa-password-encoder"></a>&lt;password-encoder&gt;</h3>
 <div class="paragraph">
-<p>Authentication providers can optionally be configured to use a password encoder as described in the <a href="#authentication-password-storage">[authentication-password-storage]</a>.
+<p>Authentication providers can optionally be configured to use a password encoder as described in the <a href="../../features/authentication/password-storage.html#authentication-password-storage" class="page">Password Storage</a>.
 This will result in the bean being injected with the appropriate <code>PasswordEncoder</code> instance.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-password-encoder-parents"><a class="anchor" href="#nsa-password-encoder-parents"></a>Parent Elements of &lt;password-encoder&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-password-encoder-parents"><a class="anchor" href="#nsa-password-encoder-parents"></a>Parent Elements of &lt;password-encoder&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3477,8 +3841,8 @@ This will result in the bean being injected with the appropriate <code>PasswordE
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-password-encoder-attributes"><a class="anchor" href="#nsa-password-encoder-attributes"></a>&lt;password-encoder&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-password-encoder-attributes"><a class="anchor" href="#nsa-password-encoder-attributes"></a>&lt;password-encoder&gt; Attributes</h4>
 <div id="nsa-password-encoder-hash" class="ulist">
 <ul>
 <li>
@@ -3498,14 +3862,14 @@ Defines a reference to a Spring bean that implements <code>PasswordEncoder</code
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-user-service"><a class="anchor" href="#nsa-user-service"></a>&lt;user-service&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-user-service"><a class="anchor" href="#nsa-user-service"></a>&lt;user-service&gt;</h3>
 <div class="paragraph">
 <p>Creates an in-memory UserDetailsService from a properties file or a list of "user" child elements.
 Usernames are converted to lower-case internally to allow for case-insensitive lookups, so this should not be used if case-sensitivity is required.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-user-service-attributes"><a class="anchor" href="#nsa-user-service-attributes"></a>&lt;user-service&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-user-service-attributes"><a class="anchor" href="#nsa-user-service-attributes"></a>&lt;user-service&gt; Attributes</h4>
 <div id="nsa-user-service-id" class="ulist">
 <ul>
 <li>
@@ -3528,8 +3892,8 @@ The location of a Properties file where each line is in the format of</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-user-service-children"><a class="anchor" href="#nsa-user-service-children"></a>Child Elements of &lt;user-service&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-user-service-children"><a class="anchor" href="#nsa-user-service-children"></a>Child Elements of &lt;user-service&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3539,13 +3903,13 @@ The location of a Properties file where each line is in the format of</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-user"><a class="anchor" href="#nsa-user"></a>&lt;user&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-user"><a class="anchor" href="#nsa-user"></a>&lt;user&gt;</h3>
 <div class="paragraph">
 <p>Represents a user in the application.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-user-parents"><a class="anchor" href="#nsa-user-parents"></a>Parent Elements of &lt;user&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-user-parents"><a class="anchor" href="#nsa-user-parents"></a>Parent Elements of &lt;user&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3554,8 +3918,8 @@ The location of a Properties file where each line is in the format of</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-user-attributes"><a class="anchor" href="#nsa-user-attributes"></a>&lt;user&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-user-attributes"><a class="anchor" href="#nsa-user-attributes"></a>&lt;user&gt; Attributes</h4>
 <div id="nsa-user-authorities" class="ulist">
 <ul>
 <li>
@@ -3605,16 +3969,18 @@ Cannot be empty.</p>
 </div>
 </div>
 </div>
+</div>
+<div class="sect1">
+<h2 id="method-security"><a class="anchor" href="#method-security"></a>Method Security</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="_method_security"><a class="anchor" href="#_method_security"></a>Method Security</h3>
-<div class="sect3">
-<h4 id="nsa-method-security"><a class="anchor" href="#nsa-method-security"></a>&lt;method-security&gt;</h4>
+<h3 id="nsa-method-security"><a class="anchor" href="#nsa-method-security"></a>&lt;method-security&gt;</h3>
 <div class="paragraph">
 <p>This element is the primary means of adding support for securing methods on Spring Security beans.
 Methods can be secured by the use of annotations (defined at the interface or class level) or by defining a set of pointcuts.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-method-security-attributes"><a class="anchor" href="#nsa-method-security-attributes"></a>&lt;method-security&gt; attributes</h5>
+<div class="sect3">
+<h4 id="nsa-method-security-attributes"><a class="anchor" href="#nsa-method-security-attributes"></a>&lt;method-security&gt; attributes</h4>
 <div id="nsa-method-security-pre-post-enabled" class="ulist">
 <ul>
 <li>
@@ -3652,8 +4018,8 @@ Defaults to "false".</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-method-security-children"><a class="anchor" href="#nsa-method-security-children"></a>Child Elements of &lt;method-security&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-method-security-children"><a class="anchor" href="#nsa-method-security-children"></a>Child Elements of &lt;method-security&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3663,14 +4029,14 @@ Defaults to "false".</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-global-method-security"><a class="anchor" href="#nsa-global-method-security"></a>&lt;global-method-security&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-global-method-security"><a class="anchor" href="#nsa-global-method-security"></a>&lt;global-method-security&gt;</h3>
 <div class="paragraph">
 <p>This element is the primary means of adding support for securing methods on Spring Security beans.
 Methods can be secured by the use of annotations (defined at the interface or class level) or by defining a set of pointcuts as child elements, using AspectJ syntax.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-global-method-security-attributes"><a class="anchor" href="#nsa-global-method-security-attributes"></a>&lt;global-method-security&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-global-method-security-attributes"><a class="anchor" href="#nsa-global-method-security-attributes"></a>&lt;global-method-security&gt; Attributes</h4>
 <div id="nsa-global-method-security-access-decision-manager-ref" class="ulist">
 <ul>
 <li>
@@ -3763,8 +4129,8 @@ Defaults to "disabled".</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-global-method-security-children"><a class="anchor" href="#nsa-global-method-security-children"></a>Child Elements of &lt;global-method-security&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-global-method-security-children"><a class="anchor" href="#nsa-global-method-security-children"></a>Child Elements of &lt;global-method-security&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3783,14 +4149,14 @@ Defaults to "disabled".</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-after-invocation-provider"><a class="anchor" href="#nsa-after-invocation-provider"></a>&lt;after-invocation-provider&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-after-invocation-provider"><a class="anchor" href="#nsa-after-invocation-provider"></a>&lt;after-invocation-provider&gt;</h3>
 <div class="paragraph">
 <p>This element can be used to decorate an <code>AfterInvocationProvider</code> for use by the security interceptor maintained by the <code>&lt;global-method-security&gt;</code> namespace.
 You can define zero or more of these within the <code>global-method-security</code> element, each with a <code>ref</code> attribute pointing to an <code>AfterInvocationProvider</code> bean instance within your application context.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-after-invocation-provider-parents"><a class="anchor" href="#nsa-after-invocation-provider-parents"></a>Parent Elements of &lt;after-invocation-provider&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-after-invocation-provider-parents"><a class="anchor" href="#nsa-after-invocation-provider-parents"></a>Parent Elements of &lt;after-invocation-provider&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3799,8 +4165,8 @@ You can define zero or more of these within the <code>global-method-security</co
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-after-invocation-provider-attributes"><a class="anchor" href="#nsa-after-invocation-provider-attributes"></a>&lt;after-invocation-provider&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-after-invocation-provider-attributes"><a class="anchor" href="#nsa-after-invocation-provider-attributes"></a>&lt;after-invocation-provider&gt; Attributes</h4>
 <div id="nsa-after-invocation-provider-ref" class="ulist">
 <ul>
 <li>
@@ -3811,14 +4177,14 @@ Defines a reference to a Spring bean that implements <code>AfterInvocationProvid
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-pre-post-annotation-handling"><a class="anchor" href="#nsa-pre-post-annotation-handling"></a>&lt;pre-post-annotation-handling&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-pre-post-annotation-handling"><a class="anchor" href="#nsa-pre-post-annotation-handling"></a>&lt;pre-post-annotation-handling&gt;</h3>
 <div class="paragraph">
 <p>Allows the default expression-based mechanism for handling Spring Security&#8217;s pre and post invocation annotations (@PreFilter, @PreAuthorize, @PostFilter, @PostAuthorize) to be replaced entirely.
 Only applies if these annotations are enabled.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-pre-post-annotation-handling-parents"><a class="anchor" href="#nsa-pre-post-annotation-handling-parents"></a>Parent Elements of &lt;pre-post-annotation-handling&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-pre-post-annotation-handling-parents"><a class="anchor" href="#nsa-pre-post-annotation-handling-parents"></a>Parent Elements of &lt;pre-post-annotation-handling&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3827,8 +4193,8 @@ Only applies if these annotations are enabled.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-pre-post-annotation-handling-children"><a class="anchor" href="#nsa-pre-post-annotation-handling-children"></a>Child Elements of &lt;pre-post-annotation-handling&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-pre-post-annotation-handling-children"><a class="anchor" href="#nsa-pre-post-annotation-handling-children"></a>Child Elements of &lt;pre-post-annotation-handling&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3844,13 +4210,13 @@ Only applies if these annotations are enabled.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-invocation-attribute-factory"><a class="anchor" href="#nsa-invocation-attribute-factory"></a>&lt;invocation-attribute-factory&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-invocation-attribute-factory"><a class="anchor" href="#nsa-invocation-attribute-factory"></a>&lt;invocation-attribute-factory&gt;</h3>
 <div class="paragraph">
 <p>Defines the PrePostInvocationAttributeFactory instance which is used to generate pre and post invocation metadata from the annotated methods.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-invocation-attribute-factory-parents"><a class="anchor" href="#nsa-invocation-attribute-factory-parents"></a>Parent Elements of &lt;invocation-attribute-factory&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-invocation-attribute-factory-parents"><a class="anchor" href="#nsa-invocation-attribute-factory-parents"></a>Parent Elements of &lt;invocation-attribute-factory&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3859,8 +4225,8 @@ Only applies if these annotations are enabled.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-invocation-attribute-factory-attributes"><a class="anchor" href="#nsa-invocation-attribute-factory-attributes"></a>&lt;invocation-attribute-factory&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-invocation-attribute-factory-attributes"><a class="anchor" href="#nsa-invocation-attribute-factory-attributes"></a>&lt;invocation-attribute-factory&gt; Attributes</h4>
 <div id="nsa-invocation-attribute-factory-ref" class="ulist">
 <ul>
 <li>
@@ -3871,13 +4237,13 @@ Defines a reference to a Spring bean Id.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-post-invocation-advice"><a class="anchor" href="#nsa-post-invocation-advice"></a>&lt;post-invocation-advice&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-post-invocation-advice"><a class="anchor" href="#nsa-post-invocation-advice"></a>&lt;post-invocation-advice&gt;</h3>
 <div class="paragraph">
 <p>Customizes the <code>PostInvocationAdviceProvider</code> with the ref as the <code>PostInvocationAuthorizationAdvice</code> for the &lt;pre-post-annotation-handling&gt; element.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-post-invocation-advice-parents"><a class="anchor" href="#nsa-post-invocation-advice-parents"></a>Parent Elements of &lt;post-invocation-advice&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-post-invocation-advice-parents"><a class="anchor" href="#nsa-post-invocation-advice-parents"></a>Parent Elements of &lt;post-invocation-advice&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3886,8 +4252,8 @@ Defines a reference to a Spring bean Id.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-post-invocation-advice-attributes"><a class="anchor" href="#nsa-post-invocation-advice-attributes"></a>&lt;post-invocation-advice&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-post-invocation-advice-attributes"><a class="anchor" href="#nsa-post-invocation-advice-attributes"></a>&lt;post-invocation-advice&gt; Attributes</h4>
 <div id="nsa-post-invocation-advice-ref" class="ulist">
 <ul>
 <li>
@@ -3898,13 +4264,13 @@ Defines a reference to a Spring bean Id.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-pre-invocation-advice"><a class="anchor" href="#nsa-pre-invocation-advice"></a>&lt;pre-invocation-advice&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-pre-invocation-advice"><a class="anchor" href="#nsa-pre-invocation-advice"></a>&lt;pre-invocation-advice&gt;</h3>
 <div class="paragraph">
 <p>Customizes the <code>PreInvocationAuthorizationAdviceVoter</code> with the ref as the <code>PreInvocationAuthorizationAdviceVoter</code> for the &lt;pre-post-annotation-handling&gt; element.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-pre-invocation-advice-parents"><a class="anchor" href="#nsa-pre-invocation-advice-parents"></a>Parent Elements of &lt;pre-invocation-advice&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-pre-invocation-advice-parents"><a class="anchor" href="#nsa-pre-invocation-advice-parents"></a>Parent Elements of &lt;pre-invocation-advice&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3913,8 +4279,8 @@ Defines a reference to a Spring bean Id.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-pre-invocation-advice-attributes"><a class="anchor" href="#nsa-pre-invocation-advice-attributes"></a>&lt;pre-invocation-advice&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-pre-invocation-advice-attributes"><a class="anchor" href="#nsa-pre-invocation-advice-attributes"></a>&lt;pre-invocation-advice&gt; Attributes</h4>
 <div id="nsa-pre-invocation-advice-ref" class="ulist">
 <ul>
 <li>
@@ -3925,15 +4291,15 @@ Defines a reference to a Spring bean Id.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-protect-pointcut"><a class="anchor" href="#nsa-protect-pointcut"></a>Securing Methods using</h4>
+<div class="sect2">
+<h3 id="nsa-protect-pointcut"><a class="anchor" href="#nsa-protect-pointcut"></a>Securing Methods using</h3>
 <div class="paragraph">
 <p><code>&lt;protect-pointcut&gt;</code>
 Rather than defining security attributes on an individual method or class basis using the <code>@Secured</code> annotation, you can define cross-cutting security constraints across whole sets of methods and interfaces in your service layer using the <code>&lt;protect-pointcut&gt;</code> element.
-You can find an example in the <a href="#ns-protect-pointcut">namespace introduction</a>.</p>
+You can find an example in the <a href="../authorization/method-security.html#ns-protect-pointcut" class="page">namespace introduction</a>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-protect-pointcut-parents"><a class="anchor" href="#nsa-protect-pointcut-parents"></a>Parent Elements of &lt;protect-pointcut&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-protect-pointcut-parents"><a class="anchor" href="#nsa-protect-pointcut-parents"></a>Parent Elements of &lt;protect-pointcut&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3942,8 +4308,8 @@ You can find an example in the <a href="#ns-protect-pointcut">namespace introduc
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-protect-pointcut-attributes"><a class="anchor" href="#nsa-protect-pointcut-attributes"></a>&lt;protect-pointcut&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-protect-pointcut-attributes"><a class="anchor" href="#nsa-protect-pointcut-attributes"></a>&lt;protect-pointcut&gt; Attributes</h4>
 <div id="nsa-protect-pointcut-access" class="ulist">
 <ul>
 <li>
@@ -3964,13 +4330,13 @@ For example, <code>execution(int com.foo.TargetObject.countLength(String))</code
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-intercept-methods"><a class="anchor" href="#nsa-intercept-methods"></a>&lt;intercept-methods&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-intercept-methods"><a class="anchor" href="#nsa-intercept-methods"></a>&lt;intercept-methods&gt;</h3>
 <div class="paragraph">
 <p>Can be used inside a bean definition to add a security interceptor to the bean and set up access configuration attributes for the bean&#8217;s methods</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-intercept-methods-attributes"><a class="anchor" href="#nsa-intercept-methods-attributes"></a>&lt;intercept-methods&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-intercept-methods-attributes"><a class="anchor" href="#nsa-intercept-methods-attributes"></a>&lt;intercept-methods&gt; Attributes</h4>
 <div id="nsa-intercept-methods-access-decision-manager-ref" class="ulist">
 <ul>
 <li>
@@ -3980,8 +4346,8 @@ Optional AccessDecisionManager bean ID to be used by the created method security
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-intercept-methods-children"><a class="anchor" href="#nsa-intercept-methods-children"></a>Child Elements of &lt;intercept-methods&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-intercept-methods-children"><a class="anchor" href="#nsa-intercept-methods-children"></a>Child Elements of &lt;intercept-methods&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -3991,13 +4357,13 @@ Optional AccessDecisionManager bean ID to be used by the created method security
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-method-security-metadata-source"><a class="anchor" href="#nsa-method-security-metadata-source"></a>&lt;method-security-metadata-source&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-method-security-metadata-source"><a class="anchor" href="#nsa-method-security-metadata-source"></a>&lt;method-security-metadata-source&gt;</h3>
 <div class="paragraph">
 <p>Creates a MethodSecurityMetadataSource instance</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-method-security-metadata-source-attributes"><a class="anchor" href="#nsa-method-security-metadata-source-attributes"></a>&lt;method-security-metadata-source&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-method-security-metadata-source-attributes"><a class="anchor" href="#nsa-method-security-metadata-source-attributes"></a>&lt;method-security-metadata-source&gt; Attributes</h4>
 <div id="nsa-method-security-metadata-source-id" class="ulist">
 <ul>
 <li>
@@ -4018,8 +4384,8 @@ If the expression evaluates to 'true', access will be granted.</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-method-security-metadata-source-children"><a class="anchor" href="#nsa-method-security-metadata-source-children"></a>Child Elements of &lt;method-security-metadata-source&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-method-security-metadata-source-children"><a class="anchor" href="#nsa-method-security-metadata-source-children"></a>Child Elements of &lt;method-security-metadata-source&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4029,14 +4395,14 @@ If the expression evaluates to 'true', access will be granted.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-protect"><a class="anchor" href="#nsa-protect"></a>&lt;protect&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-protect"><a class="anchor" href="#nsa-protect"></a>&lt;protect&gt;</h3>
 <div class="paragraph">
 <p>Defines a protected method and the access control configuration attributes that apply to it.
 We strongly advise you NOT to mix "protect" declarations with any services provided "global-method-security".</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-protect-parents"><a class="anchor" href="#nsa-protect-parents"></a>Parent Elements of &lt;protect&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-protect-parents"><a class="anchor" href="#nsa-protect-parents"></a>Parent Elements of &lt;protect&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4048,8 +4414,8 @@ We strongly advise you NOT to mix "protect" declarations with any services provi
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-protect-attributes"><a class="anchor" href="#nsa-protect-attributes"></a>&lt;protect&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-protect-attributes"><a class="anchor" href="#nsa-protect-attributes"></a>&lt;protect&gt; Attributes</h4>
 <div id="nsa-protect-access" class="ulist">
 <ul>
 <li>
@@ -4070,20 +4436,22 @@ A method name</p>
 </div>
 </div>
 </div>
-<div class="sect2">
-<h3 id="nsa-ldap"><a class="anchor" href="#nsa-ldap"></a>LDAP Namespace Options</h3>
+</div>
+<div class="sect1">
+<h2 id="nsa-ldap"><a class="anchor" href="#nsa-ldap"></a>LDAP Namespace Options</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>LDAP is covered in some details in <a href="#servlet-authentication-ldap">its own chapter</a>.
+<p>LDAP is covered in some details in <a href="../authentication/unpwd/ldap.html#servlet-authentication-ldap" class="page">its own chapter</a>.
 We will expand on that here with some explanation of how the namespace options map to Spring beans.
 The LDAP implementation uses Spring LDAP extensively, so some familiarity with that project&#8217;s API may be useful.</p>
 </div>
-<div class="sect3">
-<h4 id="nsa-ldap-server"><a class="anchor" href="#nsa-ldap-server"></a>Defining the LDAP Server using the</h4>
+<div class="sect2">
+<h3 id="nsa-ldap-server"><a class="anchor" href="#nsa-ldap-server"></a>Defining the LDAP Server using the</h3>
 <div class="paragraph">
 <p><code>&lt;ldap-server&gt;</code> Element
 This element sets up a Spring LDAP <code>ContextSource</code> for use by the other LDAP beans, defining the location of the LDAP server and other information (such as a username and password, if it doesn&#8217;t allow anonymous access) for connecting to it.
 It can also be used to create an embedded server for testing.
-Details of the syntax for both options are covered in the <a href="#servlet-authentication-ldap">LDAP chapter</a>.
+Details of the syntax for both options are covered in the <a href="../authentication/unpwd/ldap.html#servlet-authentication-ldap" class="page">LDAP chapter</a>.
 The actual <code>ContextSource</code> implementation is <code>DefaultSpringSecurityContextSource</code> which extends Spring LDAP&#8217;s <code>LdapContextSource</code> class.
 The <code>manager-dn</code> and <code>manager-password</code> attributes map to the latter&#8217;s <code>userDn</code> and <code>password</code> properties respectively.</p>
 </div>
@@ -4092,8 +4460,8 @@ The <code>manager-dn</code> and <code>manager-password</code> attributes map to 
 Otherwise, you can give the element an "id" attribute and refer to it from other namespace beans using the <code>server-ref</code> attribute.
 This is actually the bean <code>id</code> of the <code>ContextSource</code> instance, if you want to use it in other traditional Spring beans.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-ldap-server-attributes"><a class="anchor" href="#nsa-ldap-server-attributes"></a>&lt;ldap-server&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-ldap-server-attributes"><a class="anchor" href="#nsa-ldap-server-attributes"></a>&lt;ldap-server&gt; Attributes</h4>
 <div id="nsa-ldap-server-mode" class="ulist">
 <ul>
 <li>
@@ -4167,15 +4535,15 @@ Specifies the ldap server URL when not using the embedded LDAP server.</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-ldap-authentication-provider"><a class="anchor" href="#nsa-ldap-authentication-provider"></a>&lt;ldap-authentication-provider&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-ldap-authentication-provider"><a class="anchor" href="#nsa-ldap-authentication-provider"></a>&lt;ldap-authentication-provider&gt;</h3>
 <div class="paragraph">
 <p>This element is shorthand for the creation of an <code>LdapAuthenticationProvider</code> instance.
 By default this will be configured with a <code>BindAuthenticator</code> instance and a <code>DefaultAuthoritiesPopulator</code>.
 As with all namespace authentication providers, it must be included as a child of the <code>authentication-provider</code> element.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-ldap-authentication-provider-parents"><a class="anchor" href="#nsa-ldap-authentication-provider-parents"></a>Parent Elements of &lt;ldap-authentication-provider&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-ldap-authentication-provider-parents"><a class="anchor" href="#nsa-ldap-authentication-provider-parents"></a>Parent Elements of &lt;ldap-authentication-provider&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4184,8 +4552,8 @@ As with all namespace authentication providers, it must be included as a child o
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-ldap-authentication-provider-attributes"><a class="anchor" href="#nsa-ldap-authentication-provider-attributes"></a>&lt;ldap-authentication-provider&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-ldap-authentication-provider-attributes"><a class="anchor" href="#nsa-ldap-authentication-provider-attributes"></a>&lt;ldap-authentication-provider&gt; Attributes</h4>
 <div id="nsa-ldap-authentication-provider-group-role-attribute" class="ulist">
 <ul>
 <li>
@@ -4296,8 +4664,8 @@ If these attributes aren&#8217;t set and no <code>user-dn-pattern</code> has bee
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-ldap-authentication-provider-children"><a class="anchor" href="#nsa-ldap-authentication-provider-children"></a>Child Elements of &lt;ldap-authentication-provider&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-ldap-authentication-provider-children"><a class="anchor" href="#nsa-ldap-authentication-provider-children"></a>Child Elements of &lt;ldap-authentication-provider&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4307,13 +4675,13 @@ If these attributes aren&#8217;t set and no <code>user-dn-pattern</code> has bee
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-password-compare"><a class="anchor" href="#nsa-password-compare"></a>&lt;password-compare&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-password-compare"><a class="anchor" href="#nsa-password-compare"></a>&lt;password-compare&gt;</h3>
 <div class="paragraph">
 <p>This is used as child element to <code>&lt;ldap-provider&gt;</code> and switches the authentication strategy from <code>BindAuthenticator</code> to <code>PasswordComparisonAuthenticator</code>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-password-compare-parents"><a class="anchor" href="#nsa-password-compare-parents"></a>Parent Elements of &lt;password-compare&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-password-compare-parents"><a class="anchor" href="#nsa-password-compare-parents"></a>Parent Elements of &lt;password-compare&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4322,8 +4690,8 @@ If these attributes aren&#8217;t set and no <code>user-dn-pattern</code> has bee
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-password-compare-attributes"><a class="anchor" href="#nsa-password-compare-attributes"></a>&lt;password-compare&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-password-compare-attributes"><a class="anchor" href="#nsa-password-compare-attributes"></a>&lt;password-compare&gt; Attributes</h4>
 <div id="nsa-password-compare-hash" class="ulist">
 <ul>
 <li>
@@ -4343,8 +4711,8 @@ Defaults to "userPassword".</p>
 </ul>
 </div>
 </div>
-<div class="sect4">
-<h5 id="nsa-password-compare-children"><a class="anchor" href="#nsa-password-compare-children"></a>Child Elements of &lt;password-compare&gt;</h5>
+<div class="sect3">
+<h4 id="nsa-password-compare-children"><a class="anchor" href="#nsa-password-compare-children"></a>Child Elements of &lt;password-compare&gt;</h4>
 <div class="ulist">
 <ul>
 <li>
@@ -4354,15 +4722,15 @@ Defaults to "userPassword".</p>
 </div>
 </div>
 </div>
-<div class="sect3">
-<h4 id="nsa-ldap-user-service"><a class="anchor" href="#nsa-ldap-user-service"></a>&lt;ldap-user-service&gt;</h4>
+<div class="sect2">
+<h3 id="nsa-ldap-user-service"><a class="anchor" href="#nsa-ldap-user-service"></a>&lt;ldap-user-service&gt;</h3>
 <div class="paragraph">
 <p>This element configures an LDAP <code>UserDetailsService</code>.
 The class used is <code>LdapUserDetailsService</code> which is a combination of a <code>FilterBasedLdapUserSearch</code> and a <code>DefaultLdapAuthoritiesPopulator</code>.
 The attributes it supports have the same usage as in <code>&lt;ldap-provider&gt;</code>.</p>
 </div>
-<div class="sect4">
-<h5 id="nsa-ldap-user-service-attributes"><a class="anchor" href="#nsa-ldap-user-service-attributes"></a>&lt;ldap-user-service&gt; Attributes</h5>
+<div class="sect3">
+<h4 id="nsa-ldap-user-service-attributes"><a class="anchor" href="#nsa-ldap-user-service-attributes"></a>&lt;ldap-user-service&gt; Attributes</h4>
 <div id="nsa-ldap-user-service-cache-ref" class="ulist">
 <ul>
 <li>
@@ -4467,11 +4835,10 @@ The substituted parameter is the user&#8217;s login name.</p>
 </div>
 </div>
 </div>
-</div>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. See the <a href="#ns-web-xml">introductory chapter</a> for how to set up the mapping from your <code>web.xml</code>
+<a href="#_footnoteref_1">1</a>. See the xref:servlet/namespace/index.adoc#ns-web-xml[introductory chapter
 </div>
 <div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. This feature is really just provided for convenience and is not intended for production (where a view technology will have been chosen and can be used to render a customized login page). The class <code>DefaultLoginPageGeneratingFilter</code> is responsible for rendering the login page and will provide login forms for both normal form login and/or OpenID if required.
@@ -4480,6 +4847,10 @@ The substituted parameter is the user&#8217;s login name.</p>
 <a href="#_footnoteref_3">3</a>. This doesn&#8217;t affect the use of <code>PersistentTokenBasedRememberMeServices</code>, where the tokens are stored on the server side.
 </div>
 </div>
+<nav class="pagination">
+  <span class="prev"><a href="database-schema.html">Database Schemas</a></span>
+  <span class="next"><a href="faq.html">FAQ</a></span>
+</nav>
 </article>
   </div>
 </main>
