@@ -149,10 +149,10 @@
     <a class="nav-link" href="../../index.html">Servlet Applications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../hello/index.html">Hello Spring Security</a>
+    <a class="nav-link" href="../../getting-started.html">Getting Started</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../architecture/index.html">The Big Picture</a>
+    <a class="nav-link" href="../../architecture.html">The Big Picture</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -342,13 +342,13 @@
     <span class="nav-text">Configuration</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../java-configuration/index.html">Java Configuration</a>
+    <a class="nav-link" href="../../java-configuration.html">Java Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../kotlin-configuration/index.html">Kotlin Configuration</a>
+    <a class="nav-link" href="../../kotlin-configuration.html">Kotlin Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../namespace/index.html">Namespace Configuration</a>
+    <a class="nav-link" href="../../xml-namespace.html">Namespace Configuration</a>
   </li>
 </ul>
   </li>
@@ -365,7 +365,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../crypto/index.html">Cryptography</a>
+    <a class="nav-link" href="../../cryptography.html">Cryptography</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -525,7 +525,7 @@ First, we see the <a href="https://tools.ietf.org/html/rfc7235#section-4.1">WWW-
 <div class="title">Figure 1. Sending WWW-Authenticate Header</div>
 </div>
 <div class="paragraph">
-<p>The figure builds off our <a href="../../architecture/index.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
+<p>The figure builds off our <a href="../../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
@@ -534,7 +534,7 @@ First, we see the <a href="https://tools.ietf.org/html/rfc7235#section-4.1">WWW-
 <p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="../../authorization/authorize-requests.html#servlet-authorization-filtersecurityinterceptor" class="page"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../../architecture/index.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
+<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
 The configured <a href="../architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/www/BasicAuthenticationEntryPoint.html"><code>BasicAuthenticationEntryPoint</code></a> which sends a WWW-Authenticate header.
 The <code>RequestCache</code> is typically a <code>NullRequestCache</code> that does not save the request since the client is capable of replaying the requests it originally requested.</p>
 </div>
@@ -549,7 +549,7 @@ Below is the flow for the username and password being processed.</p>
 <div class="title">Figure 2. Authenticating Username and Password</div>
 </div>
 <div class="paragraph">
-<p>The figure builds off our <a href="../../architecture/index.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
+<p>The figure builds off our <a href="../../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>BasicAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="../architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>

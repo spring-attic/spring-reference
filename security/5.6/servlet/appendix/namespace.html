@@ -149,10 +149,10 @@
     <a class="nav-link" href="../index.html">Servlet Applications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../hello/index.html">Hello Spring Security</a>
+    <a class="nav-link" href="../getting-started.html">Getting Started</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../architecture/index.html">The Big Picture</a>
+    <a class="nav-link" href="../architecture.html">The Big Picture</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -342,13 +342,13 @@
     <span class="nav-text">Configuration</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../java-configuration/index.html">Java Configuration</a>
+    <a class="nav-link" href="../java-configuration.html">Java Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../kotlin-configuration/index.html">Kotlin Configuration</a>
+    <a class="nav-link" href="../kotlin-configuration.html">Kotlin Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../namespace/index.html">Namespace Configuration</a>
+    <a class="nav-link" href="../xml-namespace.html">Namespace Configuration</a>
   </li>
 </ul>
   </li>
@@ -365,7 +365,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../crypto/index.html">Cryptography</a>
+    <a class="nav-link" href="../cryptography.html">Cryptography</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -537,7 +537,7 @@ This may include sensitive information, such as request parameters or headers, a
 As of Spring Security 3.1, additional <code>http</code> elements can be used to add extra filter chains <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup> for how to set up the mapping from your <code>web.xml</code> ].
 Some core filters are always created in a filter chain and others will be added to the stack depending on the attributes and child elements which are present.
 The positions of the standard filters are fixed (see
-<a href="../namespace/index.html#filter-stack" class="page">the filter order table</a> in the namespace introduction), removing a common source of errors with previous versions of the framework when users had to configure the filter chain explicitly in the
+<a href="../xml-namespace.html#filter-stack" class="page">the filter order table</a> in the namespace introduction), removing a common source of errors with previous versions of the framework when users had to configure the filter chain explicitly in the
 <code>FilterChainProxy</code> bean.
 You can, of course, still do this if you need full control of the configuration.</p>
 </div>
@@ -807,7 +807,7 @@ The default value is true.</p>
 <h3 id="nsa-access-denied-handler"><a class="anchor" href="#nsa-access-denied-handler"></a>&lt;access-denied-handler&gt;</h3>
 <div class="paragraph">
 <p>This element allows you to set the <code>errorPage</code> property for the default <code>AccessDeniedHandler</code> used by the <code>ExceptionTranslationFilter</code>, using the <a href="#nsa-access-denied-handler-error-page">error-page</a> attribute, or to supply your own implementation using the<a href="#nsa-access-denied-handler-ref">ref</a> attribute.
-This is discussed in more detail in the section on the <a href="../architecture/index.html#servlet-exceptiontranslationfilter" class="page">ExceptionTranslationFilter</a>.</p>
+This is discussed in more detail in the section on the <a href="../architecture.html#servlet-exceptiontranslationfilter" class="page">ExceptionTranslationFilter</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-access-denied-handler-parents"><a class="anchor" href="#nsa-access-denied-handler-parents"></a>Parent Elements of &lt;access-denied-handler&gt;</h4>
@@ -1602,7 +1602,7 @@ Default is any HTTP method except "GET", "TRACE", "HEAD", "OPTIONS".</p>
 <div class="paragraph">
 <p>This element is used to add a filter to the filter chain.
 It doesn&#8217;t create any additional beans but is used to select a bean of type <code>javax.servlet.Filter</code> which is already defined in the application context and add that at a particular position in the filter chain maintained by Spring Security.
-Full details can be found in the <a href="../namespace/index.html#ns-custom-filters" class="page"> namespace chapter</a>.</p>
+Full details can be found in the <a href="../xml-namespace.html#ns-custom-filters" class="page"> namespace chapter</a>.</p>
 </div>
 <div class="sect3">
 <h4 id="nsa-custom-filter-parents"><a class="anchor" href="#nsa-custom-filter-parents"></a>Parent Elements of &lt;custom-filter&gt;</h4>
@@ -4835,7 +4835,7 @@ The substituted parameter is the user&#8217;s login name.</p>
 <div id="footnotes">
 <hr>
 <div class="footnote" id="_footnotedef_1">
-<a href="#_footnoteref_1">1</a>. See the xref:servlet/namespace/index.adoc#ns-web-xml[introductory chapter
+<a href="#_footnoteref_1">1</a>. See the xref:servlet/xml-namespace.adoc#ns-web-xml[introductory chapter
 </div>
 <div class="footnote" id="_footnotedef_2">
 <a href="#_footnoteref_2">2</a>. This feature is really just provided for convenience and is not intended for production (where a view technology will have been chosen and can be used to render a customized login page). The class <code>DefaultLoginPageGeneratingFilter</code> is responsible for rendering the login page and will provide login forms for both normal form login and/or OpenID if required.

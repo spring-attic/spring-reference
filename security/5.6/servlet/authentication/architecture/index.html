@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Servlet Authentication Architecture :: Spring</title>
-    <link rel="prev" href="../../architecture/index.html">
+    <link rel="prev" href="../../architecture.html">
     <link rel="next" href="../unpwd/index.html">
     <meta name="generator" content="Antora 3.0.0-alpha.6">
     <link rel="stylesheet" href="../../../../../_/css/site.css">
@@ -149,10 +149,10 @@
     <a class="nav-link" href="../../index.html">Servlet Applications</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../hello/index.html">Hello Spring Security</a>
+    <a class="nav-link" href="../../getting-started.html">Getting Started</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../architecture/index.html">The Big Picture</a>
+    <a class="nav-link" href="../../architecture.html">The Big Picture</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -342,13 +342,13 @@
     <span class="nav-text">Configuration</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../java-configuration/index.html">Java Configuration</a>
+    <a class="nav-link" href="../../java-configuration.html">Java Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../kotlin-configuration/index.html">Kotlin Configuration</a>
+    <a class="nav-link" href="../../kotlin-configuration.html">Kotlin Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../namespace/index.html">Namespace Configuration</a>
+    <a class="nav-link" href="../../xml-namespace.html">Namespace Configuration</a>
   </li>
 </ul>
   </li>
@@ -365,7 +365,7 @@
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../crypto/index.html">Cryptography</a>
+    <a class="nav-link" href="../../cryptography.html">Cryptography</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -512,7 +512,7 @@
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This discussion expands on <a href="../../architecture/index.html#servlet-architecture" class="page">Servlet Security: The Big Picture</a> to describe the main architectural components of Spring Security&#8217;s used in Servlet authentication.
+<p>This discussion expands on <a href="../../architecture.html#servlet-architecture" class="page">Servlet Security: The Big Picture</a> to describe the main architectural components of Spring Security&#8217;s used in Servlet authentication.
 If you need concrete flows that explain how these pieces fit together, look at the <a href="../index.html#servlet-authentication-mechanisms" class="page">Authentication Mechanism</a> specific sections.</p>
 </div>
 <div class="ulist">
@@ -650,7 +650,7 @@ val authorities = authentication.authorities</code></pre>
 <div class="paragraph">
 <p>By default the <code>SecurityContextHolder</code> uses a <code>ThreadLocal</code> to store these details, which means that the <code>SecurityContext</code> is always available to methods in the same thread, even if the <code>SecurityContext</code> is not explicitly passed around as an argument to those methods.
 Using a <code>ThreadLocal</code> in this way is quite safe if care is taken to clear the thread after the present principal&#8217;s request is processed.
-Spring Security&#8217;s <a href="../../architecture/index.html#servlet-filterchainproxy" class="page">FilterChainProxy</a> ensures that the <code>SecurityContext</code> is always cleared.</p>
+Spring Security&#8217;s <a href="../../architecture.html#servlet-filterchainproxy" class="page">FilterChainProxy</a> ensures that the <code>SecurityContext</code> is always cleared.</p>
 </div>
 <div class="paragraph">
 <p>Some applications aren&#8217;t entirely suitable for using a <code>ThreadLocal</code>, because of the specific way they work with threads.
@@ -741,7 +741,7 @@ Of course, Spring Security is expressly designed to handle this common requireme
 <div class="sectionbody">
 <div class="paragraph">
 <p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/authentication/AuthenticationManager.html"><code>AuthenticationManager</code></a> is the API that defines how Spring Security&#8217;s Filters perform  <a href="../../../features/authentication/index.html#authentication" class="page">authentication</a>.
-The <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is then set on the <a href="#servlet-authentication-securitycontextholder">SecurityContextHolder</a> by the controller (i.e. <a href="../../architecture/index.html#servlet-security-filters" class="page">Spring Security&#8217;s <code>Filters</code>s</a>) that invoked the <code>AuthenticationManager</code>.
+The <a href="#servlet-authentication-authentication"><code>Authentication</code></a> that is returned is then set on the <a href="#servlet-authentication-securitycontextholder">SecurityContextHolder</a> by the controller (i.e. <a href="../../architecture.html#servlet-security-filters" class="page">Spring Security&#8217;s <code>Filters</code>s</a>) that invoked the <code>AuthenticationManager</code>.
 If you are not integrating with <em>Spring Security&#8217;s <code>Filters</code>s</em> you can set the <code>SecurityContextHolder</code> directly and are not required to use an <code>AuthenticationManager</code>.</p>
 </div>
 <div class="paragraph">
@@ -779,7 +779,7 @@ The parent can be any type of <code>AuthenticationManager</code>, but it is ofte
 </div>
 <div class="paragraph">
 <p>In fact, multiple <code>ProviderManager</code> instances might share the same parent <code>AuthenticationManager</code>.
-This is somewhat common in scenarios where there are multiple <a href="../../architecture/index.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> instances that have some authentication in common (the shared parent <code>AuthenticationManager</code>), but also different authentication mechanisms (the different <code>ProviderManager</code> instances).</p>
+This is somewhat common in scenarios where there are multiple <a href="../../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> instances that have some authentication in common (the shared parent <code>AuthenticationManager</code>), but also different authentication mechanisms (the different <code>ProviderManager</code> instances).</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -894,7 +894,7 @@ If remember me is not configured, this is a no-op.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="../../architecture/index.html">The Big Picture</a></span>
+  <span class="prev"><a href="../../architecture.html">The Big Picture</a></span>
   <span class="next"><a href="../unpwd/index.html">Username/Password</a></span>
 </nav>
 </article>
