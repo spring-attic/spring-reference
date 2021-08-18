@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring Session - HttpSession (Quick Start) :: Spring</title>
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+
+<link href="../../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
+<link rel="stylesheet" href="../../../_/css/vendor/docsearch.min.css">
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img id="springlogo" class="block" src="../../../_/img/spring-logo.svg" alt="Spring">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://spring.io/">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/why-spring">Overview</a>
+            <a class="navbar-item" href="https://spring.io/microservices">Microservices</a>
+            <a class="navbar-item" href="https://spring.io/reactive">Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web Applications</a>
+            <a class="navbar-item" href="https://spring.io/serverless">Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/projects">Overview</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+            <a class="navbar-item" class="blue mb-2 inline-block" href="https://spring.io/projects">View all projects</a>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="https://spring.io/training">Training</a>
+        <a class="navbar-item" href="https://spring.io/support">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="session" data-version="2.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Session</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../samples.html">Samples &amp; Guides (Start Here)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../http-session.html">HttpSession Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-socket.html">WebSocket Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-session.html">WebSession Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../spring-security.html">Spring Security Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../api.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upgrading.html">Upgrading</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Session</span>
+    <span class="version">2.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/6/index.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/6/index.html">6</a>
+        </li>
+        <li class="version">
+          <a href="../../../security/5.6/index.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Session</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../framework/5.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Session</a></li>
+    <li><a href="xml-redis.html">Spring Session - HttpSession (Quick Start)</a></li>
+  </ul>
+</nav>
+<div>
+  <input id="search-input" type="text" placeholder="Search docs">
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/guides/xml-redis.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Spring Session - HttpSession (Quick Start)</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#updating-dependencies">Updating Dependencies</a></li>
+<li><a href="#httpsession-xml-spring-configuration">Spring XML Configuration</a></li>
+<li><a href="#xml-servlet-container-initialization">XML Servlet Container Initialization</a></li>
+<li><a href="#httpsession-xml-sample"><code>httpsession-xml</code> Sample Application</a>
+<ul class="sectlevel2">
+<li><a href="#running-the-httpsession-xml-sample-application">Running the <code>httpsession-xml</code> Sample Application</a></li>
+<li><a href="#exploring-the-httpsession-xml-sample-application">Exploring the <code>httpsession-xml</code> Sample Application</a></li>
+<li><a href="#how-does-it-work">How Does It Work?</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This guide describes how to use Spring Session to transparently leverage Redis to back a web application&#8217;s <code>HttpSession</code> with XML-based configuration.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You can find the completed guide in the <a href="#httpsession-xml-sample">httpsession-xml sample application</a>.
+</td>
+</tr>
+</table>
+</div>
+<div id="index-link" class="paragraph">
+<p><a href="../index.html">Index</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="updating-dependencies"><a class="anchor" href="#updating-dependencies"></a>Updating Dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before you use Spring Session, you must update your dependencies.
+If you use Maven, you must add the following dependencies:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
+	&lt;!-- ... --&gt;
+
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.springframework.session&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;
+		&lt;version&gt;2.6.0-SNAPSHOT&lt;/version&gt;
+		&lt;type&gt;pom&lt;/type&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;io.lettuce&lt;/groupId&gt;
+		&lt;artifactId&gt;lettuce-core&lt;/artifactId&gt;
+		&lt;version&gt;6.1.2.RELEASE&lt;/version&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+		&lt;version&gt;5.3.7&lt;/version&gt;
+	&lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="httpsession-xml-spring-configuration"><a class="anchor" href="#httpsession-xml-spring-configuration"></a>Spring XML Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After adding the required dependencies, we can create our Spring configuration.
+The Spring configuration is responsible for creating a servlet filter that replaces the <code>HttpSession</code> implementation with an implementation backed by Spring Session.
+To do so, add the following Spring Configuration:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/webapp/WEB-INF/spring/session.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"><i class="conum" data-value="1"></i><b>(1)</b>
+&lt;context:annotation-config/&gt;
+&lt;bean class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration"/&gt;
+
+<i class="conum" data-value="2"></i><b>(2)</b>
+&lt;bean class="org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory"/&gt;</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We use the combination of <code>&lt;context:annotation-config/&gt;</code> and <code>RedisHttpSessionConfiguration</code> because Spring Session does not yet provide XML Namespace support (see <a href="https://github.com/spring-projects/spring-session/issues/104">gh-104</a>).
+This creates a Spring Bean with the name of <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
+The filter is in charge of replacing the <code>HttpSession</code> implementation to be backed by Spring Session.
+In this instance, Spring Session is backed by Redis.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>We create a <code>RedisConnectionFactory</code> that connects Spring Session to the Redis Server.
+We configure the connection to connect to localhost on the default port (6379)
+For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="xml-servlet-container-initialization"><a class="anchor" href="#xml-servlet-container-initialization"></a>XML Servlet Container Initialization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Our <a href="#httpsession-xml-spring-configuration">Spring Configuration</a> created a Spring Bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
+The <code>springSessionRepositoryFilter</code> bean is responsible for replacing the <code>HttpSession</code> with a custom implementation that is backed by Spring Session.</p>
+</div>
+<div class="paragraph">
+<p>In order for our <code>Filter</code> to do its magic, we need to instruct Spring to load our <code>session.xml</code> configuration.
+We can do so with the following configuration:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/webapp/WEB-INF/web.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;context-param&gt;
+	&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
+	&lt;param-value&gt;
+		/WEB-INF/spring/session.xml
+	&lt;/param-value&gt;
+&lt;/context-param&gt;
+&lt;listener&gt;
+	&lt;listener-class&gt;
+		org.springframework.web.context.ContextLoaderListener
+	&lt;/listener-class&gt;
+&lt;/listener&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The <a href="https://docs.spring.io/spring/docs/5.3.7/spring-framework-reference/core.html#context-create"><code>ContextLoaderListener</code></a> reads the contextConfigLocation and picks up our session.xml configuration.</p>
+</div>
+<div class="paragraph">
+<p>Last, we need to ensure that our Servlet Container (that is, Tomcat) uses our <code>springSessionRepositoryFilter</code> for every request.
+The following snippet performs this last step for us:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/webapp/WEB-INF/web.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter&gt;
+	&lt;filter-name&gt;springSessionRepositoryFilter&lt;/filter-name&gt;
+	&lt;filter-class&gt;org.springframework.web.filter.DelegatingFilterProxy&lt;/filter-class&gt;
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+	&lt;filter-name&gt;springSessionRepositoryFilter&lt;/filter-name&gt;
+	&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
+	&lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;
+	&lt;dispatcher&gt;ERROR&lt;/dispatcher&gt;
+&lt;/filter-mapping&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The <a href="https://docs.spring.io/spring-framework/docs/5.3.7/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html"><code>DelegatingFilterProxy</code></a> looks up a Bean by the name of <code>springSessionRepositoryFilter</code> and cast it to a <code>Filter</code>.
+For every request that <code>DelegatingFilterProxy</code> is invoked, the <code>springSessionRepositoryFilter</code> is invoked.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="httpsession-xml-sample"><a class="anchor" href="#httpsession-xml-sample"></a><code>httpsession-xml</code> Sample Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to work with the <code>httpsession-xml</code> sample application.</p>
+</div>
+<div class="sect2">
+<h3 id="running-the-httpsession-xml-sample-application"><a class="anchor" href="#running-the-httpsession-xml-sample-application"></a>Running the <code>httpsession-xml</code> Sample Application</h3>
+<div class="paragraph">
+<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For the sample to work, you must <a href="https://redis.io/download">install Redis 2.8+</a> on localhost and run it with the default port (6379).
+Alternatively, you can update the <code>RedisConnectionFactory</code> to point to a Redis server.
+Another option is to use <a href="https://www.docker.com/">Docker</a> to run Redis on localhost. See <a href="https://hub.docker.com/_/redis/">Docker Redis repository</a> for detailed instructions.
+</td>
+</tr>
+</table>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>$ ./gradlew :spring-session-sample-xml-redis:tomcatRun</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You should now be able to access the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exploring-the-httpsession-xml-sample-application"><a class="anchor" href="#exploring-the-httpsession-xml-sample-application"></a>Exploring the <code>httpsession-xml</code> Sample Application</h3>
+<div class="paragraph">
+<p>Now you can try using the application. Fill out the form with the following information:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Attribute Name:</strong> <em>username</em></p>
+</li>
+<li>
+<p><strong>Attribute Value:</strong> <em>rob</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now click the <strong>Set Attribute</strong> button. You should now see the values displayed in the table.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-does-it-work"><a class="anchor" href="#how-does-it-work"></a>How Does It Work?</h3>
+<div class="paragraph">
+<p>We interact with the standard <code>HttpSession</code> in the <code>SessionServlet</code> shown in the following listing:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/java/sample/SessionServlet.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SessionServlet extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		String attributeName = req.getParameter("attributeName");
+		String attributeValue = req.getParameter("attributeValue");
+		req.getSession().setAttribute(attributeName, attributeValue);
+		resp.sendRedirect(req.getContextPath() + "/");
+	}
+
+	private static final long serialVersionUID = 2878267318695777395L;
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Instead of using Tomcat&#8217;s <code>HttpSession</code>, we persist the values in Redis.
+Spring Session creates a cookie named SESSION in your browser.
+That cookie contains the ID of your session.
+You can view the cookies (with <a href="https://developers.google.com/web/tools/chrome-devtools/manage-data/cookies">Chrome</a> or <a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector">Firefox</a>).</p>
+</div>
+<div class="paragraph">
+<p>You can remove the session using redis-cli.
+For example, on a Linux based system you can type the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	$ redis-cli keys '*' | xargs redis-cli del</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The Redis documentation has instructions for <a href="https://redis.io/topics/quickstart">installing redis-cli</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can also delete the explicit key. To do so, enter the following into your terminal, being sure to replace <code>7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</code> with the value of your SESSION cookie:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	$ redis-cli del spring:session:sessions:7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can visit the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a> and see that the attribute we added is no longer displayed.</p>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img id="springlogo" src="../../../_/img/spring-logo.svg" alt="Spring">
+        <p class="smallest antialiased">© <script>var d = new Date();
+        document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
+    </div>
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/spring-projects" title="Github"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/></g><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
+    </div>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
+<script src="../../../_/js/vendor/docsearch.min.js"></script>
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
+<script>
+docsearch({
+  apiKey: '6098173f7ca8a2fc7db296538ae8a6cc',
+  indexName: 'spring',
+  inputSelector: '#search-input',
+  algoliaOptions: { hitsPerPage: 10 }
+})
+</script>
+  </body>
+</html>

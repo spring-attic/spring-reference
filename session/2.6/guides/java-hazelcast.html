@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Spring Session and Spring Security with Hazelcast :: Spring</title>
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
+    <link rel="stylesheet" href="../../../_/css/site.css">
+
+<link href="../../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
+<link rel="stylesheet" href="../../../_/css/vendor/docsearch.min.css">
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
+    <script>var uiRootPath = '../../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../../..">
+        <img id="springlogo" class="block" src="../../../_/img/spring-logo.svg" alt="Spring">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://spring.io/">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/why-spring">Overview</a>
+            <a class="navbar-item" href="https://spring.io/microservices">Microservices</a>
+            <a class="navbar-item" href="https://spring.io/reactive">Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web Applications</a>
+            <a class="navbar-item" href="https://spring.io/serverless">Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/projects">Overview</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+            <a class="navbar-item" class="blue mb-2 inline-block" href="https://spring.io/projects">View all projects</a>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="https://spring.io/training">Training</a>
+        <a class="navbar-item" href="https://spring.io/support">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="session" data-version="2.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="../index.html">Spring Session</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../samples.html">Samples &amp; Guides (Start Here)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../http-session.html">HttpSession Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-socket.html">WebSocket Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../web-session.html">WebSession Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../spring-security.html">Spring Security Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../api.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upgrading.html">Upgrading</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Session</span>
+    <span class="version">2.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../../security/6/index.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../../security/6/index.html">6</a>
+        </li>
+        <li class="version">
+          <a href="../../../security/5.6/index.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="../index.html">Spring Session</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="../index.html">2.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../../framework/5.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="../index.html">Spring Session</a></li>
+    <li><a href="java-hazelcast.html">Spring Session and Spring Security with Hazelcast</a></li>
+  </ul>
+</nav>
+<div>
+  <input id="search-input" type="text" placeholder="Search docs">
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/guides/java-hazelcast.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Spring Session and Spring Security with Hazelcast</h1>
+<div id="toc" class="toc">
+<div id="toctitle">Table of Contents</div>
+<ul class="sectlevel1">
+<li><a href="#updating-dependencies">Updating Dependencies</a></li>
+<li><a href="#security-spring-configuration">Spring Configuration</a></li>
+<li><a href="#servlet-container-initialization">Servlet Container Initialization</a></li>
+<li><a href="#hazelcast-spring-security-sample">Hazelcast Spring Security Sample Application</a>
+<ul class="sectlevel2">
+<li><a href="#running-the-sample-application">Running the Sample Application</a></li>
+<li><a href="#exploring-the-security-sample-application">Exploring the Security Sample Application</a></li>
+<li><a href="#how-does-it-work">How Does It Work?</a></li>
+<li><a href="#interacting-with-the-data-store">Interacting with the Data Store</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>This guide describes how to use Spring Session along with Spring Security when you use Hazelcast as your data store.
+It assumes that you have already applied Spring Security to your application.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+You cand find the completed guide in the <a href="#hazelcast-spring-security-sample">Hazelcast Spring Security sample application</a>.
+</td>
+</tr>
+</table>
+</div>
+<div id="index-link" class="paragraph">
+<p><a href="../index.html">Index</a></p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="updating-dependencies"><a class="anchor" href="#updating-dependencies"></a>Updating Dependencies</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before you use Spring Session, you must update your dependencies.
+If you use Maven, you must add the following dependencies:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
+	&lt;!-- ... --&gt;
+
+	&lt;dependency&gt;
+		&lt;groupId&gt;com.hazelcast&lt;/groupId&gt;
+		&lt;artifactId&gt;hazelcast&lt;/artifactId&gt;
+		&lt;version&gt;3.12.12&lt;/version&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+		&lt;version&gt;5.3.7&lt;/version&gt;
+	&lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="security-spring-configuration"><a class="anchor" href="#security-spring-configuration"></a>Spring Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After adding the required dependencies, we can create our Spring configuration.
+The Spring configuration is responsible for creating a servlet filter that replaces the <code>HttpSession</code> implementation with an implementation backed by Spring Session.
+To do so, add the following Spring Configuration:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableHazelcastHttpSession <i class="conum" data-value="1"></i><b>(1)</b>
+@Configuration
+public class HazelcastHttpSessionConfig {
+
+	@Bean
+	public HazelcastInstance hazelcastInstance() {
+		Config config = new Config();
+		MapAttributeConfig attributeConfig = new MapAttributeConfig()
+				.setName(HazelcastIndexedSessionRepository.PRINCIPAL_NAME_ATTRIBUTE)
+				.setExtractor(PrincipalNameExtractor.class.getName());
+		config.getMapConfig(HazelcastIndexedSessionRepository.DEFAULT_SESSION_MAP_NAME) <i class="conum" data-value="2"></i><b>(2)</b>
+				.addMapAttributeConfig(attributeConfig).addMapIndexConfig(
+						new MapIndexConfig(HazelcastIndexedSessionRepository.PRINCIPAL_NAME_ATTRIBUTE, false));
+		SerializerConfig serializerConfig = new SerializerConfig();
+		serializerConfig.setImplementation(new HazelcastSessionSerializer()).setTypeClass(MapSession.class);
+		config.getSerializationConfig().addSerializerConfig(serializerConfig); <i class="conum" data-value="3"></i><b>(3)</b>
+		return Hazelcast.newHazelcastInstance(config); <i class="conum" data-value="4"></i><b>(4)</b>
+	}
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The <code>@EnableHazelcastHttpSession</code> annotation creates a Spring bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
+The filter is in charge of replacing the <code>HttpSession</code> implementation to be backed by Spring Session.
+In this instance, Spring Session is backed by Hazelcast.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>In order to support retrieval of sessions by principal name index, an appropriate <code>ValueExtractor</code> needs to be registered.
+Spring Session provides <code>PrincipalNameExtractor</code> for this purpose.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>In order to serialize <code>MapSession</code> objects efficiently, <code>HazelcastSessionSerializer</code> needs to be registered. If this
+is not set, Hazelcast will serialize sessions using native Java serialization.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>We create a <code>HazelcastInstance</code> that connects Spring Session to Hazelcast.
+By default, the application starts and connects to an embedded instance of Hazelcast.
+For more information on configuring Hazelcast, see the <a href="https://docs.hazelcast.org/docs/3.12.12/manual/html-single/index.html#hazelcast-configuration">reference documentation</a>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+If <code>HazelcastSessionSerializer</code> is preferred, it needs to be configured for all Hazelcast cluster members before they start.
+In a Hazelcast cluster, all members should use the same serialization method for sessions. Also, if Hazelcast Client/Server topology
+is used, then both members and clients must use the same serialization method. The serializer can be registered via <code>ClientConfig</code>
+with the same <code>SerializerConfiguration</code> of members.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-container-initialization"><a class="anchor" href="#servlet-container-initialization"></a>Servlet Container Initialization</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Our <a href="java-security.html#security-spring-configuration" class="page">Spring Configuration</a> created a Spring bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
+The <code>springSessionRepositoryFilter</code> bean is responsible for replacing the <code>HttpSession</code> with a custom implementation that is backed by Spring Session.</p>
+</div>
+<div class="paragraph">
+<p>In order for our <code>Filter</code> to do its magic, Spring needs to load our <code>SessionConfig</code> class.
+Since our application is already loading Spring configuration by using our <code>SecurityInitializer</code> class, we can add our <code>SessionConfig</code> class to it.
+The following listing shows how to do so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/java/sample/SecurityInitializer.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SecurityInitializer extends AbstractSecurityWebApplicationInitializer {
+
+	public SecurityInitializer() {
+		super(SecurityConfig.class, SessionConfig.class);
+	}
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Last, we need to ensure that our Servlet Container (that is, Tomcat) uses our <code>springSessionRepositoryFilter</code> for every request.
+It is extremely important that Spring Session&#8217;s <code>springSessionRepositoryFilter</code> is invoked before Spring Security&#8217;s <code>springSecurityFilterChain</code>.
+Doing so ensures that the <code>HttpSession</code> that Spring Security uses is backed by Spring Session.
+Fortunately, Spring Session provides a utility class named <code>AbstractHttpSessionApplicationInitializer</code> that makes this doing so easy.
+The following example shows how to do so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/java/sample/Initializer.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Initializer extends AbstractHttpSessionApplicationInitializer {
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The name of our class (<code>Initializer</code>) does not matter. What is important is that we extend <code>AbstractHttpSessionApplicationInitializer</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>By extending <code>AbstractHttpSessionApplicationInitializer</code>, we ensure that the Spring Bean named <code>springSessionRepositoryFilter</code> is registered with our servlet container for every request before Spring Security&#8217;s <code>springSecurityFilterChain</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="hazelcast-spring-security-sample"><a class="anchor" href="#hazelcast-spring-security-sample"></a>Hazelcast Spring Security Sample Application</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to work with the Hazelcast Spring Security sample application.</p>
+</div>
+<div class="sect2">
+<h3 id="running-the-sample-application"><a class="anchor" href="#running-the-sample-application"></a>Running the Sample Application</h3>
+<div class="paragraph">
+<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>$ ./gradlew :spring-session-sample-javaconfig-hazelcast:tomcatRun</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+By default, Hazelcast runs in embedded mode with your application.
+However, if you want to connect to a standalone instance instead, you can configure it by following the instructions in the <a href="https://docs.hazelcast.org/docs/3.12.12/manual/html-single/index.html#hazelcast-configuration">reference documentation</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You should now be able to access the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exploring-the-security-sample-application"><a class="anchor" href="#exploring-the-security-sample-application"></a>Exploring the Security Sample Application</h3>
+<div class="paragraph">
+<p>You can now try using the application.
+To do so, enter the following to log in:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>Username</strong> <em>user</em></p>
+</li>
+<li>
+<p><strong>Password</strong> <em>password</em></p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>Now click the <strong>Login</strong> button.
+You should now see a message indicating that your are logged in with the user entered previously.
+The user&#8217;s information is stored in Hazelcast rather than Tomcat&#8217;s <code>HttpSession</code> implementation.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-does-it-work"><a class="anchor" href="#how-does-it-work"></a>How Does It Work?</h3>
+<div class="paragraph">
+<p>Instead of using Tomcat&#8217;s <code>HttpSession</code>, we persist the values in Hazelcast.
+Spring Session replaces the <code>HttpSession</code> with an implementation that is backed by a <code>Map</code> in Hazelcast.
+When Spring Security&#8217;s <code>SecurityContextPersistenceFilter</code> saves the <code>SecurityContext</code> to the <code>HttpSession</code>, it is then persisted into Hazelcast.</p>
+</div>
+<div class="paragraph">
+<p>When a new <code>HttpSession</code> is created, Spring Session creates a cookie named <code>SESSION</code> in your browser. That cookie contains the ID of your session.
+You can view the cookies (with <a href="https://developers.google.com/web/tools/chrome-devtools/manage-data/cookies">Chrome</a> or <a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector">Firefox</a>).</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="interacting-with-the-data-store"><a class="anchor" href="#interacting-with-the-data-store"></a>Interacting with the Data Store</h3>
+<div class="paragraph">
+<p>You can remove the session by using <a href="https://docs.hazelcast.org/docs/3.12.12/manual/html-single/index.html#hazelcast-java-client">a Java client</a>,
+<a href="https://docs.hazelcast.org/docs/3.12.12/manual/html-single/index.html#other-client-implementations">one of the other clients</a>, or the
+<a href="https://docs.hazelcast.org/docs/3.12.12/manual/html-single/index.html#management-center">management center</a>.</p>
+</div>
+<div class="sect3">
+<h4 id="using-the-console"><a class="anchor" href="#using-the-console"></a>Using the Console</h4>
+<div class="paragraph">
+<p>For example, to remove the session by using the management center console after connecting to your Hazelcast node, run the following commands:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	default&gt; ns spring:session:sessions
+	spring:session:sessions&gt; m.clear</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The Hazelcast documentation has instructions for <a href="https://docs.hazelcast.org/docs/3.12.12/manual/html-single/index.html#executing-console-commands">the console</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can also delete the explicit key. Enter the following into the console, being sure to replace <code>7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</code> with the value of your <code>SESSION</code> cookie:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	spring:session:sessions&gt; m.remove 7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Now visit the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a> and observe that we are no longer authenticated.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="using-the-rest-api"><a class="anchor" href="#using-the-rest-api"></a>Using the REST API</h4>
+<div class="paragraph">
+<p>As described in the section of the documentation that cover other clients, there is a
+<a href="https://docs.hazelcast.org/docs/3.12.12/manual/html-single/index.html#rest-client">REST API</a>
+provided by the Hazelcast node(s).</p>
+</div>
+<div class="paragraph">
+<p>For example, you could delete an individual key as follows (being sure to replace <code>7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</code> with the value of your SESSION cookie):</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	$ curl -v -X DELETE http://localhost:xxxxx/hazelcast/rest/maps/spring:session:sessions/7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The port number of the Hazelcast node is printed to the console on startup. Replace <code>xxxxx</code> with the port number.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Now you can see that you are no longer authenticated with this session.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img id="springlogo" src="../../../_/img/spring-logo.svg" alt="Spring">
+        <p class="smallest antialiased">© <script>var d = new Date();
+        document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
+    </div>
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/spring-projects" title="Github"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/></g><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
+    </div>
+</footer>
+<script src="../../../_/js/site.js"></script>
+<script async src="../../../_/js/vendor/highlight.js"></script>
+<script async src="../../../_/js/vendor/tabs.js"></script>
+<script src="../../../_/js/vendor/docsearch.min.js"></script>
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
+<script>
+docsearch({
+  apiKey: '6098173f7ca8a2fc7db296538ae8a6cc',
+  indexName: 'spring',
+  inputSelector: '#search-input',
+  algoliaOptions: { hitsPerPage: 10 }
+})
+</script>
+  </body>
+</html>

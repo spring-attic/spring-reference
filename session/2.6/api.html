@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>API Documentation :: Spring</title>
+    <link rel="prev" href="spring-security.html">
+    <link rel="next" href="upgrading.html">
+    <meta name="generator" content="Antora 3.0.0-alpha.6">
+    <link rel="stylesheet" href="../../_/css/site.css">
+
+<link href="../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
+<link rel="stylesheet" href="../../_/css/vendor/docsearch.min.css">
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
+    <script>var uiRootPath = '../../_'</script>
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="../..">
+        <img id="springlogo" class="block" src="../../_/img/spring-logo.svg" alt="Spring">
+      </a>
+      <button class="navbar-burger" data-target="topbar-nav">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="https://spring.io/">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Why Spring</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/why-spring">Overview</a>
+            <a class="navbar-item" href="https://spring.io/microservices">Microservices</a>
+            <a class="navbar-item" href="https://spring.io/reactive">Reactive</a>
+            <a class="navbar-item" href="https://spring.io/event-driven">Event Driven</a>
+            <a class="navbar-item" href="https://spring.io/cloud">Cloud</a>
+            <a class="navbar-item" href="https://spring.io/web-applications">Web Applications</a>
+            <a class="navbar-item" href="https://spring.io/serverless">Serverless</a>
+            <a class="navbar-item" href="https://spring.io/batch">Batch</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Learn</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/learn">Overview</a>
+            <a class="navbar-item" href="https://spring.io/quickstart">Quickstart</a>
+            <a class="navbar-item" href="https://spring.io/guides">Guides</a>
+            <a class="navbar-item" href="https://spring.io/blog">Blog</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Projects</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/projects">Overview</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-boot">Spring Boot</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-framework">Spring Framework</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-cloud">Spring Cloud</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-cloud-dataflow">Spring Cloud Data Flow</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-data">Spring Data</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-integration">Spring Integration</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-batch">Spring Batch</a>
+            <a class="navbar-item" href="https://spring.io/projects/spring-security">Spring Security</a>
+            <a class="navbar-item" class="blue mb-2 inline-block" href="https://spring.io/projects">View all projects</a>
+            <a class="navbar-item" href="https://spring.io/tools">Spring Tools 4</a>
+          </div>
+        </div>
+
+        <a class="navbar-item" href="https://spring.io/training">Training</a>
+        <a class="navbar-item" href="https://spring.io/support">Support</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Community</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="https://spring.io/community">Overview</a>
+            <a class="navbar-item" href="https://spring.io/events">Events</a>
+            <a class="navbar-item" href="https://spring.io/team">Team</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="session" data-version="2.6">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <h3 class="title"><a href="index.html">Spring Session</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="whats-new.html">What&#8217;s New</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="samples.html">Samples &amp; Guides (Start Here)</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="modules.html">Modules</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="http-session.html">HttpSession Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="web-socket.html">WebSocket Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="web-session.html">WebSession Integration</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="spring-security.html">Spring Security Integration</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="api.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="upgrading.html">Upgrading</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Spring Session</span>
+    <span class="version">2.6</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <a class="title" href="../../framework/5.3/index.html">Spring Framework</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../framework/5.3/index.html">5.3</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component">
+      <a class="title" href="../../security/6/index.html">Spring Security</a>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../../security/6/index.html">6</a>
+        </li>
+        <li class="version">
+          <a href="../../security/5.6/index.html">5.6</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <a class="title" href="index.html">Spring Session</a>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">2.6</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="../../framework/5.3/index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Spring Session</a></li>
+    <li><a href="api.html">API Documentation</a></li>
+  </ul>
+</nav>
+<div>
+  <input id="search-input" type="text" placeholder="Search docs">
+</div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/api.adoc">Edit this Page</a></div>
+  </div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Contents" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">API Documentation</h1>
+<div id="preamble">
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can browse the complete <a href="../../api/">Javadoc</a> online. The key APIs are described in the following sections:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="#api-session">Using <code>Session</code></a></p>
+</li>
+<li>
+<p><a href="#api-sessionrepository">Using <code>SessionRepository</code></a></p>
+</li>
+<li>
+<p><a href="#api-findbyindexnamesessionrepository">Using <code>FindByIndexNameSessionRepository</code></a></p>
+</li>
+<li>
+<p><a href="#api-reactivesessionrepository">Using <code>ReactiveSessionRepository</code></a></p>
+</li>
+<li>
+<p><a href="#api-enablespringhttpsession">Using <code>@EnableSpringHttpSession</code></a></p>
+</li>
+<li>
+<p><a href="#api-enablespringwebsession">Using <code>@EnableSpringWebSession</code></a></p>
+</li>
+<li>
+<p><a href="#api-redisindexedsessionrepository">Using <code>RedisIndexedSessionRepository</code></a></p>
+</li>
+<li>
+<p><a href="#api-reactiveredissessionrepository">Using <code>ReactiveRedisSessionRepository</code></a></p>
+</li>
+<li>
+<p><a href="#api-mapsessionrepository">Using <code>MapSessionRepository</code></a></p>
+</li>
+<li>
+<p><a href="#api-reactivemapsessionrepository">Using <code>ReactiveMapSessionRepository</code></a></p>
+</li>
+<li>
+<p><a href="#api-jdbcindexedsessionrepository">Using <code>JdbcIndexedSessionRepository</code></a></p>
+</li>
+<li>
+<p><a href="#api-hazelcastindexedsessionrepository">Using <code>HazelcastIndexedSessionRepository</code></a></p>
+</li>
+<li>
+<p><a href="#api-cookieserializer">Using <code>CookieSerializer</code></a></p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-session"><a class="anchor" href="#api-session"></a>Using <code>Session</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <code>Session</code> is a simplified <code>Map</code> of name value pairs.</p>
+</div>
+<div class="paragraph">
+<p>Typical usage might look like the following listing:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class RepositoryDemo&lt;S extends Session&gt; {
+
+	private SessionRepository&lt;S&gt; repository; <i class="conum" data-value="1"></i><b>(1)</b>
+
+	public void demo() {
+		S toSave = this.repository.createSession(); <i class="conum" data-value="2"></i><b>(2)</b>
+
+		<i class="conum" data-value="3"></i><b>(3)</b>
+		User rwinch = new User("rwinch");
+		toSave.setAttribute(ATTR_USER, rwinch);
+
+		this.repository.save(toSave); <i class="conum" data-value="4"></i><b>(4)</b>
+
+		S session = this.repository.findById(toSave.getId()); <i class="conum" data-value="5"></i><b>(5)</b>
+
+		<i class="conum" data-value="6"></i><b>(6)</b>
+		User user = session.getAttribute(ATTR_USER);
+		assertThat(user).isEqualTo(rwinch);
+	}
+
+	// ... setter methods ...
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We create a <code>SessionRepository</code> instance with a generic type, <code>S</code>, that extends <code>Session</code>. The generic type is defined in our class.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>We create a new <code>Session</code> by using our <code>SessionRepository</code> and assign it to a variable of type <code>S</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>We interact with the <code>Session</code>. In our example, we demonstrate saving a <code>User</code> to the <code>Session</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>We now save the <code>Session</code>. This is why we needed the generic type <code>S</code>. The <code>SessionRepository</code> only allows saving <code>Session</code> instances that were created or retrieved by using the same <code>SessionRepository</code>. This allows for the <code>SessionRepository</code> to make implementation specific optimizations (that is, writing only attributes that have changed).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>We retrieve the <code>Session</code> from the <code>SessionRepository</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="6"></i><b>6</b></td>
+<td>We obtain the persisted <code>User</code> from our <code>Session</code> without the need for explicitly casting our attribute.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The <code>Session</code> API also provides attributes related to the <code>Session</code> instance&#8217;s expiration.</p>
+</div>
+<div class="paragraph">
+<p>Typical usage might look like the following listing:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class ExpiringRepositoryDemo&lt;S extends Session&gt; {
+
+	private SessionRepository&lt;S&gt; repository; <i class="conum" data-value="1"></i><b>(1)</b>
+
+	public void demo() {
+		S toSave = this.repository.createSession(); <i class="conum" data-value="2"></i><b>(2)</b>
+		// ...
+		toSave.setMaxInactiveInterval(Duration.ofSeconds(30)); <i class="conum" data-value="3"></i><b>(3)</b>
+
+		this.repository.save(toSave); <i class="conum" data-value="4"></i><b>(4)</b>
+
+		S session = this.repository.findById(toSave.getId()); <i class="conum" data-value="5"></i><b>(5)</b>
+		// ...
+	}
+
+	// ... setter methods ...
+
+}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We create a <code>SessionRepository</code> instance with a generic type, <code>S</code>, that extends <code>Session</code>. The generic type is defined in our class.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>We create a new <code>Session</code> by using our <code>SessionRepository</code> and assign it to a variable of type <code>S</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>We interact with the <code>Session</code>.
+In our example, we demonstrate updating the amount of time the <code>Session</code> can be inactive before it expires.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="4"></i><b>4</b></td>
+<td>We now save the <code>Session</code>.
+This is why we needed the generic type, <code>S</code>.
+The <code>SessionRepository</code> allows saving only <code>Session</code> instances that were created or retrieved using the same <code>SessionRepository</code>.
+This allows for the <code>SessionRepository</code> to make implementation specific optimizations (that is, writing only attributes that have changed).
+The last accessed time is automatically updated when the <code>Session</code> is saved.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="5"></i><b>5</b></td>
+<td>We retrieve the <code>Session</code> from the <code>SessionRepository</code>.
+If the <code>Session</code> were expired, the result would be null.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-sessionrepository"><a class="anchor" href="#api-sessionrepository"></a>Using <code>SessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <code>SessionRepository</code> is in charge of creating, retrieving, and persisting <code>Session</code> instances.</p>
+</div>
+<div class="paragraph">
+<p>If possible, you should not interact directly with a <code>SessionRepository</code> or a <code>Session</code>.
+Instead, developers should prefer interacting with <code>SessionRepository</code> and <code>Session</code> indirectly through the <a href="http-session.html#httpsession" class="page"><code>HttpSession</code></a> and <a href="web-socket.html#websocket" class="page">WebSocket</a> integration.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-findbyindexnamesessionrepository"><a class="anchor" href="#api-findbyindexnamesessionrepository"></a>Using <code>FindByIndexNameSessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Session&#8217;s most basic API for using a <code>Session</code> is the <code>SessionRepository</code>.
+This API is intentionally very simple, so that you can easily provide additional implementations with basic functionality.</p>
+</div>
+<div class="paragraph">
+<p>Some <code>SessionRepository</code> implementations may also choose to implement <code>FindByIndexNameSessionRepository</code>.
+For example, Spring&#8217;s Redis, JDBC, and Hazelcast support libraries all implement <code>FindByIndexNameSessionRepository</code>.</p>
+</div>
+<div class="paragraph">
+<p>The <code>FindByIndexNameSessionRepository</code> provides a method to look up all the sessions with a given index name and index value.
+As a common use case that is supported by all provided <code>FindByIndexNameSessionRepository</code> implementations, you can use a convenient method to look up all the sessions for a particular user.
+This is done by ensuring that the session attribute with the name of <code>FindByIndexNameSessionRepository.PRINCIPAL_NAME_INDEX_NAME</code> is populated with the username.
+It is your responsibility to ensure that the attribute is populated, since Spring Session is not aware of the authentication mechanism being used.
+An example of how to use this can be seen in the following listing:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String username = "username";
+this.session.setAttribute(FindByIndexNameSessionRepository.PRINCIPAL_NAME_INDEX_NAME, username);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Some implementations of <code>FindByIndexNameSessionRepository</code> provide hooks to automatically index other session attributes.
+For example, many implementations automatically ensure that the current Spring Security user name is indexed with the index name of <code>FindByIndexNameSessionRepository.PRINCIPAL_NAME_INDEX_NAME</code>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Once the session is indexed, you can find by using code similar to the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String username = "username";
+Map&lt;String, Session&gt; sessionIdToSession = this.sessionRepository.findByPrincipalName(username);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-reactivesessionrepository"><a class="anchor" href="#api-reactivesessionrepository"></a>Using <code>ReactiveSessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <code>ReactiveSessionRepository</code> is in charge of creating, retrieving, and persisting <code>Session</code> instances in a non-blocking and reactive manner.</p>
+</div>
+<div class="paragraph">
+<p>If possible, you should not interact directly with a <code>ReactiveSessionRepository</code> or a <code>Session</code>.
+Instead, you should prefer interacting with <code>ReactiveSessionRepository</code> and <code>Session</code> indirectly through the <a href="web-session.html#websession" class="page">WebSession</a> integration.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-enablespringhttpsession"><a class="anchor" href="#api-enablespringhttpsession"></a>Using <code>@EnableSpringHttpSession</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can add the <code>@EnableSpringHttpSession</code> annotation to a <code>@Configuration</code> class to expose the <code>SessionRepositoryFilter</code> as a bean named <code>springSessionRepositoryFilter</code>.
+In order to use the annotation, you must provide a single <code>SessionRepository</code> bean.
+The following example shows how to do so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableSpringHttpSession
+@Configuration
+public class SpringHttpSessionConfig {
+
+	@Bean
+	public MapSessionRepository sessionRepository() {
+		return new MapSessionRepository(new ConcurrentHashMap&lt;&gt;());
+	}
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that no infrastructure for session expirations is configured for you.
+This is because things such as session expiration are highly implementation-dependent.
+This means that, if you need to clean up expired sessions, you are responsible for cleaning up the expired sessions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-enablespringwebsession"><a class="anchor" href="#api-enablespringwebsession"></a>Using <code>@EnableSpringWebSession</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>You can add the <code>@EnableSpringWebSession</code> annotation to a <code>@Configuration</code> class to expose the <code>WebSessionManager</code> as a bean named <code>webSessionManager</code>.
+To use the annotation, you must provide a single <code>ReactiveSessionRepository</code> bean.
+The following example shows how to do so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableSpringWebSession
+public class SpringWebSessionConfig {
+
+	@Bean
+	public ReactiveSessionRepository reactiveSessionRepository() {
+		return new ReactiveMapSessionRepository(new ConcurrentHashMap&lt;&gt;());
+	}
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that no infrastructure for session expirations is configured for you.
+This is because things such as session expiration are highly implementation-dependent.
+This means that, if you require cleaning up expired sessions, you are responsible for cleaning up the expired sessions.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-redisindexedsessionrepository"><a class="anchor" href="#api-redisindexedsessionrepository"></a>Using <code>RedisIndexedSessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>RedisIndexedSessionRepository</code> is a <code>SessionRepository</code> that is implemented by using Spring Data&#8217;s <code>RedisOperations</code>.
+In a web environment, this is typically used in combination with <code>SessionRepositoryFilter</code>.
+The implementation supports <code>SessionDestroyedEvent</code> and <code>SessionCreatedEvent</code> through <code>SessionMessageListener</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="api-redisindexedsessionrepository-new"><a class="anchor" href="#api-redisindexedsessionrepository-new"></a>Instantiating a <code>RedisIndexedSessionRepository</code></h3>
+<div class="paragraph">
+<p>You can see a typical example of how to create a new instance in the following listing:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RedisTemplate&lt;Object, Object&gt; redisTemplate = new RedisTemplate&lt;&gt;();
+
+// ... configure redisTemplate ...
+
+SessionRepository&lt;? extends Session&gt; repository = new RedisIndexedSessionRepository(redisTemplate);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For additional information on how to create a <code>RedisConnectionFactory</code>, see the Spring Data Redis Reference.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-redisindexedsessionrepository-config"><a class="anchor" href="#api-redisindexedsessionrepository-config"></a>Using <code>@EnableRedisHttpSession</code></h3>
+<div class="paragraph">
+<p>In a web environment, the simplest way to create a new <code>RedisIndexedSessionRepository</code> is to use <code>@EnableRedisHttpSession</code>.
+You can find complete example usage in the <a href="samples.html#samples" class="page">Samples and Guides (Start Here)</a>.
+You can use the following attributes to customize the configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>maxInactiveIntervalInSeconds</strong>: The amount of time before the session expires, in seconds.</p>
+</li>
+<li>
+<p><strong>redisNamespace</strong>: Allows configuring an application specific namespace for the sessions. Redis keys and channel IDs start with the prefix of <code>&lt;redisNamespace&gt;:</code>.</p>
+</li>
+<li>
+<p><strong>flushMode</strong>: Allows specifying when data is written to Redis. The default is only when <code>save</code> is invoked on <code>SessionRepository</code>.
+A value of <code>FlushMode.IMMEDIATE</code> writes to Redis as soon as possible.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="custom-redisserializer"><a class="anchor" href="#custom-redisserializer"></a>Custom <code>RedisSerializer</code></h4>
+<div class="paragraph">
+<p>You can customize the serialization by creating a bean named <code>springSessionDefaultRedisSerializer</code> that implements <code>RedisSerializer&lt;Object&gt;</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="redis-taskexecutor"><a class="anchor" href="#redis-taskexecutor"></a>Redis <code>TaskExecutor</code></h3>
+<div class="paragraph">
+<p><code>RedisIndexedSessionRepository</code> is subscribed to receive events from Redis by using a <code>RedisMessageListenerContainer</code>.
+You can customize the way those events are dispatched by creating a bean named <code>springSessionRedisTaskExecutor</code>, a bean <code>springSessionRedisSubscriptionExecutor</code>, or both.
+You can find more details on configuring Redis task executors <a href="https://docs.spring.io/spring-data-redis/docs/2.5.1/reference/html/#redis:pubsub:subscribe:containers">here</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-redisindexedsessionrepository-storage"><a class="anchor" href="#api-redisindexedsessionrepository-storage"></a>Storage Details</h3>
+<div class="paragraph">
+<p>The following sections outline how Redis is updated for each operation.
+The following example shows an example of creating a new session:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>HMSET spring:session:sessions:33fdd1b6-b496-4b33-9f7d-df96679d32fe creationTime 1404360000000 \
+	maxInactiveInterval 1800 \
+	lastAccessedTime 1404360000000 \
+	sessionAttr:attrName someAttrValue \
+	sessionAttr:attrName2 someAttrValue2
+EXPIRE spring:session:sessions:33fdd1b6-b496-4b33-9f7d-df96679d32fe 2100
+APPEND spring:session:sessions:expires:33fdd1b6-b496-4b33-9f7d-df96679d32fe ""
+EXPIRE spring:session:sessions:expires:33fdd1b6-b496-4b33-9f7d-df96679d32fe 1800
+SADD spring:session:expirations:1439245080000 expires:33fdd1b6-b496-4b33-9f7d-df96679d32fe
+EXPIRE spring:session:expirations1439245080000 2100</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The subsequent sections describe the details.</p>
+</div>
+<div class="sect3">
+<h4 id="saving-a-session"><a class="anchor" href="#saving-a-session"></a>Saving a Session</h4>
+<div class="paragraph">
+<p>Each session is stored in Redis as a <code>Hash</code>.
+Each session is set and updated by using the <code>HMSET</code> command.
+The following example shows how each session is stored:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>HMSET spring:session:sessions:33fdd1b6-b496-4b33-9f7d-df96679d32fe creationTime 1404360000000 \
+	maxInactiveInterval 1800 \
+	lastAccessedTime 1404360000000 \
+	sessionAttr:attrName someAttrValue \
+	sessionAttr:attrName2 someAttrValue2</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In the preceding example, the following statements are true about the session:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The session ID is 33fdd1b6-b496-4b33-9f7d-df96679d32fe.</p>
+</li>
+<li>
+<p>The session was created at 1404360000000 (in milliseconds since midnight of 1/1/1970 GMT).</p>
+</li>
+<li>
+<p>The session expires in 1800 seconds (30 minutes).</p>
+</li>
+<li>
+<p>The session was last accessed at 1404360000000 (in milliseconds since midnight of 1/1/1970 GMT).</p>
+</li>
+<li>
+<p>The session has two attributes.
+The first is <code>attrName</code>, with a value of <code>someAttrValue</code>.
+The second session attribute is named <code>attrName2</code>, with a value of <code>someAttrValue2</code>.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect3">
+<h4 id="api-redisindexedsessionrepository-writes"><a class="anchor" href="#api-redisindexedsessionrepository-writes"></a>Optimized Writes</h4>
+<div class="paragraph">
+<p>The <code>Session</code> instances managed by <code>RedisIndexedSessionRepository</code> keeps track of the properties that have changed and updates only those.
+This means that, if an attribute is written once and read many times, we need to write that attribute only once.
+For example, assume the <code>attrName2</code> session attribute from the lsiting in the preceding section was updated.
+The following command would be run upon saving:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>HMSET spring:session:sessions:33fdd1b6-b496-4b33-9f7d-df96679d32fe sessionAttr:attrName2 newValue</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect3">
+<h4 id="api-redisindexedsessionrepository-expiration"><a class="anchor" href="#api-redisindexedsessionrepository-expiration"></a>Session Expiration</h4>
+<div class="paragraph">
+<p>An expiration is associated with each session by using the <code>EXPIRE</code> command, based upon the <code>Session.getMaxInactiveInterval()</code>.
+The following example shows a typical <code>EXPIRE</code> command:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>EXPIRE spring:session:sessions:33fdd1b6-b496-4b33-9f7d-df96679d32fe 2100</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that the expiration that is set to five minutes after the session actually expires.
+This is necessary so that the value of the session can be accessed when the session expires.
+An expiration is set on the session itself five minutes after it actually expires to ensure that it is cleaned up, but only after we perform any necessary processing.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+The <code>SessionRepository.findById(String)</code> method ensures that no expired sessions are returned.
+This means that you need not check the expiration before using a session.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Spring Session relies on the delete and expired <a href="https://redis.io/topics/notifications">keyspace notifications</a> from Redis to fire a <a href="#api-redisindexedsessionrepository-sessiondestroyedevent"><code>SessionDeletedEvent</code></a> and a <a href="#api-redisindexedsessionrepository-sessiondestroyedevent"><code>SessionExpiredEvent</code></a>, respectively.
+<code>SessionDeletedEvent</code> or <code>SessionExpiredEvent</code> ensure that resources associated with the <code>Session</code> are cleaned up.
+For example, when you use Spring Session&#8217;s WebSocket support, the Redis expired or delete event triggers any WebSocket connections associated with the session to be closed.</p>
+</div>
+<div class="paragraph">
+<p>Expiration is not tracked directly on the session key itself, since this would mean the session data would no longer be available. Instead, a special session expires key is used. In the preceding example, the expires key is as follows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>APPEND spring:session:sessions:expires:33fdd1b6-b496-4b33-9f7d-df96679d32fe ""
+EXPIRE spring:session:sessions:expires:33fdd1b6-b496-4b33-9f7d-df96679d32fe 1800</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>When a session expires key is deleted or expires, the keyspace notification triggers a lookup of the actual session, and a <code>SessionDestroyedEvent</code> is fired.</p>
+</div>
+<div class="paragraph">
+<p>One problem with relying on Redis expiration exclusively is that, if the key has not been accessed, Redis makes no guarantee of when the expired event is fired.
+Specifically, the background task that Redis uses to clean up expired keys is a low-priority task and may not trigger the key expiration.
+For additional details, see the <a href="https://redis.io/topics/notifications">Timing of Expired Events</a> section in the Redis documentation.</p>
+</div>
+<div class="paragraph">
+<p>To circumvent the fact that expired events are not guaranteed to happen, we can ensure that each key is accessed when it is expected to expire.
+This means that, if the TTL is expired on the key, Redis removes the key and fires the expired event when we try to access the key.</p>
+</div>
+<div class="paragraph">
+<p>For this reason, each session expiration is also tracked to the nearest minute.
+This lets a background task access the potentially expired sessions to ensure that Redis expired events are fired in a more deterministic fashion.
+The following example shows these events:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>SADD spring:session:expirations:1439245080000 expires:33fdd1b6-b496-4b33-9f7d-df96679d32fe
+EXPIRE spring:session:expirations1439245080000 2100</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The background task then uses these mappings to explicitly request each key.
+By accessing the key, rather than deleting it, we ensure that Redis deletes the key for us only if the TTL is expired.</p>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+We do not explicitly delete the keys, since, in some instances, there may be a race condition that incorrectly identifies a key as expired when it is not.
+Short of using distributed locks (which would kill our performance), there is no way to ensure the consistency of the expiration mapping.
+By simply accessing the key, we ensure that the key is only removed if the TTL on that key is expired.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-redisindexedsessionrepository-sessiondestroyedevent"><a class="anchor" href="#api-redisindexedsessionrepository-sessiondestroyedevent"></a><code>SessionDeletedEvent</code> and <code>SessionExpiredEvent</code></h3>
+<div class="paragraph">
+<p><code>SessionDeletedEvent</code> and <code>SessionExpiredEvent</code> are both types of <code>SessionDestroyedEvent</code>.</p>
+</div>
+<div class="paragraph">
+<p><code>RedisIndexedSessionRepository</code> supports firing a <code>SessionDeletedEvent</code> when a <code>Session</code> is deleted or a <code>SessionExpiredEvent</code> when a <code>Session</code> expires.
+This is necessary to ensure resources associated with the <code>Session</code> are properly cleaned up.</p>
+</div>
+<div class="paragraph">
+<p>For example, when integrating with WebSockets, the <code>SessionDestroyedEvent</code> is in charge of closing any active WebSocket connections.</p>
+</div>
+<div class="paragraph">
+<p>Firing <code>SessionDeletedEvent</code> or <code>SessionExpiredEvent</code> is made available through the <code>SessionMessageListener</code>, which listens to <a href="https://redis.io/topics/notifications">Redis Keyspace events</a>.
+In order for this to work, Redis Keyspace events for Generic commands and Expired events needs to be enabled.
+The following example shows how to do so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">redis-cli config set notify-keyspace-events Egx</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>If you use <code>@EnableRedisHttpSession</code>, managing the <code>SessionMessageListener</code> and enabling the necessary Redis Keyspace events is done automatically.
+However, in a secured Redis enviornment, the config command is disabled.
+This means that Spring Session cannot configure Redis Keyspace events for you.
+To disable the automatic configuration, add <code>ConfigureRedisAction.NO_OP</code> as a bean.</p>
+</div>
+<div class="paragraph">
+<p>For example, with Java configuration, you can use the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ConfigureRedisAction configureRedisAction() {
+	return ConfigureRedisAction.NO_OP;
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In XML configuration, you can use the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;util:constant
+	static-field="org.springframework.session.data.redis.config.ConfigureRedisAction.NO_OP"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-redisindexedsessionrepository-sessioncreatedevent"><a class="anchor" href="#api-redisindexedsessionrepository-sessioncreatedevent"></a>Using <code>SessionCreatedEvent</code></h3>
+<div class="paragraph">
+<p>When a session is created, an event is sent to Redis with a channel ID of <code>spring:session:channel:created:33fdd1b6-b496-4b33-9f7d-df96679d32fe</code>,
+where <code>33fdd1b6-b496-4b33-9f7d-df96679d32fe</code> is the session ID. The body of the event is the session that was created.</p>
+</div>
+<div class="paragraph">
+<p>If registered as a <code>MessageListener</code> (the default), <code>RedisIndexedSessionRepository</code> then translates the Redis message into a <code>SessionCreatedEvent</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-redisindexedsessionrepository-cli"><a class="anchor" href="#api-redisindexedsessionrepository-cli"></a>Viewing the Session in Redis</h3>
+<div class="paragraph">
+<p>After <a href="https://redis.io/topics/quickstart">installing redis-cli</a>, you can inspect the values in Redis <a href="https://redis.io/commands#hash">using the redis-cli</a>.
+For example, you can enter the following into a terminal:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ redis-cli
+redis 127.0.0.1:6379&gt; keys *
+1) "spring:session:sessions:4fc39ce3-63b3-4e17-b1c4-5e1ed96fb021" <i class="conum" data-value="1"></i><b>(1)</b>
+2) "spring:session:expirations:1418772300000" <i class="conum" data-value="2"></i><b>(2)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The suffix of this key is the session identifier of the Spring Session.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>This key contains all the session IDs that should be deleted at the time <code>1418772300000</code>.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also view the attributes of each session.
+The following example shows how to do so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">redis 127.0.0.1:6379&gt; hkeys spring:session:sessions:4fc39ce3-63b3-4e17-b1c4-5e1ed96fb021
+1) "lastAccessedTime"
+2) "creationTime"
+3) "maxInactiveInterval"
+4) "sessionAttr:username"
+redis 127.0.0.1:6379&gt; hget spring:session:sessions:4fc39ce3-63b3-4e17-b1c4-5e1ed96fb021 sessionAttr:username
+"\xac\xed\x00\x05t\x00\x03rob"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-reactiveredissessionrepository"><a class="anchor" href="#api-reactiveredissessionrepository"></a>Using <code>ReactiveRedisSessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>ReactiveRedisSessionRepository</code> is a <code>ReactiveSessionRepository</code> that is implemented by using Spring Data&#8217;s <code>ReactiveRedisOperations</code>.
+In a web environment, this is typically used in combination with <code>WebSessionStore</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="api-reactiveredissessionrepository-new"><a class="anchor" href="#api-reactiveredissessionrepository-new"></a>Instantiating a <code>ReactiveRedisSessionRepository</code></h3>
+<div class="paragraph">
+<p>The following example shows how to create a new instance:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// ... create and configure connectionFactory and serializationContext ...
+
+ReactiveRedisTemplate&lt;String, Object&gt; redisTemplate = new ReactiveRedisTemplate&lt;&gt;(connectionFactory,
+		serializationContext);
+
+ReactiveSessionRepository&lt;? extends Session&gt; repository = new ReactiveRedisSessionRepository(redisTemplate);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For additional information on how to create a <code>ReactiveRedisConnectionFactory</code>, see the Spring Data Redis Reference.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-reactiveredissessionrepository-config"><a class="anchor" href="#api-reactiveredissessionrepository-config"></a>Using <code>@EnableRedisWebSession</code></h3>
+<div class="paragraph">
+<p>In a web environment, the simplest way to create a new <code>ReactiveRedisSessionRepository</code> is to use <code>@EnableRedisWebSession</code>.
+You can use the following attributes to customize the configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>maxInactiveIntervalInSeconds</strong>: The amount of time before the session expires, in seconds</p>
+</li>
+<li>
+<p><strong>redisNamespace</strong>: Allows configuring an application specific namespace for the sessions. Redis keys and channel IDs start with q prefix of <code>&lt;redisNamespace&gt;:</code>.</p>
+</li>
+<li>
+<p><strong>flushMode</strong>: Allows specifying when data is written to Redis. The default is only when <code>save</code> is invoked on <code>ReactiveSessionRepository</code>.
+A value of <code>FlushMode.IMMEDIATE</code> writes to Redis as soon as possible.</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="api-reactiveredissessionrepository-writes"><a class="anchor" href="#api-reactiveredissessionrepository-writes"></a>Optimized Writes</h4>
+<div class="paragraph">
+<p>The <code>Session</code> instances managed by <code>ReactiveRedisSessionRepository</code> keep track of the properties that have changed and updates only those.
+This means that, if an attribute is written once and read many times, we need to write that attribute only once.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-reactiveredissessionrepository-cli"><a class="anchor" href="#api-reactiveredissessionrepository-cli"></a>Viewing the Session in Redis</h3>
+<div class="paragraph">
+<p>After <a href="https://redis.io/topics/quickstart">installing redis-cli</a>, you can inspect the values in Redis <a href="https://redis.io/commands#hash">using the redis-cli</a>.
+For example, you can enter the following command into a terminal window:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">$ redis-cli
+redis 127.0.0.1:6379&gt; keys *
+1) "spring:session:sessions:4fc39ce3-63b3-4e17-b1c4-5e1ed96fb021" <i class="conum" data-value="1"></i><b>(1)</b></code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The suffix of this key is the session identifier of the Spring Session.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can also view the attributes of each session by using the <code>hkeys</code> command.
+The following example shows how to do so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-bash hljs" data-lang="bash">redis 127.0.0.1:6379&gt; hkeys spring:session:sessions:4fc39ce3-63b3-4e17-b1c4-5e1ed96fb021
+1) "lastAccessedTime"
+2) "creationTime"
+3) "maxInactiveInterval"
+4) "sessionAttr:username"
+redis 127.0.0.1:6379&gt; hget spring:session:sessions:4fc39ce3-63b3-4e17-b1c4-5e1ed96fb021 sessionAttr:username
+"\xac\xed\x00\x05t\x00\x03rob"</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-mapsessionrepository"><a class="anchor" href="#api-mapsessionrepository"></a>Using <code>MapSessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>MapSessionRepository</code> allows for persisting <code>Session</code> in a <code>Map</code>, with the key being the <code>Session</code> ID and the value being the <code>Session</code>.
+You can use the implementation with a <code>ConcurrentHashMap</code> as a testing or convenience mechanism.
+Alternatively, you can use it with distributed <code>Map</code> implementations. For example, it can be used with Hazelcast.</p>
+</div>
+<div class="sect2">
+<h3 id="api-mapsessionrepository-new"><a class="anchor" href="#api-mapsessionrepository-new"></a>Instantiating <code>MapSessionRepository</code></h3>
+<div class="paragraph">
+<p>The following example shows how to create a new instance:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SessionRepository&lt;? extends Session&gt; repository = new MapSessionRepository(new ConcurrentHashMap&lt;&gt;());</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-mapsessionrepository-hazelcast"><a class="anchor" href="#api-mapsessionrepository-hazelcast"></a>Using Spring Session and Hazlecast</h3>
+<div class="paragraph">
+<p>The <a href="samples.html#samples" class="page">Hazelcast Sample</a> is a complete application that demonstrates how to use Spring Session with Hazelcast.</p>
+</div>
+<div class="paragraph">
+<p>To run it, use the following command:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	./gradlew :samples:hazelcast:tomcatRun</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The <a href="samples.html#samples" class="page">Hazelcast Spring Sample</a> is a complete application that demonstrates how to use Spring Session with Hazelcast and Spring Security.</p>
+</div>
+<div class="paragraph">
+<p>It includes example Hazelcast <code>MapListener</code> implementations that support firing <code>SessionCreatedEvent</code>, <code>SessionDeletedEvent</code>, and <code>SessionExpiredEvent</code>.</p>
+</div>
+<div class="paragraph">
+<p>To run it, use the following command:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	./gradlew :samples:hazelcast-spring:tomcatRun</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-reactivemapsessionrepository"><a class="anchor" href="#api-reactivemapsessionrepository"></a>Using <code>ReactiveMapSessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <code>ReactiveMapSessionRepository</code> allows for persisting <code>Session</code> in a <code>Map</code>, with the key being the <code>Session</code> ID and the value being the <code>Session</code>.
+You can use the implementation with a <code>ConcurrentHashMap</code> as a testing or convenience mechanism.
+Alternatively, you can use it with distributed <code>Map</code> implementations, with the requirement that the supplied <code>Map</code> must be non-blocking.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-jdbcindexedsessionrepository"><a class="anchor" href="#api-jdbcindexedsessionrepository"></a>Using <code>JdbcIndexedSessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>JdbcIndexedSessionRepository</code> is a <code>SessionRepository</code> implementation that uses Spring&#8217;s <code>JdbcOperations</code> to store sessions in a relational database.
+In a web environment, this is typically used in combination with <code>SessionRepositoryFilter</code>.
+Note that this implementation does not support publishing of session events.</p>
+</div>
+<div class="sect2">
+<h3 id="api-jdbcindexedsessionrepository-new"><a class="anchor" href="#api-jdbcindexedsessionrepository-new"></a>Instantiating a <code>JdbcIndexedSessionRepository</code></h3>
+<div class="paragraph">
+<p>The following example shows how to create a new instance:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">JdbcTemplate jdbcTemplate = new JdbcTemplate();
+
+// ... configure jdbcTemplate ...
+
+TransactionTemplate transactionTemplate = new TransactionTemplate();
+
+// ... configure transactionTemplate ...
+
+SessionRepository&lt;? extends Session&gt; repository = new JdbcIndexedSessionRepository(jdbcTemplate,
+		transactionTemplate);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For additional information on how to create and configure <code>JdbcTemplate</code> and <code>PlatformTransactionManager</code>, see the <a href="https://docs.spring.io/spring/docs/5.3.7/spring-framework-reference/data-access.html">Spring Framework Reference Documentation</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-jdbcindexedsessionrepository-config"><a class="anchor" href="#api-jdbcindexedsessionrepository-config"></a>Using <code>@EnableJdbcHttpSession</code></h3>
+<div class="paragraph">
+<p>In a web environment, the simplest way to create a new <code>JdbcIndexedSessionRepository</code> is to use <code>@EnableJdbcHttpSession</code>.
+You can find complete example usage in the <a href="samples.html#samples" class="page">Samples and Guides (Start Here)</a>
+You can use the following attributes to customize the configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>tableName</strong>: The name of database table used by Spring Session to store sessions</p>
+</li>
+<li>
+<p><strong>maxInactiveIntervalInSeconds</strong>: The amount of time before the session will expire in seconds</p>
+</li>
+</ul>
+</div>
+<div class="sect3">
+<h4 id="customizing-lobhandler"><a class="anchor" href="#customizing-lobhandler"></a>Customizing <code>LobHandler</code></h4>
+<div class="paragraph">
+<p>You can customize BLOB handling by creating a bean named <code>springSessionLobHandler</code> that implements <code>LobHandler</code>.</p>
+</div>
+</div>
+<div class="sect3">
+<h4 id="customizing-conversionservice"><a class="anchor" href="#customizing-conversionservice"></a>Customizing <code>ConversionService</code></h4>
+<div class="paragraph">
+<p>You can customize the default serialization and deserialization of the session by providing a <code>ConversionService</code> instance.
+When working in a typical Spring environment, the default <code>ConversionService</code> bean (named <code>conversionService</code>) is automatically picked up and used for serialization and deserialization.
+However, you can override the default <code>ConversionService</code> by providing a bean named <code>springSessionConversionService</code>.</p>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-jdbcindexedsessionrepository-storage"><a class="anchor" href="#api-jdbcindexedsessionrepository-storage"></a>Storage Details</h3>
+<div class="paragraph">
+<p>By default, this implementation uses <code>SPRING_SESSION</code> and <code>SPRING_SESSION_ATTRIBUTES</code> tables to store sessions.
+Note that you can customize the table name, as already described. In that case, the table used to store attributes is named by using the provided table name suffixed with <code>_ATTRIBUTES</code>.
+If further customizations are needed, you can customize the SQL queries used by the repository by using <code>set*Query</code> setter methods. In this case, you need to manually configure the <code>sessionRepository</code> bean.</p>
+</div>
+<div class="paragraph">
+<p>Due to the differences between the various database vendors, especially when it comes to storing binary data, make sure to use SQL scripts specific to your database.
+Scripts for most major database vendors are packaged as <code>org/springframework/session/jdbc/schema-*.sql</code>, where <code>*</code> is the target database type.</p>
+</div>
+<div class="paragraph">
+<p>For example, with PostgreSQL, you can use the following schema script:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE SPRING_SESSION (
+	PRIMARY_ID CHAR(36) NOT NULL,
+	SESSION_ID CHAR(36) NOT NULL,
+	CREATION_TIME BIGINT NOT NULL,
+	LAST_ACCESS_TIME BIGINT NOT NULL,
+	MAX_INACTIVE_INTERVAL INT NOT NULL,
+	EXPIRY_TIME BIGINT NOT NULL,
+	PRINCIPAL_NAME VARCHAR(100),
+	CONSTRAINT SPRING_SESSION_PK PRIMARY KEY (PRIMARY_ID)
+);
+
+CREATE UNIQUE INDEX SPRING_SESSION_IX1 ON SPRING_SESSION (SESSION_ID);
+CREATE INDEX SPRING_SESSION_IX2 ON SPRING_SESSION (EXPIRY_TIME);
+CREATE INDEX SPRING_SESSION_IX3 ON SPRING_SESSION (PRINCIPAL_NAME);
+
+CREATE TABLE SPRING_SESSION_ATTRIBUTES (
+	SESSION_PRIMARY_ID CHAR(36) NOT NULL,
+	ATTRIBUTE_NAME VARCHAR(200) NOT NULL,
+	ATTRIBUTE_BYTES BYTEA NOT NULL,
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_PK PRIMARY KEY (SESSION_PRIMARY_ID, ATTRIBUTE_NAME),
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_FK FOREIGN KEY (SESSION_PRIMARY_ID) REFERENCES SPRING_SESSION(PRIMARY_ID) ON DELETE CASCADE
+);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>With MySQL database, you can use the following script:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE SPRING_SESSION (
+	PRIMARY_ID CHAR(36) NOT NULL,
+	SESSION_ID CHAR(36) NOT NULL,
+	CREATION_TIME BIGINT NOT NULL,
+	LAST_ACCESS_TIME BIGINT NOT NULL,
+	MAX_INACTIVE_INTERVAL INT NOT NULL,
+	EXPIRY_TIME BIGINT NOT NULL,
+	PRINCIPAL_NAME VARCHAR(100),
+	CONSTRAINT SPRING_SESSION_PK PRIMARY KEY (PRIMARY_ID)
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;
+
+CREATE UNIQUE INDEX SPRING_SESSION_IX1 ON SPRING_SESSION (SESSION_ID);
+CREATE INDEX SPRING_SESSION_IX2 ON SPRING_SESSION (EXPIRY_TIME);
+CREATE INDEX SPRING_SESSION_IX3 ON SPRING_SESSION (PRINCIPAL_NAME);
+
+CREATE TABLE SPRING_SESSION_ATTRIBUTES (
+	SESSION_PRIMARY_ID CHAR(36) NOT NULL,
+	ATTRIBUTE_NAME VARCHAR(200) NOT NULL,
+	ATTRIBUTE_BYTES BLOB NOT NULL,
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_PK PRIMARY KEY (SESSION_PRIMARY_ID, ATTRIBUTE_NAME),
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_FK FOREIGN KEY (SESSION_PRIMARY_ID) REFERENCES SPRING_SESSION(PRIMARY_ID) ON DELETE CASCADE
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="transaction-management"><a class="anchor" href="#transaction-management"></a>Transaction Management</h3>
+<div class="paragraph">
+<p>All JDBC operations in <code>JdbcIndexedSessionRepository</code> are performed in a transactional manner.
+Transactions are performed with propagation set to <code>REQUIRES_NEW</code> in order to avoid unexpected behavior due to interference with existing transactions (for example, running a <code>save</code> operation in a thread that already participates in a read-only transaction).</p>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-hazelcastindexedsessionrepository"><a class="anchor" href="#api-hazelcastindexedsessionrepository"></a>Using <code>HazelcastIndexedSessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p><code>HazelcastIndexedSessionRepository</code> is a <code>SessionRepository</code> implementation that stores sessions in Hazelcast&#8217;s distributed <code>IMap</code>.
+In a web environment, this is typically used in combination with <code>SessionRepositoryFilter</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="api-hazelcastindexedsessionrepository-new"><a class="anchor" href="#api-hazelcastindexedsessionrepository-new"></a>Instantiating a <code>HazelcastIndexedSessionRepository</code></h3>
+<div class="paragraph">
+<p>The following example shows how to create a new instance:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Config config = new Config();
+
+// ... configure Hazelcast ...
+
+HazelcastInstance hazelcastInstance = Hazelcast.newHazelcastInstance(config);
+
+HazelcastIndexedSessionRepository repository = new HazelcastIndexedSessionRepository(hazelcastInstance);</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>For additional information on how to create and configure Hazelcast instance, see the <a href="https://docs.hazelcast.org/docs/3.12.12/manual/html-single/index.html#hazelcast-configuration">Hazelcast documentation</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-enablehazelcasthttpsession"><a class="anchor" href="#api-enablehazelcasthttpsession"></a>Using <code>@EnableHazelcastHttpSession</code></h3>
+<div class="paragraph">
+<p>To use <a href="https://hazelcast.org/">Hazelcast</a> as your backing source for the <code>SessionRepository</code>, you can add the <code>@EnableHazelcastHttpSession</code> annotation to a <code>@Configuration</code> class.
+Doing so extends the functionality provided by the <code>@EnableSpringHttpSession</code> annotation but makes the <code>SessionRepository</code> for you in Hazelcast.
+You must provide a single <code>HazelcastInstance</code> bean for the configuration to work.
+You can find a complete configuration example in the <a href="samples.html#samples" class="page">Samples and Guides (Start Here)</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-enablehazelcasthttpsession-customize"><a class="anchor" href="#api-enablehazelcasthttpsession-customize"></a>Basic Customization</h3>
+<div class="paragraph">
+<p>You can use the following attributes on <code>@EnableHazelcastHttpSession</code> to customize the configuration:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><strong>maxInactiveIntervalInSeconds</strong>: The amount of time before the session expires, in seconds. The default is 1800 seconds (30 minutes)</p>
+</li>
+<li>
+<p><strong>sessionMapName</strong>: The name of the distributed <code>Map</code> that is used in Hazelcast to store the session data.</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-enablehazelcasthttpsession-events"><a class="anchor" href="#api-enablehazelcasthttpsession-events"></a>Session Events</h3>
+<div class="paragraph">
+<p>Using a <code>MapListener</code> to respond to entries being added, evicted, and removed from the distributed <code>Map</code> causes these events to trigger publishing of <code>SessionCreatedEvent</code>, <code>SessionExpiredEvent</code>, and <code>SessionDeletedEvent</code> events (respectively) through the <code>ApplicationEventPublisher</code>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-enablehazelcasthttpsession-storage"><a class="anchor" href="#api-enablehazelcasthttpsession-storage"></a>Storage Details</h3>
+<div class="paragraph">
+<p>Sessions are stored in a distributed <code>IMap</code> in Hazelcast.
+The <code>IMap</code> interface methods are used to <code>get()</code> and <code>put()</code> Sessions.
+Additionally, the <code>values()</code> method supports a <code>FindByIndexNameSessionRepository#findByIndexNameAndIndexValue</code> operation, together with appropriate <code>ValueExtractor</code> (which needs to be registered with Hazelcast). See the <a href="samples.html#samples" class="page"> Hazelcast Spring Sample</a> for more details on this configuration.
+The expiration of a session in the <code>IMap</code> is handled by Hazelcast&#8217;s support for setting the time to live on an entry when it is <code>put()</code> into the <code>IMap</code>. Entries (sessions) that have been idle longer than the time to live are automatically removed from the <code>IMap</code>.</p>
+</div>
+<div class="paragraph">
+<p>You should not need to configure any settings such as <code>max-idle-seconds</code> or <code>time-to-live-seconds</code> for the <code>IMap</code> within the Hazelcast configuration.</p>
+</div>
+<div class="paragraph">
+<p>Note that if you use Hazelcast&#8217;s <code>MapStore</code> to persist your sessions <code>IMap</code>, the following limitations apply when reloading the sessions from <code>MapStore</code>:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Reloading triggers <code>EntryAddedListener</code> results in <code>SessionCreatedEvent</code> being re-published</p>
+</li>
+<li>
+<p>Reloading uses default TTL for a given <code>IMap</code> results in sessions losing their original TTL</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="api-cookieserializer"><a class="anchor" href="#api-cookieserializer"></a>Using <code>CookieSerializer</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>A <code>CookieSerializer</code> is responsible for defining how the session cookie is written.
+Spring Session comes with a default implementation using <code>DefaultCookieSerializer</code>.</p>
+</div>
+<div class="sect2">
+<h3 id="api-cookieserializer-bean"><a class="anchor" href="#api-cookieserializer-bean"></a>Exposing <code>CookieSerializer</code> as a bean</h3>
+<div class="paragraph">
+<p>Exposing the <code>CookieSerializer</code> as a Spring bean augments the existing configuration when you use configurations like <code>@EnableRedisHttpSession</code>.</p>
+</div>
+<div class="paragraph">
+<p>The following example shows how to do so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">	@Bean
+	public CookieSerializer cookieSerializer() {
+		DefaultCookieSerializer serializer = new DefaultCookieSerializer();
+		serializer.setCookieName("JSESSIONID"); <i class="conum" data-value="1"></i><b>(1)</b>
+		serializer.setCookiePath("/"); <i class="conum" data-value="2"></i><b>(2)</b>
+		serializer.setDomainNamePattern("^.+?\\.(\\w+\\.[a-z]+)$"); <i class="conum" data-value="3"></i><b>(3)</b>
+		return serializer;
+	}</code></pre>
+</div>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>We customize the name of the cookie to be <code>JSESSIONID</code>.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>We customize the path of the cookie to be <code>/</code> (rather than the default of the context root).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>We customize the domain name pattern (a regular expression) to be <code>^.+?\\.(\\w+\\.[a-z]+)$</code>.
+This allows sharing a session across domains and applications.
+If the regular expression does not match, no domain is set and the existing domain is used.
+If the regular expression matches, the first <a href="https://docs.oracle.com/javase/tutorial/essential/regex/groups.html">grouping</a> is used as the domain.
+This means that a request to <a href="https://child.example.com" class="bare">https://child.example.com</a> sets the domain to <code>example.com</code>.
+However, a request to <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a> or <a href="https://192.168.1.100:8080/" class="bare">https://192.168.1.100:8080/</a> leaves the cookie unset and, thus, still works in development without any changes being necessary for production.</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+You should only match on valid domain characters, since the domain name is reflected in the response.
+Doing so prevents a malicious user from performing such attacks as <a href="https://en.wikipedia.org/wiki/HTTP_response_splitting">HTTP Response Splitting</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="sect2">
+<h3 id="api-cookieserializer-customization"><a class="anchor" href="#api-cookieserializer-customization"></a>Customizing <code>CookieSerializer</code></h3>
+<div class="paragraph">
+<p>You can customize how the session cookie is written by using any of the following configuration options on the <code>DefaultCookieSerializer</code>.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><code>cookieName</code>: The name of the cookie to use.
+Default: <code>SESSION</code>.</p>
+</li>
+<li>
+<p><code>useSecureCookie</code>: Specifies whether a secure cookie should be used.
+Default: Use the value of <code>HttpServletRequest.isSecure()</code> at the time of creation.</p>
+</li>
+<li>
+<p><code>cookiePath</code>: The path of the cookie.
+Default: The context root.</p>
+</li>
+<li>
+<p><code>cookieMaxAge</code>: Specifies the max age of the cookie to be set at the time the session is created.
+Default: <code>-1</code>, which indicates the cookie should be removed when the browser is closed.</p>
+</li>
+<li>
+<p><code>jvmRoute</code>: Specifies a suffix to be appended to the session ID and included in the cookie.
+Used to identify which JVM to route to for session affinity.
+With some implementations (that is, Redis) this option provides no performance benefit.
+However, it can help with tracing logs of a particular user.</p>
+</li>
+<li>
+<p><code>domainName</code>: Allows specifying a specific domain name to be used for the cookie.
+This option is simple to understand but often requires a different configuration between development and production environments.
+See <code>domainNamePattern</code> as an alternative.</p>
+</li>
+<li>
+<p><code>domainNamePattern</code>: A case-insensitive pattern used to extract the domain name from the <code>HttpServletRequest#getServerName()</code>.
+The pattern should provide a single grouping that is used to extract the value of the cookie domain.
+If the regular expression does not match, no domain is set and the existing domain is used.
+If the regular expression matches, the first <a href="https://docs.oracle.com/javase/tutorial/essential/regex/groups.html">grouping</a> is used as the domain.</p>
+</li>
+<li>
+<p><code>sameSite</code>: The value for the <code>SameSite</code> cookie directive.
+To disable the serialization of the <code>SameSite</code> cookie directive, you may set this value to <code>null</code>.
+Default: <code>Lax</code></p>
+</li>
+</ul>
+</div>
+<div class="admonitionblock warning">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-warning" title="Warning"></i>
+</td>
+<td class="content">
+You should only match on valid domain characters, since the domain name is reflected in the response.
+Doing so prevents a malicious user from performing such attacks as <a href="https://en.wikipedia.org/wiki/HTTP_response_splitting">HTTP Response Splitting</a>.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="custom-sessionrepository"><a class="anchor" href="#custom-sessionrepository"></a>Customizing <code>SessionRepository</code></h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Implementing a custom <a href="#api-sessionrepository"><code>SessionRepository</code></a> API should be a fairly straightforward task.
+Coupling the custom implementation with <a href="#api-enablespringhttpsession"><code>@EnableSpringHttpSession</code></a> support lets you reuse existing Spring Session configuration facilities and infrastructure.
+There are, however, a couple of aspects that deserve closer consideration.</p>
+</div>
+<div class="paragraph">
+<p>During the lifecycle of an HTTP request, the <code>HttpSession</code> is typically persisted to <code>SessionRepository</code> twice.
+The first persist operation is to ensure that the session is available to the client as soon as the client has access to the session ID, and it is also necessary to write after the session is committed because further modifications to the session might be made.
+Having this in mind, we generally recommend that a <code>SessionRepository</code> implementation keep track of changes to ensure that only deltas are saved.
+This is particularly important in highly concurrent environments, where multiple requests operate on the same <code>HttpSession</code> and, therefore, cause race conditions, with requests overriding each other&#8217;s changes to session attributes.
+All of the <code>SessionRepository</code> implementations provided by Spring Session use the described approach to persist session changes and can be used for guidance when you implement custom <code>SessionRepository</code>.</p>
+</div>
+<div class="paragraph">
+<p>Note that the same recommendations apply for implementing a custom <a href="#api-reactivesessionrepository"><code>ReactiveSessionRepository</code></a> as well.
+In this case, you should use the <a href="#api-enablespringwebsession"><code>@EnableSpringWebSession</code></a>.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="spring-security.html">Spring Security Integration</a></span>
+  <span class="next"><a href="upgrading.html">Upgrading</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer flex">
+    <div id="spring-links flex">
+        <img id="springlogo" src="../../_/img/spring-logo.svg" alt="Spring">
+        <p class="smallest antialiased">© <script>var d = new Date();
+        document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
+        <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
+    </div>
+    <div id="social-icons" class="flex jc-between">
+        <a href="https://www.youtube.com/user/SpringSourceDev" title="Youtube"><svg id="youtube-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40"><circle class="cls-1" cx="20" cy="20" r="20"/><path class="cls-2" d="M30.91,14.53a2.89,2.89,0,0,0-2-2C27.12,12,20,12,20,12s-7.12,0-8.9.47a2.9,2.9,0,0,0-2,2A30.56,30.56,0,0,0,8.63,20a30.44,30.44,0,0,0,.46,5.47,2.89,2.89,0,0,0,2,2C12.9,28,20,28,20,28s7.12,0,8.9-.47a2.87,2.87,0,0,0,2-2A30.56,30.56,0,0,0,31.37,20,28.88,28.88,0,0,0,30.91,14.53ZM17.73,23.41V16.59L23.65,20Z"/></svg></a>
+        <a href="https://github.com/spring-projects" title="Github"><svg id="github-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><path class="cls-1" d="M38,0a38,38,0,1,0,38,38A38,38,0,0,0,38,0Z"/></g><path class="cls-2" d="M38,15.59A22.95,22.95,0,0,0,30.71,60.3c1.15.21,1.57-.5,1.57-1.11s0-2,0-3.9c-6.38,1.39-7.73-3.07-7.73-3.07A6.09,6.09,0,0,0,22,48.86c-2.09-1.42.15-1.39.15-1.39a4.81,4.81,0,0,1,3.52,2.36c2,3.5,5.37,2.49,6.67,1.91a4.87,4.87,0,0,1,1.46-3.07c-5.09-.58-10.45-2.55-10.45-11.34a8.84,8.84,0,0,1,2.36-6.15,8.29,8.29,0,0,1,.23-6.07s1.92-.62,6.3,2.35a21.82,21.82,0,0,1,11.49,0c4.38-3,6.3-2.35,6.3-2.35a8.29,8.29,0,0,1,.23,6.07,8.84,8.84,0,0,1,2.36,6.15c0,8.81-5.37,10.75-10.48,11.32a5.46,5.46,0,0,1,1.56,4.25c0,3.07,0,5.54,0,6.29s.42,1.33,1.58,1.1A22.94,22.94,0,0,0,38,15.59Z"/></svg></a>
+        <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
+    </div>
+</footer>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/tabs.js"></script>
+<script src="../../_/js/vendor/docsearch.min.js"></script>
+<!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
+<script>
+docsearch({
+  apiKey: '6098173f7ca8a2fc7db296538ae8a6cc',
+  indexName: 'spring',
+  inputSelector: '#search-input',
+  algoliaOptions: { hitsPerPage: 10 }
+})
+</script>
+  </body>
+</html>
