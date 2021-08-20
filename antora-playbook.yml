@@ -12,6 +12,8 @@ content:
     - url: https://github.com/rwinch/spring-security
       branches: [antora-2.x,6.0.x-antora-2.x]
       start_path: docs
+    - url: https://github.com/rwinch/spring-security-docs-generated
+      branches: [6.0.x-antora-2.x]
     - url: https://github.com/rwinch/spring-session
       branches: [antora-2.x]
       start_path: spring-session-docs
