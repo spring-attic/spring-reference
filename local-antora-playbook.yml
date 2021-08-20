@@ -9,6 +9,8 @@ content:
     - url: ../../spring-projects/spring-security
       branches: HEAD
       start_path: docs
+    - url: ../spring-security-docs-generated
+      branches: HEAD
 ui:
   bundle:
     url: ../../rwinch/antora-ui-spring/build/ui-bundle.zip

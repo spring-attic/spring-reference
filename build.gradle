@@ -3,5 +3,5 @@ plugins {
 }
 
 antora {
-  antoraVersion = "3.0.0-alpha.6"
+  antoraVersion = "3.0.0-alpha.8"
 }
