@@ -1377,7 +1377,7 @@ Please refer to the OAuth 2.0 Authorization Framework for further details on the
 </table>
 </div>
 <div class="sect3">
-<h4 id="obtaining-authorization"><a class="anchor" href="#obtaining-authorization"></a>Obtaining Authorization</h4>
+<h4 id="_obtaining_authorization"><a class="anchor" href="#_obtaining_authorization"></a>Obtaining Authorization</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1392,7 +1392,7 @@ Please refer to the <a href="https://tools.ietf.org/html/rfc6749#section-4.1.1">
 </div>
 </div>
 <div class="sect3">
-<h4 id="initiating-the-authorization-request"><a class="anchor" href="#initiating-the-authorization-request"></a>Initiating the Authorization Request</h4>
+<h4 id="_initiating_the_authorization_request"><a class="anchor" href="#_initiating_the_authorization_request"></a>Initiating the Authorization Request</h4>
 <div class="paragraph">
 <p>The <code>OAuth2AuthorizationRequestRedirectFilter</code> uses an <code>OAuth2AuthorizationRequestResolver</code> to resolve an <code>OAuth2AuthorizationRequest</code> and initiate the Authorization Code grant flow by redirecting the end-user&#8217;s user-agent to the Authorization Server&#8217;s Authorization Endpoint.</p>
 </div>
@@ -1507,7 +1507,7 @@ This ensures that the <code>X-Forwarded-*</code> headers are used when expanding
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-authorization-request"><a class="anchor" href="#customizing-the-authorization-request"></a>Customizing the Authorization Request</h4>
+<h4 id="_customizing_the_authorization_request"><a class="anchor" href="#_customizing_the_authorization_request"></a>Customizing the Authorization Request</h4>
 <div class="paragraph">
 <p>One of the primary use cases an <code>OAuth2AuthorizationRequestResolver</code> can realize is the ability to customize the Authorization Request with additional parameters above the standard parameters defined in the OAuth 2.0 Authorization Framework.</p>
 </div>
@@ -1683,7 +1683,7 @@ Alternatively, if your requirements are more advanced, you can take full control
 </div>
 </div>
 <div class="sect3">
-<h4 id="storing-the-authorization-request"><a class="anchor" href="#storing-the-authorization-request"></a>Storing the Authorization Request</h4>
+<h4 id="_storing_the_authorization_request"><a class="anchor" href="#_storing_the_authorization_request"></a>Storing the Authorization Request</h4>
 <div class="paragraph">
 <p>The <code>AuthorizationRequestRepository</code> is responsible for the persistence of the <code>OAuth2AuthorizationRequest</code> from the time the Authorization Request is initiated to the time the Authorization Response is received (the callback).</p>
 </div>
@@ -1759,7 +1759,7 @@ class OAuth2ClientSecurityConfig : WebSecurityConfigurerAdapter() {
 </div>
 </div>
 <div class="sect3">
-<h4 id="requesting-an-access-token"><a class="anchor" href="#requesting-an-access-token"></a>Requesting an Access Token</h4>
+<h4 id="_requesting_an_access_token"><a class="anchor" href="#_requesting_an_access_token"></a>Requesting an Access Token</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1780,7 +1780,7 @@ Please refer to the <a href="https://tools.ietf.org/html/rfc6749#section-4.1.3">
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-request"><a class="anchor" href="#customizing-the-access-token-request"></a>Customizing the Access Token Request</h4>
+<h4 id="_customizing_the_access_token_request"><a class="anchor" href="#_customizing_the_access_token_request"></a>Customizing the Access Token Request</h4>
 <div class="paragraph">
 <p>If you need to customize the pre-processing of the Token Request, you can provide <code>DefaultAuthorizationCodeTokenResponseClient.setRequestEntityConverter()</code> with a custom <code>Converter&lt;OAuth2AuthorizationCodeGrantRequest, RequestEntity&lt;?&gt;&gt;</code>.
 The default implementation <code>OAuth2AuthorizationCodeGrantRequestEntityConverter</code> builds a <code>RequestEntity</code> representation of a standard <a href="https://tools.ietf.org/html/rfc6749#section-4.1.3">OAuth 2.0 Access Token Request</a>.
@@ -1800,7 +1800,7 @@ The custom <code>Converter</code> must return a valid <code>RequestEntity</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-response"><a class="anchor" href="#customizing-the-access-token-response"></a>Customizing the Access Token Response</h4>
+<h4 id="_customizing_the_access_token_response"><a class="anchor" href="#_customizing_the_access_token_response"></a>Customizing the Access Token Response</h4>
 <div class="paragraph">
 <p>On the other end, if you need to customize the post-handling of the Token Response, you will need to provide <code>DefaultAuthorizationCodeTokenResponseClient.setRestOperations()</code> with a custom configured <code>RestOperations</code>.
 The default <code>RestOperations</code> is configured as follows:</p>
@@ -1921,7 +1921,7 @@ Please refer to the OAuth 2.0 Authorization Framework for further details on the
 </table>
 </div>
 <div class="sect3">
-<h4 id="refreshing-an-access-token"><a class="anchor" href="#refreshing-an-access-token"></a>Refreshing an Access Token</h4>
+<h4 id="_refreshing_an_access_token"><a class="anchor" href="#_refreshing_an_access_token"></a>Refreshing an Access Token</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -1942,7 +1942,7 @@ Please refer to the <a href="https://tools.ietf.org/html/rfc6749#section-6">Acce
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-request-2"><a class="anchor" href="#customizing-the-access-token-request-2"></a>Customizing the Access Token Request</h4>
+<h4 id="_customizing_the_access_token_request_2"><a class="anchor" href="#_customizing_the_access_token_request_2"></a>Customizing the Access Token Request</h4>
 <div class="paragraph">
 <p>If you need to customize the pre-processing of the Token Request, you can provide <code>DefaultRefreshTokenTokenResponseClient.setRequestEntityConverter()</code> with a custom <code>Converter&lt;OAuth2RefreshTokenGrantRequest, RequestEntity&lt;?&gt;&gt;</code>.
 The default implementation <code>OAuth2RefreshTokenGrantRequestEntityConverter</code> builds a <code>RequestEntity</code> representation of a standard <a href="https://tools.ietf.org/html/rfc6749#section-6">OAuth 2.0 Access Token Request</a>.
@@ -1962,7 +1962,7 @@ The custom <code>Converter</code> must return a valid <code>RequestEntity</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-response-2"><a class="anchor" href="#customizing-the-access-token-response-2"></a>Customizing the Access Token Response</h4>
+<h4 id="_customizing_the_access_token_response_2"><a class="anchor" href="#_customizing_the_access_token_response_2"></a>Customizing the Access Token Response</h4>
 <div class="paragraph">
 <p>On the other end, if you need to customize the post-handling of the Token Response, you will need to provide <code>DefaultRefreshTokenTokenResponseClient.setRestOperations()</code> with a custom configured <code>RestOperations</code>.
 The default <code>RestOperations</code> is configured as follows:</p>
@@ -2085,7 +2085,7 @@ Please refer to the OAuth 2.0 Authorization Framework for further details on the
 </table>
 </div>
 <div class="sect3">
-<h4 id="requesting-an-access-token-2"><a class="anchor" href="#requesting-an-access-token-2"></a>Requesting an Access Token</h4>
+<h4 id="_requesting_an_access_token_2"><a class="anchor" href="#_requesting_an_access_token_2"></a>Requesting an Access Token</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2106,7 +2106,7 @@ Please refer to the <a href="https://tools.ietf.org/html/rfc6749#section-4.4.2">
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-request-3"><a class="anchor" href="#customizing-the-access-token-request-3"></a>Customizing the Access Token Request</h4>
+<h4 id="_customizing_the_access_token_request_3"><a class="anchor" href="#_customizing_the_access_token_request_3"></a>Customizing the Access Token Request</h4>
 <div class="paragraph">
 <p>If you need to customize the pre-processing of the Token Request, you can provide <code>DefaultClientCredentialsTokenResponseClient.setRequestEntityConverter()</code> with a custom <code>Converter&lt;OAuth2ClientCredentialsGrantRequest, RequestEntity&lt;?&gt;&gt;</code>.
 The default implementation <code>OAuth2ClientCredentialsGrantRequestEntityConverter</code> builds a <code>RequestEntity</code> representation of a standard <a href="https://tools.ietf.org/html/rfc6749#section-4.4.2">OAuth 2.0 Access Token Request</a>.
@@ -2126,7 +2126,7 @@ The custom <code>Converter</code> must return a valid <code>RequestEntity</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-response-3"><a class="anchor" href="#customizing-the-access-token-response-3"></a>Customizing the Access Token Response</h4>
+<h4 id="_customizing_the_access_token_response_3"><a class="anchor" href="#_customizing_the_access_token_response_3"></a>Customizing the Access Token Response</h4>
 <div class="paragraph">
 <p>On the other end, if you need to customize the post-handling of the Token Response, you will need to provide <code>DefaultClientCredentialsTokenResponseClient.setRestOperations()</code> with a custom configured <code>RestOperations</code>.
 The default <code>RestOperations</code> is configured as follows:</p>
@@ -2228,7 +2228,7 @@ which is an implementation of an <code>OAuth2AuthorizedClientProvider</code> for
 </div>
 </div>
 <div class="sect3">
-<h4 id="using-the-access-token"><a class="anchor" href="#using-the-access-token"></a>Using the Access Token</h4>
+<h4 id="_using_the_access_token"><a class="anchor" href="#_using_the_access_token"></a>Using the Access Token</h4>
 <div class="paragraph">
 <p>Given the following Spring Boot 2.x properties for an OAuth 2.0 Client registration:</p>
 </div>
@@ -2393,7 +2393,7 @@ Please refer to the OAuth 2.0 Authorization Framework for further details on the
 </table>
 </div>
 <div class="sect3">
-<h4 id="requesting-an-access-token-3"><a class="anchor" href="#requesting-an-access-token-3"></a>Requesting an Access Token</h4>
+<h4 id="_requesting_an_access_token_3"><a class="anchor" href="#_requesting_an_access_token_3"></a>Requesting an Access Token</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2414,7 +2414,7 @@ Please refer to the <a href="https://tools.ietf.org/html/rfc6749#section-4.3.2">
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-request-4"><a class="anchor" href="#customizing-the-access-token-request-4"></a>Customizing the Access Token Request</h4>
+<h4 id="_customizing_the_access_token_request_4"><a class="anchor" href="#_customizing_the_access_token_request_4"></a>Customizing the Access Token Request</h4>
 <div class="paragraph">
 <p>If you need to customize the pre-processing of the Token Request, you can provide <code>DefaultPasswordTokenResponseClient.setRequestEntityConverter()</code> with a custom <code>Converter&lt;OAuth2PasswordGrantRequest, RequestEntity&lt;?&gt;&gt;</code>.
 The default implementation <code>OAuth2PasswordGrantRequestEntityConverter</code> builds a <code>RequestEntity</code> representation of a standard <a href="https://tools.ietf.org/html/rfc6749#section-4.3.2">OAuth 2.0 Access Token Request</a>.
@@ -2434,7 +2434,7 @@ The custom <code>Converter</code> must return a valid <code>RequestEntity</code>
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-response-4"><a class="anchor" href="#customizing-the-access-token-response-4"></a>Customizing the Access Token Response</h4>
+<h4 id="_customizing_the_access_token_response_4"><a class="anchor" href="#_customizing_the_access_token_response_4"></a>Customizing the Access Token Response</h4>
 <div class="paragraph">
 <p>On the other end, if you need to customize the post-handling of the Token Response, you will need to provide <code>DefaultPasswordTokenResponseClient.setRestOperations()</code> with a custom configured <code>RestOperations</code>.
 The default <code>RestOperations</code> is configured as follows:</p>
@@ -2537,7 +2537,7 @@ which is an implementation of an <code>OAuth2AuthorizedClientProvider</code> for
 </div>
 </div>
 <div class="sect3">
-<h4 id="using-the-access-token-2"><a class="anchor" href="#using-the-access-token-2"></a>Using the Access Token</h4>
+<h4 id="_using_the_access_token_2"><a class="anchor" href="#_using_the_access_token_2"></a>Using the Access Token</h4>
 <div class="paragraph">
 <p>Given the following Spring Boot 2.x properties for an OAuth 2.0 Client registration:</p>
 </div>
@@ -2746,7 +2746,7 @@ Please refer to JSON Web Token (JWT) Profile for OAuth 2.0 Client Authentication
 </table>
 </div>
 <div class="sect3">
-<h4 id="requesting-an-access-token-4"><a class="anchor" href="#requesting-an-access-token-4"></a>Requesting an Access Token</h4>
+<h4 id="_requesting_an_access_token_4"><a class="anchor" href="#_requesting_an_access_token_4"></a>Requesting an Access Token</h4>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -2767,7 +2767,7 @@ Please refer to the <a href="https://datatracker.ietf.org/doc/html/rfc7523#secti
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-request-5"><a class="anchor" href="#customizing-the-access-token-request-5"></a>Customizing the Access Token Request</h4>
+<h4 id="_customizing_the_access_token_request_5"><a class="anchor" href="#_customizing_the_access_token_request_5"></a>Customizing the Access Token Request</h4>
 <div class="paragraph">
 <p>If you need to customize the pre-processing of the Token Request, you can provide <code>DefaultJwtBearerTokenResponseClient.setRequestEntityConverter()</code> with a custom <code>Converter&lt;JwtBearerGrantRequest, RequestEntity&lt;?&gt;&gt;</code>.
 The default implementation <code>JwtBearerGrantRequestEntityConverter</code> builds a <code>RequestEntity</code> representation of a <a href="https://datatracker.ietf.org/doc/html/rfc7523#section-2.1">OAuth 2.0 Access Token Request</a>.
@@ -2775,7 +2775,7 @@ However, providing a custom <code>Converter</code>, would allow you to extend th
 </div>
 </div>
 <div class="sect3">
-<h4 id="customizing-the-access-token-response-5"><a class="anchor" href="#customizing-the-access-token-response-5"></a>Customizing the Access Token Response</h4>
+<h4 id="_customizing_the_access_token_response_5"><a class="anchor" href="#_customizing_the_access_token_response_5"></a>Customizing the Access Token Response</h4>
 <div class="paragraph">
 <p>On the other end, if you need to customize the post-handling of the Token Response, you will need to provide <code>DefaultJwtBearerTokenResponseClient.setRestOperations()</code> with a custom configured <code>RestOperations</code>.
 The default <code>RestOperations</code> is configured as follows:</p>
@@ -2870,7 +2870,7 @@ authorizedClientManager.setAuthorizedClientProvider(authorizedClientProvider)</c
 </div>
 </div>
 <div class="sect3">
-<h4 id="using-the-access-token-3"><a class="anchor" href="#using-the-access-token-3"></a>Using the Access Token</h4>
+<h4 id="_using_the_access_token_3"><a class="anchor" href="#_using_the_access_token_3"></a>Using the Access Token</h4>
 <div class="paragraph">
 <p>Given the following Spring Boot 2.x properties for an OAuth 2.0 Client registration:</p>
 </div>
@@ -3024,7 +3024,7 @@ a signed JSON Web Token (JWS) in the <code>client_assertion</code> parameter.</p
 is supplied by the <code>com.nimbusds.jose.jwk.JWK</code> resolver associated with <code>NimbusJwtClientAuthenticationParametersConverter</code>.</p>
 </div>
 <div class="sect3">
-<h4 id="authenticate-using-private_key_jwt"><a class="anchor" href="#authenticate-using-private_key_jwt"></a>Authenticate using <code>private_key_jwt</code></h4>
+<h4 id="_authenticate_using_private_key_jwt"><a class="anchor" href="#_authenticate_using_private_key_jwt"></a>Authenticate using <code>private_key_jwt</code></h4>
 <div class="paragraph">
 <p>Given the following Spring Boot 2.x properties for an OAuth 2.0 Client registration:</p>
 </div>
@@ -3103,7 +3103,7 @@ tokenResponseClient.setRequestEntityConverter(requestEntityConverter)</code></pr
 </div>
 </div>
 <div class="sect3">
-<h4 id="authenticate-using-client_secret_jwt"><a class="anchor" href="#authenticate-using-client_secret_jwt"></a>Authenticate using <code>client_secret_jwt</code></h4>
+<h4 id="_authenticate_using_client_secret_jwt"><a class="anchor" href="#_authenticate_using_client_secret_jwt"></a>Authenticate using <code>client_secret_jwt</code></h4>
 <div class="paragraph">
 <p>Given the following Spring Boot 2.x properties for an OAuth 2.0 Client registration:</p>
 </div>
@@ -3301,7 +3301,7 @@ fun webClient(authorizedClientManager: OAuth2AuthorizedClientManager?): WebClien
 </div>
 </div>
 <div class="sect2">
-<h3 id="providing-the-authorized-client"><a class="anchor" href="#providing-the-authorized-client"></a>Providing the Authorized Client</h3>
+<h3 id="_providing_the_authorized_client"><a class="anchor" href="#_providing_the_authorized_client"></a>Providing the Authorized Client</h3>
 <div class="paragraph">
 <p>The <code>ServletOAuth2AuthorizedClientExchangeFilterFunction</code> determines the client to use (for a request) by resolving the <code>OAuth2AuthorizedClient</code> from the <code>ClientRequest.attributes()</code> (request attributes).</p>
 </div>
@@ -3420,7 +3420,7 @@ fun index(): String {
 </div>
 </div>
 <div class="sect2">
-<h3 id="defaulting-the-authorized-client"><a class="anchor" href="#defaulting-the-authorized-client"></a>Defaulting the Authorized Client</h3>
+<h3 id="_defaulting_the_authorized_client"><a class="anchor" href="#_defaulting_the_authorized_client"></a>Defaulting the Authorized Client</h3>
 <div class="paragraph">
 <p>If neither <code>OAuth2AuthorizedClient</code> or <code>ClientRegistration.getRegistrationId()</code> is provided as a request attribute, the <code>ServletOAuth2AuthorizedClientExchangeFilterFunction</code> can determine the <em>default</em> client to use depending on it&#8217;s configuration.</p>
 </div>

@@ -546,7 +546,7 @@ In some cases, the external mechanism may supply role/authority information for 
 </div>
 </div>
 <div class="sect1">
-<h2 id="pre-authentication-framework-classes"><a class="anchor" href="#pre-authentication-framework-classes"></a>Pre-Authentication Framework Classes</h2>
+<h2 id="_pre_authentication_framework_classes"><a class="anchor" href="#_pre_authentication_framework_classes"></a>Pre-Authentication Framework Classes</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Because most pre-authentication mechanisms follow the same pattern, Spring Security has a set of classes which provide an internal framework for implementing pre-authenticated authentication providers.
@@ -557,7 +557,7 @@ You will find classes under the <code>org.springframework.security.web.authentic
 We just provide an outline here so you should consult the Javadoc and source where appropriate.</p>
 </div>
 <div class="sect2">
-<h3 id="abstractpreauthenticatedprocessingfilter"><a class="anchor" href="#abstractpreauthenticatedprocessingfilter"></a>AbstractPreAuthenticatedProcessingFilter</h3>
+<h3 id="_abstractpreauthenticatedprocessingfilter"><a class="anchor" href="#_abstractpreauthenticatedprocessingfilter"></a>AbstractPreAuthenticatedProcessingFilter</h3>
 <div class="paragraph">
 <p>This class will check the current contents of the security context and, if empty, it will attempt to extract user information from the HTTP request and submit it to the <code>AuthenticationManager</code>.
 Subclasses override the following methods to obtain this information:</p>
@@ -608,7 +608,7 @@ The default will just add the usual <code>ROLE_</code> prefix to the names, but 
 </div>
 </div>
 <div class="sect2">
-<h3 id="preauthenticatedauthenticationprovider"><a class="anchor" href="#preauthenticatedauthenticationprovider"></a>PreAuthenticatedAuthenticationProvider</h3>
+<h3 id="_preauthenticatedauthenticationprovider"><a class="anchor" href="#_preauthenticatedauthenticationprovider"></a>PreAuthenticatedAuthenticationProvider</h3>
 <div class="paragraph">
 <p>The pre-authenticated provider has little more to do than load the <code>UserDetails</code> object for the user.
 It does this by delegating to an <code>AuthenticationUserDetailsService</code>.
@@ -628,7 +628,7 @@ Alternatively, it may delegate to a standard <code>UserDetailsService</code> via
 </div>
 </div>
 <div class="sect2">
-<h3 id="http403forbiddenentrypoint"><a class="anchor" href="#http403forbiddenentrypoint"></a>Http403ForbiddenEntryPoint</h3>
+<h3 id="_http403forbiddenentrypoint"><a class="anchor" href="#_http403forbiddenentrypoint"></a>Http403ForbiddenEntryPoint</h3>
 <div class="paragraph">
 <p>The <a href="architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is responsible for kick-starting the authentication process for an unauthenticated user (when they try to access a protected resource), but in the pre-authenticated case this doesn&#8217;t apply.
 You would only configure the <code>ExceptionTranslationFilter</code> with an instance of this class if you aren&#8217;t using pre-authentication in combination with other authentication mechanisms.
@@ -639,14 +639,14 @@ It always returns a <code>403</code>-forbidden response code if called.</p>
 </div>
 </div>
 <div class="sect1">
-<h2 id="concrete-implementations"><a class="anchor" href="#concrete-implementations"></a>Concrete Implementations</h2>
+<h2 id="_concrete_implementations"><a class="anchor" href="#_concrete_implementations"></a>Concrete Implementations</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>X.509 authentication is covered in its <a href="x509.html#servlet-x509" class="page">own chapter</a>.
 Here we&#8217;ll look at some classes which provide support for other pre-authenticated scenarios.</p>
 </div>
 <div class="sect2">
-<h3 id="request-header-authentication-siteminder"><a class="anchor" href="#request-header-authentication-siteminder"></a>Request-Header Authentication (Siteminder)</h3>
+<h3 id="_request_header_authentication_siteminder"><a class="anchor" href="#_request_header_authentication_siteminder"></a>Request-Header Authentication (Siteminder)</h3>
 <div class="paragraph">
 <p>An external authentication system may supply information to the application by setting specific headers on the HTTP request.
 A well-known example of this is Siteminder, which passes the username in a header called <code>SM_USER</code>.
@@ -670,7 +670,7 @@ If an attacker is able to forge the headers in their original request without th
 </table>
 </div>
 <div class="sect3">
-<h4 id="siteminder-example-configuration"><a class="anchor" href="#siteminder-example-configuration"></a>Siteminder Example Configuration</h4>
+<h4 id="_siteminder_example_configuration"><a class="anchor" href="#_siteminder_example_configuration"></a>Siteminder Example Configuration</h4>
 <div class="paragraph">
 <p>A typical configuration using this filter would look like this:</p>
 </div>
@@ -707,13 +707,13 @@ It&#8217;s also assumed that you have added a <code>UserDetailsService</code> (c
 </div>
 </div>
 <div class="sect2">
-<h3 id="java-ee-container-authentication"><a class="anchor" href="#java-ee-container-authentication"></a>Java EE Container Authentication</h3>
+<h3 id="_java_ee_container_authentication"><a class="anchor" href="#_java_ee_container_authentication"></a>Java EE Container Authentication</h3>
 <div class="paragraph">
 <p>The class <code>J2eePreAuthenticatedProcessingFilter</code> will extract the username from the <code>userPrincipal</code> property of the <code>HttpServletRequest</code>.
 Use of this filter would usually be combined with the use of Java EE roles as described above in <a href="#j2ee-preauth-details">J2eeBasedPreAuthenticatedWebAuthenticationDetailsSource</a>.</p>
 </div>
 <div class="paragraph">
-<p>There is a {gh-old-samples-url}/xml/preauth[sample application] in the samples project which uses this approach, so get hold of the code from GitHub and have a look at the application context file if you are interested.</p>
+<p>There is a <a href="https://github.com/spring-projects/spring-security/tree/5.4.x/samples/xml/preauth">sample application</a> in the samples project which uses this approach, so get hold of the code from GitHub and have a look at the application context file if you are interested.</p>
 </div>
 </div>
 </div>

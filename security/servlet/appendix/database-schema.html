@@ -530,7 +530,7 @@ You can use these as a guideline for defining the schema for the database you ar
 </div>
 </div>
 <div class="sect1">
-<h2 id="user-schema"><a class="anchor" href="#user-schema"></a>User Schema</h2>
+<h2 id="_user_schema"><a class="anchor" href="#_user_schema"></a>User Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The standard JDBC implementation of the <code>UserDetailsService</code> (<code>JdbcDaoImpl</code>) requires tables to load the password, account status (enabled or disabled) and a list of authorities (roles) for the user.
@@ -553,7 +553,7 @@ create unique index ix_auth_username on authorities (username,authority);</code>
 </div>
 </div>
 <div class="sect2">
-<h3 id="for-oracle-database"><a class="anchor" href="#for-oracle-database"></a>For Oracle database</h3>
+<h3 id="_for_oracle_database"><a class="anchor" href="#_for_oracle_database"></a>For Oracle database</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-none hljs">CREATE TABLE USERS (
@@ -573,7 +573,7 @@ ALTER TABLE AUTHORITIES ADD CONSTRAINT AUTHORITIES_FK1 FOREIGN KEY (USERNAME) RE
 </div>
 </div>
 <div class="sect2">
-<h3 id="group-authorities"><a class="anchor" href="#group-authorities"></a>Group Authorities</h3>
+<h3 id="_group_authorities"><a class="anchor" href="#_group_authorities"></a>Group Authorities</h3>
 <div class="paragraph">
 <p>Spring Security 2.0 introduced support for group authorities in <code>JdbcDaoImpl</code>.
 The table structure if groups are enabled is as follows.
@@ -608,7 +608,7 @@ If you write your own or choose to implement <code>AuthenticationProvider</code>
 </div>
 </div>
 <div class="sect1">
-<h2 id="persistent-login-remember-me-schema"><a class="anchor" href="#persistent-login-remember-me-schema"></a>Persistent Login (Remember-Me) Schema</h2>
+<h2 id="_persistent_login_remember_me_schema"><a class="anchor" href="#_persistent_login_remember_me_schema"></a>Persistent Login (Remember-Me) Schema</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>This table is used to store data used by the more secure <a href="../authentication/rememberme.html#remember-me-persistent-token" class="page">persistent token</a> remember-me implementation.
@@ -662,7 +662,7 @@ Both of these default to <code>call identity()</code></p>
 These schemas are also demonstrated in the following sections.</p>
 </div>
 <div class="sect2">
-<h3 id="hypersql"><a class="anchor" href="#hypersql"></a>HyperSQL</h3>
+<h3 id="_hypersql"><a class="anchor" href="#_hypersql"></a>HyperSQL</h3>
 <div class="paragraph">
 <p>The default schema works with the embedded HSQLDB database that is used in unit tests within the framework.</p>
 </div>
@@ -711,7 +711,7 @@ create table acl_entry(
 </div>
 </div>
 <div class="sect2">
-<h3 id="postgresql"><a class="anchor" href="#postgresql"></a>PostgreSQL</h3>
+<h3 id="_postgresql"><a class="anchor" href="#_postgresql"></a>PostgreSQL</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-ddl hljs" data-lang="ddl">create table acl_sid(
@@ -770,7 +770,7 @@ create table acl_entry(
 </div>
 </div>
 <div class="sect2">
-<h3 id="mysql-and-mariadb"><a class="anchor" href="#mysql-and-mariadb"></a>MySQL and MariaDB</h3>
+<h3 id="_mysql_and_mariadb"><a class="anchor" href="#_mysql_and_mariadb"></a>MySQL and MariaDB</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-ddl hljs" data-lang="ddl">CREATE TABLE acl_sid (
@@ -816,7 +816,7 @@ CREATE TABLE acl_entry (
 </div>
 </div>
 <div class="sect2">
-<h3 id="microsoft-sql-server"><a class="anchor" href="#microsoft-sql-server"></a>Microsoft SQL Server</h3>
+<h3 id="_microsoft_sql_server"><a class="anchor" href="#_microsoft_sql_server"></a>Microsoft SQL Server</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-ddl hljs" data-lang="ddl">CREATE TABLE acl_sid (
@@ -862,7 +862,7 @@ CREATE TABLE acl_entry (
 </div>
 </div>
 <div class="sect2">
-<h3 id="oracle-database"><a class="anchor" href="#oracle-database"></a>Oracle Database</h3>
+<h3 id="_oracle_database"><a class="anchor" href="#_oracle_database"></a>Oracle Database</h3>
 <div class="listingblock">
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-ddl hljs" data-lang="ddl">CREATE TABLE ACL_SID (

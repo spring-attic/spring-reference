@@ -633,7 +633,7 @@ public class HelloWebfluxMethodApplicationTests {
 </div>
 </div>
 <div class="sect2">
-<h3 id="authentication"><a class="anchor" href="#authentication"></a>Authentication</h3>
+<h3 id="_authentication"><a class="anchor" href="#_authentication"></a>Authentication</h3>
 <div class="paragraph">
 <p>After applying the Spring Security support to <code>WebTestClient</code> we can use either annotations or <code>mutateWith</code> support.
 For example:</p>
@@ -750,7 +750,7 @@ fun messageWhenMutateWithMockAdminThenOk() {
 </div>
 </div>
 <div class="sect2">
-<h3 id="csrf-support"><a class="anchor" href="#csrf-support"></a>CSRF Support</h3>
+<h3 id="_csrf_support"><a class="anchor" href="#_csrf_support"></a>CSRF Support</h3>
 <div class="paragraph">
 <p>Spring Security also provides support for CSRF testing with <code>WebTestClient</code>.
 For example:</p>
@@ -1632,7 +1632,7 @@ All of this can be quite daunting, especially when this isn&#8217;t the focus of
 We&#8217;ll look at two of them now:</p>
 </div>
 <div class="sect3">
-<h4 id="mockjwt-webtestclientconfigurer"><a class="anchor" href="#mockjwt-webtestclientconfigurer"></a><code>mockJwt() WebTestClientConfigurer</code></h4>
+<h4 id="_mockjwt_webtestclientconfigurer"><a class="anchor" href="#_mockjwt_webtestclientconfigurer"></a><code>mockJwt() WebTestClientConfigurer</code></h4>
 <div class="paragraph">
 <p>The first way is via a <code>WebTestClientConfigurer</code>.
 The simplest of these would look something like this:</p>
@@ -1794,7 +1794,7 @@ However, this can be overridden simply by providing the list of <code>GrantedAut
 </div>
 </div>
 <div class="paragraph">
-<p>You can also specify a complete <code>Jwt</code>, for which <code>{security-api-url}org/springframework/security/oauth2/jwt/Jwt.Builder.html[Jwt.Builder]</code> comes quite handy:</p>
+<p>You can also specify a complete <code>Jwt</code>, for which <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/Jwt.Builder.html">Jwt.Builder</a></code> comes quite handy:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -1830,7 +1830,7 @@ client
 </div>
 </div>
 <div class="sect3">
-<h4 id="authentication-webtestclientconfigurer"><a class="anchor" href="#authentication-webtestclientconfigurer"></a><code>authentication()</code> <code>WebTestClientConfigurer</code></h4>
+<h4 id="_authentication_webtestclientconfigurer"><a class="anchor" href="#_authentication_webtestclientconfigurer"></a><code>authentication()</code> <code>WebTestClientConfigurer</code></h4>
 <div class="paragraph">
 <p>The second way is by using the <code>authentication()</code> <code>Mutator</code>.
 Essentially, you can instantiate your own <code>JwtAuthenticationToken</code> and provide it in your test, like so:</p>

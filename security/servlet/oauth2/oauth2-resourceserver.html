@@ -551,7 +551,7 @@ This authorization server can be consulted by resource servers to authorize requ
 </td>
 <td class="content">
 <div class="paragraph">
-<p>Working samples for both {gh-samples-url}/servlet/spring-boot/java/oauth2/resource-server/jwe[JWTs] and {gh-samples-url}/servlet/spring-boot/java/oauth2/resource-server/opaque[Opaque Tokens] are available in the {gh-samples-url}[Spring Security Samples repository].</p>
+<p>Working samples for both <a href="https://github.com/spring-projects/spring-security-samples/tree/main/servlet/spring-boot/java/oauth2/resource-server/jwe">JWTs</a> and <a href="https://github.com/spring-projects/spring-security-samples/tree/main/servlet/spring-boot/java/oauth2/resource-server/opaque">Opaque Tokens</a> are available in the <a href="https://github.com/spring-projects/spring-security-samples/tree/main">Spring Security Samples repository</a>.</p>
 </div>
 </td>
 </tr>
@@ -578,7 +578,7 @@ First, we see that, like <a href="../authentication/unpwd/basic.html#servlet-aut
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
-The configured <a href="../authentication/architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of {security-api-url}org/springframework/security/oauth2/server/resource/web/BearerTokenAuthenticationEntryPoint.html[<code>BearerTokenAuthenticationEntryPoint</code>] which sends a WWW-Authenticate header.
+The configured <a href="../authentication/architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/web/BearerTokenAuthenticationEntryPoint.html"><code>BearerTokenAuthenticationEntryPoint</code></a> which sends a WWW-Authenticate header.
 The <code>RequestCache</code> is typically a <code>NullRequestCache</code> that does not save the request since the client is capable of replaying the requests it originally requested.</p>
 </div>
 <div class="paragraph">
@@ -646,7 +646,7 @@ However, the support for decoding and verifying JWTs is in <code>spring-security
 First, include the needed dependencies and second, indicate the location of the authorization server.</p>
 </div>
 <div class="sect2">
-<h3 id="specifying-the-authorization-server"><a class="anchor" href="#specifying-the-authorization-server"></a>Specifying the Authorization Server</h3>
+<h3 id="_specifying_the_authorization_server"><a class="anchor" href="#_specifying_the_authorization_server"></a>Specifying the Authorization Server</h3>
 <div class="paragraph">
 <p>In a Spring Boot application, to specify which authorization server to use, simply do:</p>
 </div>
@@ -682,7 +682,7 @@ This endpoint is referred to as a <a href="https://openid.net/specs/openid-conne
 </div>
 </div>
 <div class="sect2">
-<h3 id="startup-expectations"><a class="anchor" href="#startup-expectations"></a>Startup Expectations</h3>
+<h3 id="_startup_expectations"><a class="anchor" href="#_startup_expectations"></a>Startup Expectations</h3>
 <div class="paragraph">
 <p>When this property and these dependencies are used, Resource Server will automatically configure itself to validate JWT-encoded Bearer Tokens.</p>
 </div>
@@ -722,7 +722,7 @@ If the authorization server is down when Resource Server queries it (given appro
 </div>
 </div>
 <div class="sect2">
-<h3 id="runtime-expectations"><a class="anchor" href="#runtime-expectations"></a>Runtime Expectations</h3>
+<h3 id="_runtime_expectations"><a class="anchor" href="#_runtime_expectations"></a>Runtime Expectations</h3>
 <div class="paragraph">
 <p>Once the application is started up, Resource Server will attempt to process any request containing an <code>Authorization: Bearer</code> header:</p>
 </div>
@@ -792,7 +792,7 @@ As the authorization server makes available new keys, Spring Security will autom
 <p>Next, let&#8217;s see the architectural components that Spring Security uses to support <a href="https://tools.ietf.org/html/rfc7519">JWT</a> Authentication in servlet-based applications, like the one we just saw.</p>
 </div>
 <div class="paragraph">
-<p>{security-api-url}org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationProvider.html[<code>JwtAuthenticationProvider</code>] is an <a href="../authentication/architecture/index.html#servlet-authentication-authenticationprovider" class="page"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-jwt-decoder"><code>JwtDecoder</code></a> and <a href="#oauth2resourceserver-jwt-authorization-extraction"><code>JwtAuthenticationConverter</code></a> to authenticate a JWT.</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationProvider.html"><code>JwtAuthenticationProvider</code></a> is an <a href="../authentication/architecture/index.html#servlet-authentication-authenticationprovider" class="page"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-jwt-decoder"><code>JwtDecoder</code></a> and <a href="#oauth2resourceserver-jwt-authorization-extraction"><code>JwtAuthenticationConverter</code></a> to authenticate a JWT.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s take a look at how <code>JwtAuthenticationProvider</code> works within Spring Security.
@@ -1001,7 +1001,7 @@ fun jwtDecoder(): JwtDecoder {
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Calling <code>{security-api-url}org/springframework/security/oauth2/jwt/JwtDecoders.html#fromIssuerLocation-java.lang.String-[JwtDecoders#fromIssuerLocation]</code> is what invokes the Provider Configuration or Authorization Server Metadata endpoint in order to derive the JWK Set Uri.
+Calling <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/JwtDecoders.html#fromIssuerLocation-java.lang.String-">JwtDecoders#fromIssuerLocation</a></code> is what invokes the Provider Configuration or Authorization Server Metadata endpoint in order to derive the JWK Set Uri.
 </td>
 </tr>
 </table>
@@ -2395,7 +2395,7 @@ If the authorization server responses that the token is valid, then it is.
 </div>
 </div>
 <div class="sect2">
-<h3 id="startup-expectations-2"><a class="anchor" href="#startup-expectations-2"></a>Startup Expectations</h3>
+<h3 id="_startup_expectations_2"><a class="anchor" href="#_startup_expectations_2"></a>Startup Expectations</h3>
 <div class="paragraph">
 <p>When this property and these dependencies are used, Resource Server will automatically configure itself to validate Opaque Bearer Tokens.</p>
 </div>
@@ -2404,7 +2404,7 @@ If the authorization server responses that the token is valid, then it is.
 </div>
 </div>
 <div class="sect2">
-<h3 id="runtime-expectations-2"><a class="anchor" href="#runtime-expectations-2"></a>Runtime Expectations</h3>
+<h3 id="_runtime_expectations_2"><a class="anchor" href="#_runtime_expectations_2"></a>Runtime Expectations</h3>
 <div class="paragraph">
 <p>Once the application is started up, Resource Server will attempt to process any request containing an <code>Authorization: Bearer</code> header:</p>
 </div>
@@ -2434,7 +2434,7 @@ Authorization: Bearer some-token-value # Resource Server will process this</code
 </ol>
 </div>
 <div class="paragraph">
-<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code>{security-api-url}org/springframework/security/oauth2/core/OAuth2AuthenticatedPrincipal.html[OAuth2AuthenticatedPrincipal]</code> object, and <code>Authentication#getName</code> maps to the token&#8217;s <code>sub</code> property, if one is present.</p>
+<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/OAuth2AuthenticatedPrincipal.html">OAuth2AuthenticatedPrincipal</a></code> object, and <code>Authentication#getName</code> maps to the token&#8217;s <code>sub</code> property, if one is present.</p>
 </div>
 <div class="paragraph">
 <p>From here, you may want to jump to:</p>
@@ -2465,7 +2465,7 @@ Authorization: Bearer some-token-value # Resource Server will process this</code
 <p>Next, let&#8217;s see the architectural components that Spring Security uses to support <a href="https://tools.ietf.org/html/rfc7662">opaque token</a> Authentication in servlet-based applications, like the one we just saw.</p>
 </div>
 <div class="paragraph">
-<p>{security-api-url}org/springframework/security/oauth2/server/resource/authentication/OpaqueTokenAuthenticationProvider.html[<code>OpaqueTokenAuthenticationProvider</code>] is an <a href="../authentication/architecture/index.html#servlet-authentication-authenticationprovider" class="page"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a> to authenticate an opaque token.</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/authentication/OpaqueTokenAuthenticationProvider.html"><code>OpaqueTokenAuthenticationProvider</code></a> is an <a href="../authentication/architecture/index.html#servlet-authentication-authenticationprovider" class="page"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a> to authenticate an opaque token.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s take a look at how <code>OpaqueTokenAuthenticationProvider</code> works within Spring Security.
@@ -2547,7 +2547,7 @@ fun foo(@AuthenticationPrincipal principal: OAuth2AuthenticatedPrincipal): Strin
 </div>
 </div>
 <div class="sect2">
-<h3 id="looking-up-attributes-via-spel"><a class="anchor" href="#looking-up-attributes-via-spel"></a>Looking Up Attributes Via SpEL</h3>
+<h3 id="_looking_up_attributes_via_spel"><a class="anchor" href="#_looking_up_attributes_via_spel"></a>Looking Up Attributes Via SpEL</h3>
 <div class="paragraph">
 <p>Of course, this also means that attributes can be accessed via SpEL.</p>
 </div>
@@ -3521,7 +3521,7 @@ Or, your authorization server may represent a multiplicity of issuers.</p>
 </ol>
 </div>
 <div class="sect2">
-<h3 id="resolving-the-tenant-by-claim"><a class="anchor" href="#resolving-the-tenant-by-claim"></a>Resolving the Tenant By Claim</h3>
+<h3 id="_resolving_the_tenant_by_claim"><a class="anchor" href="#_resolving_the_tenant_by_claim"></a>Resolving the Tenant By Claim</h3>
 <div class="paragraph">
 <p>One way to differentiate tenants is by the issuer claim. Since the issuer claim accompanies signed JWTs, this can be done with the <code>JwtIssuerAuthenticationManagerResolver</code>, like so:</p>
 </div>
@@ -3584,7 +3584,7 @@ In fact, the corresponding <code>JwtAuthenticationProvider</code> is instantiate
 This allows for an application startup that is independent from those authorization servers being up and available.</p>
 </div>
 <div class="sect3">
-<h4 id="dynamic-tenants"><a class="anchor" href="#dynamic-tenants"></a>Dynamic Tenants</h4>
+<h4 id="_dynamic_tenants"><a class="anchor" href="#_dynamic_tenants"></a>Dynamic Tenants</h4>
 <div class="paragraph">
 <p>Of course, you may not want to restart the application each time a new tenant is added.
 In this case, you can configure the <code>JwtIssuerAuthenticationManagerResolver</code> with a repository of <code>AuthenticationManager</code> instances, which you can edit at runtime, like so:</p>
@@ -3659,7 +3659,7 @@ The issuer should be one that the code can verify from a trusted source like a l
 </div>
 </div>
 <div class="sect3">
-<h4 id="parsing-the-claim-only-once"><a class="anchor" href="#parsing-the-claim-only-once"></a>Parsing the Claim Only Once</h4>
+<h4 id="_parsing_the_claim_only_once"><a class="anchor" href="#_parsing_the_claim_only_once"></a>Parsing the Claim Only Once</h4>
 <div class="paragraph">
 <p>You may have observed that this strategy, while simple, comes with the trade-off that the JWT is parsed once by the <code>AuthenticationManagerResolver</code> and then again by the <a href="#oauth2resourceserver-jwt-architecture-jwtdecoder"><code>JwtDecoder</code></a> later on in the request.</p>
 </div>
@@ -3943,7 +3943,7 @@ For example, if you are resolving it by subdomain, you may need to address the d
 This, however, can be customized in a handful of ways.</p>
 </div>
 <div class="sect2">
-<h3 id="reading-the-bearer-token-from-a-custom-header"><a class="anchor" href="#reading-the-bearer-token-from-a-custom-header"></a>Reading the Bearer Token from a Custom Header</h3>
+<h3 id="_reading_the_bearer_token_from_a_custom_header"><a class="anchor" href="#_reading_the_bearer_token_from_a_custom_header"></a>Reading the Bearer Token from a Custom Header</h3>
 <div class="paragraph">
 <p>For example, you may have a need to read the bearer token from a custom header.
 To achieve this, you can expose a <code>DefaultBearerTokenResolver</code> as a bean, or wire an instance into the DSL, as you can see in the following example:</p>
@@ -3993,7 +3993,7 @@ fun bearerTokenResolver(): BearerTokenResolver {
 </div>
 </div>
 <div class="sect2">
-<h3 id="reading-the-bearer-token-from-a-form-parameter"><a class="anchor" href="#reading-the-bearer-token-from-a-form-parameter"></a>Reading the Bearer Token from a Form Parameter</h3>
+<h3 id="_reading_the_bearer_token_from_a_form_parameter"><a class="anchor" href="#_reading_the_bearer_token_from_a_form_parameter"></a>Reading the Bearer Token from a Form Parameter</h3>
 <div class="paragraph">
 <p>Or, you may wish to read the token from a form parameter, which you can do by configuring the <code>DefaultBearerTokenResolver</code>, as you can see below:</p>
 </div>
@@ -4042,11 +4042,11 @@ http {
 </div>
 </div>
 <div class="sect1">
-<h2 id="bearer-token-propagation"><a class="anchor" href="#bearer-token-propagation"></a>Bearer Token Propagation</h2>
+<h2 id="_bearer_token_propagation"><a class="anchor" href="#_bearer_token_propagation"></a>Bearer Token Propagation</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Now that you&#8217;re resource server has validated the token, it might be handy to pass it to downstream services.
-This is quite simple with <code>{security-api-url}org/springframework/security/oauth2/server/resource/web/reactive/function/client/ServletBearerExchangeFilterFunction.html[ServletBearerExchangeFilterFunction]</code>, which you can see in the following example:</p>
+This is quite simple with <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/web/reactive/function/client/ServletBearerExchangeFilterFunction.html">ServletBearerExchangeFilterFunction</a></code>, which you can see in the following example:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -4075,7 +4075,7 @@ fun rest(): WebClient {
 </div>
 </div>
 <div class="paragraph">
-<p>When the above <code>WebClient</code> is used to perform requests, Spring Security will look up the current <code>Authentication</code> and extract any <code>{security-api-url}org/springframework/security/oauth2/core/AbstractOAuth2Token.html[AbstractOAuth2Token]</code> credential.
+<p>When the above <code>WebClient</code> is used to perform requests, Spring Security will look up the current <code>Authentication</code> and extract any <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/AbstractOAuth2Token.html">AbstractOAuth2Token</a></code> credential.
 Then, it will propagate that token in the <code>Authorization</code> header.</p>
 </div>
 <div class="paragraph">
@@ -4147,14 +4147,14 @@ Then, it will propagate that token in the <code>Authorization</code> header.</p>
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Unlike the {security-api-url}org/springframework/security/oauth2/client/web/reactive/function/client/ServletOAuth2AuthorizedClientExchangeFilterFunction.html[OAuth 2.0 Client filter function], this filter function makes no attempt to renew the token, should it be expired.
+Unlike the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/client/web/reactive/function/client/ServletOAuth2AuthorizedClientExchangeFilterFunction.html">OAuth 2.0 Client filter function</a>, this filter function makes no attempt to renew the token, should it be expired.
 To obtain this level of support, please use the OAuth 2.0 Client filter.
 </td>
 </tr>
 </table>
 </div>
 <div class="sect2">
-<h3 id="resttemplate-support"><a class="anchor" href="#resttemplate-support"></a><code>RestTemplate</code> support</h3>
+<h3 id="_resttemplate_support"><a class="anchor" href="#_resttemplate_support"></a><code>RestTemplate</code> support</h3>
 <div class="paragraph">
 <p>There is no <code>RestTemplate</code> equivalent for <code>ServletBearerExchangeFilterFunction</code> at the moment, but you can propagate the request&#8217;s bearer token quite simply with your own interceptor:</p>
 </div>
@@ -4217,7 +4217,7 @@ fun rest(): RestTemplate {
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Unlike the {security-api-url}org/springframework/security/oauth2/client/OAuth2AuthorizedClientManager.html[OAuth 2.0 Authorized Client Manager], this filter interceptor makes no attempt to renew the token, should it be expired.
+Unlike the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/client/OAuth2AuthorizedClientManager.html">OAuth 2.0 Authorized Client Manager</a>, this filter interceptor makes no attempt to renew the token, should it be expired.
 To obtain this level of support, please create an interceptor using the <a href="oauth2-client.html#oauth2client" class="page">OAuth 2.0 Authorized Client Manager</a>.
 </td>
 </tr>

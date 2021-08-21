@@ -545,7 +545,7 @@ Spring Security provides <a href="https://github.com/spring-projects/spring-secu
 </div>
 </div>
 <div class="sect1">
-<h2 id="hello-web-security-java-configuration"><a class="anchor" href="#hello-web-security-java-configuration"></a>Hello Web Security Java Configuration</h2>
+<h2 id="_hello_web_security_java_configuration"><a class="anchor" href="#_hello_web_security_java_configuration"></a>Hello Web Security Java Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The first step is to create our Spring Security Java Configuration.
@@ -643,7 +643,7 @@ You can find a summary of the features below:</p>
 </ul>
 </div>
 <div class="sect2">
-<h3 id="abstractsecuritywebapplicationinitializer"><a class="anchor" href="#abstractsecuritywebapplicationinitializer"></a>AbstractSecurityWebApplicationInitializer</h3>
+<h3 id="_abstractsecuritywebapplicationinitializer"><a class="anchor" href="#_abstractsecuritywebapplicationinitializer"></a>AbstractSecurityWebApplicationInitializer</h3>
 <div class="paragraph">
 <p>The next step is to register the <code>springSecurityFilterChain</code> with the war.
 This can be done in Java Configuration with <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-container-config">Spring&#8217;s WebApplicationInitializer support</a> in a Servlet 3.0+ environment.
@@ -653,16 +653,16 @@ The way in which we use <code>AbstractSecurityWebApplicationInitializer</code> d
 <div class="ulist">
 <ul>
 <li>
-<p><a href="#abstractsecuritywebapplicationinitializer-without-existing-spring">AbstractSecurityWebApplicationInitializer without Existing Spring</a> - Use these instructions if you are not using Spring already</p>
+<p><a href="#abstractsecuritywebapplicationinitializer-without-existing-spring">[abstractsecuritywebapplicationinitializer-without-existing-spring]</a> - Use these instructions if you are not using Spring already</p>
 </li>
 <li>
-<p><a href="#abstractsecuritywebapplicationinitializer-with-spring-mvc">AbstractSecurityWebApplicationInitializer with Spring MVC</a> - Use these instructions if you are already using Spring</p>
+<p><a href="#abstractsecuritywebapplicationinitializer-with-spring-mvc">[abstractsecuritywebapplicationinitializer-with-spring-mvc]</a> - Use these instructions if you are already using Spring</p>
 </li>
 </ul>
 </div>
 </div>
 <div class="sect2">
-<h3 id="abstractsecuritywebapplicationinitializer-without-existing-spring"><a class="anchor" href="#abstractsecuritywebapplicationinitializer-without-existing-spring"></a>AbstractSecurityWebApplicationInitializer without Existing Spring</h3>
+<h3 id="_abstractsecuritywebapplicationinitializer_without_existing_spring"><a class="anchor" href="#_abstractsecuritywebapplicationinitializer_without_existing_spring"></a>AbstractSecurityWebApplicationInitializer without Existing Spring</h3>
 <div class="paragraph">
 <p>If you are not using Spring or Spring MVC, you will need to pass in the <code>WebSecurityConfig</code> into the superclass to ensure the configuration is picked up.
 You can find an example below:</p>
@@ -695,7 +695,7 @@ public class SecurityWebApplicationInitializer
 </div>
 </div>
 <div class="sect2">
-<h3 id="abstractsecuritywebapplicationinitializer-with-spring-mvc"><a class="anchor" href="#abstractsecuritywebapplicationinitializer-with-spring-mvc"></a>AbstractSecurityWebApplicationInitializer with Spring MVC</h3>
+<h3 id="_abstractsecuritywebapplicationinitializer_with_spring_mvc"><a class="anchor" href="#_abstractsecuritywebapplicationinitializer_with_spring_mvc"></a>AbstractSecurityWebApplicationInitializer with Spring MVC</h3>
 <div class="paragraph">
 <p>If we were using Spring elsewhere in our application we probably already had a <code>WebApplicationInitializer</code> that is loading our Spring Configuration.
 If we use the previous configuration we would get an error.
@@ -787,7 +787,7 @@ It has a method called <code>configure</code> with the following default impleme
 </div>
 </div>
 <div class="sect1">
-<h2 id="multiple-httpsecurity"><a class="anchor" href="#multiple-httpsecurity"></a>Multiple HttpSecurity</h2>
+<h2 id="_multiple_httpsecurity"><a class="anchor" href="#_multiple_httpsecurity"></a>Multiple HttpSecurity</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>We can configure multiple HttpSecurity instances just as we can have multiple <code>&lt;http&gt;</code> blocks.

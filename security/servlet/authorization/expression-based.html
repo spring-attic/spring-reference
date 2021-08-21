@@ -522,7 +522,7 @@
 <article class="doc">
 <h1 class="page">Expression-Based Access Control</h1>
 <div class="sect1">
-<h2 id="overview"><a class="anchor" href="#overview"></a>Overview</h2>
+<h2 id="_overview"><a class="anchor" href="#_overview"></a>Overview</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Spring Security uses Spring EL for expression support and you should look at how that works if you are interested in understanding the topic in more depth.
@@ -795,7 +795,7 @@ For example, if the URL were <code>/user/123/resource</code>, then the id passed
 </div>
 </div>
 <div class="sect1">
-<h2 id="method-security-expressions"><a class="anchor" href="#method-security-expressions"></a>Method Security Expressions</h2>
+<h2 id="_method_security_expressions"><a class="anchor" href="#_method_security_expressions"></a>Method Security Expressions</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Method security is a bit more complicated than a simple allow or deny rule.
@@ -814,7 +814,7 @@ Their use is enabled through the <code>global-method-security</code> namespace e
 </div>
 </div>
 <div class="sect3">
-<h4 id="access-control-using-preauthorize-and-postauthorize"><a class="anchor" href="#access-control-using-preauthorize-and-postauthorize"></a>Access Control using @PreAuthorize and @PostAuthorize</h4>
+<h4 id="_access_control_using_preauthorize_and_postauthorize"><a class="anchor" href="#_access_control_using_preauthorize_and_postauthorize"></a>Access Control using @PreAuthorize and @PostAuthorize</h4>
 <div class="paragraph">
 <p>The most obviously useful annotation is <code>@PreAuthorize</code> which decides whether a method can actually be invoked or not.
 For example (from the "Contacts" sample application)</p>
@@ -995,7 +995,7 @@ To access the return value from a method, use the built-in name <code>returnObje
 </div>
 </div>
 <div class="sect3">
-<h4 id="filtering-using-prefilter-and-postfilter"><a class="anchor" href="#filtering-using-prefilter-and-postfilter"></a>Filtering using @PreFilter and @PostFilter</h4>
+<h4 id="_filtering_using_prefilter_and_postfilter"><a class="anchor" href="#_filtering_using_prefilter_and_postfilter"></a>Filtering using @PreFilter and @PostFilter</h4>
 <div class="paragraph">
 <p>Spring Security supports filtering of collections, arrays, maps and streams using expressions.
 This is most commonly performed on the return value of a method.
@@ -1089,7 +1089,7 @@ See the "Contacts" sample application configuration for more details.</p>
 </div>
 </div>
 <div class="sect3">
-<h4 id="method-security-meta-annotations"><a class="anchor" href="#method-security-meta-annotations"></a>Method Security Meta Annotations</h4>
+<h4 id="_method_security_meta_annotations"><a class="anchor" href="#_method_security_meta_annotations"></a>Method Security Meta Annotations</h4>
 <div class="paragraph">
 <p>You can make use of meta annotations for method security to make your code more readable.
 This is especially convenient if you find that you are repeating the same complex expression throughout your code base.

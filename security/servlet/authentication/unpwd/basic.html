@@ -547,7 +547,7 @@ First, we see the <a href="https://tools.ietf.org/html/rfc7235#section-4.1">WWW-
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
-The configured <a href="../architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of {security-api-url}org/springframework/security/web/authentication/www/BasicAuthenticationEntryPoint.html[<code>BasicAuthenticationEntryPoint</code>] which sends a WWW-Authenticate header.
+The configured <a href="../architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/www/BasicAuthenticationEntryPoint.html"><code>BasicAuthenticationEntryPoint</code></a> which sends a WWW-Authenticate header.
 The <code>RequestCache</code> is typically a <code>NullRequestCache</code> that does not save the request since the client is capable of replaying the requests it originally requested.</p>
 </div>
 <div class="paragraph">

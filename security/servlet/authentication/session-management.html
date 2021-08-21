@@ -522,7 +522,7 @@
 <article class="doc">
 <h1 class="page">Session Management</h1>
 <div class="sect1">
-<h2 id="detecting-timeouts"><a class="anchor" href="#detecting-timeouts"></a>Detecting Timeouts</h2>
+<h2 id="_detecting_timeouts"><a class="anchor" href="#_detecting_timeouts"></a>Detecting Timeouts</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>You can configure Spring Security to detect the submission of an invalid session ID and redirect the user to an appropriate URL.
@@ -668,7 +668,7 @@ See the <a href="#session-mgmt">Session Management</a> chapter for additional in
 </div>
 </div>
 <div class="sect1">
-<h2 id="sessionmanagementfilter"><a class="anchor" href="#sessionmanagementfilter"></a>SessionManagementFilter</h2>
+<h2 id="_sessionmanagementfilter"><a class="anchor" href="#_sessionmanagementfilter"></a>SessionManagementFilter</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The <code>SessionManagementFilter</code> checks the contents of the <code>SecurityContextRepository</code> against the current contents of the <code>SecurityContextHolder</code> to determine whether a user has been authenticated during the current request, typically by a non-interactive authentication mechanism, such as pre-authentication or remember-me  <sup class="footnote">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup>.
@@ -684,7 +684,7 @@ The latter is also used when configuring an invalid session URL through the name
 </div>
 </div>
 <div class="sect1">
-<h2 id="sessionauthenticationstrategy"><a class="anchor" href="#sessionauthenticationstrategy"></a>SessionAuthenticationStrategy</h2>
+<h2 id="_sessionauthenticationstrategy"><a class="anchor" href="#_sessionauthenticationstrategy"></a>SessionAuthenticationStrategy</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p><code>SessionAuthenticationStrategy</code> is used by both <code>SessionManagementFilter</code> and <code>AbstractAuthenticationProcessingFilter</code>, so if you are using a customized form-login class, for example, you will need to inject it into both of these.

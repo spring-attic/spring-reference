@@ -548,7 +548,7 @@ First, we see how the user is redirected to the log in form.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em> and sends a redirect to the log in page with the configured <a href="../architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a>.
-In most cases the <code>AuthenticationEntryPoint</code> is an instance of {security-api-url}org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html[<code>LoginUrlAuthenticationEntryPoint</code>].</p>
+In most cases the <code>AuthenticationEntryPoint</code> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html"><code>LoginUrlAuthenticationEntryPoint</code></a>.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="{icondir}/number_4.png" alt="number 4"></span> The browser will then request the log in page that it was redirected to.</p>

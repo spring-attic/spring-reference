@@ -861,7 +861,7 @@ fun ldapAuthenticationIsSuccessful() {
 </div>
 </div>
 <div class="sect2">
-<h3 id="session-management"><a class="anchor" href="#session-management"></a>Session Management</h3>
+<h3 id="_session_management"><a class="anchor" href="#_session_management"></a>Session Management</h3>
 <div class="paragraph">
 <p>Session management issues are a common source of forum questions.
 If you are developing Java web applications, you should understand how the session is maintained between the servlet container and the user&#8217;s browser.
@@ -912,7 +912,7 @@ If you need more convincing, check out a tool like <a href="https://github.com/m
 </div>
 </div>
 <div class="sect2">
-<h3 id="im-not-switching-between-http-and-https-but-my-session-is-still-getting-lost"><a class="anchor" href="#im-not-switching-between-http-and-https-but-my-session-is-still-getting-lost"></a>I&#8217;m not switching between HTTP and HTTPS but my session is still getting lost</h3>
+<h3 id="_im_not_switching_between_http_and_https_but_my_session_is_still_getting_lost"><a class="anchor" href="#_im_not_switching_between_http_and_https_but_my_session_is_still_getting_lost"></a>I&#8217;m not switching between HTTP and HTTPS but my session is still getting lost</h3>
 <div class="paragraph">
 <p>Sessions are maintained either by exchanging a session cookie or by adding a <code>jsessionid</code> parameter to URLs (this happens automatically if you are using JSTL to output URLs, or if you call <code>HttpServletResponse.encodeUrl</code> on URLs (before a redirect, for example). If clients have cookies disabled, and you are not rewriting URLs to include the <code>jsessionid</code>, then the session will be lost.
 Note that the use of cookies is preferred for security reasons, as it does not expose the session information in the URL.</p>
@@ -1057,7 +1057,7 @@ If you&#8217;re using security namespace configuration you need the <code>spring
 A good starting point is to copy those from one of the pre-built sample applications WEB-INF/lib directories.
 For a basic application, you can start with the tutorial sample.
 If you want to use LDAP, with an embedded test server, then use the LDAP sample as a starting point.
-The reference manual also includes {security-reference-url}#modules[an appendix] listing the first-level dependencies for each Spring Security module with some information on whether they are optional and what they are required for.</p>
+The reference manual also includes <a href="https://docs.spring.io/spring-security/site/docs/current/reference/html5/#modules">an appendix</a> listing the first-level dependencies for each Spring Security module with some information on whether they are optional and what they are required for.</p>
 </div>
 <div class="paragraph">
 <p>If you are building your project with maven, then adding the appropriate Spring Security modules as dependencies to your pom.xml will automatically pull in the core jars that the framework requires.

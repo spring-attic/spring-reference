@@ -533,7 +533,7 @@
 <div class="sectionbody">
 <div class="paragraph">
 <p>In order to use Spring Security with Spring MVC Test it is necessary to add the Spring Security <code>FilterChainProxy</code> as a <code>Filter</code>.
-It is also necessary to add Spring Security&#8217;s <code>TestSecurityContextHolderPostProcessor</code> to support <a href="#running-as-a-user-in-spring-mvc-test-with-annotations">Running as a User in Spring MVC Test with Annotations</a>.
+It is also necessary to add Spring Security&#8217;s <code>TestSecurityContextHolderPostProcessor</code> to support <a href="#_running_as_a_user_in_spring_mvc_test_with_annotations">Running as a User in Spring MVC Test with Annotations</a>.
 This can be done using Spring Security&#8217;s <code>SecurityMockMvcConfigurers.springSecurity()</code>.
 For example:</p>
 </div>
@@ -718,7 +718,7 @@ There are two simple ways of populating the user:</p>
 <p><a href="#test-mockmvc-securitycontextholder-rpp">Running as a User in Spring MVC Test with RequestPostProcessor</a></p>
 </li>
 <li>
-<p><a href="#running-as-a-user-in-spring-mvc-test-with-annotations">Running as a User in Spring MVC Test with Annotations</a></p>
+<p><a href="#_running_as_a_user_in_spring_mvc_test_with_annotations">Running as a User in Spring MVC Test with Annotations</a></p>
 </li>
 </ul>
 </div>
@@ -975,7 +975,7 @@ mvc.get("/") {
 </div>
 </div>
 <div class="sect3">
-<h4 id="running-as-a-user-in-spring-mvc-test-with-annotations"><a class="anchor" href="#running-as-a-user-in-spring-mvc-test-with-annotations"></a>Running as a User in Spring MVC Test with Annotations</h4>
+<h4 id="_running_as_a_user_in_spring_mvc_test_with_annotations"><a class="anchor" href="#_running_as_a_user_in_spring_mvc_test_with_annotations"></a>Running as a User in Spring MVC Test with Annotations</h4>
 <div class="paragraph">
 <p>As an alternative to using a <code>RequestPostProcessor</code> to create your user, you can use annotations described in <a href="#Testing Method Security">[Testing Method Security]</a>.
 For example, the following will run the test with the user with username "user", password "password", and role "ROLE_USER":</p>
@@ -1042,7 +1042,7 @@ fun requestProtectedUrlWithUser() {
 </div>
 </div>
 <div class="sect2">
-<h3 id="testing-http-basic-authentication"><a class="anchor" href="#testing-http-basic-authentication"></a>Testing HTTP Basic Authentication</h3>
+<h3 id="_testing_http_basic_authentication"><a class="anchor" href="#_testing_http_basic_authentication"></a>Testing HTTP Basic Authentication</h3>
 <div class="paragraph">
 <p>While it has always been possible to authenticate with HTTP Basic, it was a bit tedious to remember the header name, format, and encode the values.
 Now this can be done using Spring Security&#8217;s <code>httpBasic</code> <code>RequestPostProcessor</code>.
@@ -1931,7 +1931,7 @@ All of this can be quite daunting, especially when this isn&#8217;t the focus of
 We&#8217;ll look at two of them now:</p>
 </div>
 <div class="sect3">
-<h4 id="jwt-requestpostprocessor"><a class="anchor" href="#jwt-requestpostprocessor"></a><code>jwt() RequestPostProcessor</code></h4>
+<h4 id="_jwt_requestpostprocessor"><a class="anchor" href="#_jwt_requestpostprocessor"></a><code>jwt() RequestPostProcessor</code></h4>
 <div class="paragraph">
 <p>The first way is via a <code>RequestPostProcessor</code>.
 The simplest of these would look something like this:</p>
@@ -2097,7 +2097,7 @@ However, this can be overridden simply by providing the list of <code>GrantedAut
 </div>
 </div>
 <div class="paragraph">
-<p>You can also specify a complete <code>Jwt</code>, for which <code>{security-api-url}org/springframework/security/oauth2/jwt/Jwt.Builder.html[Jwt.Builder]</code> comes quite handy:</p>
+<p>You can also specify a complete <code>Jwt</code>, for which <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/Jwt.Builder.html">Jwt.Builder</a></code> comes quite handy:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -2135,7 +2135,7 @@ mvc.get("/endpoint") {
 </div>
 </div>
 <div class="sect3">
-<h4 id="authentication-requestpostprocessor"><a class="anchor" href="#authentication-requestpostprocessor"></a><code>authentication()</code> <code>RequestPostProcessor</code></h4>
+<h4 id="_authentication_requestpostprocessor"><a class="anchor" href="#_authentication_requestpostprocessor"></a><code>authentication()</code> <code>RequestPostProcessor</code></h4>
 <div class="paragraph">
 <p>The second way is by using the <code>authentication()</code> <code>RequestPostProcessor</code>.
 Essentially, you can instantiate your own <code>JwtAuthenticationToken</code> and provide it in your test, like so:</p>
@@ -2435,7 +2435,7 @@ mvc.get("/endpoint") {
 </div>
 </div>
 <div class="sect1">
-<h2 id="securitymockmvcrequestbuilders"><a class="anchor" href="#securitymockmvcrequestbuilders"></a>SecurityMockMvcRequestBuilders</h2>
+<h2 id="_securitymockmvcrequestbuilders"><a class="anchor" href="#_securitymockmvcrequestbuilders"></a>SecurityMockMvcRequestBuilders</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Spring MVC Test also provides a <code>RequestBuilder</code> interface that can be used to create the <code>MockHttpServletRequest</code> used in your test.
@@ -2459,7 +2459,7 @@ In order to use Spring Security&#8217;s <code>RequestBuilder</code> implementati
 </div>
 </div>
 <div class="sect2">
-<h3 id="testing-form-based-authentication"><a class="anchor" href="#testing-form-based-authentication"></a>Testing Form Based Authentication</h3>
+<h3 id="_testing_form_based_authentication"><a class="anchor" href="#_testing_form_based_authentication"></a>Testing Form Based Authentication</h3>
 <div class="paragraph">
 <p>You can easily create a request to test a form based authentication using Spring Security&#8217;s testing support.
 For example, the following will submit a POST to "/login" with the username "user", the password "password", and a valid CSRF token:</p>
@@ -2577,7 +2577,7 @@ For example, the snippet below will submit a POST to "/signout" with a valid CSR
 </div>
 </div>
 <div class="sect1">
-<h2 id="securitymockmvcresultmatchers"><a class="anchor" href="#securitymockmvcresultmatchers"></a>SecurityMockMvcResultMatchers</h2>
+<h2 id="_securitymockmvcresultmatchers"><a class="anchor" href="#_securitymockmvcresultmatchers"></a>SecurityMockMvcResultMatchers</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>At times it is desirable to make various security related assertions about a request.
@@ -2601,7 +2601,7 @@ In order to use Spring Security&#8217;s <code>ResultMatcher</code> implementatio
 </div>
 </div>
 <div class="sect2">
-<h3 id="unauthenticated-assertion"><a class="anchor" href="#unauthenticated-assertion"></a>Unauthenticated Assertion</h3>
+<h3 id="_unauthenticated_assertion"><a class="anchor" href="#_unauthenticated_assertion"></a>Unauthenticated Assertion</h3>
 <div class="paragraph">
 <p>At times it may be valuable to assert that there is no authenticated user associated with the result of a <code>MockMvc</code> invocation.
 For example, you might want to test submitting an invalid username and password and verify that no user is authenticated.
@@ -2629,7 +2629,7 @@ You can easily do this with Spring Security&#8217;s testing support using someth
 </div>
 </div>
 <div class="sect2">
-<h3 id="authenticated-assertion"><a class="anchor" href="#authenticated-assertion"></a>Authenticated Assertion</h3>
+<h3 id="_authenticated_assertion"><a class="anchor" href="#_authenticated_assertion"></a>Authenticated Assertion</h3>
 <div class="paragraph">
 <p>It is often times that we must assert that an authenticated user exists.
 For example, we may want to verify that we authenticated successfully.
