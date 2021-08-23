@@ -536,19 +536,19 @@ The figure explains details of how the <a href="../architecture/index.html#servl
 <div class="title">Figure 1. <code>DaoAuthenticationProvider</code> Usage</div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="{icondir}/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="index.html#servlet-authentication-unpwd-input" class="page">Reading the Username &amp; Password</a> passes a <code>UsernamePasswordAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="../architecture/index.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
+<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="index.html#servlet-authentication-unpwd-input" class="page">Reading the Username &amp; Password</a> passes a <code>UsernamePasswordAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="../architecture/index.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="{icondir}/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="../architecture/index.html#servlet-authentication-authenticationprovider" class="page">AuthenticationProvider</a> of type <code>DaoAuthenticationProvider</code>.</p>
+<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="../architecture/index.html#servlet-authentication-authenticationprovider" class="page">AuthenticationProvider</a> of type <code>DaoAuthenticationProvider</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> <code>DaoAuthenticationProvider</code> looks up the <code>UserDetails</code> from the <code>UserDetailsService</code>.</p>
+<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> <code>DaoAuthenticationProvider</code> looks up the <code>UserDetails</code> from the <code>UserDetailsService</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="{icondir}/number_4.png" alt="number 4"></span> <code>DaoAuthenticationProvider</code> then uses the <a href="password-encoder.html#servlet-authentication-password-storage" class="page"><code>PasswordEncoder</code></a> to validate the password on the <code>UserDetails</code> returned in the previous step.</p>
+<p><span class="image"><img src="../../../_images/icons/number_4.png" alt="number 4"></span> <code>DaoAuthenticationProvider</code> then uses the <a href="password-encoder.html#servlet-authentication-password-storage" class="page"><code>PasswordEncoder</code></a> to validate the password on the <code>UserDetails</code> returned in the previous step.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="{icondir}/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="../architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> that is returned is of type <code>UsernamePasswordAuthenticationToken</code> and has a principal that is the <code>UserDetails</code> returned by the configured <code>UserDetailsService</code>.
+<p><span class="image"><img src="../../../_images/icons/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="../architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> that is returned is of type <code>UsernamePasswordAuthenticationToken</code> and has a principal that is the <code>UserDetails</code> returned by the configured <code>UserDetailsService</code>.
 Ultimately, the returned <code>UsernamePasswordAuthenticationToken</code> will be set on the <a href="../architecture/index.html#servlet-authentication-securitycontextholder" class="page"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
 </div>
 <nav class="pagination">

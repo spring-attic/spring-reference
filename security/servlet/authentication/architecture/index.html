@@ -854,15 +854,15 @@ Before the credentials can be authenticated, Spring Security typically requests 
 </div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="{icondir}/number_1.png" alt="number 1"></span> When the user submits their credentials, the <code>AbstractAuthenticationProcessingFilter</code> creates an <a href="#servlet-authentication-authentication"><code>Authentication</code></a> from the <code>HttpServletRequest</code> to be authenticated.
+<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their credentials, the <code>AbstractAuthenticationProcessingFilter</code> creates an <a href="#servlet-authentication-authentication"><code>Authentication</code></a> from the <code>HttpServletRequest</code> to be authenticated.
 The type of <code>Authentication</code> created depends on the subclass of <code>AbstractAuthenticationProcessingFilter</code>.
 For example, <a href="../unpwd/form.html#servlet-authentication-usernamepasswordauthenticationfilter" class="page"><code>UsernamePasswordAuthenticationFilter</code></a> creates a <code>UsernamePasswordAuthenticationToken</code> from a <em>username</em> and <em>password</em> that are submitted in the <code>HttpServletRequest</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="{icondir}/number_2.png" alt="number 2"></span> Next, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> is passed into the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> to be authenticated.</p>
+<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Next, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> is passed into the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> to be authenticated.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
 </div>
 <div class="ulist">
 <ul>
@@ -879,7 +879,7 @@ If remember me is not configured, this is a no-op.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="{icondir}/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+<p><span class="image"><img src="../../../_images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
 </div>
 <div class="ulist">
 <ul>
