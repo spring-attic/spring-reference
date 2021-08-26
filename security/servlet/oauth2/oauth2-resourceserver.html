@@ -160,10 +160,10 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Authentication</span>
+    <a class="nav-link" href="../authentication/index.html">Authentication</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+    <a class="nav-link" href="../authentication/architecture.html">Authentication Architecture</a>
   </li>
   <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
@@ -578,7 +578,7 @@ First, we see that, like <a href="../authentication/passwords/basic.html#servlet
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
-The configured <a href="../authentication/architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/web/BearerTokenAuthenticationEntryPoint.html"><code>BearerTokenAuthenticationEntryPoint</code></a> which sends a WWW-Authenticate header.
+The configured <a href="../authentication/architecture.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/web/BearerTokenAuthenticationEntryPoint.html"><code>BearerTokenAuthenticationEntryPoint</code></a> which sends a WWW-Authenticate header.
 The <code>RequestCache</code> is typically a <code>NullRequestCache</code> that does not save the request since the client is capable of replaying the requests it originally requested.</p>
 </div>
 <div class="paragraph">
@@ -595,7 +595,7 @@ Below is the flow for the bearer token being processed.</p>
 <p>The figure builds off our <a href="../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their bearer token, the <code>BearerTokenAuthenticationFilter</code> creates a <code>BearerTokenAuthenticationToken</code> which is a type of <a href="../authentication/architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> by extracting the token from the <code>HttpServletRequest</code>.</p>
+<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their bearer token, the <code>BearerTokenAuthenticationFilter</code> creates a <code>BearerTokenAuthenticationToken</code> which is a type of <a href="../authentication/architecture.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> by extracting the token from the <code>HttpServletRequest</code>.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> Next, the <code>HttpServletRequest</code> is passed to the <code>AuthenticationManagerResolver</code>, which selects the <code>AuthenticationManager</code>. The <code>BearerTokenAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
@@ -607,7 +607,7 @@ The details of what <code>AuthenticationManager</code> looks like depends on whe
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="../authentication/architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a> is cleared out.</p>
+<p>The <a href="../authentication/architecture.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a> is cleared out.</p>
 </li>
 <li>
 <p>The <code>AuthenticationEntryPoint</code> is invoked to trigger the WWW-Authenticate header to be sent again.</p>
@@ -620,7 +620,7 @@ The details of what <code>AuthenticationManager</code> looks like depends on whe
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="../authentication/architecture/index.html#servlet-authentication-authentication" class="page">Authentication</a> is set on the <a href="../authentication/architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a>.</p>
+<p>The <a href="../authentication/architecture.html#servlet-authentication-authentication" class="page">Authentication</a> is set on the <a href="../authentication/architecture.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a>.</p>
 </li>
 <li>
 <p>The <code>BearerTokenAuthenticationFilter</code> invokes <code>FilterChain.doFilter(request,response)</code> to continue with the rest of the application logic.</p>
@@ -792,11 +792,11 @@ As the authorization server makes available new keys, Spring Security will autom
 <p>Next, let&#8217;s see the architectural components that Spring Security uses to support <a href="https://tools.ietf.org/html/rfc7519">JWT</a> Authentication in servlet-based applications, like the one we just saw.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationProvider.html"><code>JwtAuthenticationProvider</code></a> is an <a href="../authentication/architecture/index.html#servlet-authentication-authenticationprovider" class="page"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-jwt-decoder"><code>JwtDecoder</code></a> and <a href="#oauth2resourceserver-jwt-authorization-extraction"><code>JwtAuthenticationConverter</code></a> to authenticate a JWT.</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/authentication/JwtAuthenticationProvider.html"><code>JwtAuthenticationProvider</code></a> is an <a href="../authentication/architecture.html#servlet-authentication-authenticationprovider" class="page"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-jwt-decoder"><code>JwtDecoder</code></a> and <a href="#oauth2resourceserver-jwt-authorization-extraction"><code>JwtAuthenticationConverter</code></a> to authenticate a JWT.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s take a look at how <code>JwtAuthenticationProvider</code> works within Spring Security.
-The figure explains details of how the <a href="../authentication/architecture/index.html#servlet-authentication-authenticationmanager" class="page"><code>AuthenticationManager</code></a> in figures from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> works.</p>
+The figure explains details of how the <a href="../authentication/architecture.html#servlet-authentication-authenticationmanager" class="page"><code>AuthenticationManager</code></a> in figures from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> works.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -805,10 +805,10 @@ The figure explains details of how the <a href="../authentication/architecture/i
 <div class="title">Figure 3. <code>JwtAuthenticationProvider</code> Usage</div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> passes a <code>BearerTokenAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="../authentication/architecture/index.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
+<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> passes a <code>BearerTokenAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="../authentication/architecture.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="../authentication/architecture/index.html#servlet-authentication-authenticationprovider" class="page">AuthenticationProvider</a> of type <code>JwtAuthenticationProvider</code>.</p>
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="../authentication/architecture.html#servlet-authentication-authenticationprovider" class="page">AuthenticationProvider</a> of type <code>JwtAuthenticationProvider</code>.</p>
 </div>
 <div id="oauth2resourceserver-jwt-architecture-jwtdecoder" class="paragraph">
 <p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> <code>JwtAuthenticationProvider</code> decodes, verifies, and validates the <code>Jwt</code> using a <a href="#oauth2resourceserver-jwt-decoder"><code>JwtDecoder</code></a>.</p>
@@ -817,8 +817,8 @@ The figure explains details of how the <a href="../authentication/architecture/i
 <p><span class="image"><img src="../../_images/icons/number_4.png" alt="number 4"></span> <code>JwtAuthenticationProvider</code> then uses the <a href="#oauth2resourceserver-jwt-authorization-extraction"><code>JwtAuthenticationConverter</code></a> to convert the <code>Jwt</code> into a <code>Collection</code> of granted authorities.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="../authentication/architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> that is returned is of type <code>JwtAuthenticationToken</code> and has a principal that is the <code>Jwt</code> returned by the configured <code>JwtDecoder</code>.
-Ultimately, the returned <code>JwtAuthenticationToken</code> will be set on the <a href="../authentication/architecture/index.html#servlet-authentication-securitycontextholder" class="page"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
+<p><span class="image"><img src="../../_images/icons/number_5.png" alt="number 5"></span> When authentication is successful, the <a href="../authentication/architecture.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> that is returned is of type <code>JwtAuthenticationToken</code> and has a principal that is the <code>Jwt</code> returned by the configured <code>JwtDecoder</code>.
+Ultimately, the returned <code>JwtAuthenticationToken</code> will be set on the <a href="../authentication/architecture.html#servlet-authentication-securitycontextholder" class="page"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
 </div>
 </div>
 </div>
@@ -2465,11 +2465,11 @@ Authorization: Bearer some-token-value # Resource Server will process this</code
 <p>Next, let&#8217;s see the architectural components that Spring Security uses to support <a href="https://tools.ietf.org/html/rfc7662">opaque token</a> Authentication in servlet-based applications, like the one we just saw.</p>
 </div>
 <div class="paragraph">
-<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/authentication/OpaqueTokenAuthenticationProvider.html"><code>OpaqueTokenAuthenticationProvider</code></a> is an <a href="../authentication/architecture/index.html#servlet-authentication-authenticationprovider" class="page"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a> to authenticate an opaque token.</p>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/authentication/OpaqueTokenAuthenticationProvider.html"><code>OpaqueTokenAuthenticationProvider</code></a> is an <a href="../authentication/architecture.html#servlet-authentication-authenticationprovider" class="page"><code>AuthenticationProvider</code></a> implementation that leverages a <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a> to authenticate an opaque token.</p>
 </div>
 <div class="paragraph">
 <p>Let&#8217;s take a look at how <code>OpaqueTokenAuthenticationProvider</code> works within Spring Security.
-The figure explains details of how the <a href="../authentication/architecture/index.html#servlet-authentication-authenticationmanager" class="page"><code>AuthenticationManager</code></a> in figures from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> works.</p>
+The figure explains details of how the <a href="../authentication/architecture.html#servlet-authentication-authenticationmanager" class="page"><code>AuthenticationManager</code></a> in figures from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> works.</p>
 </div>
 <div class="imageblock">
 <div class="content">
@@ -2478,15 +2478,15 @@ The figure explains details of how the <a href="../authentication/architecture/i
 <div class="title">Figure 4. <code>OpaqueTokenAuthenticationProvider</code> Usage</div>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> passes a <code>BearerTokenAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="../authentication/architecture/index.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
+<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> The authentication <code>Filter</code> from <a href="#oauth2resourceserver-authentication-bearertokenauthenticationfilter">Reading the Bearer Token</a> passes a <code>BearerTokenAuthenticationToken</code> to the <code>AuthenticationManager</code> which is implemented by <a href="../authentication/architecture.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="../authentication/architecture/index.html#servlet-authentication-authenticationprovider" class="page">AuthenticationProvider</a> of type <code>OpaqueTokenAuthenticationProvider</code>.</p>
+<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> The <code>ProviderManager</code> is configured to use an <a href="../authentication/architecture.html#servlet-authentication-authenticationprovider" class="page">AuthenticationProvider</a> of type <code>OpaqueTokenAuthenticationProvider</code>.</p>
 </div>
 <div id="oauth2resourceserver-opaque-architecture-introspector" class="paragraph">
 <p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> <code>OpaqueTokenAuthenticationProvider</code> introspects the opaque token and adds granted authorities using an <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a>.
-When authentication is successful, the <a href="../authentication/architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> that is returned is of type <code>BearerTokenAuthentication</code> and has a principal that is the <code>OAuth2AuthenticatedPrincipal</code> returned by the configured <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a>.
-Ultimately, the returned <code>BearerTokenAuthentication</code> will be set on the <a href="../authentication/architecture/index.html#servlet-authentication-securitycontextholder" class="page"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
+When authentication is successful, the <a href="../authentication/architecture.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> that is returned is of type <code>BearerTokenAuthentication</code> and has a principal that is the <code>OAuth2AuthenticatedPrincipal</code> returned by the configured <a href="#oauth2resourceserver-opaque-introspector"><code>OpaqueTokenIntrospector</code></a>.
+Ultimately, the returned <code>BearerTokenAuthentication</code> will be set on the <a href="../authentication/architecture.html#servlet-authentication-securitycontextholder" class="page"><code>SecurityContextHolder</code></a> by the authentication <code>Filter</code>.</p>
 </div>
 </div>
 </div>

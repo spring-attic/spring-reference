@@ -160,10 +160,10 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Authentication</span>
+    <a class="nav-link" href="index.html">Authentication</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="architecture/index.html">Authentication Architecture</a>
+    <a class="nav-link" href="architecture.html">Authentication Architecture</a>
   </li>
   <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
@@ -499,7 +499,7 @@
   <ul>
     <li><a href="../../index.html">Spring Security</a></li>
     <li><a href="../index.html">Servlet Applications</a></li>
-    <li>Authentication</li>
+    <li><a href="index.html">Authentication</a></li>
     <li><a href="openid.html">OpenID</a></li>
   </ul>
 </nav>
@@ -593,7 +593,7 @@ List&lt;OpenIDAttribute&gt; attributes = token.getAttributes();</code></pre>
 </div>
 </div>
 <div class="paragraph">
-<p>We can obtain the <code>OpenIDAuthenticationToken</code> from the <a href="architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a>.
+<p>We can obtain the <code>OpenIDAuthenticationToken</code> from the <a href="architecture.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a>.
 The <code>OpenIDAttribute</code> contains the attribute type and the retrieved value (or values in the case of multi-valued attributes).
 You can supply multiple <code>attribute-exchange</code> elements, using an <code>identifier-matcher</code> attribute on each.
 This contains a regular expression which will be matched against the OpenID identifier supplied by the user.

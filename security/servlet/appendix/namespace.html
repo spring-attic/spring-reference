@@ -160,10 +160,10 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">Authentication</span>
+    <a class="nav-link" href="../authentication/index.html">Authentication</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../authentication/architecture/index.html">Authentication Architecture</a>
+    <a class="nav-link" href="../authentication/architecture.html">Authentication Architecture</a>
   </li>
   <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
@@ -554,7 +554,7 @@ The positions of the standard filters are fixed (see
 You can, of course, still do this if you need full control of the configuration.</p>
 </div>
 <div class="paragraph">
-<p>All filters which require a reference to the <a href="../authentication/architecture/index.html#servlet-authentication-authenticationmanager" class="page"><code>AuthenticationManager</code></a> will be automatically injected with the internal instance created by the namespace configuration.</p>
+<p>All filters which require a reference to the <a href="../authentication/architecture.html#servlet-authentication-authenticationmanager" class="page"><code>AuthenticationManager</code></a> will be automatically injected with the internal instance created by the namespace configuration.</p>
 </div>
 <div class="paragraph">
 <p>Each <code>&lt;http&gt;</code> namespace block always creates an <code>SecurityContextPersistenceFilter</code>, an <code>ExceptionTranslationFilter</code> and a <code>FilterSecurityInterceptor</code>.
@@ -3645,7 +3645,7 @@ This attribute allows you to define an alias name for the internal instance for 
 <li>
 <p><strong>erase-credentials</strong>
 If set to true, the AuthenticationManager will attempt to clear any credentials data in the returned Authentication object, once the user has been authenticated.
-Literally it maps to the <code>eraseCredentialsAfterAuthentication</code> property of the <a href="../authentication/architecture/index.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
+Literally it maps to the <code>eraseCredentialsAfterAuthentication</code> property of the <a href="../authentication/architecture.html#servlet-authentication-providermanager" class="page"><code>ProviderManager</code></a>.</p>
 </li>
 </ul>
 </div>
