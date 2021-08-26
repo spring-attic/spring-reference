@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Form Login :: Spring</title>
-    <link rel="prev" href="index.html">
-    <link rel="next" href="basic.html">
+    <title>JDBC Authentication :: Spring</title>
+    <link rel="prev" href="in-memory.html">
+    <link rel="next" href="user-details.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 
@@ -173,7 +173,7 @@
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Reading Username/Password</span>
 <ul class="nav-list">
-  <li class="nav-item is-current-page" data-depth="5">
+  <li class="nav-item" data-depth="5">
     <a class="nav-link" href="form.html">Form</a>
   </li>
   <li class="nav-item" data-depth="5">
@@ -191,7 +191,7 @@
   <li class="nav-item" data-depth="5">
     <a class="nav-link" href="in-memory.html">In Memory</a>
   </li>
-  <li class="nav-item" data-depth="5">
+  <li class="nav-item is-current-page" data-depth="5">
     <a class="nav-link" href="jdbc.html">JDBC</a>
   </li>
   <li class="nav-item" data-depth="5">
@@ -501,8 +501,8 @@
     <li><a href="../../index.html">Servlet Applications</a></li>
     <li>Authentication</li>
     <li><a href="index.html">Username/Password</a></li>
-    <li>Reading Username/Password</li>
-    <li><a href="form.html">Form</a></li>
+    <li>Password Storage</li>
+    <li><a href="jdbc.html">JDBC</a></li>
   </ul>
 </nav>
 <div class="search">
@@ -511,301 +511,277 @@
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">6</button>
   <div class="version-menu">
-    <a class="version is-current" href="form.html">6</a>
-    <a class="version" href="../../../5.6/servlet/authentication/unpwd/form.html">5.6</a>
+    <a class="version is-current" href="jdbc.html">6</a>
+    <a class="version is-missing" href="../../../5.6/index.html">5.6</a>
   </div>
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/6.0.x-antora-2.x/docs/modules/ROOT/pages/servlet/authentication/unpwd/form.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/6.0.x-antora-2.x/docs/modules/ROOT/pages/servlet/authentication/passwords/jdbc.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Form Login</h1>
+<h1 class="page">JDBC Authentication</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>Spring Security provides support for username and password being provided through an html form.
-This section provides details on how form based authentication works within Spring Security.</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s take a look at how form based log in works within Spring Security.
-First, we see how the user is redirected to the log in form.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../../../_images/servlet/authentication/unpwd/loginurlauthenticationentrypoint.png" alt="loginurlauthenticationentrypoint">
-</div>
-<div class="title">Figure 1. Redirecting to the Log In Page</div>
+<p>Spring Security&#8217;s <code>JdbcDaoImpl</code> implements <a href="user-details-service.html#servlet-authentication-userdetailsservice" class="page">UserDetailsService</a> to provide support for username/password based authentication that is retrieved using JDBC.
+<code>JdbcUserDetailsManager</code> extends <code>JdbcDaoImpl</code> to provide management of <code>UserDetails</code> through the <code>UserDetailsManager</code> interface.
+<code>UserDetails</code> based authentication is used by Spring Security when it is configured to <a href="index.html#servlet-authentication-unpwd-input" class="page">accept a username/password</a> for authentication.</p>
 </div>
 <div class="paragraph">
-<p>The figure builds off our <a href="../../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="../../authorization/authorize-requests.html#servlet-authorization-filtersecurityinterceptor" class="page"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em> and sends a redirect to the log in page with the configured <a href="../architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a>.
-In most cases the <code>AuthenticationEntryPoint</code> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/LoginUrlAuthenticationEntryPoint.html"><code>LoginUrlAuthenticationEntryPoint</code></a>.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_4.png" alt="number 4"></span> The browser will then request the log in page that it was redirected to.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_5.png" alt="number 5"></span> Something within the application, must <a href="#servlet-authentication-form-custom">render the log in page</a>.</p>
-</div>
-<div id="servlet-authentication-usernamepasswordauthenticationfilter" class="paragraph">
-<p>When the username and password are submitted, the <code>UsernamePasswordAuthenticationFilter</code> authenticates the username and password.
-The <code>UsernamePasswordAuthenticationFilter</code> extends <a href="../architecture/index.html#servlet-authentication-abstractprocessingfilter" class="page">AbstractAuthenticationProcessingFilter</a>, so this diagram should look pretty similar.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../../../_images/servlet/authentication/unpwd/usernamepasswordauthenticationfilter.png" alt="usernamepasswordauthenticationfilter">
-</div>
-<div class="title">Figure 2. Authenticating Username and Password</div>
-</div>
-<div class="paragraph">
-<p>The figure builds off our <a href="../../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>UsernamePasswordAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="../architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
-The details of what <code>AuthenticationManager</code> look like depend on how the <a href="index.html#servlet-authentication-unpwd-storage" class="page">user information is stored</a>.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+<p>In the following sections we will discuss:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="../architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a> is cleared out.</p>
+<p>The <a href="#servlet-authentication-jdbc-schema">Default Schema</a> used by Spring Security JDBC Authentication</p>
 </li>
 <li>
-<p><code>RememberMeServices.loginFail</code> is invoked.
-If remember me is not configured, this is a no-op.</p>
+<p><a href="#servlet-authentication-jdbc-datasource">Setting up a DataSource</a></p>
 </li>
 <li>
-<p><code>AuthenticationFailureHandler</code> is invoked.</p>
+<p><a href="#servlet-authentication-jdbc-bean">JdbcUserDetailsManager Bean</a></p>
 </li>
 </ul>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-jdbc-schema"><a class="anchor" href="#servlet-authentication-jdbc-schema"></a>Default Schema</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+<p>Spring Security provides default queries for JDBC based authentication.
+This section provides the corresponding default schemas used with the default queries.
+You will need to adjust the schema to match any customizations to the queries and the database dialect you are using.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>SessionAuthenticationStrategy</code> is notified of a new log in.</p>
-</li>
-<li>
-<p>The <a href="../architecture/index.html#servlet-authentication-authentication" class="page">Authentication</a> is set on the <a href="../architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a>.</p>
-</li>
-<li>
-<p><code>RememberMeServices.loginSuccess</code> is invoked.
-If remember me is not configured, this is a no-op.</p>
-</li>
-<li>
-<p><code>ApplicationEventPublisher</code> publishes an <code>InteractiveAuthenticationSuccessEvent</code>.</p>
-</li>
-<li>
-<p>The <code>AuthenticationSuccessHandler</code> is invoked. Typically this is a <code>SimpleUrlAuthenticationSuccessHandler</code> which will redirect to a request saved by <a href="../../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> when we redirect to the log in page.</p>
-</li>
-</ul>
-</div>
-<div id="servlet-authentication-form-min" class="paragraph">
-<p>Spring Security form log in is enabled by default.
-However, as soon as any servlet based configuration is provided, form based log in must be explicitly provided.
-A minimal, explicit Java configuration can be found below:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 1. Form Log In</div>
-<div class="content">
-<div class="listingblock primary">
-<div class="title">Java</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) {
-	http
-		// ...
-		.formLogin(withDefaults());
-}</code></pre>
-</div>
-</div>
-<div class="listingblock secondary">
-<div class="title">XML</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
-	&lt;!-- ... --&gt;
-	&lt;form-login /&gt;
-&lt;/http&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock secondary">
-<div class="title">Kotlin</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
-	http {
-		// ...
-		formLogin { }
-	}
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
+<div class="sect2">
+<h3 id="servlet-authentication-jdbc-schema-user"><a class="anchor" href="#servlet-authentication-jdbc-schema-user"></a>User Schema</h3>
 <div class="paragraph">
-<p>In this configuration Spring Security will render a default log in page.
-Most production applications will require a custom log in form.</p>
+<p><code>JdbcDaoImpl</code> requires tables to load the password, account status (enabled or disabled) and a list of authorities (roles) for the user.
+The default schema required can be found below.</p>
 </div>
-<div id="servlet-authentication-form-custom" class="paragraph">
-<p>The configuration below demonstrates how to provide a custom log in form.</p>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>The default schema is also exposed as a classpath resource named <code>org/springframework/security/core/userdetails/jdbc/users.ddl</code>.</p>
 </div>
-<div class="exampleblock">
-<div class="title">Example 2. Custom Log In Form Configuration</div>
-<div class="content">
-<div class="listingblock primary">
-<div class="title">Java</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) throws Exception {
-	http
-		// ...
-		.formLogin(form -&gt; form
-			.loginPage("/login")
-			.permitAll()
-		);
-}</code></pre>
-</div>
-</div>
-<div class="listingblock secondary">
-<div class="title">XML</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
-	&lt;!-- ... --&gt;
-	&lt;intercept-url pattern="/login" access="permitAll" /&gt;
-	&lt;form-login login-page="/login" /&gt;
-&lt;/http&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock secondary">
-<div class="title">Kotlin</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
-	http {
-		// ...
-		formLogin {
-			loginPage = "/login"
-			permitAll()
-		}
-	}
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div id="servlet-authentication-form-custom-html" class="paragraph">
-<p>When the login page is specified in the Spring Security configuration, you are responsible for rendering the page.
-Below is a <a href="https://www.thymeleaf.org/">Thymeleaf</a> template that produces an HTML login form that complies with a login page of <code>/login</code>.:</p>
+</td>
+</tr>
+</table>
 </div>
 <div class="exampleblock">
-<div class="title">Example 3. Log In Form</div>
+<div class="title">Example 1. Default User Schema</div>
 <div class="content">
 <div class="listingblock">
-<div class="title">src/main/resources/templates/login.html</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;!DOCTYPE html&gt;
-&lt;html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"&gt;
-	&lt;head&gt;
-		&lt;title&gt;Please Log In&lt;/title&gt;
-	&lt;/head&gt;
-	&lt;body&gt;
-		&lt;h1&gt;Please Log In&lt;/h1&gt;
-		&lt;div th:if="${param.error}"&gt;
-			Invalid username and password.&lt;/div&gt;
-		&lt;div th:if="${param.logout}"&gt;
-			You have been logged out.&lt;/div&gt;
-		&lt;form th:action="@{/login}" method="post"&gt;
-			&lt;div&gt;
-			&lt;input type="text" name="username" placeholder="Username"/&gt;
-			&lt;/div&gt;
-			&lt;div&gt;
-			&lt;input type="password" name="password" placeholder="Password"/&gt;
-			&lt;/div&gt;
-			&lt;input type="submit" value="Log in" /&gt;
-		&lt;/form&gt;
-	&lt;/body&gt;
-&lt;/html&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">create table users(
+	username varchar_ignorecase(50) not null primary key,
+	password varchar_ignorecase(500) not null,
+	enabled boolean not null
+);
+
+create table authorities (
+	username varchar_ignorecase(50) not null,
+	authority varchar_ignorecase(50) not null,
+	constraint fk_authorities_users foreign key(username) references users(username)
+);
+create unique index ix_auth_username on authorities (username,authority);</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>There are a few key points about the default HTML form:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The form should perform a <code>post</code> to <code>/login</code></p>
-</li>
-<li>
-<p>The form will need to include a <a href="../../exploits/csrf.html#servlet-csrf" class="page">CSRF Token</a> which is <a href="../../exploits/csrf.html#servlet-csrf-include-form-auto" class="page">automatically included</a> by Thymeleaf.</p>
-</li>
-<li>
-<p>The form should specify the username in a parameter named <code>username</code></p>
-</li>
-<li>
-<p>The form should specify the password in a parameter named <code>password</code></p>
-</li>
-<li>
-<p>If the HTTP parameter error is found, it indicates the user failed to provide a valid username / password</p>
-</li>
-<li>
-<p>If the HTTP parameter logout is found, it indicates the user has logged out successfully</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Many users will not need much more than to customize the log in page.
-However, if needed everything above can be customized with additional configuration.</p>
-</div>
-<div id="servlet-authentication-form-custom-controller" class="paragraph">
-<p>If you are using Spring MVC, you will need a controller that maps <code>GET /login</code> to the login template we created.
-A minimal sample <code>LoginController</code> can be see below:</p>
+<p>Oracle is a popular database choice, but requires a slightly different schema.
+You can find the default Oracle Schema for users below.</p>
 </div>
 <div class="exampleblock">
-<div class="title">Example 4. LoginController</div>
+<div class="title">Example 2. Default User Schema for Oracle Databases</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE USERS (
+    USERNAME NVARCHAR2(128) PRIMARY KEY,
+    PASSWORD NVARCHAR2(128) NOT NULL,
+    ENABLED CHAR(1) CHECK (ENABLED IN ('Y','N') ) NOT NULL
+);
+
+
+CREATE TABLE AUTHORITIES (
+    USERNAME NVARCHAR2(128) NOT NULL,
+    AUTHORITY NVARCHAR2(128) NOT NULL
+);
+ALTER TABLE AUTHORITIES ADD CONSTRAINT AUTHORITIES_UNIQUE UNIQUE (USERNAME, AUTHORITY);
+ALTER TABLE AUTHORITIES ADD CONSTRAINT AUTHORITIES_FK1 FOREIGN KEY (USERNAME) REFERENCES USERS (USERNAME) ENABLE;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect2">
+<h3 id="servlet-authentication-jdbc-schema-group"><a class="anchor" href="#servlet-authentication-jdbc-schema-group"></a>Group Schema</h3>
+<div class="paragraph">
+<p>If your application is leveraging groups, you will need to provide the groups schema.
+The default schema for groups can be found below.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 3. Default Group Schema</div>
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">create table groups (
+	id bigint generated by default as identity(start with 0) primary key,
+	group_name varchar_ignorecase(50) not null
+);
+
+create table group_authorities (
+	group_id bigint not null,
+	authority varchar(50) not null,
+	constraint fk_group_authorities_group foreign key(group_id) references groups(id)
+);
+
+create table group_members (
+	id bigint generated by default as identity(start with 0) primary key,
+	username varchar(50) not null,
+	group_id bigint not null,
+	constraint fk_group_members_group foreign key(group_id) references groups(id)
+);</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-jdbc-datasource"><a class="anchor" href="#servlet-authentication-jdbc-datasource"></a>Setting up a DataSource</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Before we configure <code>JdbcUserDetailsManager</code>, we must create a <code>DataSource</code>.
+In our example, we will setup an <a href="https://docs.spring.io/spring-framework/docs/current/spring-framework-reference/data-access.html#jdbc-embedded-database-support">embedded DataSource</a> that is initialized with the <a href="#servlet-authentication-jdbc-schema">default user schema</a>.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 4. Embedded Data Source</div>
 <div class="content">
 <div class="listingblock primary">
 <div class="title">Java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Controller
-class LoginController {
-	@GetMapping("/login")
-	String login() {
-		return "login";
-	}
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+DataSource dataSource() {
+	return new EmbeddedDatabaseBuilder()
+		.setType(H2)
+		.addScript("classpath:org/springframework/security/core/userdetails/jdbc/users.ddl")
+		.build();
 }</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;jdbc:embedded-database&gt;
+	&lt;jdbc:script location="classpath:org/springframework/security/core/userdetails/jdbc/users.ddl"/&gt;
+&lt;/jdbc:embedded-database&gt;</code></pre>
 </div>
 </div>
 <div class="listingblock secondary">
 <div class="title">Kotlin</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Controller
-class LoginController {
-    @GetMapping("/login")
-    fun login(): String {
-        return "login"
-    }
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun dataSource(): DataSource {
+    return EmbeddedDatabaseBuilder()
+        .setType(H2)
+        .addScript("classpath:org/springframework/security/core/userdetails/jdbc/users.ddl")
+        .build()
 }</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In a production environment, you will want to ensure you setup a connection to an external database.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="servlet-authentication-jdbc-bean"><a class="anchor" href="#servlet-authentication-jdbc-bean"></a>JdbcUserDetailsManager Bean</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>In this sample we use <a href="../../../features/authentication/password-storage.html#authentication-password-storage-boot-cli" class="page">Spring Boot CLI</a> to encode the password of <code>password</code> and get the encoded password of <code>{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW</code>.
+See the <a href="../../../features/authentication/password-storage.html#authentication-password-storage" class="page">PasswordEncoder</a> section for more details about how to store passwords.</p>
+</div>
+<div class="exampleblock">
+<div class="title">Example 5. JdbcUserDetailsManager</div>
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+UserDetailsManager users(DataSource dataSource) {
+	UserDetails user = User.builder()
+		.username("user")
+		.password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+		.roles("USER")
+		.build();
+	UserDetails admin = User.builder()
+		.username("admin")
+		.password("{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+		.roles("USER", "ADMIN")
+		.build();
+	JdbcUserDetailsManager users = new JdbcUserDetailsManager(dataSource);
+	users.createUser(user);
+	users.createUser(admin);
+	return users;
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;jdbc-user-service&gt;
+	&lt;user name="user"
+		password="{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW"
+		authorities="ROLE_USER" /&gt;
+	&lt;user name="admin"
+		password="{bcrypt}$2a$10$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW"
+		authorities="ROLE_USER,ROLE_ADMIN" /&gt;
+&lt;/jdbc-user-service&gt;</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">Kotlin</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
+fun users(dataSource: DataSource): UserDetailsManager {
+    val user = User.builder()
+            .username("user")
+            .password("{bcrypt}$2a$10\$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+            .roles("USER")
+            .build();
+    val admin = User.builder()
+            .username("admin")
+            .password("{bcrypt}$2a$10\$GRLdNijSQMUvl/au9ofL.eDwmoohzzS7.rmNSJZ.0FxO/BTk76klW")
+            .roles("USER", "ADMIN")
+            .build();
+    val users = JdbcUserDetailsManager(dataSource)
+    users.createUser(user)
+    users.createUser(admin)
+    return users
+}</code></pre>
+</div>
+</div>
 </div>
 </div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="index.html">Username/Password</a></span>
-  <span class="next"><a href="basic.html">Basic</a></span>
+  <span class="prev"><a href="in-memory.html">In Memory</a></span>
+  <span class="next"><a href="user-details.html">UserDetails</a></span>
 </nav>
 </article>
   </div>

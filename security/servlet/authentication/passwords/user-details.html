@@ -3,9 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Basic Authentication :: Spring</title>
-    <link rel="prev" href="form.html">
-    <link rel="next" href="digest.html">
+    <title>UserDetails :: Spring</title>
+    <link rel="prev" href="jdbc.html">
+    <link rel="next" href="user-details-service.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 
@@ -176,7 +176,7 @@
   <li class="nav-item" data-depth="5">
     <a class="nav-link" href="form.html">Form</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="5">
+  <li class="nav-item" data-depth="5">
     <a class="nav-link" href="basic.html">Basic</a>
   </li>
   <li class="nav-item" data-depth="5">
@@ -194,7 +194,7 @@
   <li class="nav-item" data-depth="5">
     <a class="nav-link" href="jdbc.html">JDBC</a>
   </li>
-  <li class="nav-item" data-depth="5">
+  <li class="nav-item is-current-page" data-depth="5">
     <a class="nav-link" href="user-details.html">UserDetails</a>
   </li>
   <li class="nav-item" data-depth="5">
@@ -501,8 +501,8 @@
     <li><a href="../../index.html">Servlet Applications</a></li>
     <li>Authentication</li>
     <li><a href="index.html">Username/Password</a></li>
-    <li>Reading Username/Password</li>
-    <li><a href="basic.html">Basic</a></li>
+    <li>Password Storage</li>
+    <li><a href="user-details.html">UserDetails</a></li>
   </ul>
 </nav>
 <div class="search">
@@ -511,144 +511,25 @@
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">6</button>
   <div class="version-menu">
-    <a class="version is-current" href="basic.html">6</a>
-    <a class="version" href="../../../5.6/servlet/authentication/unpwd/basic.html">5.6</a>
+    <a class="version is-current" href="user-details.html">6</a>
+    <a class="version is-missing" href="../../../5.6/index.html">5.6</a>
   </div>
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/6.0.x-antora-2.x/docs/modules/ROOT/pages/servlet/authentication/unpwd/basic.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/6.0.x-antora-2.x/docs/modules/ROOT/pages/servlet/authentication/passwords/user-details.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 class="page">Basic Authentication</h1>
+<h1 class="page">UserDetails</h1>
 <div class="paragraph">
-<p>This section provides details on how Spring Security provides support for <a href="https://tools.ietf.org/html/rfc7617">Basic HTTP Authentication</a> for servlet based applications.</p>
-</div>
-<div class="paragraph">
-<p>Let&#8217;s take a look at how HTTP Basic Authentication works within Spring Security.
-First, we see the <a href="https://tools.ietf.org/html/rfc7235#section-4.1">WWW-Authenticate</a> header is sent back to an unauthenticated client.</p>
-</div>
-<div class="imageblock">
-<div class="content">
-<img src="../../../_images/servlet/authentication/unpwd/basicauthenticationentrypoint.png" alt="basicauthenticationentrypoint">
-</div>
-<div class="title">Figure 1. Sending WWW-Authenticate Header</div>
-</div>
-<div class="paragraph">
-<p>The figure builds off our <a href="../../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="../../authorization/authorize-requests.html#servlet-authorization-filtersecurityinterceptor" class="page"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
-The configured <a href="../architecture/index.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/www/BasicAuthenticationEntryPoint.html"><code>BasicAuthenticationEntryPoint</code></a> which sends a WWW-Authenticate header.
-The <code>RequestCache</code> is typically a <code>NullRequestCache</code> that does not save the request since the client is capable of replaying the requests it originally requested.</p>
-</div>
-<div class="paragraph">
-<p>When a client receives the WWW-Authenticate header it knows it should retry with a username and password.
-Below is the flow for the username and password being processed.</p>
-</div>
-<div id="servlet-authentication-basicauthenticationfilter" class="imageblock">
-<div class="content">
-<img src="../../../_images/servlet/authentication/unpwd/basicauthenticationfilter.png" alt="basicauthenticationfilter">
-</div>
-<div class="title">Figure 2. Authenticating Username and Password</div>
-</div>
-<div class="paragraph">
-<p>The figure builds off our <a href="../../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>BasicAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="../architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
-The details of what <code>AuthenticationManager</code> look like depend on how the <a href="index.html#servlet-authentication-unpwd-storage" class="page">user information is stored</a>.</p>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <a href="../architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a> is cleared out.</p>
-</li>
-<li>
-<p><code>RememberMeServices.loginFail</code> is invoked.
-If remember me is not configured, this is a no-op.</p>
-</li>
-<li>
-<p><code>AuthenticationEntryPoint</code> is invoked to trigger the WWW-Authenticate to be sent again.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>The <a href="../architecture/index.html#servlet-authentication-authentication" class="page">Authentication</a> is set on the <a href="../architecture/index.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a>.</p>
-</li>
-<li>
-<p><code>RememberMeServices.loginSuccess</code> is invoked.
-If remember me is not configured, this is a no-op.</p>
-</li>
-<li>
-<p>The <code>BasicAuthenticationFilter</code> invokes <code>FilterChain.doFilter(request,response)</code> to continue with the rest of the application logic.</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Spring Security&#8217;s HTTP Basic Authentication support in is enabled by default.
-However, as soon as any servlet based configuration is provided, HTTP Basic must be explicitly provided.</p>
-</div>
-<div class="paragraph">
-<p>A minimal, explicit configuration can be found below:</p>
-</div>
-<div class="exampleblock">
-<div class="title">Example 1. Explicit HTTP Basic Configuration</div>
-<div class="content">
-<div class="listingblock primary">
-<div class="title">Java</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) {
-	http
-		// ...
-		.httpBasic(withDefaults());
-}</code></pre>
-</div>
-</div>
-<div class="listingblock secondary">
-<div class="title">XML</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
-	&lt;!-- ... --&gt;
-	&lt;http-basic /&gt;
-&lt;/http&gt;</code></pre>
-</div>
-</div>
-<div class="listingblock secondary">
-<div class="title">Kotlin</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
-	http {
-		// ...
-		httpBasic { }
-	}
-}</code></pre>
-</div>
-</div>
-</div>
+<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/core/userdetails/UserDetails.html"><code>UserDetails</code></a> is returned by the <a href="user-details-service.html#servlet-authentication-userdetailsservice" class="page"><code>UserDetailsService</code></a>.
+The <a href="dao-authentication-provider.html#servlet-authentication-daoauthenticationprovider" class="page"><code>DaoAuthenticationProvider</code></a> validates the <code>UserDetails</code> and then returns an <a href="../architecture/index.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> that has a principal that is the <code>UserDetails</code> returned by the configured <code>UserDetailsService</code>.</p>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="form.html">Form</a></span>
-  <span class="next"><a href="digest.html">Digest</a></span>
+  <span class="prev"><a href="jdbc.html">JDBC</a></span>
+  <span class="next"><a href="user-details-service.html">UserDetailsService</a></span>
 </nav>
 </article>
   </div>

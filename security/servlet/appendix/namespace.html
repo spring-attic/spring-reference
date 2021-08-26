@@ -167,20 +167,20 @@
   </li>
   <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../authentication/unpwd/index.html">Username/Password</a>
+    <a class="nav-link" href="../authentication/passwords/index.html">Username/Password</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Reading Username/Password</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/form.html">Form</a>
+    <a class="nav-link" href="../authentication/passwords/form.html">Form</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/basic.html">Basic</a>
+    <a class="nav-link" href="../authentication/passwords/basic.html">Basic</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/digest.html">Digest</a>
+    <a class="nav-link" href="../authentication/passwords/digest.html">Digest</a>
   </li>
 </ul>
   </li>
@@ -189,25 +189,25 @@
     <span class="nav-text">Password Storage</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/in-memory.html">In Memory</a>
+    <a class="nav-link" href="../authentication/passwords/in-memory.html">In Memory</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/jdbc.html">JDBC</a>
+    <a class="nav-link" href="../authentication/passwords/jdbc.html">JDBC</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/user-details.html">UserDetails</a>
+    <a class="nav-link" href="../authentication/passwords/user-details.html">UserDetails</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/user-details-service.html">UserDetailsService</a>
+    <a class="nav-link" href="../authentication/passwords/user-details-service.html">UserDetailsService</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/password-encoder.html">PasswordEncoder</a>
+    <a class="nav-link" href="../authentication/passwords/password-encoder.html">PasswordEncoder</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+    <a class="nav-link" href="../authentication/passwords/dao-authentication-provider.html">DaoAuthenticationProvider</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../authentication/unpwd/ldap.html">LDAP</a>
+    <a class="nav-link" href="../authentication/passwords/ldap.html">LDAP</a>
   </li>
 </ul>
   </li>
@@ -4450,7 +4450,7 @@ A method name</p>
 <h2 id="nsa-ldap"><a class="anchor" href="#nsa-ldap"></a>LDAP Namespace Options</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>LDAP is covered in some details in <a href="../authentication/unpwd/ldap.html#servlet-authentication-ldap" class="page">its own chapter</a>.
+<p>LDAP is covered in some details in <a href="../authentication/passwords/ldap.html#servlet-authentication-ldap" class="page">its own chapter</a>.
 We will expand on that here with some explanation of how the namespace options map to Spring beans.
 The LDAP implementation uses Spring LDAP extensively, so some familiarity with that project&#8217;s API may be useful.</p>
 </div>
@@ -4460,7 +4460,7 @@ The LDAP implementation uses Spring LDAP extensively, so some familiarity with t
 <p><code>&lt;ldap-server&gt;</code> Element
 This element sets up a Spring LDAP <code>ContextSource</code> for use by the other LDAP beans, defining the location of the LDAP server and other information (such as a username and password, if it doesn&#8217;t allow anonymous access) for connecting to it.
 It can also be used to create an embedded server for testing.
-Details of the syntax for both options are covered in the <a href="../authentication/unpwd/ldap.html#servlet-authentication-ldap" class="page">LDAP chapter</a>.
+Details of the syntax for both options are covered in the <a href="../authentication/passwords/ldap.html#servlet-authentication-ldap" class="page">LDAP chapter</a>.
 The actual <code>ContextSource</code> implementation is <code>DefaultSpringSecurityContextSource</code> which extends Spring LDAP&#8217;s <code>LdapContextSource</code> class.
 The <code>manager-dn</code> and <code>manager-password</code> attributes map to the latter&#8217;s <code>userDn</code> and <code>password</code> properties respectively.</p>
 </div>

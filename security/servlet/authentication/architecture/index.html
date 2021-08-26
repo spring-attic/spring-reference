@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Servlet Authentication Architecture :: Spring</title>
     <link rel="prev" href="../../architecture.html">
-    <link rel="next" href="../unpwd/index.html">
+    <link rel="next" href="../passwords/index.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
     <link rel="stylesheet" href="../../../../_/css/site.css">
 
@@ -167,20 +167,20 @@
   </li>
   <li class="nav-item" data-depth="3">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../unpwd/index.html">Username/Password</a>
+    <a class="nav-link" href="../passwords/index.html">Username/Password</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="4">
     <button class="nav-item-toggle"></button>
     <span class="nav-text">Reading Username/Password</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/form.html">Form</a>
+    <a class="nav-link" href="../passwords/form.html">Form</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/basic.html">Basic</a>
+    <a class="nav-link" href="../passwords/basic.html">Basic</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/digest.html">Digest</a>
+    <a class="nav-link" href="../passwords/digest.html">Digest</a>
   </li>
 </ul>
   </li>
@@ -189,25 +189,25 @@
     <span class="nav-text">Password Storage</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/in-memory.html">In Memory</a>
+    <a class="nav-link" href="../passwords/in-memory.html">In Memory</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/jdbc.html">JDBC</a>
+    <a class="nav-link" href="../passwords/jdbc.html">JDBC</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/user-details.html">UserDetails</a>
+    <a class="nav-link" href="../passwords/user-details.html">UserDetails</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/user-details-service.html">UserDetailsService</a>
+    <a class="nav-link" href="../passwords/user-details-service.html">UserDetailsService</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/password-encoder.html">PasswordEncoder</a>
+    <a class="nav-link" href="../passwords/password-encoder.html">PasswordEncoder</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/dao-authentication-provider.html">DaoAuthenticationProvider</a>
+    <a class="nav-link" href="../passwords/dao-authentication-provider.html">DaoAuthenticationProvider</a>
   </li>
   <li class="nav-item" data-depth="5">
-    <a class="nav-link" href="../unpwd/ldap.html">LDAP</a>
+    <a class="nav-link" href="../passwords/ldap.html">LDAP</a>
   </li>
 </ul>
   </li>
@@ -711,7 +711,7 @@ The current <code>Authentication</code> can be obtained from the <a href="#servl
 <ul>
 <li>
 <p><code>principal</code> - identifies the user.
-When authenticating with a username/password this is often an instance of <a href="../unpwd/user-details.html#servlet-authentication-userdetails" class="page"><code>UserDetails</code></a>.</p>
+When authenticating with a username/password this is often an instance of <a href="../passwords/user-details.html#servlet-authentication-userdetails" class="page"><code>UserDetails</code></a>.</p>
 </li>
 <li>
 <p><code>credentials</code> - Often a password.
@@ -738,7 +738,7 @@ A <code>GrantedAuthority</code> is, not surprisingly, an authority that is grant
 Such authorities are usually "roles", such as <code>ROLE_ADMINISTRATOR</code> or <code>ROLE_HR_SUPERVISOR</code>.
 These roles are later on configured for web authorization, method authorization and domain object authorization.
 Other parts of Spring Security are capable of interpreting these authorities, and expect them to be present.
-When using username/password based authentication <code>GrantedAuthority</code>s are usually loaded by the <a href="../unpwd/user-details-service.html#servlet-authentication-userdetailsservice" class="page"><code>UserDetailsService</code></a>.</p>
+When using username/password based authentication <code>GrantedAuthority</code>s are usually loaded by the <a href="../passwords/user-details-service.html#servlet-authentication-userdetailsservice" class="page"><code>UserDetailsService</code></a>.</p>
 </div>
 <div class="paragraph">
 <p>Usually the <code>GrantedAuthority</code> objects are application-wide permissions.
@@ -818,7 +818,7 @@ See the <a href="https://docs.spring.io/spring-security/site/docs/current/api/or
 <div class="paragraph">
 <p>Multiple <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/authentication/AuthenticationProvider.html"><code>AuthenticationProvider</code>s</a> can be injected into <a href="#servlet-authentication-providermanager"><code>ProviderManager</code></a>.
 Each <code>AuthenticationProvider</code> performs a specific type of authentication.
-For example, <a href="../unpwd/dao-authentication-provider.html#servlet-authentication-daoauthenticationprovider" class="page"><code>DaoAuthenticationProvider</code></a> supports username/password based authentication while <code>JwtAuthenticationProvider</code> supports authenticating a JWT token.</p>
+For example, <a href="../passwords/dao-authentication-provider.html#servlet-authentication-daoauthenticationprovider" class="page"><code>DaoAuthenticationProvider</code></a> supports username/password based authentication while <code>JwtAuthenticationProvider</code> supports authenticating a JWT token.</p>
 </div>
 </div>
 </div>
@@ -835,7 +835,7 @@ In these cases, Spring Security does not need to provide an HTTP response that r
 <div class="paragraph">
 <p>In other cases, a client will make an unauthenticated request to a resource that they are not authorized to access.
 In this case, an implementation of <code>AuthenticationEntryPoint</code> is used to request credentials from the client.
-The <code>AuthenticationEntryPoint</code> implementation might perform a <a href="../unpwd/form.html#servlet-authentication-form" class="page">redirect to a log in page</a>, respond with an <a href="../unpwd/basic.html#servlet-authentication-basic" class="page">WWW-Authenticate</a> header, etc.</p>
+The <code>AuthenticationEntryPoint</code> implementation might perform a <a href="../passwords/form.html#servlet-authentication-form" class="page">redirect to a log in page</a>, respond with an <a href="../passwords/basic.html#servlet-authentication-basic" class="page">WWW-Authenticate</a> header, etc.</p>
 </div>
 </div>
 </div>
@@ -857,7 +857,7 @@ Before the credentials can be authenticated, Spring Security typically requests 
 <div class="paragraph">
 <p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their credentials, the <code>AbstractAuthenticationProcessingFilter</code> creates an <a href="#servlet-authentication-authentication"><code>Authentication</code></a> from the <code>HttpServletRequest</code> to be authenticated.
 The type of <code>Authentication</code> created depends on the subclass of <code>AbstractAuthenticationProcessingFilter</code>.
-For example, <a href="../unpwd/form.html#servlet-authentication-usernamepasswordauthenticationfilter" class="page"><code>UsernamePasswordAuthenticationFilter</code></a> creates a <code>UsernamePasswordAuthenticationToken</code> from a <em>username</em> and <em>password</em> that are submitted in the <code>HttpServletRequest</code>.</p>
+For example, <a href="../passwords/form.html#servlet-authentication-usernamepasswordauthenticationfilter" class="page"><code>UsernamePasswordAuthenticationFilter</code></a> creates a <code>UsernamePasswordAuthenticationToken</code> from a <em>username</em> and <em>password</em> that are submitted in the <code>HttpServletRequest</code>.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Next, the <a href="#servlet-authentication-authentication"><code>Authentication</code></a> is passed into the <a href="#servlet-authentication-authenticationmanager"><code>AuthenticationManager</code></a> to be authenticated.</p>
@@ -907,7 +907,7 @@ If remember me is not configured, this is a no-op.</p>
 </div>
 <nav class="pagination">
   <span class="prev"><a href="../../architecture.html">The Big Picture</a></span>
-  <span class="next"><a href="../unpwd/index.html">Username/Password</a></span>
+  <span class="next"><a href="../passwords/index.html">Username/Password</a></span>
 </nav>
 </article>
   </div>
