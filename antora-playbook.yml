@@ -10,7 +10,7 @@ content:
       branches: [antora/main]
       start_path: docs
     - url: https://github.com/rwinch/spring-security-docs-generated
-      branches: [spring-security/main]
+      branches: [spring-security/main,spring-session/main]
     - url: https://github.com/rwinch/spring-session
       branches: [antora/main]
       start_path: spring-session-docs
