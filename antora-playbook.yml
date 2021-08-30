@@ -12,7 +12,7 @@ content:
     - url: https://github.com/rwinch/spring-security-docs-generated
       branches: [spring-security/main]
     - url: https://github.com/rwinch/spring-session
-      branches: [antora-2.x]
+      branches: [antora/main]
       start_path: spring-session-docs
 ui:
   bundle:
