@@ -3,22 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Upgrading to 2.x :: Spring</title>
-    <link rel="prev" href="api.html">
+    <title>What&#8217;s New :: Spring</title>
+    <link rel="prev" href="index.html">
+    <link rel="next" href="samples.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
-    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/site.css">
 
-<link href="../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
-<link rel="stylesheet" href="../../_/css/vendor/docsearch.min.css">
+<link href="../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
+<link rel="stylesheet" href="../_/css/vendor/docsearch.min.css">
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
-    <script>var uiRootPath = '../../_'</script>
+    <script>var uiRootPath = '../_'</script>
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://spring.io">
-        <img id="springlogo" class="block" src="../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" class="block" src="../_/img/spring-logo.svg" alt="Spring">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -87,7 +88,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="session" data-version="2.6">
+<div class="nav-container" data-component="session" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -96,7 +97,7 @@
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="whats-new.html">What&#8217;s New</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -120,7 +121,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="api.html">API Documentation</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="upgrading.html">Upgrading</a>
   </li>
 </ul>
@@ -135,10 +136,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../index.html">Spring Security</a>
+      <a class="title" href="../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../index.html">5.6</a>
+          <a href="../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -161,137 +162,27 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Spring Session</a></li>
-    <li><a href="upgrading.html">Upgrading</a></li>
+    <li><a href="whats-new.html">What&#8217;s New</a></li>
   </ul>
 </nav>
 <div class="search">
   <input id="search-input" type="text" placeholder="Search docs">
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/upgrading.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora/main/spring-session-docs/modules/ROOT/pages/whats-new.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 id="page-title" class="page">Upgrading to 2.x</h1>
-<div id="preamble">
-<div class="sectionbody">
+<h1 id="page-title" class="page">What&#8217;s New</h1>
 <div class="paragraph">
-<p>With the new major release version, the Spring Session team took the opportunity to make some non-passive changes.
-The focus of these changes is to improve and harmonize Spring Session&#8217;s APIs as well as remove the deprecated components.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="baseline-update"><a class="anchor" href="#baseline-update"></a>Baseline Update</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Spring Session 2.0 requires Java 8 and Spring Framework 5.0 as a baseline, since its entire codebase is now based on Java 8 source code.
-See <a href="https://github.com/spring-projects/spring-framework/wiki/Upgrading-to-Spring-Framework-5.x">Upgrading to Spring Framework 5.x</a> for more on upgrading Spring Framework.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="replaced-and-removed-modules"><a class="anchor" href="#replaced-and-removed-modules"></a>Replaced and Removed Modules</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As a part of the project&#8217;s splitting of the modules, the existing <code>spring-session</code> has been replaced with the <code>spring-session-core</code> module.
-The <code>spring-session-core</code> module holds only the common set of APIs and components, while other modules contain the implementation of the appropriate <code>SessionRepository</code> and functionality related to that data store.
-This applies to several existing modules that were previously a simple dependency aggregator helper module.
-With new module arrangement, the following modules actually carry the implementation:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Spring Session Data Redis</p>
-</li>
-<li>
-<p>Spring Session JDBC</p>
-</li>
-<li>
-<p>Spring Session Hazelcast</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Also, the following modules were removed from the main project repository:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Spring Session Data MongoDB</p>
-</li>
-<li>
-<p>Spring Session Data GemFire</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>Note that these two have moved to separate repositories and continue to be available under new artifact names:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/spring-projects/spring-session-data-mongodb"><code>spring-session-data-mongodb</code></a></p>
-</li>
-<li>
-<p><a href="https://github.com/spring-projects/spring-session-data-geode"><code>spring-session-data-geode</code></a></p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="replaced-and-removed-packages-classes-and-methods"><a class="anchor" href="#replaced-and-removed-packages-classes-and-methods"></a>Replaced and Removed Packages, Classes, and Methods</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The following changes were made to packages, classes, and methods:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>ExpiringSession</code> API has been merged into the <code>Session</code> API.</p>
-</li>
-<li>
-<p>The <code>Session</code> API has been enhanced to make full use of Java 8.</p>
-</li>
-<li>
-<p>The <code>Session</code> API has been extended with <code>changeSessionId</code> support.</p>
-</li>
-<li>
-<p>The <code>SessionRepository</code> API has been updated to better align with Spring Data method naming conventions.</p>
-</li>
-<li>
-<p><code>AbstractSessionEvent</code> and its subclasses are no longer constructable without an underlying <code>Session</code> object.</p>
-</li>
-<li>
-<p>The Redis namespace used by <code>RedisOperationsSessionRepository</code> is now fully configurable, instead of being partially configurable.</p>
-</li>
-<li>
-<p>Redis configuration support has been updated to avoid registering a Spring Session-specific <code>RedisTemplate</code> bean.</p>
-</li>
-<li>
-<p>JDBC configuration support has been updated to avoid registering a Spring Session-specific <code>JdbcTemplate</code> bean.</p>
-</li>
-<li>
-<p>Previously deprecated classes and methods have been removed across the codebase</p>
-</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="dropped-support"><a class="anchor" href="#dropped-support"></a>Dropped Support</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>As a part of the changes to <code>HttpSessionStrategy</code> and its alignment to the counterpart from the reactive world, the support for managing multiple users' sessions in a single browser instance has been removed.
-The introduction of a new API to replace this functionality is under consideration for future releases.</p>
-</div>
-</div>
+<p>Check also the Spring Session BOM <a href="https://github.com/spring-projects/spring-session-bom/wiki#release-notes">release notes</a>
+for a list of new and noteworthy features, as well as upgrade instructions for each release.</p>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="api.html">API Documentation</a></span>
+  <span class="prev"><a href="index.html">Spring Session</a></span>
+  <span class="next"><a href="samples.html">Samples &amp; Guides (Start Here)</a></span>
 </nav>
 </article>
   </div>
@@ -299,7 +190,7 @@ The introduction of a new API to replace this functionality is under considerati
 </div>
 <footer class="footer flex">
     <div id="spring-links flex">
-        <img id="springlogo" src="../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
         <p class="smallest antialiased">© <script>var d = new Date();
         document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
         <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
@@ -310,11 +201,11 @@ The introduction of a new API to replace this functionality is under considerati
         <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
     </div>
 </footer>
-<script src="../../_/js/site.js"></script>
-<script async src="../../_/js/vendor/highlight.js"></script>
-<script async src="../../_/js/vendor/tabs.js"></script>
-<script src="../../_/js/vendor/docsearch.min.js"></script>
-<script src="../../_/js/vendor/switchtheme.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/tabs.js"></script>
+<script src="../_/js/vendor/docsearch.min.js"></script>
+<script src="../_/js/vendor/switchtheme.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
 docsearch({

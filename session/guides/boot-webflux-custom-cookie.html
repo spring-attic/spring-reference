@@ -3,9 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>WebSocket Integration :: Spring</title>
-    <link rel="prev" href="http-session.html">
-    <link rel="next" href="web-session.html">
+    <title>Spring Session - WebFlux with Custom Cookie :: Spring</title>
     <meta name="generator" content="Antora 3.0.0-alpha.8">
     <link rel="stylesheet" href="../../_/css/site.css">
 
@@ -88,41 +86,41 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="session" data-version="2.6">
+<div class="nav-container" data-component="session" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="index.html">Spring Session</a></h3>
+    <h3 class="title"><a href="../index.html">Spring Session</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="whats-new.html">What&#8217;s New</a>
+    <a class="nav-link" href="../whats-new.html">What&#8217;s New</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="samples.html">Samples &amp; Guides (Start Here)</a>
+    <a class="nav-link" href="../samples.html">Samples &amp; Guides (Start Here)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="modules.html">Modules</a>
+    <a class="nav-link" href="../modules.html">Modules</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="http-session.html">HttpSession Integration</a>
-  </li>
-  <li class="nav-item is-current-page" data-depth="1">
-    <a class="nav-link" href="web-socket.html">WebSocket Integration</a>
+    <a class="nav-link" href="../http-session.html">HttpSession Integration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="web-session.html">WebSession Integration</a>
+    <a class="nav-link" href="../web-socket.html">WebSocket Integration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="spring-security.html">Spring Security Integration</a>
+    <a class="nav-link" href="../web-session.html">WebSession Integration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="api.html">API Documentation</a>
+    <a class="nav-link" href="../spring-security.html">Spring Security Integration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="upgrading.html">Upgrading</a>
+    <a class="nav-link" href="../api.html">API Documentation</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="../upgrading.html">Upgrading</a>
   </li>
 </ul>
   </li>
@@ -144,10 +142,10 @@
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="index.html">Spring Session</a>
+      <a class="title" href="../index.html">Spring Session</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="index.html">2.6</a>
+          <a href="../index.html">2.6</a>
         </li>
       </ul>
     </li>
@@ -161,25 +159,26 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="index.html">Spring Session</a></li>
-    <li><a href="web-socket.html">WebSocket Integration</a></li>
+    <li><a href="../index.html">Spring Session</a></li>
+    <li><a href="boot-webflux-custom-cookie.html">Spring Session - WebFlux with Custom Cookie</a></li>
   </ul>
 </nav>
 <div class="search">
   <input id="search-input" type="text" placeholder="Search docs">
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/web-socket.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora/main/spring-session-docs/modules/ROOT/pages/guides/boot-webflux-custom-cookie.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 id="page-title" class="page">WebSocket Integration</h1>
+<h1 id="page-title" class="page">Spring Session - WebFlux with Custom Cookie</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>Spring Session provides transparent integration with Spring&#8217;s WebSocket support.</p>
+<p>This guide describes how to configure Spring Session to use custom cookies in a WebFlux based application.
+The guide assumes you have already set up Spring Session in your project using your chosen data store. For example, <a href="./boot-redis.html">HttpSession with Redis</a>.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -188,153 +187,122 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Spring Session&#8217;s WebSocket support works only with Spring&#8217;s WebSocket support.
-Specifically,it does not work with using <a href="https://www.jcp.org/en/jsr/detail?id=356">JSR-356</a> directly, because JSR-356 does not have a mechanism for intercepting incoming WebSocket messages.
+You can find the completed guide in the <a href="#webflux-custom-cookie-sample">WebFlux Custom Cookie sample application</a>.
 </td>
 </tr>
 </table>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="websocket-why"><a class="anchor" href="#websocket-why"></a>Why Spring Session and WebSockets?</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>So why do we need Spring Session when we use WebSockets?</p>
-</div>
-<div class="paragraph">
-<p>Consider an email application that does much of its work through HTTP requests.
-However, there is also a chat application embedded within it that works over WebSocket APIs.
-If a user is actively chatting with someone, we should not timeout the <code>HttpSession</code>, since this would be a pretty poor user experience.
-However, this is exactly what <a href="https://java.net/jira/browse/WEBSOCKET_SPEC-175">JSR-356</a> does.</p>
-</div>
-<div class="paragraph">
-<p>Another issue is that, according to JSR-356, if the <code>HttpSession</code> times out, any WebSocket that was created with that <code>HttpSession</code> and an authenticated user should be forcibly closed.
-This means that, if we are actively chatting in our application and are not using the HttpSession, we also do disconnect from our conversation.</p>
+<div id="index-link" class="paragraph">
+<p><a href="../index.html">Index</a></p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="websocket-usage"><a class="anchor" href="#websocket-usage"></a>WebSocket Usage</h2>
+<h2 id="webflux-custom-cookie-spring-configuration"><a class="anchor" href="#webflux-custom-cookie-spring-configuration"></a>Spring Boot Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The <a href="samples.html#samples" class="page"> WebSocket Sample</a> provides a working sample of how to integrate Spring Session with WebSockets.
-You can follow the basic steps for integration described in the next few headings, but we encourage you to follow along with the detailed WebSocket Guide when integrating with your own application.</p>
-</div>
-<div class="sect2">
-<h3 id="websocket-httpsession"><a class="anchor" href="#websocket-httpsession"></a><code>HttpSession</code> Integration</h3>
-<div class="paragraph">
-<p>Before using WebSocket integration, you should be sure that you have <a href="http-session.html#httpsession" class="page"><code>HttpSession</code> Integration</a> working first.</p>
-</div>
-<div class="sect3">
-<h4 id="websocket-spring-configuration"><a class="anchor" href="#websocket-spring-configuration"></a>Spring Configuration</h4>
-<div class="paragraph">
-<p>In a typical Spring WebSocket application, you would implement <code>WebSocketMessageBrokerConfigurer</code>.
-For example, the configuration might look something like the following:</p>
+<p>Once you have set up Spring Session, you can customize how the session cookie is written by exposing a <code>WebSessionIdResolver</code> as a Spring bean.
+Spring Session uses a <code>CookieWebSessionIdResolver</code> by default.
+Exposing the <code>WebSessionIdResolver</code> as a Spring bean augments the existing configuration when you use configurations like <code>@EnableRedisHttpSession</code>.
+The following example shows how to customize Spring Session&#8217;s cookie:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
-@EnableScheduling
-@EnableWebSocketMessageBroker
-public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
-
-	@Override
-	public void registerStompEndpoints(StompEndpointRegistry registry) {
-		registry.addEndpoint("/messages").withSockJS();
-	}
-
-	@Override
-	public void configureMessageBroker(MessageBrokerRegistry registry) {
-		registry.enableSimpleBroker("/queue/", "/topic/");
-		registry.setApplicationDestinationPrefixes("/app");
-	}
-
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">	@Bean
+	public WebSessionIdResolver webSessionIdResolver() {
+		CookieWebSessionIdResolver resolver = new CookieWebSessionIdResolver();
+		resolver.setCookieName("JSESSIONID"); <i class="conum" data-value="1"></i><b>(1)</b>
+		resolver.addCookieInitializer((builder) -&gt; builder.path("/")); <i class="conum" data-value="2"></i><b>(2)</b>
+		resolver.addCookieInitializer((builder) -&gt; builder.sameSite("Strict")); <i class="conum" data-value="3"></i><b>(3)</b>
+		return resolver;
+	}</code></pre>
 </div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>We can update our configuration to use Spring Session&#8217;s WebSocket support.
-The following example shows how to do so:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="title">src/main/java/samples/config/WebSocketConfig.java</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
-@EnableScheduling
-@EnableWebSocketMessageBroker
-public class WebSocketConfig extends AbstractSessionWebSocketMessageBrokerConfigurer&lt;Session&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
-
-	@Override
-	protected void configureStompEndpoints(StompEndpointRegistry registry) { <i class="conum" data-value="2"></i><b>(2)</b>
-		registry.addEndpoint("/messages").withSockJS();
-	}
-
-	@Override
-	public void configureMessageBroker(MessageBrokerRegistry registry) {
-		registry.enableSimpleBroker("/queue/", "/topic/");
-		registry.setApplicationDestinationPrefixes("/app");
-	}
-
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>To hook in the Spring Session support we only need to change two things:</p>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>Instead of implementing <code>WebSocketMessageBrokerConfigurer</code>, we extend <code>AbstractSessionWebSocketMessageBrokerConfigurer</code></td>
+<td>We customize the name of the cookie to be <code>JSESSIONID</code>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>We rename the <code>registerStompEndpoints</code> method to <code>configureStompEndpoints</code></td>
+<td>We customize the path of the cookie to be <code>/</code> (rather than the default of the context root).</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>We customize the <code>SameSite</code> cookie directive to be <code>Strict</code>.</td>
 </tr>
 </table>
 </div>
 </div>
 </div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="webflux-custom-cookie-sample"><a class="anchor" href="#webflux-custom-cookie-sample"></a><code>webflux-custom-cookie</code> Sample Application</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>What does <code>AbstractSessionWebSocketMessageBrokerConfigurer</code> do behind the scenes?</p>
+<p>This section describes how to work with the <code>webflux-custom-cookie</code> sample application.</p>
+</div>
+<div class="sect2">
+<h3 id="running-the-webflux-custom-cookie-sample-application"><a class="anchor" href="#running-the-webflux-custom-cookie-sample-application"></a>Running the <code>webflux-custom-cookie</code> Sample Application</h3>
+<div class="paragraph">
+<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>$ ./gradlew :spring-session-sample-boot-webflux-custom-cookie:bootRun</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+For the sample to work, you must <a href="https://redis.io/download">install Redis 2.8+</a> on localhost and run it with the default port (6379).
+Alternatively, you can update the <code>RedisConnectionFactory</code> to point to a Redis server.
+Another option is to use <a href="https://www.docker.com/">Docker</a> to run Redis on localhost. See <a href="https://hub.docker.com/_/redis/">Docker Redis repository</a> for detailed instructions.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>You should now be able to access the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="exploring-the-webflux-custom-cookie-sample-application"><a class="anchor" href="#exploring-the-webflux-custom-cookie-sample-application"></a>Exploring the <code>webflux-custom-cookie</code> Sample Application</h3>
+<div class="paragraph">
+<p>Now you can use the application. Fill out the form with the following information:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><code>WebSocketConnectHandlerDecoratorFactory</code> is added as a <code>WebSocketHandlerDecoratorFactory</code> to <code>WebSocketTransportRegistration</code>.
-This ensures a custom <code>SessionConnectEvent</code> is fired that contains the <code>WebSocketSession</code>.
-The <code>WebSocketSession</code> is necessary to end any WebSocket connections that are still open when a Spring Session is ended.</p>
+<p><strong>Attribute Name:</strong> <em>username</em></p>
 </li>
 <li>
-<p><code>SessionRepositoryMessageInterceptor</code> is added as a <code>HandshakeInterceptor</code> to every <code>StompWebSocketEndpointRegistration</code>.
-This ensures that the <code>Session</code> is added to the WebSocket properties to enable updating the last accessed time.</p>
-</li>
-<li>
-<p><code>SessionRepositoryMessageInterceptor</code> is added as a <code>ChannelInterceptor</code> to our inbound <code>ChannelRegistration</code>.
-This ensures that every time an inbound message is received, that the last accessed time of our Spring Session is updated.</p>
-</li>
-<li>
-<p><code>WebSocketRegistryListener</code> is created as a Spring bean.
-This ensures that we have a mapping of all of the <code>Session</code> IDs to the corresponding WebSocket connections.
-By maintaining this mapping, we can close all the WebSocket connections when a Spring Session (HttpSession) is ended.</p>
+<p><strong>Attribute Value:</strong> <em>rob</em></p>
 </li>
 </ul>
 </div>
+<div class="paragraph">
+<p>Now click the <strong>Set Attribute</strong> button.
+You should now see the values displayed in the table.</p>
+</div>
+<div class="paragraph">
+<p>If you look at the cookies for the application, you can see the cookie is saved to the custom name of <code>JSESSIONID</code>.</p>
 </div>
 </div>
 </div>
 </div>
-<nav class="pagination">
-  <span class="prev"><a href="http-session.html">HttpSession Integration</a></span>
-  <span class="next"><a href="web-session.html">WebSession Integration</a></span>
-</nav>
 </article>
   </div>
 </main>

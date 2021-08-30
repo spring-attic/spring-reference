@@ -3,23 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Spring Session Modules :: Spring</title>
-    <link rel="prev" href="samples.html">
-    <link rel="next" href="http-session.html">
+    <title>WebSocket Integration :: Spring</title>
+    <link rel="prev" href="http-session.html">
+    <link rel="next" href="web-session.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
-    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/site.css">
 
-<link href="../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
-<link rel="stylesheet" href="../../_/css/vendor/docsearch.min.css">
+<link href="../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
+<link rel="stylesheet" href="../_/css/vendor/docsearch.min.css">
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
-    <script>var uiRootPath = '../../_'</script>
+    <script>var uiRootPath = '../_'</script>
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://spring.io">
-        <img id="springlogo" class="block" src="../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" class="block" src="../_/img/spring-logo.svg" alt="Spring">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -88,7 +88,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="session" data-version="2.6">
+<div class="nav-container" data-component="session" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -103,13 +103,13 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="samples.html">Samples &amp; Guides (Start Here)</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="modules.html">Modules</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="http-session.html">HttpSession Integration</a>
   </li>
-  <li class="nav-item" data-depth="1">
+  <li class="nav-item is-current-page" data-depth="1">
     <a class="nav-link" href="web-socket.html">WebSocket Integration</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -136,10 +136,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../index.html">Spring Security</a>
+      <a class="title" href="../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../index.html">5.6</a>
+          <a href="../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -162,84 +162,178 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Spring Session</a></li>
-    <li><a href="modules.html">Modules</a></li>
+    <li><a href="web-socket.html">WebSocket Integration</a></li>
   </ul>
 </nav>
 <div class="search">
   <input id="search-input" type="text" placeholder="Search docs">
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/modules.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora/main/spring-session-docs/modules/ROOT/pages/web-socket.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 id="page-title" class="page">Spring Session Modules</h1>
+<h1 id="page-title" class="page">WebSocket Integration</h1>
+<div id="preamble">
+<div class="sectionbody">
 <div class="paragraph">
-<p>In Spring Session 1.x, all of the Spring Session&#8217;s <code>SessionRepository</code> implementations were available within the <code>spring-session</code> artifact.
-While convenient, this approach was not sustainable long-term as more features and <code>SessionRepository</code> implementations were added to the project.</p>
+<p>Spring Session provides transparent integration with Spring&#8217;s WebSocket support.</p>
 </div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+Spring Session&#8217;s WebSocket support works only with Spring&#8217;s WebSocket support.
+Specifically,it does not work with using <a href="https://www.jcp.org/en/jsr/detail?id=356">JSR-356</a> directly, because JSR-356 does not have a mechanism for intercepting incoming WebSocket messages.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="websocket-why"><a class="anchor" href="#websocket-why"></a>Why Spring Session and WebSockets?</h2>
+<div class="sectionbody">
 <div class="paragraph">
-<p>Starting with Spring Session 2.0, the project has been split into Spring Session Core module and several other modules that carry <code>SessionRepository</code> implementations and functionality related to the specific data store.
-Users of Spring Data should find this arrangement familiar, with Spring Session Core module taking a role equivalent to Spring Data Commons and providing core functionalities and APIs, with other modules containing data store specific implementations.
-As part of this split, the Spring Session Data MongoDB and Spring Session Data GemFire modules were moved to separate repositories.
-Now the situation with project&#8217;s repositories/modules is as follows:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://github.com/spring-projects/spring-session"><code>spring-session</code> repository</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Hosts the Spring Session Core, Spring Session Data Redis, Spring Session JDBC, and Spring Session Hazelcast modules</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="https://github.com/spring-projects/spring-session-data-mongodb"><code>spring-session-data-mongodb</code> repository</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Hosts the Spring Session Data MongoDB module. Spring Session Data MongoDB has its own user guide, which you can find at the [<a href="https://spring.io/projects/spring-session-data-mongodb#learnSpring" class="bare">https://spring.io/projects/spring-session-data-mongodb#learnSpring</a> site].</p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p><a href="https://github.com/spring-projects/spring-session-data-geode"><code>spring-session-data-geode</code> repository</a></p>
-<div class="ulist">
-<ul>
-<li>
-<p>Hosts the Spring Session Data Geode modules. Spring Session Data Geode has its own user guide, which you can find at the [<a href="https://spring.io/projects/spring-session-data-geode#learn" class="bare">https://spring.io/projects/spring-session-data-geode#learn</a> site].</p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
+<p>So why do we need Spring Session when we use WebSockets?</p>
 </div>
 <div class="paragraph">
-<p>Finally, Spring Session now also provides a Maven BOM (&#8220;bill of materials&#8221;) module in order to help users with version management concerns:</p>
+<p>Consider an email application that does much of its work through HTTP requests.
+However, there is also a chat application embedded within it that works over WebSocket APIs.
+If a user is actively chatting with someone, we should not timeout the <code>HttpSession</code>, since this would be a pretty poor user experience.
+However, this is exactly what <a href="https://java.net/jira/browse/WEBSOCKET_SPEC-175">JSR-356</a> does.</p>
+</div>
+<div class="paragraph">
+<p>Another issue is that, according to JSR-356, if the <code>HttpSession</code> times out, any WebSocket that was created with that <code>HttpSession</code> and an authenticated user should be forcibly closed.
+This means that, if we are actively chatting in our application and are not using the HttpSession, we also do disconnect from our conversation.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="websocket-usage"><a class="anchor" href="#websocket-usage"></a>WebSocket Usage</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>The <a href="samples.html#samples" class="page"> WebSocket Sample</a> provides a working sample of how to integrate Spring Session with WebSockets.
+You can follow the basic steps for integration described in the next few headings, but we encourage you to follow along with the detailed WebSocket Guide when integrating with your own application.</p>
+</div>
+<div class="sect2">
+<h3 id="websocket-httpsession"><a class="anchor" href="#websocket-httpsession"></a><code>HttpSession</code> Integration</h3>
+<div class="paragraph">
+<p>Before using WebSocket integration, you should be sure that you have <a href="http-session.html#httpsession" class="page"><code>HttpSession</code> Integration</a> working first.</p>
+</div>
+<div class="sect3">
+<h4 id="websocket-spring-configuration"><a class="anchor" href="#websocket-spring-configuration"></a>Spring Configuration</h4>
+<div class="paragraph">
+<p>In a typical Spring WebSocket application, you would implement <code>WebSocketMessageBrokerConfigurer</code>.
+For example, the configuration might look something like the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableScheduling
+@EnableWebSocketMessageBroker
+public class WebSocketConfig implements WebSocketMessageBrokerConfigurer {
+
+	@Override
+	public void registerStompEndpoints(StompEndpointRegistry registry) {
+		registry.addEndpoint("/messages").withSockJS();
+	}
+
+	@Override
+	public void configureMessageBroker(MessageBrokerRegistry registry) {
+		registry.enableSimpleBroker("/queue/", "/topic/");
+		registry.setApplicationDestinationPrefixes("/app");
+	}
+
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>We can update our configuration to use Spring Session&#8217;s WebSocket support.
+The following example shows how to do so:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/java/samples/config/WebSocketConfig.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableScheduling
+@EnableWebSocketMessageBroker
+public class WebSocketConfig extends AbstractSessionWebSocketMessageBrokerConfigurer&lt;Session&gt; { <i class="conum" data-value="1"></i><b>(1)</b>
+
+	@Override
+	protected void configureStompEndpoints(StompEndpointRegistry registry) { <i class="conum" data-value="2"></i><b>(2)</b>
+		registry.addEndpoint("/messages").withSockJS();
+	}
+
+	@Override
+	public void configureMessageBroker(MessageBrokerRegistry registry) {
+		registry.enableSimpleBroker("/queue/", "/topic/");
+		registry.setApplicationDestinationPrefixes("/app");
+	}
+
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>To hook in the Spring Session support we only need to change two things:</p>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>Instead of implementing <code>WebSocketMessageBrokerConfigurer</code>, we extend <code>AbstractSessionWebSocketMessageBrokerConfigurer</code></td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td>We rename the <code>registerStompEndpoints</code> method to <code>configureStompEndpoints</code></td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>What does <code>AbstractSessionWebSocketMessageBrokerConfigurer</code> do behind the scenes?</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://github.com/spring-projects/spring-session-bom"><code>spring-session-bom</code> repository</a></p>
-<div class="ulist">
-<ul>
+<p><code>WebSocketConnectHandlerDecoratorFactory</code> is added as a <code>WebSocketHandlerDecoratorFactory</code> to <code>WebSocketTransportRegistration</code>.
+This ensures a custom <code>SessionConnectEvent</code> is fired that contains the <code>WebSocketSession</code>.
+The <code>WebSocketSession</code> is necessary to end any WebSocket connections that are still open when a Spring Session is ended.</p>
+</li>
 <li>
-<p>Hosts the Spring Session BOM module</p>
+<p><code>SessionRepositoryMessageInterceptor</code> is added as a <code>HandshakeInterceptor</code> to every <code>StompWebSocketEndpointRegistration</code>.
+This ensures that the <code>Session</code> is added to the WebSocket properties to enable updating the last accessed time.</p>
+</li>
+<li>
+<p><code>SessionRepositoryMessageInterceptor</code> is added as a <code>ChannelInterceptor</code> to our inbound <code>ChannelRegistration</code>.
+This ensures that every time an inbound message is received, that the last accessed time of our Spring Session is updated.</p>
+</li>
+<li>
+<p><code>WebSocketRegistryListener</code> is created as a Spring bean.
+This ensures that we have a mapping of all of the <code>Session</code> IDs to the corresponding WebSocket connections.
+By maintaining this mapping, we can close all the WebSocket connections when a Spring Session (HttpSession) is ended.</p>
 </li>
 </ul>
 </div>
-</li>
-</ul>
+</div>
+</div>
+</div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="samples.html">Samples &amp; Guides (Start Here)</a></span>
-  <span class="next"><a href="http-session.html">HttpSession Integration</a></span>
+  <span class="prev"><a href="http-session.html">HttpSession Integration</a></span>
+  <span class="next"><a href="web-session.html">WebSession Integration</a></span>
 </nav>
 </article>
   </div>
@@ -247,7 +341,7 @@ Now the situation with project&#8217;s repositories/modules is as follows:</p>
 </div>
 <footer class="footer flex">
     <div id="spring-links flex">
-        <img id="springlogo" src="../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
         <p class="smallest antialiased">© <script>var d = new Date();
         document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
         <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
@@ -258,11 +352,11 @@ Now the situation with project&#8217;s repositories/modules is as follows:</p>
         <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
     </div>
 </footer>
-<script src="../../_/js/site.js"></script>
-<script async src="../../_/js/vendor/highlight.js"></script>
-<script async src="../../_/js/vendor/tabs.js"></script>
-<script src="../../_/js/vendor/docsearch.min.js"></script>
-<script src="../../_/js/vendor/switchtheme.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/tabs.js"></script>
+<script src="../_/js/vendor/docsearch.min.js"></script>
+<script src="../_/js/vendor/switchtheme.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
 docsearch({

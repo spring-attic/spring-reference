@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Spring Session - Custom Cookie :: Spring</title>
+    <title>Spring Session - HttpSession (Quick Start) :: Spring</title>
     <meta name="generator" content="Antora 3.0.0-alpha.8">
-    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site.css">
 
-<link href="../../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
-<link rel="stylesheet" href="../../../_/css/vendor/docsearch.min.css">
+<link href="../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
+<link rel="stylesheet" href="../../_/css/vendor/docsearch.min.css">
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
-    <script>var uiRootPath = '../../../_'</script>
+    <script>var uiRootPath = '../../_'</script>
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://spring.io">
-        <img id="springlogo" class="block" src="../../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" class="block" src="../../_/img/spring-logo.svg" alt="Spring">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -86,7 +86,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="session" data-version="2.6">
+<div class="nav-container" data-component="session" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -134,10 +134,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../../index.html">Spring Security</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../index.html">5.6</a>
+          <a href="../../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -160,25 +160,24 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Spring Session</a></li>
-    <li><a href="java-custom-cookie.html">Spring Session - Custom Cookie</a></li>
+    <li><a href="java-redis.html">Spring Session - HttpSession (Quick Start)</a></li>
   </ul>
 </nav>
 <div class="search">
   <input id="search-input" type="text" placeholder="Search docs">
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/guides/java-custom-cookie.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora/main/spring-session-docs/modules/ROOT/pages/guides/java-redis.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 id="page-title" class="page">Spring Session - Custom Cookie</h1>
+<h1 id="page-title" class="page">Spring Session - HttpSession (Quick Start)</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This guide describes how to configure Spring Session to use custom cookies with Java Configuration.
-The guide assumes you have already set up Spring Session in your project using your chosen data store. For example, <a href="./boot-redis.html">HttpSession with Redis</a>.</p>
+<p>This guide describes how to use Spring Session to transparently leverage Redis to back a web application&#8217;s <code>HttpSession</code> with Java Configuration.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -187,7 +186,7 @@ The guide assumes you have already set up Spring Session in your project using y
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-You can find the completed guide in the <a href="#custom-cookie-sample">Custom Cookie sample application</a>.
+You can find the completed guide in the <a href="#httpsession-sample">httpsession sample application</a>.
 </td>
 </tr>
 </table>
@@ -198,137 +197,169 @@ You can find the completed guide in the <a href="#custom-cookie-sample">Custom C
 </div>
 </div>
 <div class="sect1">
-<h2 id="custom-cookie-spring-configuration"><a class="anchor" href="#custom-cookie-spring-configuration"></a>Spring Java Configuration</h2>
+<h2 id="updating-dependencies"><a class="anchor" href="#updating-dependencies"></a>Updating Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Once you have set up Spring Session, you can customize how the session cookie is written by exposing a <code>CookieSerializer</code> as a Spring bean.
-Spring Session comes with <code>DefaultCookieSerializer</code>.
-Exposing the <code>DefaultCookieSerializer</code> as a Spring bean augments the existing configuration when you use configurations like <code>@EnableRedisHttpSession</code>.
-The following example shows how to customize Spring Session&#8217;s cookie:</p>
+<p>Before you use Spring Session, you must update your dependencies.
+If you are using Maven, you must add the following dependencies:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
+	&lt;!-- ... --&gt;
+
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.springframework.session&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;
+		&lt;version&gt;2.6.0-SNAPSHOT&lt;/version&gt;
+		&lt;type&gt;pom&lt;/type&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;io.lettuce&lt;/groupId&gt;
+		&lt;artifactId&gt;lettuce-core&lt;/artifactId&gt;
+		&lt;version&gt;6.1.2.RELEASE&lt;/version&gt;
+	&lt;/dependency&gt;
+	&lt;dependency&gt;
+		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
+		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
+		&lt;version&gt;5.3.7&lt;/version&gt;
+	&lt;/dependency&gt;
+&lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Since we are using a SNAPSHOT version, we need to ensure to add the Spring Snapshot Maven Repository.
+You must have the following in your pom.xml:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;repositories&gt;
+
+	&lt;!-- ... --&gt;
+
+	&lt;repository&gt;
+		&lt;id&gt;spring-snapshot&lt;/id&gt;
+		&lt;url&gt;https://repo.spring.io/libs-snapshot&lt;/url&gt;
+	&lt;/repository&gt;
+&lt;/repositories&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="httpsession-spring-configuration"><a class="anchor" href="#httpsession-spring-configuration"></a>Spring Java Configuration</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>After adding the required dependencies, we can create our Spring configuration.
+The Spring configuration is responsible for creating a servlet filter that replaces the <code>HttpSession</code> implementation with an implementation backed by Spring Session.
+To do so, add the following Spring Configuration:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">	@Bean
-	public CookieSerializer cookieSerializer() {
-		DefaultCookieSerializer serializer = new DefaultCookieSerializer();
-		serializer.setCookieName("JSESSIONID"); <i class="conum" data-value="1"></i><b>(1)</b>
-		serializer.setCookiePath("/"); <i class="conum" data-value="2"></i><b>(2)</b>
-		serializer.setDomainNamePattern("^.+?\\.(\\w+\\.[a-z]+)$"); <i class="conum" data-value="3"></i><b>(3)</b>
-		return serializer;
-	}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableRedisHttpSession <i class="conum" data-value="1"></i><b>(1)</b>
+public class Config {
+
+	@Bean
+	public LettuceConnectionFactory connectionFactory() {
+		return new LettuceConnectionFactory(); <i class="conum" data-value="2"></i><b>(2)</b>
+	}
+
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>We customize the name of the cookie to be <code>JSESSIONID</code>.</td>
+<td>The <code>@EnableRedisHttpSession</code> annotation creates a Spring Bean with the name of <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
+The filter is in charge of replacing the <code>HttpSession</code> implementation to be backed by Spring Session.
+In this instance, Spring Session is backed by Redis.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>We customize the path of the cookie to be <code>/</code> (rather than the default of the context root).</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="3"></i><b>3</b></td>
-<td>We customize the domain name pattern (a regular expression) to be <code>^.+?\\.(\\w+\\.[a-z]+)$</code>.
-This allows sharing a session across domains and applications.
-If the regular expression does not match, no domain is set and the existing domain is used.
-If the regular expression matches, the first <a href="https://docs.oracle.com/javase/tutorial/essential/regex/groups.html">grouping</a> is used as the domain.
-This means that a request to <a href="https://child.example.com" class="bare">https://child.example.com</a> sets the domain to <code>example.com</code>.
-However, a request to <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a> or <a href="https://192.168.1.100:8080/" class="bare">https://192.168.1.100:8080/</a> leaves the cookie unset and, thus, still works in development without any changes being necessary for production.</td>
+<td>We create a <code>RedisConnectionFactory</code> that connects Spring Session to the Redis Server.
+We configure the connection to connect to localhost on the default port (6379).
+For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
 </tr>
 </table>
 </div>
 </div>
-</div>
-<div class="admonitionblock warning">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
-</td>
-<td class="content">
-You should only match on valid domain characters, since the domain name is reflected in the response.
-Doing so prevents a malicious user from performing such attacks as <a href="https://en.wikipedia.org/wiki/HTTP_response_splitting">HTTP Response Splitting</a>.
-</td>
-</tr>
-</table>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="custom-cookie-options"><a class="anchor" href="#custom-cookie-options"></a>Configuration Options</h2>
+<h2 id="java-servlet-container-initialization"><a class="anchor" href="#java-servlet-container-initialization"></a>Java Servlet Container Initialization</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The following configuration options are available:</p>
+<p>Our <a href="#httpsession-spring-configuration">Spring Configuration</a> created a Spring Bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
+The <code>springSessionRepositoryFilter</code> bean is responsible for replacing the <code>HttpSession</code> with a custom implementation that is backed by Spring Session.</p>
 </div>
-<div class="ulist">
-<ul>
-<li>
-<p><code>cookieName</code>: The name of the cookie to use.
-Default: <code>SESSION</code>.</p>
-</li>
-<li>
-<p><code>useSecureCookie</code>: Specifies whether a secure cookie should be used.
-Default: Use the value of <code>HttpServletRequest.isSecure()</code> at the time of creation.</p>
-</li>
-<li>
-<p><code>cookiePath</code>: The path of the cookie.
-Default: The context root.</p>
-</li>
-<li>
-<p><code>cookieMaxAge</code>: Specifies the max age of the cookie to be set at the time the session is created.
-Default: <code>-1</code>, which indicates the cookie should be removed when the browser is closed.</p>
-</li>
-<li>
-<p><code>jvmRoute</code>: Specifies a suffix to be appended to the session ID and included in the cookie.
-Used to identify which JVM to route to for session affinity.
-With some implementations (that is, Redis) this option provides no performance benefit.
-However, it can help with tracing logs of a particular user.</p>
-</li>
-<li>
-<p><code>domainName</code>: Allows specifying a specific domain name to be used for the cookie.
-This option is simple to understand but often requires a different configuration between development and production environments.
-See <code>domainNamePattern</code> as an alternative.</p>
-</li>
-<li>
-<p><code>domainNamePattern</code>: A case-insensitive pattern used to extract the domain name from the <code>HttpServletRequest#getServerName()</code>.
-The pattern should provide a single grouping that is used to extract the value of the cookie domain.
-If the regular expression does not match, no domain is set and the existing domain is used.
-If the regular expression matches, the first <a href="https://docs.oracle.com/javase/tutorial/essential/regex/groups.html">grouping</a> is used as the domain.</p>
-</li>
-<li>
-<p><code>sameSite</code>: The value for the <code>SameSite</code> cookie directive.
-To disable the serialization of the <code>SameSite</code> cookie directive, you may set this value to <code>null</code>.
-Default: <code>Lax</code></p>
-</li>
-</ul>
+<div class="paragraph">
+<p>In order for our <code>Filter</code> to do its magic, Spring needs to load our <code>Config</code> class.
+Last, we need to ensure that our Servlet Container (that is, Tomcat) uses our <code>springSessionRepositoryFilter</code> for every request.
+Fortunately, Spring Session provides a utility class named <code>AbstractHttpSessionApplicationInitializer</code> to make both of these steps easy.
+The following shows an example:</p>
 </div>
-<div class="admonitionblock warning">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/java/sample/Initializer.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Initializer extends AbstractHttpSessionApplicationInitializer { <i class="conum" data-value="1"></i><b>(1)</b>
+
+	public Initializer() {
+		super(Config.class); <i class="conum" data-value="2"></i><b>(2)</b>
+	}
+
+}</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
 <table>
 <tr>
 <td class="icon">
-<i class="fa icon-warning" title="Warning"></i>
+<i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-You should only match on valid domain characters, since the domain name is reflected in the response.
-Doing so prevents a malicious user from performing such attacks as <a href="https://en.wikipedia.org/wiki/HTTP_response_splitting">HTTP Response Splitting</a>.
+The name of our class (<code>Initializer</code>) does not matter. What is important is that we extend <code>AbstractHttpSessionApplicationInitializer</code>.
 </td>
+</tr>
+</table>
+</div>
+<div class="colist arabic">
+<table>
+<tr>
+<td><i class="conum" data-value="1"></i><b>1</b></td>
+<td>The first step is to extend <code>AbstractHttpSessionApplicationInitializer</code>.
+Doing so ensures that the Spring Bean by the name of <code>springSessionRepositoryFilter</code> is registered with our Servlet Container for every request.</td>
+</tr>
+<tr>
+<td><i class="conum" data-value="2"></i><b>2</b></td>
+<td><code>AbstractHttpSessionApplicationInitializer</code> also provides a mechanism to ensure Spring loads our <code>Config</code>.</td>
 </tr>
 </table>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="custom-cookie-sample"><a class="anchor" href="#custom-cookie-sample"></a><code>custom-cookie</code> Sample Application</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>This section describes how to work with the <code>custom-cookie</code> sample application.</p>
 </div>
+</div>
+<div class="sect1">
+<h2 id="httpsession-sample"><a class="anchor" href="#httpsession-sample"></a>httpsession Sample Application</h2>
+<div class="sectionbody">
 <div class="sect2">
-<h3 id="running-the-custom-cookie-sample-application"><a class="anchor" href="#running-the-custom-cookie-sample-application"></a>Running the <code>custom-cookie</code> Sample Application</h3>
+<h3 id="running-the-httpsession-sample-application"><a class="anchor" href="#running-the-httpsession-sample-application"></a>Running the <code>httpsession</code> Sample Application</h3>
 <div class="paragraph">
 <p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
 </div>
@@ -336,7 +367,7 @@ Doing so prevents a malicious user from performing such attacks as <a href="http
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre>$ ./gradlew :spring-session-sample-javaconfig-custom-cookie:tomcatRun</pre>
+<pre>$ ./gradlew :spring-session-sample-javaconfig-redis:tomcatRun</pre>
 </div>
 </div>
 </div>
@@ -350,7 +381,8 @@ Doing so prevents a malicious user from performing such attacks as <a href="http
 <td class="content">
 For the sample to work, you must <a href="https://redis.io/download">install Redis 2.8+</a> on localhost and run it with the default port (6379).
 Alternatively, you can update the <code>RedisConnectionFactory</code> to point to a Redis server.
-Another option is to use <a href="https://www.docker.com/">Docker</a> to run Redis on localhost. See <a href="https://hub.docker.com/_/redis/">Docker Redis repository</a> for detailed instructions.
+Another option is to use <a href="https://www.docker.com/">Docker</a> to run Redis on localhost.
+See <a href="https://hub.docker.com/_/redis/">Docker Redis repository</a> for detailed instructions.
 </td>
 </tr>
 </table>
@@ -360,9 +392,9 @@ Another option is to use <a href="https://www.docker.com/">Docker</a> to run Red
 </div>
 </div>
 <div class="sect2">
-<h3 id="exploring-the-custom-cookie-sample-application"><a class="anchor" href="#exploring-the-custom-cookie-sample-application"></a>Exploring the <code>custom-cookie</code> Sample Application</h3>
+<h3 id="exploring-the-httpsession-sample-application"><a class="anchor" href="#exploring-the-httpsession-sample-application"></a>Exploring the <code>httpsession</code> Sample Application</h3>
 <div class="paragraph">
-<p>Now you can use the application. Fill out the form with the following information:</p>
+<p>Now you can try to use the application. To do so, fill out the form with the following information:</p>
 </div>
 <div class="ulist">
 <ul>
@@ -375,11 +407,82 @@ Another option is to use <a href="https://www.docker.com/">Docker</a> to run Red
 </ul>
 </div>
 <div class="paragraph">
-<p>Now click the <strong>Set Attribute</strong> button.
-You should now see the values displayed in the table.</p>
+<p>Now click the <strong>Set Attribute</strong> button. You should now see the values displayed in the table.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="how-does-it-work"><a class="anchor" href="#how-does-it-work"></a>How Does It Work?</h3>
+<div class="paragraph">
+<p>We interact with the standard <code>HttpSession</code> in the <code>SessionServlet</code> shown in the following listing:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/java/sample/SessionServlet.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WebServlet("/session")
+public class SessionServlet extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		String attributeName = req.getParameter("attributeName");
+		String attributeValue = req.getParameter("attributeValue");
+		req.getSession().setAttribute(attributeName, attributeValue);
+		resp.sendRedirect(req.getContextPath() + "/");
+	}
+
+	private static final long serialVersionUID = 2878267318695777395L;
+
+}</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph">
-<p>If you look at the cookies for the application, you can see the cookie is saved to the custom name of <code>JSESSIONID</code>.</p>
+<p>Instead of using Tomcat&#8217;s <code>HttpSession</code>, we persist the values in Redis.
+Spring Session creates a cookie named <code>SESSION</code> in your browser.
+That cookie contains the ID of your session.
+You can view the cookies (with <a href="https://developers.google.com/web/tools/chrome-devtools/manage-data/cookies">Chrome</a> or <a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector">Firefox</a>).</p>
+</div>
+<div class="paragraph">
+<p>You can remove the session by using redis-cli.
+For example, on a Linux based system you can type the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	$ redis-cli keys '*' | xargs redis-cli del</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="admonitionblock tip">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-tip" title="Tip"></i>
+</td>
+<td class="content">
+The Redis documentation has instructions for <a href="https://redis.io/topics/quickstart">installing redis-cli</a>.
+</td>
+</tr>
+</table>
+</div>
+<div class="paragraph">
+<p>Alternatively, you can also delete the explicit key. Enter the following into your terminal, being sure to replace <code>7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</code> with the value of your SESSION cookie:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	$ redis-cli del spring:session:sessions:7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Now you can visit the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a> and see that the attribute we added is no longer displayed.</p>
 </div>
 </div>
 </div>
@@ -390,7 +493,7 @@ You should now see the values displayed in the table.</p>
 </div>
 <footer class="footer flex">
     <div id="spring-links flex">
-        <img id="springlogo" src="../../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" src="../../_/img/spring-logo.svg" alt="Spring">
         <p class="smallest antialiased">© <script>var d = new Date();
         document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
         <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
@@ -401,11 +504,11 @@ You should now see the values displayed in the table.</p>
         <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
     </div>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-<script async src="../../../_/js/vendor/tabs.js"></script>
-<script src="../../../_/js/vendor/docsearch.min.js"></script>
-<script src="../../../_/js/vendor/switchtheme.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/tabs.js"></script>
+<script src="../../_/js/vendor/docsearch.min.js"></script>
+<script src="../../_/js/vendor/switchtheme.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
 docsearch({

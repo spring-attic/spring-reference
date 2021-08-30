@@ -3,21 +3,23 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Spring Session - Spring Boot :: Spring</title>
+    <title>Spring Security Integration :: Spring</title>
+    <link rel="prev" href="web-session.html">
+    <link rel="next" href="api.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
-    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/site.css">
 
-<link href="../../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
-<link rel="stylesheet" href="../../../_/css/vendor/docsearch.min.css">
+<link href="../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
+<link rel="stylesheet" href="../_/css/vendor/docsearch.min.css">
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
-    <script>var uiRootPath = '../../../_'</script>
+    <script>var uiRootPath = '../_'</script>
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://spring.io">
-        <img id="springlogo" class="block" src="../../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" class="block" src="../_/img/spring-logo.svg" alt="Spring">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -86,41 +88,41 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="session" data-version="2.6">
+<div class="nav-container" data-component="session" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../index.html">Spring Session</a></h3>
+    <h3 class="title"><a href="index.html">Spring Session</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../whats-new.html">What&#8217;s New</a>
+    <a class="nav-link" href="whats-new.html">What&#8217;s New</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../samples.html">Samples &amp; Guides (Start Here)</a>
+    <a class="nav-link" href="samples.html">Samples &amp; Guides (Start Here)</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../modules.html">Modules</a>
+    <a class="nav-link" href="modules.html">Modules</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../http-session.html">HttpSession Integration</a>
+    <a class="nav-link" href="http-session.html">HttpSession Integration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../web-socket.html">WebSocket Integration</a>
+    <a class="nav-link" href="web-socket.html">WebSocket Integration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../web-session.html">WebSession Integration</a>
+    <a class="nav-link" href="web-session.html">WebSession Integration</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="spring-security.html">Spring Security Integration</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../spring-security.html">Spring Security Integration</a>
+    <a class="nav-link" href="api.html">API Documentation</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../api.html">API Documentation</a>
-  </li>
-  <li class="nav-item" data-depth="1">
-    <a class="nav-link" href="../upgrading.html">Upgrading</a>
+    <a class="nav-link" href="upgrading.html">Upgrading</a>
   </li>
 </ul>
   </li>
@@ -134,18 +136,18 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../../index.html">Spring Security</a>
+      <a class="title" href="../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../index.html">5.6</a>
+          <a href="../index.html">5.6</a>
         </li>
       </ul>
     </li>
     <li class="component is-current">
-      <a class="title" href="../index.html">Spring Session</a>
+      <a class="title" href="index.html">Spring Session</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../index.html">2.6</a>
+          <a href="index.html">2.6</a>
         </li>
       </ul>
     </li>
@@ -159,234 +161,195 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../index.html">Spring Session</a></li>
-    <li><a href="boot-jdbc.html">Spring Session - Spring Boot</a></li>
+    <li><a href="index.html">Spring Session</a></li>
+    <li><a href="spring-security.html">Spring Security Integration</a></li>
   </ul>
 </nav>
 <div class="search">
   <input id="search-input" type="text" placeholder="Search docs">
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/guides/boot-jdbc.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora/main/spring-session-docs/modules/ROOT/pages/spring-security.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 id="page-title" class="page">Spring Session - Spring Boot</h1>
+<h1 id="page-title" class="page">Spring Security Integration</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This guide describes how to use Spring Session to transparently leverage a relational database to back a web application&#8217;s <code>HttpSession</code> when you use Spring Boot.</p>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-You can find the completed guide in the <a href="#httpsession-jdbc-boot-sample">httpsession-jdbc-boot sample application</a>.
-</td>
-</tr>
-</table>
-</div>
-<div id="index-link" class="paragraph">
-<p><a href="../index.html">Index</a></p>
+<p>Spring Session provides integration with Spring Security.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="updating-dependencies"><a class="anchor" href="#updating-dependencies"></a>Updating Dependencies</h2>
+<h2 id="spring-security-rememberme"><a class="anchor" href="#spring-security-rememberme"></a>Spring Security Remember-me Support</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Before you use Spring Session, you must update your dependencies.
-We assume you are working with a working Spring Boot web application.
-If you use Maven, you must add the following dependencies:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="title">pom.xml</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependencies&gt;
-	&lt;!-- ... --&gt;
-
-	&lt;dependency&gt;
-		&lt;groupId&gt;org.springframework.session&lt;/groupId&gt;
-		&lt;artifactId&gt;spring-session-jdbc&lt;/artifactId&gt;
-	&lt;/dependency&gt;
-&lt;/dependencies&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Spring Boot provides dependency management for Spring Session modules, so you need not explicitly declare the dependency version.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="httpsession-jdbc-boot-spring-configuration"><a class="anchor" href="#httpsession-jdbc-boot-spring-configuration"></a>Spring Boot Configuration</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>After adding the required dependencies, we can create our Spring Boot configuration.
-Thanks to first-class auto configuration support, setting up Spring Session backed by a relational database is as simple as adding a single configuration property to your <code>application.properties</code>.
-The following listing shows how to do so:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="title">src/main/resources/application.properties</div>
-<div class="content">
-<pre>spring.session.store-type=jdbc # Session store type.</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>If a single Spring Session module is present on the classpath, Spring Boot uses that store implementation automatically.
-If you have more than one implementation, you must choose the StoreType that you wish to use to store the sessions, as shows above.</p>
-</div>
-<div class="paragraph">
-<p>Under the hood, Spring Boot applies configuration that is equivalent to manually adding the <code>@EnableJdbcHttpSession</code> annotation.
-This creates a Spring bean with the name of <code>springSessionRepositoryFilter</code>. That bean implements <code>Filter</code>.
-The filter is in charge of replacing the <code>HttpSession</code> implementation to be backed by Spring Session.</p>
-</div>
-<div class="paragraph">
-<p>You can further customize by using <code>application.properties</code>.
-The following listing shows how to do so:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="title">src/main/resources/application.properties</div>
-<div class="content">
-<pre>server.servlet.session.timeout= # Session timeout. If a duration suffix is not specified, seconds are used.
-spring.session.jdbc.initialize-schema=embedded # Database schema initialization mode.
-spring.session.jdbc.schema=classpath:org/springframework/session/jdbc/schema-@@platform@@.sql # Path to the SQL file to use to initialize the database schema.
-spring.session.jdbc.table-name=SPRING_SESSION # Name of the database table used to store sessions.</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>For more information, see the <a href="https://docs.spring.io/spring-boot/docs/2.4.5/reference/htmlsingle/#boot-features-session">Spring Session</a> portion of the Spring Boot documentation.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="httpsession-jdbc-boot-configuration"><a class="anchor" href="#httpsession-jdbc-boot-configuration"></a>Configuring the <code>DataSource</code></h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Spring Boot automatically creates a <code>DataSource</code> that connects Spring Session to an embedded instance of an H2 database.
-In a production environment, you need to update your configuration to point to your relational database.
-For example, you can include the following in your application.properties:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="title">src/main/resources/application.properties</div>
-<div class="content">
-<pre>spring.datasource.url= # JDBC URL of the database.
-spring.datasource.username= # Login username of the database.
-spring.datasource.password= # Login password of the database.</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>For more information, see the <a href="https://docs.spring.io/spring-boot/docs/2.4.5/reference/htmlsingle/#boot-features-configure-datasource">Configure a DataSource</a> portion of the Spring Boot documentation.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="httpsession-jdbc-boot-servlet-configuration"><a class="anchor" href="#httpsession-jdbc-boot-servlet-configuration"></a>Servlet Container Initialization</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Our <a href="#httpsession-jdbc-boot-spring-configuration">Spring Boot Configuration</a> created a Spring bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
-The <code>springSessionRepositoryFilter</code> bean is responsible for replacing the <code>HttpSession</code> with a custom implementation that is backed by Spring Session.</p>
-</div>
-<div class="paragraph">
-<p>In order for our <code>Filter</code> to do its magic, Spring needs to load our <code>Config</code> class.
-Last, we need to ensure that our Servlet Container (that is, Tomcat) uses our <code>springSessionRepositoryFilter</code> for every request.
-Fortunately, Spring Boot takes care of both of these steps for us.</p>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="httpsession-jdbc-boot-sample"><a class="anchor" href="#httpsession-jdbc-boot-sample"></a><code>httpsession-jdbc-boot</code> Sample Application</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>The httpsession-jdbc-boot Sample Application demonstrates how to use Spring Session to transparently leverage an H2 database to back a web application&#8217;s <code>HttpSession</code> when you use Spring Boot.</p>
-</div>
-<div class="sect2">
-<h3 id="httpsession-jdbc-boot-running"><a class="anchor" href="#httpsession-jdbc-boot-running"></a>Running the <code>httpsession-jdbc-boot</code> Sample Application</h3>
-<div class="paragraph">
-<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre>$ ./gradlew :spring-session-sample-boot-jdbc:bootRun</pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>You should now be able to access the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a></p>
-</div>
-</div>
-<div class="sect2">
-<h3 id="httpsession-jdbc-boot-explore"><a class="anchor" href="#httpsession-jdbc-boot-explore"></a>Exploring the Security Sample Application</h3>
-<div class="paragraph">
-<p>You can now try using the application.
-To do so, enter the following to log in:</p>
+<p>Spring Session provides integration with <a href="https://docs.spring.io/spring-security/site/docs/5.5.0/reference/htmlsingle/#remember-me">Spring Security&#8217;s Remember-me Authentication</a>.
+The support:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Username</strong> <em>user</em></p>
+<p>Changes the session expiration length</p>
 </li>
 <li>
-<p><strong>Password</strong> <em>password</em></p>
+<p>Ensures that the session cookie expires at <code>Integer.MAX_VALUE</code>.
+The cookie expiration is set to the largest possible value, because the cookie is set only when the session is created.
+If it were set to the same value as the session expiration, the session would get renewed when the user used it but the cookie expiration would not be updated (causing the expiration to be fixed).</p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Now click the <strong>Login</strong> button.
-You should now see a message indicating that your are logged in with the user entered previously.
-The user&#8217;s information is stored in the H2 database rather than Tomcat&#8217;s <code>HttpSession</code> implementation.</p>
+<p>To configure Spring Session with Spring Security in Java Configuration, you can use the following listing as a guide:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
+protected void configure(HttpSecurity http) throws Exception {
+	http
+		// ... additional configuration ...
+		.rememberMe((rememberMe) -&gt; rememberMe
+			.rememberMeServices(rememberMeServices())
+		);
+}
+
+@Bean
+public SpringSessionRememberMeServices rememberMeServices() {
+	SpringSessionRememberMeServices rememberMeServices =
+			new SpringSessionRememberMeServices();
+	// optionally customize
+	rememberMeServices.setAlwaysRemember(true);
+	return rememberMeServices;
+}</code></pre>
 </div>
 </div>
-<div class="sect2">
-<h3 id="httpsession-jdbc-boot-how"><a class="anchor" href="#httpsession-jdbc-boot-how"></a>How Does It Work?</h3>
+</div>
+</div>
 <div class="paragraph">
-<p>Instead of using Tomcat&#8217;s <code>HttpSession</code>, we persist the values in the H2 database.
-Spring Session replaces the <code>HttpSession</code> with an implementation that is backed by a relational database.
-When Spring Security&#8217;s <code>SecurityContextPersistenceFilter</code> saves the <code>SecurityContext</code> to the <code>HttpSession</code>, it is then persisted into the H2 database.</p>
+<p>An XML-based configuration would look something like the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;security:http&gt;
+	&lt;!-- ... --&gt;
+	&lt;security:form-login /&gt;
+	&lt;security:remember-me services-ref="rememberMeServices"/&gt;
+&lt;/security:http&gt;
+
+&lt;bean id="rememberMeServices"
+	class="org.springframework.session.security.web.authentication.SpringSessionRememberMeServices"
+	p:alwaysRemember="true"/&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="spring-security-concurrent-sessions"><a class="anchor" href="#spring-security-concurrent-sessions"></a>Spring Security Concurrent Session Control</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Session provides integration with Spring Security to support its concurrent session control.
+This allows limiting the number of active sessions that a single user can have concurrently, but, unlike the default
+Spring Security support, this also works in a clustered environment. This is done by providing a custom
+implementation of Spring Security&#8217;s <code>SessionRegistry</code> interface.</p>
 </div>
 <div class="paragraph">
-<p>When a new <code>HttpSession</code> is created, Spring Session creates a cookie named <code>SESSION</code> in your browser. That cookie contains the ID of your session.
-You can view the cookies (with <a href="https://developers.google.com/web/tools/chrome-devtools/manage-data/cookies">Chrome</a> or <a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector">Firefox</a>).</p>
+<p>When using Spring Security&#8217;s Java config DSL, you can configure the custom <code>SessionRegistry</code> through the
+<code>SessionManagementConfigurer</code>, as the following listing shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class SecurityConfiguration&lt;S extends Session&gt; extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	private FindByIndexNameSessionRepository&lt;S&gt; sessionRepository;
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		// @formatter:off
+		http
+			// other config goes here...
+			.sessionManagement((sessionManagement) -&gt; sessionManagement
+				.maximumSessions(2)
+				.sessionRegistry(sessionRegistry())
+			);
+		// @formatter:on
+	}
+
+	@Bean
+	public SpringSessionBackedSessionRegistry&lt;S&gt; sessionRegistry() {
+		return new SpringSessionBackedSessionRegistry&lt;&gt;(this.sessionRepository);
+	}
+
+}</code></pre>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph">
-<p>You can remove the session by using the H2 web console available at: <a href="http://localhost:8080/h2-console/" class="bare">http://localhost:8080/h2-console/</a> (use <code>jdbc:h2:mem:testdb</code> for JDBC URL).</p>
+<p>This assumes that you have also configured Spring Session to provide a <code>FindByIndexNameSessionRepository</code> that
+returns <code>Session</code> instances.</p>
 </div>
 <div class="paragraph">
-<p>Now you can visit the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a> and see that we are no longer authenticated.</p>
+<p>When using XML configuration, it would look something like the following listing:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;security:http&gt;
+	&lt;!-- other config goes here... --&gt;
+	&lt;security:session-management&gt;
+		&lt;security:concurrency-control max-sessions="2" session-registry-ref="sessionRegistry"/&gt;
+	&lt;/security:session-management&gt;
+&lt;/security:http&gt;
+
+&lt;bean id="sessionRegistry"
+	  class="org.springframework.session.security.SpringSessionBackedSessionRegistry"&gt;
+	&lt;constructor-arg ref="sessionRepository"/&gt;
+&lt;/bean&gt;</code></pre>
 </div>
 </div>
 </div>
 </div>
+<div class="paragraph">
+<p>This assumes that your Spring Session <code>SessionRegistry</code> bean is called <code>sessionRegistry</code>, which is the name used by all
+<code>SpringHttpSessionConfiguration</code> subclasses.</p>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="spring-security-concurrent-sessions-limitations"><a class="anchor" href="#spring-security-concurrent-sessions-limitations"></a>Limitations</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>Spring Session&#8217;s implementation of Spring Security&#8217;s <code>SessionRegistry</code> interface does not support the <code>getAllPrincipals</code>
+method, as this information cannot be retrieved by using Spring Session. This method is never called by Spring Security,
+so this affects only applications that access the <code>SessionRegistry</code> themselves.</p>
+</div>
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="web-session.html">WebSession Integration</a></span>
+  <span class="next"><a href="api.html">API Documentation</a></span>
+</nav>
 </article>
   </div>
 </main>
 </div>
 <footer class="footer flex">
     <div id="spring-links flex">
-        <img id="springlogo" src="../../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
         <p class="smallest antialiased">© <script>var d = new Date();
         document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
         <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
@@ -397,11 +360,11 @@ You can view the cookies (with <a href="https://developers.google.com/web/tools/
         <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
     </div>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-<script async src="../../../_/js/vendor/tabs.js"></script>
-<script src="../../../_/js/vendor/docsearch.min.js"></script>
-<script src="../../../_/js/vendor/switchtheme.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/tabs.js"></script>
+<script src="../_/js/vendor/docsearch.min.js"></script>
+<script src="../_/js/vendor/switchtheme.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
 docsearch({

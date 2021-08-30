@@ -3,23 +3,22 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>WebSession Integration :: Spring</title>
-    <link rel="prev" href="web-socket.html">
-    <link rel="next" href="spring-security.html">
+    <title>Spring Session :: Spring</title>
+    <link rel="next" href="whats-new.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
-    <link rel="stylesheet" href="../../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/site.css">
 
-<link href="../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
-<link rel="stylesheet" href="../../_/css/vendor/docsearch.min.css">
+<link href="../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
+<link rel="stylesheet" href="../_/css/vendor/docsearch.min.css">
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
-    <script>var uiRootPath = '../../_'</script>
+    <script>var uiRootPath = '../_'</script>
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://spring.io">
-        <img id="springlogo" class="block" src="../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" class="block" src="../_/img/spring-logo.svg" alt="Spring">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -88,7 +87,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="session" data-version="2.6">
+<div class="nav-container" data-component="session" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -112,7 +111,7 @@
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="web-socket.html">WebSocket Integration</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="1">
+  <li class="nav-item" data-depth="1">
     <a class="nav-link" href="web-session.html">WebSession Integration</a>
   </li>
   <li class="nav-item" data-depth="1">
@@ -136,10 +135,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../index.html">Spring Security</a>
+      <a class="title" href="../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../index.html">5.6</a>
+          <a href="../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -162,86 +161,128 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="index.html">Spring Session</a></li>
-    <li><a href="web-session.html">WebSession Integration</a></li>
   </ul>
 </nav>
 <div class="search">
   <input id="search-input" type="text" placeholder="Search docs">
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/web-session.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora/main/spring-session-docs/modules/ROOT/pages/index.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 id="page-title" class="page">WebSession Integration</h1>
+<h1 id="page-title" class="page">Spring Session</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>Spring Session provides transparent integration with Spring WebFlux&#8217;s <code>WebSession</code>.
-This means that you can switch the <code>WebSession</code> implementation out with an implementation that is backed by Spring Session.</p>
+<div id="abstract" class="paragraph">
+<p>Spring Session provides an API and implementations for managing a user&#8217;s session information.</p>
+</div>
+<div id="introduction" class="paragraph">
+<p>Spring Session provides an API and implementations for managing a user&#8217;s session information while also making it trivial to support clustered sessions without being tied to an application container-specific solution.
+It also provides transparent integration with:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p><a href="http-session.html#httpsession" class="page">HttpSession</a>: Allows replacing the <code>HttpSession</code> in an application container-neutral way, with support for providing session IDs in headers to work with RESTful APIs.</p>
+</li>
+<li>
+<p><a href="web-socket.html#websocket" class="page">WebSocket</a>: Provides the ability to keep the <code>HttpSession</code> alive when receiving WebSocket messages</p>
+</li>
+<li>
+<p><a href="web-session.html#websession" class="page">WebSession</a>: Allows replacing the Spring WebFlux&#8217;s <code>WebSession</code> in an application container-neutral way.</p>
+</li>
+</ul>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="websession-why"><a class="anchor" href="#websession-why"></a>Why Spring Session and WebSession?</h2>
+<h2 id="community"><a class="anchor" href="#community"></a>Spring Session Community</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>We have already mentioned that Spring Session provides transparent integration with Spring WebFlux&#8217;s <code>WebSession</code>, but what benefits do we get out of this?
-As with <code>HttpSession</code>, Spring Session makes it trivial to support <a href="#websession-redis">clustered sessions</a> without being tied to an application container specific solution.</p>
+<p>We are glad to consider you a part of our community.
+The following sections provide additional about how to interact with the Spring Session community.</p>
 </div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="websession-redis"><a class="anchor" href="#websession-redis"></a>WebSession with Redis</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="community-support"><a class="anchor" href="#community-support"></a>Support</h3>
 <div class="paragraph">
-<p>Using Spring Session with <code>WebSession</code> is enabled by registering a <code>WebSessionManager</code> implementation backed by Spring Session&#8217;s <code>ReactiveSessionRepository</code>.
-The Spring configuration is responsible for creating a <code>WebSessionManager</code> that replaces the <code>WebSession</code> implementation with an implementation backed by Spring Session.
-To do so, add the following Spring Configuration:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableRedisWebSession <i class="conum" data-value="1"></i><b>(1)</b>
-public class SessionConfiguration {
-
-	@Bean
-	public LettuceConnectionFactory redisConnectionFactory() {
-		return new LettuceConnectionFactory(); <i class="conum" data-value="2"></i><b>(2)</b>
-	}
-
-}</code></pre>
+<p>You can get help by asking questions on <a href="https://stackoverflow.com/questions/tagged/spring-session">Stack Overflow with the <code>spring-session</code> tag</a>.
+Similarly, we encourage helping others by answering questions on Stack Overflow.</p>
 </div>
 </div>
-<div class="colist arabic">
-<table>
+<div class="sect2">
+<h3 id="community-source"><a class="anchor" href="#community-source"></a>Source Code</h3>
+<div class="paragraph">
+<p>You can find the source code on GitHub at <a href="https://github.com/spring-projects/spring-session/" class="bare">https://github.com/spring-projects/spring-session/</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="community-issues"><a class="anchor" href="#community-issues"></a>Issue Tracking</h3>
+<div class="paragraph">
+<p>We track issues in GitHub issues at <a href="https://github.com/spring-projects/spring-session/issues" class="bare">https://github.com/spring-projects/spring-session/issues</a></p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="community-contributing"><a class="anchor" href="#community-contributing"></a>Contributing</h3>
+<div class="paragraph">
+<p>We appreciate <a href="https://help.github.com/articles/using-pull-requests/">pull requests</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="community-license"><a class="anchor" href="#community-license"></a>License</h3>
+<div class="paragraph">
+<p>Spring Session is Open Source software released under the <a href="https://www.apache.org/licenses/LICENSE-2.0">Apache 2.0 license</a>.</p>
+</div>
+</div>
+<div class="sect2">
+<h3 id="community-extensions"><a class="anchor" href="#community-extensions"></a>Community Extensions</h3>
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<thead>
 <tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The <code>@EnableRedisWebSession</code> annotation creates a Spring bean with the name of <code>webSessionManager</code>. That bean implements the <code>WebSessionManager</code>.
-This is what is in charge of replacing the <code>WebSession</code> implementation to be backed by Spring Session.
-In this instance, Spring Session is backed by Redis.</td>
+<th class="tableblock halign-left valign-top">Name</th>
+<th class="tableblock halign-left valign-top">Location</th>
 </tr>
+</thead>
+<tbody>
 <tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td>We create a <code>RedisConnectionFactory</code> that connects Spring Session to the Redis Server.
-We configure the connection to connect to localhost on the default port (6379)
-For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Spring Session Infinispan</p></td>
+<td class="tableblock halign-left valign-top"><p class="tableblock"><a href="https://infinispan.org/infinispan-spring-boot/master/spring_boot_starter.html#_enabling_spring_session_support" class="bare">https://infinispan.org/infinispan-spring-boot/master/spring_boot_starter.html#_enabling_spring_session_support</a></p></td>
 </tr>
+</tbody>
 </table>
 </div>
 </div>
 </div>
-</div>
-</div>
 <div class="sect1">
-<h2 id="websession-how"><a class="anchor" href="#websession-how"></a>How WebSession Integration Works</h2>
+<h2 id="minimum-requirements"><a class="anchor" href="#minimum-requirements"></a>Minimum Requirements</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>It is considerably easier for Spring Session to integrate with Spring WebFlux and its <code>WebSession</code>, compared to Servlet API and its <code>HttpSession</code>.
-Spring WebFlux provides the <code>WebSessionStore</code> API, which presents a strategy for persisting <code>WebSession</code>.</p>
+<p>The minimum requirements for Spring Session are:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Java 8+.</p>
+</li>
+<li>
+<p>If you run in a Servlet Container (not required), Servlet 3.1+.</p>
+</li>
+<li>
+<p>If you use other Spring libraries (not required), the minimum required version is Spring 5.0.x.</p>
+</li>
+<li>
+<p><code>@EnableRedisHttpSession</code> requires Redis 2.8+. This is necessary to support <a href="api.html#api-redisindexedsessionrepository-expiration" class="page">Session Expiration</a></p>
+</li>
+<li>
+<p><code>@EnableHazelcastHttpSession</code> requires Hazelcast 3.6+. This is necessary to support <a href="api.html#api-enablehazelcasthttpsession-storage" class="page"><code>FindByIndexNameSessionRepository</code></a></p>
+</li>
+</ul>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -250,90 +291,16 @@ Spring WebFlux provides the <code>WebSessionStore</code> API, which presents a s
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-This section describes how Spring Session provides transparent integration with <code>WebSession</code>. We offer this content so that you can understand what is happening under the covers. This functionality is already integrated and you do NOT need to implement this logic yourself.
+At its core, Spring Session has a required dependency only on <code>spring-jcl</code>.
+For an example of using Spring Session without any other Spring dependencies, see the <a href="samples.html#samples" class="page">hazelcast sample</a> application.
 </td>
 </tr>
 </table>
 </div>
-<div class="paragraph">
-<p>First, we create a custom <code>SpringSessionWebSession</code> that delegates to Spring Session&#8217;s <code>Session</code>.
-It looks something like the following:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SpringSessionWebSession implements WebSession {
-
-	enum State {
-		NEW, STARTED
-	}
-
-	private final S session;
-
-	private AtomicReference&lt;State&gt; state = new AtomicReference&lt;&gt;();
-
-	SpringSessionWebSession(S session, State state) {
-		this.session = session;
-		this.state.set(state);
-	}
-
-	@Override
-	public void start() {
-		this.state.compareAndSet(State.NEW, State.STARTED);
-	}
-
-	@Override
-	public boolean isStarted() {
-		State value = this.state.get();
-		return (State.STARTED.equals(value)
-				|| (State.NEW.equals(value) &amp;&amp; !this.session.getAttributes().isEmpty()));
-	}
-
-	@Override
-	public Mono&lt;Void&gt; changeSessionId() {
-		return Mono.defer(() -&gt; {
-			this.session.changeSessionId();
-			return save();
-		});
-	}
-
-	// ... other methods delegate to the original Session
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>Next, we create a custom <code>WebSessionStore</code> that delegates to the <code>ReactiveSessionRepository</code> and wraps <code>Session</code> into custom <code>WebSession</code> implementation, as the following listing shows:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SpringSessionWebSessionStore&lt;S extends Session&gt; implements WebSessionStore {
-
-	private final ReactiveSessionRepository&lt;S&gt; sessions;
-
-	public SpringSessionWebSessionStore(ReactiveSessionRepository&lt;S&gt; reactiveSessionRepository) {
-		this.sessions = reactiveSessionRepository;
-	}
-
-	// ...
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="paragraph">
-<p>To be detected by Spring WebFlux, this custom <code>WebSessionStore</code> needs to be registered with <code>ApplicationContext</code> as a bean named <code>webSessionManager</code>.
-For additional information on Spring WebFlux, see the <a href="https://docs.spring.io/spring-framework/docs/5.3.7/reference/html/web-reactive.html">Spring Framework Reference Documentation</a>.</p>
-</div>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="web-socket.html">WebSocket Integration</a></span>
-  <span class="next"><a href="spring-security.html">Spring Security Integration</a></span>
+  <span class="next"><a href="whats-new.html">What&#8217;s New</a></span>
 </nav>
 </article>
   </div>
@@ -341,7 +308,7 @@ For additional information on Spring WebFlux, see the <a href="https://docs.spri
 </div>
 <footer class="footer flex">
     <div id="spring-links flex">
-        <img id="springlogo" src="../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" src="../_/img/spring-logo.svg" alt="Spring">
         <p class="smallest antialiased">© <script>var d = new Date();
         document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
         <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
@@ -352,11 +319,11 @@ For additional information on Spring WebFlux, see the <a href="https://docs.spri
         <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
     </div>
 </footer>
-<script src="../../_/js/site.js"></script>
-<script async src="../../_/js/vendor/highlight.js"></script>
-<script async src="../../_/js/vendor/tabs.js"></script>
-<script src="../../_/js/vendor/docsearch.min.js"></script>
-<script src="../../_/js/vendor/switchtheme.js"></script>
+<script src="../_/js/site.js"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script async src="../_/js/vendor/tabs.js"></script>
+<script src="../_/js/vendor/docsearch.min.js"></script>
+<script src="../_/js/vendor/switchtheme.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
 docsearch({

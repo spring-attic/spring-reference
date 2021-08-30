@@ -3,21 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Spring Session - HttpSession (Quick Start) :: Spring</title>
+    <title>Spring Session - REST :: Spring</title>
     <meta name="generator" content="Antora 3.0.0-alpha.8">
-    <link rel="stylesheet" href="../../../_/css/site.css">
+    <link rel="stylesheet" href="../../_/css/site.css">
 
-<link href="../../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
-<link rel="stylesheet" href="../../../_/css/vendor/docsearch.min.css">
+<link href="../../_/img/favicon.ico" rel='shortcut icon' type='image/vnd.microsoft.icon'>
+<link rel="stylesheet" href="../../_/css/vendor/docsearch.min.css">
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.css -->
-    <script>var uiRootPath = '../../../_'</script>
+    <script>var uiRootPath = '../../_'</script>
   </head>
   <body class="article">
 <header class="header">
   <nav class="navbar">
     <div class="navbar-brand">
       <a class="navbar-item" href="https://spring.io">
-        <img id="springlogo" class="block" src="../../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" class="block" src="../../_/img/spring-logo.svg" alt="Spring">
       </a>
       <button class="navbar-burger" data-target="topbar-nav">
         <span></span>
@@ -86,7 +86,7 @@
   </nav>
 </header>
 <div class="body">
-<div class="nav-container" data-component="session" data-version="2.6">
+<div class="nav-container" data-component="session" data-version="">
   <aside class="nav">
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
@@ -134,10 +134,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../../index.html">Spring Security</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../../index.html">5.6</a>
+          <a href="../../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -160,24 +160,24 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../index.html">Spring Session</a></li>
-    <li><a href="java-redis.html">Spring Session - HttpSession (Quick Start)</a></li>
+    <li><a href="java-rest.html">Spring Session - REST</a></li>
   </ul>
 </nav>
 <div class="search">
   <input id="search-input" type="text" placeholder="Search docs">
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora-2.x/spring-session-docs/modules/ROOT/pages/guides/java-redis.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-session/edit/antora/main/spring-session-docs/modules/ROOT/pages/guides/java-rest.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 id="page-title" class="page">Spring Session - HttpSession (Quick Start)</h1>
+<h1 id="page-title" class="page">Spring Session - REST</h1>
 <div id="preamble">
 <div class="sectionbody">
 <div class="paragraph">
-<p>This guide describes how to use Spring Session to transparently leverage Redis to back a web application&#8217;s <code>HttpSession</code> with Java Configuration.</p>
+<p>This guide describes how to use Spring Session to transparently leverage Redis to back a web application&#8217;s <code>HttpSession</code> when you use REST endpoints.</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -186,7 +186,7 @@
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-You can find the completed guide in the <a href="#httpsession-sample">httpsession sample application</a>.
+You can find the completed guide in the <a href="#rest-sample">rest sample application</a>.
 </td>
 </tr>
 </table>
@@ -201,7 +201,7 @@ You can find the completed guide in the <a href="#httpsession-sample">httpsessio
 <div class="sectionbody">
 <div class="paragraph">
 <p>Before you use Spring Session, you must update your dependencies.
-If you are using Maven, you must add the following dependencies:</p>
+If you use Maven, you must add the following dependencies:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -232,32 +232,10 @@ If you are using Maven, you must add the following dependencies:</p>
 </div>
 </div>
 </div>
-<div class="paragraph">
-<p>Since we are using a SNAPSHOT version, we need to ensure to add the Spring Snapshot Maven Repository.
-You must have the following in your pom.xml:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="title">pom.xml</div>
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;repositories&gt;
-
-	&lt;!-- ... --&gt;
-
-	&lt;repository&gt;
-		&lt;id&gt;spring-snapshot&lt;/id&gt;
-		&lt;url&gt;https://repo.spring.io/libs-snapshot&lt;/url&gt;
-	&lt;/repository&gt;
-&lt;/repositories&gt;</code></pre>
-</div>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="httpsession-spring-configuration"><a class="anchor" href="#httpsession-spring-configuration"></a>Spring Java Configuration</h2>
+<h2 id="rest-spring-configuration"><a class="anchor" href="#rest-spring-configuration"></a>Spring Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>After adding the required dependencies, we can create our Spring configuration.
@@ -268,12 +246,18 @@ To do so, add the following Spring Configuration:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableRedisHttpSession <i class="conum" data-value="1"></i><b>(1)</b>
-public class Config {
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableRedisHttpSession <i class="conum" data-value="1"></i><b>(1)</b>
+public class HttpSessionConfig {
 
 	@Bean
 	public LettuceConnectionFactory connectionFactory() {
 		return new LettuceConnectionFactory(); <i class="conum" data-value="2"></i><b>(2)</b>
+	}
+
+	@Bean
+	public HttpSessionIdResolver httpSessionIdResolver() {
+		return HeaderHttpSessionIdResolver.xAuthToken(); <i class="conum" data-value="3"></i><b>(3)</b>
 	}
 
 }</code></pre>
@@ -283,7 +267,7 @@ public class Config {
 <table>
 <tr>
 <td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The <code>@EnableRedisHttpSession</code> annotation creates a Spring Bean with the name of <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
+<td>The <code>@EnableRedisHttpSession</code> annotation creates a Spring bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
 The filter is in charge of replacing the <code>HttpSession</code> implementation to be backed by Spring Session.
 In this instance, Spring Session is backed by Redis.</td>
 </tr>
@@ -293,6 +277,10 @@ In this instance, Spring Session is backed by Redis.</td>
 We configure the connection to connect to localhost on the default port (6379).
 For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
 </tr>
+<tr>
+<td><i class="conum" data-value="3"></i><b>3</b></td>
+<td>We customize Spring Session&#8217;s HttpSession integration to use HTTP headers to convey the current session information instead of cookies.</td>
+</tr>
 </table>
 </div>
 </div>
@@ -300,30 +288,43 @@ For more information on configuring Spring Data Redis, see the <a href="https://
 </div>
 </div>
 <div class="sect1">
-<h2 id="java-servlet-container-initialization"><a class="anchor" href="#java-servlet-container-initialization"></a>Java Servlet Container Initialization</h2>
+<h2 id="servlet-container-initialization"><a class="anchor" href="#servlet-container-initialization"></a>Servlet Container Initialization</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Our <a href="#httpsession-spring-configuration">Spring Configuration</a> created a Spring Bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
+<p>Our <a href="#rest-spring-configuration">Spring Configuration</a> created a Spring Bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
 The <code>springSessionRepositoryFilter</code> bean is responsible for replacing the <code>HttpSession</code> with a custom implementation that is backed by Spring Session.</p>
 </div>
 <div class="paragraph">
 <p>In order for our <code>Filter</code> to do its magic, Spring needs to load our <code>Config</code> class.
-Last, we need to ensure that our Servlet Container (that is, Tomcat) uses our <code>springSessionRepositoryFilter</code> for every request.
-Fortunately, Spring Session provides a utility class named <code>AbstractHttpSessionApplicationInitializer</code> to make both of these steps easy.
-The following shows an example:</p>
+We provide the configuration in our Spring <code>MvcInitializer</code>, as the following example shows:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">src/main/java/sample/mvc/MvcInitializer.java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
+protected Class&lt;?&gt;[] getRootConfigClasses() {
+	return new Class[] { SecurityConfig.class, HttpSessionConfig.class };
+}</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Last, we need to ensure that our Servlet Container (that is, Tomcat) uses our <code>springSessionRepositoryFilter</code> for every request.
+Fortunately, Spring Session provides a utility class named <code>AbstractHttpSessionApplicationInitializer</code> that makes doing so easy. To do so, extend the class with the default constructor, as the following example shows:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="listingblock">
 <div class="title">src/main/java/sample/Initializer.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Initializer extends AbstractHttpSessionApplicationInitializer { <i class="conum" data-value="1"></i><b>(1)</b>
-
-	public Initializer() {
-		super(Config.class); <i class="conum" data-value="2"></i><b>(2)</b>
-	}
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Initializer extends AbstractHttpSessionApplicationInitializer {
 
 }</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -338,39 +339,18 @@ The name of our class (<code>Initializer</code>) does not matter. What is import
 </tr>
 </table>
 </div>
-<div class="colist arabic">
-<table>
-<tr>
-<td><i class="conum" data-value="1"></i><b>1</b></td>
-<td>The first step is to extend <code>AbstractHttpSessionApplicationInitializer</code>.
-Doing so ensures that the Spring Bean by the name of <code>springSessionRepositoryFilter</code> is registered with our Servlet Container for every request.</td>
-</tr>
-<tr>
-<td><i class="conum" data-value="2"></i><b>2</b></td>
-<td><code>AbstractHttpSessionApplicationInitializer</code> also provides a mechanism to ensure Spring loads our <code>Config</code>.</td>
-</tr>
-</table>
-</div>
-</div>
-</div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="httpsession-sample"><a class="anchor" href="#httpsession-sample"></a>httpsession Sample Application</h2>
+<h2 id="rest-sample"><a class="anchor" href="#rest-sample"></a><code>rest</code> Sample Application</h2>
 <div class="sectionbody">
+<div class="paragraph">
+<p>This section describes how to use the <code>rest</code> sample application.</p>
+</div>
 <div class="sect2">
-<h3 id="running-the-httpsession-sample-application"><a class="anchor" href="#running-the-httpsession-sample-application"></a>Running the <code>httpsession</code> Sample Application</h3>
+<h3 id="running-the-rest-sample-application"><a class="anchor" href="#running-the-rest-sample-application"></a>Running the <code>rest</code> Sample Application</h3>
 <div class="paragraph">
 <p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
-</div>
-<div class="exampleblock">
-<div class="content">
-<div class="listingblock">
-<div class="content">
-<pre>$ ./gradlew :spring-session-sample-javaconfig-redis:tomcatRun</pre>
-</div>
-</div>
-</div>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -387,66 +367,174 @@ See <a href="https://hub.docker.com/_/redis/">Docker Redis repository</a> for de
 </tr>
 </table>
 </div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>$ ./gradlew :spring-session-sample-javaconfig-rest:tomcatRun</pre>
+</div>
+</div>
+</div>
+</div>
 <div class="paragraph">
 <p>You should now be able to access the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a></p>
 </div>
 </div>
 <div class="sect2">
-<h3 id="exploring-the-httpsession-sample-application"><a class="anchor" href="#exploring-the-httpsession-sample-application"></a>Exploring the <code>httpsession</code> Sample Application</h3>
+<h3 id="exploring-the-rest-sample-application"><a class="anchor" href="#exploring-the-rest-sample-application"></a>Exploring the <code>rest</code> Sample Application</h3>
 <div class="paragraph">
-<p>Now you can try to use the application. To do so, fill out the form with the following information:</p>
+<p>You can now try to use the application. To do so, use your favorite REST client to request <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a></p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	$ curl -v http://localhost:8080/</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Note that you are prompted for basic authentication. Provide the following information for the username and password:</p>
 </div>
 <div class="ulist">
 <ul>
 <li>
-<p><strong>Attribute Name:</strong> <em>username</em></p>
+<p><strong>Username</strong> _user-</p>
 </li>
 <li>
-<p><strong>Attribute Value:</strong> <em>rob</em></p>
+<p><strong>Password</strong> <em>password</em></p>
 </li>
 </ul>
 </div>
 <div class="paragraph">
-<p>Now click the <strong>Set Attribute</strong> button. You should now see the values displayed in the table.</p>
+<p>Then run the following command:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>$ curl -v http://localhost:8080/ -u user:password</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>In the output, you should notice the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+...
+X-Auth-Token: 0dc1f6e1-c7f1-41ac-8ce2-32b6b3e57aa3
+
+{"username":"user"}</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Specifically, you should notice the following things about our response:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>The HTTP Status is now a 200.</p>
+</li>
+<li>
+<p>We have a header a the name of <code>X-Auth-Token</code> and that contains a new session ID.</p>
+</li>
+<li>
+<p>The current username is displayed.</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>We can now use the <code>X-Auth-Token</code> to make another request without providing the username and password again. For example, the following command outputs the username, as before:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	$ curl -v http://localhost:8080/ -H "X-Auth-Token: 0dc1f6e1-c7f1-41ac-8ce2-32b6b3e57aa3"</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>The only difference is that the session ID is not provided in the response headers because we are reusing an existing session.</p>
+</div>
+<div class="paragraph">
+<p>If we invalidate the session, the <code>X-Auth-Token</code> is displayed in the response with an empty value. For example, the following command invalidates our session:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	$ curl -v http://localhost:8080/logout -H "X-Auth-Token: 0dc1f6e1-c7f1-41ac-8ce2-32b6b3e57aa3"</pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>You can see in the output that the <code>X-Auth-Token</code> provides an empty <code>String</code> indicating that the previous session was invalidated:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 204 No Content
+...
+X-Auth-Token:</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="sect2">
 <h3 id="how-does-it-work"><a class="anchor" href="#how-does-it-work"></a>How Does It Work?</h3>
 <div class="paragraph">
-<p>We interact with the standard <code>HttpSession</code> in the <code>SessionServlet</code> shown in the following listing:</p>
+<p>Spring Security interacts with the standard <code>HttpSession</code> in <code>SecurityContextPersistenceFilter</code>.</p>
+</div>
+<div class="paragraph">
+<p>Instead of using Tomcat&#8217;s <code>HttpSession</code>, Spring Security is now persisting the values in Redis.
+Spring Session creates a header named <code>X-Auth-Token</code> in your browser.
+That header contains the ID of your session.</p>
+</div>
+<div class="paragraph">
+<p>If you like, you can easily see that the session is created in Redis.
+To do so, create a session by using the following command:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
 <div class="listingblock">
-<div class="title">src/main/java/sample/SessionServlet.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WebServlet("/session")
-public class SessionServlet extends HttpServlet {
-
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		String attributeName = req.getParameter("attributeName");
-		String attributeValue = req.getParameter("attributeValue");
-		req.getSession().setAttribute(attributeName, attributeValue);
-		resp.sendRedirect(req.getContextPath() + "/");
-	}
-
-	private static final long serialVersionUID = 2878267318695777395L;
-
-}</code></pre>
+<pre>$ curl -v http://localhost:8080/ -u user:password</pre>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>Instead of using Tomcat&#8217;s <code>HttpSession</code>, we persist the values in Redis.
-Spring Session creates a cookie named <code>SESSION</code> in your browser.
-That cookie contains the ID of your session.
-You can view the cookies (with <a href="https://developers.google.com/web/tools/chrome-devtools/manage-data/cookies">Chrome</a> or <a href="https://developer.mozilla.org/en-US/docs/Tools/Storage_Inspector">Firefox</a>).</p>
+<p>In the output, you should notice the following:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>HTTP/1.1 200 OK
+...
+X-Auth-Token: 7e8383a4-082c-4ffe-a4bc-c40fd3363c5e
+
+{"username":"user"}</pre>
+</div>
+</div>
+</div>
 </div>
 <div class="paragraph">
-<p>You can remove the session by using redis-cli.
-For example, on a Linux based system you can type the following:</p>
+<p>Now you can remove the session by using redis-cli.
+For example, on a Linux based system, you can type:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -470,7 +558,8 @@ The Redis documentation has instructions for <a href="https://redis.io/topics/qu
 </table>
 </div>
 <div class="paragraph">
-<p>Alternatively, you can also delete the explicit key. Enter the following into your terminal, being sure to replace <code>7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</code> with the value of your SESSION cookie:</p>
+<p>Alternatively, you can also delete the explicit key.
+To do so, enter the following into your terminal, being sure to replace <code>7e8383a4-082c-4ffe-a4bc-c40fd3363c5e</code> with the value of your <code>SESSION</code> cookie:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -482,7 +571,16 @@ The Redis documentation has instructions for <a href="https://redis.io/topics/qu
 </div>
 </div>
 <div class="paragraph">
-<p>Now you can visit the application at <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a> and see that the attribute we added is no longer displayed.</p>
+<p>We can now use the <code>X-Auth-Token</code> to make another request with the session we deleted and observe we that are prompted for authentication. For example, the following returns an HTTP 401:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="content">
+<pre>	$ curl -v http://localhost:8080/ -H "X-Auth-Token: 0dc1f6e1-c7f1-41ac-8ce2-32b6b3e57aa3"</pre>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -493,7 +591,7 @@ The Redis documentation has instructions for <a href="https://redis.io/topics/qu
 </div>
 <footer class="footer flex">
     <div id="spring-links flex">
-        <img id="springlogo" src="../../../_/img/spring-logo.svg" alt="Spring">
+        <img id="springlogo" src="../../_/img/spring-logo.svg" alt="Spring">
         <p class="smallest antialiased">© <script>var d = new Date();
         document.write(d.getFullYear());</script> <a href="https://www.vmware.com/">VMware</a>, Inc. or its affiliates. <a href="https://www.vmware.com/help/legal.html">Terms of Use</a> • <a href="https://www.vmware.com/help/privacy.html" rel="noopener noreferrer">Privacy</a> • <a href="https://spring.io/trademarks">Trademark Guidelines</a> <span id="thank-you-mobile">• <a href="https://spring.io/thank-you">Thank you</a></span> • <a href="https://www.vmware.com/help/privacy/california-privacy-rights.html">Your California Privacy Rights</a> • <a class="ot-sdk-show-settings">Cookie Settings</a> <span id="teconsent"></span></p>
         <p class="smallest antialiased">Apache®, Apache Tomcat®, Apache Kafka®, Apache Cassandra&trade;, and Apache Geode&trade; are trademarks or registered trademarks of the Apache Software Foundation in the United States and/or other countries. Java&trade;, Java&trade; SE, Java&trade; EE, and OpenJDK&trade; are trademarks of Oracle and/or its affiliates. Kubernetes® is a registered trademark of the Linux Foundation in the United States and other countries. Linux® is the registered trademark of Linus Torvalds in the United States and other countries. Windows® and Microsoft® Azure are registered trademarks of Microsoft Corporation. “AWS” and “Amazon Web Services” are trademarks or registered trademarks of Amazon.com Inc. or its affiliates. All other trademarks and copyrights are property of their respective owners and are only mentioned for informative purposes. Other names may be trademarks of their respective owners.</p>
@@ -504,11 +602,11 @@ The Redis documentation has instructions for <a href="https://redis.io/topics/qu
         <a href="https://twitter.com/springcentral" title="Twitter"><svg id="twitter-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 75.93 75.93"><circle class="cls-1" cx="37.97" cy="37.97" r="37.97"/><path id="Twitter-2" data-name="Twitter" class="cls-2" d="M55.2,22.73a15.43,15.43,0,0,1-4.88,1.91,7.56,7.56,0,0,0-5.61-2.49A7.78,7.78,0,0,0,37,30a7.56,7.56,0,0,0,.2,1.79,21.63,21.63,0,0,1-15.84-8.23,8,8,0,0,0,2.37,10.52,7.66,7.66,0,0,1-3.48-1v.09A7.84,7.84,0,0,0,26.45,41a7.54,7.54,0,0,1-2,.28A7.64,7.64,0,0,1,23,41.09a7.71,7.71,0,0,0,7.18,5.47,15.21,15.21,0,0,1-9.55,3.37,15.78,15.78,0,0,1-1.83-.11,21.41,21.41,0,0,0,11.78,3.54c14.13,0,21.86-12,21.86-22.42,0-.34,0-.68,0-1a15.67,15.67,0,0,0,3.83-4.08,14.9,14.9,0,0,1-4.41,1.24A7.8,7.8,0,0,0,55.2,22.73Z"/></svg></a>
     </div>
 </footer>
-<script src="../../../_/js/site.js"></script>
-<script async src="../../../_/js/vendor/highlight.js"></script>
-<script async src="../../../_/js/vendor/tabs.js"></script>
-<script src="../../../_/js/vendor/docsearch.min.js"></script>
-<script src="../../../_/js/vendor/switchtheme.js"></script>
+<script src="../../_/js/site.js"></script>
+<script async src="../../_/js/vendor/highlight.js"></script>
+<script async src="../../_/js/vendor/tabs.js"></script>
+<script src="../../_/js/vendor/docsearch.min.js"></script>
+<script src="../../_/js/vendor/switchtheme.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
 docsearch({
