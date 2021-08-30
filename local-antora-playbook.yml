@@ -1,16 +1,16 @@
 site:
   title: Spring
-  start_page: framework::overview.adoc
+  start_page: security:ROOT:index.adoc
 content:
   sources:
-    - url: ../../spring-projects/spring-framework
-      branches: HEAD
-      start_path: src/docs/antora
     - url: ../../spring-projects/spring-security
-      branches: HEAD
+      branches: [HEAD,antora-2.x]
       start_path: docs
     - url: ../spring-security-docs-generated
       branches: HEAD
+    - url: ../../spring-projects/spring-session
+      branches: HEAD
+      start_path: spring-session-docs
 ui:
   bundle:
     url: ../../rwinch/antora-ui-spring/build/ui-bundle.zip
