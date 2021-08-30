@@ -99,7 +99,40 @@
     <a class="nav-link" href="../whats-new.html">What&#8217;s New</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../samples.html">Samples &amp; Guides (Start Here)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Boot Samples</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-redis.html">HttpSession with Redis</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-jdbc.html">HttpSession with JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-findbyusername.html">Find by Username</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-websocket.html">WebSockets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Java Configuration</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">XML Configuration</span>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../modules.html">Modules</a>
@@ -210,14 +243,7 @@ The following example shows how to customize Spring Session&#8217;s cookie:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">	@Bean
-	public CookieSerializer cookieSerializer() {
-		DefaultCookieSerializer serializer = new DefaultCookieSerializer();
-		serializer.setCookieName("JSESSIONID"); <i class="conum" data-value="1"></i><b>(1)</b>
-		serializer.setCookiePath("/"); <i class="conum" data-value="2"></i><b>(2)</b>
-		serializer.setDomainNamePattern("^.+?\\.(\\w+\\.[a-z]+)$"); <i class="conum" data-value="3"></i><b>(3)</b>
-		return serializer;
-	}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-custom-cookie.adoc - include::{samples-dir}spring-session-sample-javaconfig-custom-cookie/src/main/java/sample/Config.java[tags=cookie-serializer]</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -328,9 +354,9 @@ Doing so prevents a malicious user from performing such attacks as <a href="http
 <p>This section describes how to work with the <code>custom-cookie</code> sample application.</p>
 </div>
 <div class="sect2">
-<h3 id="running-the-custom-cookie-sample-application"><a class="anchor" href="#running-the-custom-cookie-sample-application"></a>Running the <code>custom-cookie</code> Sample Application</h3>
+<h3 id="_running_the_custom_cookie_sample_application"><a class="anchor" href="#_running_the_custom_cookie_sample_application"></a>Running the <code>custom-cookie</code> Sample Application</h3>
 <div class="paragraph">
-<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
+<p>You can run the sample by obtaining the {download-url}[source code] and invoking the following command:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -360,7 +386,7 @@ Another option is to use <a href="https://www.docker.com/">Docker</a> to run Red
 </div>
 </div>
 <div class="sect2">
-<h3 id="exploring-the-custom-cookie-sample-application"><a class="anchor" href="#exploring-the-custom-cookie-sample-application"></a>Exploring the <code>custom-cookie</code> Sample Application</h3>
+<h3 id="_exploring_the_custom_cookie_sample_application"><a class="anchor" href="#_exploring_the_custom_cookie_sample_application"></a>Exploring the <code>custom-cookie</code> Sample Application</h3>
 <div class="paragraph">
 <p>Now you can use the application. Fill out the form with the following information:</p>
 </div>

@@ -100,7 +100,40 @@
     <a class="nav-link" href="whats-new.html">What&#8217;s New</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="samples.html">Samples &amp; Guides (Start Here)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Boot Samples</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guides/boot-redis.html">HttpSession with Redis</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guides/boot-jdbc.html">HttpSession with JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guides/boot-findbyusername.html">Find by Username</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="guides/boot-websocket.html">WebSockets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Java Configuration</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">XML Configuration</span>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="modules.html">Modules</a>
@@ -184,7 +217,7 @@ The focus of these changes is to improve and harmonize Spring Session&#8217;s AP
 </div>
 </div>
 <div class="sect1">
-<h2 id="baseline-update"><a class="anchor" href="#baseline-update"></a>Baseline Update</h2>
+<h2 id="_baseline_update"><a class="anchor" href="#_baseline_update"></a>Baseline Update</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Spring Session 2.0 requires Java 8 and Spring Framework 5.0 as a baseline, since its entire codebase is now based on Java 8 source code.
@@ -193,7 +226,7 @@ See <a href="https://github.com/spring-projects/spring-framework/wiki/Upgrading-
 </div>
 </div>
 <div class="sect1">
-<h2 id="replaced-and-removed-modules"><a class="anchor" href="#replaced-and-removed-modules"></a>Replaced and Removed Modules</h2>
+<h2 id="_replaced_and_removed_modules"><a class="anchor" href="#_replaced_and_removed_modules"></a>Replaced and Removed Modules</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>As a part of the project&#8217;s splitting of the modules, the existing <code>spring-session</code> has been replaced with the <code>spring-session-core</code> module.
@@ -243,7 +276,7 @@ With new module arrangement, the following modules actually carry the implementa
 </div>
 </div>
 <div class="sect1">
-<h2 id="replaced-and-removed-packages-classes-and-methods"><a class="anchor" href="#replaced-and-removed-packages-classes-and-methods"></a>Replaced and Removed Packages, Classes, and Methods</h2>
+<h2 id="_replaced_and_removed_packages_classes_and_methods"><a class="anchor" href="#_replaced_and_removed_packages_classes_and_methods"></a>Replaced and Removed Packages, Classes, and Methods</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>The following changes were made to packages, classes, and methods:</p>
@@ -282,7 +315,7 @@ With new module arrangement, the following modules actually carry the implementa
 </div>
 </div>
 <div class="sect1">
-<h2 id="dropped-support"><a class="anchor" href="#dropped-support"></a>Dropped Support</h2>
+<h2 id="_dropped_support"><a class="anchor" href="#_dropped_support"></a>Dropped Support</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>As a part of the changes to <code>HttpSessionStrategy</code> and its alignment to the counterpart from the reactive world, the support for managing multiple users' sessions in a single browser instance has been removed.

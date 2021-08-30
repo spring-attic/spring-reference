@@ -99,7 +99,40 @@
     <a class="nav-link" href="../whats-new.html">What&#8217;s New</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../samples.html">Samples &amp; Guides (Start Here)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Boot Samples</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-redis.html">HttpSession with Redis</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-jdbc.html">HttpSession with JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-findbyusername.html">Find by Username</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-websocket.html">WebSockets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Java Configuration</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">XML Configuration</span>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../modules.html">Modules</a>
@@ -197,7 +230,7 @@ You can find the completed guide in the <a href="#httpsession-xml-sample">httpse
 </div>
 </div>
 <div class="sect1">
-<h2 id="updating-dependencies"><a class="anchor" href="#updating-dependencies"></a>Updating Dependencies</h2>
+<h2 id="_updating_dependencies"><a class="anchor" href="#_updating_dependencies"></a>Updating Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Before you use Spring Session, you must update your dependencies.
@@ -214,18 +247,18 @@ If you use Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework.session&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;
-		&lt;version&gt;2.6.0-SNAPSHOT&lt;/version&gt;
+		&lt;version&gt;{spring-session-version}&lt;/version&gt;
 		&lt;type&gt;pom&lt;/type&gt;
 	&lt;/dependency&gt;
 	&lt;dependency&gt;
 		&lt;groupId&gt;io.lettuce&lt;/groupId&gt;
 		&lt;artifactId&gt;lettuce-core&lt;/artifactId&gt;
-		&lt;version&gt;6.1.2.RELEASE&lt;/version&gt;
+		&lt;version&gt;{lettuce-version}&lt;/version&gt;
 	&lt;/dependency&gt;
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
-		&lt;version&gt;5.3.7&lt;/version&gt;
+		&lt;version&gt;{spring-framework-version}&lt;/version&gt;
 	&lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
 </div>
@@ -247,12 +280,7 @@ To do so, add the following Spring Configuration:</p>
 <div class="listingblock">
 <div class="title">src/main/webapp/WEB-INF/spring/session.xml</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml"><i class="conum" data-value="1"></i><b>(1)</b>
-&lt;context:annotation-config/&gt;
-&lt;bean class="org.springframework.session.data.redis.config.annotation.web.http.RedisHttpSessionConfiguration"/&gt;
-
-<i class="conum" data-value="2"></i><b>(2)</b>
-&lt;bean class="org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory"/&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">Unresolved directive in xml-redis.adoc - include::{samples-dir}spring-session-sample-xml-redis/src/main/webapp/WEB-INF/spring/session.xml[tags=beans]</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -268,7 +296,7 @@ In this instance, Spring Session is backed by Redis.</td>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>We create a <code>RedisConnectionFactory</code> that connects Spring Session to the Redis Server.
 We configure the connection to connect to localhost on the default port (6379)
-For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
+For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/{spring-data-redis-version}/reference/html/">reference documentation</a>.</td>
 </tr>
 </table>
 </div>
@@ -277,7 +305,7 @@ For more information on configuring Spring Data Redis, see the <a href="https://
 </div>
 </div>
 <div class="sect1">
-<h2 id="xml-servlet-container-initialization"><a class="anchor" href="#xml-servlet-container-initialization"></a>XML Servlet Container Initialization</h2>
+<h2 id="_xml_servlet_container_initialization"><a class="anchor" href="#_xml_servlet_container_initialization"></a>XML Servlet Container Initialization</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Our <a href="#httpsession-xml-spring-configuration">Spring Configuration</a> created a Spring Bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
@@ -292,23 +320,14 @@ We can do so with the following configuration:</p>
 <div class="listingblock">
 <div class="title">src/main/webapp/WEB-INF/web.xml</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;context-param&gt;
-	&lt;param-name&gt;contextConfigLocation&lt;/param-name&gt;
-	&lt;param-value&gt;
-		/WEB-INF/spring/session.xml
-	&lt;/param-value&gt;
-&lt;/context-param&gt;
-&lt;listener&gt;
-	&lt;listener-class&gt;
-		org.springframework.web.context.ContextLoaderListener
-	&lt;/listener-class&gt;
-&lt;/listener&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">Unresolved directive in xml-redis.adoc - include::{samples-dir}spring-session-sample-xml-redis/src/main/webapp/WEB-INF/web.xml[tags=context-param]
+Unresolved directive in xml-redis.adoc - include::{samples-dir}spring-session-sample-xml-redis/src/main/webapp/WEB-INF/web.xml[tags=listeners]</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>The <a href="https://docs.spring.io/spring/docs/5.3.7/spring-framework-reference/core.html#context-create"><code>ContextLoaderListener</code></a> reads the contextConfigLocation and picks up our session.xml configuration.</p>
+<p>The <a href="https://docs.spring.io/spring/docs/{spring-framework-version}/spring-framework-reference/core.html#context-create"><code>ContextLoaderListener</code></a> reads the contextConfigLocation and picks up our session.xml configuration.</p>
 </div>
 <div class="paragraph">
 <p>Last, we need to ensure that our Servlet Container (that is, Tomcat) uses our <code>springSessionRepositoryFilter</code> for every request.
@@ -319,22 +338,13 @@ The following snippet performs this last step for us:</p>
 <div class="listingblock">
 <div class="title">src/main/webapp/WEB-INF/web.xml</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;filter&gt;
-	&lt;filter-name&gt;springSessionRepositoryFilter&lt;/filter-name&gt;
-	&lt;filter-class&gt;org.springframework.web.filter.DelegatingFilterProxy&lt;/filter-class&gt;
-&lt;/filter&gt;
-&lt;filter-mapping&gt;
-	&lt;filter-name&gt;springSessionRepositoryFilter&lt;/filter-name&gt;
-	&lt;url-pattern&gt;/*&lt;/url-pattern&gt;
-	&lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;
-	&lt;dispatcher&gt;ERROR&lt;/dispatcher&gt;
-&lt;/filter-mapping&gt;</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">Unresolved directive in xml-redis.adoc - include::{samples-dir}spring-session-sample-xml-redis/src/main/webapp/WEB-INF/web.xml[tags=springSessionRepositoryFilter]</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>The <a href="https://docs.spring.io/spring-framework/docs/5.3.7/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html"><code>DelegatingFilterProxy</code></a> looks up a Bean by the name of <code>springSessionRepositoryFilter</code> and cast it to a <code>Filter</code>.
+<p>The <a href="https://docs.spring.io/spring-framework/docs/{spring-framework-version}/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html"><code>DelegatingFilterProxy</code></a> looks up a Bean by the name of <code>springSessionRepositoryFilter</code> and cast it to a <code>Filter</code>.
 For every request that <code>DelegatingFilterProxy</code> is invoked, the <code>springSessionRepositoryFilter</code> is invoked.</p>
 </div>
 </div>
@@ -346,9 +356,9 @@ For every request that <code>DelegatingFilterProxy</code> is invoked, the <code>
 <p>This section describes how to work with the <code>httpsession-xml</code> sample application.</p>
 </div>
 <div class="sect2">
-<h3 id="running-the-httpsession-xml-sample-application"><a class="anchor" href="#running-the-httpsession-xml-sample-application"></a>Running the <code>httpsession-xml</code> Sample Application</h3>
+<h3 id="_running_the_httpsession_xml_sample_application"><a class="anchor" href="#_running_the_httpsession_xml_sample_application"></a>Running the <code>httpsession-xml</code> Sample Application</h3>
 <div class="paragraph">
-<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
+<p>You can run the sample by obtaining the {download-url}[source code] and invoking the following command:</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -378,7 +388,7 @@ Another option is to use <a href="https://www.docker.com/">Docker</a> to run Red
 </div>
 </div>
 <div class="sect2">
-<h3 id="exploring-the-httpsession-xml-sample-application"><a class="anchor" href="#exploring-the-httpsession-xml-sample-application"></a>Exploring the <code>httpsession-xml</code> Sample Application</h3>
+<h3 id="_exploring_the_httpsession_xml_sample_application"><a class="anchor" href="#_exploring_the_httpsession_xml_sample_application"></a>Exploring the <code>httpsession-xml</code> Sample Application</h3>
 <div class="paragraph">
 <p>Now you can try using the application. Fill out the form with the following information:</p>
 </div>
@@ -397,7 +407,7 @@ Another option is to use <a href="https://www.docker.com/">Docker</a> to run Red
 </div>
 </div>
 <div class="sect2">
-<h3 id="how-does-it-work"><a class="anchor" href="#how-does-it-work"></a>How Does It Work?</h3>
+<h3 id="_how_does_it_work"><a class="anchor" href="#_how_does_it_work"></a>How Does It Work?</h3>
 <div class="paragraph">
 <p>We interact with the standard <code>HttpSession</code> in the <code>SessionServlet</code> shown in the following listing:</p>
 </div>
@@ -406,19 +416,7 @@ Another option is to use <a href="https://www.docker.com/">Docker</a> to run Red
 <div class="listingblock">
 <div class="title">src/main/java/sample/SessionServlet.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SessionServlet extends HttpServlet {
-
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		String attributeName = req.getParameter("attributeName");
-		String attributeValue = req.getParameter("attributeValue");
-		req.getSession().setAttribute(attributeName, attributeValue);
-		resp.sendRedirect(req.getContextPath() + "/");
-	}
-
-	private static final long serialVersionUID = 2878267318695777395L;
-
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in xml-redis.adoc - include::{samples-dir}spring-session-sample-xml-redis/src/main/java/sample/SessionServlet.java[tags=class]</code></pre>
 </div>
 </div>
 </div>

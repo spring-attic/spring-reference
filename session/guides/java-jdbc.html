@@ -99,7 +99,40 @@
     <a class="nav-link" href="../whats-new.html">What&#8217;s New</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../samples.html">Samples &amp; Guides (Start Here)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Boot Samples</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-redis.html">HttpSession with Redis</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-jdbc.html">HttpSession with JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-findbyusername.html">Find by Username</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-websocket.html">WebSockets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Java Configuration</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">XML Configuration</span>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../modules.html">Modules</a>
@@ -197,7 +230,7 @@ You can find the completed guide in the <a href="#httpsession-jdbc-sample">https
 </div>
 </div>
 <div class="sect1">
-<h2 id="updating-dependencies"><a class="anchor" href="#updating-dependencies"></a>Updating Dependencies</h2>
+<h2 id="_updating_dependencies"><a class="anchor" href="#_updating_dependencies"></a>Updating Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Before you use Spring Session, you must update your dependencies.
@@ -214,13 +247,13 @@ If you use Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework.session&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-session-jdbc&lt;/artifactId&gt;
-		&lt;version&gt;2.6.0-SNAPSHOT&lt;/version&gt;
+		&lt;version&gt;{spring-session-version}&lt;/version&gt;
 		&lt;type&gt;pom&lt;/type&gt;
 	&lt;/dependency&gt;
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
-		&lt;version&gt;5.3.7&lt;/version&gt;
+		&lt;version&gt;{spring-framework-version}&lt;/version&gt;
 	&lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
 </div>
@@ -241,21 +274,7 @@ To do so, add the following Spring Configuration:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableJdbcHttpSession <i class="conum" data-value="1"></i><b>(1)</b>
-public class Config {
-
-	@Bean
-	public EmbeddedDatabase dataSource() {
-		return new EmbeddedDatabaseBuilder() <i class="conum" data-value="2"></i><b>(2)</b>
-				.setType(EmbeddedDatabaseType.H2).addScript("org/springframework/session/jdbc/schema-h2.sql").build();
-	}
-
-	@Bean
-	public PlatformTransactionManager transactionManager(DataSource dataSource) {
-		return new DataSourceTransactionManager(dataSource); <i class="conum" data-value="3"></i><b>(3)</b>
-	}
-
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-jdbc.adoc - include::{samples-dir}spring-session-sample-javaconfig-jdbc/src/main/java/sample/Config.java[tags=class]</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -281,12 +300,12 @@ We configure the H2 database to create database tables by using the SQL script t
 </div>
 </div>
 <div class="paragraph">
-<p>For additional information on how to configure data access related concerns, see the <a href="https://docs.spring.io/spring/docs/5.3.7/spring-framework-reference/data-access.html">Spring Framework Reference Documentation</a>.</p>
+<p>For additional information on how to configure data access related concerns, see the <a href="https://docs.spring.io/spring/docs/{spring-framework-version}/spring-framework-reference/data-access.html">Spring Framework Reference Documentation</a>.</p>
 </div>
 </div>
 </div>
 <div class="sect1">
-<h2 id="java-servlet-container-initialization"><a class="anchor" href="#java-servlet-container-initialization"></a>Java Servlet Container Initialization</h2>
+<h2 id="_java_servlet_container_initialization"><a class="anchor" href="#_java_servlet_container_initialization"></a>Java Servlet Container Initialization</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Our <a href="#httpsession-jdbc-spring-configuration">Spring Configuration</a> created a Spring bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
@@ -303,13 +322,7 @@ The following example shows how to do so:</p>
 <div class="listingblock">
 <div class="title">src/main/java/sample/Initializer.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Initializer extends AbstractHttpSessionApplicationInitializer { <i class="conum" data-value="1"></i><b>(1)</b>
-
-	public Initializer() {
-		super(Config.class); <i class="conum" data-value="2"></i><b>(2)</b>
-	}
-
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-jdbc.adoc - include::{samples-dir}spring-session-sample-javaconfig-jdbc/src/main/java/sample/Initializer.java[tags=class]</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -343,7 +356,7 @@ Doing so ensures that the Spring bean named <code>springSessionRepositoryFilter<
 </div>
 </div>
 <div class="sect1">
-<h2 id="multiple-datasources"><a class="anchor" href="#multiple-datasources"></a>Multiple DataSources</h2>
+<h2 id="_multiple_datasources"><a class="anchor" href="#_multiple_datasources"></a>Multiple DataSources</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Spring Session provides the <code>@SpringSessionDataSource</code> qualifier, allowing you to explicitly declare which <code>DataSource</code> bean should be injected in <code>JdbcIndexedSessionRepository</code>.
@@ -393,9 +406,9 @@ public class Config {
 <p>This section describes how to work with the <code>httpsession-jdbc</code> Sample Application.</p>
 </div>
 <div class="sect2">
-<h3 id="running-the-httpsession-jdbc-sample-application"><a class="anchor" href="#running-the-httpsession-jdbc-sample-application"></a>Running the <code>httpsession-jdbc</code> Sample Application</h3>
+<h3 id="_running_the_httpsession_jdbc_sample_application"><a class="anchor" href="#_running_the_httpsession_jdbc_sample_application"></a>Running the <code>httpsession-jdbc</code> Sample Application</h3>
 <div class="paragraph">
-<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
+<p>You can run the sample by obtaining the {download-url}[source code] and invoking the following command:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -411,7 +424,7 @@ public class Config {
 </div>
 </div>
 <div class="sect2">
-<h3 id="exploring-the-httpsession-jdbc-sample-application"><a class="anchor" href="#exploring-the-httpsession-jdbc-sample-application"></a>Exploring the <code>httpsession-jdbc</code> Sample Application</h3>
+<h3 id="_exploring_the_httpsession_jdbc_sample_application"><a class="anchor" href="#_exploring_the_httpsession_jdbc_sample_application"></a>Exploring the <code>httpsession-jdbc</code> Sample Application</h3>
 <div class="paragraph">
 <p>Now you can try using the application. To do so, fill out the form with the following information:</p>
 </div>
@@ -430,7 +443,7 @@ public class Config {
 </div>
 </div>
 <div class="sect2">
-<h3 id="how-does-it-work"><a class="anchor" href="#how-does-it-work"></a>How Does It Work?</h3>
+<h3 id="_how_does_it_work"><a class="anchor" href="#_how_does_it_work"></a>How Does It Work?</h3>
 <div class="paragraph">
 <p>We interact with the standard <code>HttpSession</code> in the <code>SessionServlet</code> shown in the following listing:</p>
 </div>
@@ -439,20 +452,7 @@ public class Config {
 <div class="listingblock">
 <div class="title">src/main/java/sample/SessionServlet.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WebServlet("/session")
-public class SessionServlet extends HttpServlet {
-
-	@Override
-	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
-		String attributeName = req.getParameter("attributeName");
-		String attributeValue = req.getParameter("attributeValue");
-		req.getSession().setAttribute(attributeName, attributeValue);
-		resp.sendRedirect(req.getContextPath() + "/");
-	}
-
-	private static final long serialVersionUID = 2878267318695777395L;
-
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-jdbc.adoc - include::{samples-dir}spring-session-sample-javaconfig-jdbc/src/main/java/sample/SessionServlet.java[tags=class]</code></pre>
 </div>
 </div>
 </div>

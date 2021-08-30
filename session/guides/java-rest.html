@@ -99,7 +99,40 @@
     <a class="nav-link" href="../whats-new.html">What&#8217;s New</a>
   </li>
   <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
     <a class="nav-link" href="../samples.html">Samples &amp; Guides (Start Here)</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Boot Samples</span>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-redis.html">HttpSession with Redis</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-jdbc.html">HttpSession with JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-findbyusername.html">Find by Username</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="boot-websocket.html">WebSockets</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">Java Configuration</span>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <span class="nav-text">XML Configuration</span>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="../modules.html">Modules</a>
@@ -197,7 +230,7 @@ You can find the completed guide in the <a href="#rest-sample">rest sample appli
 </div>
 </div>
 <div class="sect1">
-<h2 id="updating-dependencies"><a class="anchor" href="#updating-dependencies"></a>Updating Dependencies</h2>
+<h2 id="_updating_dependencies"><a class="anchor" href="#_updating_dependencies"></a>Updating Dependencies</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Before you use Spring Session, you must update your dependencies.
@@ -214,18 +247,18 @@ If you use Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework.session&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;
-		&lt;version&gt;2.6.0-SNAPSHOT&lt;/version&gt;
+		&lt;version&gt;{spring-session-version}&lt;/version&gt;
 		&lt;type&gt;pom&lt;/type&gt;
 	&lt;/dependency&gt;
 	&lt;dependency&gt;
 		&lt;groupId&gt;io.lettuce&lt;/groupId&gt;
 		&lt;artifactId&gt;lettuce-core&lt;/artifactId&gt;
-		&lt;version&gt;6.1.2.RELEASE&lt;/version&gt;
+		&lt;version&gt;{lettuce-version}&lt;/version&gt;
 	&lt;/dependency&gt;
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
-		&lt;version&gt;5.3.7&lt;/version&gt;
+		&lt;version&gt;{spring-framework-version}&lt;/version&gt;
 	&lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
 </div>
@@ -246,21 +279,7 @@ To do so, add the following Spring Configuration:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
-@EnableRedisHttpSession <i class="conum" data-value="1"></i><b>(1)</b>
-public class HttpSessionConfig {
-
-	@Bean
-	public LettuceConnectionFactory connectionFactory() {
-		return new LettuceConnectionFactory(); <i class="conum" data-value="2"></i><b>(2)</b>
-	}
-
-	@Bean
-	public HttpSessionIdResolver httpSessionIdResolver() {
-		return HeaderHttpSessionIdResolver.xAuthToken(); <i class="conum" data-value="3"></i><b>(3)</b>
-	}
-
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-rest.adoc - include::{samples-dir}spring-session-sample-javaconfig-rest/src/main/java/sample/HttpSessionConfig.java[tags=class]</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -275,7 +294,7 @@ In this instance, Spring Session is backed by Redis.</td>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>We create a <code>RedisConnectionFactory</code> that connects Spring Session to the Redis Server.
 We configure the connection to connect to localhost on the default port (6379).
-For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
+For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/{spring-data-redis-version}/reference/html/">reference documentation</a>.</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
@@ -288,7 +307,7 @@ For more information on configuring Spring Data Redis, see the <a href="https://
 </div>
 </div>
 <div class="sect1">
-<h2 id="servlet-container-initialization"><a class="anchor" href="#servlet-container-initialization"></a>Servlet Container Initialization</h2>
+<h2 id="_servlet_container_initialization"><a class="anchor" href="#_servlet_container_initialization"></a>Servlet Container Initialization</h2>
 <div class="sectionbody">
 <div class="paragraph">
 <p>Our <a href="#rest-spring-configuration">Spring Configuration</a> created a Spring Bean named <code>springSessionRepositoryFilter</code> that implements <code>Filter</code>.
@@ -303,10 +322,7 @@ We provide the configuration in our Spring <code>MvcInitializer</code>, as the f
 <div class="listingblock">
 <div class="title">src/main/java/sample/mvc/MvcInitializer.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
-protected Class&lt;?&gt;[] getRootConfigClasses() {
-	return new Class[] { SecurityConfig.class, HttpSessionConfig.class };
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-rest.adoc - include::{samples-dir}spring-session-sample-javaconfig-rest/src/main/java/sample/mvc/MvcInitializer.java[tags=config]</code></pre>
 </div>
 </div>
 </div>
@@ -320,9 +336,7 @@ Fortunately, Spring Session provides a utility class named <code>AbstractHttpSes
 <div class="listingblock">
 <div class="title">src/main/java/sample/Initializer.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Initializer extends AbstractHttpSessionApplicationInitializer {
-
-}</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-rest.adoc - include::{samples-dir}spring-session-sample-javaconfig-rest/src/main/java/sample/Initializer.java[tags=class]</code></pre>
 </div>
 </div>
 </div>
@@ -348,9 +362,9 @@ The name of our class (<code>Initializer</code>) does not matter. What is import
 <p>This section describes how to use the <code>rest</code> sample application.</p>
 </div>
 <div class="sect2">
-<h3 id="running-the-rest-sample-application"><a class="anchor" href="#running-the-rest-sample-application"></a>Running the <code>rest</code> Sample Application</h3>
+<h3 id="_running_the_rest_sample_application"><a class="anchor" href="#_running_the_rest_sample_application"></a>Running the <code>rest</code> Sample Application</h3>
 <div class="paragraph">
-<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
+<p>You can run the sample by obtaining the {download-url}[source code] and invoking the following command:</p>
 </div>
 <div class="admonitionblock note">
 <table>
@@ -381,7 +395,7 @@ See <a href="https://hub.docker.com/_/redis/">Docker Redis repository</a> for de
 </div>
 </div>
 <div class="sect2">
-<h3 id="exploring-the-rest-sample-application"><a class="anchor" href="#exploring-the-rest-sample-application"></a>Exploring the <code>rest</code> Sample Application</h3>
+<h3 id="_exploring_the_rest_sample_application"><a class="anchor" href="#_exploring_the_rest_sample_application"></a>Exploring the <code>rest</code> Sample Application</h3>
 <div class="paragraph">
 <p>You can now try to use the application. To do so, use your favorite REST client to request <a href="http://localhost:8080/" class="bare">http://localhost:8080/</a></p>
 </div>
@@ -494,7 +508,7 @@ X-Auth-Token:</pre>
 </div>
 </div>
 <div class="sect2">
-<h3 id="how-does-it-work"><a class="anchor" href="#how-does-it-work"></a>How Does It Work?</h3>
+<h3 id="_how_does_it_work"><a class="anchor" href="#_how_does_it_work"></a>How Does It Work?</h3>
 <div class="paragraph">
 <p>Spring Security interacts with the standard <code>HttpSession</code> in <code>SecurityContextPersistenceFilter</code>.</p>
 </div>
