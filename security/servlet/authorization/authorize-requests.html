@@ -518,7 +518,7 @@
 <p>This section builds on <a href="../architecture.html#servlet-architecture" class="page">Servlet Architecture and Implementation</a> by digging deeper into how <a href="index.html#servlet-authorization" class="page">authorization</a> works within Servlet based applications.</p>
 </div>
 <div class="paragraph">
-<p>The <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/access/intercept/FilterSecurityInterceptor.html"><code>FilterSecurityInterceptor</code></a> provides <a href="index.html#servlet-authorization" class="page">authorization</a> for <code>HttpServletRequest</code>s.
+<p>The {security-api-url}org/springframework/security/web/access/intercept/FilterSecurityInterceptor.html[<code>FilterSecurityInterceptor</code>] provides <a href="index.html#servlet-authorization" class="page">authorization</a> for <code>HttpServletRequest</code>s.
 It is inserted into the <a href="../architecture.html#servlet-filterchainproxy" class="page">FilterChainProxy</a> as one of the <a href="../architecture.html#servlet-security-filters" class="page">Security Filters</a>.</p>
 </div>
 <div class="imageblock">
@@ -530,24 +530,24 @@ It is inserted into the <a href="../architecture.html#servlet-filterchainproxy" 
 <div class="ulist">
 <ul>
 <li>
-<p><span class="image"><img src="../../_images/icons/number_1.png" alt="number 1"></span> First, the <code>FilterSecurityInterceptor</code> obtains an  <a href="../authentication/architecture.html#servlet-authentication-authentication" class="page">Authentication</a> from the <a href="../authentication/architecture.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a>.</p>
+<p><span class="image"><img src="{icondir}/number_1.png" alt="number 1"></span> First, the <code>FilterSecurityInterceptor</code> obtains an  <a href="../authentication/architecture.html#servlet-authentication-authentication" class="page">Authentication</a> from the <a href="../authentication/architecture.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a>.</p>
 </li>
 <li>
-<p><span class="image"><img src="../../_images/icons/number_2.png" alt="number 2"></span> Second, <code>FilterSecurityInterceptor</code> creates a <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/FilterInvocation.html"><code>FilterInvocation</code></a> from the <code>HttpServletRequest</code>, <code>HttpServletResponse</code>, and <code>FilterChain</code> that are passed into the <code>FilterSecurityInterceptor</code>.</p>
+<p><span class="image"><img src="{icondir}/number_2.png" alt="number 2"></span> Second, <code>FilterSecurityInterceptor</code> creates a {security-api-url}org/springframework/security/web/FilterInvocation.html[<code>FilterInvocation</code>] from the <code>HttpServletRequest</code>, <code>HttpServletResponse</code>, and <code>FilterChain</code> that are passed into the <code>FilterSecurityInterceptor</code>.</p>
 </li>
 <li>
-<p><span class="image"><img src="../../_images/icons/number_3.png" alt="number 3"></span> Next, it passes the <code>FilterInvocation</code> to <code>SecurityMetadataSource</code> to get the <code>ConfigAttribute</code>s.</p>
+<p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> Next, it passes the <code>FilterInvocation</code> to <code>SecurityMetadataSource</code> to get the <code>ConfigAttribute</code>s.</p>
 </li>
 <li>
-<p><span class="image"><img src="../../_images/icons/number_4.png" alt="number 4"></span> Finally, it passes the <code>Authentication</code>, <code>FilterInvocation</code>, and <code>ConfigAttribute</code>s to the <code>AccessDecisionManager</code>.</p>
+<p><span class="image"><img src="{icondir}/number_4.png" alt="number 4"></span> Finally, it passes the <code>Authentication</code>, <code>FilterInvocation</code>, and <code>ConfigAttribute</code>s to the <code>AccessDecisionManager</code>.</p>
 <div class="ulist">
 <ul>
 <li>
-<p><span class="image"><img src="../../_images/icons/number_5.png" alt="number 5"></span> If authorization is denied, an <code>AccessDeniedException</code> is thrown.
+<p><span class="image"><img src="{icondir}/number_5.png" alt="number 5"></span> If authorization is denied, an <code>AccessDeniedException</code> is thrown.
 In this case the <a href="../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> handles the <code>AccessDeniedException</code>.</p>
 </li>
 <li>
-<p><span class="image"><img src="../../_images/icons/number_6.png" alt="number 6"></span> If access is granted, <code>FilterSecurityInterceptor</code> continues with the <a href="../architecture.html#servlet-filters-review" class="page">FilterChain</a> which allows the application to process normally.</p>
+<p><span class="image"><img src="{icondir}/number_6.png" alt="number 6"></span> If access is granted, <code>FilterSecurityInterceptor</code> continues with the <a href="../architecture.html#servlet-filters-review" class="page">FilterChain</a> which allows the application to process normally.</p>
 </li>
 </ul>
 </div>

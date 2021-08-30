@@ -518,7 +518,7 @@
 <h2 id="logout-java-configuration"><a class="anchor" href="#logout-java-configuration"></a>Logout Java/Kotlin Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>When using the <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.html">WebSecurityConfigurerAdapter</a></code>, logout capabilities are automatically applied.
+<p>When using the <code>{security-api-url}org/springframework/security/config/annotation/web/configuration/WebSecurityConfigurerAdapter.html[WebSecurityConfigurerAdapter]</code>, logout capabilities are automatically applied.
 The default is that accessing the URL <code>/logout</code> will log the user out by:</p>
 </div>
 <div class="ulist">
@@ -590,26 +590,26 @@ This is automatically applied when using <code>WebSecurityConfigurerAdapter</cod
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>The URL that triggers log out to occur (default is <code>/logout</code>).
 If CSRF protection is enabled (default), then the request must also be a POST.
-For more information, please consult the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutUrl-java.lang.String-">JavaDoc</a>.</td>
+For more information, please consult the {security-api-url}org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutUrl-java.lang.String-[JavaDoc].</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="3"></i><b>3</b></td>
 <td>The URL to redirect to after logout has occurred.
 The default is <code>/login?logout</code>.
-For more information, please consult the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutSuccessUrl-java.lang.String-">JavaDoc</a>.</td>
+For more information, please consult the {security-api-url}org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutSuccessUrl-java.lang.String-[JavaDoc].</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="4"></i><b>4</b></td>
 <td>Let&#8217;s you specify a custom <code>LogoutSuccessHandler</code>.
 If this is specified, <code>logoutSuccessUrl()</code> is ignored.
-For more information, please consult the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutSuccessHandler-org.springframework.security.web.authentication.logout.LogoutSuccessHandler-">JavaDoc</a>.</td>
+For more information, please consult the {security-api-url}org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#logoutSuccessHandler-org.springframework.security.web.authentication.logout.LogoutSuccessHandler-[JavaDoc].</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="5"></i><b>5</b></td>
 <td>Specify whether to invalidate the <code>HttpSession</code> at the time of logout.
 This is <strong>true</strong> by default.
 Configures the <code>SecurityContextLogoutHandler</code> under the covers.
-For more information, please consult the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#invalidateHttpSession-boolean-">JavaDoc</a>.</td>
+For more information, please consult the {security-api-url}org/springframework/security/config/annotation/web/configurers/LogoutConfigurer.html#invalidateHttpSession-boolean-[JavaDoc].</td>
 </tr>
 <tr>
 <td><i class="conum" data-value="6"></i><b>6</b></td>
@@ -640,9 +640,9 @@ Please see the documentation for the <a href="../appendix/namespace.html#nsa-log
 </div>
 <div class="paragraph">
 <p>Generally, in order to customize logout functionality, you can add
-<code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/LogoutHandler.html">LogoutHandler</a></code>
+<code>{security-api-url}org/springframework/security/web/authentication/logout/LogoutHandler.html[LogoutHandler]</code>
 and/or
-<code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/LogoutSuccessHandler.html">LogoutSuccessHandler</a></code>
+<code>{security-api-url}org/springframework/security/web/authentication/logout/LogoutSuccessHandler.html[LogoutSuccessHandler]</code>
 implementations.
 For many common scenarios, these handlers are applied under the
 covers when using the fluent API.</p>
@@ -663,7 +663,7 @@ More information on other available attributes may be found in the namespace app
 <h2 id="jc-logout-handler"><a class="anchor" href="#jc-logout-handler"></a>LogoutHandler</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Generally, <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/LogoutHandler.html">LogoutHandler</a></code>
+<p>Generally, <code>{security-api-url}org/springframework/security/web/authentication/logout/LogoutHandler.html[LogoutHandler]</code>
 implementations indicate classes that are able to participate in logout handling.
 They are expected to be invoked to perform necessary clean-up.
 As such they should
@@ -673,22 +673,22 @@ Various implementations are provided:</p>
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/rememberme/PersistentTokenBasedRememberMeServices.html">PersistentTokenBasedRememberMeServices</a></p>
+<p>{security-api-url}org/springframework/security/web/authentication/rememberme/PersistentTokenBasedRememberMeServices.html[PersistentTokenBasedRememberMeServices]</p>
 </li>
 <li>
-<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/rememberme/TokenBasedRememberMeServices.html">TokenBasedRememberMeServices</a></p>
+<p>{security-api-url}org/springframework/security/web/authentication/rememberme/TokenBasedRememberMeServices.html[TokenBasedRememberMeServices]</p>
 </li>
 <li>
-<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/CookieClearingLogoutHandler.html">CookieClearingLogoutHandler</a></p>
+<p>{security-api-url}org/springframework/security/web/authentication/logout/CookieClearingLogoutHandler.html[CookieClearingLogoutHandler]</p>
 </li>
 <li>
-<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/csrf/CsrfLogoutHandler.html">CsrfLogoutHandler</a></p>
+<p>{security-api-url}org/springframework/security/web/csrf/CsrfLogoutHandler.html[CsrfLogoutHandler]</p>
 </li>
 <li>
-<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/SecurityContextLogoutHandler.html">SecurityContextLogoutHandler</a></p>
+<p>{security-api-url}org/springframework/security/web/authentication/logout/SecurityContextLogoutHandler.html[SecurityContextLogoutHandler]</p>
 </li>
 <li>
-<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/HeaderWriterLogoutHandler.html">HeaderWriterLogoutHandler</a></p>
+<p>{security-api-url}org/springframework/security/web/authentication/logout/HeaderWriterLogoutHandler.html[HeaderWriterLogoutHandler]</p>
 </li>
 </ul>
 </div>
@@ -716,7 +716,7 @@ Note that the interface is almost the same as the <code>LogoutHandler</code> but
 <div class="ulist">
 <ul>
 <li>
-<p><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/logout/SimpleUrlLogoutSuccessHandler.html">SimpleUrlLogoutSuccessHandler</a></p>
+<p>{security-api-url}org/springframework/security/web/authentication/logout/SimpleUrlLogoutSuccessHandler.html[SimpleUrlLogoutSuccessHandler]</p>
 </li>
 <li>
 <p>HttpStatusReturningLogoutSuccessHandler</p>

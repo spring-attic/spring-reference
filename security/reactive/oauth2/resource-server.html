@@ -541,7 +541,7 @@ This authorization server can be consulted by resource servers to authorize requ
 </td>
 <td class="content">
 <div class="paragraph">
-<p>A complete working example for <a href="https://github.com/spring-projects/spring-security-samples/tree/main/reactive/webflux/java/oauth2/resource-server"><strong>JWTs</strong></a>  is available in the <a href="https://github.com/spring-projects/spring-security-samples/tree/main">Spring Security repository</a>.</p>
+<p>A complete working example for {gh-samples-url}/reactive/webflux/java/oauth2/resource-server[<strong>JWTs</strong>]  is available in the {gh-samples-url}[Spring Security repository].</p>
 </div>
 </td>
 </tr>
@@ -865,7 +865,7 @@ fun jwtDecoder(): ReactiveJwtDecoder {
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Calling <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/ReactiveJwtDecoders.html#fromIssuerLocation-java.lang.String-">ReactiveJwtDecoders#fromIssuerLocation</a></code> is what invokes the Provider Configuration or Authorization Server Metadata endpoint in order to derive the JWK Set Uri.
+Calling <code>{security-api-url}org/springframework/security/oauth2/jwt/ReactiveJwtDecoders.html#fromIssuerLocation-java.lang.String-[ReactiveJwtDecoders#fromIssuerLocation]</code> is what invokes the Provider Configuration or Authorization Server Metadata endpoint in order to derive the JWK Set Uri.
 If the application doesn&#8217;t expose a <code>ReactiveJwtDecoder</code> bean, then Spring Boot will expose the above default one.
 </td>
 </tr>
@@ -1718,7 +1718,7 @@ Authorization: Bearer some-token-value # Resource Server will process this</code
 </ol>
 </div>
 <div class="paragraph">
-<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/OAuth2AuthenticatedPrincipal.html">OAuth2AuthenticatedPrincipal</a></code> object, and <code>Authentication#getName</code> maps to the token&#8217;s <code>sub</code> property, if one is present.</p>
+<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code>{security-api-url}org/springframework/security/oauth2/core/OAuth2AuthenticatedPrincipal.html[OAuth2AuthenticatedPrincipal]</code> object, and <code>Authentication#getName</code> maps to the token&#8217;s <code>sub</code> property, if one is present.</p>
 </div>
 <div class="paragraph">
 <p>From here, you may want to jump to:</p>
@@ -2721,7 +2721,7 @@ return http {
 <div class="sectionbody">
 <div class="paragraph">
 <p>Now that you&#8217;re in possession of a bearer token, it might be handy to pass that to downstream services.
-This is quite simple with <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/web/reactive/function/client/ServerBearerExchangeFilterFunction.html">ServerBearerExchangeFilterFunction</a></code>, which you can see in the following example:</p>
+This is quite simple with <code>{security-api-url}org/springframework/security/oauth2/server/resource/web/reactive/function/client/ServerBearerExchangeFilterFunction.html[ServerBearerExchangeFilterFunction]</code>, which you can see in the following example:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -2750,7 +2750,7 @@ fun rest(): WebClient {
 </div>
 </div>
 <div class="paragraph">
-<p>When the above <code>WebClient</code> is used to perform requests, Spring Security will look up the current <code>Authentication</code> and extract any <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/AbstractOAuth2Token.html">AbstractOAuth2Token</a></code> credential.
+<p>When the above <code>WebClient</code> is used to perform requests, Spring Security will look up the current <code>Authentication</code> and extract any <code>{security-api-url}org/springframework/security/oauth2/core/AbstractOAuth2Token.html[AbstractOAuth2Token]</code> credential.
 Then, it will propagate that token in the <code>Authorization</code> header.</p>
 </div>
 <div class="paragraph">

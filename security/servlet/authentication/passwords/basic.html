@@ -533,14 +533,14 @@ First, we see the <a href="https://tools.ietf.org/html/rfc7235#section-4.1">WWW-
 <p>The figure builds off our <a href="../../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
+<p><span class="image"><img src="{icondir}/number_1.png" alt="number 1"></span> First, a user makes an unauthenticated request to the resource <code>/private</code> for which it is not authorized.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="../../authorization/authorize-requests.html#servlet-authorization-filtersecurityinterceptor" class="page"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
+<p><span class="image"><img src="{icondir}/number_2.png" alt="number 2"></span> Spring Security&#8217;s <a href="../../authorization/authorize-requests.html#servlet-authorization-filtersecurityinterceptor" class="page"><code>FilterSecurityInterceptor</code></a> indicates that the unauthenticated request is <em>Denied</em> by throwing an <code>AccessDeniedException</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
-The configured <a href="../architecture.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/authentication/www/BasicAuthenticationEntryPoint.html"><code>BasicAuthenticationEntryPoint</code></a> which sends a WWW-Authenticate header.
+<p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> Since the user is not authenticated, <a href="../../architecture.html#servlet-exceptiontranslationfilter" class="page"><code>ExceptionTranslationFilter</code></a> initiates <em>Start Authentication</em>.
+The configured <a href="../architecture.html#servlet-authentication-authenticationentrypoint" class="page"><code>AuthenticationEntryPoint</code></a> is an instance of {security-api-url}org/springframework/security/web/authentication/www/BasicAuthenticationEntryPoint.html[<code>BasicAuthenticationEntryPoint</code>] which sends a WWW-Authenticate header.
 The <code>RequestCache</code> is typically a <code>NullRequestCache</code> that does not save the request since the client is capable of replaying the requests it originally requested.</p>
 </div>
 <div class="paragraph">
@@ -557,14 +557,14 @@ Below is the flow for the username and password being processed.</p>
 <p>The figure builds off our <a href="../../architecture.html#servlet-securityfilterchain" class="page"><code>SecurityFilterChain</code></a> diagram.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>BasicAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="../architecture.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
+<p><span class="image"><img src="{icondir}/number_1.png" alt="number 1"></span> When the user submits their username and password, the <code>BasicAuthenticationFilter</code> creates a <code>UsernamePasswordAuthenticationToken</code> which is a type of <a href="../architecture.html#servlet-authentication-authentication" class="page"><code>Authentication</code></a> by extracting the username and password from the <code>HttpServletRequest</code>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
+<p><span class="image"><img src="{icondir}/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
 The details of what <code>AuthenticationManager</code> look like depend on how the <a href="index.html#servlet-authentication-unpwd-storage" class="page">user information is stored</a>.</p>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
+<p><span class="image"><img src="{icondir}/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
 </div>
 <div class="ulist">
 <ul>
@@ -581,7 +581,7 @@ If remember me is not configured, this is a no-op.</p>
 </ul>
 </div>
 <div class="paragraph">
-<p><span class="image"><img src="../../../_images/icons/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
+<p><span class="image"><img src="{icondir}/number_4.png" alt="number 4"></span> If authentication is successful, then <em>Success</em>.</p>
 </div>
 <div class="ulist">
 <ul>
