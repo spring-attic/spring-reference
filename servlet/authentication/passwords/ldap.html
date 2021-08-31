@@ -93,7 +93,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../../index.html">Spring Security</a></h3>
+    <h3 class="title"><a href="../../../index.html">Spring Session</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -455,15 +455,15 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Spring Security</span>
-    <span class="version">5.6</span>
+    <span class="title">Spring Session</span>
+    <span class="version">2.6</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../../index.html">Spring Security</a>
+      <a class="title" href="../../../index.html">Spring Session</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../../index.html">5.6</a>
+          <a href="../../../index.html">2.6</a>
         </li>
       </ul>
     </li>
@@ -485,7 +485,7 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../../../index.html">Spring Security</a></li>
+    <li><a href="../../../index.html">Spring Session</a></li>
     <li><a href="../../index.html">Servlet Applications</a></li>
     <li><a href="../index.html">Authentication</a></li>
     <li><a href="index.html">Username/Password</a></li>
@@ -617,7 +617,7 @@ uniqueMember: uid=admin,ou=people,dc=springframework,dc=org</code></pre>
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
 	&lt;groupId&gt;com.unboundid&lt;/groupId&gt;
 	&lt;artifactId&gt;unboundid-ldapsdk&lt;/artifactId&gt;
-	&lt;version&gt;4.0.14&lt;/version&gt;
+	&lt;version&gt;{unboundid-ldapsdk-version}&lt;/version&gt;
 	&lt;scope&gt;runtime&lt;/scope&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
@@ -626,7 +626,7 @@ uniqueMember: uid=admin,ou=people,dc=springframework,dc=org</code></pre>
 <div class="title">Gradle</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">depenendencies {
-	runtimeOnly "com.unboundid:unboundid-ldapsdk:4.0.14"
+	runtimeOnly "com.unboundid:unboundid-ldapsdk:{unboundid-ldapsdk-version}"
 }</code></pre>
 </div>
 </div>
@@ -698,13 +698,13 @@ Once a stable release of ApacheDS 2.x is available, we will consider updating.</
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;dependency&gt;
 	&lt;groupId&gt;org.apache.directory.server&lt;/groupId&gt;
 	&lt;artifactId&gt;apacheds-core&lt;/artifactId&gt;
-	&lt;version&gt;1.5.5&lt;/version&gt;
+	&lt;version&gt;{apacheds-core-version}&lt;/version&gt;
 	&lt;scope&gt;runtime&lt;/scope&gt;
 &lt;/dependency&gt;
 &lt;dependency&gt;
 	&lt;groupId&gt;org.apache.directory.server&lt;/groupId&gt;
 	&lt;artifactId&gt;apacheds-server-jndi&lt;/artifactId&gt;
-	&lt;version&gt;1.5.5&lt;/version&gt;
+	&lt;version&gt;{apacheds-core-version}&lt;/version&gt;
 	&lt;scope&gt;runtime&lt;/scope&gt;
 &lt;/dependency&gt;</code></pre>
 </div>
@@ -713,8 +713,8 @@ Once a stable release of ApacheDS 2.x is available, we will consider updating.</
 <div class="title">Gradle</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-groovy hljs" data-lang="groovy">depenendencies {
-	runtimeOnly "org.apache.directory.server:apacheds-core:1.5.5"
-	runtimeOnly "org.apache.directory.server:apacheds-server-jndi:1.5.5"
+	runtimeOnly "org.apache.directory.server:apacheds-core:{apacheds-core-version}"
+	runtimeOnly "org.apache.directory.server:apacheds-server-jndi:{apacheds-core-version}"
 }</code></pre>
 </div>
 </div>
