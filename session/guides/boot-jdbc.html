@@ -109,13 +109,31 @@
     <span class="nav-text">Boot Samples</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="boot-redis.html">HttpSession with Redis</a>
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">HttpSession</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="4">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Redis</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-redis-json">JSON serialization</a>
   </li>
-  <li class="nav-item is-current-page" data-depth="3">
-    <a class="nav-link" href="boot-jdbc.html">HttpSession with JDBC</a>
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-redis-simple">Simple Redis</a>
   </li>
-  <li class="nav-item" data-depth="3">
+  <li class="nav-item" data-depth="5">
+    <a class="nav-link" href="boot-redis.html">Redis with Events</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item is-current-page" data-depth="4">
+    <a class="nav-link" href="boot-jdbc.html">JDBC</a>
+  </li>
+  <li class="nav-item" data-depth="4">
     <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-hazelcast">HttpSession with Hazelcast</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="boot-findbyusername.html">Find by Username</a>
@@ -123,8 +141,17 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="boot-websocket.html">WebSockets</a>
   </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">WebFlux</span>
+<ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-webflux">WebFlux</a>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-webflux">Redis</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="boot-webflux-custom-cookie.html">Custom Cookie</a>
   </li>
 </ul>
   </li>
@@ -197,7 +224,8 @@
     <li><a href="../index.html">Spring Session</a></li>
     <li><a href="../samples.html">Samples &amp; Guides (Start Here)</a></li>
     <li>Boot Samples</li>
-    <li><a href="boot-jdbc.html">HttpSession with JDBC</a></li>
+    <li>HttpSession</li>
+    <li><a href="boot-jdbc.html">JDBC</a></li>
   </ul>
 </nav>
 <div class="search">
@@ -418,7 +446,7 @@ You can view the cookies (with <a href="https://developers.google.com/web/tools/
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="boot-redis.html">HttpSession with Redis</a></span>
+  <span class="prev"><a href="boot-redis.html">Redis with Events</a></span>
   <span class="next"><a href="boot-findbyusername.html">Find by Username</a></span>
 </nav>
 </article>
