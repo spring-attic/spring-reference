@@ -114,7 +114,7 @@
     <a class="nav-link" href="boot-jdbc.html">HttpSession with JDBC</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-hazelcast">HttpSession with Hazelcast</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="boot-findbyusername.html">Find by Username</a>
@@ -124,7 +124,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-webflux">WebFlux</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <span class="nav-text">Java Configuration</span>
@@ -167,10 +167,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../index.html">Spring Session</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../index.html">2.6</a>
+          <a href="../../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -243,7 +243,14 @@ The following example shows how to customize Spring Session&#8217;s cookie:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-custom-cookie.adoc - include::{samples-dir}spring-session-sample-javaconfig-custom-cookie/src/main/java/sample/Config.java[tags=cookie-serializer]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">	@Bean
+	public CookieSerializer cookieSerializer() {
+		DefaultCookieSerializer serializer = new DefaultCookieSerializer();
+		serializer.setCookieName("JSESSIONID"); <i class="conum" data-value="1"></i><b>(1)</b>
+		serializer.setCookiePath("/"); <i class="conum" data-value="2"></i><b>(2)</b>
+		serializer.setDomainNamePattern("^.+?\\.(\\w+\\.[a-z]+)$"); <i class="conum" data-value="3"></i><b>(3)</b>
+		return serializer;
+	}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -356,7 +363,7 @@ Doing so prevents a malicious user from performing such attacks as <a href="http
 <div class="sect2">
 <h3 id="_running_the_custom_cookie_sample_application"><a class="anchor" href="#_running_the_custom_cookie_sample_application"></a>Running the <code>custom-cookie</code> Sample Application</h3>
 <div class="paragraph">
-<p>You can run the sample by obtaining the {download-url}[source code] and invoking the following command:</p>
+<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
 </div>
 <div class="exampleblock">
 <div class="content">

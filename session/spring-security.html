@@ -116,7 +116,7 @@
     <a class="nav-link" href="guides/boot-jdbc.html">HttpSession with JDBC</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-hazelcast">HttpSession with Hazelcast</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="guides/boot-findbyusername.html">Find by Username</a>
@@ -126,7 +126,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-webflux">WebFlux</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <span class="nav-text">Java Configuration</span>
@@ -169,10 +169,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../index.html">Spring Session</a>
+      <a class="title" href="../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../index.html">2.6</a>
+          <a href="../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -220,7 +220,7 @@
 <h2 id="spring-security-rememberme"><a class="anchor" href="#spring-security-rememberme"></a>Spring Security Remember-me Support</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Spring Session provides integration with <a href="https://docs.spring.io/spring-security/site/docs/{spring-security-version}/reference/htmlsingle/#remember-me">Spring Security&#8217;s Remember-me Authentication</a>.
+<p>Spring Session provides integration with <a href="https://docs.spring.io/spring-security/site/docs/5.5.0/reference/htmlsingle/#remember-me">Spring Security&#8217;s Remember-me Authentication</a>.
 The support:</p>
 </div>
 <div class="ulist">
@@ -242,10 +242,23 @@ If it were set to the same value as the session expiration, the session would ge
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in spring-security.adoc - include::{docs-test-dir}docs/security/RememberMeSecurityConfiguration.java[tags=http-rememberme]
-	}
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
+protected void configure(HttpSecurity http) throws Exception {
+	http
+		// ... additional configuration ...
+		.rememberMe((rememberMe) -&gt; rememberMe
+			.rememberMeServices(rememberMeServices())
+		);
+}
 
-Unresolved directive in spring-security.adoc - include::{docs-test-dir}docs/security/RememberMeSecurityConfiguration.java[tags=rememberme-bean]</code></pre>
+@Bean
+public SpringSessionRememberMeServices rememberMeServices() {
+	SpringSessionRememberMeServices rememberMeServices =
+			new SpringSessionRememberMeServices();
+	// optionally customize
+	rememberMeServices.setAlwaysRemember(true);
+	return rememberMeServices;
+}</code></pre>
 </div>
 </div>
 </div>
@@ -257,7 +270,15 @@ Unresolved directive in spring-security.adoc - include::{docs-test-dir}docs/secu
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">Unresolved directive in spring-security.adoc - include::{docs-test-resources-dir}docs/security/RememberMeSecurityConfigurationXmlTests-context.xml[tags=config]</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;security:http&gt;
+	&lt;!-- ... --&gt;
+	&lt;security:form-login /&gt;
+	&lt;security:remember-me services-ref="rememberMeServices"/&gt;
+&lt;/security:http&gt;
+
+&lt;bean id="rememberMeServices"
+	class="org.springframework.session.security.web.authentication.SpringSessionRememberMeServices"
+	p:alwaysRemember="true"/&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -281,7 +302,30 @@ implementation of Spring Security&#8217;s <code>SessionRegistry</code> interface
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in spring-security.adoc - include::{docs-test-dir}docs/security/SecurityConfiguration.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+public class SecurityConfiguration&lt;S extends Session&gt; extends WebSecurityConfigurerAdapter {
+
+	@Autowired
+	private FindByIndexNameSessionRepository&lt;S&gt; sessionRepository;
+
+	@Override
+	protected void configure(HttpSecurity http) throws Exception {
+		// @formatter:off
+		http
+			// other config goes here...
+			.sessionManagement((sessionManagement) -&gt; sessionManagement
+				.maximumSessions(2)
+				.sessionRegistry(sessionRegistry())
+			);
+		// @formatter:on
+	}
+
+	@Bean
+	public SpringSessionBackedSessionRegistry&lt;S&gt; sessionRegistry() {
+		return new SpringSessionBackedSessionRegistry&lt;&gt;(this.sessionRepository);
+	}
+
+}</code></pre>
 </div>
 </div>
 </div>
@@ -297,7 +341,17 @@ returns <code>Session</code> instances.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">Unresolved directive in spring-security.adoc - include::{docs-test-resources-dir}docs/security/security-config.xml[tags=config]</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;security:http&gt;
+	&lt;!-- other config goes here... --&gt;
+	&lt;security:session-management&gt;
+		&lt;security:concurrency-control max-sessions="2" session-registry-ref="sessionRegistry"/&gt;
+	&lt;/security:session-management&gt;
+&lt;/security:http&gt;
+
+&lt;bean id="sessionRegistry"
+	  class="org.springframework.session.security.SpringSessionBackedSessionRegistry"&gt;
+	&lt;constructor-arg ref="sessionRepository"/&gt;
+&lt;/bean&gt;</code></pre>
 </div>
 </div>
 </div>

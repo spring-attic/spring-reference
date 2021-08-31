@@ -114,7 +114,7 @@
     <a class="nav-link" href="boot-jdbc.html">HttpSession with JDBC</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-hazelcast">HttpSession with Hazelcast</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="boot-findbyusername.html">Find by Username</a>
@@ -124,7 +124,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-webflux">WebFlux</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <span class="nav-text">Java Configuration</span>
@@ -167,10 +167,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../index.html">Spring Session</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../index.html">2.6</a>
+          <a href="../../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -247,7 +247,7 @@ If you are using Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework.session&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;
-		&lt;version&gt;{spring-session-version}&lt;/version&gt;
+		&lt;version&gt;2.6.0-SNAPSHOT&lt;/version&gt;
 		&lt;type&gt;pom&lt;/type&gt;
 	&lt;/dependency&gt;
 	&lt;dependency&gt;
@@ -258,7 +258,7 @@ If you are using Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
-		&lt;version&gt;{spring-framework-version}&lt;/version&gt;
+		&lt;version&gt;5.3.7&lt;/version&gt;
 	&lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
 </div>
@@ -301,7 +301,15 @@ To do so, add the following Spring Configuration:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-redis.adoc - include::{samples-dir}spring-session-sample-javaconfig-redis/src/main/java/sample/Config.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableRedisHttpSession <i class="conum" data-value="1"></i><b>(1)</b>
+public class Config {
+
+	@Bean
+	public LettuceConnectionFactory connectionFactory() {
+		return new LettuceConnectionFactory(); <i class="conum" data-value="2"></i><b>(2)</b>
+	}
+
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -316,7 +324,7 @@ In this instance, Spring Session is backed by Redis.</td>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>We create a <code>RedisConnectionFactory</code> that connects Spring Session to the Redis Server.
 We configure the connection to connect to localhost on the default port (6379).
-For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/{spring-data-redis-version}/reference/html/">reference documentation</a>.</td>
+For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
 </tr>
 </table>
 </div>
@@ -342,7 +350,13 @@ The following shows an example:</p>
 <div class="listingblock">
 <div class="title">src/main/java/sample/Initializer.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-redis.adoc - include::{samples-dir}spring-session-sample-javaconfig-redis/src/main/java/sample/Initializer.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Initializer extends AbstractHttpSessionApplicationInitializer { <i class="conum" data-value="1"></i><b>(1)</b>
+
+	public Initializer() {
+		super(Config.class); <i class="conum" data-value="2"></i><b>(2)</b>
+	}
+
+}</code></pre>
 </div>
 </div>
 <div class="admonitionblock note">
@@ -380,7 +394,7 @@ Doing so ensures that the Spring Bean by the name of <code>springSessionReposito
 <div class="sect2">
 <h3 id="_running_the_httpsession_sample_application"><a class="anchor" href="#_running_the_httpsession_sample_application"></a>Running the <code>httpsession</code> Sample Application</h3>
 <div class="paragraph">
-<p>You can run the sample by obtaining the {download-url}[source code] and invoking the following command:</p>
+<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -439,7 +453,20 @@ See <a href="https://hub.docker.com/_/redis/">Docker Redis repository</a> for de
 <div class="listingblock">
 <div class="title">src/main/java/sample/SessionServlet.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-redis.adoc - include::{samples-dir}spring-session-sample-javaconfig-redis/src/main/java/sample/SessionServlet.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@WebServlet("/session")
+public class SessionServlet extends HttpServlet {
+
+	@Override
+	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+		String attributeName = req.getParameter("attributeName");
+		String attributeValue = req.getParameter("attributeValue");
+		req.getSession().setAttribute(attributeName, attributeValue);
+		resp.sendRedirect(req.getContextPath() + "/");
+	}
+
+	private static final long serialVersionUID = 2878267318695777395L;
+
+}</code></pre>
 </div>
 </div>
 </div>

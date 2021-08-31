@@ -114,7 +114,7 @@
     <a class="nav-link" href="boot-jdbc.html">HttpSession with JDBC</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-hazelcast">HttpSession with Hazelcast</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="boot-findbyusername.html">Find by Username</a>
@@ -124,7 +124,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-webflux">WebFlux</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <span class="nav-text">Java Configuration</span>
@@ -167,10 +167,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../index.html">Spring Session</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../index.html">2.6</a>
+          <a href="../../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -253,9 +253,31 @@ If you use Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
-		&lt;version&gt;{spring-framework-version}&lt;/version&gt;
+		&lt;version&gt;5.3.7&lt;/version&gt;
 	&lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Since we are using a SNAPSHOT version, we need to add the Spring Snapshot Maven Repository.
+You must have the following in your pom.xml:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;repositories&gt;
+
+	&lt;!-- ... --&gt;
+
+	&lt;repository&gt;
+	&lt;id&gt;spring-snapshot&lt;/id&gt;
+	&lt;url&gt;https://repo.spring.io/libs-snapshot&lt;/url&gt;
+	&lt;/repository&gt;
+&lt;/repositories&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -274,7 +296,26 @@ To do so, add the following Spring Configuration:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-hazelcast.adoc - include::{docs-test-dir}docs/http/HazelcastHttpSessionConfig.java[tags=config]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableHazelcastHttpSession <i class="conum" data-value="1"></i><b>(1)</b>
+@Configuration
+public class HazelcastHttpSessionConfig {
+
+	@Bean
+	public HazelcastInstance hazelcastInstance() {
+		Config config = new Config();
+		MapAttributeConfig attributeConfig = new MapAttributeConfig()
+				.setName(HazelcastIndexedSessionRepository.PRINCIPAL_NAME_ATTRIBUTE)
+				.setExtractor(PrincipalNameExtractor.class.getName());
+		config.getMapConfig(HazelcastIndexedSessionRepository.DEFAULT_SESSION_MAP_NAME) <i class="conum" data-value="2"></i><b>(2)</b>
+				.addMapAttributeConfig(attributeConfig).addMapIndexConfig(
+						new MapIndexConfig(HazelcastIndexedSessionRepository.PRINCIPAL_NAME_ATTRIBUTE, false));
+		SerializerConfig serializerConfig = new SerializerConfig();
+		serializerConfig.setImplementation(new HazelcastSessionSerializer()).setTypeClass(MapSession.class);
+		config.getSerializationConfig().addSerializerConfig(serializerConfig); <i class="conum" data-value="3"></i><b>(3)</b>
+		return Hazelcast.newHazelcastInstance(config); <i class="conum" data-value="4"></i><b>(4)</b>
+	}
+
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -339,7 +380,13 @@ The following listing shows how to do so:</p>
 <div class="listingblock">
 <div class="title">src/main/java/sample/SecurityInitializer.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-hazelcast.adoc - include::{samples-dir}spring-session-sample-javaconfig-hazelcast/src/main/java/sample/SecurityInitializer.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SecurityInitializer extends AbstractSecurityWebApplicationInitializer {
+
+	public SecurityInitializer() {
+		super(SecurityConfig.class, SessionConfig.class);
+	}
+
+}</code></pre>
 </div>
 </div>
 </div>
@@ -356,7 +403,9 @@ The following example shows how to do so:</p>
 <div class="listingblock">
 <div class="title">src/main/java/sample/Initializer.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-hazelcast.adoc - include::{samples-dir}spring-session-sample-javaconfig-hazelcast/src/main/java/sample/Initializer.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Initializer extends AbstractHttpSessionApplicationInitializer {
+
+}</code></pre>
 </div>
 </div>
 </div>
@@ -387,7 +436,7 @@ The name of our class (<code>Initializer</code>) does not matter. What is import
 <div class="sect2">
 <h3 id="_running_the_sample_application"><a class="anchor" href="#_running_the_sample_application"></a>Running the Sample Application</h3>
 <div class="paragraph">
-<p>You can run the sample by obtaining the {download-url}[source code] and invoking the following command:</p>
+<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
 </div>
 <div class="exampleblock">
 <div class="content">

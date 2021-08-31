@@ -114,7 +114,7 @@
     <a class="nav-link" href="boot-jdbc.html">HttpSession with JDBC</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-hazelcast">HttpSession with Hazelcast</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="boot-findbyusername.html">Find by Username</a>
@@ -124,7 +124,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-webflux">WebFlux</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <span class="nav-text">Java Configuration</span>
@@ -167,10 +167,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../../index.html">Spring Session</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../../index.html">2.6</a>
+          <a href="../../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -248,7 +248,7 @@ If you use Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework.session&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-session-data-redis&lt;/artifactId&gt;
-		&lt;version&gt;{spring-session-version}&lt;/version&gt;
+		&lt;version&gt;2.6.0-SNAPSHOT&lt;/version&gt;
 		&lt;type&gt;pom&lt;/type&gt;
 	&lt;/dependency&gt;
 	&lt;dependency&gt;
@@ -259,9 +259,31 @@ If you use Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
-		&lt;version&gt;{spring-framework-version}&lt;/version&gt;
+		&lt;version&gt;5.3.7&lt;/version&gt;
 	&lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
+</div>
+</div>
+</div>
+</div>
+<div class="paragraph">
+<p>Since we are using a SNAPSHOT version, we need to add the Spring Snapshot Maven Repository.
+You must have the following in your pom.xml:</p>
+</div>
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock">
+<div class="title">pom.xml</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;repositories&gt;
+
+	&lt;!-- ... --&gt;
+
+	&lt;repository&gt;
+	&lt;id&gt;spring-snapshot&lt;/id&gt;
+	&lt;url&gt;https://repo.spring.io/libs-snapshot&lt;/url&gt;
+	&lt;/repository&gt;
+&lt;/repositories&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -280,7 +302,16 @@ To do so, add the following Spring Configuration:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-security.adoc - include::{samples-dir}spring-session-sample-javaconfig-security/src/main/java/sample/Config.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Configuration
+@EnableRedisHttpSession <i class="conum" data-value="1"></i><b>(1)</b>
+public class Config {
+
+	@Bean
+	public LettuceConnectionFactory connectionFactory() {
+		return new LettuceConnectionFactory(); <i class="conum" data-value="2"></i><b>(2)</b>
+	}
+
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -295,7 +326,7 @@ In this instance Spring Session is backed by Redis.</td>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>We create a <code>RedisConnectionFactory</code> that connects Spring Session to the Redis Server.
 We configure the connection to connect to localhost on the default port (6379)
-For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/{spring-data-redis-version}/reference/html/">reference documentation</a>.</td>
+For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
 </tr>
 </table>
 </div>
@@ -320,7 +351,13 @@ The following example shows how to do so:</p>
 <div class="listingblock">
 <div class="title">src/main/java/sample/SecurityInitializer.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-security.adoc - include::{samples-dir}spring-session-sample-javaconfig-security/src/main/java/sample/SecurityInitializer.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class SecurityInitializer extends AbstractSecurityWebApplicationInitializer {
+
+	public SecurityInitializer() {
+		super(SecurityConfig.class, Config.class);
+	}
+
+}</code></pre>
 </div>
 </div>
 </div>
@@ -337,7 +374,9 @@ The following example shows how to do so:</p>
 <div class="listingblock">
 <div class="title">src/main/java/sample/Initializer.java</div>
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in java-security.adoc - include::{samples-dir}spring-session-sample-javaconfig-security/src/main/java/sample/Initializer.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class Initializer extends AbstractHttpSessionApplicationInitializer {
+
+}</code></pre>
 </div>
 </div>
 </div>
@@ -368,7 +407,7 @@ The name of our class (Initializer) does not matter. What is important is that w
 <div class="sect2">
 <h3 id="_running_the_security_sample_application"><a class="anchor" href="#_running_the_security_sample_application"></a>Running the <code>security</code> Sample Application</h3>
 <div class="paragraph">
-<p>You can run the sample by obtaining the {download-url}[source code] and invoking the following command:</p>
+<p>You can run the sample by obtaining the <a href="https://github.com/spring-projects/spring-session/archive/main.zip">source code</a> and invoking the following command:</p>
 </div>
 <div class="exampleblock">
 <div class="content">

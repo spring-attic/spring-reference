@@ -116,7 +116,7 @@
     <a class="nav-link" href="guides/boot-jdbc.html">HttpSession with JDBC</a>
   </li>
   <li class="nav-item" data-depth="1">
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-hazelcast[HttpSession with Hazelcast]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-hazelcast">HttpSession with Hazelcast</a>
   </li>
   <li class="nav-item" data-depth="1">
     <a class="nav-link" href="guides/boot-findbyusername.html">Find by Username</a>
@@ -126,7 +126,7 @@
   </li>
   <li class="nav-item" data-depth="1">
     <button class="nav-item-toggle"></button>
-    <span class="nav-text">{gh-samples-url}spring-session-sample-boot-webflux[WebFlux]</span>
+    <a class="nav-link" href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/spring-session-sample-boot-webflux">WebFlux</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="2">
     <span class="nav-text">Java Configuration</span>
@@ -169,10 +169,10 @@
   </div>
   <ul class="components">
     <li class="component">
-      <a class="title" href="../index.html">Spring Session</a>
+      <a class="title" href="../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-latest">
-          <a href="../index.html">2.6</a>
+          <a href="../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -272,7 +272,29 @@
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{indexdoc-tests}[tags=repository-demo]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class RepositoryDemo&lt;S extends Session&gt; {
+
+	private SessionRepository&lt;S&gt; repository; <i class="conum" data-value="1"></i><b>(1)</b>
+
+	public void demo() {
+		S toSave = this.repository.createSession(); <i class="conum" data-value="2"></i><b>(2)</b>
+
+		<i class="conum" data-value="3"></i><b>(3)</b>
+		User rwinch = new User("rwinch");
+		toSave.setAttribute(ATTR_USER, rwinch);
+
+		this.repository.save(toSave); <i class="conum" data-value="4"></i><b>(4)</b>
+
+		S session = this.repository.findById(toSave.getId()); <i class="conum" data-value="5"></i><b>(5)</b>
+
+		<i class="conum" data-value="6"></i><b>(6)</b>
+		User user = session.getAttribute(ATTR_USER);
+		assertThat(user).isEqualTo(rwinch);
+	}
+
+	// ... setter methods ...
+
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -315,7 +337,24 @@
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{indexdoc-tests}[tags=expire-repository-demo]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class ExpiringRepositoryDemo&lt;S extends Session&gt; {
+
+	private SessionRepository&lt;S&gt; repository; <i class="conum" data-value="1"></i><b>(1)</b>
+
+	public void demo() {
+		S toSave = this.repository.createSession(); <i class="conum" data-value="2"></i><b>(2)</b>
+		// ...
+		toSave.setMaxInactiveInterval(Duration.ofSeconds(30)); <i class="conum" data-value="3"></i><b>(3)</b>
+
+		this.repository.save(toSave); <i class="conum" data-value="4"></i><b>(4)</b>
+
+		S session = this.repository.findById(toSave.getId()); <i class="conum" data-value="5"></i><b>(5)</b>
+		// ...
+	}
+
+	// ... setter methods ...
+
+}</code></pre>
 </div>
 </div>
 <div class="colist arabic">
@@ -386,7 +425,8 @@ An example of how to use this can be seen in the following listing:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{docs-test-dir}docs/FindByIndexNameSessionRepositoryTests.java[tags=set-username]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String username = "username";
+this.session.setAttribute(FindByIndexNameSessionRepository.PRINCIPAL_NAME_INDEX_NAME, username);</code></pre>
 </div>
 </div>
 </div>
@@ -411,7 +451,8 @@ For example, many implementations automatically ensure that the current Spring S
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{docs-test-dir}docs/FindByIndexNameSessionRepositoryTests.java[tags=findby-username]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">String username = "username";
+Map&lt;String, Session&gt; sessionIdToSession = this.sessionRepository.findByPrincipalName(username);</code></pre>
 </div>
 </div>
 </div>
@@ -442,7 +483,16 @@ The following example shows how to do so:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{docs-test-dir}docs/SpringHttpSessionConfig.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableSpringHttpSession
+@Configuration
+public class SpringHttpSessionConfig {
+
+	@Bean
+	public MapSessionRepository sessionRepository() {
+		return new MapSessionRepository(new ConcurrentHashMap&lt;&gt;());
+	}
+
+}</code></pre>
 </div>
 </div>
 </div>
@@ -466,7 +516,15 @@ The following example shows how to do so:</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{docs-test-dir}docs/SpringWebSessionConfig.java[tags=class]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableSpringWebSession
+public class SpringWebSessionConfig {
+
+	@Bean
+	public ReactiveSessionRepository reactiveSessionRepository() {
+		return new ReactiveMapSessionRepository(new ConcurrentHashMap&lt;&gt;());
+	}
+
+}</code></pre>
 </div>
 </div>
 </div>
@@ -495,7 +553,11 @@ The implementation supports <code>SessionDestroyedEvent</code> and <code>Session
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{indexdoc-tests}[tags=new-redisindexedsessionrepository]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">RedisTemplate&lt;Object, Object&gt; redisTemplate = new RedisTemplate&lt;&gt;();
+
+// ... configure redisTemplate ...
+
+SessionRepository&lt;? extends Session&gt; repository = new RedisIndexedSessionRepository(redisTemplate);</code></pre>
 </div>
 </div>
 </div>
@@ -537,7 +599,7 @@ A value of <code>FlushMode.IMMEDIATE</code> writes to Redis as soon as possible.
 <div class="paragraph">
 <p><code>RedisIndexedSessionRepository</code> is subscribed to receive events from Redis by using a <code>RedisMessageListenerContainer</code>.
 You can customize the way those events are dispatched by creating a bean named <code>springSessionRedisTaskExecutor</code>, a bean <code>springSessionRedisSubscriptionExecutor</code>, or both.
-You can find more details on configuring Redis task executors <a href="https://docs.spring.io/spring-data-redis/docs/{spring-data-redis-version}/reference/html/#redis:pubsub:subscribe:containers">here</a>.</p>
+You can find more details on configuring Redis task executors <a href="https://docs.spring.io/spring-data-redis/docs/2.5.1/reference/html/#redis:pubsub:subscribe:containers">here</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -767,7 +829,10 @@ To disable the automatic configuration, add <code>ConfigureRedisAction.NO_OP</co
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{docs-test-dir}docs/RedisHttpSessionConfigurationNoOpConfigureRedisActionTests.java[tags=configure-redis-action]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+ConfigureRedisAction configureRedisAction() {
+	return ConfigureRedisAction.NO_OP;
+}</code></pre>
 </div>
 </div>
 </div>
@@ -779,7 +844,8 @@ To disable the automatic configuration, add <code>ConfigureRedisAction.NO_OP</co
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">Unresolved directive in api.adoc - include::{docs-test-resources-dir}docs/HttpSessionConfigurationNoOpConfigureRedisActionXmlTests-context.xml[tags=configure-redis-action]</code></pre>
+<pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;util:constant
+	static-field="org.springframework.session.data.redis.config.ConfigureRedisAction.NO_OP"/&gt;</code></pre>
 </div>
 </div>
 </div>
@@ -863,7 +929,12 @@ In a web environment, this is typically used in combination with <code>WebSessio
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{indexdoc-tests}[tags=new-reactiveredissessionrepository]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">// ... create and configure connectionFactory and serializationContext ...
+
+ReactiveRedisTemplate&lt;String, Object&gt; redisTemplate = new ReactiveRedisTemplate&lt;&gt;(connectionFactory,
+		serializationContext);
+
+ReactiveSessionRepository&lt;? extends Session&gt; repository = new ReactiveRedisSessionRepository(redisTemplate);</code></pre>
 </div>
 </div>
 </div>
@@ -964,7 +1035,7 @@ Alternatively, you can use it with distributed <code>Map</code> implementations.
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{indexdoc-tests}[tags=new-mapsessionrepository]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">SessionRepository&lt;? extends Session&gt; repository = new MapSessionRepository(new ConcurrentHashMap&lt;&gt;());</code></pre>
 </div>
 </div>
 </div>
@@ -1035,13 +1106,22 @@ Note that this implementation does not support publishing of session events.</p>
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{indexdoc-tests}[tags=new-jdbcindexedsessionrepository]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">JdbcTemplate jdbcTemplate = new JdbcTemplate();
+
+// ... configure jdbcTemplate ...
+
+TransactionTemplate transactionTemplate = new TransactionTemplate();
+
+// ... configure transactionTemplate ...
+
+SessionRepository&lt;? extends Session&gt; repository = new JdbcIndexedSessionRepository(jdbcTemplate,
+		transactionTemplate);</code></pre>
 </div>
 </div>
 </div>
 </div>
 <div class="paragraph">
-<p>For additional information on how to create and configure <code>JdbcTemplate</code> and <code>PlatformTransactionManager</code>, see the <a href="https://docs.spring.io/spring/docs/{spring-framework-version}/spring-framework-reference/data-access.html">Spring Framework Reference Documentation</a>.</p>
+<p>For additional information on how to create and configure <code>JdbcTemplate</code> and <code>PlatformTransactionManager</code>, see the <a href="https://docs.spring.io/spring/docs/5.3.7/spring-framework-reference/data-access.html">Spring Framework Reference Documentation</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1094,7 +1174,28 @@ Scripts for most major database vendors are packaged as <code>org/springframewor
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">Unresolved directive in api.adoc - include::{session-jdbc-main-resources-dir}org/springframework/session/jdbc/schema-postgresql.sql[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE SPRING_SESSION (
+	PRIMARY_ID CHAR(36) NOT NULL,
+	SESSION_ID CHAR(36) NOT NULL,
+	CREATION_TIME BIGINT NOT NULL,
+	LAST_ACCESS_TIME BIGINT NOT NULL,
+	MAX_INACTIVE_INTERVAL INT NOT NULL,
+	EXPIRY_TIME BIGINT NOT NULL,
+	PRINCIPAL_NAME VARCHAR(100),
+	CONSTRAINT SPRING_SESSION_PK PRIMARY KEY (PRIMARY_ID)
+);
+
+CREATE UNIQUE INDEX SPRING_SESSION_IX1 ON SPRING_SESSION (SESSION_ID);
+CREATE INDEX SPRING_SESSION_IX2 ON SPRING_SESSION (EXPIRY_TIME);
+CREATE INDEX SPRING_SESSION_IX3 ON SPRING_SESSION (PRINCIPAL_NAME);
+
+CREATE TABLE SPRING_SESSION_ATTRIBUTES (
+	SESSION_PRIMARY_ID CHAR(36) NOT NULL,
+	ATTRIBUTE_NAME VARCHAR(200) NOT NULL,
+	ATTRIBUTE_BYTES BYTEA NOT NULL,
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_PK PRIMARY KEY (SESSION_PRIMARY_ID, ATTRIBUTE_NAME),
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_FK FOREIGN KEY (SESSION_PRIMARY_ID) REFERENCES SPRING_SESSION(PRIMARY_ID) ON DELETE CASCADE
+);</code></pre>
 </div>
 </div>
 </div>
@@ -1106,7 +1207,28 @@ Scripts for most major database vendors are packaged as <code>org/springframewor
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">Unresolved directive in api.adoc - include::{session-jdbc-main-resources-dir}org/springframework/session/jdbc/schema-mysql.sql[]</code></pre>
+<pre class="highlightjs highlight"><code class="language-sql hljs" data-lang="sql">CREATE TABLE SPRING_SESSION (
+	PRIMARY_ID CHAR(36) NOT NULL,
+	SESSION_ID CHAR(36) NOT NULL,
+	CREATION_TIME BIGINT NOT NULL,
+	LAST_ACCESS_TIME BIGINT NOT NULL,
+	MAX_INACTIVE_INTERVAL INT NOT NULL,
+	EXPIRY_TIME BIGINT NOT NULL,
+	PRINCIPAL_NAME VARCHAR(100),
+	CONSTRAINT SPRING_SESSION_PK PRIMARY KEY (PRIMARY_ID)
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;
+
+CREATE UNIQUE INDEX SPRING_SESSION_IX1 ON SPRING_SESSION (SESSION_ID);
+CREATE INDEX SPRING_SESSION_IX2 ON SPRING_SESSION (EXPIRY_TIME);
+CREATE INDEX SPRING_SESSION_IX3 ON SPRING_SESSION (PRINCIPAL_NAME);
+
+CREATE TABLE SPRING_SESSION_ATTRIBUTES (
+	SESSION_PRIMARY_ID CHAR(36) NOT NULL,
+	ATTRIBUTE_NAME VARCHAR(200) NOT NULL,
+	ATTRIBUTE_BYTES BLOB NOT NULL,
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_PK PRIMARY KEY (SESSION_PRIMARY_ID, ATTRIBUTE_NAME),
+	CONSTRAINT SPRING_SESSION_ATTRIBUTES_FK FOREIGN KEY (SESSION_PRIMARY_ID) REFERENCES SPRING_SESSION(PRIMARY_ID) ON DELETE CASCADE
+) ENGINE=InnoDB ROW_FORMAT=DYNAMIC;</code></pre>
 </div>
 </div>
 </div>
@@ -1137,7 +1259,13 @@ In a web environment, this is typically used in combination with <code>SessionRe
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{indexdoc-tests}[tags=new-hazelcastindexedsessionrepository]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Config config = new Config();
+
+// ... configure Hazelcast ...
+
+HazelcastInstance hazelcastInstance = Hazelcast.newHazelcastInstance(config);
+
+HazelcastIndexedSessionRepository repository = new HazelcastIndexedSessionRepository(hazelcastInstance);</code></pre>
 </div>
 </div>
 </div>
@@ -1223,7 +1351,14 @@ Spring Session comes with a default implementation using <code>DefaultCookieSeri
 <div class="content">
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">Unresolved directive in api.adoc - include::{samples-dir}spring-session-sample-javaconfig-custom-cookie/src/main/java/sample/Config.java[tags=cookie-serializer]</code></pre>
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">	@Bean
+	public CookieSerializer cookieSerializer() {
+		DefaultCookieSerializer serializer = new DefaultCookieSerializer();
+		serializer.setCookieName("JSESSIONID"); <i class="conum" data-value="1"></i><b>(1)</b>
+		serializer.setCookiePath("/"); <i class="conum" data-value="2"></i><b>(2)</b>
+		serializer.setDomainNamePattern("^.+?\\.(\\w+\\.[a-z]+)$"); <i class="conum" data-value="3"></i><b>(3)</b>
+		return serializer;
+	}</code></pre>
 </div>
 </div>
 <div class="colist arabic">

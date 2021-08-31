@@ -93,7 +93,7 @@
     <div class="panels">
 <div class="nav-panel-menu is-active" data-panel="menu">
   <nav class="nav-menu">
-    <h3 class="title"><a href="../../index.html">Spring Session</a></h3>
+    <h3 class="title"><a href="../../index.html">Spring Security</a></h3>
 <ul class="nav-list">
   <li class="nav-item" data-depth="0">
 <ul class="nav-list">
@@ -455,15 +455,15 @@
 </div>
 <div class="nav-panel-explore" data-panel="explore">
   <div class="context">
-    <span class="title">Spring Session</span>
-    <span class="version">2.6</span>
+    <span class="title">Spring Security</span>
+    <span class="version">5.6</span>
   </div>
   <ul class="components">
     <li class="component is-current">
-      <a class="title" href="../../index.html">Spring Session</a>
+      <a class="title" href="../../index.html">Spring Security</a>
       <ul class="versions">
         <li class="version is-current is-latest">
-          <a href="../../index.html">2.6</a>
+          <a href="../../index.html">5.6</a>
         </li>
       </ul>
     </li>
@@ -485,7 +485,7 @@
 <button class="nav-toggle"></button>
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
-    <li><a href="../../index.html">Spring Session</a></li>
+    <li><a href="../../index.html">Spring Security</a></li>
     <li><a href="../index.html">Reactive Applications</a></li>
     <li><a href="index.html">OAuth2</a></li>
     <li><a href="resource-server.html">OAuth 2.0 Resource Server</a></li>
@@ -529,7 +529,7 @@ This authorization server can be consulted by resource servers to authorize requ
 </td>
 <td class="content">
 <div class="paragraph">
-<p>A complete working example for <a href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples//reactive/webflux/java/oauth2/resource-server"><strong>JWTs</strong></a>  is available in the <a href="https://github.com/spring-projects/spring-session/tree/main/spring-session-samples/">Spring Security repository</a>.</p>
+<p>A complete working example for <a href="https://github.com/spring-projects/spring-security-samples/tree/main/reactive/webflux/java/oauth2/resource-server"><strong>JWTs</strong></a>  is available in the <a href="https://github.com/spring-projects/spring-security-samples/tree/main">Spring Security repository</a>.</p>
 </div>
 </td>
 </tr>
@@ -853,7 +853,7 @@ fun jwtDecoder(): ReactiveJwtDecoder {
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Calling <code>{security-api-url}org/springframework/security/oauth2/jwt/ReactiveJwtDecoders.html#fromIssuerLocation-java.lang.String-[ReactiveJwtDecoders#fromIssuerLocation]</code> is what invokes the Provider Configuration or Authorization Server Metadata endpoint in order to derive the JWK Set Uri.
+Calling <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/jwt/ReactiveJwtDecoders.html#fromIssuerLocation-java.lang.String-">ReactiveJwtDecoders#fromIssuerLocation</a></code> is what invokes the Provider Configuration or Authorization Server Metadata endpoint in order to derive the JWK Set Uri.
 If the application doesn&#8217;t expose a <code>ReactiveJwtDecoder</code> bean, then Spring Boot will expose the above default one.
 </td>
 </tr>
@@ -1706,7 +1706,7 @@ Authorization: Bearer some-token-value # Resource Server will process this</code
 </ol>
 </div>
 <div class="paragraph">
-<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code>{security-api-url}org/springframework/security/oauth2/core/OAuth2AuthenticatedPrincipal.html[OAuth2AuthenticatedPrincipal]</code> object, and <code>Authentication#getName</code> maps to the token&#8217;s <code>sub</code> property, if one is present.</p>
+<p>The resulting <code>Authentication#getPrincipal</code>, by default, is a Spring Security <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/OAuth2AuthenticatedPrincipal.html">OAuth2AuthenticatedPrincipal</a></code> object, and <code>Authentication#getName</code> maps to the token&#8217;s <code>sub</code> property, if one is present.</p>
 </div>
 <div class="paragraph">
 <p>From here, you may want to jump to:</p>
@@ -2709,7 +2709,7 @@ return http {
 <div class="sectionbody">
 <div class="paragraph">
 <p>Now that you&#8217;re in possession of a bearer token, it might be handy to pass that to downstream services.
-This is quite simple with <code>{security-api-url}org/springframework/security/oauth2/server/resource/web/reactive/function/client/ServerBearerExchangeFilterFunction.html[ServerBearerExchangeFilterFunction]</code>, which you can see in the following example:</p>
+This is quite simple with <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/server/resource/web/reactive/function/client/ServerBearerExchangeFilterFunction.html">ServerBearerExchangeFilterFunction</a></code>, which you can see in the following example:</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -2738,7 +2738,7 @@ fun rest(): WebClient {
 </div>
 </div>
 <div class="paragraph">
-<p>When the above <code>WebClient</code> is used to perform requests, Spring Security will look up the current <code>Authentication</code> and extract any <code>{security-api-url}org/springframework/security/oauth2/core/AbstractOAuth2Token.html[AbstractOAuth2Token]</code> credential.
+<p>When the above <code>WebClient</code> is used to perform requests, Spring Security will look up the current <code>Authentication</code> and extract any <code><a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/oauth2/core/AbstractOAuth2Token.html">AbstractOAuth2Token</a></code> credential.
 Then, it will propagate that token in the <code>Authorization</code> header.</p>
 </div>
 <div class="paragraph">
