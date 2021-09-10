@@ -6,7 +6,7 @@
 # Run the crawler https://docsearch.algolia.com/docs/run-your-own/#run-the-crawl-from-the-docker-image
 
 ### USAGE
-if [ "$#" -ne 1 ] || ! [ -d "$1" ]; then
+if [ "$#" -ne 2 ]; then
   echo -e "not enough arguments USAGE:\n\n$0 \$ALGOLIA_APPLICATION_ID \$ALGOLIA_API_KEY \n\n" >&2
   exit 1
 fi
