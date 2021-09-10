@@ -1,4 +1,4 @@
-name: Algolia
+name: Update Algolia Index
 
 on:
   schedule:
