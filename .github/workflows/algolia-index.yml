@@ -6,7 +6,6 @@ on:
   workflow_dispatch: # Manual trigger
 
 jobs:
-  name: Update Algolia Index
   update:
     name: Update Algolia Index
     runs-on: ubuntu-latest
