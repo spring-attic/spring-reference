@@ -7,7 +7,7 @@ asciidoc:
 content:
   sources:
     - url: https://github.com/rwinch/spring-security
-      branches: [antora/main]
+      branches: [antora/main,antora/5.5.x]
       start_path: docs
     - url: https://github.com/rwinch/spring-security-docs-generated
       branches: [spring-security/main,spring-session/main]
