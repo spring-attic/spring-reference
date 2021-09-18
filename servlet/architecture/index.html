@@ -302,7 +302,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -374,9 +374,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -431,6 +428,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -634,7 +634,7 @@ The pseudo code of <code>DelegatingFilterProxy</code> can be seen below.</p>
 </div>
 </div>
 <div class="paragraph">
-<p>Another benefit of <code>DelegatingFilterProxy</code> is that it allows delaying looking <code>Filter</code> bean instances.
+<p>Another benefit of <code>DelegatingFilterProxy</code> is that it allows delaying looking <code>Filter</code> bean instances up.
 This is important because the container needs to register the <code>Filter</code> instances before the container can startup.
 However, Spring typically uses a <code>ContextLoaderListener</code> to load the Spring Beans which will not be done until after the <code>Filter</code> instances need to be registered.</p>
 </div>
@@ -847,7 +847,7 @@ However, there are times that it is beneficial to know the ordering</p>
 <div class="ulist">
 <ul>
 <li>
-<p>The <a href="../authentication/architecture.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a> is cleared out</p>
+<p>The <a href="../authentication/architecture.html#servlet-authentication-securitycontextholder" class="page">SecurityContextHolder</a> is cleared out.</p>
 </li>
 <li>
 <p>The <code>HttpServletRequest</code> is saved in the <a href="https://docs.spring.io/spring-security/site/docs/current/api/org/springframework/security/web/savedrequest/RequestCache.html"><code>RequestCache</code></a>.

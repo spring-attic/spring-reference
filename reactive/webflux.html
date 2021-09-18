@@ -304,7 +304,7 @@
     <a class="nav-link" href="../servlet/exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../servlet/exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../servlet/appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../servlet/appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../servlet/appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="webclient.html">WebClient</a>
@@ -669,7 +669,7 @@ From here you can easily make the changes to the defaults.</p>
 <div class="sect2">
 <h3 id="jc-webflux-multiple-filter-chains"><a class="anchor" href="#jc-webflux-multiple-filter-chains"></a>Multiple Chains Support</h3>
 <div class="paragraph">
-<p>You can configure multiple <code>SecurityWebFilterChain</code> instances to separate configuration by <code>RequestMatcher</code> s.</p>
+<p>You can configure multiple <code>SecurityWebFilterChain</code> instances to separate configuration by <code>RequestMatcher</code>s.</p>
 </div>
 <div class="paragraph">
 <p>For example, you can isolate configuration for URLs that start with <code>/api</code>, like so:</p>

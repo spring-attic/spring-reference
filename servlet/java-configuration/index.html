@@ -302,7 +302,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -374,9 +374,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -431,6 +428,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -971,7 +971,7 @@ public class Config extends WebSecurityConfigurerAdapter {
 <div class="paragraph">
 <p>Spring Security&#8217;s Java Configuration does not expose every property of every object that it configures.
 This simplifies the configuration for a majority of users.
-Afterall, if every property was exposed, users could use standard bean configuration.</p>
+After all, if every property was exposed, users could use standard bean configuration.</p>
 </div>
 <div class="paragraph">
 <p>While there are good reasons to not directly expose every property, users may still need more advanced configuration options.

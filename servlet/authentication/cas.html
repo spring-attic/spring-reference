@@ -304,7 +304,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -547,7 +547,7 @@ Inside the WAR file you will customise the login and other single sign on pages 
 <p>When deploying a CAS 3.4 server, you will also need to specify an <code>AuthenticationHandler</code> in the <code>deployerConfigContext.xml</code> included with CAS.
 The <code>AuthenticationHandler</code> has a simple method that returns a boolean as to whether a given set of Credentials is valid.
 Your <code>AuthenticationHandler</code> implementation will need to link into some type of backend authentication repository, such as an LDAP server or database.
-CAS itself includes numerous <code>AuthenticationHandler</code> s out of the box to assist with this.
+CAS itself includes numerous <code>AuthenticationHandler</code>s out of the box to assist with this.
 When you download and deploy the server war file, it is set up to successfully authenticate users who enter a password matching their username, which is useful for testing.</p>
 </div>
 <div class="paragraph">
@@ -599,7 +599,7 @@ This authentication request will then be handed to the configured <code>Authenti
 </li>
 <li>
 <p>The <code>AuthenticationManager</code> implementation will be the <code>ProviderManager</code>, which is in turn configured with the <code>CasAuthenticationProvider</code>.
-The <code>CasAuthenticationProvider</code> only responds to <code>UsernamePasswordAuthenticationToken</code> s containing the CAS-specific principal (such as <code>CasAuthenticationFilter.CAS_STATEFUL_IDENTIFIER</code>) and <code>CasAuthenticationToken</code> s (discussed later).</p>
+The <code>CasAuthenticationProvider</code> only responds to <code>UsernamePasswordAuthenticationToken</code>s containing the CAS-specific principal (such as <code>CasAuthenticationFilter.CAS_STATEFUL_IDENTIFIER</code>) and <code>CasAuthenticationToken</code>s (discussed later).</p>
 </li>
 <li>
 <p><code>CasAuthenticationProvider</code> will validate the service ticket using a <code>TicketValidator</code> implementation.

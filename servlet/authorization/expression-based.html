@@ -304,7 +304,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -812,7 +812,7 @@ Their use is enabled through the <code>global-method-security</code> namespace e
 <h4 id="_access_control_using_preauthorize_and_postauthorize"><a class="anchor" href="#_access_control_using_preauthorize_and_postauthorize"></a>Access Control using @PreAuthorize and @PostAuthorize</h4>
 <div class="paragraph">
 <p>The most obviously useful annotation is <code>@PreAuthorize</code> which decides whether a method can actually be invoked or not.
-For example (from the "Contacts" sample application)</p>
+For example (from the <a href="https://github.com/spring-projects/spring-security-samples/tree/main/servlet/xml/java/contacts">Contacts</a> sample application)</p>
 </div>
 <div class="exampleblock">
 <div class="content">
@@ -856,7 +856,7 @@ fun deletePermission(contact: Contact?, recipient: Sid?, permission: Permission?
 </div>
 </div>
 <div class="paragraph">
-<p>Here we&#8217;re actually using a method argument as part of the expression to decide whether the current user has the "admin"permission for the given contact.
+<p>Here we&#8217;re actually using a method argument as part of the expression to decide whether the current user has the "admin" permission for the given contact.
 The built-in <code>hasPermission()</code> expression is linked into the Spring Security ACL module through the application context, as we&#8217;ll <a href="#el-permission-evaluator">see below</a>.
 You can access any of the method arguments by name as expression variables.</p>
 </div>
@@ -1080,7 +1080,7 @@ This would look something like this:</p>
 <div class="paragraph">
 <p>Where <code>myPermissionEvaluator</code> is the bean which implements <code>PermissionEvaluator</code>.
 Usually this will be the implementation from the ACL module which is called <code>AclPermissionEvaluator</code>.
-See the "Contacts" sample application configuration for more details.</p>
+See the <a href="https://github.com/spring-projects/spring-security-samples/tree/main/servlet/xml/java/contacts">Contacts</a> sample application configuration for more details.</p>
 </div>
 </div>
 <div class="sect3">

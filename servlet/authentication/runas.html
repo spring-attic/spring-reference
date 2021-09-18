@@ -304,7 +304,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -527,7 +527,7 @@ The <code>RunAsManager</code> will indicate the replacement <code>Authentication
 <div class="paragraph">
 <p>By temporarily replacing the <code>Authentication</code> object during the secure object callback phase, the secured invocation will be able to call other objects which require different authentication and authorization credentials.
 It will also be able to perform any internal security checks for specific <code>GrantedAuthority</code> objects.
-Because Spring Security provides a number of helper classes that automatically configure remoting protocols based on the contents of the <code>SecurityContextHolder</code>, these run-as replacements are particularly useful when calling remote web services</p>
+Because Spring Security provides a number of helper classes that automatically configure remoting protocols based on the contents of the <code>SecurityContextHolder</code>, these run-as replacements are particularly useful when calling remote web services.</p>
 </div>
 </div>
 </div>

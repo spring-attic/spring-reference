@@ -304,7 +304,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -520,13 +520,13 @@
 <h2 id="aop-alliance"><a class="anchor" href="#aop-alliance"></a>AOP Alliance (MethodInvocation) Security Interceptor</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Prior to Spring Security 2.0, securing <code>MethodInvocation</code> s needed quite a lot of boiler plate configuration.
+<p>Prior to Spring Security 2.0, securing <code>MethodInvocation</code>s needed quite a lot of boiler plate configuration.
 Now the recommended approach for method security is to use <a href="../xml-namespace.html#ns-method-security" class="page">namespace configuration</a>.
 This way the method security infrastructure beans are configured automatically for you so you don&#8217;t really need to know about the implementation classes.
 We&#8217;ll just provide a quick overview of the classes that are involved here.</p>
 </div>
 <div class="paragraph">
-<p>Method security is enforced using a <code>MethodSecurityInterceptor</code>, which secures <code>MethodInvocation</code> s.
+<p>Method security is enforced using a <code>MethodSecurityInterceptor</code>, which secures <code>MethodInvocation</code>s.
 Depending on the configuration approach, an interceptor may be specific to a single bean or shared between multiple beans.
 The interceptor uses a <code>MethodSecurityMetadataSource</code> instance to obtain the configuration attributes that apply to a particular method invocation.
 <code>MapBasedMethodSecurityMetadataSource</code> is used to store configuration attributes keyed by method names (which can be wildcarded) and will be used internally when the attributes are defined in the application context using the <code>&lt;intercept-methods&gt;</code> or <code>&lt;protect-point&gt;</code> elements.
@@ -589,7 +589,7 @@ It would not be uncommon to use both types of security interceptors in the same 
 </div>
 <div class="paragraph">
 <p>As you can see, aside from the class name, the <code>AspectJSecurityInterceptor</code> is exactly the same as the AOP Alliance security interceptor.
-Indeed the two interceptors can share the same <code>securityMetadataSource</code>, as the <code>SecurityMetadataSource</code> works with <code>java.lang.reflect.Method</code> s rather than an AOP library-specific class.
+Indeed the two interceptors can share the same <code>securityMetadataSource</code>, as the <code>SecurityMetadataSource</code> works with <code>java.lang.reflect.Method</code>s rather than an AOP library-specific class.
 Of course, your access decisions have access to the relevant AOP library-specific invocation (ie <code>MethodInvocation</code> or <code>JoinPoint</code>) and as such can consider a range of addition criteria when making access decisions (such as method arguments).</p>
 </div>
 <div class="paragraph">

@@ -304,7 +304,7 @@
     <a class="nav-link" href="../../servlet/exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../servlet/exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../../servlet/appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../servlet/appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../servlet/appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../webclient.html">WebClient</a>
@@ -743,7 +743,7 @@ This property can also be supplied directly on the <a href="#webflux-oauth2resou
 <div class="sect2">
 <h3 id="webflux-oauth2resourceserver-jwt-sansboot"><a class="anchor" href="#webflux-oauth2resourceserver-jwt-sansboot"></a>Overriding or Replacing Boot Auto Configuration</h3>
 <div class="paragraph">
-<p>There are two <code>@Bean</code> s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
+<p>There are two <code>@Bean</code>s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
 </div>
 <div class="paragraph">
 <p>The first is a <code>SecurityWebFilterChain</code> that configures the app as a resource server. When including <code>spring-security-oauth2-jose</code>, this <code>SecurityWebFilterChain</code> looks like:</p>
@@ -1830,7 +1830,7 @@ fun forFoosEyesOnly(): Mono&lt;String&gt; {
 <div class="sect2">
 <h3 id="webflux-oauth2resourceserver-opaque-sansboot"><a class="anchor" href="#webflux-oauth2resourceserver-opaque-sansboot"></a>Overriding or Replacing Boot Auto Configuration</h3>
 <div class="paragraph">
-<p>There are two <code>@Bean</code> s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
+<p>There are two <code>@Bean</code>s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
 </div>
 <div class="paragraph">
 <p>The first is a <code>SecurityWebFilterChain</code> that configures the app as a resource server.

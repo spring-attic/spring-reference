@@ -304,7 +304,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -555,7 +555,7 @@ Notably, this has a potential security issue in that a captured remember-me toke
 This is the same issue as with digest authentication.
 If a principal is aware a token has been captured, they can easily change their password and immediately invalidate all remember-me tokens on issue.
 If more significant security is needed you should use the approach described in the next section.
-Alternatively remember-me services should simply not be used at all.</p>
+Alternatively, remember-me services should simply not be used at all.</p>
 </div>
 <div class="paragraph">
 <p>If you are familiar with the topics discussed in the chapter on <a href="../xml-namespace.html#ns-config" class="page">namespace configuration</a>, you can enable remember-me authentication just by adding the <code>&lt;remember-me&gt;</code> element:</p>
@@ -635,7 +635,7 @@ We&#8217;ll look at these in turn.</p>
 <p>This implementation supports the simpler approach described in <a href="#remember-me-hash-token">Simple Hash-Based Token Approach</a>.
 <code>TokenBasedRememberMeServices</code> generates a <code>RememberMeAuthenticationToken</code>, which is processed by <code>RememberMeAuthenticationProvider</code>.
 A <code>key</code> is shared between this authentication provider and the <code>TokenBasedRememberMeServices</code>.
-In addition, <code>TokenBasedRememberMeServices</code> requires A UserDetailsService from which it can retrieve the username and password for signature comparison purposes, and generate the <code>RememberMeAuthenticationToken</code> to contain the correct <code>GrantedAuthority</code> s.
+In addition, <code>TokenBasedRememberMeServices</code> requires A UserDetailsService from which it can retrieve the username and password for signature comparison purposes, and generate the <code>RememberMeAuthenticationToken</code> to contain the correct <code>GrantedAuthority</code>s.
 Some sort of logout command should be provided by the application that invalidates the cookie if the user requests this.
 <code>TokenBasedRememberMeServices</code> also implements Spring Security&#8217;s <code>LogoutHandler</code> interface so can be used with <code>LogoutFilter</code> to have the cookie cleared automatically.</p>
 </div>

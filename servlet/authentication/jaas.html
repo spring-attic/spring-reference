@@ -304,7 +304,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -536,7 +536,7 @@ The <code>AbstractJaasAuthenticationProvider</code> has a number of dependencies
 <div class="sect2">
 <h3 id="jaas-callbackhandler"><a class="anchor" href="#jaas-callbackhandler"></a>JAAS CallbackHandler</h3>
 <div class="paragraph">
-<p>Most JAAS <code>LoginModule</code> s require a callback of some sort.
+<p>Most JAAS <code>LoginModule</code>s require a callback of some sort.
 These callbacks are usually used to obtain the username and password from the user.</p>
 </div>
 <div class="paragraph">
@@ -549,10 +549,10 @@ Each of these callback handlers implement <code>JaasAuthenticationCallbackHandle
 In most cases these callback handlers can simply be used without understanding the internal mechanics.</p>
 </div>
 <div class="paragraph">
-<p>For those needing full control over the callback behavior, internally <code>AbstractJaasAuthenticationProvider</code> wraps these <code>JaasAuthenticationCallbackHandler</code> s with an <code>InternalCallbackHandler</code>.
+<p>For those needing full control over the callback behavior, internally <code>AbstractJaasAuthenticationProvider</code> wraps these <code>JaasAuthenticationCallbackHandler</code>s with an <code>InternalCallbackHandler</code>.
 The <code>InternalCallbackHandler</code> is the class that actually implements JAAS normal <code>CallbackHandler</code> interface.
-Any time that the JAAS <code>LoginModule</code> is used, it is passed a list of application context configured <code>InternalCallbackHandler</code> s.
-If the <code>LoginModule</code> requests a callback against the <code>InternalCallbackHandler</code> s, the callback is in-turn passed to the <code>JaasAuthenticationCallbackHandler</code> s being wrapped.</p>
+Any time that the JAAS <code>LoginModule</code> is used, it is passed a list of application context configured <code>InternalCallbackHandler</code>s.
+If the <code>LoginModule</code> requests a callback against the <code>InternalCallbackHandler</code>s, the callback is in-turn passed to the <code>JaasAuthenticationCallbackHandler</code>s being wrapped.</p>
 </div>
 </div>
 <div class="sect2">
@@ -561,17 +561,17 @@ If the <code>LoginModule</code> requests a callback against the <code>InternalCa
 <p>JAAS works with principals.
 Even "roles" are represented as principals in JAAS.
 Spring Security, on the other hand, works with <code>Authentication</code> objects.
-Each <code>Authentication</code> object contains a single principal, and multiple <code>GrantedAuthority</code> s.
+Each <code>Authentication</code> object contains a single principal, and multiple <code>GrantedAuthority</code>s.
 To facilitate mapping between these different concepts, Spring Security&#8217;s JAAS package includes an <code>AuthorityGranter</code> interface.</p>
 </div>
 <div class="paragraph">
-<p>An <code>AuthorityGranter</code> is responsible for inspecting a JAAS principal and returning a set of <code>String</code> s, representing the authorities assigned to the principal.
+<p>An <code>AuthorityGranter</code> is responsible for inspecting a JAAS principal and returning a set of <code>String</code>s, representing the authorities assigned to the principal.
 For each returned authority string, the <code>AbstractJaasAuthenticationProvider</code> creates a <code>JaasGrantedAuthority</code> (which implements Spring Security&#8217;s <code>GrantedAuthority</code> interface) containing the authority string and the JAAS principal that the <code>AuthorityGranter</code> was passed.
 The <code>AbstractJaasAuthenticationProvider</code> obtains the JAAS principals by firstly successfully authenticating the user&#8217;s credentials using the JAAS <code>LoginModule</code>, and then accessing the <code>LoginContext</code> it returns.
 A call to <code>LoginContext.getSubject().getPrincipals()</code> is made, with each resulting principal passed to each <code>AuthorityGranter</code> defined against the <code>AbstractJaasAuthenticationProvider.setAuthorityGranters(List)</code> property.</p>
 </div>
 <div class="paragraph">
-<p>Spring Security does not include any production <code>AuthorityGranter</code> s given that every JAAS principal has an implementation-specific meaning.
+<p>Spring Security does not include any production <code>AuthorityGranter</code>s given that every JAAS principal has an implementation-specific meaning.
 However, there is a <code>TestAuthorityGranter</code> in the unit tests that demonstrates a simple <code>AuthorityGranter</code> implementation.</p>
 </div>
 </div>
@@ -589,7 +589,7 @@ This means that <code>DefaultJaasAuthenticationProvider</code> is not bound any 
 <h3 id="jaas-inmemoryconfiguration"><a class="anchor" href="#jaas-inmemoryconfiguration"></a>InMemoryConfiguration</h3>
 <div class="paragraph">
 <p>In order to make it easy to inject a <code>Configuration</code> into <code>DefaultJaasAuthenticationProvider</code>, a default in-memory implementation named <code>InMemoryConfiguration</code> is provided.
-The implementation constructor accepts a <code>Map</code> where each key represents a login configuration name and the value represents an <code>Array</code> of <code>AppConfigurationEntry</code> s.
+The implementation constructor accepts a <code>Map</code> where each key represents a login configuration name and the value represents an <code>Array</code> of <code>AppConfigurationEntry</code>s.
 <code>InMemoryConfiguration</code> also supports a default <code>Array</code> of <code>AppConfigurationEntry</code> objects that will be used if no mapping is found within the provided <code>Map</code>.
 For details, refer to the class level javadoc of <code>InMemoryConfiguration</code>.</p>
 </div>

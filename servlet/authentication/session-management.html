@@ -304,7 +304,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -523,7 +523,22 @@
 <p>You can configure Spring Security to detect the submission of an invalid session ID and redirect the user to an appropriate URL.
 This is achieved through the <code>session-management</code> element:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
+protected void configure(HttpSecurity http) throws Exception{
+    http
+        .sessionManagement(session -&gt; session
+            .invalidSessionUrl("/invalidSession.htm")
+        );
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
 ...
@@ -531,16 +546,35 @@ This is achieved through the <code>session-management</code> element:</p>
 &lt;/http&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
 <div class="paragraph">
 <p>Note that if you use this mechanism to detect session timeouts, it may falsely report an error if the user logs out and then logs back in without closing the browser.
 This is because the session cookie is not cleared when you invalidate the session and will be resubmitted even if the user has logged out.
 You may be able to explicitly delete the JSESSIONID cookie on logging out, for example by using the following syntax in the logout handler:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
+protected void configure(HttpSecurity http) throws Exception{
+    http
+        .logout(logout -&gt; logout
+            .deleteCookies("JSESSIONID")
+        );
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
 &lt;logout delete-cookies="JSESSIONID" /&gt;
 &lt;/http&gt;</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -575,9 +609,21 @@ Header always set Set-Cookie "JSESSIONID=;Path=/tutorial;Expires=Thu, 01 Jan 197
 <div class="sectionbody">
 <div class="paragraph">
 <p>If you wish to place constraints on a single user&#8217;s ability to log in to your application, Spring Security supports this out of the box with the following simple additions.
-First you need to add the following listener to your <code>web.xml</code> file to keep Spring Security updated about session lifecycle events:</p>
+First, you need to add the following listener to your configuration to keep Spring Security updated about session lifecycle events:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
+public HttpSessionEventPublisher httpSessionEventPublisher() {
+    return new HttpSessionEventPublisher();
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;listener&gt;
 &lt;listener-class&gt;
@@ -586,10 +632,27 @@ First you need to add the following listener to your <code>web.xml</code> file t
 &lt;/listener&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
 <div class="paragraph">
 <p>Then add the following lines to your application context:</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
+protected void configure(HttpSecurity http) throws Exception {
+    http
+        .sessionManagement(session -&gt; session
+            .maximumSessions(1)
+        );
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
 ...
@@ -599,18 +662,37 @@ First you need to add the following listener to your <code>web.xml</code> file t
 &lt;/http&gt;</code></pre>
 </div>
 </div>
+</div>
+</div>
 <div class="paragraph">
 <p>This will prevent a user from logging in multiple times - a second login will cause the first to be invalidated.
 Often you would prefer to prevent a second login, in which case you can use</p>
 </div>
-<div class="listingblock">
+<div class="exampleblock">
+<div class="content">
+<div class="listingblock primary">
+<div class="title">Java</div>
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
+protected void configure(HttpSecurity http) throws Exception {
+    http
+        .sessionManagement(session -&gt; session
+            .maximumSessions(1)
+            .maxSessionsPreventsLogin(true)
+        );
+}</code></pre>
+</div>
+</div>
+<div class="listingblock secondary">
+<div class="title">XML</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-xml hljs" data-lang="xml">&lt;http&gt;
-...
 &lt;session-management&gt;
 	&lt;concurrency-control max-sessions="1" error-if-maximum-exceeded="true" /&gt;
 &lt;/session-management&gt;
 &lt;/http&gt;</code></pre>
+</div>
+</div>
 </div>
 </div>
 <div class="paragraph">
@@ -657,7 +739,7 @@ This is the default in Servlet 3.1 and newer containers.</p>
 </div>
 <div class="paragraph">
 <p>When session fixation protection occurs, it results in a <code>SessionFixationProtectionEvent</code> being published in the application context.
-If you use <code>changeSessionId</code>, this protection will <em>also</em> result in any  <code>javax.servlet.http.HttpSessionIdListener</code> s being notified, so use caution if your code listens for both events.
+If you use <code>changeSessionId</code>, this protection will <em>also</em> result in any  <code>javax.servlet.http.HttpSessionIdListener</code>s being notified, so use caution if your code listens for both events.
 See the <a href="#session-mgmt">Session Management</a> chapter for additional information.</p>
 </div>
 </div>
@@ -674,7 +756,7 @@ It will then invoke the configured <code>SessionAuthenticationStrategy</code>.</
 <div class="paragraph">
 <p>If the user is not currently authenticated, the filter will check whether an invalid session ID has been requested (because of a timeout, for example) and will invoke the configured <code>InvalidSessionStrategy</code>, if one is set.
 The most common behaviour is just to redirect to a fixed URL and this is encapsulated in the standard implementation <code>SimpleRedirectInvalidSessionStrategy</code>.
-The latter is also used when configuring an invalid session URL through the namespace,<a href="#session-mgmt">as described earlier</a>.</p>
+The latter is also used when configuring an invalid session URL through the namespace, <a href="#session-mgmt">as described earlier</a>.</p>
 </div>
 </div>
 </div>

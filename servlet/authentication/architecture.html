@@ -304,7 +304,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -668,7 +668,7 @@ Other applications might want to have threads spawned by the secure thread also 
 This is achieved by using <code>SecurityContextHolder.MODE_INHERITABLETHREADLOCAL</code>.
 You can change the mode from the default <code>SecurityContextHolder.MODE_THREADLOCAL</code> in two ways.
 The first is to set a system property, the second is to call a static method on <code>SecurityContextHolder</code>.
-Most applications won&#8217;t need to change from the default, but if you do, take a look at the JavaDoc for <code>SecurityContextHolder</code> to learn more.</p>
+Most applications won&#8217;t need to change from the default, but if you do, take a look at the Javadoc for <code>SecurityContextHolder</code> to learn more.</p>
 </div>
 </div>
 </div>
@@ -709,7 +709,7 @@ The current <code>Authentication</code> can be obtained from the <a href="#servl
 When authenticating with a username/password this is often an instance of <a href="passwords/user-details.html#servlet-authentication-userdetails" class="page"><code>UserDetails</code></a>.</p>
 </li>
 <li>
-<p><code>credentials</code> - Often a password.
+<p><code>credentials</code> - often a password.
 In many cases this will be cleared after the user is authenticated to ensure it is not leaked.</p>
 </li>
 <li>

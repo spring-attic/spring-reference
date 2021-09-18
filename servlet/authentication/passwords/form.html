@@ -304,7 +304,7 @@
     <a class="nav-link" href="../../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../../reactive/webclient.html">WebClient</a>
@@ -569,7 +569,7 @@ The <code>UsernamePasswordAuthenticationFilter</code> extends <a href="../archit
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../../_images/icons/number_2.png" alt="number 2"></span> Next, the <code>UsernamePasswordAuthenticationToken</code> is passed into the <code>AuthenticationManager</code> to be authenticated.
-The details of what <code>AuthenticationManager</code> look like depend on how the <a href="index.html#servlet-authentication-unpwd-storage" class="page">user information is stored</a>.</p>
+The details of what <code>AuthenticationManager</code> looks like depend on how the <a href="index.html#servlet-authentication-unpwd-storage" class="page">user information is stored</a>.</p>
 </div>
 <div class="paragraph">
 <p><span class="image"><img src="../../../_images/icons/number_3.png" alt="number 3"></span> If authentication fails, then <em>Failure</em></p>
@@ -702,7 +702,7 @@ Most production applications will require a custom log in form.</p>
 </div>
 <div id="servlet-authentication-form-custom-html" class="paragraph">
 <p>When the login page is specified in the Spring Security configuration, you are responsible for rendering the page.
-Below is a <a href="https://www.thymeleaf.org/">Thymeleaf</a> template that produces an HTML login form that complies with a login page of <code>/login</code>.:</p>
+Below is a <a href="https://www.thymeleaf.org/">Thymeleaf</a> template that produces an HTML login form that complies with a login page of <code>/login</code>:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 3. Log In Form</div>
@@ -763,11 +763,11 @@ Below is a <a href="https://www.thymeleaf.org/">Thymeleaf</a> template that prod
 </div>
 <div class="paragraph">
 <p>Many users will not need much more than to customize the log in page.
-However, if needed everything above can be customized with additional configuration.</p>
+However, if needed, everything above can be customized with additional configuration.</p>
 </div>
 <div id="servlet-authentication-form-custom-controller" class="paragraph">
 <p>If you are using Spring MVC, you will need a controller that maps <code>GET /login</code> to the login template we created.
-A minimal sample <code>LoginController</code> can be see below:</p>
+A minimal sample <code>LoginController</code> can be seen below:</p>
 </div>
 <div class="exampleblock">
 <div class="title">Example 4. LoginController</div>

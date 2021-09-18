@@ -304,7 +304,7 @@
     <a class="nav-link" href="../exploits/http.html">HTTP</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/firewall.html">HttpFirewall</a>
+    <span class="nav-text">xref:servlet/exploits/firewall.adoc[</span>
   </li>
 </ul>
   </li>
@@ -376,9 +376,6 @@
     <a class="nav-link" href="../appendix/index.html">Appendix</a>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../appendix/proxy-server.html">Proxy Server</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../appendix/database-schema.html">Database Schemas</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -433,6 +430,9 @@
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
@@ -868,7 +868,7 @@ This property can also be supplied directly on the <a href="#oauth2resourceserve
 <h2 id="oauth2resourceserver-jwt-sansboot"><a class="anchor" href="#oauth2resourceserver-jwt-sansboot"></a>Overriding or Replacing Boot Auto Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are two <code>@Bean</code> s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
+<p>There are two <code>@Bean</code>s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
 </div>
 <div class="paragraph">
 <p>The first is a <code>WebSecurityConfigurerAdapter</code> that configures the app as a resource server. When including <code>spring-security-oauth2-jose</code>, this <code>WebSecurityConfigurerAdapter</code> looks like:</p>
@@ -2578,7 +2578,7 @@ fun forFoosEyesOnly(): String {
 <h2 id="oauth2resourceserver-opaque-sansboot"><a class="anchor" href="#oauth2resourceserver-opaque-sansboot"></a>Overriding or Replacing Boot Auto Configuration</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>There are two <code>@Bean</code> s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
+<p>There are two <code>@Bean</code>s that Spring Boot generates on Resource Server&#8217;s behalf.</p>
 </div>
 <div class="paragraph">
 <p>The first is a <code>WebSecurityConfigurerAdapter</code> that configures the app as a resource server.
@@ -3401,18 +3401,12 @@ For example, you may support more than one tenant where one tenant issues JWTs a
 <div class="title">Java</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Bean
-AuthenticationManagerResolver&lt;HttpServletRequest&gt; tokenAuthenticationManagerResolver() {
-    BearerTokenResolver bearerToken = new DefaultBearerTokenResolver();
-    JwtAuthenticationProvider jwt = jwt();
-    OpaqueTokenAuthenticationProvider opaqueToken = opaqueToken();
-
-    return request -&gt; {
-        if (useJwt(request)) {
-            return jwt::authenticate;
-        } else {
-            return opaqueToken::authenticate;
-        }
-    }
+AuthenticationManagerResolver&lt;HttpServletRequest&gt; tokenAuthenticationManagerResolver
+        (JwtDecoder jwtDecoder, OpaqueTokenIntrospector opaqueTokenIntrospector) {
+    AuthenticationManager jwt = new ProviderManager(new JwtAuthenticationProvider(jwtDecoder));
+    AuthenticationManager opaqueToken = new ProviderManager(
+            new OpaqueTokenAuthenticationProvider(opaqueTokenIntrospector));
+    return (request) -&gt; useJwt(request) ? jwt : opaqueToken;
 }</code></pre>
 </div>
 </div>
@@ -3420,16 +3414,17 @@ AuthenticationManagerResolver&lt;HttpServletRequest&gt; tokenAuthenticationManag
 <div class="title">Kotlin</div>
 <div class="content">
 <pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@Bean
-fun tokenAuthenticationManagerResolver(): AuthenticationManagerResolver&lt;HttpServletRequest&gt; {
-    val bearerToken: BearerTokenResolver = DefaultBearerTokenResolver()
-    val jwt: JwtAuthenticationProvider = jwt()
-    val opaqueToken: OpaqueTokenAuthenticationProvider = opaqueToken()
+fun tokenAuthenticationManagerResolver
+        (jwtDecoder: JwtDecoder, opaqueTokenIntrospector: OpaqueTokenIntrospector):
+        AuthenticationManagerResolver&lt;HttpServletRequest&gt; {
+    val jwt = ProviderManager(JwtAuthenticationProvider(jwtDecoder))
+    val opaqueToken = ProviderManager(OpaqueTokenAuthenticationProvider(opaqueTokenIntrospector));
 
     return AuthenticationManagerResolver { request -&gt;
         if (useJwt(request)) {
-            AuthenticationManager { jwt.authenticate(it) }
+            jwt
         } else {
-            AuthenticationManager { opaqueToken.authenticate(it) }
+            opaqueToken
         }
     }
 }</code></pre>
