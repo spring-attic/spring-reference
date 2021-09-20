@@ -538,7 +538,7 @@ The picture below shows the typical layering of the handlers for a single HTTP r
 </div>
 <div class="paragraph">
 <p>The client sends a request to the application, and the container creates a <code>FilterChain</code> which contains the <code>Filter</code>s and <code>Servlet</code> that should process the <code>HttpServletRequest</code> based on the path of the request URI.
-In a Spring MVC application the <code>Servlet</code> is an instance of <a href="https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/web.html#mvc-servlet"><code>DispatcherServlet</code></a>.
+In a Spring MVC application the <code>Servlet</code> is an instance of <a href="https://docs.spring.io/spring-framework/docs/5.3.10/reference/html/web.html#mvc-servlet"><code>DispatcherServlet</code></a>.
 At most one <code>Servlet</code> can handle a single <code>HttpServletRequest</code> and <code>HttpServletResponse</code>.
 However, more than one <code>Filter</code> can be used to:</p>
 </div>
@@ -590,7 +590,7 @@ In this instance the <code>Filter</code> will typically write the <code>HttpServ
 <h2 id="servlet-delegatingfilterproxy"><a class="anchor" href="#servlet-delegatingfilterproxy"></a>DelegatingFilterProxy</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Spring provides a <code>Filter</code> implementation named <a href="https://docs.spring.io/spring-framework/docs/5.3.9/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html"><code>DelegatingFilterProxy</code></a> that allows bridging between the Servlet container&#8217;s lifecycle and Spring&#8217;s <code>ApplicationContext</code>.
+<p>Spring provides a <code>Filter</code> implementation named <a href="https://docs.spring.io/spring-framework/docs/5.3.10/javadoc-api/org/springframework/web/filter/DelegatingFilterProxy.html"><code>DelegatingFilterProxy</code></a> that allows bridging between the Servlet container&#8217;s lifecycle and Spring&#8217;s <code>ApplicationContext</code>.
 The Servlet container allows registering <code>Filter</code>s using its own standards, but it is not aware of Spring defined Beans.
 <code>DelegatingFilterProxy</code> can be registered via standard Servlet container mechanisms, but delegate all the work to a Spring Bean that implements <code>Filter</code>.</p>
 </div>

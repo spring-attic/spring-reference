@@ -2748,6 +2748,85 @@ We could verify that a form based login was successful with the following snippe
 </div>
 </div>
 </div>
+<div class="sect2">
+<h3 id="_securitymockmvcresulthandlers"><a class="anchor" href="#_securitymockmvcresulthandlers"></a>SecurityMockMvcResultHandlers</h3>
+<div class="paragraph">
+<p>Spring Security provides a few <code>ResultHandler</code>s implementations.
+In order to use Spring Security&#8217;s <code>ResultHandler</code>s implementations ensure the following static import is used:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import static org.springframework.security.test.web.servlet.response.SecurityMockMvcResultHandlers.*;</code></pre>
+</div>
+</div>
+<div class="sect3">
+<h4 id="_exporting_the_securitycontext"><a class="anchor" href="#_exporting_the_securitycontext"></a>Exporting the SecurityContext</h4>
+<div class="paragraph">
+<p>Often times we want to query a repository to see if some <code>MockMvc</code> request actually persisted in the database.
+In some cases our repository query uses the <a href="#data">Spring Data Integration</a> to filter the results based on current user&#8217;s username or any other property.
+Let&#8217;s see an example:</p>
+</div>
+<div class="paragraph">
+<p>A repository interface:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">private interface MessageRepository extends JpaRepository&lt;Message, Long&gt; {
+	@Query("SELECT m.content FROM Message m WHERE m.sentBy = ?#{ principal?.name }")
+	List&lt;String&gt; findAllUserMessages();
+}</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>Our test scenario:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(post("/message")
+		.content("New Message")
+		.contentType(MediaType.TEXT_PLAIN)
+	)
+	.andExpect(status().isOk());
+
+List&lt;String&gt; userMessages = messageRepository.findAllUserMessages();
+assertThat(userMessages).hasSize(1);</code></pre>
+</div>
+</div>
+<div class="paragraph">
+<p>This test won&#8217;t pass because after our request finishes, the <code>SecurityContextHolder</code> will be cleared out by the filter chain.
+We can then export the <code>TestSecurityContextHolder</code> to our <code>SecurityContextHolder</code> and use it as we want:</p>
+</div>
+<div class="listingblock">
+<div class="content">
+<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">mvc
+	.perform(post("/message")
+		.content("New Message")
+		.contentType(MediaType.TEXT_PLAIN)
+	)
+	.andDo(exportTestSecurityContext())
+	.andExpect(status().isOk());
+
+List&lt;String&gt; userMessages = messageRepository.findAllUserMessages();
+assertThat(userMessages).hasSize(1);</code></pre>
+</div>
+</div>
+<div class="admonitionblock note">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-note" title="Note"></i>
+</td>
+<td class="content">
+<div class="paragraph">
+<p>Remember to clear the <code>SecurityContextHolder</code> between your tests, or it may leak amongst them</p>
+</div>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
 </div>
 </div>
 <nav class="pagination">
