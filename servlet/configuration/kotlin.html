@@ -3,7 +3,9 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>Java Configuration :: Spring</title>
+    <title>Kotlin Configuration :: Spring</title>
+    <link rel="prev" href="java.html">
+    <link rel="next" href="xml-namespace.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
     <link rel="stylesheet" href="../../_/css/site.css">
 
@@ -135,6 +137,27 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../features/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/integrations/index.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/cryptography.html">Cryptography</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/data.html">Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/concurrency.html">Java&#8217;s Concurrency APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/jackson.html">Jackson</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/localization.html">Localization</a>
   </li>
 </ul>
   </li>
@@ -314,18 +337,6 @@
     <a class="nav-link" href="../integrations/servlet-api.html">Servlet APIs</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../integrations/data.html">Spring Data</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../integrations/concurrency.html">Java&#8217;s Concurrency APIs</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../integrations/jackson.html">Jackson</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../integrations/localization.html">Localization</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../integrations/mvc.html">Spring MVC</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -344,13 +355,13 @@
     <span class="nav-text">Configuration</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../java-configuration.html">Java Configuration</a>
+    <a class="nav-link" href="java.html">Java Configuration</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="3">
+    <a class="nav-link" href="kotlin.html">Kotlin Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../kotlin-configuration.html">Kotlin Configuration</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../xml-namespace.html">Namespace Configuration</a>
+    <a class="nav-link" href="xml-namespace.html">Namespace Configuration</a>
   </li>
 </ul>
   </li>
@@ -365,9 +376,6 @@
     <a class="nav-link" href="../test/mockmvc.html">MockMvc Support</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../cryptography.html">Cryptography</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -394,7 +402,43 @@
     <a class="nav-link" href="../../reactive/getting-started.html">Getting Started</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../reactive/webflux.html">WebFlux Security</a>
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/authentication/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/authentication/logout.html">Logout</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authorization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/authorization/method.html">EnableReactiveMethodSecurity</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../reactive/oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/login.html">OAuth 2.0 Login</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/access-token.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/oauth2/resource-server.html">OAuth 2.0 Resource Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../reactive/registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -413,42 +457,24 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../../reactive/oauth2/index.html">OAuth2</a>
+    <span class="nav-text">Integrations</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../reactive/oauth2/login.html">OAuth 2.0 Login</a>
+    <a class="nav-link" href="../../reactive/integrations/cors.html">CORS</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../reactive/oauth2/access-token.html">OAuth2 Client</a>
+    <a class="nav-link" href="../../reactive/integrations/rsocket.html">RSocket</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../reactive/oauth2/resource-server.html">OAuth 2.0 Resource Server</a>
+    <a class="nav-link" href="../../reactive/integrations/webclient.html">WebClient</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../reactive/registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../reactive/x509.html">X.509 Authentication</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../reactive/logout.html">Logout</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../reactive/webclient.html">WebClient</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../reactive/method.html">EnableReactiveMethodSecurity</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../reactive/cors.html">CORS</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../../reactive/test.html">Testing</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../reactive/rsocket.html">RSocket</a>
+    <a class="nav-link" href="../../reactive/configuration/webflux.html">WebFlux Security</a>
   </li>
 </ul>
   </li>
@@ -493,7 +519,9 @@
 <nav class="breadcrumbs" aria-label="breadcrumbs">
   <ul>
     <li><a href="../../index.html">Spring Security</a></li>
-    <li><a href="index.html">Java Configuration</a></li>
+    <li><a href="../index.html">Servlet Applications</a></li>
+    <li>Configuration</li>
+    <li><a href="kotlin.html">Kotlin Configuration</a></li>
   </ul>
 </nav>
 <div class="search">
@@ -503,27 +531,20 @@
 <div class="page-versions">
   <button class="version-menu-toggle" title="Show other versions of page">5.6</button>
   <div class="version-menu">
-    <a class="version is-current" href="index.html">5.6</a>
-    <a class="version" href="../../5.5/servlet/java-configuration/index.html">5.5</a>
+    <a class="version is-current" href="kotlin.html">5.6</a>
+    <a class="version is-missing" href="../../5.5/index.html">5.5</a>
   </div>
 </div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora/main/docs/modules/ROOT/pages/servlet/java-configuration/index.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora/main/docs/modules/ROOT/pages/servlet/configuration/kotlin.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
   <div class="toc-menu"></div>
 </aside>
 <article class="doc">
-<h1 id="page-title" class="page">Java Configuration</h1>
+<h1 id="page-title" class="page">Kotlin Configuration</h1>
 <div id="preamble">
 <div class="sectionbody">
-<div class="paragraph">
-<p>General support for <a href="https://docs.spring.io/spring/docs/3.1.x/spring-framework-reference/html/beans.html#beans-java">Java Configuration</a> was added to Spring Framework in Spring 3.1.
-Since Spring Security 3.2 there has been Spring Security Java Configuration support which enables users to easily configure Spring Security without the use of any XML.</p>
-</div>
-<div class="paragraph">
-<p>If you are familiar with the <a href="../namespace/index.html#ns-config" class="page">Security Namespace Configuration</a> then you should find quite a few similarities between it and the Security Java Configuration support.</p>
-</div>
 <div class="admonitionblock note">
 <table>
 <tr>
@@ -531,7 +552,7 @@ Since Spring Security 3.2 there has been Spring Security Java Configuration supp
 <i class="fa icon-note" title="Note"></i>
 </td>
 <td class="content">
-Spring Security provides <a href="https://github.com/spring-projects/spring-security-samples/tree/main/servlet/java-configuration">lots of sample applications</a> which demonstrate the use of Spring Security Java Configuration.
+Spring Security provides <a href="https://github.com/spring-projects/spring-security-samples/tree/main/servlet/spring-boot/kotlin/hello-security">a sample application</a> which demonstrates the use of Spring Security Kotlin Configuration.
 </td>
 </tr>
 </table>
@@ -539,214 +560,24 @@ Spring Security provides <a href="https://github.com/spring-projects/spring-secu
 </div>
 </div>
 <div class="sect1">
-<h2 id="_hello_web_security_java_configuration"><a class="anchor" href="#_hello_web_security_java_configuration"></a>Hello Web Security Java Configuration</h2>
+<h2 id="kotlin-config-httpsecurity"><a class="anchor" href="#kotlin-config-httpsecurity"></a>HttpSecurity</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>The first step is to create our Spring Security Java Configuration.
-The configuration creates a Servlet Filter known as the <code>springSecurityFilterChain</code> which is responsible for all the security (protecting the application URLs, validating submitted username and passwords, redirecting to the log in form, etc) within your application.
-You can find the most basic example of a Spring Security Java Configuration below:</p>
-</div>
-<div id="jc-hello-wsca" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.beans.factory.annotation.Autowired;
-
-import org.springframework.context.annotation.*;
-import org.springframework.security.config.annotation.authentication.builders.*;
-import org.springframework.security.config.annotation.web.configuration.*;
-
-@EnableWebSecurity
-public class WebSecurityConfig {
-
-	@Bean
-	public UserDetailsService userDetailsService() {
-		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-		manager.createUser(User.withDefaultPasswordEncoder().username("user").password("password").roles("USER").build());
-		return manager;
-	}
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>There really isn&#8217;t much to this configuration, but it does a lot.
-You can find a summary of the features below:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Require authentication to every URL in your application</p>
-</li>
-<li>
-<p>Generate a login form for you</p>
-</li>
-<li>
-<p>Allow the user with the <strong>Username</strong> <em>user</em> and the <strong>Password</strong> <em>password</em> to authenticate with form based authentication</p>
-</li>
-<li>
-<p>Allow the user to logout</p>
-</li>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/Cross-site_request_forgery">CSRF attack</a> prevention</p>
-</li>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/Session_fixation">Session Fixation</a> protection</p>
-</li>
-<li>
-<p>Security Header integration</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://en.wikipedia.org/wiki/HTTP_Strict_Transport_Security">HTTP Strict Transport Security</a> for secure requests</p>
-</li>
-<li>
-<p><a href="https://msdn.microsoft.com/en-us/library/ie/gg622941(v=vs.85).aspx">X-Content-Type-Options</a> integration</p>
-</li>
-<li>
-<p>Cache Control (can be overridden later by your application to allow caching of your static resources)</p>
-</li>
-<li>
-<p><a href="https://msdn.microsoft.com/en-us/library/dd565647(v=vs.85).aspx">X-XSS-Protection</a> integration</p>
-</li>
-<li>
-<p>X-Frame-Options integration to help prevent <a href="https://en.wikipedia.org/wiki/Clickjacking">Clickjacking</a></p>
-</li>
-</ul>
-</div>
-</li>
-<li>
-<p>Integrate with the following Servlet API methods</p>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getRemoteUser()">HttpServletRequest#getRemoteUser()</a></p>
-</li>
-<li>
-<p><a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#getUserPrincipal()">HttpServletRequest#getUserPrincipal()</a></p>
-</li>
-<li>
-<p><a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#isUserInRole(java.lang.String)">HttpServletRequest#isUserInRole(java.lang.String)</a></p>
-</li>
-<li>
-<p><a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#login(java.lang.String,%20java.lang.String)">HttpServletRequest#login(java.lang.String, java.lang.String)</a></p>
-</li>
-<li>
-<p><a href="https://docs.oracle.com/javaee/6/api/javax/servlet/http/HttpServletRequest.html#logout()">HttpServletRequest#logout()</a></p>
-</li>
-</ul>
-</div>
-</li>
-</ul>
-</div>
-<div class="sect2">
-<h3 id="_abstractsecuritywebapplicationinitializer"><a class="anchor" href="#_abstractsecuritywebapplicationinitializer"></a>AbstractSecurityWebApplicationInitializer</h3>
-<div class="paragraph">
-<p>The next step is to register the <code>springSecurityFilterChain</code> with the war.
-This can be done in Java Configuration with <a href="https://docs.spring.io/spring/docs/3.2.x/spring-framework-reference/html/mvc.html#mvc-container-config">Spring&#8217;s WebApplicationInitializer support</a> in a Servlet 3.0+ environment.
-Not suprisingly, Spring Security provides a base class <code>AbstractSecurityWebApplicationInitializer</code> that will ensure the <code>springSecurityFilterChain</code> gets registered for you.
-The way in which we use <code>AbstractSecurityWebApplicationInitializer</code> differs depending on if we are already using Spring or if Spring Security is the only Spring component in our application.</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p><a href="#abstractsecuritywebapplicationinitializer-without-existing-spring">[abstractsecuritywebapplicationinitializer-without-existing-spring]</a> - Use these instructions if you are not using Spring already</p>
-</li>
-<li>
-<p><a href="#abstractsecuritywebapplicationinitializer-with-spring-mvc">[abstractsecuritywebapplicationinitializer-with-spring-mvc]</a> - Use these instructions if you are already using Spring</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_abstractsecuritywebapplicationinitializer_without_existing_spring"><a class="anchor" href="#_abstractsecuritywebapplicationinitializer_without_existing_spring"></a>AbstractSecurityWebApplicationInitializer without Existing Spring</h3>
-<div class="paragraph">
-<p>If you are not using Spring or Spring MVC, you will need to pass in the <code>WebSecurityConfig</code> into the superclass to ensure the configuration is picked up.
-You can find an example below:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.web.context.*;
-
-public class SecurityWebApplicationInitializer
-	extends AbstractSecurityWebApplicationInitializer {
-
-	public SecurityWebApplicationInitializer() {
-		super(WebSecurityConfig.class);
-	}
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The <code>SecurityWebApplicationInitializer</code> will do the following things:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Automatically register the springSecurityFilterChain Filter for every URL in your application</p>
-</li>
-<li>
-<p>Add a ContextLoaderListener that loads the <a href="#jc-hello-wsca">WebSecurityConfig</a>.</p>
-</li>
-</ul>
-</div>
-</div>
-<div class="sect2">
-<h3 id="_abstractsecuritywebapplicationinitializer_with_spring_mvc"><a class="anchor" href="#_abstractsecuritywebapplicationinitializer_with_spring_mvc"></a>AbstractSecurityWebApplicationInitializer with Spring MVC</h3>
-<div class="paragraph">
-<p>If we were using Spring elsewhere in our application we probably already had a <code>WebApplicationInitializer</code> that is loading our Spring Configuration.
-If we use the previous configuration we would get an error.
-Instead, we should register Spring Security with the existing <code>ApplicationContext</code>.
-For example, if we were using Spring MVC our <code>SecurityWebApplicationInitializer</code> would look something like the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">import org.springframework.security.web.context.*;
-
-public class SecurityWebApplicationInitializer
-	extends AbstractSecurityWebApplicationInitializer {
-
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>This would simply only register the springSecurityFilterChain Filter for every URL in your application.
-After that we would ensure that <code>WebSecurityConfig</code> was loaded in our existing ApplicationInitializer.
-For example, if we were using Spring MVC it would be added in the <code>getRootConfigClasses()</code></p>
-</div>
-<div id="message-web-application-inititializer-java" class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MvcWebApplicationInitializer extends
-		AbstractAnnotationConfigDispatcherServletInitializer {
-
-	@Override
-	protected Class&lt;?&gt;[] getRootConfigClasses() {
-		return new Class[] { WebSecurityConfig.class };
-	}
-
-	// ... other overrides ...
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="jc-httpsecurity"><a class="anchor" href="#jc-httpsecurity"></a>HttpSecurity</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Thus far our <a href="#jc-hello-wsca">WebSecurityConfig</a> only contains information about how to authenticate our users.
-How does Spring Security know that we want to require all users to be authenticated?
+<p>How does Spring Security know that we want to require all users to be authenticated?
 How does Spring Security know we want to support form based authentication?
-Actually, there is a configuration class that is being invoked behind the scenes called <code>WebSecurityConfigurerAdapter</code>.
+There is a configuration class that is being invoked behind the scenes called <code>WebSecurityConfigurerAdapter</code>.
 It has a method called <code>configure</code> with the following default implementation:</p>
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">protected void configure(HttpSecurity http) throws Exception {
-	http
-		.authorizeRequests(authorize -&gt; authorize
-			.anyRequest().authenticated()
-		)
-		.formLogin(withDefaults())
-		.httpBasic(withDefaults());
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">fun configure(http: HttpSecurity) {
+   http {
+        authorizeRequests {
+            authorize(anyRequest, authenticated)
+        }
+       formLogin { }
+       httpBasic { }
+    }
 }</code></pre>
 </div>
 </div>
@@ -790,43 +621,42 @@ For example, the following is an example of having a different configuration for
 </div>
 <div class="listingblock">
 <div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
-public class MultiHttpSecurityConfig {
-	@Bean                                                             <i class="conum" data-value="1"></i><b>(1)</b>
-	public UserDetailsService userDetailsService() throws Exception {
-		// ensure the passwords are encoded properly
-		UserBuilder users = User.withDefaultPasswordEncoder();
-		InMemoryUserDetailsManager manager = new InMemoryUserDetailsManager();
-		manager.createUser(users.username("user").password("password").roles("USER").build());
-		manager.createUser(users.username("admin").password("password").roles("USER","ADMIN").build());
-		return manager;
-	}
+<pre class="highlightjs highlight"><code class="language-kotlin hljs" data-lang="kotlin">@EnableWebSecurity
+class MultiHttpSecurityConfig {
+    @Bean                                                            <i class="conum" data-value="1"></i><b>(1)</b>
+    public fun userDetailsService(): UserDetailsService {
+        val users: User.UserBuilder = User.withDefaultPasswordEncoder()
+        val manager = InMemoryUserDetailsManager()
+        manager.createUser(users.username("user").password("password").roles("USER").build())
+        manager.createUser(users.username("admin").password("password").roles("USER","ADMIN").build())
+        return manager
+    }
 
-	@Configuration
-	@Order(1)                                                        <i class="conum" data-value="2"></i><b>(2)</b>
-	public static class ApiWebSecurityConfigurationAdapter extends WebSecurityConfigurerAdapter {
-		protected void configure(HttpSecurity http) throws Exception {
-			http
-				.antMatcher("/api/**")                               <i class="conum" data-value="3"></i><b>(3)</b>
-				.authorizeRequests(authorize -&gt; authorize
-					.anyRequest().hasRole("ADMIN")
-			    )
-				.httpBasic(withDefaults());
-		}
-	}
+    @Configuration
+    @Order(1)                                                        <i class="conum" data-value="2"></i><b>(2)</b>
+    class ApiWebSecurityConfigurationAdapter: WebSecurityConfigurerAdapter() {
+        override fun configure(http: HttpSecurity) {
+            http {
+                securityMatcher("/api/**")                           <i class="conum" data-value="3"></i><b>(3)</b>
+                authorizeRequests {
+                    authorize(anyRequest, hasRole("ADMIN"))
+                }
+                httpBasic { }
+            }
+        }
+    }
 
-	@Configuration                                                   <i class="conum" data-value="4"></i><b>(4)</b>
-	public static class FormLoginWebSecurityConfigurerAdapter extends WebSecurityConfigurerAdapter {
-
-		@Override
-		protected void configure(HttpSecurity http) throws Exception {
-			http
-				.authorizeRequests(authorize -&gt; authorize
-					.anyRequest().authenticated()
-				)
-				.formLogin(withDefaults());
-		}
-	}
+    @Configuration                                                   <i class="conum" data-value="4"></i><b>(4)</b>
+    class FormLoginWebSecurityConfigurerAdapter: WebSecurityConfigurerAdapter() {
+        override fun configure(http: HttpSecurity) {
+            http {
+                authorizeRequests {
+                    authorize(anyRequest, authenticated)
+                }
+                formLogin { }
+            }
+        }
+    }
 }</code></pre>
 </div>
 </div>
@@ -854,153 +684,10 @@ This configuration is considered after <code>ApiWebSecurityConfigurationAdapter<
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="jc-custom-dsls"><a class="anchor" href="#jc-custom-dsls"></a>Custom DSLs</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>You can provide your own custom DSLs in Spring Security.
-For example, you might have something that looks like this:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">public class MyCustomDsl extends AbstractHttpConfigurer&lt;MyCustomDsl, HttpSecurity&gt; {
-	private boolean flag;
-
-	@Override
-	public void init(HttpSecurity http) throws Exception {
-		// any method that adds another configurer
-		// must be done in the init method
-		http.csrf().disable();
-	}
-
-	@Override
-	public void configure(HttpSecurity http) throws Exception {
-		ApplicationContext context = http.getSharedObject(ApplicationContext.class);
-
-		// here we lookup from the ApplicationContext. You can also just create a new instance.
-		MyFilter myFilter = context.getBean(MyFilter.class);
-		myFilter.setFlag(flag);
-		http.addFilterBefore(myFilter, UsernamePasswordAuthenticationFilter.class);
-	}
-
-	public MyCustomDsl flag(boolean value) {
-		this.flag = value;
-		return this;
-	}
-
-	public static MyCustomDsl customDsl() {
-		return new MyCustomDsl();
-	}
-}</code></pre>
-</div>
-</div>
-<div class="admonitionblock note">
-<table>
-<tr>
-<td class="icon">
-<i class="fa icon-note" title="Note"></i>
-</td>
-<td class="content">
-This is actually how methods like <code>HttpSecurity.authorizeRequests()</code> are implemented.
-</td>
-</tr>
-</table>
-</div>
-<div class="paragraph">
-<p>The custom DSL can then be used like this:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
-public class Config extends WebSecurityConfigurerAdapter {
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http
-			.apply(customDsl())
-				.flag(true)
-				.and()
-			...;
-	}
-}</code></pre>
-</div>
-</div>
-<div class="paragraph">
-<p>The code is invoked in the following order:</p>
-</div>
-<div class="ulist">
-<ul>
-<li>
-<p>Code in `Config`s configure method is invoked</p>
-</li>
-<li>
-<p>Code in `MyCustomDsl`s init method is invoked</p>
-</li>
-<li>
-<p>Code in `MyCustomDsl`s configure method is invoked</p>
-</li>
-</ul>
-</div>
-<div class="paragraph">
-<p>If you want, you can have <code>WebSecurityConfigurerAdapter</code> add <code>MyCustomDsl</code> by default by using <code>SpringFactories</code>.
-For example, you would create a resource on the classpath named <code>META-INF/spring.factories</code> with the following contents:</p>
-</div>
-<div class="listingblock">
-<div class="title">META-INF/spring.factories</div>
-<div class="content">
-<pre>org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer = sample.MyCustomDsl</pre>
-</div>
-</div>
-<div class="paragraph">
-<p>Users wishing to disable the default can do so explicitly.</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@EnableWebSecurity
-public class Config extends WebSecurityConfigurerAdapter {
-	@Override
-	protected void configure(HttpSecurity http) throws Exception {
-		http
-			.apply(customDsl()).disable()
-			...;
-	}
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
-<div class="sect1">
-<h2 id="post-processing-configured-objects"><a class="anchor" href="#post-processing-configured-objects"></a>Post Processing Configured Objects</h2>
-<div class="sectionbody">
-<div class="paragraph">
-<p>Spring Security&#8217;s Java Configuration does not expose every property of every object that it configures.
-This simplifies the configuration for a majority of users.
-After all, if every property was exposed, users could use standard bean configuration.</p>
-</div>
-<div class="paragraph">
-<p>While there are good reasons to not directly expose every property, users may still need more advanced configuration options.
-To address this Spring Security introduces the concept of an <code>ObjectPostProcessor</code> which can be used to modify or replace many of the Object instances created by the Java Configuration.
-For example, if you wanted to configure the <code>filterSecurityPublishAuthorizationSuccess</code> property on <code>FilterSecurityInterceptor</code> you could use the following:</p>
-</div>
-<div class="listingblock">
-<div class="content">
-<pre class="highlightjs highlight"><code class="language-java hljs" data-lang="java">@Override
-protected void configure(HttpSecurity http) throws Exception {
-	http
-		.authorizeRequests(authorize -&gt; authorize
-			.anyRequest().authenticated()
-			.withObjectPostProcessor(new ObjectPostProcessor&lt;FilterSecurityInterceptor&gt;() {
-				public &lt;O extends FilterSecurityInterceptor&gt; O postProcess(
-						O fsi) {
-					fsi.setPublishAuthorizationSuccess(true);
-					return fsi;
-				}
-			})
-		);
-}</code></pre>
-</div>
-</div>
-</div>
-</div>
+<nav class="pagination">
+  <span class="prev"><a href="java.html">Java Configuration</a></span>
+  <span class="next"><a href="xml-namespace.html">Namespace Configuration</a></span>
+</nav>
 </article>
   </div>
 </main>

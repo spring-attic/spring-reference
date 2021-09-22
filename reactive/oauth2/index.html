@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>OAuth2 WebFlux :: Spring</title>
-    <link rel="prev" href="../exploits/http.html">
+    <link rel="prev" href="../authorization/method.html">
     <link rel="next" href="login.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
     <link rel="stylesheet" href="../../_/css/site.css">
@@ -137,6 +137,27 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../features/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../../features/integrations/index.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/cryptography.html">Cryptography</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/data.html">Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/concurrency.html">Java&#8217;s Concurrency APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/jackson.html">Jackson</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../../features/integrations/localization.html">Localization</a>
   </li>
 </ul>
   </li>
@@ -316,18 +337,6 @@
     <a class="nav-link" href="../../servlet/integrations/servlet-api.html">Servlet APIs</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../servlet/integrations/data.html">Spring Data</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../servlet/integrations/concurrency.html">Java&#8217;s Concurrency APIs</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../servlet/integrations/jackson.html">Jackson</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../servlet/integrations/localization.html">Localization</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="../../servlet/integrations/mvc.html">Spring MVC</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -346,13 +355,13 @@
     <span class="nav-text">Configuration</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../servlet/java-configuration.html">Java Configuration</a>
+    <a class="nav-link" href="../../servlet/configuration/java.html">Java Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../servlet/kotlin-configuration.html">Kotlin Configuration</a>
+    <a class="nav-link" href="../../servlet/configuration/kotlin.html">Kotlin Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../../servlet/xml-namespace.html">Namespace Configuration</a>
+    <a class="nav-link" href="../../servlet/configuration/xml-namespace.html">Namespace Configuration</a>
   </li>
 </ul>
   </li>
@@ -367,9 +376,6 @@
     <a class="nav-link" href="../../servlet/test/mockmvc.html">MockMvc Support</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../../servlet/cryptography.html">Cryptography</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -396,20 +402,23 @@
     <a class="nav-link" href="../getting-started.html">Getting Started</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../webflux.html">WebFlux Security</a>
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../authentication/logout.html">Logout</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="../exploits/index.html">Protection Against Exploits</a>
+    <span class="nav-text">Authorization</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/csrf.html">CSRF</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/headers.html">Headers</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="../exploits/http.html">HTTP Requests</a>
+    <a class="nav-link" href="../authorization/method.html">EnableReactiveMethodSecurity</a>
   </li>
 </ul>
   </li>
@@ -426,31 +435,46 @@
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="resource-server.html">OAuth 2.0 Resource Server</a>
   </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
+  </li>
 </ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="../exploits/index.html">Protection Against Exploits</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/csrf.html">CSRF</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/headers.html">Headers</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../x509.html">X.509 Authentication</a>
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Integrations</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/cors.html">CORS</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../logout.html">Logout</a>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/rsocket.html">RSocket</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../webclient.html">WebClient</a>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="../integrations/webclient.html">WebClient</a>
   </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../method.html">EnableReactiveMethodSecurity</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../cors.html">CORS</a>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="../test.html">Testing</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="../rsocket.html">RSocket</a>
+    <a class="nav-link" href="../configuration/webflux.html">WebFlux Security</a>
   </li>
 </ul>
   </li>
@@ -535,7 +559,7 @@
 </ul>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="../exploits/http.html">HTTP Requests</a></span>
+  <span class="prev"><a href="../authorization/method.html">EnableReactiveMethodSecurity</a></span>
   <span class="next"><a href="login.html">OAuth 2.0 Login</a></span>
 </nav>
 </article>

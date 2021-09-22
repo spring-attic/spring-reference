@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Project Modules and Dependencies :: Spring</title>
-    <link rel="prev" href="features/exploits/http.html">
+    <link rel="prev" href="features/integrations/localization.html">
     <link rel="next" href="samples.html">
     <meta name="generator" content="Antora 3.0.0-alpha.8">
     <link rel="stylesheet" href="./_/css/site.css">
@@ -137,6 +137,27 @@
   </li>
   <li class="nav-item" data-depth="3">
     <a class="nav-link" href="features/exploits/http.html">HTTP Requests</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="features/integrations/index.html">Integrations</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/integrations/cryptography.html">Cryptography</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/integrations/data.html">Spring Data</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/integrations/concurrency.html">Java&#8217;s Concurrency APIs</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/integrations/jackson.html">Jackson</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="features/integrations/localization.html">Localization</a>
   </li>
 </ul>
   </li>
@@ -316,18 +337,6 @@
     <a class="nav-link" href="servlet/integrations/servlet-api.html">Servlet APIs</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="servlet/integrations/data.html">Spring Data</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="servlet/integrations/concurrency.html">Java&#8217;s Concurrency APIs</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="servlet/integrations/jackson.html">Jackson</a>
-  </li>
-  <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="servlet/integrations/localization.html">Localization</a>
-  </li>
-  <li class="nav-item" data-depth="3">
     <a class="nav-link" href="servlet/integrations/mvc.html">Spring MVC</a>
   </li>
   <li class="nav-item" data-depth="3">
@@ -346,13 +355,13 @@
     <span class="nav-text">Configuration</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="servlet/java-configuration.html">Java Configuration</a>
+    <a class="nav-link" href="servlet/configuration/java.html">Java Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="servlet/kotlin-configuration.html">Kotlin Configuration</a>
+    <a class="nav-link" href="servlet/configuration/kotlin.html">Kotlin Configuration</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="servlet/xml-namespace.html">Namespace Configuration</a>
+    <a class="nav-link" href="servlet/configuration/xml-namespace.html">Namespace Configuration</a>
   </li>
 </ul>
   </li>
@@ -367,9 +376,6 @@
     <a class="nav-link" href="servlet/test/mockmvc.html">MockMvc Support</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="servlet/cryptography.html">Cryptography</a>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -396,7 +402,43 @@
     <a class="nav-link" href="reactive/getting-started.html">Getting Started</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="reactive/webflux.html">WebFlux Security</a>
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authentication</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reactive/authentication/x509.html">X.509 Authentication</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reactive/authentication/logout.html">Logout</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Authorization</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reactive/authorization/method.html">EnableReactiveMethodSecurity</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="2">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="reactive/oauth2/index.html">OAuth2</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reactive/oauth2/login.html">OAuth 2.0 Login</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reactive/oauth2/access-token.html">OAuth2 Client</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reactive/oauth2/resource-server.html">OAuth 2.0 Resource Server</a>
+  </li>
+  <li class="nav-item" data-depth="3">
+    <a class="nav-link" href="reactive/registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
+  </li>
+</ul>
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
@@ -415,42 +457,24 @@
   </li>
   <li class="nav-item" data-depth="2">
     <button class="nav-item-toggle"></button>
-    <a class="nav-link" href="reactive/oauth2/index.html">OAuth2</a>
+    <span class="nav-text">Integrations</span>
 <ul class="nav-list">
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="reactive/oauth2/login.html">OAuth 2.0 Login</a>
+    <a class="nav-link" href="reactive/integrations/cors.html">CORS</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="reactive/oauth2/access-token.html">OAuth2 Client</a>
+    <a class="nav-link" href="reactive/integrations/rsocket.html">RSocket</a>
   </li>
   <li class="nav-item" data-depth="3">
-    <a class="nav-link" href="reactive/oauth2/resource-server.html">OAuth 2.0 Resource Server</a>
+    <a class="nav-link" href="reactive/integrations/webclient.html">WebClient</a>
   </li>
 </ul>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="reactive/registered-oauth2-authorized-client.html">@RegisteredOAuth2AuthorizedClient</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="reactive/x509.html">X.509 Authentication</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="reactive/logout.html">Logout</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="reactive/webclient.html">WebClient</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="reactive/method.html">EnableReactiveMethodSecurity</a>
-  </li>
-  <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="reactive/cors.html">CORS</a>
   </li>
   <li class="nav-item" data-depth="2">
     <a class="nav-link" href="reactive/test.html">Testing</a>
   </li>
   <li class="nav-item" data-depth="2">
-    <a class="nav-link" href="reactive/rsocket.html">RSocket</a>
+    <a class="nav-link" href="reactive/configuration/webflux.html">WebFlux Security</a>
   </li>
 </ul>
   </li>
@@ -1108,7 +1132,7 @@ It requires OpenID4Java.</p>
 </div>
 </div>
 <nav class="pagination">
-  <span class="prev"><a href="features/exploits/http.html">HTTP Requests</a></span>
+  <span class="prev"><a href="features/integrations/localization.html">Localization</a></span>
   <span class="next"><a href="samples.html">Samples</a></span>
 </nav>
 </article>
