@@ -495,9 +495,6 @@
         <li class="version is-current is-latest">
           <a href="index.html">5.6</a>
         </li>
-        <li class="version">
-          <a href="5.5/index.html">5.5</a>
-        </li>
       </ul>
     </li>
     <li class="component">
@@ -525,15 +522,7 @@
 <div class="search">
   <input id="search-input" type="text" placeholder="Search docs">
 </div>
-
-<div class="page-versions">
-  <button class="version-menu-toggle" title="Show other versions of page">5.6</button>
-  <div class="version-menu">
-    <a class="version is-current" href="whats-new.html">5.6</a>
-    <a class="version" href="5.5/whats-new.html">5.5</a>
-  </div>
-</div>
-  <div class="edit-this-page"><a href="https://github.com/rwinch/spring-security/edit/antora/main/docs/modules/ROOT/pages/whats-new.adoc">Edit this Page</a></div>
+  <div class="edit-this-page"><a href="https://github.com/spring-projects/spring-security/edit/main/docs/modules/ROOT/pages/whats-new.adoc">Edit this Page</a></div>
   </div>
   <div class="content">
 <aside class="toc sidebar" data-title="Contents" data-levels="2">
@@ -549,11 +538,20 @@ Below are the highlights of the release.</p>
 </div>
 </div>
 </div>
-<div class="sect1">
-<h2 id="whats-new-servlet"><a class="anchor" href="#whats-new-servlet"></a>Servlet</h2>
-<div class="sectionbody">
+<div class="sect2">
+<h3 id="whats-new-servlet"><a class="anchor" href="#whats-new-servlet"></a>Servlet</h3>
 <div class="ulist">
 <ul>
+<li>
+<p>Core</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Introduced <a href="https://github.com/spring-projects/spring-security/issues/10226"><code>SecurityContextChangedListener</code></a></p>
+</li>
+</ul>
+</div>
+</li>
 <li>
 <p>Configuration</p>
 <div class="ulist">
@@ -573,6 +571,12 @@ Below are the highlights of the release.</p>
 </li>
 <li>
 <p>Added <a href="https://github.com/spring-projects/spring-security/pull/10060">Saml2AuthenticationRequestRepository</a></p>
+</li>
+<li>
+<p>Added <a href="https://github.com/spring-projects/spring-security/issues/9486"><code>RelyingPartyRegistrationResolver</code></a></p>
+</li>
+<li>
+<p>Improved <code>Saml2LoginConfigurer</code>'s handling of <a href="https://github.com/spring-projects/spring-security/issues/10268"><code>Saml2AuthenticationTokenConverter</code></a></p>
 </li>
 </ul>
 </div>
@@ -603,7 +607,18 @@ Below are the highlights of the release.</p>
 </ul>
 </div>
 </li>
+<li>
+<p>Testing</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Added support to <a href="https://github.com/spring-projects/spring-security/pull/9737">propagate the TestSecurityContextHolder to SecurityContextHolder</a></p>
+</li>
 </ul>
+</div>
+</li>
+</ul>
+</div>
 </div>
 <div class="sect2">
 <h3 id="whats-new-webflux"><a class="anchor" href="#whats-new-webflux"></a>WebFlux</h3>
@@ -616,8 +631,6 @@ Below are the highlights of the release.</p>
 <p>Added <a href="https://github.com/spring-projects/spring-security/pull/10131">custom headers support</a> for access token requests</p>
 </li>
 </ul>
-</div>
-</div>
 </div>
 </div>
 <nav class="pagination">
