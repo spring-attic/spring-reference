@@ -28,7 +28,4 @@ jobs:
       - name: Build with Gradle
         run: ./gradlew antora --stacktrace
       - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@4.1.4
-        with:
-          branch: gh-pages # The branch the action should deploy to.
-          folder: build/site # The folder the action should deploy.
+          run: ${GITHUB_WORKSPACE}/.github/actions/deploy.sh "${{ secrets.DOCS_HOST }}" "/opt/www/domains/spring.io/docs/htdocs/spring-security/" "${{ secrets.DOCS_SSH_KEY }}" "${{ secrets.DOCS_SSH_HOST_KEY }}"
