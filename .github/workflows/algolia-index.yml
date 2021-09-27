@@ -13,4 +13,6 @@ jobs:
       - name: Checkout Source
         uses: actions/checkout@v2
       - name: Update Index
-        run: ${GITHUB_WORKSPACE}/.github/actions/algolia-docsearch-scraper.sh "${{ secrets.ALGOLIA_APPLICATION_ID }}" "${{ secrets.ALGOLIA_API_KEY }}"
+        run: ${GITHUB_WORKSPACE}/.github/actions/algolia-docsearch-scraper.sh "${{ secrets.ALGOLIA_APPLICATION_ID }}" "${{ secrets.ALGOLIA_API_KEY }}" "${GITHUB_WORKSPACE}/.github/actions/config.json"
+      - name: Update Development Index
+          run: ${GITHUB_WORKSPACE}/.github/actions/algolia-docsearch-scraper.sh "${{ secrets.ALGOLIA_APPLICATION_ID }}" "${{ secrets.ALGOLIA_API_KEY }}" "${GITHUB_WORKSPACE}/.github/actions/dev-config.json"

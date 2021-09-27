@@ -1,11 +1,7 @@
 {
   "index_name": "spring-docs",
   "start_urls": [
-    "https://docs.spring.io/spring-security/"
-  ],
-  "exclusionPatterns": [
-    "https://docs.spring.io/spring-security/site/**",
-    "https://docs.spring.io/spring-security/oauth/**"
+    "https://rwinch.github.io/spring-reference/"
   ],
   "stop_urls": [],
   "selectors": {
