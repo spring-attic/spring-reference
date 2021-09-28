@@ -4,14 +4,14 @@ site:
 content:
   sources:
     - url: ../../spring-projects/spring-security
-      branches: [HEAD,antora-2.x]
+      branches: [HEAD]
       start_path: docs
-    - url: ../spring-security-docs-generated
-      branches: HEAD
+    - url: ../spring-generated-docs
+      branches: [spring-security/main,spring-session/main]
     - url: ../../spring-projects/spring-session
       branches: HEAD
       start_path: spring-session-docs
 ui:
   bundle:
-    url: ../../rwinch/antora-ui-spring/build/ui-bundle.zip
+    url: ../../spring-io/antora-ui-spring/build/ui-bundle.zip
     snapshot: true
