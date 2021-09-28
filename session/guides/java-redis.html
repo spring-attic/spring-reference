@@ -280,12 +280,12 @@ If you are using Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;io.lettuce&lt;/groupId&gt;
 		&lt;artifactId&gt;lettuce-core&lt;/artifactId&gt;
-		&lt;version&gt;6.1.2.RELEASE&lt;/version&gt;
+		&lt;version&gt;6.1.4.RELEASE&lt;/version&gt;
 	&lt;/dependency&gt;
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
-		&lt;version&gt;5.3.7&lt;/version&gt;
+		&lt;version&gt;5.3.9&lt;/version&gt;
 	&lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
 </div>
@@ -351,7 +351,7 @@ In this instance, Spring Session is backed by Redis.</td>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>We create a <code>RedisConnectionFactory</code> that connects Spring Session to the Redis Server.
 We configure the connection to connect to localhost on the default port (6379).
-For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
+For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.6.0-M2/reference/html/">reference documentation</a>.</td>
 </tr>
 </table>
 </div>
@@ -567,17 +567,19 @@ The Redis documentation has instructions for <a href="https://redis.io/topics/qu
 <script src="../../_/js/site.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
 <script async src="../../_/js/vendor/tabs.js"></script>
-<script src="../../_/js/vendor/docsearch.min.js"></script>
 <script src="../../_/js/vendor/switchtheme.js"></script>
+<script src="../../_/js/vendor/docsearch.min.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
-docsearch({
-  apiKey: '82c7ead946afbac3cf98c32446154691',
+var search = docsearch({
   appId: '244V8V9FGG',
-  indexName: 'spring-docs',
+  apiKey: '82c7ead946afbac3cf98c32446154691',
+  indexName: '',
   inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
   algoliaOptions: { hitsPerPage: 10 }
-})
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
 </script>
   </body>
 </html>

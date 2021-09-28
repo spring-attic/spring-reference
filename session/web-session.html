@@ -288,7 +288,7 @@ In this instance, Spring Session is backed by Redis.</td>
 <td><i class="conum" data-value="2"></i><b>2</b></td>
 <td>We create a <code>RedisConnectionFactory</code> that connects Spring Session to the Redis Server.
 We configure the connection to connect to localhost on the default port (6379)
-For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.5.1/reference/html/">reference documentation</a>.</td>
+For more information on configuring Spring Data Redis, see the <a href="https://docs.spring.io/spring-data/data-redis/docs/2.6.0-M2/reference/html/">reference documentation</a>.</td>
 </tr>
 </table>
 </div>
@@ -387,7 +387,7 @@ It looks something like the following:</p>
 </div>
 <div class="paragraph">
 <p>To be detected by Spring WebFlux, this custom <code>WebSessionStore</code> needs to be registered with <code>ApplicationContext</code> as a bean named <code>webSessionManager</code>.
-For additional information on Spring WebFlux, see the <a href="https://docs.spring.io/spring-framework/docs/5.3.7/reference/html/web-reactive.html">Spring Framework Reference Documentation</a>.</p>
+For additional information on Spring WebFlux, see the <a href="https://docs.spring.io/spring-framework/docs/5.3.9/reference/html/web-reactive.html">Spring Framework Reference Documentation</a>.</p>
 </div>
 </div>
 </div>
@@ -415,17 +415,19 @@ For additional information on Spring WebFlux, see the <a href="https://docs.spri
 <script src="../_/js/site.js"></script>
 <script async src="../_/js/vendor/highlight.js"></script>
 <script async src="../_/js/vendor/tabs.js"></script>
-<script src="../_/js/vendor/docsearch.min.js"></script>
 <script src="../_/js/vendor/switchtheme.js"></script>
+<script src="../_/js/vendor/docsearch.min.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
-docsearch({
-  apiKey: '82c7ead946afbac3cf98c32446154691',
+var search = docsearch({
   appId: '244V8V9FGG',
-  indexName: 'spring-docs',
+  apiKey: '82c7ead946afbac3cf98c32446154691',
+  indexName: '',
   inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
   algoliaOptions: { hitsPerPage: 10 }
-})
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
 </script>
   </body>
 </html>

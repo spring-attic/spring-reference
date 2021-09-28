@@ -626,7 +626,7 @@ A value of <code>FlushMode.IMMEDIATE</code> writes to Redis as soon as possible.
 <div class="paragraph">
 <p><code>RedisIndexedSessionRepository</code> is subscribed to receive events from Redis by using a <code>RedisMessageListenerContainer</code>.
 You can customize the way those events are dispatched by creating a bean named <code>springSessionRedisTaskExecutor</code>, a bean <code>springSessionRedisSubscriptionExecutor</code>, or both.
-You can find more details on configuring Redis task executors <a href="https://docs.spring.io/spring-data-redis/docs/2.5.1/reference/html/#redis:pubsub:subscribe:containers">here</a>.</p>
+You can find more details on configuring Redis task executors <a href="https://docs.spring.io/spring-data-redis/docs/2.6.0-M2/reference/html/#redis:pubsub:subscribe:containers">here</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1148,7 +1148,7 @@ SessionRepository&lt;? extends Session&gt; repository = new JdbcIndexedSessionRe
 </div>
 </div>
 <div class="paragraph">
-<p>For additional information on how to create and configure <code>JdbcTemplate</code> and <code>PlatformTransactionManager</code>, see the <a href="https://docs.spring.io/spring/docs/5.3.7/spring-framework-reference/data-access.html">Spring Framework Reference Documentation</a>.</p>
+<p>For additional information on how to create and configure <code>JdbcTemplate</code> and <code>PlatformTransactionManager</code>, see the <a href="https://docs.spring.io/spring/docs/5.3.9/spring-framework-reference/data-access.html">Spring Framework Reference Documentation</a>.</p>
 </div>
 </div>
 <div class="sect2">
@@ -1533,17 +1533,19 @@ In this case, you should use the <a href="#api-enablespringwebsession"><code>@En
 <script src="../_/js/site.js"></script>
 <script async src="../_/js/vendor/highlight.js"></script>
 <script async src="../_/js/vendor/tabs.js"></script>
-<script src="../_/js/vendor/docsearch.min.js"></script>
 <script src="../_/js/vendor/switchtheme.js"></script>
+<script src="../_/js/vendor/docsearch.min.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
-docsearch({
-  apiKey: '82c7ead946afbac3cf98c32446154691',
+var search = docsearch({
   appId: '244V8V9FGG',
-  indexName: 'spring-docs',
+  apiKey: '82c7ead946afbac3cf98c32446154691',
+  indexName: '',
   inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
   algoliaOptions: { hitsPerPage: 10 }
-})
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
 </script>
   </body>
 </html>

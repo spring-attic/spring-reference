@@ -336,7 +336,7 @@ spring.session.jdbc.table-name=SPRING_SESSION # Name of the database table used 
 </div>
 </div>
 <div class="paragraph">
-<p>For more information, see the <a href="https://docs.spring.io/spring-boot/docs/2.4.5/reference/htmlsingle/#boot-features-session">Spring Session</a> portion of the Spring Boot documentation.</p>
+<p>For more information, see the <a href="https://docs.spring.io/spring-boot/docs/2.5.3/reference/htmlsingle/#boot-features-session">Spring Session</a> portion of the Spring Boot documentation.</p>
 </div>
 </div>
 </div>
@@ -361,7 +361,7 @@ spring.datasource.password= # Login password of the database.</pre>
 </div>
 </div>
 <div class="paragraph">
-<p>For more information, see the <a href="https://docs.spring.io/spring-boot/docs/2.4.5/reference/htmlsingle/#boot-features-configure-datasource">Configure a DataSource</a> portion of the Spring Boot documentation.</p>
+<p>For more information, see the <a href="https://docs.spring.io/spring-boot/docs/2.5.3/reference/htmlsingle/#boot-features-configure-datasource">Configure a DataSource</a> portion of the Spring Boot documentation.</p>
 </div>
 </div>
 </div>
@@ -469,17 +469,19 @@ You can view the cookies (with <a href="https://developers.google.com/web/tools/
 <script src="../../_/js/site.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
 <script async src="../../_/js/vendor/tabs.js"></script>
-<script src="../../_/js/vendor/docsearch.min.js"></script>
 <script src="../../_/js/vendor/switchtheme.js"></script>
+<script src="../../_/js/vendor/docsearch.min.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
-docsearch({
-  apiKey: '82c7ead946afbac3cf98c32446154691',
+var search = docsearch({
   appId: '244V8V9FGG',
-  indexName: 'spring-docs',
+  apiKey: '82c7ead946afbac3cf98c32446154691',
+  indexName: '',
   inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
   algoliaOptions: { hitsPerPage: 10 }
-})
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
 </script>
   </body>
 </html>

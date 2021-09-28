@@ -247,7 +247,7 @@
 <h2 id="spring-security-rememberme"><a class="anchor" href="#spring-security-rememberme"></a>Spring Security Remember-me Support</h2>
 <div class="sectionbody">
 <div class="paragraph">
-<p>Spring Session provides integration with <a href="https://docs.spring.io/spring-security/site/docs/5.5.0/reference/htmlsingle/#remember-me">Spring Security&#8217;s Remember-me Authentication</a>.
+<p>Spring Session provides integration with <a href="https://docs.spring.io/spring-security/site/docs/5.6.0-M2/reference/htmlsingle/#remember-me">Spring Security&#8217;s Remember-me Authentication</a>.
 The support:</p>
 </div>
 <div class="ulist">
@@ -423,17 +423,19 @@ so this affects only applications that access the <code>SessionRegistry</code> t
 <script src="../_/js/site.js"></script>
 <script async src="../_/js/vendor/highlight.js"></script>
 <script async src="../_/js/vendor/tabs.js"></script>
-<script src="../_/js/vendor/docsearch.min.js"></script>
 <script src="../_/js/vendor/switchtheme.js"></script>
+<script src="../_/js/vendor/docsearch.min.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
-docsearch({
-  apiKey: '82c7ead946afbac3cf98c32446154691',
+var search = docsearch({
   appId: '244V8V9FGG',
-  indexName: 'spring-docs',
+  apiKey: '82c7ead946afbac3cf98c32446154691',
+  indexName: '',
   inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
   algoliaOptions: { hitsPerPage: 10 }
-})
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
 </script>
   </body>
 </html>

@@ -280,7 +280,7 @@ If you use Maven, you must add the following dependencies:</p>
 	&lt;dependency&gt;
 		&lt;groupId&gt;org.springframework&lt;/groupId&gt;
 		&lt;artifactId&gt;spring-web&lt;/artifactId&gt;
-		&lt;version&gt;5.3.7&lt;/version&gt;
+		&lt;version&gt;5.3.9&lt;/version&gt;
 	&lt;/dependency&gt;
 &lt;/dependencies&gt;</code></pre>
 </div>
@@ -363,7 +363,7 @@ We configure the H2 database to create database tables by using the SQL script t
 </div>
 </div>
 <div class="paragraph">
-<p>For additional information on how to configure data access related concerns, see the <a href="https://docs.spring.io/spring/docs/5.3.7/spring-framework-reference/data-access.html">Spring Framework Reference Documentation</a>.</p>
+<p>For additional information on how to configure data access related concerns, see the <a href="https://docs.spring.io/spring/docs/5.3.9/spring-framework-reference/data-access.html">Spring Framework Reference Documentation</a>.</p>
 </div>
 </div>
 </div>
@@ -574,17 +574,19 @@ You can view the cookies (with <a href="https://developers.google.com/web/tools/
 <script src="../../_/js/site.js"></script>
 <script async src="../../_/js/vendor/highlight.js"></script>
 <script async src="../../_/js/vendor/tabs.js"></script>
-<script src="../../_/js/vendor/docsearch.min.js"></script>
 <script src="../../_/js/vendor/switchtheme.js"></script>
+<script src="../../_/js/vendor/docsearch.min.js"></script>
 <!-- fetched from https://cdn.jsdelivr.net/npm/docsearch.js@2/dist/cdn/docsearch.min.js -->
 <script>
-docsearch({
-  apiKey: '82c7ead946afbac3cf98c32446154691',
+var search = docsearch({
   appId: '244V8V9FGG',
-  indexName: 'spring-docs',
+  apiKey: '82c7ead946afbac3cf98c32446154691',
+  indexName: '',
   inputSelector: '#search-input',
+  autocompleteOptions: { hint: false, keyboardShortcuts: ['s'] },
   algoliaOptions: { hitsPerPage: 10 }
-})
+}).autocomplete
+search.on('autocomplete:closed', function () { search.autocomplete.setVal() })
 </script>
   </body>
 </html>
