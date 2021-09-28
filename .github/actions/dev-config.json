@@ -1,7 +1,7 @@
 {
   "index_name": "dev-spring-docs",
   "start_urls": [
-    "https://spring-io.github.io/spring-reference/"
+    "https://platform.spring.io/spring-reference/"
   ],
   "stop_urls": [],
   "selectors": {
