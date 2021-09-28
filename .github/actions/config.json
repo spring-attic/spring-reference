@@ -7,7 +7,10 @@
     "https://docs.spring.io/spring-security/site/**",
     "https://docs.spring.io/spring-security/oauth/**"
   ],
-  "stop_urls": [],
+  "stop_urls": [
+    "https://docs.spring.io/spring-security/site/.*",
+    "https://docs.spring.io/spring-security/oauth/.*"
+  ],
   "selectors": {
     "lvl0": {
       "selector": "//nav[@class='crumbs']//li[@class='crumb'][last()-1]",
