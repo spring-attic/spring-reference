@@ -14,8 +14,7 @@ fi
 # Script Parameters
 APPLICATION_ID=$1
 API_KEY=$2
-INDEX_NAME=$3
-CONFIG_FILE=$4
+CONFIG_FILE=$3
 
 #### Script
 script_dir=$(dirname $0)
