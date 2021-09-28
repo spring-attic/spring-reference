@@ -11,6 +11,6 @@ tasks.antora {
   environment = [
           "ALGOLIA_API_KEY" : "82c7ead946afbac3cf98c32446154691",
           "ALGOLIA_APP_ID" : "244V8V9FGG",
-          "ALGOLIA_INDEX_NAME" : "spring-docs"
+          "ALGOLIA_INDEX_NAME" : "dev-spring-docs"
   ]
 }

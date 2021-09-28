@@ -1,5 +1,5 @@
 {
-  "index_name": "spring-docs",
+  "index_name": "dev-spring-docs",
   "start_urls": [
     "https://docs.spring.io/spring-security/"
   ],
