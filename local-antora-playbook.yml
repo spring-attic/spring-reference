@@ -1,17 +1,24 @@
 site:
   title: Spring
-  start_page: security:ROOT:index.adoc
+  start_page: ROOT:ROOT:index.adoc
+asciidoc:
+  attributes:
+    page-pagination: true
 content:
   sources:
     - url: ../../spring-projects/spring-security
       branches: [HEAD]
       start_path: docs
-    - url: ../spring-generated-docs
-      branches: [spring-security/main,spring-session/main]
+    - url: ../../spring-io/spring-generated-docs
+      branches: [ spring-security/main,spring-session/main ]
     - url: ../../spring-projects/spring-session
       branches: HEAD
       start_path: spring-session-docs
 ui:
   bundle:
-    url: ../../spring-io/antora-ui-spring/build/ui-bundle.zip
+    url: https://github.com/spring-io/antora-ui-spring/releases/download/latest/ui-bundle.zip
     snapshot: true
+
+pipeline:
+  extensions:
+    - require: ./antora/extensions/root-component-name.js
