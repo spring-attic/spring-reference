@@ -1,5 +1,6 @@
 site:
   title: Spring
+  start_page: ROOT:ROOT:index.adoc
 asciidoc:
   attributes:
     page-pagination: true
@@ -17,10 +18,7 @@ ui:
   bundle:
     url: https://github.com/spring-io/antora-ui-spring/releases/download/latest/ui-bundle.zip
     snapshot: true
-  supplemental_files:
-    - path: ui.yml
-      contents: |
-        static_files: [ index.html ]
-    - path: index.html
-      contents: |
-        <html><head><meta http-equiv="refresh" content="0; 5.6/index.html" /></head><body></body></html>
+
+pipeline:
+  extensions:
+    - require: ./antora/extensions/root-component-name.js
