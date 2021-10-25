@@ -8,7 +8,7 @@ content:
     - url: https://github.com/spring-projects/spring-security
       branches: [main]
       start_path: docs
-    - url: https://github.com/rwinch/spring-generated-docs
+    - url: https://github.com/spring-io/spring-generated-docs
       branches: [spring-security/main,spring-session/main]
     - url: https://github.com/spring-projects/spring-session
       branches: [main]
