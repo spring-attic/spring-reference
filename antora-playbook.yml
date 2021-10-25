@@ -10,7 +10,7 @@ content:
       branches: [main]
       start_path: docs
     - url: https://github.com/spring-io/spring-generated-docs
-      branches: [spring-security/main,spring-session/main]
+      branches: [spring-projects/spring-security/main,spring-session/main]
     - url: https://github.com/spring-projects/spring-session
       branches: [main]
       start_path: spring-session-docs
