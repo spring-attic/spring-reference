@@ -28,3 +28,4 @@ ui:
 pipeline:
   extensions:
     - require: ./antora/extensions/root-component-name.js
+    - require: ./antora/extensions/dynamic-component-version.js
