@@ -12,7 +12,7 @@ content:
         '*/*/(*)' : '$1'
       start_path: docs
     - url: https://github.com/spring-io/spring-generated-docs
-      branches: [spring-projects/spring-security/main,spring-session/main]
+      branches: [spring-projects/spring-security/main,spring-projects/spring-session/main]
       version:
         '*/*/(*)' : '$1'
     - url: https://github.com/spring-projects/spring-session
