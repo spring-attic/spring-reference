@@ -1,7 +1,6 @@
 site:
   title: Spring
   url: https://docs.spring.io/spring-security/
-  start_page: ROOT:ROOT:index.adoc
 asciidoc:
   attributes:
     page-pagination: true
@@ -21,6 +20,10 @@ content:
       start_path: spring-session-docs
       version:
         '*/*/(*)' : '$1'
+urls:
+  latest_version_segment_strategy: redirect:to
+  latest_version_segment: ''
+  redirect_facility: httpd
 ui:
   bundle:
     url: https://github.com/spring-io/antora-ui-spring/releases/download/latest/ui-bundle.zip
