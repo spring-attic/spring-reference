@@ -1,5 +1,6 @@
 site:
   title: Spring
+  url: https://docs.spring.io/spring-security/
   start_page: ROOT:ROOT:index.adoc
 asciidoc:
   attributes:
