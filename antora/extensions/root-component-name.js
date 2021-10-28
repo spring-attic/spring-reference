@@ -21,7 +21,7 @@ module.exports.register = (pipeline, { config }) => {
             }
             if (file.rel) {
                 if (file.rel.pub) {
-                    file.rel.pub.url = file.rel.pub.url.substr(rootComponentNameLength + 1) || "/"
+                    file.rel.pub.url = file.rel.pub.url.substr(rootComponentNameLength + 1)
                     file.rel.pub.rootPath = fixPath(file.rel.pub.rootPath);
                 }
             }
