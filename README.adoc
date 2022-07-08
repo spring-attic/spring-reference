@@ -1,3 +1,5 @@
+# spring-reference is no longer actively maintained by VMware, Inc.
+
 Sample that uses https://github.com/rwinch/antora-gradle-plugin[antora-gradle-plugin] to run https://antora.org[Antora].
 To build use:
 
